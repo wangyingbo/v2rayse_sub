@@ -83,6 +83,8 @@ fi
 
 # 输出最新 .yaml 文件的内容
 echo "最新的 .yaml 文件是：$latest_file"
+echo "\n"
+
 cat $latest_file > ${sub_file_name}
 
 if [ -e $sub_file_name ]; then
@@ -97,7 +99,7 @@ yaml_files=$(ls -S *.yaml | head -n 5)
 count=1
 for file in $yaml_files; do
     echo "${file}" > $top_folder_path/test_desc.txt
-    cp "$file" "$top_folder_path/yb_v2rayse_sub${count}.yaml"
+    cp "$file" "$top_folder_path/ybsub$count.yaml"
     count=$((count + 1))
 done
 
