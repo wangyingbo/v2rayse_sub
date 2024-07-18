@@ -92,13 +92,22 @@ else
 fi
 
 # 查找前 5 个文件大小最大的 .yaml 文件并复制到缓存文件夹的 top_size 子文件夹中
-yaml_files=$(ls -S *.yaml | head -n 5)
-# echo "${yaml_files}"
+# yaml_files=$(ls -S *.yaml | head -n 5)
+# # echo "${yaml_files}"
+# count=1
+# for file in $yaml_files; do
+#     echo "${file}" > $top_folder_path/test_desc.txt
+#     # cp "$file" "$top_folder_path/yb_v2rayse_sub${count}.yaml"
+#     cp "$file" ~/Desktop/test_top_size/top_size
+#     count=$((count + 1))
+# done
+
+# 找出前5个最大的文件
+files=$(ls -lS | grep ^- | head -n 5 | awk '{print $9}')
 count=1
-for file in $yaml_files; do
-    echo "${file}" > $top_folder_path/test_desc.txt
-    # cp "$file" "$top_folder_path/yb_v2rayse_sub${count}.yaml"
-    cp "$file" ~/Desktop/test_top_size/top_size
+# 批量拷贝文件到目标文件夹
+for file in $files; do
+    cp "$file" top_size/yb_$count.txt
     count=$((count + 1))
 done
 
