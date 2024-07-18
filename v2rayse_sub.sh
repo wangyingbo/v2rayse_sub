@@ -95,6 +95,7 @@ fi
 yaml_files=$(ls -S *.yaml | head -n 5)
 count=1
 for file in $yaml_files; do
+    echo "拷贝文件：${file}"
     cp "$file" "./${top_folder_name}/yb_v2rayse_sub$count.yaml"
     count=$((count + 1))
 done
