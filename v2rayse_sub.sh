@@ -66,7 +66,7 @@ cd "$target_dir" || exit
 # 创建缓存文件夹中的 top_size 文件夹
 top_folder_name="top_size"
 top_folder_path="$temp_dir/${top_folder_name}"
-mkdir $top_folder_name
+mkdir top_size
 
 # 获取最新的 .yaml 文件内容
 latest_file=$(ls -t *.yaml | head -n 1)
