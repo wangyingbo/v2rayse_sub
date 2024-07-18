@@ -28,16 +28,20 @@ temp_dir=$(mktemp -d)
 
 # 检测操作系统类型
 OS_TYPE=$(uname)
+YBDEVICE=""
 if [[ "$OS_TYPE" == "Darwin" ]]; then
     echo "运行在 macOS 上"
+    YBDEVICE="macOS"
     # 在 macOS 上执行的命令或操作
     git clone --depth=1 --filter=blob:none --sparse "$repo_url" "$temp_dir"
 elif [[ "$OS_TYPE" == "Linux" ]]; then
     echo "运行在 Linux 上"
+    YBDEVICE="Linux"
     # 在 Linux 上执行的命令或操作
     git clone --depth=1 --filter=blob:none "$repo_url" "$temp_dir"
 else
     echo "未知的操作系统: $OS_TYPE"
+    YBDEVICE="Unknown"
     git clone --depth=1 --filter=blob:none "$repo_url" "$temp_dir"
 fi
 
@@ -88,7 +92,7 @@ if [ -e $log_file ]; then
 else
     touch "\n" > $log_file
 fi
-echo $current_time >> $log_file
+echo "${current_time} in ${YBDEVICE}" >> $log_file
 log_num_lines=$(wc -l < "${log_file}")
 if [ "$log_num_lines" -gt 100 ]; then
   tail -n 100 "${log_file}" > tmp_file
@@ -100,6 +104,6 @@ fi
 
 # git 
 git add .
-git commit -m "update!!! ${current_time}"
+git commit -m "update in ${YBDEVICE}!!! ${current_time}"
 git push -u origin main
 
