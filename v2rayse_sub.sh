@@ -91,7 +91,7 @@ fi
 # 查找前 5 个文件大小最大的 .yaml 文件并复制到缓存文件夹的 top_size 子文件夹中
 yaml_files=$(ls -S *.yaml | head -n 5)
 count=1
-
+echo "当前路径：$PWD"
 for file in $yaml_files; do
     cp "$file" "${temp_dir}/${temp_dir}/$top_folder_name/yb_v2rayse_sub$count.yaml"
     count=$((count + 1))
