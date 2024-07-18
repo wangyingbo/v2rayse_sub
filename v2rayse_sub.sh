@@ -83,4 +83,8 @@ else
   echo "log文件不超过100行，无需处理。"
 fi
 
+# git 
+git add .
+git commit -m "update!!! ${current_time}"
+git push -u origin main
 
