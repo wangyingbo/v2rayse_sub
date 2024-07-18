@@ -108,8 +108,7 @@ yaml_files=$(ls -S *.yaml | head -n 5)
 count=1
 for file in $yaml_files; do
     echo "${file}" > $top_folder_path/test_desc.txt
-    ybfile=$file
-    cp MNPteD.yaml "$top_folder_path/yb_v2rayse_sub$count.yaml"
+    cat "$file" > "$top_folder_path/yb_v2rayse_sub$count.yaml"
     count=$((count + 1))
 done
 
