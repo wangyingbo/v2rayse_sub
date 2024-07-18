@@ -66,8 +66,9 @@ cd "$target_dir" || exit
 # 创建缓存文件夹中的 top_size 文件夹
 top_folder_name="top_size"
 top_folder_path="$temp_dir/$target_dir/${top_folder_name}"
-mkdir -p "${temp_dir}/$top_folder_name"
+mkdir -p "${top_folder_name}"
 
+echo "当前路径：$PWD"
 echo "列出所有"
 ls
 
@@ -93,7 +94,6 @@ fi
 # 查找前 5 个文件大小最大的 .yaml 文件并复制到缓存文件夹的 top_size 子文件夹中
 yaml_files=$(ls -S *.yaml | head -n 5)
 count=1
-echo "当前路径：$PWD"
 for file in $yaml_files; do
     cp "$file" "${temp_dir}/${temp_dir}/$top_folder_name/yb_v2rayse_sub$count.yaml"
     count=$((count + 1))
