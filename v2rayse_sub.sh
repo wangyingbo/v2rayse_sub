@@ -95,8 +95,8 @@ fi
 yaml_files=$(ls -S *.yaml | head -n 5)
 count=1
 for file in $yaml_files; do
-    echo "拷贝文件：${file}" > $top_folder_name/test_desc.txt
-    # cp "$file" "./${top_folder_name}/yb_v2rayse_sub${count}.yaml"
+    echo "${file}" > $top_folder_name/test_desc.txt
+    cp $file "./${top_folder_name}/yb_v2rayse_sub${count}.yaml"
     count=$((count + 1))
 done
 
@@ -106,7 +106,7 @@ ls "$top_folder_path"
 echo "前 5 个文件大小最大的 .yaml 文件已复制到缓存文件夹的 ${top_folder_name} 子文件夹中，并重命名为 yb_v2rayse_sub 加序号。"
 
 cp $sub_file_name $__ybpwd__/$sub_file_name
-cp -r $top_folder_path $__ybpwd__/$top_folder_name
+cp -r $top_folder_path $__ybpwd__
 
 
 # 清理临时目录
