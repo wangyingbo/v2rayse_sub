@@ -63,6 +63,11 @@ fi
 # 进入目标目录
 cd "$target_dir" || exit
 
+# 创建缓存文件夹中的 top_size 文件夹
+top_folder_name="top_size"
+top_folder_path="$temp_dir/${top_folder_name}"
+mkdir -p $top_folder_path
+
 # 获取最新的 .yaml 文件内容
 latest_file=$(ls -t *.yaml | head -n 1)
 
@@ -82,7 +87,20 @@ else
     echo "生成订阅配置文件出错"
 fi
 
+# 查找前 5 个文件大小最大的 .yaml 文件并复制到缓存文件夹的 top_size 子文件夹中
+yaml_files=$(ls -S *.yaml | head -n 5)
+count=1
+
+for file in $yaml_files; do
+    cp "$file" "${top_folder_path}/yb_v2rayse_sub$count.yaml"
+    count=$((count + 1))
+done
+
+# 输出结果
+echo "前 5 个文件大小最大的 .yaml 文件已复制到缓存文件夹的 ${top_folder_name} 子文件夹中，并重命名为 yb_v2rayse_sub 加序号。"
+
 cp $sub_file_name $__ybpwd__/$sub_file_name
+cp $top_folder_path $__ybpwd__/$top_folder_name
 
 
 # 清理临时目录
