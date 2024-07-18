@@ -4,6 +4,7 @@
 
 # git
 git pull --rebase
+echo "\n"
 
 # 获取今天的日期
 today=$(date +"%Y_%m_%d")
@@ -23,6 +24,7 @@ if [ "$#" -ne 1 ]; then
 else
     ybdate=$1
 fi
+echo "\n"
 
 # 设置 GitHub 仓库 URL 和目标目录
 repo_url="https://github.com/changfengoss/pub"
@@ -49,6 +51,7 @@ else
     YBDEVICE="Unknown"
     git clone --depth=1 --filter=blob:none "$repo_url" "$temp_dir"
 fi
+echo "\n"
 
 cd "$temp_dir" || exit
 git sparse-checkout init --cone
@@ -59,6 +62,7 @@ if [ ! -d "$target_dir" ]; then
     echo "指定日期的文件夹 $target_dir 不存在。"
     exit 1
 fi
+echo "\n"
 
 # 进入目标目录
 cd "$target_dir" || exit
