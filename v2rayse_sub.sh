@@ -103,7 +103,7 @@ fi
 echo "\n"
 
 # 查找前 5 个文件大小最大的 .yaml 文件并复制到缓存文件夹的 top_size 子文件夹中
-yaml_files=$(ls -S *.yaml | head -n 1)
+yaml_files=$(ls -S *.yaml | head -n 3)
 # echo "${yaml_files}"
 count=1
 for file in $yaml_files; do
@@ -148,4 +148,5 @@ git add .
 git commit -m "update in ${YBDEVICE}!!! ${current_time}"
 git pull --rebase
 git push -u origin main
+echo "\n"
 
