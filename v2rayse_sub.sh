@@ -2,7 +2,7 @@
 # link: https://github.com/changfengoss/pub
 
 
-// git
+# git
 git pull --rebase
 
 # 获取今天的日期
