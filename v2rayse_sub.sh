@@ -50,7 +50,7 @@ fi
 
 # 输出最新 .yaml 文件的内容
 echo "最新的 .yaml 文件是：$latest_file"
-echo "$latest_file" > ${sub_file_name}
+cat $latest_file > ${sub_file_name}
 
 if [ -e $sub_file_name ]; then
     echo "生成订阅配置文件：${sub_file_name}"
