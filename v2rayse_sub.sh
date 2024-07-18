@@ -66,7 +66,7 @@ cd "$target_dir" || exit
 # 创建缓存文件夹中的 top_size 文件夹
 top_folder_name="top_size"
 top_folder_path="$temp_dir/$target_dir/${top_folder_name}"
-mkdir $top_folder_name
+mkdir -p "${temp_dir}/$top_folder_name"
 echo "test" > $top_folder_name/test.text
 
 # 获取最新的 .yaml 文件内容
@@ -93,7 +93,7 @@ yaml_files=$(ls -S *.yaml | head -n 5)
 count=1
 
 for file in $yaml_files; do
-    cp "$file" "${top_folder_path}/yb_v2rayse_sub$count.yaml"
+    cp "$file" "${temp_dir}/$top_folder_name/yb_v2rayse_sub$count.yaml"
     count=$((count + 1))
 done
 
