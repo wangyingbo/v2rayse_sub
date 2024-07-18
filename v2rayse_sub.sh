@@ -2,6 +2,9 @@
 # link: https://github.com/changfengoss/pub
 
 
+// git
+git pull --rebase
+
 # 获取今天的日期
 today=$(date +"%Y_%m_%d")
 current_date=$(date +%Y%m%d)
@@ -90,7 +93,7 @@ cd $__ybpwd__
 if [ -e $log_file ]; then
     echo " 存在log文件 "
 else
-    touch "\n" > $log_file
+    touch "" > $log_file
 fi
 echo "${current_time} in ${YBDEVICE}" >> $log_file
 log_num_lines=$(wc -l < "${log_file}")
