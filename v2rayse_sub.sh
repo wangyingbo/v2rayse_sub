@@ -96,7 +96,7 @@ for file in $yaml_files; do
     count=$((count + 1))
 done
 
-list "$top_folder_path/*"
+ls "$top_folder_path/*"
 
 # 输出结果
 echo "前 5 个文件大小最大的 .yaml 文件已复制到缓存文件夹的 ${top_folder_name} 子文件夹中，并重命名为 yb_v2rayse_sub 加序号。"
