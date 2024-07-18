@@ -38,16 +38,19 @@ OS_TYPE=$(uname)
 YBDEVICE=""
 if [[ "$OS_TYPE" == "Darwin" ]]; then
     echo "运行在 macOS 上"
+    echo "\n"
     YBDEVICE="macOS"
     # 在 macOS 上执行的命令或操作
     git clone --depth=1 --filter=blob:none --sparse "$repo_url" "$temp_dir"
 elif [[ "$OS_TYPE" == "Linux" ]]; then
     echo "运行在 Linux 上"
+    echo "\n"
     YBDEVICE="Linux"
     # 在 Linux 上执行的命令或操作
     git clone --depth=1 --filter=blob:none "$repo_url" "$temp_dir"
 else
     echo "未知的操作系统: $OS_TYPE"
+    echo "\n"
     YBDEVICE="Unknown"
     git clone --depth=1 --filter=blob:none "$repo_url" "$temp_dir"
 fi
@@ -105,7 +108,7 @@ yaml_files=$(ls -S *.yaml | head -n 1)
 count=1
 for file in $yaml_files; do
     echo "${file}" > $top_folder_path/test_desc.txt
-    cp "$file" "$top_folder_path/ybsub$count.yaml"
+    cp "$file" "$top_folder_path/yb_v2rayse_sub$count.yaml"
     count=$((count + 1))
 done
 
