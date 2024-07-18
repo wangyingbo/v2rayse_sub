@@ -25,7 +25,22 @@ target_dir="data/$ybdate"
 
 # 克隆仓库到临时目录
 temp_dir=$(mktemp -d)
-git clone --depth=1 --filter=blob:none --sparse "$repo_url" "$temp_dir"
+
+# 检测操作系统类型
+OS_TYPE=$(uname)
+if [[ "$OS_TYPE" == "Darwin" ]]; then
+    echo "运行在 macOS 上"
+    # 在 macOS 上执行的命令或操作
+    git clone --depth=1 --filter=blob:none --sparse "$repo_url" "$temp_dir"
+elif [[ "$OS_TYPE" == "Linux" ]]; then
+    echo "运行在 Linux 上"
+    # 在 Linux 上执行的命令或操作
+    git clone --depth=1 --filter=blob:none "$repo_url" "$temp_dir"
+else
+    echo "未知的操作系统: $OS_TYPE"
+    git clone --depth=1 --filter=blob:none "$repo_url" "$temp_dir"
+fi
+
 cd "$temp_dir" || exit
 git sparse-checkout init --cone
 git sparse-checkout set "$target_dir"
