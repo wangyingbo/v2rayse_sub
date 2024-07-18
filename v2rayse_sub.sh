@@ -7,6 +7,8 @@ git pull --rebase
 
 # 获取今天的日期
 today=$(date +"%Y_%m_%d")
+# 获取昨天的日期
+yesterday=$(date -v-1d +"%Y_%m_%d")
 current_date=$(date +%Y%m%d)
 current_time=$(date +"Today is %A, %B %d, %Y %H:%M:%S")
 sub_file_name='yb_v2rayse_sub.yaml'
@@ -16,8 +18,8 @@ __ybpwd__=$PWD
 
 # 检查是否提供了日期参数
 if [ "$#" -ne 1 ]; then
-    echo "没有提供日期参数，使用今天的日期：$today"
-    ybdate=$today
+    echo "没有提供日期参数，使用昨天的日期：$yesterday"
+    ybdate=$yesterday
 else
     ybdate=$1
 fi
