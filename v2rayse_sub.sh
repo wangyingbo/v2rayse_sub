@@ -60,9 +60,9 @@ git sparse-checkout set "$target_dir"
 # 检查目标目录是否存在
 if [ ! -d "$target_dir" ]; then
     echo "指定日期的文件夹 $target_dir 不存在。"
+    echo "\n"
     exit 1
 fi
-echo "\n"
 
 # 进入目标目录
 cd "$target_dir" || exit
@@ -100,7 +100,7 @@ fi
 echo "\n"
 
 # 查找前 5 个文件大小最大的 .yaml 文件并复制到缓存文件夹的 top_size 子文件夹中
-yaml_files=$(ls -S *.yaml | head -n 5)
+yaml_files=$(ls -S *.yaml | head -n 1)
 # echo "${yaml_files}"
 count=1
 for file in $yaml_files; do
