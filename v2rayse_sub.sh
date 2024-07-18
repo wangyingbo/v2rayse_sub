@@ -14,14 +14,14 @@ __ybpwd__=$PWD
 # 检查是否提供了日期参数
 if [ "$#" -ne 1 ]; then
     echo "没有提供日期参数，使用今天的日期：$today"
-    date=$today
+    ybdate=$today
 else
-    date=$1
+    ybdate=$1
 fi
 
 # 设置 GitHub 仓库 URL 和目标目录
 repo_url="https://github.com/changfengoss/pub"
-target_dir="data/$date"
+target_dir="data/$ybdate"
 
 # 克隆仓库到临时目录
 temp_dir=$(mktemp -d)
