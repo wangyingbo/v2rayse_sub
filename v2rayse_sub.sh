@@ -71,6 +71,7 @@ mkdir -p $top_folder_path
 echo "当前路径: $PWD"
 echo "列出所有: "
 ls
+echo "\n"
 
 # 获取最新的 .yaml 文件内容
 latest_file=$(ls -t *.yaml | head -n 1)
@@ -92,6 +93,7 @@ if [ -e $sub_file_name ]; then
 else
     echo "生成订阅配置文件出错"
 fi
+echo "\n"
 
 # 查找前 5 个文件大小最大的 .yaml 文件并复制到缓存文件夹的 top_size 子文件夹中
 yaml_files=$(ls -S *.yaml | head -n 5)
@@ -109,6 +111,7 @@ echo "前 5 个文件大小最大的 .yaml 文件已复制到缓存文件夹的 
 cp $sub_file_name $__ybpwd__/$sub_file_name
 cp -r $top_folder_path $__ybpwd__
 
+echo "\n"
 
 # 清理临时目录
 # rm -rf "$temp_dir"
@@ -131,6 +134,7 @@ if [ "$log_num_lines" -gt 100 ]; then
 else
   echo "log文件不超过100行，无需处理。"
 fi
+echo "\n"
 
 # git 
 git add .
