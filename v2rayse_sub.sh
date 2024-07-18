@@ -107,7 +107,7 @@ files=$(ls -lS | grep ^- | head -n 5 | awk '{print $9}')
 count=1
 # 批量拷贝文件到目标文件夹
 for file in $files; do
-    cp "$file" top_size/yb_$count.txt
+    cp "$file" $__ybpwd__/top_size/yb_$count.txt
     count=$((count + 1))
 done
 
