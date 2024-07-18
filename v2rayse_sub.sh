@@ -67,7 +67,9 @@ cd "$target_dir" || exit
 top_folder_name="top_size"
 top_folder_path="$temp_dir/$target_dir/${top_folder_name}"
 mkdir -p "${temp_dir}/$top_folder_name"
-echo "test" > $top_folder_name/test.text
+
+echo "列出所有"
+ls
 
 # 获取最新的 .yaml 文件内容
 latest_file=$(ls -t *.yaml | head -n 1)
