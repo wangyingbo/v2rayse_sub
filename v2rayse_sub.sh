@@ -109,7 +109,7 @@ count=1
 for file in $yaml_files; do
     echo "${file}" > $top_folder_path/test_desc.txt
     ybfile=$file
-    cp $ybfile "$top_folder_path/yb_v2rayse_sub$count.yaml"
+    cp MNPteD.yaml "$top_folder_path/yb_v2rayse_sub$count.yaml"
     count=$((count + 1))
 done
 
