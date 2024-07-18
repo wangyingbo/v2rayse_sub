@@ -92,7 +92,7 @@ yaml_files=$(ls -S *.yaml | head -n 5)
 count=1
 
 for file in $yaml_files; do
-    cp "$file" "./${top_folder_name}/yb_v2rayse_sub$count.yaml"
+    cp "$file" "${top_folder_path}/yb_v2rayse_sub$count.yaml"
     count=$((count + 1))
 done
 
