@@ -105,5 +105,6 @@ fi
 # git 
 git add .
 git commit -m "update in ${YBDEVICE}!!! ${current_time}"
+git pull --rebase
 git push -u origin main
 
