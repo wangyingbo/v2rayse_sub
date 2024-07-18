@@ -75,6 +75,7 @@ top_folder_name="top_size"
 top_folder_path="$temp_dir/$target_dir/${top_folder_name}"
 mkdir -p $top_folder_path
 
+echo "\n"
 echo "当前路径: $PWD"
 echo "列出所有: "
 ls
