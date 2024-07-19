@@ -17,6 +17,19 @@ log_file='auto_sub_log.txt'
 __ybpwd__=$PWD
 
 
+if [[ "$OS_TYPE" == "Darwin" ]]; then
+    echo "运行在 macOS 上"
+    echo "\n"
+elif [[ "$OS_TYPE" == "Linux" ]]; then
+    echo "运行在 Linux 上"
+    echo "\n"
+    yesterday=$(date -d "yesterday" +"%Y_%m_%d")
+else
+    echo "未知的操作系统: $OS_TYPE"
+    echo "\n"
+fi
+
+
 # 检查是否提供了日期参数
 if [ "$#" -ne 1 ]; then
     echo "没有提供日期参数，使用昨天的日期：$yesterday"
@@ -37,20 +50,14 @@ temp_dir=$(mktemp -d)
 OS_TYPE=$(uname)
 YBDEVICE=""
 if [[ "$OS_TYPE" == "Darwin" ]]; then
-    echo "运行在 macOS 上"
-    echo "\n"
     YBDEVICE="macOS"
     # 在 macOS 上执行的命令或操作
     git clone --depth=1 --filter=blob:none --sparse "$repo_url" "$temp_dir"
 elif [[ "$OS_TYPE" == "Linux" ]]; then
-    echo "运行在 Linux 上"
-    echo "\n"
     YBDEVICE="Linux"
     # 在 Linux 上执行的命令或操作
     git clone --depth=1 --filter=blob:none "$repo_url" "$temp_dir"
 else
-    echo "未知的操作系统: $OS_TYPE"
-    echo "\n"
     YBDEVICE="Unknown"
     git clone --depth=1 --filter=blob:none "$repo_url" "$temp_dir"
 fi
