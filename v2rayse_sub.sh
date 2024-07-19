@@ -9,7 +9,7 @@ echo "\n"
 # 获取今天的日期
 today=$(date +"%Y_%m_%d")
 # 获取昨天的日期
-yesterday=$(date -v-1d +"%Y_%m_%d")
+yesterday=$today
 current_date=$(date +%Y%m%d)
 current_time=$(date +"Today is %A, %B %d, %Y %H:%M:%S")
 sub_file_name='yb_v2rayse_sub.yaml'
@@ -17,16 +17,18 @@ log_file='auto_sub_log.txt'
 __ybpwd__=$PWD
 
 
-if [[ "$OS_TYPE" == "Darwin" ]]; then
-    echo "运行在 macOS 上"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    echo "运行在 macOS 上 Running on macOS"
     echo "\n"
-elif [[ "$OS_TYPE" == "Linux" ]]; then
-    echo "运行在 Linux 上"
+    yesterday=$(date -v-1d +"%Y_%m_%d")
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    echo "运行在 Linux 上 Running on Linux"
     echo "\n"
     yesterday=$(date -d "yesterday" +"%Y_%m_%d")
 else
-    echo "未知的操作系统: $OS_TYPE"
+    echo "未知的操作系统: $OSTYPE Unknown OS"
     echo "\n"
+    yesterday=$(date -d "yesterday" +"%Y_%m_%d")
 fi
 
 
@@ -49,11 +51,11 @@ temp_dir=$(mktemp -d)
 # 检测操作系统类型
 OS_TYPE=$(uname)
 YBDEVICE=""
-if [[ "$OS_TYPE" == "Darwin" ]]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
     YBDEVICE="macOS"
     # 在 macOS 上执行的命令或操作
     git clone --depth=1 --filter=blob:none --sparse "$repo_url" "$temp_dir"
-elif [[ "$OS_TYPE" == "Linux" ]]; then
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     YBDEVICE="Linux"
     # 在 Linux 上执行的命令或操作
     git clone --depth=1 --filter=blob:none "$repo_url" "$temp_dir"
