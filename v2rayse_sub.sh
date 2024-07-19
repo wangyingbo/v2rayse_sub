@@ -18,15 +18,15 @@ __ybpwd__=$PWD
 
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    echo "运行在 macOS 上 Running on macOS"
+    echo "运行在 macOS 上 (Running on macOS) "
     echo "\n"
     yesterday=$(date -v-1d +"%Y_%m_%d")
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    echo "运行在 Linux 上 Running on Linux"
+    echo "运行在 Linux 上 (Running on Linux) "
     echo "\n"
     yesterday=$(date -d "yesterday" +"%Y_%m_%d")
 else
-    echo "未知的操作系统: $OSTYPE Unknown OS"
+    echo "未知的操作系统: $OSTYPE (Unknown OS) "
     echo "\n"
     yesterday=$(date -d "yesterday" +"%Y_%m_%d")
 fi
