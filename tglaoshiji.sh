@@ -14,7 +14,7 @@ today=$(date +"%Y_%m_%d")
 current_date=$(date +%Y%m%d)
 current_time=$(date +"Today is %A, %B %d, %Y %H:%M:%S")
 sub_file_name='tglaoshiji.yaml'
-log_file='auto_sub_tglaoshiji_log.txt'
+log_file='tglaoshiji_log.txt'
 year=$(date +"%Y")
 month=$(date +"%-m")
 

@@ -13,7 +13,7 @@ yesterday=$today
 current_date=$(date +%Y%m%d)
 current_time=$(date +"Today is %A, %B %d, %Y %H:%M:%S")
 sub_file_name='yb_v2rayse_sub.yaml'
-log_file='auto_sub_log.txt'
+log_file='v2rayse_sub_log.txt'
 __ybpwd__=$PWD
 
 
