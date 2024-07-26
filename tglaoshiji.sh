@@ -18,6 +18,22 @@ log_file='auto_sub_tglaoshiji_log.txt'
 year=$(date +"%Y")
 month=$(date +"%-m")
 
+
+# 检测操作系统类型
+OS_TYPE=$(uname)
+YBDEVICE=""
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    YBDEVICE="macOS"
+    # 在 macOS 上执行的命令或操作
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    YBDEVICE="Linux"
+    # 在 Linux 上执行的命令或操作
+else
+    YBDEVICE="Unknown"
+fi
+echo "\n"
+
+
 url="https://tglaoshiji.github.io/nodeshare/${year}/${month}/${current_date}.yaml"
 
 curl $url > ./$sub_file_name
