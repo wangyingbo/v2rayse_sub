@@ -15,6 +15,7 @@ current_time=$(date +"Today is %A, %B %d, %Y %H:%M:%S")
 sub_file_name='yb_v2rayse_sub.yaml'
 log_file='v2rayse_sub_log.txt'
 __ybpwd__=$PWD
+OS_TYPE=$(uname)
 
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -49,7 +50,6 @@ target_dir="data/$ybdate"
 temp_dir=$(mktemp -d)
 
 # 检测操作系统类型
-OS_TYPE=$(uname)
 YBDEVICE=""
 if [[ "$OSTYPE" == "darwin"* ]]; then
     YBDEVICE="macOS"
