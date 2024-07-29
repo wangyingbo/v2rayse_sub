@@ -44,7 +44,8 @@ echo "\n"
 my_date=$yesterday_date
 if [ $current_hour -ge 18 ]; then
     echo "当前时间大于下午6点"
-    my_date=$current_date
+    # my_date=$current_date
+    my_date=$yesterday_date
 else
     echo "当前时间小于下午6点"
     my_date=$yesterday_date
