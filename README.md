@@ -1,6 +1,10 @@
 # v2rayse_sub
 
 
+
+**每天筛选测速了一些免费机场的节点，更新到github上。**
+
+
 ### 订阅地址
 
 - `yb_v2rayse_sub_latest`订阅：
