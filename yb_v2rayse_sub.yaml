@@ -1,22 +1,22 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-07-30 06:20:56
+# 创建时间：2024-07-30 20:46:22
 # 使用模版：ACL4SSR_Mini.ini
-# 节点数量：148
-# 节点类型：vmess, ss, trojan
+# 节点数量：54
+# 节点类型：trojan
 ####################################
 mixed-port: 7890
-allow-lan: true
-log-level: info
+allow-lan: false
+log-level: silent
 external-controller: 0.0.0.0:9090
 dns:
   enabled: true
   listen: 0.0.0.0:1053
   ipv6: true
   default-nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
+    - 9.9.9.9
+    - 185.222.222.222
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -77,476 +77,194 @@ dns:
     - stun.*.*.*
     - '*.mcdn.bilivideo.cn'
   nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://doh.dns.sb/dns-query
   fallback-filter:
-    geoip: false
+    geoip: true
     ipcidr:
       - 240.0.0.0/4
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"US_youtube@资源分享师_1","type":"vmess","server":"104.16.60.8","port":2086,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/afrhms16v.bestxray.buzz/linkws","headers":{"host":"y-old-mode-9c0diab.wiriy73548.workers.dev"}}}
-  - {"name":"US_youtube@资源分享师_3","type":"vmess","server":"104.16.61.8","port":80,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/obdii.cfd/linkws","headers":{"host":"d396-flower-d396.megare7260.workers.dev"}}}
-  - {"name":"US_youtube@资源分享师_5","type":"vmess","server":"23.227.38.6","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip006.3196772.xyz"}}}
-  - {"name":"US_youtube@资源分享师_7","type":"vmess","server":"23.227.38.5","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip006.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_9","type":"vmess","server":"104.26.5.66","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_10","type":"vmess","server":"23.227.38.3","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip14.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_11","type":"vmess","server":"104.26.5.112","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_12","type":"vmess","server":"104.26.5.90","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_14","type":"vmess","server":"104.26.5.123","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_16","type":"vmess","server":"104.26.0.56","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_17","type":"vmess","server":"23.227.38.3","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_18","type":"vmess","server":"23.227.38.6","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.3196772.xyz"}}}
-  - {"name":"US_youtube@资源分享师_19","type":"vmess","server":"104.16.61.8","port":80,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.cfd/linkws","headers":{"host":"freevpn878.hamidimorteza680.workers.dev"}}}
-  - {"name":"US_youtube@资源分享师_22","type":"vmess","server":"104.16.61.8","port":2052,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.sbs/linkws","headers":{"host":"free.fnet00.workers.dev"}}}
-  - {"name":"CN_youtube@资源分享师_24","type":"ss","server":"123.88.148.19","port":39358,"password":"bfc552e8-2607-4386-9c90-81437ac5ba23","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"US_youtube@资源分享师_25","type":"vmess","server":"23.227.38.3","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_26","type":"vmess","server":"23.227.38.6","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.3196772.xyz"}}}
-  - {"name":"CN_youtube@资源分享师_27","type":"trojan","server":"f10002.flyflylflyflysbs.sbs","port":29496,"udp":true,"password":"4bd14bdb-db19-4de4-a452-58b897046d2c","sni":"jp01.ckcloud.info","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"US_youtube@资源分享师_28","type":"vmess","server":"104.26.5.112","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_30","type":"vmess","server":"104.19.45.11","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_31","type":"vmess","server":"104.26.5.123","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_32","type":"vmess","server":"104.26.7.132","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip14.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_33","type":"vmess","server":"104.26.7.132","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_34","type":"vmess","server":"104.26.7.132","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_35","type":"vmess","server":"104.19.47.32","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_37","type":"vmess","server":"104.19.47.80","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_38","type":"vmess","server":"104.26.0.50","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip5-4.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_39","type":"vmess","server":"104.19.45.47","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_40","type":"vmess","server":"104.19.51.232","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_41","type":"vmess","server":"104.19.38.62","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.3196772.xyz"}}}
-  - {"name":"US_youtube@资源分享师_42","type":"vmess","server":"104.19.38.62","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip006.3196772.xyz"}}}
-  - {"name":"US_youtube@资源分享师_43","type":"vmess","server":"104.26.5.88","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_44","type":"vmess","server":"104.19.47.88","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_46","type":"vmess","server":"104.19.32.46","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip006.3196772.xyz"}}}
-  - {"name":"US_youtube@资源分享师_47","type":"vmess","server":"104.19.46.56","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_48","type":"vmess","server":"23.227.38.5","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_49","type":"vmess","server":"104.19.46.39","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_50","type":"vmess","server":"23.227.38.5","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip006.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_51","type":"vmess","server":"104.19.46.233","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.3196772.xyz"}}}
-  - {"name":"US_youtube@资源分享师_52","type":"vmess","server":"104.19.45.13","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_53","type":"vmess","server":"104.19.32.46","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip002-3.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_54","type":"vmess","server":"104.19.46.59","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_55","type":"vmess","server":"104.19.45.42","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_56","type":"vmess","server":"104.26.0.56","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip14.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_57","type":"vmess","server":"104.19.46.233","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip002-2.dtku47.xyz"}}}
-  - {"name":"IE_youtube@资源分享师_58","type":"ss","server":"13.69.184.84","port":7900,"password":"SyOvc5f9BBgMZHCv6H7EUe","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"US_youtube@资源分享师_59","type":"vmess","server":"104.19.45.11","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_60","type":"vmess","server":"104.19.45.50","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_61","type":"vmess","server":"104.19.38.62","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip006.3196772.xyz"}}}
-  - {"name":"US_youtube@资源分享师_62","type":"vmess","server":"104.19.32.46","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip006.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_64","type":"vmess","server":"104.19.45.50","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_65","type":"vmess","server":"104.26.7.132","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_66","type":"vmess","server":"104.19.46.233","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip004.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_67","type":"vmess","server":"104.19.46.17","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_68","type":"vmess","server":"104.19.45.19","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_69","type":"vmess","server":"104.26.5.66","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_70","type":"vmess","server":"104.19.46.22","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_71","type":"vmess","server":"104.19.51.232","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip006.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_72","type":"vmess","server":"104.19.46.17","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_73","type":"vmess","server":"104.19.45.17","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_74","type":"vmess","server":"104.19.44.194","port":8080,"cipher":"auto","uuid":"3fdf9d48-578a-42dc-9fdd-0dfcefa3d0c5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"amd2.720208.xyz"}}}
-  - {"name":"US_youtube@资源分享师_75","type":"vmess","server":"104.19.44.182","port":8080,"cipher":"auto","uuid":"3fdf9d48-578a-42dc-9fdd-0dfcefa3d0c5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"amd2.720208.xyz"}}}
-  - {"name":"US_youtube@资源分享师_76","type":"vmess","server":"104.19.46.233","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_77","type":"vmess","server":"104.19.45.47","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_78","type":"vmess","server":"104.19.45.50","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip13.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_79","type":"vmess","server":"104.19.59.89","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_80","type":"vmess","server":"172.67.74.122","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn2.freegradely.xyz"}}}
-  - {"name":"CN_youtube@资源分享师_81","type":"ss","server":"aa01gg.sssyun.xyz","port":36993,"password":"b5abc4c0-b518-4195-88b4-57900f16fb65","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"US_youtube@资源分享师_82","type":"vmess","server":"104.19.47.77","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_83","type":"vmess","server":"23.227.38.6","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_84","type":"vmess","server":"104.26.5.88","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_85","type":"vmess","server":"104.26.7.152","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn2.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_87","type":"vmess","server":"104.19.45.42","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_88","type":"vmess","server":"104.19.38.62","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_89","type":"vmess","server":"104.19.32.46","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_90","type":"vmess","server":"104.19.46.63","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_91","type":"vmess","server":"104.19.51.232","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.3196772.xyz"}}}
-  - {"name":"US_youtube@资源分享师_92","type":"vmess","server":"104.26.7.132","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn1.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_93","type":"vmess","server":"104.19.44.194","port":8080,"cipher":"auto","uuid":"3fdf9d48-578a-42dc-9fdd-0dfcefa3d0c5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?ed=2048&Telegram🇨🇳","headers":{"host":"amd2.720208.xyz"}}}
-  - {"name":"US_youtube@资源分享师_94","type":"vmess","server":"104.19.46.39","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_95","type":"vmess","server":"23.227.38.6","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip004.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_96","type":"vmess","server":"104.19.47.27","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip14.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_97","type":"vmess","server":"104.19.57.24","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn2.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_98","type":"vmess","server":"104.19.57.24","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_99","type":"vmess","server":"104.19.38.22","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_100","type":"vmess","server":"23.227.38.13","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_101","type":"vmess","server":"23.227.38.13","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn2.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_102","type":"vmess","server":"104.19.45.90","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_103","type":"vmess","server":"104.19.47.22","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_104","type":"vmess","server":"104.19.32.216","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_105","type":"vmess","server":"104.26.0.66","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_106","type":"vmess","server":"104.19.44.165","port":8080,"cipher":"auto","uuid":"3fdf9d48-578a-42dc-9fdd-0dfcefa3d0c5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?ed=2048&Telegram🇨🇳 @WangCai_8","headers":{"host":"amd2.720208.xyz"}}}
-  - {"name":"US_youtube@资源分享师_107","type":"vmess","server":"172.67.74.122","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_108","type":"vmess","server":"104.26.7.132","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn1.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_109","type":"vmess","server":"104.19.38.62","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip004.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_110","type":"vmess","server":"172.67.74.122","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_112","type":"vmess","server":"104.19.47.75","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"NL_youtube@资源分享师_113","type":"vmess","server":"45.144.2.113","port":80,"cipher":"auto","uuid":"88bd03e6-5ada-42da-9e77-448cd8c60e13","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"45.144.2.113"}}}
-  - {"name":"US_youtube@资源分享师_114","type":"vmess","server":"104.26.7.152","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_115","type":"vmess","server":"104.26.0.56","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip14.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_116","type":"vmess","server":"23.227.38.13","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_117","type":"vmess","server":"104.19.46.63","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_118","type":"vmess","server":"162.159.140.19","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_119","type":"vmess","server":"23.227.38.13","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn2.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_120","type":"vmess","server":"104.19.44.151","port":8080,"cipher":"auto","uuid":"3fdf9d48-578a-42dc-9fdd-0dfcefa3d0c5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"amd2.720208.xyz"}}}
-  - {"name":"US_youtube@资源分享师_121","type":"vmess","server":"162.159.140.19","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_122","type":"vmess","server":"104.26.0.66","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_123","type":"vmess","server":"104.26.7.152","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_124","type":"vmess","server":"162.159.140.93","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_125","type":"vmess","server":"162.159.140.89","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_126","type":"vmess","server":"172.67.74.122","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_127","type":"vmess","server":"104.26.0.56","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn1.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_128","type":"vmess","server":"104.26.0.56","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn1.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_129","type":"vmess","server":"104.19.51.232","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip004.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_130","type":"vmess","server":"162.159.140.77","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_132","type":"vmess","server":"104.19.46.36","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_133","type":"vmess","server":"162.159.140.77","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_134","type":"vmess","server":"104.19.46.36","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip13.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_135","type":"vmess","server":"us.rnmcnm.com","port":443,"cipher":"auto","uuid":"27509a72-2dd1-4cea-9155-355543e6c46a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"us.rnmcnm.com"}}}
-  - {"name":"US_youtube@资源分享师_137","type":"vmess","server":"104.19.44.185","port":8080,"cipher":"auto","uuid":"3fdf9d48-578a-42dc-9fdd-0dfcefa3d0c5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?ed=2048&Telegram🇨🇳 @WangCai_8","headers":{"host":"amd2.720208.xyz"}}}
-  - {"name":"US_youtube@资源分享师_140","type":"ss","server":"38.114.114.207","port":7001,"password":"RexnBgU7EV5ADxG","cipher":"aes-256-gcm"}
-  - {"name":"US_youtube@资源分享师_141","type":"vmess","server":"104.19.32.46","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip006.dtku47.xyz"}}}
-  - {"name":"US_youtube@资源分享师_142","type":"vmess","server":"23.227.38.6","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip006.3196772.xyz"}}}
-  - {"name":"US_youtube@资源分享师_144","type":"vmess","server":"104.16.67.38","port":2095,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.sbs/linkws","headers":{"host":"proud-union-8659.email-0kn8d.workers.dev"}}}
-  - {"name":"US_youtube@资源分享师_145","type":"vmess","server":"fbi.gov","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"GB_youtube@资源分享师_146","type":"ss","server":"51.103.233.181","port":37576,"password":"GeXlCLj6oV0CDlszmbL1LK","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"US_youtube@资源分享师_148","type":"vmess","server":"sg5.mmmmmmmmmm.cfd","port":44457,"cipher":"auto","uuid":"a83fccdb-eeec-4dab-a8c9-a105acbd89e5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"US_youtube@资源分享师_151","type":"vmess","server":"fbi.gov","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip1.1789034.xyz"}}}
-  - {"name":"US_youtube@资源分享师_152","type":"vmess","server":"23.227.38.5","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip006.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_153","type":"vmess","server":"sg.rnmcnm.com","port":443,"cipher":"auto","uuid":"7d039b88-bf42-4fdd-9c05-3656a1dbf729","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"sg.rnmcnm.com"}}}
-  - {"name":"US_youtube@资源分享师_154","type":"vmess","server":"104.19.51.232","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip006.3196772.xyz"}}}
-  - {"name":"US_youtube@资源分享师_155","type":"ss","server":"38.86.135.141","port":8882,"password":"kDWvXYZoTBcGkC4","cipher":"aes-256-gcm"}
-  - {"name":"US_youtube@资源分享师_159","type":"vmess","server":"104.19.59.99","port":2052,"cipher":"auto","uuid":"d6b6d982-d52f-465a-b988-85670b23f64a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"cdn3.freegradely.xyz"}}}
-  - {"name":"US_youtube@资源分享师_160","type":"vmess","server":"104.17.106.151","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"CN_youtube@资源分享师_161","type":"vmess","server":"mmjp11.micloud.buzz","port":46011,"cipher":"auto","uuid":"f9b02d8c-b69b-435f-aa25-68393e5fb121","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/zh-cn","headers":{"host":"mmjp11.micloud.buzz"}}}
-  - {"name":"GB_youtube@资源分享师_163","type":"ss","server":"51.103.232.91","port":8929,"password":"76ZehNxtyrhe4tLmDYfHsq","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"US_youtube@资源分享师_164","type":"vmess","server":"104.19.45.14","port":2095,"cipher":"auto","uuid":"7a737f41-b792-4260-94ff-3d864da67b80","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"onea.flha.ru"}}}
-  - {"name":"GB_youtube@资源分享师_165","type":"ss","server":"212.102.53.198","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
-  - {"name":"CN_youtube@资源分享师_167","type":"ss","server":"guangguang01.xyz","port":30373,"password":"NUeBvQHox0BmnHpu","cipher":"aes-128-gcm"}
-  - {"name":"CN_youtube@资源分享师_168","type":"trojan","server":"fl0022.flyflylflyflysbs.sbs","port":27969,"udp":true,"password":"4bd14bdb-db19-4de4-a452-58b897046d2c","sni":"hk02.ckcloud.info","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"CA_youtube@资源分享师_172","type":"ss","server":"142.4.216.225","port":80,"password":"JIhN6rBKkaEboLNXVSv5rq","cipher":"chacha20-ietf-poly1305"}
-  - {"name":"US_youtube@资源分享师_173","type":"vmess","server":"104.19.38.62","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.3196772.xyz"}}}
-  - {"name":"US_youtube@资源分享师_174","type":"vmess","server":"russia.com","port":8880,"cipher":"auto","uuid":"06d65689-a12a-467c-9ff8-0363fe90c0b4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/api/v3/download.getFile","headers":{"host":"sssub.v2.001.ssrsub.com"}}}
-  - {"name":"US_youtube@资源分享师_175","type":"vmess","server":"104.19.46.233","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip005.3196772.xyz"}}}
-  - {"name":"US_youtube@资源分享师_176","type":"vmess","server":"russia.com","port":80,"cipher":"auto","uuid":"06d65689-a12a-467c-9ff8-0363fe90c0b4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/api/v3/download.getFile","headers":{"host":"sssub.v2.001.ssrsub.com"}}}
-  - {"name":"US_youtube@资源分享师_179","type":"vmess","server":"172.64.233.32","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip2.1457230.xyz"}}}
-  - {"name":"US_youtube@资源分享师_181","type":"vmess","server":"russia.com","port":80,"cipher":"auto","uuid":"06d65689-a12a-467c-9ff8-0363fe90c0b4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/api/v3/download.getFile","headers":{"host":"sssub.v2.001.ssrsub.com"}}}
-  - {"name":"US_youtube@资源分享师_182","type":"vmess","server":"russia.com","port":8880,"cipher":"auto","uuid":"06d65689-a12a-467c-9ff8-0363fe90c0b4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/api/v3/download.getFile","headers":{"host":"sssub.v2.001.ssrsub.com"}}}
+  - {"name":"江苏省+移动\r_1","type":"trojan","server":"36.151.195.48","port":4787,"udp":true,"password":"TNDSJfNv","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"法国+国际航空电讯集团公司(SITA)\r","type":"trojan","server":"57.181.37.6","port":14435,"udp":true,"password":"AVTI4CYCyIza","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+Amazon+EC2服务器\r_1","type":"trojan","server":"3.134.180.239","port":22222,"udp":true,"password":"telegram-id-directvpn","sni":"trojan.burgerip.co.uk","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+CloudFlare节点\r_1","type":"trojan","server":"WangCai2","port":2087,"udp":true,"password":"8557692d-c228-48f0-b6f9-50d44d4a2096@104.19.52.11:2087?security=tls&sni=tjjd.yzyx1.v6.army&type=ws&host=tjjd.yzyx1.v6.army&path=/&ed=2048&Telegram🇨🇳 @8557692d-c228-48f0-b6f9-50d44d4a2096@104.19.52.11:2087&security=tls&sni=tjjd.yzyx1.v6.army&type=ws&host=tjjd.yzyx1.v6.army&path=/&ed=2048&Telegram🇨🇳 ","sni":"tjjd.yzyx1.v6.army","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tjjd.yzyx1.v6.army"}}}
+  - {"name":"美国+俄勒冈州波特兰Amazon数据中心\r","type":"trojan","server":"34.210.101.237","port":14443,"udp":true,"password":"wVUamyBcJzQI","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"日本+V2CROSS.COM\r_1","type":"trojan","server":"146.56.130.130","port":14850,"udp":true,"password":"moist","sni":"trojan.freenods.sbs","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"trojan.freenods.sbs"}}}
+  - {"name":"美国+Amazon数据中心\r_1","type":"trojan","server":"18.175.45.41","port":14454,"udp":true,"password":"RCsTMnF80YJC","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+CloudFlare节点\r_2","type":"trojan","server":"104.19.52.250","port":2096,"udp":true,"password":"8557692d-c228-48f0-b6f9-50d44d4a2096","sni":"tjjd.yzyx1.v6.army","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tjjd.yzyx1.v6.army"}}}
+  - {"name":"挪威+V2CROSS.COM\r_1","type":"trojan","server":"138.124.184.173","port":443,"udp":true,"password":"c287c4bc-eb4c-401c-b0c8-c804332b3fc8","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"法国+V2CROSS.COM\r","type":"trojan","server":"146.19.247.183","port":443,"udp":true,"password":"62b9172d-cc3a-4001-8172-7804fbf1a09b","sni":"aka.ms","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"de1.trojanvpn.xyz"}}}
+  - {"name":"美国+CloudFlare节点\r_3","type":"trojan","server":"104.17.215.4","port":443,"udp":true,"password":"cb1f26aa437d4bfa9b841d28503ce8cc","sni":"jobscareerfortoday.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"6b777a91","headers":{"host":"jobscareerfortoday.com"}}}
+  - {"name":"美国+Merit网络公司\r","type":"trojan","server":"35.95.189.119","port":22222,"udp":true,"password":"telegram-id-directvpn","sni":"trojan.burgerip.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"加拿大+魁北克省蒙特利尔Amazon数据中心\r_1","type":"trojan","server":"35.182.39.30","port":22222,"udp":true,"password":"telegram-id-directvpn","sni":"trojan.burgerip.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"美国+Amazon数据中心\r_2","type":"trojan","server":"18.175.81.176","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"新加坡+Amazon数据中心\r_1","type":"trojan","server":"54.151.213.224","port":14467,"udp":true,"password":"KmzJNwtPRSWx","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"挪威+V2CROSS.COM\r_2","type":"trojan","server":"us-full.privateip.net","port":443,"udp":true,"password":"c287c4bc-eb4c-401c-b0c8-c804332b3fc8","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+Amazon+EC2服务器\r_2","type":"trojan","server":"3.73.255.248","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"江苏省+移动\r_2","type":"trojan","server":"36.151.195.48","port":4603,"udp":true,"password":"TNDSJfNv","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"英国+V2CROSS.COM\r","type":"trojan","server":"5.44.249.44","port":3306,"udp":true,"password":"b84d16a244460e09","sni":"n2.gladns.com","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/gateway/connect","headers":{"host":"TG.WangCai_1"}}}
+  - {"name":"江苏省+移动\r_3","type":"trojan","server":"36.151.195.48","port":29841,"udp":true,"password":"TNDSJfNv","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+Amazon+EC2服务器\r_3","type":"trojan","server":"3.136.16.17","port":22222,"udp":true,"password":"telegram-id-directvpn","sni":"trojan.burgerip.co.uk","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+惠普HP\r_1","type":"trojan","server":"15.157.153.47","port":22222,"udp":true,"password":"telegram-id-directvpn","sni":"trojan.burgerip.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"美国+CloudFlare节点\r_4","type":"trojan","server":"104.19.53.186","port":2096,"udp":true,"password":"8557692d-c228-48f0-b6f9-50d44d4a2096","sni":"tjjd.yzyx1.v6.army","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tjjd.yzyx1.v6.army"}}}
+  - {"name":"韩国+首尔Amazon数据中心\r","type":"trojan","server":"13.124.213.75","port":14444,"udp":true,"password":"QbyLbiy1qb6J","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+Amazon+EC2服务器\r_4","type":"trojan","server":"3.73.110.210","port":22222,"udp":true,"password":"telegram-id-directvpn","sni":"trojan.burgerip.co.uk","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"日本+东京Amazon数据中心\r","type":"trojan","server":"13.230.60.200","port":14472,"udp":true,"password":"iwrfflNURpHQ","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+CloudFlare节点\r_5","type":"trojan","server":"WangCai2","port":8443,"udp":true,"password":"8557692d-c228-48f0-b6f9-50d44d4a2096@104.19.53.103:8443?security=tls&sni=tjjd.yzyx1.v6.army&type=ws&host=tjjd.yzyx1.v6.army&path=/&ed=2048&Telegram🇨🇳 @8557692d-c228-48f0-b6f9-50d44d4a2096@104.19.53.103:8443&security=tls&sni=tjjd.yzyx1.v6.army&type=ws&host=tjjd.yzyx1.v6.army&path=/&ed=2048&Telegram🇨🇳 ","sni":"tjjd.yzyx1.v6.army","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tjjd.yzyx1.v6.army"}}}
+  - {"name":"美国+CloudFlare节点\r_6","type":"trojan","server":"104.21.47.176","port":443,"udp":true,"password":"52701795-3c3b-46b4-b7cf-c5978b3a4cf2","sni":"hdfyc1.achaemenidempireofpersia.uk","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"xw7uebRG4KlUXGGYTVEagC5V7fI"}}
+  - {"name":"美国+Amazon+EC2服务器\r_5","type":"trojan","server":"3.148.117.229","port":14469,"udp":true,"password":"T8VyzpdmOiT9","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+Akamai科技公司CDN网络节点\r_1","type":"trojan","server":"172.232.43.111","port":443,"udp":true,"password":"50404548-1d4d-4463-8b41-09694d2771bf","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"德国+黑森州法兰克福Amazon数据中心\r","type":"trojan","server":"35.159.109.50","port":14449,"udp":true,"password":"85ESGc12V4zg","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"英国+社会保险安全部\r","type":"trojan","server":"51.44.14.47","port":14462,"udp":true,"password":"gvbtKZOGiZMc","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"乌克兰+V2CROSS.COM\r","type":"trojan","server":"95.164.33.62","port":443,"udp":true,"password":"0b1371aa-649d-41dc-9126-338c87936500","sni":"sourceforge.net","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/websocket","headers":{"host":"se1.trojanvpn.de"}}}
+  - {"name":"英国+伦敦Amazon数据中心\r","type":"trojan","server":"18.130.175.120","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"加拿大+魁北克省蒙特利尔Amazon数据中心\r_2","type":"trojan","server":"35.182.224.74","port":14441,"udp":true,"password":"h4mzFHfy2g0M","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+CloudFlare节点\r_7","type":"trojan","server":"104.21.43.145","port":2096,"udp":true,"password":"E0002134H","sni":"6504e90a.xpxroject.pages.dev","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"6504e90a.xpxroject.pages.dev"}}}
+  - {"name":"法国+巴黎Amazon数据中心\r","type":"trojan","server":"35.180.154.120","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"新加坡+Amazon数据中心\r_2","type":"trojan","server":"13.250.38.199","port":443,"udp":true,"password":"OE1IBsAueh","sni":"aka.ms","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/http/1.1"}}
+  - {"name":"爱尔兰+都柏林Amazon数据中心\r","type":"trojan","server":"52.16.109.182","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"美国+Amazon+EC2服务器\r_6","type":"trojan","server":"3.99.142.64","port":14450,"udp":true,"password":"VvfQOHxPLWG0","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+CloudFlare节点\r_8","type":"trojan","server":"WangCai2","port":8443,"udp":true,"password":"8557692d-c228-48f0-b6f9-50d44d4a2096@104.19.52.219:8443?security=tls&sni=tjjd.yzyx1.v6.army&type=ws&host=tjjd.yzyx1.v6.army&path=/&ed=2048&Telegram🇨🇳 @8557692d-c228-48f0-b6f9-50d44d4a2096@104.19.52.219:8443&security=tls&sni=tjjd.yzyx1.v6.army&type=ws&host=tjjd.yzyx1.v6.army&path=/&ed=2048&Telegram🇨🇳 ","sni":"tjjd.yzyx1.v6.army","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"tjjd.yzyx1.v6.army"}}}
+  - {"name":"日本+V2CROSS.COM\r_2","type":"trojan","server":"43.201.57.106","port":14455,"udp":true,"password":"HoW8ZVuyxuQ7","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"日本东京+Amazon数据中心\r","type":"trojan","server":"52.199.188.25","port":14467,"udp":true,"password":"AlUgLOE3BQ8k","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"台湾省+中华电信(HiNet)数据中心\r","type":"trojan","server":"118.163.128.81","port":13688,"udp":true,"password":"moist","sni":"trojan.freenods.sbs","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"trojan.freenods.sbs"}}}
+  - {"name":"美国+CloudFlare节点\r_9","type":"trojan","server":"104.21.109.230","port":443,"udp":true,"password":"E0002134H","sni":"6504e90a.xpxroject.pages.dev","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"6504e90a.xpxroject.pages.dev"}}}
+  - {"name":"美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心\r","type":"trojan","server":"52.194.187.177","port":14457,"udp":true,"password":"tTNu4CTVZm6A","sni":"appsvs.shop","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国加利福尼亚州洛杉矶+V2CROSS.COM\r","type":"trojan","server":"45.156.24.4","port":443,"udp":true,"password":"ca3d2d6a-f7ea-4a52-ba12-37bd8fcea8d2","sni":"minn2.viraticket.ir","skip-cert-verify":false,"network":"grpc","grpc-opts":{"grpc-service-name":"u9L2z2BtBOlpLASniKKXBXf3Hv"}}
+  - {"name":"韩国+蘑菇主机BGP数据中心\r","type":"trojan","server":"103.214.68.57","port":10003,"udp":true,"password":"6x8HcghsjS","sni":"yes998.chickenkiller.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+惠普HP\r_2","type":"trojan","server":"16.170.150.39","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"美国+Akamai科技公司CDN网络节点\r_2","type":"trojan","server":"fr2-full.privateip.net","port":443,"udp":true,"password":"50404548-1d4d-4463-8b41-09694d2771bf","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国+Amazon数据中心\r_3","type":"trojan","server":"13.36.24.53","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"新加坡+Amazon数据中心\r_3","type":"trojan","server":"13.250.38.199","port":16547,"udp":true,"password":"4xKIHqPURA","sni":"m.zoom.us","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/http/1.1"}}
+  - {"name":"广东省云浮市+移动\r","type":"trojan","server":"183.232.139.22","port":41446,"udp":true,"password":"TNDSJfNv","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"爱尔兰+V2CROSS.COM\r","type":"trojan","server":"54.246.245.152","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":true,"network":"tcp"}
 proxy-groups:
   - name: 🚀 节点选择
-    type: fallback
+    type: select
     proxies:
-      - name: 🔯 故障转移
+      - 🔯 故障转移
       - DIRECT
-      - US_youtube@资源分享师_1
-      - US_youtube@资源分享师_3
-      - US_youtube@资源分享师_5
-      - US_youtube@资源分享师_7
-      - US_youtube@资源分享师_9
-      - US_youtube@资源分享师_10
-      - US_youtube@资源分享师_11
-      - US_youtube@资源分享师_12
-      - US_youtube@资源分享师_14
-      - US_youtube@资源分享师_16
-      - US_youtube@资源分享师_17
-      - US_youtube@资源分享师_18
-      - US_youtube@资源分享师_19
-      - US_youtube@资源分享师_22
-      - CN_youtube@资源分享师_24
-      - US_youtube@资源分享师_25
-      - US_youtube@资源分享师_26
-      - CN_youtube@资源分享师_27
-      - US_youtube@资源分享师_28
-      - US_youtube@资源分享师_30
-      - US_youtube@资源分享师_31
-      - US_youtube@资源分享师_32
-      - US_youtube@资源分享师_33
-      - US_youtube@资源分享师_34
-      - US_youtube@资源分享师_35
-      - US_youtube@资源分享师_37
-      - US_youtube@资源分享师_38
-      - US_youtube@资源分享师_39
-      - US_youtube@资源分享师_40
-      - US_youtube@资源分享师_41
-      - US_youtube@资源分享师_42
-      - US_youtube@资源分享师_43
-      - US_youtube@资源分享师_44
-      - US_youtube@资源分享师_46
-      - US_youtube@资源分享师_47
-      - US_youtube@资源分享师_48
-      - US_youtube@资源分享师_49
-      - US_youtube@资源分享师_50
-      - US_youtube@资源分享师_51
-      - US_youtube@资源分享师_52
-      - US_youtube@资源分享师_53
-      - US_youtube@资源分享师_54
-      - US_youtube@资源分享师_55
-      - US_youtube@资源分享师_56
-      - US_youtube@资源分享师_57
-      - IE_youtube@资源分享师_58
-      - US_youtube@资源分享师_59
-      - US_youtube@资源分享师_60
-      - US_youtube@资源分享师_61
-      - US_youtube@资源分享师_62
-      - US_youtube@资源分享师_64
-      - US_youtube@资源分享师_65
-      - US_youtube@资源分享师_66
-      - US_youtube@资源分享师_67
-      - US_youtube@资源分享师_68
-      - US_youtube@资源分享师_69
-      - US_youtube@资源分享师_70
-      - US_youtube@资源分享师_71
-      - US_youtube@资源分享师_72
-      - US_youtube@资源分享师_73
-      - US_youtube@资源分享师_74
-      - US_youtube@资源分享师_75
-      - US_youtube@资源分享师_76
-      - US_youtube@资源分享师_77
-      - US_youtube@资源分享师_78
-      - US_youtube@资源分享师_79
-      - US_youtube@资源分享师_80
-      - CN_youtube@资源分享师_81
-      - US_youtube@资源分享师_82
-      - US_youtube@资源分享师_83
-      - US_youtube@资源分享师_84
-      - US_youtube@资源分享师_85
-      - US_youtube@资源分享师_87
-      - US_youtube@资源分享师_88
-      - US_youtube@资源分享师_89
-      - US_youtube@资源分享师_90
-      - US_youtube@资源分享师_91
-      - US_youtube@资源分享师_92
-      - US_youtube@资源分享师_93
-      - US_youtube@资源分享师_94
-      - US_youtube@资源分享师_95
-      - US_youtube@资源分享师_96
-      - US_youtube@资源分享师_97
-      - US_youtube@资源分享师_98
-      - US_youtube@资源分享师_99
-      - US_youtube@资源分享师_100
-      - US_youtube@资源分享师_101
-      - US_youtube@资源分享师_102
-      - US_youtube@资源分享师_103
-      - US_youtube@资源分享师_104
-      - US_youtube@资源分享师_105
-      - US_youtube@资源分享师_106
-      - US_youtube@资源分享师_107
-      - US_youtube@资源分享师_108
-      - US_youtube@资源分享师_109
-      - US_youtube@资源分享师_110
-      - US_youtube@资源分享师_112
-      - NL_youtube@资源分享师_113
-      - US_youtube@资源分享师_114
-      - US_youtube@资源分享师_115
-      - US_youtube@资源分享师_116
-      - US_youtube@资源分享师_117
-      - US_youtube@资源分享师_118
-      - US_youtube@资源分享师_119
-      - US_youtube@资源分享师_120
-      - US_youtube@资源分享师_121
-      - US_youtube@资源分享师_122
-      - US_youtube@资源分享师_123
-      - US_youtube@资源分享师_124
-      - US_youtube@资源分享师_125
-      - US_youtube@资源分享师_126
-      - US_youtube@资源分享师_127
-      - US_youtube@资源分享师_128
-      - US_youtube@资源分享师_129
-      - US_youtube@资源分享师_130
-      - US_youtube@资源分享师_132
-      - US_youtube@资源分享师_133
-      - US_youtube@资源分享师_134
-      - US_youtube@资源分享师_135
-      - US_youtube@资源分享师_137
-      - US_youtube@资源分享师_140
-      - US_youtube@资源分享师_141
-      - US_youtube@资源分享师_142
-      - US_youtube@资源分享师_144
-      - US_youtube@资源分享师_145
-      - GB_youtube@资源分享师_146
-      - US_youtube@资源分享师_148
-      - US_youtube@资源分享师_151
-      - US_youtube@资源分享师_152
-      - US_youtube@资源分享师_153
-      - US_youtube@资源分享师_154
-      - US_youtube@资源分享师_155
-      - US_youtube@资源分享师_159
-      - US_youtube@资源分享师_160
-      - CN_youtube@资源分享师_161
-      - GB_youtube@资源分享师_163
-      - US_youtube@资源分享师_164
-      - GB_youtube@资源分享师_165
-      - CN_youtube@资源分享师_167
-      - CN_youtube@资源分享师_168
-      - CA_youtube@资源分享师_172
-      - US_youtube@资源分享师_173
-      - US_youtube@资源分享师_174
-      - US_youtube@资源分享师_175
-      - US_youtube@资源分享师_176
-      - US_youtube@资源分享师_179
-      - US_youtube@资源分享师_181
-      - US_youtube@资源分享师_182
+      - "江苏省+移动\r_1"
+      - "法国+国际航空电讯集团公司(SITA)\r"
+      - "美国+Amazon+EC2服务器\r_1"
+      - "美国+CloudFlare节点\r_1"
+      - "美国+俄勒冈州波特兰Amazon数据中心\r"
+      - "日本+V2CROSS.COM\r_1"
+      - "美国+Amazon数据中心\r_1"
+      - "美国+CloudFlare节点\r_2"
+      - "挪威+V2CROSS.COM\r_1"
+      - "法国+V2CROSS.COM\r"
+      - "美国+CloudFlare节点\r_3"
+      - "美国+Merit网络公司\r"
+      - "加拿大+魁北克省蒙特利尔Amazon数据中心\r_1"
+      - "美国+Amazon数据中心\r_2"
+      - "新加坡+Amazon数据中心\r_1"
+      - "挪威+V2CROSS.COM\r_2"
+      - "美国+Amazon+EC2服务器\r_2"
+      - "江苏省+移动\r_2"
+      - "英国+V2CROSS.COM\r"
+      - "江苏省+移动\r_3"
+      - "美国+Amazon+EC2服务器\r_3"
+      - "美国+惠普HP\r_1"
+      - "美国+CloudFlare节点\r_4"
+      - "韩国+首尔Amazon数据中心\r"
+      - "美国+Amazon+EC2服务器\r_4"
+      - "日本+东京Amazon数据中心\r"
+      - "美国+CloudFlare节点\r_5"
+      - "美国+CloudFlare节点\r_6"
+      - "美国+Amazon+EC2服务器\r_5"
+      - "美国+Akamai科技公司CDN网络节点\r_1"
+      - "德国+黑森州法兰克福Amazon数据中心\r"
+      - "英国+社会保险安全部\r"
+      - "乌克兰+V2CROSS.COM\r"
+      - "英国+伦敦Amazon数据中心\r"
+      - "加拿大+魁北克省蒙特利尔Amazon数据中心\r_2"
+      - "美国+CloudFlare节点\r_7"
+      - "法国+巴黎Amazon数据中心\r"
+      - "新加坡+Amazon数据中心\r_2"
+      - "爱尔兰+都柏林Amazon数据中心\r"
+      - "美国+Amazon+EC2服务器\r_6"
+      - "美国+CloudFlare节点\r_8"
+      - "日本+V2CROSS.COM\r_2"
+      - "日本东京+Amazon数据中心\r"
+      - "台湾省+中华电信(HiNet)数据中心\r"
+      - "美国+CloudFlare节点\r_9"
+      - "美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心\r"
+      - "美国加利福尼亚州洛杉矶+V2CROSS.COM\r"
+      - "韩国+蘑菇主机BGP数据中心\r"
+      - "美国+惠普HP\r_2"
+      - "美国+Akamai科技公司CDN网络节点\r_2"
+      - "美国+Amazon数据中心\r_3"
+      - "新加坡+Amazon数据中心\r_3"
+      - "广东省云浮市+移动\r"
+      - "爱尔兰+V2CROSS.COM\r"
   - name: 🔯 故障转移
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - US_youtube@资源分享师_1
-      - US_youtube@资源分享师_3
-      - US_youtube@资源分享师_5
-      - US_youtube@资源分享师_7
-      - US_youtube@资源分享师_9
-      - US_youtube@资源分享师_10
-      - US_youtube@资源分享师_11
-      - US_youtube@资源分享师_12
-      - US_youtube@资源分享师_14
-      - US_youtube@资源分享师_16
-      - US_youtube@资源分享师_17
-      - US_youtube@资源分享师_18
-      - US_youtube@资源分享师_19
-      - US_youtube@资源分享师_22
-      - CN_youtube@资源分享师_24
-      - US_youtube@资源分享师_25
-      - US_youtube@资源分享师_26
-      - CN_youtube@资源分享师_27
-      - US_youtube@资源分享师_28
-      - US_youtube@资源分享师_30
-      - US_youtube@资源分享师_31
-      - US_youtube@资源分享师_32
-      - US_youtube@资源分享师_33
-      - US_youtube@资源分享师_34
-      - US_youtube@资源分享师_35
-      - US_youtube@资源分享师_37
-      - US_youtube@资源分享师_38
-      - US_youtube@资源分享师_39
-      - US_youtube@资源分享师_40
-      - US_youtube@资源分享师_41
-      - US_youtube@资源分享师_42
-      - US_youtube@资源分享师_43
-      - US_youtube@资源分享师_44
-      - US_youtube@资源分享师_46
-      - US_youtube@资源分享师_47
-      - US_youtube@资源分享师_48
-      - US_youtube@资源分享师_49
-      - US_youtube@资源分享师_50
-      - US_youtube@资源分享师_51
-      - US_youtube@资源分享师_52
-      - US_youtube@资源分享师_53
-      - US_youtube@资源分享师_54
-      - US_youtube@资源分享师_55
-      - US_youtube@资源分享师_56
-      - US_youtube@资源分享师_57
-      - IE_youtube@资源分享师_58
-      - US_youtube@资源分享师_59
-      - US_youtube@资源分享师_60
-      - US_youtube@资源分享师_61
-      - US_youtube@资源分享师_62
-      - US_youtube@资源分享师_64
-      - US_youtube@资源分享师_65
-      - US_youtube@资源分享师_66
-      - US_youtube@资源分享师_67
-      - US_youtube@资源分享师_68
-      - US_youtube@资源分享师_69
-      - US_youtube@资源分享师_70
-      - US_youtube@资源分享师_71
-      - US_youtube@资源分享师_72
-      - US_youtube@资源分享师_73
-      - US_youtube@资源分享师_74
-      - US_youtube@资源分享师_75
-      - US_youtube@资源分享师_76
-      - US_youtube@资源分享师_77
-      - US_youtube@资源分享师_78
-      - US_youtube@资源分享师_79
-      - US_youtube@资源分享师_80
-      - CN_youtube@资源分享师_81
-      - US_youtube@资源分享师_82
-      - US_youtube@资源分享师_83
-      - US_youtube@资源分享师_84
-      - US_youtube@资源分享师_85
-      - US_youtube@资源分享师_87
-      - US_youtube@资源分享师_88
-      - US_youtube@资源分享师_89
-      - US_youtube@资源分享师_90
-      - US_youtube@资源分享师_91
-      - US_youtube@资源分享师_92
-      - US_youtube@资源分享师_93
-      - US_youtube@资源分享师_94
-      - US_youtube@资源分享师_95
-      - US_youtube@资源分享师_96
-      - US_youtube@资源分享师_97
-      - US_youtube@资源分享师_98
-      - US_youtube@资源分享师_99
-      - US_youtube@资源分享师_100
-      - US_youtube@资源分享师_101
-      - US_youtube@资源分享师_102
-      - US_youtube@资源分享师_103
-      - US_youtube@资源分享师_104
-      - US_youtube@资源分享师_105
-      - US_youtube@资源分享师_106
-      - US_youtube@资源分享师_107
-      - US_youtube@资源分享师_108
-      - US_youtube@资源分享师_109
-      - US_youtube@资源分享师_110
-      - US_youtube@资源分享师_112
-      - NL_youtube@资源分享师_113
-      - US_youtube@资源分享师_114
-      - US_youtube@资源分享师_115
-      - US_youtube@资源分享师_116
-      - US_youtube@资源分享师_117
-      - US_youtube@资源分享师_118
-      - US_youtube@资源分享师_119
-      - US_youtube@资源分享师_120
-      - US_youtube@资源分享师_121
-      - US_youtube@资源分享师_122
-      - US_youtube@资源分享师_123
-      - US_youtube@资源分享师_124
-      - US_youtube@资源分享师_125
-      - US_youtube@资源分享师_126
-      - US_youtube@资源分享师_127
-      - US_youtube@资源分享师_128
-      - US_youtube@资源分享师_129
-      - US_youtube@资源分享师_130
-      - US_youtube@资源分享师_132
-      - US_youtube@资源分享师_133
-      - US_youtube@资源分享师_134
-      - US_youtube@资源分享师_135
-      - US_youtube@资源分享师_137
-      - US_youtube@资源分享师_140
-      - US_youtube@资源分享师_141
-      - US_youtube@资源分享师_142
-      - US_youtube@资源分享师_144
-      - US_youtube@资源分享师_145
-      - GB_youtube@资源分享师_146
-      - US_youtube@资源分享师_148
-      - US_youtube@资源分享师_151
-      - US_youtube@资源分享师_152
-      - US_youtube@资源分享师_153
-      - US_youtube@资源分享师_154
-      - US_youtube@资源分享师_155
-      - US_youtube@资源分享师_159
-      - US_youtube@资源分享师_160
-      - CN_youtube@资源分享师_161
-      - GB_youtube@资源分享师_163
-      - US_youtube@资源分享师_164
-      - GB_youtube@资源分享师_165
-      - CN_youtube@资源分享师_167
-      - CN_youtube@资源分享师_168
-      - CA_youtube@资源分享师_172
-      - US_youtube@资源分享师_173
-      - US_youtube@资源分享师_174
-      - US_youtube@资源分享师_175
-      - US_youtube@资源分享师_176
-      - US_youtube@资源分享师_179
-      - US_youtube@资源分享师_181
-      - US_youtube@资源分享师_182
+      - "江苏省+移动\r_1"
+      - "法国+国际航空电讯集团公司(SITA)\r"
+      - "美国+Amazon+EC2服务器\r_1"
+      - "美国+CloudFlare节点\r_1"
+      - "美国+俄勒冈州波特兰Amazon数据中心\r"
+      - "日本+V2CROSS.COM\r_1"
+      - "美国+Amazon数据中心\r_1"
+      - "美国+CloudFlare节点\r_2"
+      - "挪威+V2CROSS.COM\r_1"
+      - "法国+V2CROSS.COM\r"
+      - "美国+CloudFlare节点\r_3"
+      - "美国+Merit网络公司\r"
+      - "加拿大+魁北克省蒙特利尔Amazon数据中心\r_1"
+      - "美国+Amazon数据中心\r_2"
+      - "新加坡+Amazon数据中心\r_1"
+      - "挪威+V2CROSS.COM\r_2"
+      - "美国+Amazon+EC2服务器\r_2"
+      - "江苏省+移动\r_2"
+      - "英国+V2CROSS.COM\r"
+      - "江苏省+移动\r_3"
+      - "美国+Amazon+EC2服务器\r_3"
+      - "美国+惠普HP\r_1"
+      - "美国+CloudFlare节点\r_4"
+      - "韩国+首尔Amazon数据中心\r"
+      - "美国+Amazon+EC2服务器\r_4"
+      - "日本+东京Amazon数据中心\r"
+      - "美国+CloudFlare节点\r_5"
+      - "美国+CloudFlare节点\r_6"
+      - "美国+Amazon+EC2服务器\r_5"
+      - "美国+Akamai科技公司CDN网络节点\r_1"
+      - "德国+黑森州法兰克福Amazon数据中心\r"
+      - "英国+社会保险安全部\r"
+      - "乌克兰+V2CROSS.COM\r"
+      - "英国+伦敦Amazon数据中心\r"
+      - "加拿大+魁北克省蒙特利尔Amazon数据中心\r_2"
+      - "美国+CloudFlare节点\r_7"
+      - "法国+巴黎Amazon数据中心\r"
+      - "新加坡+Amazon数据中心\r_2"
+      - "爱尔兰+都柏林Amazon数据中心\r"
+      - "美国+Amazon+EC2服务器\r_6"
+      - "美国+CloudFlare节点\r_8"
+      - "日本+V2CROSS.COM\r_2"
+      - "日本东京+Amazon数据中心\r"
+      - "台湾省+中华电信(HiNet)数据中心\r"
+      - "美国+CloudFlare节点\r_9"
+      - "美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心\r"
+      - "美国加利福尼亚州洛杉矶+V2CROSS.COM\r"
+      - "韩国+蘑菇主机BGP数据中心\r"
+      - "美国+惠普HP\r_2"
+      - "美国+Akamai科技公司CDN网络节点\r_2"
+      - "美国+Amazon数据中心\r_3"
+      - "新加坡+Amazon数据中心\r_3"
+      - "广东省云浮市+移动\r"
+      - "爱尔兰+V2CROSS.COM\r"
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - ♻️ 自动选择
+      - 🔯 故障转移
   - name: 🛑 全球拦截
     type: select
     proxies:
@@ -557,155 +275,61 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ♻️ 自动选择
-      - US_youtube@资源分享师_1
-      - US_youtube@资源分享师_3
-      - US_youtube@资源分享师_5
-      - US_youtube@资源分享师_7
-      - US_youtube@资源分享师_9
-      - US_youtube@资源分享师_10
-      - US_youtube@资源分享师_11
-      - US_youtube@资源分享师_12
-      - US_youtube@资源分享师_14
-      - US_youtube@资源分享师_16
-      - US_youtube@资源分享师_17
-      - US_youtube@资源分享师_18
-      - US_youtube@资源分享师_19
-      - US_youtube@资源分享师_22
-      - CN_youtube@资源分享师_24
-      - US_youtube@资源分享师_25
-      - US_youtube@资源分享师_26
-      - CN_youtube@资源分享师_27
-      - US_youtube@资源分享师_28
-      - US_youtube@资源分享师_30
-      - US_youtube@资源分享师_31
-      - US_youtube@资源分享师_32
-      - US_youtube@资源分享师_33
-      - US_youtube@资源分享师_34
-      - US_youtube@资源分享师_35
-      - US_youtube@资源分享师_37
-      - US_youtube@资源分享师_38
-      - US_youtube@资源分享师_39
-      - US_youtube@资源分享师_40
-      - US_youtube@资源分享师_41
-      - US_youtube@资源分享师_42
-      - US_youtube@资源分享师_43
-      - US_youtube@资源分享师_44
-      - US_youtube@资源分享师_46
-      - US_youtube@资源分享师_47
-      - US_youtube@资源分享师_48
-      - US_youtube@资源分享师_49
-      - US_youtube@资源分享师_50
-      - US_youtube@资源分享师_51
-      - US_youtube@资源分享师_52
-      - US_youtube@资源分享师_53
-      - US_youtube@资源分享师_54
-      - US_youtube@资源分享师_55
-      - US_youtube@资源分享师_56
-      - US_youtube@资源分享师_57
-      - IE_youtube@资源分享师_58
-      - US_youtube@资源分享师_59
-      - US_youtube@资源分享师_60
-      - US_youtube@资源分享师_61
-      - US_youtube@资源分享师_62
-      - US_youtube@资源分享师_64
-      - US_youtube@资源分享师_65
-      - US_youtube@资源分享师_66
-      - US_youtube@资源分享师_67
-      - US_youtube@资源分享师_68
-      - US_youtube@资源分享师_69
-      - US_youtube@资源分享师_70
-      - US_youtube@资源分享师_71
-      - US_youtube@资源分享师_72
-      - US_youtube@资源分享师_73
-      - US_youtube@资源分享师_74
-      - US_youtube@资源分享师_75
-      - US_youtube@资源分享师_76
-      - US_youtube@资源分享师_77
-      - US_youtube@资源分享师_78
-      - US_youtube@资源分享师_79
-      - US_youtube@资源分享师_80
-      - CN_youtube@资源分享师_81
-      - US_youtube@资源分享师_82
-      - US_youtube@资源分享师_83
-      - US_youtube@资源分享师_84
-      - US_youtube@资源分享师_85
-      - US_youtube@资源分享师_87
-      - US_youtube@资源分享师_88
-      - US_youtube@资源分享师_89
-      - US_youtube@资源分享师_90
-      - US_youtube@资源分享师_91
-      - US_youtube@资源分享师_92
-      - US_youtube@资源分享师_93
-      - US_youtube@资源分享师_94
-      - US_youtube@资源分享师_95
-      - US_youtube@资源分享师_96
-      - US_youtube@资源分享师_97
-      - US_youtube@资源分享师_98
-      - US_youtube@资源分享师_99
-      - US_youtube@资源分享师_100
-      - US_youtube@资源分享师_101
-      - US_youtube@资源分享师_102
-      - US_youtube@资源分享师_103
-      - US_youtube@资源分享师_104
-      - US_youtube@资源分享师_105
-      - US_youtube@资源分享师_106
-      - US_youtube@资源分享师_107
-      - US_youtube@资源分享师_108
-      - US_youtube@资源分享师_109
-      - US_youtube@资源分享师_110
-      - US_youtube@资源分享师_112
-      - NL_youtube@资源分享师_113
-      - US_youtube@资源分享师_114
-      - US_youtube@资源分享师_115
-      - US_youtube@资源分享师_116
-      - US_youtube@资源分享师_117
-      - US_youtube@资源分享师_118
-      - US_youtube@资源分享师_119
-      - US_youtube@资源分享师_120
-      - US_youtube@资源分享师_121
-      - US_youtube@资源分享师_122
-      - US_youtube@资源分享师_123
-      - US_youtube@资源分享师_124
-      - US_youtube@资源分享师_125
-      - US_youtube@资源分享师_126
-      - US_youtube@资源分享师_127
-      - US_youtube@资源分享师_128
-      - US_youtube@资源分享师_129
-      - US_youtube@资源分享师_130
-      - US_youtube@资源分享师_132
-      - US_youtube@资源分享师_133
-      - US_youtube@资源分享师_134
-      - US_youtube@资源分享师_135
-      - US_youtube@资源分享师_137
-      - US_youtube@资源分享师_140
-      - US_youtube@资源分享师_141
-      - US_youtube@资源分享师_142
-      - US_youtube@资源分享师_144
-      - US_youtube@资源分享师_145
-      - GB_youtube@资源分享师_146
-      - US_youtube@资源分享师_148
-      - US_youtube@资源分享师_151
-      - US_youtube@资源分享师_152
-      - US_youtube@资源分享师_153
-      - US_youtube@资源分享师_154
-      - US_youtube@资源分享师_155
-      - US_youtube@资源分享师_159
-      - US_youtube@资源分享师_160
-      - CN_youtube@资源分享师_161
-      - GB_youtube@资源分享师_163
-      - US_youtube@资源分享师_164
-      - GB_youtube@资源分享师_165
-      - CN_youtube@资源分享师_167
-      - CN_youtube@资源分享师_168
-      - CA_youtube@资源分享师_172
-      - US_youtube@资源分享师_173
-      - US_youtube@资源分享师_174
-      - US_youtube@资源分享师_175
-      - US_youtube@资源分享师_176
-      - US_youtube@资源分享师_179
-      - US_youtube@资源分享师_181
-      - US_youtube@资源分享师_182
+      - 🔯 故障转移
+      - "江苏省+移动\r_1"
+      - "法国+国际航空电讯集团公司(SITA)\r"
+      - "美国+Amazon+EC2服务器\r_1"
+      - "美国+CloudFlare节点\r_1"
+      - "美国+俄勒冈州波特兰Amazon数据中心\r"
+      - "日本+V2CROSS.COM\r_1"
+      - "美国+Amazon数据中心\r_1"
+      - "美国+CloudFlare节点\r_2"
+      - "挪威+V2CROSS.COM\r_1"
+      - "法国+V2CROSS.COM\r"
+      - "美国+CloudFlare节点\r_3"
+      - "美国+Merit网络公司\r"
+      - "加拿大+魁北克省蒙特利尔Amazon数据中心\r_1"
+      - "美国+Amazon数据中心\r_2"
+      - "新加坡+Amazon数据中心\r_1"
+      - "挪威+V2CROSS.COM\r_2"
+      - "美国+Amazon+EC2服务器\r_2"
+      - "江苏省+移动\r_2"
+      - "英国+V2CROSS.COM\r"
+      - "江苏省+移动\r_3"
+      - "美国+Amazon+EC2服务器\r_3"
+      - "美国+惠普HP\r_1"
+      - "美国+CloudFlare节点\r_4"
+      - "韩国+首尔Amazon数据中心\r"
+      - "美国+Amazon+EC2服务器\r_4"
+      - "日本+东京Amazon数据中心\r"
+      - "美国+CloudFlare节点\r_5"
+      - "美国+CloudFlare节点\r_6"
+      - "美国+Amazon+EC2服务器\r_5"
+      - "美国+Akamai科技公司CDN网络节点\r_1"
+      - "德国+黑森州法兰克福Amazon数据中心\r"
+      - "英国+社会保险安全部\r"
+      - "乌克兰+V2CROSS.COM\r"
+      - "英国+伦敦Amazon数据中心\r"
+      - "加拿大+魁北克省蒙特利尔Amazon数据中心\r_2"
+      - "美国+CloudFlare节点\r_7"
+      - "法国+巴黎Amazon数据中心\r"
+      - "新加坡+Amazon数据中心\r_2"
+      - "爱尔兰+都柏林Amazon数据中心\r"
+      - "美国+Amazon+EC2服务器\r_6"
+      - "美国+CloudFlare节点\r_8"
+      - "日本+V2CROSS.COM\r_2"
+      - "日本东京+Amazon数据中心\r"
+      - "台湾省+中华电信(HiNet)数据中心\r"
+      - "美国+CloudFlare节点\r_9"
+      - "美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心\r"
+      - "美国加利福尼亚州洛杉矶+V2CROSS.COM\r"
+      - "韩国+蘑菇主机BGP数据中心\r"
+      - "美国+惠普HP\r_2"
+      - "美国+Akamai科技公司CDN网络节点\r_2"
+      - "美国+Amazon数据中心\r_3"
+      - "新加坡+Amazon数据中心\r_3"
+      - "广东省云浮市+移动\r"
+      - "爱尔兰+V2CROSS.COM\r"
 
 rules:
 # 本地/局域网地址
