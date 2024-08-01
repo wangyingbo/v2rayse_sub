@@ -30,12 +30,18 @@
 -->
 
 - `wzdnzd/aggregator` 订阅地址：
-	- **Clash**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/Clash
-	- **V2Ray**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/V2Ray
-	- **SingBox**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/SingBox
-	- **Loon**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/Loon
-	- **Surge**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/Surge
-	- **QuantumultX**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/QuantumultX
+	- **Clash**: 
+	https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/Clash
+	- **V2Ray**: 
+	https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/V2Ray
+	- **SingBox**: 
+	https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/SingBox
+	- **Loon**: 
+	https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/Loon
+	- **Surge**: 
+	https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/Surge
+	- **QuantumultX**: 
+	https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/QuantumultX
 
 ### 说明
 
