@@ -35,3 +35,5 @@
 - `yb_v2rayse_sub_top_size`订阅，会遍历昨天所有的订阅文件，选取size最大的前5个订阅，生成订阅链接；链接最后面的`yb_v2rayse_sub1.yaml` 中的 `sub1` 可修改为 `sub2`、`sub3` 等，最多支持到数字5。
 
 - `tglaoshiji`订阅，其他博主的每天分享订阅地址；
+
+- `wzdnzd/aggregator` 订阅，爬虫项目生成的订阅地址；
