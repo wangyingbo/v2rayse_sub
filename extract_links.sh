@@ -5,6 +5,7 @@ git pull --rebase
 echo "\n"
 
 current_time=$(date +"Today is %A, %B %d, %Y %H:%M:%S")
+log_file='wzdnzd_aggregator_log.txt'
 
 # 检测操作系统类型
 OS_TYPE=$(uname)
