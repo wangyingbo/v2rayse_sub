@@ -19,6 +19,7 @@
 
 [https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/tglaoshiji.yaml](https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/tglaoshiji.yaml)
 
+<!--
 - [wzdnzd/aggregator](https://github.com/wzdnzd/aggregator?tab=readme-ov-file#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95) 订阅地址：
 	- **Clash**: [https://imperialb.in/r/guuxbjhm](https://imperialb.in/r/guuxbjhm)
 	- **V2Ray**: [https://imperialb.in/r/xcsrzcfa](https://imperialb.in/r/xcsrzcfa)
@@ -26,7 +27,15 @@
 	- **Loon**: [https://imperialb.in/r/edbaufm0](https://imperialb.in/r/edbaufm0)
 	- **Surge**: [https://imperialb.in/r/gbefuchp](https://imperialb.in/r/gbefuchp)
 	- **QuantumultX**: [https://imperialb.in/r/qvorfkrq](https://imperialb.in/r/qvorfkrq)
+-->
 
+- `wzdnzd/aggregator` 订阅地址：
+	- **Clash**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/Clash
+	- **V2Ray**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/V2Ray
+	- **SingBox**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/SingBox
+	- **Loon**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/Loon
+	- **Surge**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/Surge
+	- **QuantumultX**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/QuantumultX
 
 ### 说明
 
