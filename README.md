@@ -47,6 +47,8 @@
 
 - `wzdnzd/aggregator` 订阅，爬虫项目生成的订阅地址；
 
-### 客户端 FLClash，使用Clash Meta 内核。
+### 客户端
 
-[下载地址](https://github.com/chen08209/FlClash/blob/main/README_zh_CN.md)
+**因订阅中包含argo、hysteria2节点，因此尽量使用Clash Meta 内核的客户端，如FLClash、Clash Verge等。**
+
+[FLClash下载地址](https://github.com/chen08209/FlClash/blob/main/README_zh_CN.md)
