@@ -46,3 +46,7 @@
 - `tglaoshiji`订阅，其他博主的每天分享订阅地址；
 
 - `wzdnzd/aggregator` 订阅，爬虫项目生成的订阅地址；
+
+### 客户端 FLClash，使用Clash Meta 内核。
+
+[下载地址](https://github.com/chen08209/FlClash/blob/main/README_zh_CN.md)
