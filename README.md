@@ -49,12 +49,24 @@
 
 ### 客户端
 
-**因订阅中包含argo、hysteria2节点，因此尽量使用Clash Meta 内核的客户端，如FLClash、Clash Verge等。**
+**Mac或Windows客户端因订阅中包含argo、hysteria2节点，因此尽量使用Clash Meta 内核的客户端，如FLClash、Clash Verge等。**
 
-[FLClash: 活跃中](https://github.com/chen08209/FlClash/blob/main/README_zh_CN.md)
+- [FLClash: 活跃中](https://github.com/chen08209/FlClash/blob/main/README_zh_CN.md)
 
-[clash-verge-rev/clash-verge-rev: 活跃中](https://github.com/clash-verge-rev/clash-verge-rev)
+- [clash-verge-rev/clash-verge-rev: 活跃中](https://github.com/clash-verge-rev/clash-verge-rev)
 
-[zzzgydi/clash-verge: 默认rm分支，需切换main分支](https://github.com/zzzgydi/clash-verge)
+- [zzzgydi/clash-verge: 默认rm分支，需切换main分支](https://github.com/zzzgydi/clash-verge)
 
-[MetaCubeX/clash-verge: archived状态](https://github.com/MetaCubeX/clash-verge)
+- [MetaCubeX/clash-verge: archived状态](https://github.com/MetaCubeX/clash-verge)
+
+**安卓客户端**
+
+- [FLClash: 活跃中](https://github.com/chen08209/FlClash/blob/main/README_zh_CN.md)
+
+- [Clash Meta For Android](https://github.com/MetaCubeX/ClashMetaForAndroid)
+
+**iOS客户端**
+
+- [小火箭共享账号](https://id.halsh.ltd/)
+
+
