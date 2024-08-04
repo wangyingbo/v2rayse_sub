@@ -59,6 +59,12 @@
 
 - [MetaCubeX/clash-verge: archived状态](https://github.com/MetaCubeX/clash-verge)
 
+- [LibNyanpasu/clash-nyanpasu: 活跃中](https://github.com/LibNyanpasu/clash-nyanpasu)
+
+- [MatsuriDayo/nekoray: 活跃中](https://github.com/MatsuriDayo/nekoray)
+
+- [2dust/v2rayN: Windows平台，活跃中](https://github.com/2dust/v2rayN)
+
 **安卓客户端**
 
 - [FLClash: 活跃中](https://github.com/chen08209/FlClash/blob/main/README_zh_CN.md)
