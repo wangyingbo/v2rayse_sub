@@ -71,6 +71,8 @@
 
 - [Clash Meta For Android](https://github.com/MetaCubeX/ClashMetaForAndroid)
 
+- [sing-box 的 Android 客户端](https://github.com/MatsuriDayo/NekoBoxForAndroid)
+
 **iOS客户端**
 
 - [小火箭共享账号](https://id.halsh.ltd/)
