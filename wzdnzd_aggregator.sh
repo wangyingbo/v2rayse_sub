@@ -84,8 +84,7 @@ for keyword in "${keywords[@]}"; do
     # 对配置url做encode转换
     config_encode_url=$(urlencode $config_url)
     # 对keyword做小写转换
-    first_char=$(echo "${keyword:0:1}" | tr '[:upper:]' '[:lower:]')
-    lowercase_keyword="${first_char}${keyword:1}"
+    lowercase_keyword=$(echo "$keyword" | tr '[:upper:]' '[:lower:]')
     link="https://yun-api.subcloud.xyz/sub?target=${lowercase_keyword}&url=${sub_encode_url}&insert=false&config=${config_encode_url}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true"
   
     # 如果找到链接，下载文件并保存
