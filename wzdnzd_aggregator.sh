@@ -86,6 +86,7 @@ for keyword in "${keywords[@]}"; do
     if [ -n "$link" ]; then
         echo "Downloading $link for $keyword..."
         curl -s "$link" -o "wzdnzd_aggregator_sub/$keyword"
+        echo "$keyword has downloaded!"
     else
         echo "No link found for $keyword"
     fi
