@@ -85,7 +85,7 @@ for keyword in "${keywords[@]}"; do
     config_encode_url=$(urlencode $config_url)
     # 对keyword做小写转换
     lowercase_keyword=$(echo "$keyword" | tr '[:upper:]' '[:lower:]')
-    if [[ $lowercase_keyword='quantumultx' ]]; then
+    if [[ "$lowercase_keyword" = 'quantumultx' ]]; then
         lowercase_keyword='quanx'
     fi
     link="https://yun-api.subcloud.xyz/sub?target=${lowercase_keyword}&url=${sub_encode_url}&insert=false&config=${config_encode_url}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true"
