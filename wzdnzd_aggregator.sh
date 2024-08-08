@@ -71,7 +71,7 @@ urlencode() {
 }
 
 
-sub_url="https://gist.githubusercontent.com/johnzhang0707/8f88dc294f66a68d9c4d352275a8d52d/raw/751db8389583a769fb8e93b1d74d17fe57d94e93/configsub.yaml"
+sub_url="https://gist.githubusercontent.com/zoecsoulkey/4fb494052c2398bdbd36df8d20fb600e/raw/c33cd10dd37ee6b9f670db4387746e8f6eeafde9/configsub.yaml"
 
 # 定义关键字数组
 keywords=("Clash" "V2Ray" "SingBox" "Loon" "Surge" "QuantumultX")
