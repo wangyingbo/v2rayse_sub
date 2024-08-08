@@ -52,9 +52,11 @@ else
 fi
 echo "\n"
 
-url="https://tglaoshiji.github.io/nodeshare/${year}/${month}/${my_date}.yaml"
+# url="https://tglaoshiji.github.io/nodeshare/${year}/${month}/${my_date}.yaml"
+url="https://tglaoshiji.github.io/nodeshare/${year}/7/${my_date}.yaml"
 
 echo "当前的请求地址是：${url}"
+echo "\n"
 
 curl $url > ./$sub_file_name
 
