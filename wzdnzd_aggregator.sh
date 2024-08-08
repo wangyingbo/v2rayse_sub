@@ -76,6 +76,7 @@ echo "$encoded_url"
 config_url="https://gist.githubusercontent.com/zoecsoulkey/4fb494052c2398bdbd36df8d20fb600e/raw/c33cd10dd37ee6b9f670db4387746e8f6eeafde9/configsub.yaml"
 
 clash_append_url="https://yun-api.subcloud.xyz/sub?target=clash&url=${config_url}&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true"
+echo "clash url: ${clash_append_url}"
 curl -s $(urlencode $clash_append_url) -o "wzdnzd_aggregator_sub/Clash"
 
 
