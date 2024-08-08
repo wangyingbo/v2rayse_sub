@@ -74,10 +74,12 @@ echo "$encoded_url"
 
 
 config_url="https://gist.githubusercontent.com/zoecsoulkey/4fb494052c2398bdbd36df8d20fb600e/raw/c33cd10dd37ee6b9f670db4387746e8f6eeafde9/configsub.yaml"
+converter_url="https://yun-api.subcloud.xyz/sub"
 
-clash_append_url="https://yun-api.subcloud.xyz/sub?target=clash&url=${config_url}&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true"
-echo "clash url: ${clash_append_url}"
-curl -s $(urlencode $clash_append_url) -o "wzdnzd_aggregator_sub/Clash"
+clash_url_encode_url=$(urlencode "?target=clash&url=${config_url}&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true")
+clash_sub_url="${converter_url}${clash_url_encode_url}"
+echo "clash url: ${clash_sub_url}"
+curl -s $clash_sub_url -o "wzdnzd_aggregator_sub/Clash"
 
 
 echo "All files downloaded to wzdnzd_aggregator/ directory."
