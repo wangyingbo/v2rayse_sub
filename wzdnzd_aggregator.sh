@@ -69,17 +69,27 @@ urlencode() {
   echo "$encoded"
 }
 
-encoded_url=$(urlencode "https://example.com/path?query=value")
-echo "$encoded_url"
 
+sub_url="https://gist.githubusercontent.com/zoecsoulkey/4fb494052c2398bdbd36df8d20fb600e/raw/c33cd10dd37ee6b9f670db4387746e8f6eeafde9/configsub.yaml"
 
-config_url="https://gist.githubusercontent.com/zoecsoulkey/4fb494052c2398bdbd36df8d20fb600e/raw/c33cd10dd37ee6b9f670db4387746e8f6eeafde9/configsub.yaml"
-converter_url="https://yun-api.subcloud.xyz/sub"
+# 定义关键字数组
+keywords=("Clash" "V2Ray" "SingBox" "Loon" "Surge" "QuantumultX")
 
-clash_url_encode_url=$(urlencode "?target=clash&url=${config_url}&insert=false&config=https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true")
-clash_sub_url="${converter_url}${clash_url_encode_url}"
-echo "clash url: ${clash_sub_url}"
-curl -s $clash_sub_url -o "wzdnzd_aggregator_sub/Clash"
+# 遍历关键字数组
+for keyword in "${keywords[@]}"; do
+    sub_encode_url=$(urlencode $sub_url)
+    config_url="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/${keyword}/config/ACL4SSR_Online.ini"
+    config_encode_url=$(urlencode $config_url)
+    link="https://yun-api.subcloud.xyz/sub?target=${keyword}&url=${config_encode_url}&insert=false&config=${config_encode_url}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true"
+  
+    # 如果找到链接，下载文件并保存
+    if [ -n "$link" ]; then
+        echo "Downloading $link for $keyword..."
+        curl -s "$link" -o "wzdnzd_aggregator_sub/$keyword"
+    else
+        echo "No link found for $keyword"
+    fi
+done
 
 
 echo "All files downloaded to wzdnzd_aggregator/ directory."
