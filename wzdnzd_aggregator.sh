@@ -1,5 +1,6 @@
 #!/bin/zsh
 # 获取订阅：https://gist.github.com/search?o=desc&q=configsub&s=updated
+# 订阅转换：https://my.subcloud.xyz/
 
 # git
 git pull --rebase
