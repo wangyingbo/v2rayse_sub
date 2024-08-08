@@ -80,7 +80,7 @@ for keyword in "${keywords[@]}"; do
     sub_encode_url=$(urlencode $sub_url)
     config_url="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/${keyword}/config/ACL4SSR_Online.ini"
     config_encode_url=$(urlencode $config_url)
-    link="https://yun-api.subcloud.xyz/sub?target=${keyword}&url=${config_encode_url}&insert=false&config=${config_encode_url}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true"
+    link="https://yun-api.subcloud.xyz/sub?target=${keyword}&url=${sub_encode_url}&insert=false&config=${config_encode_url}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true"
   
     # 如果找到链接，下载文件并保存
     if [ -n "$link" ]; then
