@@ -50,7 +50,7 @@ done < "$input_file"
 for str in "${removeArr[@]}"; do
   # 使用 `|` 作为分隔符并转义字符串中的特殊字符
   escaped_str=$(echo "$str" | sed 's/[^^]/[&]/g; s/\^/\\^/g')
-  sed -i '' -e "s|$escaped_str||g" "$tmp_file"
+  sed -i '' -e "s|$escaped_str|baidu.com|g" "$tmp_file"
 done
 
 
