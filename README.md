@@ -29,7 +29,7 @@
 	- **QuantumultX**: [https://imperialb.in/r/qvorfkrq](https://imperialb.in/r/qvorfkrq)
 -->
 
-- `wzdnzd/aggregator` 订阅地址：
+- `yb_aggregator` 订阅地址：
 	- **Clash**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/Clash
 	- **V2Ray**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/V2Ray
 	- **SingBox**: https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/SingBox
@@ -45,7 +45,7 @@
 
 - `tglaoshiji`订阅，其他博主的每天分享订阅地址；
 
-- `wzdnzd/aggregator` 订阅，爬虫项目生成的订阅地址；
+- `yb_aggregator` 订阅，爬虫项目生成的订阅地址；
 
 ### 客户端
 
