@@ -98,13 +98,12 @@ for keyword in "${keywords[@]}"; do
         curl -s "$link" -o "wzdnzd_aggregator_sub/$keyword"
         echo "$keyword has downloaded!"
         echo "\n"
-
-        if [[ $keyword = 'Surge' ]]; then
-            # /bin/zsh remove_surge_illegal.sh
-        fi
-        
     else
         echo "No link found for $keyword"
+    fi
+
+    if [[ $keyword = 'Surge' ]]; then
+        /bin/zsh remove_surge_illegal.sh
     fi
 done
 
