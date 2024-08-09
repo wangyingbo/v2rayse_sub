@@ -29,7 +29,7 @@ while IFS= read -r line; do
     echo "index1: ${arr[1]}"
 
     illegalText=${arr[1]}
-    if [[ "$illegalText" =~ ^[a-zA-Z0-9\.\ ]*$ ]]; then
+    if [[ "$illegalText" =~ ^[\-a-zA-Z0-9\.\ ]*$ ]]; then
       # 否则，将行写入临时文件
       echo "$line" >> "$tmp_file"
     else

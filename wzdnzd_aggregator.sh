@@ -103,7 +103,7 @@ for keyword in "${keywords[@]}"; do
     fi
 
     if [[ $keyword = 'Surge' ]]; then
-        /bin/zsh remove_surge_illegal.sh
+        ./remove_surge_illegal.sh
     fi
 done
 
