@@ -95,7 +95,9 @@ for keyword in "${keywords[@]}"; do
     if [[ $keyword = 'Surge' ]]; then
         include="^(?=[^,]*(?:日本|新加坡|印度|韩国|香港|美国|德国|英国|加拿大|泰国|台湾|澳大利亚|荷兰|冰岛|墨西哥|巴西|俄罗斯|意大利|尼日利亚|土耳其|卢森堡|越南|HK|JP|TW|UK|US))(?!(?:.*更新|.*官网))[^,]*"
         encode_include=$(urlencode $include)
-        link="${link}&include=${encode_include}"
+        new_link="${link}&include=${encode_include}"
+        echo "new_link:${new_link}"
+        link=${new_link}
     fi
   
     # 如果找到链接，下载文件并保存
