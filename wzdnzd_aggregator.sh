@@ -108,9 +108,9 @@ for keyword in "${keywords[@]}"; do
         echo "No link found for $keyword"
     fi
 
-    if [[ $keyword = 'Surge' ]]; then
-        ./remove_surge_illegal.sh
-    fi
+    # if [[ $keyword = 'Surge' ]]; then
+    #     ./remove_surge_illegal.sh
+    # fi
 done
 
 
