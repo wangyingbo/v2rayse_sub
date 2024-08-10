@@ -93,7 +93,7 @@ for keyword in "${keywords[@]}"; do
     link="https://yun-api.subcloud.xyz/sub?target=${lowercase_keyword}&url=${sub_encode_url}&insert=false&config=${config_encode_url}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true"
 
     if [[ $keyword = 'Surge' ]]; then
-        include="+*(日本|新加坡|印度|韩国|香港|美国|德国|英国|加拿大|泰国|台湾|澳大利亚|荷兰|冰岛|墨西哥|巴西|俄罗斯|意大利|尼日利亚|土耳其|卢森堡|越南|HK|JP|TW|UK|US)+*),"
+        include="^(?=[^,]*(?:日本|新加坡|印度|韩国|香港|美国|德国|英国|加拿大|泰国|台湾|澳大利亚|荷兰|冰岛|墨西哥|巴西|俄罗斯|意大利|尼日利亚|土耳其|卢森堡|越南|HK|JP|TW|UK|US))(?!(?:.*更新|.*官网))[^,]*"
         encode_include=$(urlencode $include)
         link="${link}&include=${encode_include}"
     fi
