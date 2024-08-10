@@ -70,6 +70,7 @@ urlencode() {
   echo "$encoded"
 }
 
+# 正确写法
 url_encode() {
     encode_string=$(printf %s "$1" | xxd -p | sed 's/\(..\)/%\1/g' | tr -d '\n' | sed 's/%0a//g')
     echo $encode_string
@@ -85,11 +86,11 @@ keywords=("Clash" "V2Ray" "SingBox" "Loon" "Surge" "QuantumultX")
 # 遍历关键字数组
 for keyword in "${keywords[@]}"; do
     # 对sub_url做encode转换
-    sub_encode_url=$(urlencode $sub_url)
+    sub_encode_url=$(url_encode $sub_url)
     # 定义配置url
     config_url="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/${keyword}/config/ACL4SSR_Online.ini"
     # 对配置url做encode转换
-    config_encode_url=$(urlencode $config_url)
+    config_encode_url=$(url_encode $config_url)
     # 对keyword做小写转换
     lowercase_keyword=$(echo "$keyword" | tr '[:upper:]' '[:lower:]')
     if [[ "$lowercase_keyword" = 'quantumultx' ]]; then
@@ -100,13 +101,11 @@ for keyword in "${keywords[@]}"; do
     if [[ $keyword = 'Surge' ]]; then
         # 正常link:https://yun-api.subcloud.xyz/sub?target=surge&ver=4&url=https%3A%2F%2Fgist.githubusercontent.com%2Fwangyingbo%2Feb9075f2dc6be6a41eae7765a7fccae7%2Fraw%2F5456a6eabecbafe6387b5cfd2bbaad2e0035f65b%2Fyb_config_sub.yaml&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&include=%5E(%3F%3D%5B%5E%2C%5D*(%3F%3A%E6%97%A5%E6%9C%AC%7C%E6%96%B0%E5%8A%A0%E5%9D%A1%7C%E5%8D%B0%E5%BA%A6%7C%E9%9F%A9%E5%9B%BD%7C%E9%A6%99%E6%B8%AF%7C%E7%BE%8E%E5%9B%BD%7C%E5%BE%B7%E5%9B%BD%7C%E8%8B%B1%E5%9B%BD%7C%E5%8A%A0%E6%8B%BF%E5%A4%A7%7C%E6%B3%B0%E5%9B%BD%7C%E5%8F%B0%E6%B9%BE%7C%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%7C%E8%8D%B7%E5%85%B0%7C%E5%86%B0%E5%B2%9B%7C%E5%A2%A8%E8%A5%BF%E5%93%A5%7C%E5%B7%B4%E8%A5%BF%7C%E4%BF%84%E7%BD%97%E6%96%AF%7C%E6%84%8F%E5%A4%A7%E5%88%A9%7C%E5%B0%BC%E6%97%A5%E5%88%A9%E4%BA%9A%7C%E5%9C%9F%E8%80%B3%E5%85%B6%7C%E5%8D%A2%E6%A3%AE%E5%A0%A1%7C%E8%B6%8A%E5%8D%97%7CHK%7CJP%7CTW%7CUK%7CUS))(%3F!(%3F%3A.*%E6%9B%B4%E6%96%B0%7C.*%E5%AE%98%E7%BD%91))%5B%5E%2C%5D*&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false
         include="^(?=[^,]*(?:日本|新加坡|印度|韩国|香港|美国|德国|英国|加拿大|泰国|台湾|澳大利亚|荷兰|冰岛|墨西哥|巴西|俄罗斯|意大利|尼日利亚|土耳其|卢森堡|越南|HK|JP|TW|UK|US))(?!(?:.*更新|.*官网))[^,]*"
-        encode_include1=$(urlencode $include)
-        encode_include2=$(url_encode $include)
-        echo "encode include 1:${encode_include1}"
-        echo "encode include 2:${encode_include2}"
+        encode_include=$(url_encode $include)
+        echo "encode include:${encode_include}"
         echo "\n"
 
-        new_link="${link}&include=%5E(%3F%3D%5B%5E%2C%5D*(%3F%3A%E6%97%A5%E6%9C%AC%7C%E6%96%B0%E5%8A%A0%E5%9D%A1%7C%E5%8D%B0%E5%BA%A6%7C%E9%9F%A9%E5%9B%BD%7C%E9%A6%99%E6%B8%AF%7C%E7%BE%8E%E5%9B%BD%7C%E5%BE%B7%E5%9B%BD%7C%E8%8B%B1%E5%9B%BD%7C%E5%8A%A0%E6%8B%BF%E5%A4%A7%7C%E6%B3%B0%E5%9B%BD%7C%E5%8F%B0%E6%B9%BE%7C%E6%BE%B3%E5%A4%A7%E5%88%A9%E4%BA%9A%7C%E8%8D%B7%E5%85%B0%7C%E5%86%B0%E5%B2%9B%7C%E5%A2%A8%E8%A5%BF%E5%93%A5%7C%E5%B7%B4%E8%A5%BF%7C%E4%BF%84%E7%BD%97%E6%96%AF%7C%E6%84%8F%E5%A4%A7%E5%88%A9%7C%E5%B0%BC%E6%97%A5%E5%88%A9%E4%BA%9A%7C%E5%9C%9F%E8%80%B3%E5%85%B6%7C%E5%8D%A2%E6%A3%AE%E5%A0%A1%7C%E8%B6%8A%E5%8D%97%7CHK%7CJP%7CTW%7CUK%7CUS))(%3F!(%3F%3A.*%E6%9B%B4%E6%96%B0%7C.*%E5%AE%98%E7%BD%91))%5B%5E%2C%5D*"
+        new_link="${link}&include=${encode_include}"
         link=${new_link}
 
     fi
