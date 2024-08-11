@@ -1,6 +1,9 @@
 #!/bin/zsh
 # 获取订阅：https://gist.github.com/search?o=desc&q=configsub&s=updated
+# https://gist.github.com/search?o=desc&q=v2ray.txt&s=updated
+# https://github.com/search?q=clash.yaml&type=repositories&s=updated&o=desc
 # 订阅转换：https://my.subcloud.xyz
+
 
 # git
 git pull --rebase
