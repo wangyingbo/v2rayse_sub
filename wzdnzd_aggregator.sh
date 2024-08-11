@@ -140,7 +140,7 @@ for keyword in "${keywords[@]}"; do
         echo "encode include:${encode_include}"
         echo "\n"
 
-        new_link="${link}&include=${encode_include}"
+        new_link="${link}&ver=4&include=${encode_include}"
         link=${new_link}
 
     fi
