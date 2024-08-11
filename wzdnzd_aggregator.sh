@@ -84,7 +84,7 @@ url_encode() {
 
 # sub_url="https://gist.githubusercontent.com/zoecsoulkey/4fb494052c2398bdbd36df8d20fb600e/raw/c33cd10dd37ee6b9f670db4387746e8f6eeafde9/configsub.yaml"
 # sub_url="https://gist.githubusercontent.com/johnzhang0707/8f88dc294f66a68d9c4d352275a8d52d/raw/b5d85c624e0877c471e5a10310bafe5d50fe5ccc/configsub.yaml"
-sub_url="https://gist.githubusercontent.com/wangyingbo/eb9075f2dc6be6a41eae7765a7fccae7/raw/5456a6eabecbafe6387b5cfd2bbaad2e0035f65b/yb_config_sub.yaml"
+sub_url="https://gist.githubusercontent.com/wangyingbo/eb9075f2dc6be6a41eae7765a7fccae7/raw/5be56cca8504a47b66283a0ba6803c47c33b425e/yb_config_sub.yaml"
 
 # 定义关键字数组
 keywords=("Clash" "V2Ray" "SingBox" "Loon" "Surge" "QuantumultX")
