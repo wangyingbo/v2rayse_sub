@@ -106,7 +106,7 @@ fi
 html_content=$(curl -s "$gist_url")
 
 # 提取所有的raw文件链接
-raw_links=$(echo "$html_content" | grep 'href=' | grep "$username" | grep "$gist_id" | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep '\.yaml$' | sed 's/^/https:\/\/github.com/')
+raw_links=$(echo "$html_content" | grep 'href=' | grep "$username" | grep "$gist_id" | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep '\.yaml$' | sed 's/^/https:\/\/gist.githubusercontent.com/')
 
 # 匹配yaml后缀结尾的url
 sub_url=$(echo $raw_links | grep '\.yaml$')
