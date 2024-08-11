@@ -35,6 +35,7 @@ for file_path in "${file_paths[@]}"; do
     echo "\n"
     echo "raw gist url: $sub_url"
     echo "\n"
+    echo "\n"
 
     curl $sub_url > $gist_config/$username.yaml
 done
