@@ -32,7 +32,9 @@ for file_path in "${file_paths[@]}"; do
     raw_links=$(echo "$html_content" | grep 'href=' | grep "$username" | grep "$gist_id" | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep '\.yaml$' | sed 's/^/https:\/\/gist.githubusercontent.com/')
 
     sub_url=$(echo $raw_links | grep '\.yaml$')
+    echo "\n"
     echo "raw gist url: $sub_url"
+    echo "\n"
 
     curl $sub_url > $gist_config/$username.yaml
 done
