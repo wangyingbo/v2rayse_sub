@@ -92,11 +92,11 @@ keywords=("Clash" "V2Ray" "SingBox" "Loon" "Surge" "QuantumultX")
 # 遍历关键字数组
 for keyword in "${keywords[@]}"; do
     # 对sub_url做encode转换
-    sub_encode_url=$(url_encode $sub_url)
+    sub_encode_url=$(urlencode $sub_url)
     # 定义配置url
     config_url="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/${keyword}/config/ACL4SSR_Online.ini"
     # 对配置url做encode转换
-    config_encode_url=$(url_encode $config_url)
+    config_encode_url=$(urlencode $config_url)
     # 对keyword做小写转换
     lowercase_keyword=$(echo "$keyword" | tr '[:upper:]' '[:lower:]')
     if [[ "$lowercase_keyword" = 'quantumultx' ]]; then
