@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 current_time=$(date +"Today is %A, %B %d, %Y %H:%M:%S")
 log_file=$1
 
