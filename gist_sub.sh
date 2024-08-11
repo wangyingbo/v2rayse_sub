@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 
 ./before_pull.sh
