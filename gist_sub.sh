@@ -11,6 +11,7 @@ file_paths=(
     "https://gist.github.com/zoecsoulkey/4fb494052c2398bdbd36df8d20fb600e"
     "https://gist.github.com/Cyndri/70a6d36206b4e3f71afad2c65aec627e"
     "https://gist.github.com/ye4241/1c93c56cd514a757cb8239b52bae3c68"
+    "https://gist.github.com/CKCat/f8fec8ee8322e156a241d4819bbd4f54"
 )
 
 gist_config="gist_config"
