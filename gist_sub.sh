@@ -21,7 +21,7 @@ for file_path in "${file_paths[@]}"; do
   echo "raw url: ${file_path}"
   gist_url=$file_path
   regex="https://gist.github.com/([^/]+)/([^/]+)"
-  if [[ $gist_url =~ $regex ]]; then
+  if [[ "$gist_url" =~ $regex ]]; then
     ybusername="${BASH_REMATCH[1]}"
     gist_id="${BASH_REMATCH[2]}"
   else
@@ -46,7 +46,7 @@ for file_path in "${file_paths[@]}"; do
     yb_file_name=$(basename $line .yaml)
     echo "per gist url: $line"
     echo "\n"
-    curl $line > "${gist_config}/${ybusername}.yaml"
+    curl $line > "${gist_config}/${ybusername}_${yb_file_name}.yaml"
     echo "\n"
   done
 done
