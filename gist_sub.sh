@@ -28,6 +28,8 @@ for file_path in "${file_paths[@]}"; do
       exit 1
     fi
 
+    echo "github username: ${ybusername}, gist id: ${gist_id}"
+
     # 下载Gist页面的HTML内容
     html_content=$(curl -s "$gist_url")
 
