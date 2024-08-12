@@ -18,36 +18,37 @@ gist_config="gist_config"
 
 # 遍历文件路径数组
 for file_path in "${file_paths[@]}"; do
-    gist_url=$file_path
-    regex="https://gist.github.com/([^/]+)/([^/]+)"
-    if [[ $gist_url =~ $regex ]]; then
-      ybusername="${BASH_REMATCH[1]}"
-      gist_id="${BASH_REMATCH[2]}"
-    else
-      echo "Invalid Gist URL"
-      exit 1
-    fi
+  echo "raw url: ${file_path}"
+  gist_url=$file_path
+  regex="https://gist.github.com/([^/]+)/([^/]+)"
+  if [[ $gist_url =~ $regex ]]; then
+    ybusername="${BASH_REMATCH[1]}"
+    gist_id="${BASH_REMATCH[2]}"
+  else
+    echo "Invalid Gist URL"
+    exit 1
+  fi
 
-    echo "github username: ${ybusername}, gist id: ${gist_id}"
+  echo "github username: ${ybusername}, gist id: ${gist_id}"
 
-    # 下载Gist页面的HTML内容
-    html_content=$(curl -s "$gist_url")
+  # 下载Gist页面的HTML内容
+  html_content=$(curl -s "$gist_url")
 
-    # 提取所有的raw文件链接
-    raw_links=$(echo "$html_content" | grep 'href=' | grep "$ybusername" | grep "$gist_id" | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep '\.yaml$' | sed 's/^/https:\/\/gist.githubusercontent.com/')
+  # 提取所有的raw文件链接
+  raw_links=$(echo "$html_content" | grep 'href=' | grep "$ybusername" | grep "$gist_id" | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep '\.yaml$' | sed 's/^/https:\/\/gist.githubusercontent.com/')
 
-    sub_urls=$(echo $raw_links | grep '\.yaml$')
+  sub_urls=$(echo $raw_links | grep '\.yaml$')
+  echo "\n"
+  echo "raw gist url: $sub_urls"
+  echo "\n"
+
+  echo "$sub_urls" | while read -r line ; do
+    yb_file_name=$(basename $line .yaml)
+    echo "per gist url: $line"
     echo "\n"
-    echo "raw gist url: $sub_urls"
+    curl $line > "${gist_config}/${ybusername}.yaml"
     echo "\n"
-
-    echo "$sub_urls" | while read -r line ; do
-      yb_file_name=$(basename $line .yaml)
-      echo "per gist url: $line"
-      echo "\n"
-      curl $line > "${gist_config}/${ybusername}.yaml"
-      echo "\n"
-    done
+  done
 done
 
 ./after_push.sh gist_sub_log.txt
