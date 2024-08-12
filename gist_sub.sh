@@ -40,10 +40,11 @@ for file_path in "${file_paths[@]}"; do
     echo "\n"
 
     echo "$sub_urls" | while read -r line ; do
-      file_name=$(basename $line .yaml)
+      yb_file_name=$(basename $line .yaml)
       echo "per gist url: $line"
       echo "\n"
-      curl $line > $gist_config/$username_$file_name.yaml
+      curl $line > "${gist_config}/${username}_${yb_file_name}.yaml"
+      echo "\n"
     done
 done
 
