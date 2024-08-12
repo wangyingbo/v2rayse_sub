@@ -34,13 +34,17 @@ for file_path in "${file_paths[@]}"; do
     # 提取所有的raw文件链接
     raw_links=$(echo "$html_content" | grep 'href=' | grep "$username" | grep "$gist_id" | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep '\.yaml$' | sed 's/^/https:\/\/gist.githubusercontent.com/')
 
-    sub_url=$(echo $raw_links | grep '\.yaml$')
+    sub_urls=$(echo $raw_links | grep '\.yaml$')
     echo "\n"
-    echo "raw gist url: $sub_url"
-    echo "\n"
+    echo "raw gist url: $sub_urls"
     echo "\n"
 
-    curl $sub_url > $gist_config/$username.yaml
+    echo "$sub_urls" | while read -r line ; do
+      file_name=$(basename $line .yaml)
+      echo "per gist url: $line"
+      echo "\n"
+      curl $line > $gist_config/$username_$file_name.yaml
+    done
 done
 
 ./after_push.sh gist_sub_log.txt

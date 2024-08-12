@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # 提供你的 Gist 页面 URL
-ORI_GIST_URL="https://gist.github.com/wangyingbo/eb9075f2dc6be6a41eae7765a7fccae7"
+ORI_GIST_URL="https://gist.github.com/ye4241/1c93c56cd514a757cb8239b52bae3c68"
 
 gist_url=$ORI_GIST_URL
 regex="https://gist.github.com/([^/]+)/([^/]+)"
@@ -24,5 +24,6 @@ echo "raw gist url: $sub_url"
 
 # 拼接完整的raw文件URL并打印
 echo "$raw_links" | while read -r line ; do
+  echo $(basename $line .yaml)
   echo "$line"
 done
