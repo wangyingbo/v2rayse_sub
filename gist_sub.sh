@@ -9,6 +9,8 @@ file_paths=(
     "https://gist.github.com/xiaotu9639/249910a7633a0a52367bb67fed7c10af"
     "https://gist.github.com/johnzhang0707/8f88dc294f66a68d9c4d352275a8d52d"
     "https://gist.github.com/zoecsoulkey/4fb494052c2398bdbd36df8d20fb600e"
+    "https://gist.github.com/Cyndri/70a6d36206b4e3f71afad2c65aec627e"
+    "https://gist.github.com/ye4241/1c93c56cd514a757cb8239b52bae3c68"
 )
 
 gist_config="gist_config"
