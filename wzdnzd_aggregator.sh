@@ -11,8 +11,37 @@
 git pull --rebase
 echo "\n"
 
+yb_gist_url=''
+yb_file_folder=''
+yb_log_file=''
+while getopts "a:f:l:" opt; do
+    case $opt in
+        a)
+            echo -e "选项a的参数是${OPTARG}"
+            yb_gist_url=${OPTARG}
+            ;;
+        f)
+            echo -e "选项f的参数是${OPTARG}"
+            yb_file_folder=${OPTARG}
+            ;;
+        l)
+            echo -e "选项l的参数是${OPTARG}"
+            yb_log_file=${OPTARG}
+            ;;
+        v)
+            echo -e "version:1.0"
+            ;;
+        \?)
+            echo "miss!!!"
+            ;;
+
+    esac
+done
+
+
+
 current_time=$(date +"Today is %A, %B %d, %Y %H:%M:%S")
-log_file='wzdnzd_aggregator_log.txt'
+log_file="${yb_log_file}"
 
 # 检测操作系统类型
 OS_TYPE=$(uname)
@@ -30,7 +59,7 @@ echo "\n"
 
 
 # 创建保存订阅链接的目录
-mkdir -p wzdnzd_aggregator_sub
+mkdir -p $yb_file_folder
 
 
 # ____________________________________________________________
@@ -90,7 +119,8 @@ url_encode() {
 
 
 # 提供你的 Gist 页面 URL
-ORI_GIST_URL="https://gist.github.com/wangyingbo/eb9075f2dc6be6a41eae7765a7fccae7"
+# ORI_GIST_URL="https://gist.github.com/wangyingbo/eb9075f2dc6be6a41eae7765a7fccae7"
+ORI_GIST_URL=$yb_gist_url
 
 gist_url=$ORI_GIST_URL
 regex="https://gist.github.com/([^/]+)/([^/]+)"
