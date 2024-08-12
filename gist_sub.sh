@@ -20,14 +20,8 @@ gist_config="gist_config"
 for file_path in "${file_paths[@]}"; do
   echo "raw url: ${file_path}"
   gist_url=$file_path
-  regex="https://gist.github.com/([^/]+)/([^/]+)"
-  if [[ "$gist_url" =~ $regex ]]; then
-    ybusername="${BASH_REMATCH[1]}"
-    gist_id="${BASH_REMATCH[2]}"
-  else
-    echo "Invalid Gist URL"
-    exit 1
-  fi
+  ybusername=$(echo "$gist_url" | sed -n 's|.*github.com/\([^/]\{1,\}\)/.*|\1|p')
+  gist_id=$(echo "$gist_url" | sed -n 's|.*/\([^/]\{1,\}\)$|\1|p')
 
   echo "github username: ${ybusername}, gist id: ${gist_id}"
 
