@@ -43,7 +43,7 @@ for file_path in "${file_paths[@]}"; do
       yb_file_name=$(basename $line .yaml)
       echo "per gist url: $line"
       echo "\n"
-      curl $line > "${gist_config}/${ybusername}_${yb_file_name}.yaml"
+      curl $line > "${gist_config}/${ybusername}.yaml"
       echo "\n"
     done
 done
