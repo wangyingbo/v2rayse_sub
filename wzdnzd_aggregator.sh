@@ -78,7 +78,7 @@ mkdir -p $yb_file_folder
 #   # 如果找到链接，下载文件并保存
 #   if [ -n "$link" ]; then
 #     echo "Downloading $link for $keyword..."
-#     curl -s "$link" -o "wzdnzd_aggregator_sub/$keyword"
+#     curl -s "$link" -o "$yb_file_folder/$keyword"
 #   else
 #     echo "No link found for $keyword"
 #   fi
@@ -178,7 +178,7 @@ for keyword in "${keywords[@]}"; do
     # 如果找到链接，下载文件并保存
     if [ -n "$link" ]; then
         echo "Downloading $link for $keyword..."
-        curl -s "$link" -o "wzdnzd_aggregator_sub/$keyword"
+        curl -s "$link" -o "$yb_file_folder/$keyword"
         echo "$keyword has downloaded!"
         echo "\n"
     else
