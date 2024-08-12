@@ -45,4 +45,4 @@ for file_path in "${file_paths[@]}"; do
   done
 done
 
-./after_push.sh gist_sub_log.txt
+./after_push.sh $gist_config/gist_sub_log.txt
