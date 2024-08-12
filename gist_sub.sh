@@ -21,7 +21,7 @@ for file_path in "${file_paths[@]}"; do
     gist_url=$file_path
     regex="https://gist.github.com/([^/]+)/([^/]+)"
     if [[ $gist_url =~ $regex ]]; then
-      username="${BASH_REMATCH[1]}"
+      ybusername="${BASH_REMATCH[1]}"
       gist_id="${BASH_REMATCH[2]}"
     else
       echo "Invalid Gist URL"
@@ -32,7 +32,7 @@ for file_path in "${file_paths[@]}"; do
     html_content=$(curl -s "$gist_url")
 
     # 提取所有的raw文件链接
-    raw_links=$(echo "$html_content" | grep 'href=' | grep "$username" | grep "$gist_id" | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep '\.yaml$' | sed 's/^/https:\/\/gist.githubusercontent.com/')
+    raw_links=$(echo "$html_content" | grep 'href=' | grep "$ybusername" | grep "$gist_id" | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep '\.yaml$' | sed 's/^/https:\/\/gist.githubusercontent.com/')
 
     sub_urls=$(echo $raw_links | grep '\.yaml$')
     echo "\n"
@@ -43,7 +43,7 @@ for file_path in "${file_paths[@]}"; do
       yb_file_name=$(basename $line .yaml)
       echo "per gist url: $line"
       echo "\n"
-      curl $line > "${gist_config}/${username}_${yb_file_name}.yaml"
+      curl $line > "${gist_config}/${ybusername}_${yb_file_name}.yaml"
       echo "\n"
     done
 done
