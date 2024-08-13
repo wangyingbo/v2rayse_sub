@@ -1,5 +1,6 @@
 #!/bin/zsh
-
+# fork list: https://github.com/wzdnzd/aggregator/forks
+# fork list recently updated: https://github.com/wzdnzd/aggregator/forks?include=active&page=1&period=2y&sort_by=last_updated
 
 ./before_pull.sh
 
