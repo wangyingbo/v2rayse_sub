@@ -4,7 +4,7 @@
 ./before_pull.sh
 
 github_config="github_config"
-
+mkdir -p $github_config
 
 # others
 curl "http://172.245.30.41/clash.yaml" > "${github_config}/172_245_30_41_clash.yaml"
