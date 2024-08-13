@@ -63,4 +63,12 @@ for git_file_path in "${github_file_paths[@]}"; do
   echo "\n"
 done
 
+
+# others
+curl "http://172.245.30.41/clash.yaml" > "${gist_config}/172_245_30_41_clash.yaml"
+curl "http://172.245.30.41/v2ray.txt" > "${gist_config}/172_245_30_41_v2ray.txt"
+curl "http://172.245.30.41/singbox.json" > "${gist_config}/172_245_30_41_singbox.json"
+
+
+
 ./after_push.sh "${gist_config}/gist_sub_log.txt"
