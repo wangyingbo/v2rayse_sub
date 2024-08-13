@@ -5,228 +5,95 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇭🇰 HK | 香港 专线, server: gd.runjustfast.com, port: 35004, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: hk1.runjustfast.com, network: ws, ws-opts: {path: /31k64xkea01x, headers: {Host: hk1.runjustfast.com}}}
-  - {name: 🇭🇰 HK | 香港 01, server: gzog.runjustfast.com, port: 35004, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: hk1.runjustfast.com, network: ws, ws-opts: {path: /31k64xkea01x, headers: {Host: hk1.runjustfast.com}}}
-  - {name: 🇭🇰 HK | 香港 02, server: gzo.runjustfast.com, port: 35004, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: hk1.runjustfast.com, network: ws, ws-opts: {path: /31k64xkea01x, headers: {Host: hk1.runjustfast.com}}}
-  - {name: 🇯🇵 JP | 日本 专线, server: jp.runjustfast.com, port: 30001, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: jp1.runjustfast.com, network: ws, ws-opts: {path: /21a64xdea04c, headers: {Host: jp1.runjustfast.com}}}
-  - {name: 🇯🇵 JP | 日本 01, server: gzog.runjustfast.com, port: 30001, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: jp1.runjustfast.com, network: ws, ws-opts: {path: /21a64xdea04c, headers: {Host: jp1.runjustfast.com}}}
-  - {name: 🇯🇵 JP | 日本 02, server: gzo.runjustfast.com, port: 30001, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: jp1.runjustfast.com, network: ws, ws-opts: {path: /21a64xdea04c, headers: {Host: jp1.runjustfast.com}}}
-  - {name: 🇨🇳 TW | 台湾 01, server: gzog.runjustfast.com, port: 30003, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: tw1.runjustfast.com, network: ws, ws-opts: {path: /t1a64wdea01c, headers: {Host: tw1.runjustfast.com}}}
-  - {name: 🇨🇳 TW | 台湾 02, server: gzo.runjustfast.com, port: 30003, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: tw1.runjustfast.com, network: ws, ws-opts: {path: /t1a64wdea01c, headers: {Host: tw1.runjustfast.com}}}
-  - {name: 🇸🇬 SG | 新加坡 01, server: gzog.runjustfast.com, port: 30002, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: sg1.runjustfast.com, network: ws, ws-opts: {path: /2sa6gxdea14c, headers: {Host: sg1.runjustfast.com}}}
-  - {name: 🇸🇬 SG | 新加坡 02, server: gzo.runjustfast.com, port: 30002, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: sg1.runjustfast.com, network: ws, ws-opts: {path: /2sa6gxdea14c, headers: {Host: sg1.runjustfast.com}}}
-  - {name: 🇬🇧 UK | 英国 01, server: gzog.runjustfast.com, port: 30005, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: uk1.runjustfast.com, network: ws, ws-opts: {path: /3su6gxkea11c, headers: {Host: uk1.runjustfast.com}}}
-  - {name: 🇬🇧 UK | 英国 02, server: gzo.runjustfast.com, port: 30005, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: uk1.runjustfast.com, network: ws, ws-opts: {path: /3su6gxkea11c, headers: {Host: uk1.runjustfast.com}}}
-  - {name: 🇺🇸 US | 美国 01, server: gzog.runjustfast.com, port: 30006, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: us1.runjustfast.com, network: ws, ws-opts: {path: /4su6gxksa11c, headers: {Host: us1.runjustfast.com}}}
-  - {name: 🇺🇸 US | 美国 02, server: gzo.runjustfast.com, port: 30006, type: vmess, uuid: 6e22a8b6-0db8-4269-a268-25b0e003d147, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: us1.runjustfast.com, network: ws, ws-opts: {path: /4su6gxksa11c, headers: {Host: us1.runjustfast.com}}}
-  - {name: 🏳️‍🌈 剩余流量：20 GB, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: bdcfb403-d137-491d-baaf-a75013bf1911, skip-cert-verify: true}
-  - {name: 距离下次重置剩余：1 天, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: bdcfb403-d137-491d-baaf-a75013bf1911, skip-cert-verify: true}
-  - {name: 套餐到期：2024-08-14, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: bdcfb403-d137-491d-baaf-a75013bf1911, skip-cert-verify: true}
-  - {name: 🇮🇹 意大利, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: bdcfb403-d137-491d-baaf-a75013bf1911, skip-cert-verify: true}
-  - {name: 🇧🇷 巴西-1, server: br-01.iuhujhytftyrvyu2156496889.sanxi.online, port: 443, type: trojan, password: bdcfb403-d137-491d-baaf-a75013bf1911, skip-cert-verify: true}
-  - {name: 🇰🇷 韩国-1A, server: krf7.dmasodjioejqng568a9defg.sanxi.online, port: 23704, type: trojan, password: bdcfb403-d137-491d-baaf-a75013bf1911, skip-cert-verify: true}
-  - {name: 🇰🇷 韩国-3A, server: kr3.jhsadyua7astto9idu88746.sanxi.online, port: 59204, type: trojan, password: bdcfb403-d137-491d-baaf-a75013bf1911, skip-cert-verify: true}
-  - {name: 🇰🇷 韩国-4A, server: kr-04.sdagdjnbnuygvsa26wf.sanxi.online, port: 26903, type: trojan, password: bdcfb403-d137-491d-baaf-a75013bf1911, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡-直连, server: sg-01.sedfsdinkjiusa5d98897d4as54fg.sanxi.online, port: 53443, type: trojan, password: bdcfb403-d137-491d-baaf-a75013bf1911, skip-cert-verify: true}
-  - {name: 🇨🇦 加拿大, server: ca-01.dsajdnioajfgoiyubsaoddjuh.sanxi.online, port: 21954, type: trojan, password: bdcfb403-d137-491d-baaf-a75013bf1911, skip-cert-verify: true}
+  - {name: "🏳️‍🌈 [trojan]剩余流量：5 GB", server: forward-03.sudatech.store, port: 43500, type: trojan, password: b041f293-d99c-46eb-b762-bc41d229c739, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
+  - {name: "[trojan]套餐到期：2024-08-16", server: forward-03.sudatech.store, port: 43500, type: trojan, password: b041f293-d99c-46eb-b762-bc41d229c739, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
+  - {name: "[trojan]试用未开放外国节点+中转", server: forward-03.sudatech.store, port: 43500, type: trojan, password: b041f293-d99c-46eb-b762-bc41d229c739, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
+  - {name: "🇸🇬 [trojan]更新版本1.4", server: forward-03.sudatech.store, port: 43500, type: trojan, password: b041f293-d99c-46eb-b762-bc41d229c739, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
+  - {name: "[trojan]直连不能用是地区问题", server: forward-03.sudatech.store, port: 43500, type: trojan, password: b041f293-d99c-46eb-b762-bc41d229c739, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
+  - {name: 🏳️‍🌈 剩余流量：20 GB, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
+  - {name: 距离下次重置剩余：2 天, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
+  - {name: 套餐到期：2024-08-16, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
+  - {name: 🇮🇹 意大利, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
+  - {name: 🇧🇷 巴西-1, server: br-01.iuhujhytftyrvyu2156496889.sanxi.online, port: 443, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
+  - {name: 🇰🇷 韩国-1A, server: krf7.dmasodjioejqng568a9defg.sanxi.online, port: 23704, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
+  - {name: 🇰🇷 韩国-3A, server: kr3.jhsadyua7astto9idu88746.sanxi.online, port: 59204, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
+  - {name: 🇰🇷 韩国-4A, server: kr-04.sdagdjnbnuygvsa26wf.sanxi.online, port: 26903, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
+  - {name: 🇸🇬 新加坡-直连, server: sg-01.sedfsdinkjiusa5d98897d4as54fg.sanxi.online, port: 53443, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
+  - {name: 🇨🇦 加拿大, server: ca-01.dsajdnioajfgoiyubsaoddjuh.sanxi.online, port: 21954, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
   - {name: "[vmess]公益机场 xqc.best", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 1b81261e-d9ec-4437-aa0e-4c4c08d847fd, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
   - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 1b81261e-d9ec-4437-aa0e-4c4c08d847fd, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
   - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 1b81261e-d9ec-4437-aa0e-4c4c08d847fd, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
   - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 1b81261e-d9ec-4437-aa0e-4c4c08d847fd, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
-  - {name: "[vmess]公益机场 xqc.best 2", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: d636db5b-093d-4fc2-97cf-a936483af27a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 2", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: d636db5b-093d-4fc2-97cf-a936483af27a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 2", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: d636db5b-093d-4fc2-97cf-a936483af27a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
-  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 2", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: d636db5b-093d-4fc2-97cf-a936483af27a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
-  - {name: "[vmess]公益机场 xqc.best 3", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 585b4700-d88d-4bf1-9100-3db16a63edb3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 3", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 585b4700-d88d-4bf1-9100-3db16a63edb3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 3", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 585b4700-d88d-4bf1-9100-3db16a63edb3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
-  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 3", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 585b4700-d88d-4bf1-9100-3db16a63edb3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
-  - {name: "[vmess]公益机场 xqc.best 4", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: c5e5a94a-1acc-46aa-ab5b-45a487f46d97, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 4", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: c5e5a94a-1acc-46aa-ab5b-45a487f46d97, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 4", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: c5e5a94a-1acc-46aa-ab5b-45a487f46d97, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
-  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 4", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: c5e5a94a-1acc-46aa-ab5b-45a487f46d97, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
-  - {name: 🏳️‍🌈 剩余流量：20 GB 2, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
-  - {name: 距离下次重置剩余：3 天, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
-  - {name: 套餐到期：2024-08-16, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
-  - {name: 🇮🇹 意大利 2, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
-  - {name: 🇧🇷 巴西-1 2, server: br-01.iuhujhytftyrvyu2156496889.sanxi.online, port: 443, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
-  - {name: 🇰🇷 韩国-1A 2, server: krf7.dmasodjioejqng568a9defg.sanxi.online, port: 23704, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
-  - {name: 🇰🇷 韩国-3A 2, server: kr3.jhsadyua7astto9idu88746.sanxi.online, port: 59204, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
-  - {name: 🇰🇷 韩国-4A 2, server: kr-04.sdagdjnbnuygvsa26wf.sanxi.online, port: 26903, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡-直连 2, server: sg-01.sedfsdinkjiusa5d98897d4as54fg.sanxi.online, port: 53443, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
-  - {name: 🇨🇦 加拿大 2, server: ca-01.dsajdnioajfgoiyubsaoddjuh.sanxi.online, port: 21954, type: trojan, password: 98a9b9f2-1700-4690-8882-b4a8bf965ba6, skip-cert-verify: true}
-  - {name: "[vmess]公益机场 xqc.best 5", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 4700e2db-8277-4d76-b03e-3cc873612767, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 5", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 4700e2db-8277-4d76-b03e-3cc873612767, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 5", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 4700e2db-8277-4d76-b03e-3cc873612767, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
-  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 5", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 4700e2db-8277-4d76-b03e-3cc873612767, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
-  - {name: "[vmess]公益机场 xqc.best 6", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 98c2c5b3-3209-42ee-99ea-776b5b248839, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 98c2c5b3-3209-42ee-99ea-776b5b248839, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 98c2c5b3-3209-42ee-99ea-776b5b248839, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
-  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 98c2c5b3-3209-42ee-99ea-776b5b248839, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
-  - {name: "[vmess]公益机场 xqc.best 7", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 215e5a36-18c6-40b2-8e84-f3f0323ed6ed, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 215e5a36-18c6-40b2-8e84-f3f0323ed6ed, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 215e5a36-18c6-40b2-8e84-f3f0323ed6ed, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
-  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 215e5a36-18c6-40b2-8e84-f3f0323ed6ed, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
-  - {name: 🏳️‍🌈 剩余流量：20 GB 3, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: 564ddc9c-39f1-48f5-a40d-bc90faffdc6e, skip-cert-verify: true}
-  - {name: 距离下次重置剩余：2 天, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: 564ddc9c-39f1-48f5-a40d-bc90faffdc6e, skip-cert-verify: true}
-  - {name: 套餐到期：2024-08-15, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: 564ddc9c-39f1-48f5-a40d-bc90faffdc6e, skip-cert-verify: true}
-  - {name: 🇮🇹 意大利 3, server: ml.sadbashubhuiwdhavbh5894sdas54.sanxi.online, port: 24352, type: trojan, password: 564ddc9c-39f1-48f5-a40d-bc90faffdc6e, skip-cert-verify: true}
-  - {name: 🇧🇷 巴西-1 3, server: br-01.iuhujhytftyrvyu2156496889.sanxi.online, port: 443, type: trojan, password: 564ddc9c-39f1-48f5-a40d-bc90faffdc6e, skip-cert-verify: true}
-  - {name: 🇰🇷 韩国-1A 3, server: krf7.dmasodjioejqng568a9defg.sanxi.online, port: 23704, type: trojan, password: 564ddc9c-39f1-48f5-a40d-bc90faffdc6e, skip-cert-verify: true}
-  - {name: 🇰🇷 韩国-3A 3, server: kr3.jhsadyua7astto9idu88746.sanxi.online, port: 59204, type: trojan, password: 564ddc9c-39f1-48f5-a40d-bc90faffdc6e, skip-cert-verify: true}
-  - {name: 🇰🇷 韩国-4A 3, server: kr-04.sdagdjnbnuygvsa26wf.sanxi.online, port: 26903, type: trojan, password: 564ddc9c-39f1-48f5-a40d-bc90faffdc6e, skip-cert-verify: true}
-  - {name: 🇸🇬 新加坡-直连 3, server: sg-01.sedfsdinkjiusa5d98897d4as54fg.sanxi.online, port: 53443, type: trojan, password: 564ddc9c-39f1-48f5-a40d-bc90faffdc6e, skip-cert-verify: true}
-  - {name: 🇨🇦 加拿大 3, server: ca-01.dsajdnioajfgoiyubsaoddjuh.sanxi.online, port: 21954, type: trojan, password: 564ddc9c-39f1-48f5-a40d-bc90faffdc6e, skip-cert-verify: true}
-  - {name: 🇯🇵 2|日本05|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24018, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇯🇵 2|日本06|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24019, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇨🇳 2|台湾05|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24020, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇬🇧 2|英国05|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24051, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇸🇬 2|英国05|x1|xd中新, server: xd-xjp9.bestdong.xyz, port: 24210, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇨🇳 2|台湾06|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24092, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇭🇰 2|美国05|x1|xd中港1, server: xd-zg1.bestdong.xyz, port: 25021, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇺🇸 2|美国05|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24021, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇺🇸 2|美国06|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24022, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇺🇸 2|美国08|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24038, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇭🇰 2|香港05|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24049, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇭🇰 2|香港06|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24040, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇭🇰 2|香港07|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24039, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇭🇰 2|香港07|x1|xd中港2, server: xd-zg2.bestdong.xyz, port: 24039, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇯🇵 1|日本L|x1|df1, server: df-01.bestdong.xyz, port: 59995, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇺🇸 1|美国L|x1|df1, server: df-01.bestdong.xyz, port: 59994, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇭🇰 1|香港L|x1|df1, server: df-01.bestdong.xyz, port: 59993, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇯🇵 1|日本01|x1|xd中日1, server: xd-zhongri1.bestdong.xyz, port: 28912, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇯🇵 1|日本01|x1|df1, server: df-01.bestdong.xyz, port: 33030, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇯🇵 1|日本01|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24012, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇯🇵 1|日本02|x1|xd中日1, server: xd-zhongri1.bestdong.xyz, port: 28916, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇯🇵 1|日本03|x1|xd中日1, server: xd-zhongri1.bestdong.xyz, port: 28074, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇭🇰 1|美国01|x1|xd中港1, server: xd-zg1.bestdong.xyz, port: 25013, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇭🇰 1|美国01|x1|xd中港hkt, server: xd-zg-hkt1.bestdong.xyz, port: 41013, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇭🇰 1|香港01|x1|xd中港2, server: xd-zg2.bestdong.xyz, port: 26011, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇭🇰 1|香港01|x1|xd中港hkt, server: xd-zg-hkt1.bestdong.xyz, port: 60003, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇭🇰 1|香港02|x1|xd中港2, server: xd-zg2.bestdong.xyz, port: 26015, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: 🇭🇰 1|香港02|x1|xd中港hkt, server: xd-zg-hkt1.bestdong.xyz, port: 41015, type: ss, cipher: chacha20-ietf-poly1305, password: a77cdec7-8b3e-4c5f-b4fa-ae18876714e2}
-  - {name: "[vmess]公益机场 xqc.best 8", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: a5293614-bcdc-4738-8680-4568dacdb3f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 8", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: a5293614-bcdc-4738-8680-4568dacdb3f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 8", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: a5293614-bcdc-4738-8680-4568dacdb3f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
-  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 8", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: a5293614-bcdc-4738-8680-4568dacdb3f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
-  - {name: 🏳️‍🌈 剩余流量：1024 MB, server: 1.1.1.1, port: 1111, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 套餐到期：2024-08-13, server: 1.1.1.1, port: 1111, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇸🇬 请经常更新节点, server: 1.1.1.1, port: 1111, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: "🇸🇬 奈飞账号：xfds@nfxz.cc 奈飞密码：bkweps（禁止改密,禁锁车位）提示密码错误尝试新加坡节点", server: 1.1.1.1, port: 1111, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇭🇰 V1 香港 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31011, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇨🇳 V1 台湾 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31021, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 V1 日本 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31031, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇸🇬 V1 新加坡 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31041, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇰🇷 V1 韩国 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31051, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 V1 美国 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31061, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇹🇭 V1 泰国 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31081, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇻🇳 V1 越南 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31082, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇩🇪 V1 德国 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31091, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇬🇧 V1 英国 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31092, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇦🇺 V1 澳大利亚 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31093, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇭🇰 V2 香港 华南专线, server: azi.cm2.xiaomi-api.xyz, port: 31011, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇭🇰 V2 香港 华中专线, server: azi.ct.xiaomi-api.xyz, port: 31111, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇨🇳 V2 台湾 华南专线, server: azi.cm2.xiaomi-api.xyz, port: 31021, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇨🇳 V2 台湾 华中专线, server: azi.ct.xiaomi-api.xyz, port: 31121, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 V2 日本 华南专线, server: azi.cm2.xiaomi-api.xyz, port: 31031, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 V2 日本 华中专线, server: azi.ct.xiaomi-api.xyz, port: 31131, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇸🇬 V2 新加坡 华南专线, server: azi.cm2.xiaomi-api.xyz, port: 31041, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇸🇬 V2 新加坡 华中专线, server: azi.ct.xiaomi-api.xyz, port: 31141, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 V2 美国 华南专线, server: azi.cm2.xiaomi-api.xyz, port: 31061, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 V2 美国 华中专线, server: azi.ct.xiaomi-api.xyz, port: 31161, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇹🇭 V2 泰国 华南专线, server: azi.ct.xiaomi-api.xyz, port: 31181, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇻🇳 V2 越南 华南专线, server: azi.ct.xiaomi-api.xyz, port: 31182, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇩🇪 V2 德国 华南专线, server: azi.ct.xiaomi-api.xyz, port: 31191, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇬🇧 V2 英国 华南专线, server: azi.ct.xiaomi-api.xyz, port: 31192, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇦🇺 V2 澳大利亚 华南专线, server: azi.ct.xiaomi-api.xyz, port: 31193, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇭🇰 V3 香港 华南专线 ChatGPT-NF, server: azi.cm3.xiaomi-api.xyz, port: 31011, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇭🇰 V3 香港 华中专线 ChatGPT-NF, server: azi.cn1.xiaomi-api.xyz, port: 31411, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇭🇰 V3 香港 华东专线 ChatGPT-NF, server: azi.cn2.xiaomi-api.xyz, port: 31411, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇨🇳 V3 台湾 华南专线 ChatGPT-NF, server: azi.cm3.xiaomi-api.xyz, port: 31021, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇨🇳 V3 台湾 华中专线 ChatGPT-NF, server: azi.cn1.xiaomi-api.xyz, port: 31421, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇨🇳 V3 台湾 华东专线 ChatGPT-NF, server: azi.cn2.xiaomi-api.xyz, port: 31421, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 V3 日本 华南专线 ChatGPT-NF, server: azi.cm3.xiaomi-api.xyz, port: 31331, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 V3 日本 华中专线 ChatGPT-NF, server: azi.cn1.xiaomi-api.xyz, port: 31431, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇯🇵 V3 日本 华东专线 ChatGPT-NF, server: azi.cn2.xiaomi-api.xyz, port: 31431, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇸🇬 V3 新加坡 华南专线 ChatGPT-NF, server: azi.cm3.xiaomi-api.xyz, port: 31341, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇸🇬 V3 新加坡 华中专线 ChatGPT-NF, server: azi.cn1.xiaomi-api.xyz, port: 31441, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇸🇬 V3 新加坡 华东专线 ChatGPT-NF, server: azi.cn2.xiaomi-api.xyz, port: 31441, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 V3 美国 华南专线 ChatGPT-NF, server: azi.cm3.xiaomi-api.xyz, port: 31361, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 V3 美国 华中专线 ChatGPT-NF, server: azi.cn1.xiaomi-api.xyz, port: 31461, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇺🇸 V3 美国 华东专线 ChatGPT-NF, server: azi.cn2.xiaomi-api.xyz, port: 31461, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇹🇭 V3 泰国 华南专线, server: azi.cn1.xiaomi-api.xyz, port: 31481, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇻🇳 V3 越南 华中专线, server: azi.cn1.xiaomi-api.xyz, port: 31482, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇩🇪 V3 德国 华南专线, server: azi.cn1.xiaomi-api.xyz, port: 31491, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇬🇧 V3 英国 华东专线, server: azi.cn1.xiaomi-api.xyz, port: 31492, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇦🇺 V3 澳大利亚 华东专线, server: azi.cn1.xiaomi-api.xyz, port: 31493, type: vmess, uuid: c46cab56-f639-4d18-aead-c5f204b56f4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: 🇸🇬 最新官网：xfxssr.com, server: 最新官网：xfxssr, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇸🇬 用不了，请更新订阅, server: 用不了，请更新订阅, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 永久地址请查看活动公告, server: https://sulinkcloud.github.io/, port: 55626, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇸🇬 新加坡03, server: gdcub.yunnode.win, port: 15627, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇺🇸 美国02, server: gdcub.yunnode.win, port: 15628, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇭🇰 香港01, server: gdcub.yunnode.win, port: 19630, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇭🇰 香港02, server: gdcub.yunnode.win, port: 15931, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇺🇸 美国01, server: gdcub.yunnode.win, port: 15532, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇨🇳 台湾01, server: gdcub.yunnode.win, port: 15632, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇬🇧 英国01, server: gdcub.yunnode.win, port: 15634, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇭🇰 香港03, server: gdcub.yunnode.win, port: 15635, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇸🇬 新加坡01, server: gdcub.yunnode.win, port: 15636, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇸🇬 新加坡02, server: gdcub.yunnode.win, port: 15637, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇭🇰 香港04-备用, server: 140.249.160.81, port: 15638, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇭🇰 香港05-备用, server: 140.249.160.81, port: 15639, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇭🇰 香港07-备用, server: 140.249.160.81, port: 15641, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇻🇳 越南01, server: gdcub.yunnode.win, port: 15642, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇺🇸 美国04, server: gdcub.yunnode.win, port: 15728, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇺🇸 美国CF05, server: gdcub.yunnode.win, port: 15729, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇺🇸 美国CF06, server: gdcub.yunnode.win, port: 15731, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇺🇸 美国CF07, server: gdcub.yunnode.win, port: 15733, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇺🇸 美国CF08, server: gdcub.yunnode.win, port: 15735, type: ss, cipher: chacha20-ietf-poly1305, password: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0}
-  - {name: 🇭🇰 香港直连01, server: hk01.xfxnode.top, port: 443, type: vmess, uuid: 5f21c3f6-1adc-43f2-afdc-6f68ee617bf0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /hk01, headers: {Host: hk01.xfxnode.top}}}
-  - {name: 🇭🇰 HK | 香港 专线 2, server: gd.runjustfast.com, port: 35004, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: hk1.runjustfast.com, network: ws, ws-opts: {path: /31k64xkea01x, headers: {Host: hk1.runjustfast.com}}}
-  - {name: 🇭🇰 HK | 香港 01 2, server: gzog.runjustfast.com, port: 35004, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: hk1.runjustfast.com, network: ws, ws-opts: {path: /31k64xkea01x, headers: {Host: hk1.runjustfast.com}}}
-  - {name: 🇭🇰 HK | 香港 02 2, server: gzo.runjustfast.com, port: 35004, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: hk1.runjustfast.com, network: ws, ws-opts: {path: /31k64xkea01x, headers: {Host: hk1.runjustfast.com}}}
-  - {name: 🇯🇵 JP | 日本 专线 2, server: jp.runjustfast.com, port: 30001, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: jp1.runjustfast.com, network: ws, ws-opts: {path: /21a64xdea04c, headers: {Host: jp1.runjustfast.com}}}
-  - {name: 🇯🇵 JP | 日本 01 2, server: gzog.runjustfast.com, port: 30001, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: jp1.runjustfast.com, network: ws, ws-opts: {path: /21a64xdea04c, headers: {Host: jp1.runjustfast.com}}}
-  - {name: 🇯🇵 JP | 日本 02 2, server: gzo.runjustfast.com, port: 30001, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: jp1.runjustfast.com, network: ws, ws-opts: {path: /21a64xdea04c, headers: {Host: jp1.runjustfast.com}}}
-  - {name: 🇨🇳 TW | 台湾 01 2, server: gzog.runjustfast.com, port: 30003, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: tw1.runjustfast.com, network: ws, ws-opts: {path: /t1a64wdea01c, headers: {Host: tw1.runjustfast.com}}}
-  - {name: 🇨🇳 TW | 台湾 02 2, server: gzo.runjustfast.com, port: 30003, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: tw1.runjustfast.com, network: ws, ws-opts: {path: /t1a64wdea01c, headers: {Host: tw1.runjustfast.com}}}
-  - {name: 🇸🇬 SG | 新加坡 01 2, server: gzog.runjustfast.com, port: 30002, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: sg1.runjustfast.com, network: ws, ws-opts: {path: /2sa6gxdea14c, headers: {Host: sg1.runjustfast.com}}}
-  - {name: 🇸🇬 SG | 新加坡 02 2, server: gzo.runjustfast.com, port: 30002, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: sg1.runjustfast.com, network: ws, ws-opts: {path: /2sa6gxdea14c, headers: {Host: sg1.runjustfast.com}}}
-  - {name: 🇬🇧 UK | 英国 01 2, server: gzog.runjustfast.com, port: 30005, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: uk1.runjustfast.com, network: ws, ws-opts: {path: /3su6gxkea11c, headers: {Host: uk1.runjustfast.com}}}
-  - {name: 🇬🇧 UK | 英国 02 2, server: gzo.runjustfast.com, port: 30005, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: uk1.runjustfast.com, network: ws, ws-opts: {path: /3su6gxkea11c, headers: {Host: uk1.runjustfast.com}}}
-  - {name: 🇺🇸 US | 美国 01 2, server: gzog.runjustfast.com, port: 30006, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: us1.runjustfast.com, network: ws, ws-opts: {path: /4su6gxksa11c, headers: {Host: us1.runjustfast.com}}}
-  - {name: 🇺🇸 US | 美国 02 2, server: gzo.runjustfast.com, port: 30006, type: vmess, uuid: df7eed2c-36f8-4d3b-928e-93cb63a2cb83, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: us1.runjustfast.com, network: ws, ws-opts: {path: /4su6gxksa11c, headers: {Host: us1.runjustfast.com}}}
-  - {name: "[vmess]公益机场 xqc.best 9", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 13225ae6-840e-434c-b96f-ffc253db507b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 9", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 13225ae6-840e-434c-b96f-ffc253db507b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 9", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 13225ae6-840e-434c-b96f-ffc253db507b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
-  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 9", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 13225ae6-840e-434c-b96f-ffc253db507b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
-  - {name: "[vmess]公益机场 xqc.best 10", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 0f82f214-9750-429b-a8bd-24192eeddcf0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 10", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 0f82f214-9750-429b-a8bd-24192eeddcf0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
-  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 10", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 0f82f214-9750-429b-a8bd-24192eeddcf0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
-  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 10", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 0f82f214-9750-429b-a8bd-24192eeddcf0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
+  - {name: "[vmess]公益机场 xqc.best 2", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 2183c2de-00d3-48c7-b110-f3044624e2e3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 2", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 2183c2de-00d3-48c7-b110-f3044624e2e3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 2", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 2183c2de-00d3-48c7-b110-f3044624e2e3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
+  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 2", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 2183c2de-00d3-48c7-b110-f3044624e2e3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
+  - {name: "[vmess]公益机场 xqc.best 3", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 215e5a36-18c6-40b2-8e84-f3f0323ed6ed, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 3", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 215e5a36-18c6-40b2-8e84-f3f0323ed6ed, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 3", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 215e5a36-18c6-40b2-8e84-f3f0323ed6ed, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
+  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 3", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 215e5a36-18c6-40b2-8e84-f3f0323ed6ed, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
+  - {name: "[vmess]公益机场 xqc.best 4", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 0f82f214-9750-429b-a8bd-24192eeddcf0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 4", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 0f82f214-9750-429b-a8bd-24192eeddcf0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 4", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 0f82f214-9750-429b-a8bd-24192eeddcf0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
+  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 4", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 0f82f214-9750-429b-a8bd-24192eeddcf0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
+  - {name: "[vmess]公益机场 xqc.best 5", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: c953e6ef-eed9-4ee0-a7ba-9c4254eaf965, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 5", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: c953e6ef-eed9-4ee0-a7ba-9c4254eaf965, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 5", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: c953e6ef-eed9-4ee0-a7ba-9c4254eaf965, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
+  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 5", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: c953e6ef-eed9-4ee0-a7ba-9c4254eaf965, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
+  - {name: 🇯🇵 2|日本05|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24018, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇯🇵 2|日本06|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24019, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇨🇳 2|台湾05|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24020, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇬🇧 2|英国05|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24051, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇸🇬 2|英国05|x1|xd中新, server: xd-xjp9.bestdong.xyz, port: 24210, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇨🇳 2|台湾06|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24092, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇭🇰 2|美国05|x1|xd中港1, server: xd-zg1.bestdong.xyz, port: 25021, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇺🇸 2|美国05|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24021, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇺🇸 2|美国06|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24022, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇺🇸 2|美国08|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24038, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇭🇰 2|香港05|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24049, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇭🇰 2|香港06|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24040, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇭🇰 2|香港07|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24039, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇭🇰 2|香港07|x1|xd中港2, server: xd-zg2.bestdong.xyz, port: 24039, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇯🇵 1|日本L|x1|df1, server: df-01.bestdong.xyz, port: 59995, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇺🇸 1|美国L|x1|df1, server: df-01.bestdong.xyz, port: 59994, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇭🇰 1|香港L|x1|df1, server: df-01.bestdong.xyz, port: 59993, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇯🇵 1|日本01|x1|xd中日1, server: xd-zhongri1.bestdong.xyz, port: 28912, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇯🇵 1|日本01|x1|df1, server: df-01.bestdong.xyz, port: 33030, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇯🇵 1|日本01|x1|上海ll, server: ll-sh1.bestdong.xyz, port: 24012, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇯🇵 1|日本02|x1|xd中日1, server: xd-zhongri1.bestdong.xyz, port: 28916, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇯🇵 1|日本03|x1|xd中日1, server: xd-zhongri1.bestdong.xyz, port: 28074, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇭🇰 1|美国01|x1|xd中港1, server: xd-zg1.bestdong.xyz, port: 25013, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇭🇰 1|美国01|x1|xd中港hkt, server: xd-zg-hkt1.bestdong.xyz, port: 41013, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇭🇰 1|香港01|x1|xd中港2, server: xd-zg2.bestdong.xyz, port: 26011, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇭🇰 1|香港01|x1|xd中港hkt, server: xd-zg-hkt1.bestdong.xyz, port: 60003, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇭🇰 1|香港02|x1|xd中港2, server: xd-zg2.bestdong.xyz, port: 26015, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: 🇭🇰 1|香港02|x1|xd中港hkt, server: xd-zg-hkt1.bestdong.xyz, port: 41015, type: ss, cipher: chacha20-ietf-poly1305, password: dcc2e82b-c3f5-4b9a-831e-40ae22c4c97b}
+  - {name: "[vmess]公益机场 xqc.best 6", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: a5293614-bcdc-4738-8680-4568dacdb3f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: a5293614-bcdc-4738-8680-4568dacdb3f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: a5293614-bcdc-4738-8680-4568dacdb3f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
+  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: a5293614-bcdc-4738-8680-4568dacdb3f3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
+  - {name: "[vmess]公益机场 xqc.best 7", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 4700e2db-8277-4d76-b03e-3cc873612767, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 4700e2db-8277-4d76-b03e-3cc873612767, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 4700e2db-8277-4d76-b03e-3cc873612767, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
+  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 4700e2db-8277-4d76-b03e-3cc873612767, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
+  - {name: "[vmess]公益机场 xqc.best 8", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 585b4700-d88d-4bf1-9100-3db16a63edb3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇭🇰 [vmess]🇭🇰 HK | 香港 LB 8", server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 585b4700-d88d-4bf1-9100-3db16a63edb3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d84zxlca209ol.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d84zxlca209ol.cloudfront.net}}}
+  - {name: "🇯🇵 [vmess]🇯🇵 JP | 日本 LB 8", server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 585b4700-d88d-4bf1-9100-3db16a63edb3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: dd7xps5fj6dfo.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: dd7xps5fj6dfo.cloudfront.net}}}
+  - {name: "🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 8", server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 585b4700-d88d-4bf1-9100-3db16a63edb3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1nal26v8jyfe2.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1nal26v8jyfe2.cloudfront.net}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇭🇰 HK | 香港 专线
-      - 🇭🇰 HK | 香港 01
-      - 🇭🇰 HK | 香港 02
-      - 🇯🇵 JP | 日本 专线
-      - 🇯🇵 JP | 日本 01
-      - 🇯🇵 JP | 日本 02
-      - 🇨🇳 TW | 台湾 01
-      - 🇨🇳 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇸🇬 SG | 新加坡 02
-      - 🇬🇧 UK | 英国 01
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 US | 美国 01
-      - 🇺🇸 US | 美国 02
+      - 🏳️‍🌈 [trojan]剩余流量：5 GB
+      - "[trojan]套餐到期：2024-08-16"
+      - "[trojan]试用未开放外国节点+中转"
+      - 🇸🇬 [trojan]更新版本1.4
+      - "[trojan]直连不能用是地区问题"
       - 🏳️‍🌈 剩余流量：20 GB
-      - 距离下次重置剩余：1 天
-      - 套餐到期：2024-08-14
+      - 距离下次重置剩余：2 天
+      - 套餐到期：2024-08-16
       - 🇮🇹 意大利
       - 🇧🇷 巴西-1
       - 🇰🇷 韩国-1A
@@ -250,38 +117,10 @@ proxy-groups:
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 4
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 4
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 4
-      - 🏳️‍🌈 剩余流量：20 GB 2
-      - 距离下次重置剩余：3 天
-      - 套餐到期：2024-08-16
-      - 🇮🇹 意大利 2
-      - 🇧🇷 巴西-1 2
-      - 🇰🇷 韩国-1A 2
-      - 🇰🇷 韩国-3A 2
-      - 🇰🇷 韩国-4A 2
-      - 🇸🇬 新加坡-直连 2
-      - 🇨🇦 加拿大 2
       - "[vmess]公益机场 xqc.best 5"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 5
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 5
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 5
-      - "[vmess]公益机场 xqc.best 6"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
-      - "[vmess]公益机场 xqc.best 7"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
-      - 🏳️‍🌈 剩余流量：20 GB 3
-      - 距离下次重置剩余：2 天
-      - 套餐到期：2024-08-15
-      - 🇮🇹 意大利 3
-      - 🇧🇷 巴西-1 3
-      - 🇰🇷 韩国-1A 3
-      - 🇰🇷 韩国-3A 3
-      - 🇰🇷 韩国-4A 3
-      - 🇸🇬 新加坡-直连 3
-      - 🇨🇦 加拿大 3
       - 🇯🇵 2|日本05|x1|上海ll
       - 🇯🇵 2|日本06|x1|上海ll
       - 🇨🇳 2|台湾05|x1|上海ll
@@ -310,128 +149,32 @@ proxy-groups:
       - 🇭🇰 1|香港01|x1|xd中港hkt
       - 🇭🇰 1|香港02|x1|xd中港2
       - 🇭🇰 1|香港02|x1|xd中港hkt
+      - "[vmess]公益机场 xqc.best 6"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
+      - "[vmess]公益机场 xqc.best 7"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
       - "[vmess]公益机场 xqc.best 8"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 8
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 8
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 8
-      - 🏳️‍🌈 剩余流量：1024 MB
-      - 套餐到期：2024-08-13
-      - 🇸🇬 请经常更新节点
-      - 🇸🇬 奈飞账号：xfds@nfxz.cc 奈飞密码：bkweps（禁止改密,禁锁车位）提示密码错误尝试新加坡节点
-      - 🇭🇰 V1 香港 移动专线
-      - 🇨🇳 V1 台湾 移动专线
-      - 🇯🇵 V1 日本 移动专线
-      - 🇸🇬 V1 新加坡 移动专线
-      - 🇰🇷 V1 韩国 移动专线
-      - 🇺🇸 V1 美国 移动专线
-      - 🇹🇭 V1 泰国 移动专线
-      - 🇻🇳 V1 越南 移动专线
-      - 🇩🇪 V1 德国 移动专线
-      - 🇬🇧 V1 英国 移动专线
-      - 🇦🇺 V1 澳大利亚 移动专线
-      - 🇭🇰 V2 香港 华南专线
-      - 🇭🇰 V2 香港 华中专线
-      - 🇨🇳 V2 台湾 华南专线
-      - 🇨🇳 V2 台湾 华中专线
-      - 🇯🇵 V2 日本 华南专线
-      - 🇯🇵 V2 日本 华中专线
-      - 🇸🇬 V2 新加坡 华南专线
-      - 🇸🇬 V2 新加坡 华中专线
-      - 🇺🇸 V2 美国 华南专线
-      - 🇺🇸 V2 美国 华中专线
-      - 🇹🇭 V2 泰国 华南专线
-      - 🇻🇳 V2 越南 华南专线
-      - 🇩🇪 V2 德国 华南专线
-      - 🇬🇧 V2 英国 华南专线
-      - 🇦🇺 V2 澳大利亚 华南专线
-      - 🇭🇰 V3 香港 华南专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华中专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华东专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华南专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华中专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华东专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华南专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华中专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华东专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华南专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华中专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华东专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华南专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华中专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华东专线 ChatGPT-NF
-      - 🇹🇭 V3 泰国 华南专线
-      - 🇻🇳 V3 越南 华中专线
-      - 🇩🇪 V3 德国 华南专线
-      - 🇬🇧 V3 英国 华东专线
-      - 🇦🇺 V3 澳大利亚 华东专线
-      - 🇸🇬 最新官网：xfxssr.com
-      - 🇸🇬 用不了，请更新订阅
-      - 永久地址请查看活动公告
-      - 🇸🇬 新加坡03
-      - 🇺🇸 美国02
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇺🇸 美国01
-      - 🇨🇳 台湾01
-      - 🇬🇧 英国01
-      - 🇭🇰 香港03
-      - 🇸🇬 新加坡01
-      - 🇸🇬 新加坡02
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港05-备用
-      - 🇭🇰 香港07-备用
-      - 🇻🇳 越南01
-      - 🇺🇸 美国04
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国CF06
-      - 🇺🇸 美国CF07
-      - 🇺🇸 美国CF08
-      - 🇭🇰 香港直连01
-      - 🇭🇰 HK | 香港 专线 2
-      - 🇭🇰 HK | 香港 01 2
-      - 🇭🇰 HK | 香港 02 2
-      - 🇯🇵 JP | 日本 专线 2
-      - 🇯🇵 JP | 日本 01 2
-      - 🇯🇵 JP | 日本 02 2
-      - 🇨🇳 TW | 台湾 01 2
-      - 🇨🇳 TW | 台湾 02 2
-      - 🇸🇬 SG | 新加坡 01 2
-      - 🇸🇬 SG | 新加坡 02 2
-      - 🇬🇧 UK | 英国 01 2
-      - 🇬🇧 UK | 英国 02 2
-      - 🇺🇸 US | 美国 01 2
-      - 🇺🇸 US | 美国 02 2
-      - "[vmess]公益机场 xqc.best 9"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 9
-      - "[vmess]公益机场 xqc.best 10"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 10
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇭🇰 HK | 香港 专线
-      - 🇭🇰 HK | 香港 01
-      - 🇭🇰 HK | 香港 02
-      - 🇯🇵 JP | 日本 专线
-      - 🇯🇵 JP | 日本 01
-      - 🇯🇵 JP | 日本 02
-      - 🇨🇳 TW | 台湾 01
-      - 🇨🇳 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇸🇬 SG | 新加坡 02
-      - 🇬🇧 UK | 英国 01
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 US | 美国 01
-      - 🇺🇸 US | 美国 02
+      - 🏳️‍🌈 [trojan]剩余流量：5 GB
+      - "[trojan]套餐到期：2024-08-16"
+      - "[trojan]试用未开放外国节点+中转"
+      - 🇸🇬 [trojan]更新版本1.4
+      - "[trojan]直连不能用是地区问题"
       - 🏳️‍🌈 剩余流量：20 GB
-      - 距离下次重置剩余：1 天
-      - 套餐到期：2024-08-14
+      - 距离下次重置剩余：2 天
+      - 套餐到期：2024-08-16
       - 🇮🇹 意大利
       - 🇧🇷 巴西-1
       - 🇰🇷 韩国-1A
@@ -455,38 +198,10 @@ proxy-groups:
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 4
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 4
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 4
-      - 🏳️‍🌈 剩余流量：20 GB 2
-      - 距离下次重置剩余：3 天
-      - 套餐到期：2024-08-16
-      - 🇮🇹 意大利 2
-      - 🇧🇷 巴西-1 2
-      - 🇰🇷 韩国-1A 2
-      - 🇰🇷 韩国-3A 2
-      - 🇰🇷 韩国-4A 2
-      - 🇸🇬 新加坡-直连 2
-      - 🇨🇦 加拿大 2
       - "[vmess]公益机场 xqc.best 5"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 5
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 5
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 5
-      - "[vmess]公益机场 xqc.best 6"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
-      - "[vmess]公益机场 xqc.best 7"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
-      - 🏳️‍🌈 剩余流量：20 GB 3
-      - 距离下次重置剩余：2 天
-      - 套餐到期：2024-08-15
-      - 🇮🇹 意大利 3
-      - 🇧🇷 巴西-1 3
-      - 🇰🇷 韩国-1A 3
-      - 🇰🇷 韩国-3A 3
-      - 🇰🇷 韩国-4A 3
-      - 🇸🇬 新加坡-直连 3
-      - 🇨🇦 加拿大 3
       - 🇯🇵 2|日本05|x1|上海ll
       - 🇯🇵 2|日本06|x1|上海ll
       - 🇨🇳 2|台湾05|x1|上海ll
@@ -515,128 +230,32 @@ proxy-groups:
       - 🇭🇰 1|香港01|x1|xd中港hkt
       - 🇭🇰 1|香港02|x1|xd中港2
       - 🇭🇰 1|香港02|x1|xd中港hkt
+      - "[vmess]公益机场 xqc.best 6"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
+      - "[vmess]公益机场 xqc.best 7"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
       - "[vmess]公益机场 xqc.best 8"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 8
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 8
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 8
-      - 🏳️‍🌈 剩余流量：1024 MB
-      - 套餐到期：2024-08-13
-      - 🇸🇬 请经常更新节点
-      - 🇸🇬 奈飞账号：xfds@nfxz.cc 奈飞密码：bkweps（禁止改密,禁锁车位）提示密码错误尝试新加坡节点
-      - 🇭🇰 V1 香港 移动专线
-      - 🇨🇳 V1 台湾 移动专线
-      - 🇯🇵 V1 日本 移动专线
-      - 🇸🇬 V1 新加坡 移动专线
-      - 🇰🇷 V1 韩国 移动专线
-      - 🇺🇸 V1 美国 移动专线
-      - 🇹🇭 V1 泰国 移动专线
-      - 🇻🇳 V1 越南 移动专线
-      - 🇩🇪 V1 德国 移动专线
-      - 🇬🇧 V1 英国 移动专线
-      - 🇦🇺 V1 澳大利亚 移动专线
-      - 🇭🇰 V2 香港 华南专线
-      - 🇭🇰 V2 香港 华中专线
-      - 🇨🇳 V2 台湾 华南专线
-      - 🇨🇳 V2 台湾 华中专线
-      - 🇯🇵 V2 日本 华南专线
-      - 🇯🇵 V2 日本 华中专线
-      - 🇸🇬 V2 新加坡 华南专线
-      - 🇸🇬 V2 新加坡 华中专线
-      - 🇺🇸 V2 美国 华南专线
-      - 🇺🇸 V2 美国 华中专线
-      - 🇹🇭 V2 泰国 华南专线
-      - 🇻🇳 V2 越南 华南专线
-      - 🇩🇪 V2 德国 华南专线
-      - 🇬🇧 V2 英国 华南专线
-      - 🇦🇺 V2 澳大利亚 华南专线
-      - 🇭🇰 V3 香港 华南专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华中专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华东专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华南专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华中专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华东专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华南专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华中专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华东专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华南专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华中专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华东专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华南专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华中专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华东专线 ChatGPT-NF
-      - 🇹🇭 V3 泰国 华南专线
-      - 🇻🇳 V3 越南 华中专线
-      - 🇩🇪 V3 德国 华南专线
-      - 🇬🇧 V3 英国 华东专线
-      - 🇦🇺 V3 澳大利亚 华东专线
-      - 🇸🇬 最新官网：xfxssr.com
-      - 🇸🇬 用不了，请更新订阅
-      - 永久地址请查看活动公告
-      - 🇸🇬 新加坡03
-      - 🇺🇸 美国02
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇺🇸 美国01
-      - 🇨🇳 台湾01
-      - 🇬🇧 英国01
-      - 🇭🇰 香港03
-      - 🇸🇬 新加坡01
-      - 🇸🇬 新加坡02
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港05-备用
-      - 🇭🇰 香港07-备用
-      - 🇻🇳 越南01
-      - 🇺🇸 美国04
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国CF06
-      - 🇺🇸 美国CF07
-      - 🇺🇸 美国CF08
-      - 🇭🇰 香港直连01
-      - 🇭🇰 HK | 香港 专线 2
-      - 🇭🇰 HK | 香港 01 2
-      - 🇭🇰 HK | 香港 02 2
-      - 🇯🇵 JP | 日本 专线 2
-      - 🇯🇵 JP | 日本 01 2
-      - 🇯🇵 JP | 日本 02 2
-      - 🇨🇳 TW | 台湾 01 2
-      - 🇨🇳 TW | 台湾 02 2
-      - 🇸🇬 SG | 新加坡 01 2
-      - 🇸🇬 SG | 新加坡 02 2
-      - 🇬🇧 UK | 英国 01 2
-      - 🇬🇧 UK | 英国 02 2
-      - 🇺🇸 US | 美国 01 2
-      - 🇺🇸 US | 美国 02 2
-      - "[vmess]公益机场 xqc.best 9"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 9
-      - "[vmess]公益机场 xqc.best 10"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 10
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇭🇰 HK | 香港 专线
-      - 🇭🇰 HK | 香港 01
-      - 🇭🇰 HK | 香港 02
-      - 🇯🇵 JP | 日本 专线
-      - 🇯🇵 JP | 日本 01
-      - 🇯🇵 JP | 日本 02
-      - 🇨🇳 TW | 台湾 01
-      - 🇨🇳 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇸🇬 SG | 新加坡 02
-      - 🇬🇧 UK | 英国 01
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 US | 美国 01
-      - 🇺🇸 US | 美国 02
+      - 🏳️‍🌈 [trojan]剩余流量：5 GB
+      - "[trojan]套餐到期：2024-08-16"
+      - "[trojan]试用未开放外国节点+中转"
+      - 🇸🇬 [trojan]更新版本1.4
+      - "[trojan]直连不能用是地区问题"
       - 🏳️‍🌈 剩余流量：20 GB
-      - 距离下次重置剩余：1 天
-      - 套餐到期：2024-08-14
+      - 距离下次重置剩余：2 天
+      - 套餐到期：2024-08-16
       - 🇮🇹 意大利
       - 🇧🇷 巴西-1
       - 🇰🇷 韩国-1A
@@ -660,38 +279,10 @@ proxy-groups:
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 4
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 4
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 4
-      - 🏳️‍🌈 剩余流量：20 GB 2
-      - 距离下次重置剩余：3 天
-      - 套餐到期：2024-08-16
-      - 🇮🇹 意大利 2
-      - 🇧🇷 巴西-1 2
-      - 🇰🇷 韩国-1A 2
-      - 🇰🇷 韩国-3A 2
-      - 🇰🇷 韩国-4A 2
-      - 🇸🇬 新加坡-直连 2
-      - 🇨🇦 加拿大 2
       - "[vmess]公益机场 xqc.best 5"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 5
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 5
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 5
-      - "[vmess]公益机场 xqc.best 6"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
-      - "[vmess]公益机场 xqc.best 7"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
-      - 🏳️‍🌈 剩余流量：20 GB 3
-      - 距离下次重置剩余：2 天
-      - 套餐到期：2024-08-15
-      - 🇮🇹 意大利 3
-      - 🇧🇷 巴西-1 3
-      - 🇰🇷 韩国-1A 3
-      - 🇰🇷 韩国-3A 3
-      - 🇰🇷 韩国-4A 3
-      - 🇸🇬 新加坡-直连 3
-      - 🇨🇦 加拿大 3
       - 🇯🇵 2|日本05|x1|上海ll
       - 🇯🇵 2|日本06|x1|上海ll
       - 🇨🇳 2|台湾05|x1|上海ll
@@ -720,127 +311,31 @@ proxy-groups:
       - 🇭🇰 1|香港01|x1|xd中港hkt
       - 🇭🇰 1|香港02|x1|xd中港2
       - 🇭🇰 1|香港02|x1|xd中港hkt
+      - "[vmess]公益机场 xqc.best 6"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
+      - "[vmess]公益机场 xqc.best 7"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
       - "[vmess]公益机场 xqc.best 8"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 8
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 8
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 8
-      - 🏳️‍🌈 剩余流量：1024 MB
-      - 套餐到期：2024-08-13
-      - 🇸🇬 请经常更新节点
-      - 🇸🇬 奈飞账号：xfds@nfxz.cc 奈飞密码：bkweps（禁止改密,禁锁车位）提示密码错误尝试新加坡节点
-      - 🇭🇰 V1 香港 移动专线
-      - 🇨🇳 V1 台湾 移动专线
-      - 🇯🇵 V1 日本 移动专线
-      - 🇸🇬 V1 新加坡 移动专线
-      - 🇰🇷 V1 韩国 移动专线
-      - 🇺🇸 V1 美国 移动专线
-      - 🇹🇭 V1 泰国 移动专线
-      - 🇻🇳 V1 越南 移动专线
-      - 🇩🇪 V1 德国 移动专线
-      - 🇬🇧 V1 英国 移动专线
-      - 🇦🇺 V1 澳大利亚 移动专线
-      - 🇭🇰 V2 香港 华南专线
-      - 🇭🇰 V2 香港 华中专线
-      - 🇨🇳 V2 台湾 华南专线
-      - 🇨🇳 V2 台湾 华中专线
-      - 🇯🇵 V2 日本 华南专线
-      - 🇯🇵 V2 日本 华中专线
-      - 🇸🇬 V2 新加坡 华南专线
-      - 🇸🇬 V2 新加坡 华中专线
-      - 🇺🇸 V2 美国 华南专线
-      - 🇺🇸 V2 美国 华中专线
-      - 🇹🇭 V2 泰国 华南专线
-      - 🇻🇳 V2 越南 华南专线
-      - 🇩🇪 V2 德国 华南专线
-      - 🇬🇧 V2 英国 华南专线
-      - 🇦🇺 V2 澳大利亚 华南专线
-      - 🇭🇰 V3 香港 华南专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华中专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华东专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华南专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华中专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华东专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华南专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华中专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华东专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华南专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华中专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华东专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华南专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华中专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华东专线 ChatGPT-NF
-      - 🇹🇭 V3 泰国 华南专线
-      - 🇻🇳 V3 越南 华中专线
-      - 🇩🇪 V3 德国 华南专线
-      - 🇬🇧 V3 英国 华东专线
-      - 🇦🇺 V3 澳大利亚 华东专线
-      - 🇸🇬 最新官网：xfxssr.com
-      - 🇸🇬 用不了，请更新订阅
-      - 永久地址请查看活动公告
-      - 🇸🇬 新加坡03
-      - 🇺🇸 美国02
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇺🇸 美国01
-      - 🇨🇳 台湾01
-      - 🇬🇧 英国01
-      - 🇭🇰 香港03
-      - 🇸🇬 新加坡01
-      - 🇸🇬 新加坡02
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港05-备用
-      - 🇭🇰 香港07-备用
-      - 🇻🇳 越南01
-      - 🇺🇸 美国04
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国CF06
-      - 🇺🇸 美国CF07
-      - 🇺🇸 美国CF08
-      - 🇭🇰 香港直连01
-      - 🇭🇰 HK | 香港 专线 2
-      - 🇭🇰 HK | 香港 01 2
-      - 🇭🇰 HK | 香港 02 2
-      - 🇯🇵 JP | 日本 专线 2
-      - 🇯🇵 JP | 日本 01 2
-      - 🇯🇵 JP | 日本 02 2
-      - 🇨🇳 TW | 台湾 01 2
-      - 🇨🇳 TW | 台湾 02 2
-      - 🇸🇬 SG | 新加坡 01 2
-      - 🇸🇬 SG | 新加坡 02 2
-      - 🇬🇧 UK | 英国 01 2
-      - 🇬🇧 UK | 英国 02 2
-      - 🇺🇸 US | 美国 01 2
-      - 🇺🇸 US | 美国 02 2
-      - "[vmess]公益机场 xqc.best 9"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 9
-      - "[vmess]公益机场 xqc.best 10"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 10
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇭🇰 HK | 香港 专线
-      - 🇭🇰 HK | 香港 01
-      - 🇭🇰 HK | 香港 02
-      - 🇯🇵 JP | 日本 专线
-      - 🇯🇵 JP | 日本 01
-      - 🇯🇵 JP | 日本 02
-      - 🇨🇳 TW | 台湾 01
-      - 🇨🇳 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇸🇬 SG | 新加坡 02
-      - 🇬🇧 UK | 英国 01
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 US | 美国 01
-      - 🇺🇸 US | 美国 02
+      - 🏳️‍🌈 [trojan]剩余流量：5 GB
+      - "[trojan]套餐到期：2024-08-16"
+      - "[trojan]试用未开放外国节点+中转"
+      - 🇸🇬 [trojan]更新版本1.4
+      - "[trojan]直连不能用是地区问题"
       - 🏳️‍🌈 剩余流量：20 GB
-      - 距离下次重置剩余：1 天
-      - 套餐到期：2024-08-14
+      - 距离下次重置剩余：2 天
+      - 套餐到期：2024-08-16
       - 🇮🇹 意大利
       - 🇧🇷 巴西-1
       - 🇰🇷 韩国-1A
@@ -864,38 +359,10 @@ proxy-groups:
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 4
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 4
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 4
-      - 🏳️‍🌈 剩余流量：20 GB 2
-      - 距离下次重置剩余：3 天
-      - 套餐到期：2024-08-16
-      - 🇮🇹 意大利 2
-      - 🇧🇷 巴西-1 2
-      - 🇰🇷 韩国-1A 2
-      - 🇰🇷 韩国-3A 2
-      - 🇰🇷 韩国-4A 2
-      - 🇸🇬 新加坡-直连 2
-      - 🇨🇦 加拿大 2
       - "[vmess]公益机场 xqc.best 5"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 5
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 5
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 5
-      - "[vmess]公益机场 xqc.best 6"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
-      - "[vmess]公益机场 xqc.best 7"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
-      - 🏳️‍🌈 剩余流量：20 GB 3
-      - 距离下次重置剩余：2 天
-      - 套餐到期：2024-08-15
-      - 🇮🇹 意大利 3
-      - 🇧🇷 巴西-1 3
-      - 🇰🇷 韩国-1A 3
-      - 🇰🇷 韩国-3A 3
-      - 🇰🇷 韩国-4A 3
-      - 🇸🇬 新加坡-直连 3
-      - 🇨🇦 加拿大 3
       - 🇯🇵 2|日本05|x1|上海ll
       - 🇯🇵 2|日本06|x1|上海ll
       - 🇨🇳 2|台湾05|x1|上海ll
@@ -924,127 +391,31 @@ proxy-groups:
       - 🇭🇰 1|香港01|x1|xd中港hkt
       - 🇭🇰 1|香港02|x1|xd中港2
       - 🇭🇰 1|香港02|x1|xd中港hkt
+      - "[vmess]公益机场 xqc.best 6"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
+      - "[vmess]公益机场 xqc.best 7"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
       - "[vmess]公益机场 xqc.best 8"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 8
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 8
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 8
-      - 🏳️‍🌈 剩余流量：1024 MB
-      - 套餐到期：2024-08-13
-      - 🇸🇬 请经常更新节点
-      - 🇸🇬 奈飞账号：xfds@nfxz.cc 奈飞密码：bkweps（禁止改密,禁锁车位）提示密码错误尝试新加坡节点
-      - 🇭🇰 V1 香港 移动专线
-      - 🇨🇳 V1 台湾 移动专线
-      - 🇯🇵 V1 日本 移动专线
-      - 🇸🇬 V1 新加坡 移动专线
-      - 🇰🇷 V1 韩国 移动专线
-      - 🇺🇸 V1 美国 移动专线
-      - 🇹🇭 V1 泰国 移动专线
-      - 🇻🇳 V1 越南 移动专线
-      - 🇩🇪 V1 德国 移动专线
-      - 🇬🇧 V1 英国 移动专线
-      - 🇦🇺 V1 澳大利亚 移动专线
-      - 🇭🇰 V2 香港 华南专线
-      - 🇭🇰 V2 香港 华中专线
-      - 🇨🇳 V2 台湾 华南专线
-      - 🇨🇳 V2 台湾 华中专线
-      - 🇯🇵 V2 日本 华南专线
-      - 🇯🇵 V2 日本 华中专线
-      - 🇸🇬 V2 新加坡 华南专线
-      - 🇸🇬 V2 新加坡 华中专线
-      - 🇺🇸 V2 美国 华南专线
-      - 🇺🇸 V2 美国 华中专线
-      - 🇹🇭 V2 泰国 华南专线
-      - 🇻🇳 V2 越南 华南专线
-      - 🇩🇪 V2 德国 华南专线
-      - 🇬🇧 V2 英国 华南专线
-      - 🇦🇺 V2 澳大利亚 华南专线
-      - 🇭🇰 V3 香港 华南专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华中专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华东专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华南专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华中专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华东专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华南专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华中专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华东专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华南专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华中专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华东专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华南专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华中专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华东专线 ChatGPT-NF
-      - 🇹🇭 V3 泰国 华南专线
-      - 🇻🇳 V3 越南 华中专线
-      - 🇩🇪 V3 德国 华南专线
-      - 🇬🇧 V3 英国 华东专线
-      - 🇦🇺 V3 澳大利亚 华东专线
-      - 🇸🇬 最新官网：xfxssr.com
-      - 🇸🇬 用不了，请更新订阅
-      - 永久地址请查看活动公告
-      - 🇸🇬 新加坡03
-      - 🇺🇸 美国02
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇺🇸 美国01
-      - 🇨🇳 台湾01
-      - 🇬🇧 英国01
-      - 🇭🇰 香港03
-      - 🇸🇬 新加坡01
-      - 🇸🇬 新加坡02
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港05-备用
-      - 🇭🇰 香港07-备用
-      - 🇻🇳 越南01
-      - 🇺🇸 美国04
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国CF06
-      - 🇺🇸 美国CF07
-      - 🇺🇸 美国CF08
-      - 🇭🇰 香港直连01
-      - 🇭🇰 HK | 香港 专线 2
-      - 🇭🇰 HK | 香港 01 2
-      - 🇭🇰 HK | 香港 02 2
-      - 🇯🇵 JP | 日本 专线 2
-      - 🇯🇵 JP | 日本 01 2
-      - 🇯🇵 JP | 日本 02 2
-      - 🇨🇳 TW | 台湾 01 2
-      - 🇨🇳 TW | 台湾 02 2
-      - 🇸🇬 SG | 新加坡 01 2
-      - 🇸🇬 SG | 新加坡 02 2
-      - 🇬🇧 UK | 英国 01 2
-      - 🇬🇧 UK | 英国 02 2
-      - 🇺🇸 US | 美国 01 2
-      - 🇺🇸 US | 美国 02 2
-      - "[vmess]公益机场 xqc.best 9"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 9
-      - "[vmess]公益机场 xqc.best 10"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 10
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇭🇰 HK | 香港 专线
-      - 🇭🇰 HK | 香港 01
-      - 🇭🇰 HK | 香港 02
-      - 🇯🇵 JP | 日本 专线
-      - 🇯🇵 JP | 日本 01
-      - 🇯🇵 JP | 日本 02
-      - 🇨🇳 TW | 台湾 01
-      - 🇨🇳 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇸🇬 SG | 新加坡 02
-      - 🇬🇧 UK | 英国 01
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 US | 美国 01
-      - 🇺🇸 US | 美国 02
+      - 🏳️‍🌈 [trojan]剩余流量：5 GB
+      - "[trojan]套餐到期：2024-08-16"
+      - "[trojan]试用未开放外国节点+中转"
+      - 🇸🇬 [trojan]更新版本1.4
+      - "[trojan]直连不能用是地区问题"
       - 🏳️‍🌈 剩余流量：20 GB
-      - 距离下次重置剩余：1 天
-      - 套餐到期：2024-08-14
+      - 距离下次重置剩余：2 天
+      - 套餐到期：2024-08-16
       - 🇮🇹 意大利
       - 🇧🇷 巴西-1
       - 🇰🇷 韩国-1A
@@ -1068,38 +439,10 @@ proxy-groups:
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 4
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 4
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 4
-      - 🏳️‍🌈 剩余流量：20 GB 2
-      - 距离下次重置剩余：3 天
-      - 套餐到期：2024-08-16
-      - 🇮🇹 意大利 2
-      - 🇧🇷 巴西-1 2
-      - 🇰🇷 韩国-1A 2
-      - 🇰🇷 韩国-3A 2
-      - 🇰🇷 韩国-4A 2
-      - 🇸🇬 新加坡-直连 2
-      - 🇨🇦 加拿大 2
       - "[vmess]公益机场 xqc.best 5"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 5
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 5
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 5
-      - "[vmess]公益机场 xqc.best 6"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
-      - "[vmess]公益机场 xqc.best 7"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
-      - 🏳️‍🌈 剩余流量：20 GB 3
-      - 距离下次重置剩余：2 天
-      - 套餐到期：2024-08-15
-      - 🇮🇹 意大利 3
-      - 🇧🇷 巴西-1 3
-      - 🇰🇷 韩国-1A 3
-      - 🇰🇷 韩国-3A 3
-      - 🇰🇷 韩国-4A 3
-      - 🇸🇬 新加坡-直连 3
-      - 🇨🇦 加拿大 3
       - 🇯🇵 2|日本05|x1|上海ll
       - 🇯🇵 2|日本06|x1|上海ll
       - 🇨🇳 2|台湾05|x1|上海ll
@@ -1128,127 +471,31 @@ proxy-groups:
       - 🇭🇰 1|香港01|x1|xd中港hkt
       - 🇭🇰 1|香港02|x1|xd中港2
       - 🇭🇰 1|香港02|x1|xd中港hkt
+      - "[vmess]公益机场 xqc.best 6"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
+      - "[vmess]公益机场 xqc.best 7"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
       - "[vmess]公益机场 xqc.best 8"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 8
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 8
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 8
-      - 🏳️‍🌈 剩余流量：1024 MB
-      - 套餐到期：2024-08-13
-      - 🇸🇬 请经常更新节点
-      - 🇸🇬 奈飞账号：xfds@nfxz.cc 奈飞密码：bkweps（禁止改密,禁锁车位）提示密码错误尝试新加坡节点
-      - 🇭🇰 V1 香港 移动专线
-      - 🇨🇳 V1 台湾 移动专线
-      - 🇯🇵 V1 日本 移动专线
-      - 🇸🇬 V1 新加坡 移动专线
-      - 🇰🇷 V1 韩国 移动专线
-      - 🇺🇸 V1 美国 移动专线
-      - 🇹🇭 V1 泰国 移动专线
-      - 🇻🇳 V1 越南 移动专线
-      - 🇩🇪 V1 德国 移动专线
-      - 🇬🇧 V1 英国 移动专线
-      - 🇦🇺 V1 澳大利亚 移动专线
-      - 🇭🇰 V2 香港 华南专线
-      - 🇭🇰 V2 香港 华中专线
-      - 🇨🇳 V2 台湾 华南专线
-      - 🇨🇳 V2 台湾 华中专线
-      - 🇯🇵 V2 日本 华南专线
-      - 🇯🇵 V2 日本 华中专线
-      - 🇸🇬 V2 新加坡 华南专线
-      - 🇸🇬 V2 新加坡 华中专线
-      - 🇺🇸 V2 美国 华南专线
-      - 🇺🇸 V2 美国 华中专线
-      - 🇹🇭 V2 泰国 华南专线
-      - 🇻🇳 V2 越南 华南专线
-      - 🇩🇪 V2 德国 华南专线
-      - 🇬🇧 V2 英国 华南专线
-      - 🇦🇺 V2 澳大利亚 华南专线
-      - 🇭🇰 V3 香港 华南专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华中专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华东专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华南专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华中专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华东专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华南专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华中专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华东专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华南专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华中专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华东专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华南专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华中专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华东专线 ChatGPT-NF
-      - 🇹🇭 V3 泰国 华南专线
-      - 🇻🇳 V3 越南 华中专线
-      - 🇩🇪 V3 德国 华南专线
-      - 🇬🇧 V3 英国 华东专线
-      - 🇦🇺 V3 澳大利亚 华东专线
-      - 🇸🇬 最新官网：xfxssr.com
-      - 🇸🇬 用不了，请更新订阅
-      - 永久地址请查看活动公告
-      - 🇸🇬 新加坡03
-      - 🇺🇸 美国02
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇺🇸 美国01
-      - 🇨🇳 台湾01
-      - 🇬🇧 英国01
-      - 🇭🇰 香港03
-      - 🇸🇬 新加坡01
-      - 🇸🇬 新加坡02
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港05-备用
-      - 🇭🇰 香港07-备用
-      - 🇻🇳 越南01
-      - 🇺🇸 美国04
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国CF06
-      - 🇺🇸 美国CF07
-      - 🇺🇸 美国CF08
-      - 🇭🇰 香港直连01
-      - 🇭🇰 HK | 香港 专线 2
-      - 🇭🇰 HK | 香港 01 2
-      - 🇭🇰 HK | 香港 02 2
-      - 🇯🇵 JP | 日本 专线 2
-      - 🇯🇵 JP | 日本 01 2
-      - 🇯🇵 JP | 日本 02 2
-      - 🇨🇳 TW | 台湾 01 2
-      - 🇨🇳 TW | 台湾 02 2
-      - 🇸🇬 SG | 新加坡 01 2
-      - 🇸🇬 SG | 新加坡 02 2
-      - 🇬🇧 UK | 英国 01 2
-      - 🇬🇧 UK | 英国 02 2
-      - 🇺🇸 US | 美国 01 2
-      - 🇺🇸 US | 美国 02 2
-      - "[vmess]公益机场 xqc.best 9"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 9
-      - "[vmess]公益机场 xqc.best 10"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 10
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇭🇰 HK | 香港 专线
-      - 🇭🇰 HK | 香港 01
-      - 🇭🇰 HK | 香港 02
-      - 🇯🇵 JP | 日本 专线
-      - 🇯🇵 JP | 日本 01
-      - 🇯🇵 JP | 日本 02
-      - 🇨🇳 TW | 台湾 01
-      - 🇨🇳 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇸🇬 SG | 新加坡 02
-      - 🇬🇧 UK | 英国 01
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 US | 美国 01
-      - 🇺🇸 US | 美国 02
+      - 🏳️‍🌈 [trojan]剩余流量：5 GB
+      - "[trojan]套餐到期：2024-08-16"
+      - "[trojan]试用未开放外国节点+中转"
+      - 🇸🇬 [trojan]更新版本1.4
+      - "[trojan]直连不能用是地区问题"
       - 🏳️‍🌈 剩余流量：20 GB
-      - 距离下次重置剩余：1 天
-      - 套餐到期：2024-08-14
+      - 距离下次重置剩余：2 天
+      - 套餐到期：2024-08-16
       - 🇮🇹 意大利
       - 🇧🇷 巴西-1
       - 🇰🇷 韩国-1A
@@ -1272,38 +519,10 @@ proxy-groups:
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 4
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 4
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 4
-      - 🏳️‍🌈 剩余流量：20 GB 2
-      - 距离下次重置剩余：3 天
-      - 套餐到期：2024-08-16
-      - 🇮🇹 意大利 2
-      - 🇧🇷 巴西-1 2
-      - 🇰🇷 韩国-1A 2
-      - 🇰🇷 韩国-3A 2
-      - 🇰🇷 韩国-4A 2
-      - 🇸🇬 新加坡-直连 2
-      - 🇨🇦 加拿大 2
       - "[vmess]公益机场 xqc.best 5"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 5
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 5
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 5
-      - "[vmess]公益机场 xqc.best 6"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
-      - "[vmess]公益机场 xqc.best 7"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
-      - 🏳️‍🌈 剩余流量：20 GB 3
-      - 距离下次重置剩余：2 天
-      - 套餐到期：2024-08-15
-      - 🇮🇹 意大利 3
-      - 🇧🇷 巴西-1 3
-      - 🇰🇷 韩国-1A 3
-      - 🇰🇷 韩国-3A 3
-      - 🇰🇷 韩国-4A 3
-      - 🇸🇬 新加坡-直连 3
-      - 🇨🇦 加拿大 3
       - 🇯🇵 2|日本05|x1|上海ll
       - 🇯🇵 2|日本06|x1|上海ll
       - 🇨🇳 2|台湾05|x1|上海ll
@@ -1332,128 +551,32 @@ proxy-groups:
       - 🇭🇰 1|香港01|x1|xd中港hkt
       - 🇭🇰 1|香港02|x1|xd中港2
       - 🇭🇰 1|香港02|x1|xd中港hkt
+      - "[vmess]公益机场 xqc.best 6"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
+      - "[vmess]公益机场 xqc.best 7"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
       - "[vmess]公益机场 xqc.best 8"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 8
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 8
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 8
-      - 🏳️‍🌈 剩余流量：1024 MB
-      - 套餐到期：2024-08-13
-      - 🇸🇬 请经常更新节点
-      - 🇸🇬 奈飞账号：xfds@nfxz.cc 奈飞密码：bkweps（禁止改密,禁锁车位）提示密码错误尝试新加坡节点
-      - 🇭🇰 V1 香港 移动专线
-      - 🇨🇳 V1 台湾 移动专线
-      - 🇯🇵 V1 日本 移动专线
-      - 🇸🇬 V1 新加坡 移动专线
-      - 🇰🇷 V1 韩国 移动专线
-      - 🇺🇸 V1 美国 移动专线
-      - 🇹🇭 V1 泰国 移动专线
-      - 🇻🇳 V1 越南 移动专线
-      - 🇩🇪 V1 德国 移动专线
-      - 🇬🇧 V1 英国 移动专线
-      - 🇦🇺 V1 澳大利亚 移动专线
-      - 🇭🇰 V2 香港 华南专线
-      - 🇭🇰 V2 香港 华中专线
-      - 🇨🇳 V2 台湾 华南专线
-      - 🇨🇳 V2 台湾 华中专线
-      - 🇯🇵 V2 日本 华南专线
-      - 🇯🇵 V2 日本 华中专线
-      - 🇸🇬 V2 新加坡 华南专线
-      - 🇸🇬 V2 新加坡 华中专线
-      - 🇺🇸 V2 美国 华南专线
-      - 🇺🇸 V2 美国 华中专线
-      - 🇹🇭 V2 泰国 华南专线
-      - 🇻🇳 V2 越南 华南专线
-      - 🇩🇪 V2 德国 华南专线
-      - 🇬🇧 V2 英国 华南专线
-      - 🇦🇺 V2 澳大利亚 华南专线
-      - 🇭🇰 V3 香港 华南专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华中专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华东专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华南专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华中专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华东专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华南专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华中专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华东专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华南专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华中专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华东专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华南专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华中专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华东专线 ChatGPT-NF
-      - 🇹🇭 V3 泰国 华南专线
-      - 🇻🇳 V3 越南 华中专线
-      - 🇩🇪 V3 德国 华南专线
-      - 🇬🇧 V3 英国 华东专线
-      - 🇦🇺 V3 澳大利亚 华东专线
-      - 🇸🇬 最新官网：xfxssr.com
-      - 🇸🇬 用不了，请更新订阅
-      - 永久地址请查看活动公告
-      - 🇸🇬 新加坡03
-      - 🇺🇸 美国02
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇺🇸 美国01
-      - 🇨🇳 台湾01
-      - 🇬🇧 英国01
-      - 🇭🇰 香港03
-      - 🇸🇬 新加坡01
-      - 🇸🇬 新加坡02
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港05-备用
-      - 🇭🇰 香港07-备用
-      - 🇻🇳 越南01
-      - 🇺🇸 美国04
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国CF06
-      - 🇺🇸 美国CF07
-      - 🇺🇸 美国CF08
-      - 🇭🇰 香港直连01
-      - 🇭🇰 HK | 香港 专线 2
-      - 🇭🇰 HK | 香港 01 2
-      - 🇭🇰 HK | 香港 02 2
-      - 🇯🇵 JP | 日本 专线 2
-      - 🇯🇵 JP | 日本 01 2
-      - 🇯🇵 JP | 日本 02 2
-      - 🇨🇳 TW | 台湾 01 2
-      - 🇨🇳 TW | 台湾 02 2
-      - 🇸🇬 SG | 新加坡 01 2
-      - 🇸🇬 SG | 新加坡 02 2
-      - 🇬🇧 UK | 英国 01 2
-      - 🇬🇧 UK | 英国 02 2
-      - 🇺🇸 US | 美国 01 2
-      - 🇺🇸 US | 美国 02 2
-      - "[vmess]公益机场 xqc.best 9"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 9
-      - "[vmess]公益机场 xqc.best 10"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 10
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇭🇰 HK | 香港 专线
-      - 🇭🇰 HK | 香港 01
-      - 🇭🇰 HK | 香港 02
-      - 🇯🇵 JP | 日本 专线
-      - 🇯🇵 JP | 日本 01
-      - 🇯🇵 JP | 日本 02
-      - 🇨🇳 TW | 台湾 01
-      - 🇨🇳 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇸🇬 SG | 新加坡 02
-      - 🇬🇧 UK | 英国 01
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 US | 美国 01
-      - 🇺🇸 US | 美国 02
+      - 🏳️‍🌈 [trojan]剩余流量：5 GB
+      - "[trojan]套餐到期：2024-08-16"
+      - "[trojan]试用未开放外国节点+中转"
+      - 🇸🇬 [trojan]更新版本1.4
+      - "[trojan]直连不能用是地区问题"
       - 🏳️‍🌈 剩余流量：20 GB
-      - 距离下次重置剩余：1 天
-      - 套餐到期：2024-08-14
+      - 距离下次重置剩余：2 天
+      - 套餐到期：2024-08-16
       - 🇮🇹 意大利
       - 🇧🇷 巴西-1
       - 🇰🇷 韩国-1A
@@ -1477,38 +600,10 @@ proxy-groups:
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 4
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 4
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 4
-      - 🏳️‍🌈 剩余流量：20 GB 2
-      - 距离下次重置剩余：3 天
-      - 套餐到期：2024-08-16
-      - 🇮🇹 意大利 2
-      - 🇧🇷 巴西-1 2
-      - 🇰🇷 韩国-1A 2
-      - 🇰🇷 韩国-3A 2
-      - 🇰🇷 韩国-4A 2
-      - 🇸🇬 新加坡-直连 2
-      - 🇨🇦 加拿大 2
       - "[vmess]公益机场 xqc.best 5"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 5
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 5
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 5
-      - "[vmess]公益机场 xqc.best 6"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
-      - "[vmess]公益机场 xqc.best 7"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
-      - 🏳️‍🌈 剩余流量：20 GB 3
-      - 距离下次重置剩余：2 天
-      - 套餐到期：2024-08-15
-      - 🇮🇹 意大利 3
-      - 🇧🇷 巴西-1 3
-      - 🇰🇷 韩国-1A 3
-      - 🇰🇷 韩国-3A 3
-      - 🇰🇷 韩国-4A 3
-      - 🇸🇬 新加坡-直连 3
-      - 🇨🇦 加拿大 3
       - 🇯🇵 2|日本05|x1|上海ll
       - 🇯🇵 2|日本06|x1|上海ll
       - 🇨🇳 2|台湾05|x1|上海ll
@@ -1537,105 +632,18 @@ proxy-groups:
       - 🇭🇰 1|香港01|x1|xd中港hkt
       - 🇭🇰 1|香港02|x1|xd中港2
       - 🇭🇰 1|香港02|x1|xd中港hkt
+      - "[vmess]公益机场 xqc.best 6"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
+      - "[vmess]公益机场 xqc.best 7"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
       - "[vmess]公益机场 xqc.best 8"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 8
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 8
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 8
-      - 🏳️‍🌈 剩余流量：1024 MB
-      - 套餐到期：2024-08-13
-      - 🇸🇬 请经常更新节点
-      - 🇸🇬 奈飞账号：xfds@nfxz.cc 奈飞密码：bkweps（禁止改密,禁锁车位）提示密码错误尝试新加坡节点
-      - 🇭🇰 V1 香港 移动专线
-      - 🇨🇳 V1 台湾 移动专线
-      - 🇯🇵 V1 日本 移动专线
-      - 🇸🇬 V1 新加坡 移动专线
-      - 🇰🇷 V1 韩国 移动专线
-      - 🇺🇸 V1 美国 移动专线
-      - 🇹🇭 V1 泰国 移动专线
-      - 🇻🇳 V1 越南 移动专线
-      - 🇩🇪 V1 德国 移动专线
-      - 🇬🇧 V1 英国 移动专线
-      - 🇦🇺 V1 澳大利亚 移动专线
-      - 🇭🇰 V2 香港 华南专线
-      - 🇭🇰 V2 香港 华中专线
-      - 🇨🇳 V2 台湾 华南专线
-      - 🇨🇳 V2 台湾 华中专线
-      - 🇯🇵 V2 日本 华南专线
-      - 🇯🇵 V2 日本 华中专线
-      - 🇸🇬 V2 新加坡 华南专线
-      - 🇸🇬 V2 新加坡 华中专线
-      - 🇺🇸 V2 美国 华南专线
-      - 🇺🇸 V2 美国 华中专线
-      - 🇹🇭 V2 泰国 华南专线
-      - 🇻🇳 V2 越南 华南专线
-      - 🇩🇪 V2 德国 华南专线
-      - 🇬🇧 V2 英国 华南专线
-      - 🇦🇺 V2 澳大利亚 华南专线
-      - 🇭🇰 V3 香港 华南专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华中专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华东专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华南专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华中专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华东专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华南专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华中专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华东专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华南专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华中专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华东专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华南专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华中专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华东专线 ChatGPT-NF
-      - 🇹🇭 V3 泰国 华南专线
-      - 🇻🇳 V3 越南 华中专线
-      - 🇩🇪 V3 德国 华南专线
-      - 🇬🇧 V3 英国 华东专线
-      - 🇦🇺 V3 澳大利亚 华东专线
-      - 🇸🇬 最新官网：xfxssr.com
-      - 🇸🇬 用不了，请更新订阅
-      - 永久地址请查看活动公告
-      - 🇸🇬 新加坡03
-      - 🇺🇸 美国02
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇺🇸 美国01
-      - 🇨🇳 台湾01
-      - 🇬🇧 英国01
-      - 🇭🇰 香港03
-      - 🇸🇬 新加坡01
-      - 🇸🇬 新加坡02
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港05-备用
-      - 🇭🇰 香港07-备用
-      - 🇻🇳 越南01
-      - 🇺🇸 美国04
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国CF06
-      - 🇺🇸 美国CF07
-      - 🇺🇸 美国CF08
-      - 🇭🇰 香港直连01
-      - 🇭🇰 HK | 香港 专线 2
-      - 🇭🇰 HK | 香港 01 2
-      - 🇭🇰 HK | 香港 02 2
-      - 🇯🇵 JP | 日本 专线 2
-      - 🇯🇵 JP | 日本 01 2
-      - 🇯🇵 JP | 日本 02 2
-      - 🇨🇳 TW | 台湾 01 2
-      - 🇨🇳 TW | 台湾 02 2
-      - 🇸🇬 SG | 新加坡 01 2
-      - 🇸🇬 SG | 新加坡 02 2
-      - 🇬🇧 UK | 英国 01 2
-      - 🇬🇧 UK | 英国 02 2
-      - 🇺🇸 US | 美国 01 2
-      - 🇺🇸 US | 美国 02 2
-      - "[vmess]公益机场 xqc.best 9"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 9
-      - "[vmess]公益机场 xqc.best 10"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 10
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1658,23 +666,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇭🇰 HK | 香港 专线
-      - 🇭🇰 HK | 香港 01
-      - 🇭🇰 HK | 香港 02
-      - 🇯🇵 JP | 日本 专线
-      - 🇯🇵 JP | 日本 01
-      - 🇯🇵 JP | 日本 02
-      - 🇨🇳 TW | 台湾 01
-      - 🇨🇳 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇸🇬 SG | 新加坡 02
-      - 🇬🇧 UK | 英国 01
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 US | 美国 01
-      - 🇺🇸 US | 美国 02
+      - 🏳️‍🌈 [trojan]剩余流量：5 GB
+      - "[trojan]套餐到期：2024-08-16"
+      - "[trojan]试用未开放外国节点+中转"
+      - 🇸🇬 [trojan]更新版本1.4
+      - "[trojan]直连不能用是地区问题"
       - 🏳️‍🌈 剩余流量：20 GB
-      - 距离下次重置剩余：1 天
-      - 套餐到期：2024-08-14
+      - 距离下次重置剩余：2 天
+      - 套餐到期：2024-08-16
       - 🇮🇹 意大利
       - 🇧🇷 巴西-1
       - 🇰🇷 韩国-1A
@@ -1698,38 +697,10 @@ proxy-groups:
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 4
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 4
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 4
-      - 🏳️‍🌈 剩余流量：20 GB 2
-      - 距离下次重置剩余：3 天
-      - 套餐到期：2024-08-16
-      - 🇮🇹 意大利 2
-      - 🇧🇷 巴西-1 2
-      - 🇰🇷 韩国-1A 2
-      - 🇰🇷 韩国-3A 2
-      - 🇰🇷 韩国-4A 2
-      - 🇸🇬 新加坡-直连 2
-      - 🇨🇦 加拿大 2
       - "[vmess]公益机场 xqc.best 5"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 5
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 5
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 5
-      - "[vmess]公益机场 xqc.best 6"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
-      - "[vmess]公益机场 xqc.best 7"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
-      - 🏳️‍🌈 剩余流量：20 GB 3
-      - 距离下次重置剩余：2 天
-      - 套餐到期：2024-08-15
-      - 🇮🇹 意大利 3
-      - 🇧🇷 巴西-1 3
-      - 🇰🇷 韩国-1A 3
-      - 🇰🇷 韩国-3A 3
-      - 🇰🇷 韩国-4A 3
-      - 🇸🇬 新加坡-直连 3
-      - 🇨🇦 加拿大 3
       - 🇯🇵 2|日本05|x1|上海ll
       - 🇯🇵 2|日本06|x1|上海ll
       - 🇨🇳 2|台湾05|x1|上海ll
@@ -1758,105 +729,18 @@ proxy-groups:
       - 🇭🇰 1|香港01|x1|xd中港hkt
       - 🇭🇰 1|香港02|x1|xd中港2
       - 🇭🇰 1|香港02|x1|xd中港hkt
+      - "[vmess]公益机场 xqc.best 6"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 6
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 6
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 6
+      - "[vmess]公益机场 xqc.best 7"
+      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 7
+      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 7
+      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 7
       - "[vmess]公益机场 xqc.best 8"
       - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 8
       - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 8
       - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 8
-      - 🏳️‍🌈 剩余流量：1024 MB
-      - 套餐到期：2024-08-13
-      - 🇸🇬 请经常更新节点
-      - 🇸🇬 奈飞账号：xfds@nfxz.cc 奈飞密码：bkweps（禁止改密,禁锁车位）提示密码错误尝试新加坡节点
-      - 🇭🇰 V1 香港 移动专线
-      - 🇨🇳 V1 台湾 移动专线
-      - 🇯🇵 V1 日本 移动专线
-      - 🇸🇬 V1 新加坡 移动专线
-      - 🇰🇷 V1 韩国 移动专线
-      - 🇺🇸 V1 美国 移动专线
-      - 🇹🇭 V1 泰国 移动专线
-      - 🇻🇳 V1 越南 移动专线
-      - 🇩🇪 V1 德国 移动专线
-      - 🇬🇧 V1 英国 移动专线
-      - 🇦🇺 V1 澳大利亚 移动专线
-      - 🇭🇰 V2 香港 华南专线
-      - 🇭🇰 V2 香港 华中专线
-      - 🇨🇳 V2 台湾 华南专线
-      - 🇨🇳 V2 台湾 华中专线
-      - 🇯🇵 V2 日本 华南专线
-      - 🇯🇵 V2 日本 华中专线
-      - 🇸🇬 V2 新加坡 华南专线
-      - 🇸🇬 V2 新加坡 华中专线
-      - 🇺🇸 V2 美国 华南专线
-      - 🇺🇸 V2 美国 华中专线
-      - 🇹🇭 V2 泰国 华南专线
-      - 🇻🇳 V2 越南 华南专线
-      - 🇩🇪 V2 德国 华南专线
-      - 🇬🇧 V2 英国 华南专线
-      - 🇦🇺 V2 澳大利亚 华南专线
-      - 🇭🇰 V3 香港 华南专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华中专线 ChatGPT-NF
-      - 🇭🇰 V3 香港 华东专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华南专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华中专线 ChatGPT-NF
-      - 🇨🇳 V3 台湾 华东专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华南专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华中专线 ChatGPT-NF
-      - 🇯🇵 V3 日本 华东专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华南专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华中专线 ChatGPT-NF
-      - 🇸🇬 V3 新加坡 华东专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华南专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华中专线 ChatGPT-NF
-      - 🇺🇸 V3 美国 华东专线 ChatGPT-NF
-      - 🇹🇭 V3 泰国 华南专线
-      - 🇻🇳 V3 越南 华中专线
-      - 🇩🇪 V3 德国 华南专线
-      - 🇬🇧 V3 英国 华东专线
-      - 🇦🇺 V3 澳大利亚 华东专线
-      - 🇸🇬 最新官网：xfxssr.com
-      - 🇸🇬 用不了，请更新订阅
-      - 永久地址请查看活动公告
-      - 🇸🇬 新加坡03
-      - 🇺🇸 美国02
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇺🇸 美国01
-      - 🇨🇳 台湾01
-      - 🇬🇧 英国01
-      - 🇭🇰 香港03
-      - 🇸🇬 新加坡01
-      - 🇸🇬 新加坡02
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港05-备用
-      - 🇭🇰 香港07-备用
-      - 🇻🇳 越南01
-      - 🇺🇸 美国04
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国CF06
-      - 🇺🇸 美国CF07
-      - 🇺🇸 美国CF08
-      - 🇭🇰 香港直连01
-      - 🇭🇰 HK | 香港 专线 2
-      - 🇭🇰 HK | 香港 01 2
-      - 🇭🇰 HK | 香港 02 2
-      - 🇯🇵 JP | 日本 专线 2
-      - 🇯🇵 JP | 日本 01 2
-      - 🇯🇵 JP | 日本 02 2
-      - 🇨🇳 TW | 台湾 01 2
-      - 🇨🇳 TW | 台湾 02 2
-      - 🇸🇬 SG | 新加坡 01 2
-      - 🇸🇬 SG | 新加坡 02 2
-      - 🇬🇧 UK | 英国 01 2
-      - 🇬🇧 UK | 英国 02 2
-      - 🇺🇸 US | 美国 01 2
-      - 🇺🇸 US | 美国 02 2
-      - "[vmess]公益机场 xqc.best 9"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 9
-      - "[vmess]公益机场 xqc.best 10"
-      - 🇭🇰 [vmess]🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 [vmess]🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 [vmess]🇸🇬 SG | 新加坡 LB 10
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
