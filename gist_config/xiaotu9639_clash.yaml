@@ -5,63 +5,63 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 新加坡 2, server: m2-sg2.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg2.m2network.icu}}, udp: true}
-  - {name: 美国 1, server: m2-us1.go-relay.top, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.go-relay.top}}, udp: true}
-  - {name: 美国 5, server: m2-us2.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us2.m2network.icu}}, udp: true}
-  - {name: 新加坡 1, server: m2-sg1.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg1.m2network.icu}}, udp: true}
-  - {name: 新加坡 3, server: m2-sg3.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg3.m2network.icu}}, udp: true}
   - {name: 美国 6, server: m2-us3.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us3.m2network.icu}}, udp: true}
+  - {name: 新加坡 1, server: m2-sg1.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg1.m2network.icu}}, udp: true}
+  - {name: 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: f34c370f-efcf-44c8-bd09-f02628207072, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 美国 5, server: m2-us2.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us2.m2network.icu}}, udp: true}
+  - {name: 新加坡 2, server: m2-sg2.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg2.m2network.icu}}, udp: true}
+  - {name: 新加坡 3, server: m2-sg3.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg3.m2network.icu}}, udp: true}
+  - {name: 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: d929cc9c-2049-4c03-81f7-9276cf8088f1, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
   - {name: 美国 4, server: m2-us1.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.m2network.icu}}, udp: true}
-  - {name: 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: f34c370f-efcf-44c8-bd09-f02628207072, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 美国 1, server: m2-us1.go-relay.top, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.go-relay.top}}, udp: true}
   - {name: 香港 1, server: m2-hk1.go-relay.top, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-hk1.go-relay.top}}, udp: true}
-  - {name: 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: d929cc9c-2049-4c03-81f7-9276cf8088f1, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 新加坡 2
-      - 美国 1
-      - 美国 5
-      - 新加坡 1
-      - 新加坡 3
       - 美国 6
-      - 美国 4
-      - 韩国-三网优化2-1B
-      - 香港 1
+      - 新加坡 1
       - 韩国-三网优化2-1A
+      - 美国 5
+      - 新加坡 2
+      - 新加坡 3
+      - 韩国-三网优化2-1B
+      - 美国 4
+      - 美国 1
+      - 香港 1
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 新加坡 2
-      - 美国 1
-      - 美国 5
-      - 新加坡 1
-      - 新加坡 3
       - 美国 6
-      - 美国 4
-      - 韩国-三网优化2-1B
-      - 香港 1
+      - 新加坡 1
       - 韩国-三网优化2-1A
+      - 美国 5
+      - 新加坡 2
+      - 新加坡 3
+      - 韩国-三网优化2-1B
+      - 美国 4
+      - 美国 1
+      - 香港 1
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 新加坡 2
-      - 美国 1
-      - 美国 5
-      - 新加坡 1
-      - 新加坡 3
       - 美国 6
-      - 美国 4
-      - 韩国-三网优化2-1B
-      - 香港 1
+      - 新加坡 1
       - 韩国-三网优化2-1A
+      - 美国 5
+      - 新加坡 2
+      - 新加坡 3
+      - 韩国-三网优化2-1B
+      - 美国 4
+      - 美国 1
+      - 香港 1
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,16 +80,16 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 新加坡 2
-      - 美国 1
-      - 美国 5
-      - 新加坡 1
-      - 新加坡 3
       - 美国 6
-      - 美国 4
-      - 韩国-三网优化2-1B
-      - 香港 1
+      - 新加坡 1
       - 韩国-三网优化2-1A
+      - 美国 5
+      - 新加坡 2
+      - 新加坡 3
+      - 韩国-三网优化2-1B
+      - 美国 4
+      - 美国 1
+      - 香港 1
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -101,47 +101,47 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 新加坡 2
-      - 美国 1
-      - 美国 5
-      - 新加坡 1
-      - 新加坡 3
       - 美国 6
-      - 美国 4
-      - 韩国-三网优化2-1B
-      - 香港 1
+      - 新加坡 1
       - 韩国-三网优化2-1A
+      - 美国 5
+      - 新加坡 2
+      - 新加坡 3
+      - 韩国-三网优化2-1B
+      - 美国 4
+      - 美国 1
+      - 香港 1
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 新加坡 2
-      - 美国 1
-      - 美国 5
-      - 新加坡 1
-      - 新加坡 3
       - 美国 6
-      - 美国 4
-      - 韩国-三网优化2-1B
-      - 香港 1
+      - 新加坡 1
       - 韩国-三网优化2-1A
+      - 美国 5
+      - 新加坡 2
+      - 新加坡 3
+      - 韩国-三网优化2-1B
+      - 美国 4
+      - 美国 1
+      - 香港 1
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 新加坡 2
-      - 美国 1
-      - 美国 5
-      - 新加坡 1
-      - 新加坡 3
       - 美国 6
-      - 美国 4
-      - 韩国-三网优化2-1B
-      - 香港 1
+      - 新加坡 1
       - 韩国-三网优化2-1A
+      - 美国 5
+      - 新加坡 2
+      - 新加坡 3
+      - 韩国-三网优化2-1B
+      - 美国 4
+      - 美国 1
+      - 香港 1
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -157,16 +157,16 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 新加坡 2
-      - 美国 1
-      - 美国 5
-      - 新加坡 1
-      - 新加坡 3
       - 美国 6
-      - 美国 4
-      - 韩国-三网优化2-1B
-      - 香港 1
+      - 新加坡 1
       - 韩国-三网优化2-1A
+      - 美国 5
+      - 新加坡 2
+      - 新加坡 3
+      - 韩国-三网优化2-1B
+      - 美国 4
+      - 美国 1
+      - 香港 1
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
