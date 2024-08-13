@@ -151,7 +151,7 @@ for keyword in "${keywords[@]}"; do
     # 对sub_url做encode转换
     sub_encode_url=$(urlencode $sub_url)
     # 定义配置url
-    config_url="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/${keyword}/config/ACL4SSR_Online.ini"
+    config_url="https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini"
     # 对配置url做encode转换
     config_encode_url=$(urlencode $config_url)
     # 对keyword做小写转换
