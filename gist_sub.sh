@@ -3,7 +3,7 @@
 
 ./before_pull.sh
 
-file_paths=(
+gist_file_paths=(
     "https://gist.github.com/zzzZZzzZZee/6aba7c79e727a4f8f8c09085160a1490"
     "https://gist.github.com/CoreYunFeng/78d2ed8de9936081d5ad29d241b9b5c3"
     "https://gist.github.com/xiaotu9639/249910a7633a0a52367bb67fed7c10af"
@@ -15,12 +15,16 @@ file_paths=(
     "https://gist.github.com/mayojoy/88b2863888eadb08b16ea54316c07717"
 )
 
+github_file_paths=(
+  "https://raw.githubusercontent.com/qjlxg/aggregator/main/data/clash.yaml"
+)
+
 gist_config="gist_config"
 
 # 遍历文件路径数组
-for file_path in "${file_paths[@]}"; do
-  echo "raw url: ${file_path}"
-  gist_url=$file_path
+for gist_file_path in "${gist_file_paths[@]}"; do
+  echo "raw url: ${gist_file_path}"
+  gist_url=$gist_file_path
   ybusername=$(echo "$gist_url" | sed -n 's|.*github.com/\([^/]\{1,\}\)/.*|\1|p')
   gist_id=$(echo "$gist_url" | sed -n 's|.*/\([^/]\{1,\}\)$|\1|p')
 
@@ -34,7 +38,7 @@ for file_path in "${file_paths[@]}"; do
 
   sub_urls=$(echo $raw_links | grep '\.yaml$')
   echo "\n"
-  echo "raw gist url: $sub_urls"
+  echo "gist raw url: $sub_urls"
   echo "\n"
 
   echo "$sub_urls" | while read -r line ; do
@@ -44,6 +48,18 @@ for file_path in "${file_paths[@]}"; do
     curl $line > "${gist_config}/${ybusername}_${yb_file_name}.yaml"
     echo "\n"
   done
+done
+
+
+for git_file_path in "${github_file_paths[@]}"; do
+  echo "github raw url: ${git_file_path}"
+  git_username=$(echo $git_file_path | cut -d'/' -f4)
+  git_project=$(echo $git_file_path | cut -d'/' -f5)
+  git_filename=$(echo $git_file_path | rev | cut -d'/' -f1 | rev)
+  echo "github ----> 用户名: $git_username 项目名: $git_project 文件名: $git_filename"
+  echo "\n"
+  curl $git_file_path > "${gist_config}/${git_username}_${git_project}_${git_filename}.yaml"
+  echo "\n"
 done
 
 ./after_push.sh "${gist_config}/gist_sub_log.txt"
