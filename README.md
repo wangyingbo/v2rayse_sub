@@ -85,3 +85,10 @@
 - [找公共的小火箭共享账号]()
 
 
+**Others**
+
+```
+# 在Mac上配置crontab 自动更新surge 订阅
+0 */2 * * * current_time=$(date +"Today_is_%A_%B_%d_%Y_%H_%M_%S");current_user=$(whoami);current_surge_path=/Users/$current_user/Library/Application\ Support/Surge/Profiles;current_surge_url="https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/Surge?time_stamp=${current_time}"; curl $current_surge_url > $current_surge_path/Surge.conf; echo $current_time >> $current_surge_path/auto_update_log.txt
+
+```
