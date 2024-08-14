@@ -87,10 +87,16 @@
 
 **Others**
 
+<!--
+
+
 ```
 # 在Mac上配置crontab 自动更新surge 订阅
 # macOS 使用 launchctl 和 crontab 设置定时任务的方法: https://lzw.me/a/macos-schedule-with-launchctl-and-crontab.html
+# Mac 中的定时任务: https://cloud.tencent.com/developer/article/2208861
 
 0 */2 * * * current_time=$(date +"Today_is_%A_%B_%d_%Y_%H_%M_%S");current_user=$(whoami);current_surge_path=/Users/$current_user/Library/Application\ Support/Surge/Profiles;current_surge_url="https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/wzdnzd_aggregator_sub/Surge?time_stamp=${current_time}"; curl $current_surge_url > $current_surge_path/Surge.conf; echo $current_time >> $current_surge_path/auto_update_log.txt
 
 ```
+
+-->
