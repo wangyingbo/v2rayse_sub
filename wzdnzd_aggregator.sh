@@ -188,9 +188,9 @@ for keyword in "${keywords[@]}"; do
     if [[ $keyword = 'Surge' ]]; then
         # ./remove_surge_illegal.sh
         if [[ $YBDEVICE = 'macOS' ]]; then
-            sed -i '' '1,3s/interval=86400/interval=5/' "$yb_file_folder/$keyword"
+            sed -i '' '1,3s/interval=[0-9]\+/interval=5/' "$yb_file_folder/$keyword"
         else
-            sed -i '1,3s/interval=86400/interval=5/' "$yb_file_folder/$keyword"
+            sed -i '1,3s/interval=[0-9]\+/interval=5/' "$yb_file_folder/$keyword"
         fi
         echo "# update in ${YBDEVICE}!!! ${current_time}" >> "$yb_file_folder/$keyword"
     fi
