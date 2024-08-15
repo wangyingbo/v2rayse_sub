@@ -7,7 +7,7 @@ source_paths=(
   "zoecsoulkey_sub/Surge"
 )
 to_path=../surge_conf_gitee
-
+source_folder=$(cd "$(dirname "$0")"; pwd)
 
 cd $to_path
 
@@ -16,7 +16,10 @@ cd $to_path
 for source_path in "${source_paths[@]}"; do
   echo "source path: ${source_path}"
 
-  cp ../v2rayse_sub/$source_path $source_path
+  to_folder=${source_path%/*}
+  file_name=${source_path##*/}
+  mkdir -p $to_folder
+  cp $source_folder/$source_path $to_folder/$file_name
 
 done
 
