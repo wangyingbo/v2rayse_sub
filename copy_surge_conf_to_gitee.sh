@@ -19,7 +19,7 @@ for source_path in "${source_paths[@]}"; do
   to_folder=${source_path%/*}
   file_name=${source_path##*/}
 
-  echo "to: ${to_folder}/${file_name}"
+  echo "copy to: ${to_folder}/${file_name}"
   mkdir -p $to_folder
   cp $source_folder/$source_path $to_folder/$file_name
 
