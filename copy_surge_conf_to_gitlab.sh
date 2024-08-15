@@ -34,6 +34,9 @@ for source_path in "${source_paths[@]}"; do
   done
 done
 
+cp -r $source_folder/gist_config gist_config
+cp -r $source_folder/github_config github_config
+
 
 echo "\n"
 ./after_push.sh copy_to_gitee_log.txt
