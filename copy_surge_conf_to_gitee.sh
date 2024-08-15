@@ -8,13 +8,18 @@ source_paths=(
 )
 to_path=../surge_conf_gitee
 
+
+cd $to_path
+
+./before_pull.sh
+
 for source_path in "${source_paths[@]}"; do
   echo "source path: ${source_path}"
 
-  copy $source_path $to_path/$source_path
+  cp ../v2rayse_sub/$source_path $source_path
 
 done
 
-cd $to_path
+
 
 ./after_push.sh copy_to_gitee_log.txt
