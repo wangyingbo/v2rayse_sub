@@ -14,10 +14,12 @@ cd $to_path
 ./before_pull.sh
 
 for source_path in "${source_paths[@]}"; do
-  echo "source path: ${source_path}"
+  echo "source path: ${source_folder}/${source_path}"
 
   to_folder=${source_path%/*}
   file_name=${source_path##*/}
+
+  echo "to: ${to_folder}/${file_name}"
   mkdir -p $to_folder
   cp $source_folder/$source_path $to_folder/$file_name
 
