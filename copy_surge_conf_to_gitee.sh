@@ -6,7 +6,7 @@ source_paths=(
   "johnzhang0707_sub/Surge"
   "zoecsoulkey_sub/Surge"
 )
-to_path=../surge_conf_gitee
+to_path=../surge_conf_gitlab
 source_folder=$(cd "$(dirname "$0")"; pwd)
 
 cd $to_path
