@@ -34,8 +34,11 @@ for source_path in "${source_paths[@]}"; do
   done
 done
 
+cp $source_folder/tglaoshiji.yaml tglaoshiji.yaml
+cp $source_folder/yb_v2rayse_sub.yaml yb_v2rayse_sub.yaml
 cp -r $source_folder/gist_config gist_config
 cp -r $source_folder/github_config github_config
+cp -r $source_folder/top_size top_size
 
 
 echo "\n"
