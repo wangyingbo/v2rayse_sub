@@ -2,9 +2,9 @@
 
 
 source_paths=(
-  "wzdnzd_aggregator_sub/Surge"
-  "johnzhang0707_sub/Surge"
-  "zoecsoulkey_sub/Surge"
+  "wzdnzd_aggregator_sub"
+  "johnzhang0707_sub"
+  "zoecsoulkey_sub"
 )
 to_path=../surge_conf
 source_folder=$(cd "$(dirname "$0")"; pwd)
@@ -15,20 +15,23 @@ echo "\n"
 ./before_pull.sh
 echo "\n"
 
+keywords=("Clash" "V2Ray" "SingBox" "Loon" "Surge" "QuantumultX")
+
 for source_path in "${source_paths[@]}"; do
+  for keyword in "${keywords[@]}"; do
+    source_file=${source_folder}/${source_path}/${keyword}
+    echo "source path: ${source_file}"
+    echo "\n"
 
-  echo "source path: ${source_folder}/${source_path}"
-  echo "\n"
+    to_folder=$source_path
+    file_name=$keyword
 
-  to_folder=${source_path%/*}
-  file_name=${source_path##*/}
+    echo "copy to: ${to_folder}/${file_name}"
+    echo "\n"
 
-  echo "copy to: ${to_folder}/${file_name}"
-  echo "\n"
-
-  mkdir -p $to_folder
-  cp $source_folder/$source_path $to_folder/$file_name
-
+    mkdir -p $to_folder
+    cp $source_file $to_folder/$file_name
+  done
 done
 
 
