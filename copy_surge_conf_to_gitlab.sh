@@ -1,11 +1,7 @@
 #!/bin/zsh
 
 
-source_paths=(
-  "wzdnzd_aggregator_sub"
-  "johnzhang0707_sub"
-  "zoecsoulkey_sub"
-)
+
 to_path=../surge_conf
 source_folder=$(cd "$(dirname "$0")"; pwd)
 
@@ -14,6 +10,14 @@ cd $to_path
 echo "\n"
 ./before_pull.sh
 echo "\n"
+
+
+
+source_paths=(
+  "wzdnzd_aggregator_sub"
+  "johnzhang0707_sub"
+  "zoecsoulkey_sub"
+)
 
 keywords=("Clash" "V2Ray" "SingBox" "Loon" "Surge" "QuantumultX")
 
@@ -33,6 +37,7 @@ for source_path in "${source_paths[@]}"; do
     cp $source_file $to_folder/$file_name
   done
 done
+
 
 
 cp $source_folder/tglaoshiji.yaml tglaoshiji.yaml
