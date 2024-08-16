@@ -127,4 +127,4 @@ for keyword in "${keywords[@]}"; do
 done
 
 
-./after_push.sh "${yb_file_folder}/${yb_log_file}"
+./after_push.sh "${yb_log_file}"
