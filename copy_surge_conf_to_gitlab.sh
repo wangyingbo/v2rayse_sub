@@ -42,4 +42,4 @@ rm -rf top_size; cp -r $source_folder/top_size top_size
 
 
 echo "\n"
-./after_push.sh copy_to_gitee_log.txt
+./after_push.sh copy_to_gitlab_log.txt
