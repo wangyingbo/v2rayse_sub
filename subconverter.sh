@@ -7,4 +7,4 @@
 ./wzdnzd_aggregator.sh -a https://gist.github.com/zoecsoulkey/4fb494052c2398bdbd36df8d20fb600e -f zoecsoulkey_sub -l zoecsoulkey_sub/zoecsoulkey_log.txt
 
 # 转换base64订阅地址
-./convert_base64_url_to_sub.sh -a https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/mix -f raw_base64_to_sub -l raw_base64_to_sub/raw_base64_to_sub_log.txt
+./convert_base64_url_to_sub.sh -a https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/mix -f iboxz_free_v2ray_collector -l iboxz_free_v2ray_collector/iboxz_free_v2ray_collector_log.txt
