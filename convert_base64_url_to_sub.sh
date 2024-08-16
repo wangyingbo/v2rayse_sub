@@ -1,24 +1,16 @@
 #!/bin/zsh
-# 获取订阅：https://gist.github.com/search?o=desc&q=configsub&s=updated
-# https://gist.github.com/search?o=desc&q=v2ray.txt&s=updated
-# https://github.com/search?q=clash.yaml&type=repositories&s=updated&o=desc
-# https://gist.github.com/search?o=desc&q=v2ray&s=updated
-# https://gist.github.com/search?o=desc&q=clash&s=updated
-# 订阅转换：https://my.subcloud.xyz
+
+./before_pull.sh
 
 
-# git
-git pull --rebase
-echo "\n"
-
-yb_gist_url=''
+yb_base64_url=''
 yb_file_folder=''
 yb_log_file=''
-while getopts "a:f:l:" opt; do
+while getopts "a:f:l:v" opt; do
     case $opt in
         a)
             echo -e "选项a的参数是${OPTARG}"
-            yb_gist_url=${OPTARG}
+            yb_base64_url=${OPTARG}
             ;;
         f)
             echo -e "选项f的参数是${OPTARG}"
@@ -41,8 +33,6 @@ done
 
 
 current_time=$(date +"Today is %A, %B %d, %Y %H:%M:%S")
-log_file="${yb_log_file}"
-
 # 检测操作系统类型
 OS_TYPE=$(uname)
 YBDEVICE=""
@@ -60,33 +50,6 @@ echo "\n"
 
 # 创建保存订阅链接的目录
 mkdir -p $yb_file_folder
-
-
-# ____________________________________________________________
-# temp_readme='wzdnzd_aggregator_README.md'
-# # 下载 README.md 文件内容
-# curl -s https://raw.githubusercontent.com/wzdnzd/aggregator/main/README.md -o $temp_readme
-
-# # 定义关键字数组
-# keywords=("Clash" "V2Ray" "SingBox" "Loon" "Surge" "QuantumultX")
-
-# # 遍历关键字数组
-# for keyword in "${keywords[@]}"; do
-#   # 查找包含关键字的行，并提取行内的链接
-#   link=$(grep "$keyword" $temp_readme | grep -o 'http[^ ]*')
-  
-#   # 如果找到链接，下载文件并保存
-#   if [ -n "$link" ]; then
-#     echo "Downloading $link for $keyword..."
-#     curl -s "$link" -o "$yb_file_folder/$keyword"
-#   else
-#     echo "No link found for $keyword"
-#   fi
-# done
-
-# # 删除临时下载的 README.md 文件
-# rm $temp_readme
-# ____________________________________________________________
 
 
 urlencode() {
@@ -111,37 +74,10 @@ url_encode() {
 }
 
 
-
-# sub_url="https://gist.githubusercontent.com/zoecsoulkey/4fb494052c2398bdbd36df8d20fb600e/raw/c33cd10dd37ee6b9f670db4387746e8f6eeafde9/configsub.yaml"
-# sub_url="https://gist.githubusercontent.com/johnzhang0707/8f88dc294f66a68d9c4d352275a8d52d/raw/b5d85c624e0877c471e5a10310bafe5d50fe5ccc/configsub.yaml"
-# sub_url="https://gist.githubusercontent.com/wangyingbo/eb9075f2dc6be6a41eae7765a7fccae7/raw/5be56cca8504a47b66283a0ba6803c47c33b425e/yb_config_sub.yaml"
-
-
-
-# 提供你的 Gist 页面 URL
-# ORI_GIST_URL="https://gist.github.com/wangyingbo/eb9075f2dc6be6a41eae7765a7fccae7"
-ORI_GIST_URL=$yb_gist_url
-
-gist_url=$ORI_GIST_URL
-regex="https://gist.github.com/([^/]+)/([^/]+)"
-if [[ $gist_url =~ $regex ]]; then
-  username="${BASH_REMATCH[1]}"
-  gist_id="${BASH_REMATCH[2]}"
-else
-  echo "Invalid Gist URL"
-  exit 1
-fi
-
-# 下载Gist页面的HTML内容
-html_content=$(curl -s "$gist_url")
-
-# 提取所有的raw文件链接
-raw_links=$(echo "$html_content" | grep 'href=' | grep "$username" | grep "$gist_id" | sed -n 's/.*href="\([^"]*\).*/\1/p' | grep '\.yaml$' | sed 's/^/https:\/\/gist.githubusercontent.com/')
-
-# 匹配yaml后缀结尾的url
-sub_url=$(echo $raw_links | grep '\.yaml$')
-echo "gist raw url: $sub_url"
+sub_url=$yb_base64_url
+echo "base64 raw url: $sub_url"
 echo "\n"
+
 
 # 定义关键字数组
 keywords=("Clash" "V2Ray" "SingBox" "Loon" "Surge" "QuantumultX")
@@ -186,43 +122,9 @@ for keyword in "${keywords[@]}"; do
     fi
 
     if [[ $keyword = 'Surge' ]]; then
-        # ./remove_surge_illegal.sh
-
-        # if [[ $YBDEVICE = 'macOS' ]]; then
-        #     sed -i '' '1,3s/interval=86400/interval=360/' "$yb_file_folder/$keyword"
-        # else
-        #     sed -i '1,3s/interval=86400/interval=360/' "$yb_file_folder/$keyword"
-        # fi
-        
         echo "# update in ${YBDEVICE}!!! ${current_time}" >> "$yb_file_folder/$keyword"
     fi
 done
 
 
-echo "All files downloaded to ${yb_file_folder}/ directory."
-echo "\n"
-
-# log
-if [ -e $log_file ]; then
-    echo " 存在log文件 "
-else
-    touch "" > $log_file
-fi
-echo "${current_time} in ${YBDEVICE}" >> $log_file
-log_num_lines=$(wc -l < "${log_file}")
-if [ "$log_num_lines" -gt 100 ]; then
-  tail -n 100 "${log_file}" > tmp_file
-  mv tmp_file "${log_file}"
-  echo "log文件超过100行，已保留后100行，多余行已删除。"
-else
-  echo "log文件不超过100行，无需处理。"
-fi
-echo "\n"
-
-
-# git 
-git add .
-git commit -m "update in ${YBDEVICE}!!! ${current_time}"
-git pull --rebase
-git push -u origin main
-echo "\n"
+./after_push.sh "${yb_file_folder}/${yb_log_file}"
