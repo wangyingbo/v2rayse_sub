@@ -8,3 +8,4 @@
 
 # 转换base64订阅地址
 ./convert_base64_url_to_sub.sh -a https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/mix -f iboxz_free_v2ray_collector -l iboxz_free_v2ray_collector/iboxz_free_v2ray_collector_log.txt
+./convert_base64_url_to_sub.sh -a https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/trojan -f iboxz_free_v2ray_collector_trojan -l iboxz_free_v2ray_collector_trojan/iboxz_free_v2ray_collector_trojan_log.txt

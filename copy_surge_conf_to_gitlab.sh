@@ -46,6 +46,7 @@ rm -rf gist_config; cp -r $source_folder/gist_config gist_config
 rm -rf github_config; cp -r $source_folder/github_config github_config
 rm -rf top_size; cp -r $source_folder/top_size top_size
 rm -rf iboxz_free_v2ray_collector; cp -r $source_folder/iboxz_free_v2ray_collector iboxz_free_v2ray_collector
+rm -rf iboxz_free_v2ray_collector_trojan; cp -r $source_folder/iboxz_free_v2ray_collector_trojan iboxz_free_v2ray_collector_trojan
 
 
 echo "\n"
