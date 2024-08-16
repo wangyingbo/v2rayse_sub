@@ -34,12 +34,13 @@ for source_path in "${source_paths[@]}"; do
   done
 done
 
+
 cp $source_folder/tglaoshiji.yaml tglaoshiji.yaml
 cp $source_folder/yb_v2rayse_sub.yaml yb_v2rayse_sub.yaml
 rm -rf gist_config; cp -r $source_folder/gist_config gist_config
 rm -rf github_config; cp -r $source_folder/github_config github_config
 rm -rf top_size; cp -r $source_folder/top_size top_size
-rm -rf raw_base64_to_sub; cp -r $source_folder/raw_base64_to_sub raw_base64_to_sub
+rm -rf iboxz_free_v2ray_collector; cp -r $source_folder/iboxz_free_v2ray_collector iboxz_free_v2ray_collector
 
 
 echo "\n"
