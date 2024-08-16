@@ -5,523 +5,331 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 台灣02-直連-1A, server: uprica.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: AkIE4zN2055Onan1WBh8L4XRJUHfYQJhze8krWeSqXE, short-id: "dc2cad0c" }, servername: gamedownloads-rockstargames-com.akamaized.net, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 台灣13-直連-1A, server: pqdabn.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: zNaNwyaEjGqqD1RSFuJAoQA-e4OiTTUgJm3Bi6_BwXY, short-id: "14da529a" }, servername: www.douyin.com, client-fingerprint: edge, network: tcp, udp: true}
-  - {name: 🇧🇷 巴西NEW03, server: us-new03.daluquan.top, port: 8880, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: us-new03.daluquan.top}}, udp: true}
-  - {name: 🇭🇰 HK | 香港 02, server: gzo.runjustfast.com, port: 35004, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: hk1.runjustfast.com, network: ws, ws-opts: {path: /31k64xkea01x, headers: {Host: hk1.runjustfast.com}}, udp: true}
-  - {name: 🇹🇼 TW | 台湾 02, server: gzo.runjustfast.com, port: 30003, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: tw1.runjustfast.com, network: ws, ws-opts: {path: /t1a64wdea01c, headers: {Host: tw1.runjustfast.com}}, udp: true}
-  - {name: 🇸🇬 SG | 新加坡 01, server: gzog.runjustfast.com, port: 30002, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: sg1.runjustfast.com, network: ws, ws-opts: {path: /2sa6gxdea14c, headers: {Host: sg1.runjustfast.com}}, udp: true}
-  - {name: 🇺🇸 美国中转-2, server: gdcub.yunnode.win, port: 36454, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 🇭🇰 HK | 香港 01, server: gzog.runjustfast.com, port: 35004, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: hk1.runjustfast.com, network: ws, ws-opts: {path: /31k64xkea01x, headers: {Host: hk1.runjustfast.com}}, udp: true}
-  - {name: 台灣04-直連-1B, server: uidenq.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 6SI4EqSEK8Zv3eqPfcAbmXm4fbDWh0XzP9Ltu2tSTD0, short-id: "9ab88ed5" }, servername: www.lovelive-anime.jp, client-fingerprint: firefox, network: tcp, udp: true}
-  - {name: 台灣12-直連-1B, server: d3cswy.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: X-WigzycM82iJkbmYI02G6WEc7Emd7JiG-vRI3hwokc, short-id: "8467b1ea" }, servername: s0.awsstatic.com, client-fingerprint: safari, network: tcp, udp: true}
-  - {name: 🇧🇷 巴西NEW03优选, server: go.daluquan.top, port: 8880, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: go.daluquan.top}}, udp: true}
-  - {name: 🇯🇵 JP | 日本 专线, server: jp.runjustfast.com, port: 30001, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: jp1.runjustfast.com, network: ws, ws-opts: {path: /21a64xdea04c, headers: {Host: jp1.runjustfast.com}}, udp: true}
-  - {name: 🇸🇬 新加坡07, server: q26.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sg.ludou.us.kg}}, udp: true}
-  - {name: 台灣07-直連-1A, server: y85uef.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: _gsfvatLgdy9stSQAwHqtkdFT5vRLLjjqlv1ssvZvXw, short-id: "64d00876" }, servername: object-bnolauncher-ct.bandainamco-ol.jp, client-fingerprint: qq, network: tcp, udp: true}
-  - {name: 台灣08-直連-1B, server: q47hch.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ESKPxcQGKiJvmt12EePzehRIqrHaxmj96f1ACC0gcw4, short-id: "1d1d4faf" }, servername: content.cdp.bethesda.net, client-fingerprint: ios, network: tcp, udp: true}
-  - {name: 🇨🇦 加拿大, server: q10.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b2.ludou.us.kg}}, udp: true}
-  - {name: 🇸🇬 新加坡06, server: q6.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sg002afa.ludou.us.kg}}, udp: true}
-  - {name: 🇭🇰 香港 1-1A, server: m2-hk1.go-relay.top, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-hk1.go-relay.top}}, udp: true}
-  - {name: 美國01-直連-0.5x-1A, server: node-us-1.sudatech.store, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ZykNwUwr0CmMaGj6hlnADLYGc9pGczt7PvMvNCb9zH4, short-id: "438ed1b2" }, servername: tokto.ai, client-fingerprint: ios, network: tcp, udp: true}
-  - {name: 台灣09-直連-1B, server: bbu7uh.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 6EXkZwfyumhyBokXV3k5ahmVfNg5y4-EtQD2KlR9bSU, short-id: "84e66e8d" }, servername: d1--ov-gotcha07.bilivideo.com, client-fingerprint: qq, network: tcp, udp: true}
-  - {name: 台灣06-直連-1A, server: xevxwr.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Ni75NROYuTpyu3gs8osXqWMHlMyEOC0GLVwipdmF3xA, short-id: "08484e84" }, servername: player.live-video.net, client-fingerprint: firefox, network: tcp, udp: true}
-  - {name: 🇰🇿 哈萨克斯坦中转-2, server: gdcub.yunnode.win, port: 42253, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 🇺🇸 美国 4-1A, server: m2-us1.m2network.icu, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.m2network.icu}}, udp: true}
-  - {name: 台灣11-直連-1A, server: d2majj.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: R6t4HkriPZSw1MDzNHpBe0d-R6S9nlJI7XJVcEw-cHc, short-id: "47e3a139" }, servername: addons.mozilla.org, client-fingerprint: qq, network: tcp, udp: true}
-  - {name: 🇸🇬 新加坡NEW01优选, server: go.daluquan.top, port: 8080, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: de-new01.daluquan.top}}, udp: true}
-  - {name: 台灣03-直連-1A, server: vajgb9.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: YyW3SIQ8ZPzMlIr0GHupAhioBDlDtoc9BzTVwuAngDM, short-id: "8b6dc1a5" }, servername: www.lovelive-anime.jp, client-fingerprint: qq, network: tcp, udp: true}
-  - {name: 🇸🇬 新加坡01, server: q3.ludou.us.kg, port: 8880, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 877.bitaiyun.tech}}, udp: true}
-  - {name: 🇯🇵 日本中转-2, server: gdcub.yunnode.win, port: 30346, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 直连不能用是地区问题-1B, server: forward-03.sudatech.store, port: 43500, type: trojan, password: 472e7b19-99a3-4eef-9712-a20d76f9886a, sni: vpn-4-6.sudatech.store, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK | 香港 专线, server: gd.runjustfast.com, port: 35004, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: hk1.runjustfast.com, network: ws, ws-opts: {path: /31k64xkea01x, headers: {Host: hk1.runjustfast.com}}, udp: true}
-  - {name: 🇮🇳 印度, server: q11.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b3.ludou.us.kg}}, udp: true}
-  - {name: 台灣06-直連-1B, server: xevxwr.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Ni75NROYuTpyu3gs8osXqWMHlMyEOC0GLVwipdmF3xA, short-id: "08484e84" }, servername: player.live-video.net, client-fingerprint: safari, network: tcp, udp: true}
-  - {name: 🇦🇺 澳大利亚, server: q13.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b4.ludou.us.kg}}, udp: true}
-  - {name: 🇸🇬 新加坡02, server: q32.ludou.us.kg, port: 80, type: vless, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q32.ludou.us.kg}}, udp: true}
-  - {name: 🇺🇸 美国 5-1B, server: m2-us2.m2network.icu, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us2.m2network.icu}}, udp: true}
-  - {name: 🇸🇬 新加坡 3-1B, server: m2-sg3.m2network.icu, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg3.m2network.icu}}, udp: true}
-  - {name: 🇯🇵 日本02-直連0.2x-1A, server: node-jp-2.sudatech.store, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Lj4uV4vzYm7RaM0c64tV_Pg6CmmffCzq2k5SYHD0zhI, short-id: "35e351f6" }, servername: tokto.ai, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 台灣11-直連-1B, server: d2majj.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: R6t4HkriPZSw1MDzNHpBe0d-R6S9nlJI7XJVcEw-cHc, short-id: "47e3a139" }, servername: addons.mozilla.org, client-fingerprint: edge, network: tcp, udp: true}
-  - {name: 🇺🇸 US | 美国 01, server: gzog.runjustfast.com, port: 30006, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: us1.runjustfast.com, network: ws, ws-opts: {path: /4su6gxksa11c, headers: {Host: us1.runjustfast.com}}, udp: true}
-  - {name: 🇬🇧 UK | 英国 01, server: gzog.runjustfast.com, port: 30005, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: uk1.runjustfast.com, network: ws, ws-opts: {path: /3su6gxkea11c, headers: {Host: uk1.runjustfast.com}}, udp: true}
-  - {name: 台灣05-直連-1A, server: ncfw93.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 7g-TJ7GdAf61skeA9syzKpMr_AmSnFcUJ7kkhwx3DEs, short-id: "2ea9dd26" }, servername: player.live-video.net, client-fingerprint: edge, network: tcp, udp: true}
-  - {name: 🇺🇸 美国 1-1B, server: m2-us1.go-relay.top, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.go-relay.top}}, udp: true}
-  - {name: 直连不能用是地区问题-1A, server: forward-03.sudatech.store, port: 43500, type: trojan, password: 1540bb1c-362d-49e6-b604-42062cc428bb, sni: vpn-4-6.sudatech.store, skip-cert-verify: true, udp: true}
-  - {name: 台灣16-直連-1B, server: xcc3fp.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: TK7J2tkMQx0YueND0yfUEXMHpBR28Z9y6swYBRMzD00, short-id: "85b5bd96" }, servername: content.cdp.bethesda.net, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇺🇸 美国 6-1A, server: m2-us3.m2network.icu, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us3.m2network.icu}}, udp: true}
-  - {name: 🇸🇬 新加坡 3-1A, server: m2-sg3.m2network.icu, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg3.m2network.icu}}, udp: true}
-  - {name: 台灣07-直連-1B, server: y85uef.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: _gsfvatLgdy9stSQAwHqtkdFT5vRLLjjqlv1ssvZvXw, short-id: "64d00876" }, servername: object-bnolauncher-ct.bandainamco-ol.jp, client-fingerprint: firefox, network: tcp, udp: true}
-  - {name: 🇹🇼 TW | 台湾 01, server: gzog.runjustfast.com, port: 30003, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: tw1.runjustfast.com, network: ws, ws-opts: {path: /t1a64wdea01c, headers: {Host: tw1.runjustfast.com}}, udp: true}
-  - {name: 🇸🇬 新加坡 1-1A, server: m2-sg1.m2network.icu, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg1.m2network.icu}}, udp: true}
-  - {name: 🇳🇱 荷兰, server: q12.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b5.ludou.us.kg}}, udp: true}
-  - {name: 🇺🇸 美国LA, server: q19.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usla.ludou.us.kg}}, udp: true}
-  - {name: 大版01, server: q23.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cmi-665441.ludounow.tech}}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 705dc0b6-06a2-44e8-b187-5beb811f2734, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 JP | 日本 01, server: gzog.runjustfast.com, port: 30001, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: jp1.runjustfast.com, network: ws, ws-opts: {path: /21a64xdea04c, headers: {Host: jp1.runjustfast.com}}, udp: true}
-  - {name: 🇸🇬 新加坡中转-2, server: gdcub.yunnode.win, port: 34187, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 🇸🇬 新加坡 2-1B, server: m2-sg2.m2network.icu, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg2.m2network.icu}}, udp: true}
-  - {name: 🇺🇸 US | 美国 02, server: gzo.runjustfast.com, port: 30006, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: us1.runjustfast.com, network: ws, ws-opts: {path: /4su6gxksa11c, headers: {Host: us1.runjustfast.com}}, udp: true}
-  - {name: 🇯🇵 东京02, server: q28.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jduarwtq.ludounow.tech}}, udp: true}
-  - {name: 🇯🇵 日本02-直連0.2x-1B, server: node-jp-2.sudatech.store, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Lj4uV4vzYm7RaM0c64tV_Pg6CmmffCzq2k5SYHD0zhI, short-id: "35e351f6" }, servername: tokto.ai, client-fingerprint: qq, network: tcp, udp: true}
-  - {name: 台灣01-直連-1B, server: 82pavp.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: tiShGy9uYh9oBbGvZPrqFseCseEAgWboWAoYsnkGWnM, short-id: "01c3fb99" }, servername: www.douyin.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇸🇬 新加坡05, server: q5.ludou.us.kg, port: 8080, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /vccmn, headers: {Host: 66666.ludou.us.kg}}, udp: true}
-  - {name: 🇯🇵 日本1UDP, server: hy203.ludounow.tech, port: 40002, type: hysteria2, password: 922106b3-8dd7-4b29-b41a-a1d129a611f2, auth: 922106b3-8dd7-4b29-b41a-a1d129a611f2, sni: hy203.ludounow.tech, skip-cert-verify: true, udp: true}
-  - {name: 美國01-直連-0.5x-1B, server: node-us-1.sudatech.store, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ZykNwUwr0CmMaGj6hlnADLYGc9pGczt7PvMvNCb9zH4, short-id: "438ed1b2" }, servername: tokto.ai, client-fingerprint: edge, network: tcp, udp: true}
-  - {name: 台灣14-直連-1A, server: rnjszk.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: WWZtj7tsGYJmlzkf_wEZhmoky5SJSy0I03YzrP3yJ2A, short-id: "57f4f20c" }, servername: gamedownloads-rockstargames-com.akamaized.net, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇭🇰 2香港中转-2, server: gdcub.yunnode.win, port: 59681, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 🇺🇸 美国GA, server: q16.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usga.ludou.us.kg}}, udp: true}
-  - {name: 🇭🇰 香港中转-2, server: gdcub.yunnode.win, port: 38519, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 🇯🇵 日本NEW01, server: fr-new01.daluquan.top, port: 8880, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: fr-new01.daluquan.top}}, udp: true}
-  - {name: 🇺🇸 美国 6-1B, server: m2-us3.m2network.icu, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us3.m2network.icu}}, udp: true}
-  - {name: 台灣15-直連-1A, server: cjqtur.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: z4sth42R56sV2Pvuu7kqGAhgr62_2uMsGvg3QajxtD8, short-id: "c06b5ca5" }, servername: object-bnolauncher-ct.bandainamco-ol.jp, client-fingerprint: qq, network: tcp, udp: true}
-  - {name: 台灣14-直連-1B, server: rnjszk.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: WWZtj7tsGYJmlzkf_wEZhmoky5SJSy0I03YzrP3yJ2A, short-id: "57f4f20c" }, servername: gamedownloads-rockstargames-com.akamaized.net, client-fingerprint: safari, network: tcp, udp: true}
-  - {name: 🇭🇰 香港 1-1B, server: m2-hk1.go-relay.top, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-hk1.go-relay.top}}, udp: true}
-  - {name: 🇰🇷 韓國01-直連0.1x-1A, server: node-kr-1.sudatech.store, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ZykNwUwr0CmMaGj6hlnADLYGc9pGczt7PvMvNCb9zH4, short-id: "438ed1b2" }, servername: tokto.ai, client-fingerprint: safari, network: tcp, udp: true}
-  - {name: 🇺🇸 美国WA, server: q17.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: uswa.ludou.us.kg}}, udp: true}
-  - {name: 台灣16-直連-1A, server: xcc3fp.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: TK7J2tkMQx0YueND0yfUEXMHpBR28Z9y6swYBRMzD00, short-id: "85b5bd96" }, servername: content.cdp.bethesda.net, client-fingerprint: edge, network: tcp, udp: true}
-  - {name: 🇺🇸 美国 4-1B, server: m2-us1.m2network.icu, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.m2network.icu}}, udp: true}
-  - {name: 🇬🇧 伦敦, server: q7.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b1.ludou.us.kg}}, udp: true}
-  - {name: 台灣10-直連-1A, server: 7uzr4v.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: YcCADTAK0vFG1esN8ca-I3NFnqk_nlaHNCEpFNsVtFg, short-id: "59bd221c" }, servername: download-installer.cdn.mozilla.net, client-fingerprint: safari, network: tcp, udp: true}
-  - {name: 🇮🇩 印尼, server: q34.ludou.us.kg, port: 80, type: vless, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q34.ludou.us.kg}}, udp: true}
-  - {name: 台灣15-直連-1B, server: cjqtur.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: z4sth42R56sV2Pvuu7kqGAhgr62_2uMsGvg3QajxtD8, short-id: "c06b5ca5" }, servername: object-bnolauncher-ct.bandainamco-ol.jp, client-fingerprint: safari, network: tcp, udp: true}
-  - {name: 🇯🇵 日本01-直連0.2x-1A, server: node-jp-1.sudatech.store, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Lj4uV4vzYm7RaM0c64tV_Pg6CmmffCzq2k5SYHD0zhI, short-id: "35e351f6" }, servername: tokto.ai, client-fingerprint: chrome, network: tcp, udp: true}
   - {name: 🇯🇵 东京01, server: q25.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jpaaddda5dd.ludou.us.kg}}, udp: true}
-  - {name: 台灣09-直連-1A, server: bbu7uh.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 6EXkZwfyumhyBokXV3k5ahmVfNg5y4-EtQD2KlR9bSU, short-id: "84e66e8d" }, servername: d1--ov-gotcha07.bilivideo.com, client-fingerprint: qq, network: tcp, udp: true}
-  - {name: 🇰🇷 韩国NEW01, server: uk-new01.daluquan.top, port: 8880, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: uk-new01.daluquan.top}}, udp: true}
-  - {name: 🇸🇬 新加坡01-直連0.2x-1B, server: node-sg-1.sudatech.store, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ZykNwUwr0CmMaGj6hlnADLYGc9pGczt7PvMvNCb9zH4, short-id: "438ed1b2" }, servername: tokto.ai, client-fingerprint: ios, network: tcp, udp: true}
-  - {name: 🇸🇬 新加坡NEW01, server: de-new01.daluquan.top, port: 8080, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: de-new01.daluquan.top}}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3ea06745-dde5-49bf-998f-06b919893159, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇭🇰 香港01-直連0.8x-1B, server: hk-2-ddns.sudatech.store, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: MNjC7Ae58Bx7xzv0sYjQml_zuxUoLX0A6pK8BsMHZRA, short-id: "c36f2927" }, servername: aws.amazon.com, client-fingerprint: safari, network: tcp, udp: true}
-  - {name: 🇯🇵 日本01-直連0.2x-1B, server: node-jp-1.sudatech.store, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Lj4uV4vzYm7RaM0c64tV_Pg6CmmffCzq2k5SYHD0zhI, short-id: "35e351f6" }, servername: tokto.ai, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇯🇵 JP | 日本 02, server: gzo.runjustfast.com, port: 30001, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: jp1.runjustfast.com, network: ws, ws-opts: {path: /21a64xdea04c, headers: {Host: jp1.runjustfast.com}}, udp: true}
-  - {name: 🇺🇸 美国 5-1A, server: m2-us2.m2network.icu, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us2.m2network.icu}}, udp: true}
-  - {name: 🇸🇬 新加坡 1-1B, server: m2-sg1.m2network.icu, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg1.m2network.icu}}, udp: true}
-  - {name: 🇸🇬 新加坡03, server: q31.ludou.us.kg, port: 80, type: vless, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q31.ludou.us.kg}}, udp: true}
-  - {name: 🇺🇸 旧金山SF, server: q4.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 1321.bitaiyun.tech}}, udp: true}
-  - {name: 台灣04-直連-1A, server: uidenq.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 6SI4EqSEK8Zv3eqPfcAbmXm4fbDWh0XzP9Ltu2tSTD0, short-id: "9ab88ed5" }, servername: www.lovelive-anime.jp, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 台灣02-直連-1B, server: uprica.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: AkIE4zN2055Onan1WBh8L4XRJUHfYQJhze8krWeSqXE, short-id: "dc2cad0c" }, servername: gamedownloads-rockstargames-com.akamaized.net, client-fingerprint: ios, network: tcp, udp: true}
-  - {name: 🇸🇬 SG | 新加坡 02, server: gzo.runjustfast.com, port: 30002, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: sg1.runjustfast.com, network: ws, ws-opts: {path: /2sa6gxdea14c, headers: {Host: sg1.runjustfast.com}}, udp: true}
-  - {name: 台灣03-直連-1B, server: vajgb9.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: YyW3SIQ8ZPzMlIr0GHupAhioBDlDtoc9BzTVwuAngDM, short-id: "8b6dc1a5" }, servername: www.lovelive-anime.jp, client-fingerprint: ios, network: tcp, udp: true}
-  - {name: 🇺🇸 美国LL, server: q21.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usll.ludou.us.kg}}, udp: true}
-  - {name: 🇸🇬 新加坡 2-1A, server: m2-sg2.m2network.icu, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg2.m2network.icu}}, udp: true}
-  - {name: 大版02, server: q24.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cmi-64475841.ludounow.tech}}, udp: true}
-  - {name: 🇩🇪 德国, server: q14.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b6.ludou.us.kg}}, udp: true}
+  - {name: 🇺🇸 美国WA, server: q17.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: uswa.ludou.us.kg}}, udp: true}
+  - {name: 🇬🇧 UK | 英国 01, server: gzog.runjustfast.com, port: 30005, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: uk1.runjustfast.com, network: ws, ws-opts: {path: /3su6gxkea11c, headers: {Host: uk1.runjustfast.com}}, udp: true}
   - {name: 🇺🇸 美国CA, server: q15.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usca.ludou.us.kg}}, udp: true}
-  - {name: 🇹🇼 台湾中转-2, server: gdcub.yunnode.win, port: 51167, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 🇯🇵 东京2UDP, server: hy204.ludounow.tech, port: 20008, type: hysteria2, password: 922106b3-8dd7-4b29-b41a-a1d129a611f2, auth: 922106b3-8dd7-4b29-b41a-a1d129a611f2, sni: hy204.ludounow.tech, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 新加坡04, server: q30.ludou.us.kg, port: 80, type: vless, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q30.ludou.us.kg}}, udp: true}
-  - {name: 🇸🇬 新加坡01-直連0.2x-1A, server: node-sg-1.sudatech.store, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ZykNwUwr0CmMaGj6hlnADLYGc9pGczt7PvMvNCb9zH4, short-id: "438ed1b2" }, servername: tokto.ai, client-fingerprint: safari, network: tcp, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: a3f2fa6a-6bdb-407f-98e4-66da8089b43a, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 台灣01-直連-1A, server: 82pavp.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: tiShGy9uYh9oBbGvZPrqFseCseEAgWboWAoYsnkGWnM, short-id: "01c3fb99" }, servername: www.douyin.com, client-fingerprint: qq, network: tcp, udp: true}
-  - {name: 🇭🇰 香港01-直連0.8x-1A, server: hk-2-ddns.sudatech.store, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: MNjC7Ae58Bx7xzv0sYjQml_zuxUoLX0A6pK8BsMHZRA, short-id: "c36f2927" }, servername: aws.amazon.com, client-fingerprint: firefox, network: tcp, udp: true}
-  - {name: 🇰🇷 韓國01-直連0.1x-1B, server: node-kr-1.sudatech.store, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ZykNwUwr0CmMaGj6hlnADLYGc9pGczt7PvMvNCb9zH4, short-id: "438ed1b2" }, servername: tokto.ai, client-fingerprint: firefox, network: tcp, udp: true}
-  - {name: 🇺🇸 美西CF, server: q1.ludou.us.kg, port: 80, type: vless, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: /hgalaoa, headers: {Host: q1.ludou.us.kg}}, udp: true}
-  - {name: 🇺🇸 美国 1-1A, server: m2-us1.go-relay.top, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.go-relay.top}}, udp: true}
-  - {name: 台灣13-直連-1B, server: pqdabn.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: zNaNwyaEjGqqD1RSFuJAoQA-e4OiTTUgJm3Bi6_BwXY, short-id: "14da529a" }, servername: www.douyin.com, client-fingerprint: ios, network: tcp, udp: true}
-  - {name: 美國02-直連-0.5x-1A, server: node-us-2.sudatech.store, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ZykNwUwr0CmMaGj6hlnADLYGc9pGczt7PvMvNCb9zH4, short-id: "438ed1b2" }, servername: tokto.ai, client-fingerprint: qq, network: tcp, udp: true}
-  - {name: 美國02-直連-0.5x-1B, server: node-us-2.sudatech.store, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ZykNwUwr0CmMaGj6hlnADLYGc9pGczt7PvMvNCb9zH4, short-id: "438ed1b2" }, servername: tokto.ai, client-fingerprint: edge, network: tcp, udp: true}
-  - {name: 🇺🇸 美国FL, server: q18.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usfl.ludou.us.kg}}, udp: true}
-  - {name: 台灣05-直連-1B, server: ncfw93.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 7g-TJ7GdAf61skeA9syzKpMr_AmSnFcUJ7kkhwx3DEs, short-id: "2ea9dd26" }, servername: player.live-video.net, client-fingerprint: edge, network: tcp, udp: true}
-  - {name: 🇬🇧 UK | 英国 02, server: gzo.runjustfast.com, port: 30005, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: uk1.runjustfast.com, network: ws, ws-opts: {path: /3su6gxkea11c, headers: {Host: uk1.runjustfast.com}}, udp: true}
-  - {name: 🇺🇸 纽约NY, server: q8.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: or.ludou.us.kg}}, udp: true}
-  - {name: 台灣12-直連-1A, server: d3cswy.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: X-WigzycM82iJkbmYI02G6WEc7Emd7JiG-vRI3hwokc, short-id: "8467b1ea" }, servername: s0.awsstatic.com, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇺🇸 美国 4-1B, server: m2-us1.m2network.icu, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.m2network.icu}}, udp: true}
+  - {name: 🇸🇬 SG | 新加坡 02, server: gzo.runjustfast.com, port: 30002, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: sg1.runjustfast.com, network: ws, ws-opts: {path: /2sa6gxdea14c, headers: {Host: sg1.runjustfast.com}}, udp: true}
+  - {name: 🇯🇵 东京02, server: q28.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jduarwtq.ludounow.tech}}, udp: true}
+  - {name: 🇸🇬 新加坡01, server: q3.ludou.us.kg, port: 8880, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 877.bitaiyun.tech}}, udp: true}
   - {name: 🇺🇸 美国NEW01, server: us-new01.daluquan.top, port: 8880, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: us-new01.daluquan.top}}, udp: true}
-  - {name: 台灣10-直連-1B, server: 7uzr4v.chinese-sm.com, port: 30002, type: vless, uuid: 472e7b19-99a3-4eef-9712-a20d76f9886a, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: YcCADTAK0vFG1esN8ca-I3NFnqk_nlaHNCEpFNsVtFg, short-id: "59bd221c" }, servername: download-installer.cdn.mozilla.net, client-fingerprint: edge, network: tcp, udp: true}
-  - {name: 台灣08-直連-1A, server: q47hch.chinese-sm.com, port: 30002, type: vless, uuid: 1540bb1c-362d-49e6-b604-42062cc428bb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ESKPxcQGKiJvmt12EePzehRIqrHaxmj96f1ACC0gcw4, short-id: "1d1d4faf" }, servername: content.cdp.bethesda.net, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇮🇩 印尼, server: q34.ludou.us.kg, port: 80, type: vless, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q34.ludou.us.kg}}, udp: true}
+  - {name: 🇺🇸 美国中转-2, server: gdcub.yunnode.win, port: 36454, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇹🇼 TW | 台湾 01, server: gzog.runjustfast.com, port: 30003, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: tw1.runjustfast.com, network: ws, ws-opts: {path: /t1a64wdea01c, headers: {Host: tw1.runjustfast.com}}, udp: true}
+  - {name: 🇸🇬 新加坡 1-1B, server: m2-sg1.m2network.icu, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg1.m2network.icu}}, udp: true}
+  - {name: 🇮🇳 印度, server: q11.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b3.ludou.us.kg}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 705dc0b6-06a2-44e8-b187-5beb811f2734, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇺🇸 美国 1-1A, server: m2-us1.go-relay.top, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.go-relay.top}}, udp: true}
+  - {name: 🇭🇰 香港 1-1B, server: m2-hk1.go-relay.top, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-hk1.go-relay.top}}, udp: true}
+  - {name: 🇺🇸 US | 美国 02, server: gzo.runjustfast.com, port: 30006, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: us1.runjustfast.com, network: ws, ws-opts: {path: /4su6gxksa11c, headers: {Host: us1.runjustfast.com}}, udp: true}
+  - {name: 🇸🇬 新加坡 2-1B, server: m2-sg2.m2network.icu, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg2.m2network.icu}}, udp: true}
+  - {name: 大版02, server: q24.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cmi-64475841.ludounow.tech}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: a3f2fa6a-6bdb-407f-98e4-66da8089b43a, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇸🇬 新加坡NEW01优选, server: go.daluquan.top, port: 8080, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: de-new01.daluquan.top}}, udp: true}
+  - {name: 🇯🇵 日本中转-2, server: gdcub.yunnode.win, port: 30346, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇭🇰 HK | 香港 01, server: gzog.runjustfast.com, port: 35004, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: hk1.runjustfast.com, network: ws, ws-opts: {path: /31k64xkea01x, headers: {Host: hk1.runjustfast.com}}, udp: true}
+  - {name: 🇺🇸 美国 6-1B, server: m2-us3.m2network.icu, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us3.m2network.icu}}, udp: true}
+  - {name: 🇯🇵 东京2UDP, server: hy204.ludounow.tech, port: 20008, type: hysteria2, password: 922106b3-8dd7-4b29-b41a-a1d129a611f2, auth: 922106b3-8dd7-4b29-b41a-a1d129a611f2, sni: hy204.ludounow.tech, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 新加坡02, server: q32.ludou.us.kg, port: 80, type: vless, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q32.ludou.us.kg}}, udp: true}
+  - {name: 🇺🇸 美国 5-1B, server: m2-us2.m2network.icu, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us2.m2network.icu}}, udp: true}
+  - {name: 🇺🇸 美国FL, server: q18.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usfl.ludou.us.kg}}, udp: true}
+  - {name: 🇯🇵 JP | 日本 专线, server: jp.runjustfast.com, port: 30001, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: jp1.runjustfast.com, network: ws, ws-opts: {path: /21a64xdea04c, headers: {Host: jp1.runjustfast.com}}, udp: true}
+  - {name: 🇨🇦 加拿大, server: q10.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b2.ludou.us.kg}}, udp: true}
+  - {name: 🇸🇬 新加坡03, server: q31.ludou.us.kg, port: 80, type: vless, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q31.ludou.us.kg}}, udp: true}
+  - {name: 🇹🇼 TW | 台湾 02, server: gzo.runjustfast.com, port: 30003, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: tw1.runjustfast.com, network: ws, ws-opts: {path: /t1a64wdea01c, headers: {Host: tw1.runjustfast.com}}, udp: true}
+  - {name: 🇰🇷 韩国NEW01, server: uk-new01.daluquan.top, port: 8880, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: uk-new01.daluquan.top}}, udp: true}
+  - {name: 🇸🇬 新加坡 1-1A, server: m2-sg1.m2network.icu, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg1.m2network.icu}}, udp: true}
+  - {name: 🇭🇰 香港3中转-2, server: gdcub.yunnode.win, port: 14827, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇬🇧 UK | 英国 02, server: gzo.runjustfast.com, port: 30005, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: uk1.runjustfast.com, network: ws, ws-opts: {path: /3su6gxkea11c, headers: {Host: uk1.runjustfast.com}}, udp: true}
+  - {name: 🇳🇱 荷兰, server: q12.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b5.ludou.us.kg}}, udp: true}
+  - {name: 🇸🇬 新加坡06, server: q6.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sg002afa.ludou.us.kg}}, udp: true}
+  - {name: 🇸🇬 新加坡04, server: q30.ludou.us.kg, port: 80, type: vless, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q30.ludou.us.kg}}, udp: true}
+  - {name: 🇺🇸 美国LL, server: q21.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usll.ludou.us.kg}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3ea06745-dde5-49bf-998f-06b919893159, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇹🇼 台湾中转-2, server: gdcub.yunnode.win, port: 51167, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇺🇸 美国LA, server: q19.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usla.ludou.us.kg}}, udp: true}
+  - {name: 🇸🇬 新加坡07, server: q26.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sg.ludou.us.kg}}, udp: true}
+  - {name: 🇺🇸 美国 6-1A, server: m2-us3.m2network.icu, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us3.m2network.icu}}, udp: true}
+  - {name: 🇭🇰 2香港中转-2, server: gdcub.yunnode.win, port: 59681, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇺🇸 US | 美国 01, server: gzog.runjustfast.com, port: 30006, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: us1.runjustfast.com, network: ws, ws-opts: {path: /4su6gxksa11c, headers: {Host: us1.runjustfast.com}}, udp: true}
+  - {name: 🇬🇧 伦敦, server: q7.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b1.ludou.us.kg}}, udp: true}
+  - {name: 🇺🇸 旧金山SF, server: q4.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: 1321.bitaiyun.tech}}, udp: true}
+  - {name: 🇸🇬 新加坡 3-1A, server: m2-sg3.m2network.icu, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg3.m2network.icu}}, udp: true}
+  - {name: 🇧🇷 巴西NEW03优选, server: go.daluquan.top, port: 8880, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: go.daluquan.top}}, udp: true}
+  - {name: 🇸🇬 新加坡 2-1A, server: m2-sg2.m2network.icu, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg2.m2network.icu}}, udp: true}
+  - {name: 🇦🇺 澳大利亚, server: q13.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b4.ludou.us.kg}}, udp: true}
+  - {name: 🇭🇰 HK | 香港 02, server: gzo.runjustfast.com, port: 35004, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: hk1.runjustfast.com, network: ws, ws-opts: {path: /31k64xkea01x, headers: {Host: hk1.runjustfast.com}}, udp: true}
+  - {name: 🇯🇵 JP | 日本 01, server: gzog.runjustfast.com, port: 30001, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: jp1.runjustfast.com, network: ws, ws-opts: {path: /21a64xdea04c, headers: {Host: jp1.runjustfast.com}}, udp: true}
+  - {name: 🇺🇸 美国GA, server: q16.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usga.ludou.us.kg}}, udp: true}
+  - {name: 🇧🇷 巴西NEW03, server: us-new03.daluquan.top, port: 8880, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: us-new03.daluquan.top}}, udp: true}
+  - {name: 🇺🇸 美西CF, server: q1.ludou.us.kg, port: 80, type: vless, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: /hgalaoa, headers: {Host: q1.ludou.us.kg}}, udp: true}
+  - {name: 大版01, server: q23.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cmi-665441.ludounow.tech}}, udp: true}
+  - {name: 🇭🇰 香港 1-1A, server: m2-hk1.go-relay.top, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-hk1.go-relay.top}}, udp: true}
+  - {name: 🇭🇰 HK | 香港 专线, server: gd.runjustfast.com, port: 35004, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: hk1.runjustfast.com, network: ws, ws-opts: {path: /31k64xkea01x, headers: {Host: hk1.runjustfast.com}}, udp: true}
+  - {name: 🇯🇵 JP | 日本 02, server: gzo.runjustfast.com, port: 30001, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: jp1.runjustfast.com, network: ws, ws-opts: {path: /21a64xdea04c, headers: {Host: jp1.runjustfast.com}}, udp: true}
+  - {name: 🇺🇸 美国 5-1A, server: m2-us2.m2network.icu, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us2.m2network.icu}}, udp: true}
+  - {name: 🇸🇬 新加坡 3-1B, server: m2-sg3.m2network.icu, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg3.m2network.icu}}, udp: true}
+  - {name: 🇸🇬 SG | 新加坡 01, server: gzog.runjustfast.com, port: 30002, type: vmess, uuid: 3d86ba65-2154-4dca-af3e-e9e587d3bf66, alterId: 0, cipher: auto, tls: true, servername: sg1.runjustfast.com, network: ws, ws-opts: {path: /2sa6gxdea14c, headers: {Host: sg1.runjustfast.com}}, udp: true}
+  - {name: 🇸🇬 新加坡05, server: q5.ludou.us.kg, port: 8080, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /vccmn, headers: {Host: 66666.ludou.us.kg}}, udp: true}
+  - {name: 🇸🇬 新加坡NEW01, server: de-new01.daluquan.top, port: 8080, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: de-new01.daluquan.top}}, udp: true}
   - {name: 新德里, server: q33.ludou.us.kg, port: 80, type: vless, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q33.ludou.us.kg}}, udp: true}
+  - {name: 🇯🇵 日本NEW01, server: fr-new01.daluquan.top, port: 8880, type: vmess, uuid: bdc0f286-22c8-4162-9602-3f9efba397f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: fr-new01.daluquan.top}}, udp: true}
+  - {name: 🇯🇵 日本1UDP, server: hy203.ludounow.tech, port: 40002, type: hysteria2, password: 922106b3-8dd7-4b29-b41a-a1d129a611f2, auth: 922106b3-8dd7-4b29-b41a-a1d129a611f2, sni: hy203.ludounow.tech, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 美国 1-1B, server: m2-us1.go-relay.top, port: 80, type: vmess, uuid: 386443f5-8242-4a28-851e-1a1bb88f84d6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.go-relay.top}}, udp: true}
+  - {name: 🇩🇪 德国, server: q14.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b6.ludou.us.kg}}, udp: true}
+  - {name: 🇺🇸 美国 4-1A, server: m2-us1.m2network.icu, port: 80, type: vmess, uuid: dc60612e-7249-4976-8efa-381a78ffdfc5, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.m2network.icu}}, udp: true}
+  - {name: 🇸🇬 新加坡中转-2, server: gdcub.yunnode.win, port: 34187, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇭🇰 香港中转-2, server: gdcub.yunnode.win, port: 38519, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇺🇸 纽约NY, server: q8.ludou.us.kg, port: 80, type: vmess, uuid: 922106b3-8dd7-4b29-b41a-a1d129a611f2, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: or.ludou.us.kg}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 台灣02-直連-1A
-      - 台灣13-直連-1A
-      - 🇧🇷 巴西NEW03
-      - 🇭🇰 HK | 香港 02
-      - 🇹🇼 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇺🇸 美国中转-2
-      - 🇭🇰 HK | 香港 01
-      - 台灣04-直連-1B
-      - 台灣12-直連-1B
-      - 🇧🇷 巴西NEW03优选
-      - 🇯🇵 JP | 日本 专线
-      - 🇸🇬 新加坡07
-      - 台灣07-直連-1A
-      - 台灣08-直連-1B
-      - 🇨🇦 加拿大
-      - 🇸🇬 新加坡06
-      - 🇭🇰 香港 1-1A
-      - 美國01-直連-0.5x-1A
-      - 台灣09-直連-1B
-      - 台灣06-直連-1A
-      - 🇰🇿 哈萨克斯坦中转-2
-      - 🇺🇸 美国 4-1A
-      - 台灣11-直連-1A
-      - 🇸🇬 新加坡NEW01优选
-      - 台灣03-直連-1A
+      - 🇯🇵 东京01
+      - 🇺🇸 美国WA
+      - 🇬🇧 UK | 英国 01
+      - 🇺🇸 美国CA
+      - 🇺🇸 美国 4-1B
+      - 🇸🇬 SG | 新加坡 02
+      - 🇯🇵 东京02
       - 🇸🇬 新加坡01
-      - 🇯🇵 日本中转-2
-      - 直连不能用是地区问题-1B
-      - 🇭🇰 HK | 香港 专线
+      - 🇺🇸 美国NEW01
+      - 🇮🇩 印尼
+      - 🇺🇸 美国中转-2
+      - 🇹🇼 TW | 台湾 01
+      - 🇸🇬 新加坡 1-1B
       - 🇮🇳 印度
-      - 台灣06-直連-1B
-      - 🇦🇺 澳大利亚
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇺🇸 美国 1-1A
+      - 🇭🇰 香港 1-1B
+      - 🇺🇸 US | 美国 02
+      - 🇸🇬 新加坡 2-1B
+      - 大版02
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇸🇬 新加坡NEW01优选
+      - 🇯🇵 日本中转-2
+      - 🇭🇰 HK | 香港 01
+      - 🇺🇸 美国 6-1B
+      - 🇯🇵 东京2UDP
       - 🇸🇬 新加坡02
       - 🇺🇸 美国 5-1B
-      - 🇸🇬 新加坡 3-1B
-      - 🇯🇵 日本02-直連0.2x-1A
-      - 台灣11-直連-1B
-      - 🇺🇸 US | 美国 01
-      - 🇬🇧 UK | 英国 01
-      - 台灣05-直連-1A
-      - 🇺🇸 美国 1-1B
-      - 直连不能用是地区问题-1A
-      - 台灣16-直連-1B
-      - 🇺🇸 美国 6-1A
-      - 🇸🇬 新加坡 3-1A
-      - 台灣07-直連-1B
-      - 🇹🇼 TW | 台湾 01
-      - 🇸🇬 新加坡 1-1A
-      - 🇳🇱 荷兰
-      - 🇺🇸 美国LA
-      - 大版01
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 JP | 日本 01
-      - 🇸🇬 新加坡中转-2
-      - 🇸🇬 新加坡 2-1B
-      - 🇺🇸 US | 美国 02
-      - 🇯🇵 东京02
-      - 🇯🇵 日本02-直連0.2x-1B
-      - 台灣01-直連-1B
-      - 🇸🇬 新加坡05
-      - 🇯🇵 日本1UDP
-      - 美國01-直連-0.5x-1B
-      - 台灣14-直連-1A
-      - 🇭🇰 2香港中转-2
-      - 🇺🇸 美国GA
-      - 🇭🇰 香港中转-2
-      - 🇯🇵 日本NEW01
-      - 🇺🇸 美国 6-1B
-      - 台灣15-直連-1A
-      - 台灣14-直連-1B
-      - 🇭🇰 香港 1-1B
-      - 🇰🇷 韓國01-直連0.1x-1A
-      - 🇺🇸 美国WA
-      - 台灣16-直連-1A
-      - 🇺🇸 美国 4-1B
-      - 🇬🇧 伦敦
-      - 台灣10-直連-1A
-      - 🇮🇩 印尼
-      - 台灣15-直連-1B
-      - 🇯🇵 日本01-直連0.2x-1A
-      - 🇯🇵 东京01
-      - 台灣09-直連-1A
+      - 🇺🇸 美国FL
+      - 🇯🇵 JP | 日本 专线
+      - 🇨🇦 加拿大
+      - 🇸🇬 新加坡03
+      - 🇹🇼 TW | 台湾 02
       - 🇰🇷 韩国NEW01
-      - 🇸🇬 新加坡01-直連0.2x-1B
-      - 🇸🇬 新加坡NEW01
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇭🇰 香港01-直連0.8x-1B
-      - 🇯🇵 日本01-直連0.2x-1B
+      - 🇸🇬 新加坡 1-1A
+      - 🇭🇰 香港3中转-2
+      - 🇬🇧 UK | 英国 02
+      - 🇳🇱 荷兰
+      - 🇸🇬 新加坡06
+      - 🇸🇬 新加坡04
+      - 🇺🇸 美国LL
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇹🇼 台湾中转-2
+      - 🇺🇸 美国LA
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国 6-1A
+      - 🇭🇰 2香港中转-2
+      - 🇺🇸 US | 美国 01
+      - 🇬🇧 伦敦
+      - 🇺🇸 旧金山SF
+      - 🇸🇬 新加坡 3-1A
+      - 🇧🇷 巴西NEW03优选
+      - 🇸🇬 新加坡 2-1A
+      - 🇦🇺 澳大利亚
+      - 🇭🇰 HK | 香港 02
+      - 🇯🇵 JP | 日本 01
+      - 🇺🇸 美国GA
+      - 🇧🇷 巴西NEW03
+      - 🇺🇸 美西CF
+      - 大版01
+      - 🇭🇰 香港 1-1A
+      - 🇭🇰 HK | 香港 专线
       - 🇯🇵 JP | 日本 02
       - 🇺🇸 美国 5-1A
-      - 🇸🇬 新加坡 1-1B
-      - 🇸🇬 新加坡03
-      - 🇺🇸 旧金山SF
-      - 台灣04-直連-1A
-      - 台灣02-直連-1B
-      - 🇸🇬 SG | 新加坡 02
-      - 台灣03-直連-1B
-      - 🇺🇸 美国LL
-      - 🇸🇬 新加坡 2-1A
-      - 大版02
-      - 🇩🇪 德国
-      - 🇺🇸 美国CA
-      - 🇹🇼 台湾中转-2
-      - 🇯🇵 东京2UDP
-      - 🇸🇬 新加坡04
-      - 🇸🇬 新加坡01-直連0.2x-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 台灣01-直連-1A
-      - 🇭🇰 香港01-直連0.8x-1A
-      - 🇰🇷 韓國01-直連0.1x-1B
-      - 🇺🇸 美西CF
-      - 🇺🇸 美国 1-1A
-      - 台灣13-直連-1B
-      - 美國02-直連-0.5x-1A
-      - 美國02-直連-0.5x-1B
-      - 🇺🇸 美国FL
-      - 台灣05-直連-1B
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 纽约NY
-      - 台灣12-直連-1A
-      - 🇺🇸 美国NEW01
-      - 台灣10-直連-1B
-      - 台灣08-直連-1A
+      - 🇸🇬 新加坡 3-1B
+      - 🇸🇬 SG | 新加坡 01
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡NEW01
       - 新德里
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本1UDP
+      - 🇺🇸 美国 1-1B
+      - 🇩🇪 德国
+      - 🇺🇸 美国 4-1A
+      - 🇸🇬 新加坡中转-2
+      - 🇭🇰 香港中转-2
+      - 🇺🇸 纽约NY
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 台灣02-直連-1A
-      - 台灣13-直連-1A
-      - 🇧🇷 巴西NEW03
-      - 🇭🇰 HK | 香港 02
-      - 🇹🇼 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇺🇸 美国中转-2
-      - 🇭🇰 HK | 香港 01
-      - 台灣04-直連-1B
-      - 台灣12-直連-1B
-      - 🇧🇷 巴西NEW03优选
-      - 🇯🇵 JP | 日本 专线
-      - 🇸🇬 新加坡07
-      - 台灣07-直連-1A
-      - 台灣08-直連-1B
-      - 🇨🇦 加拿大
-      - 🇸🇬 新加坡06
-      - 🇭🇰 香港 1-1A
-      - 美國01-直連-0.5x-1A
-      - 台灣09-直連-1B
-      - 台灣06-直連-1A
-      - 🇰🇿 哈萨克斯坦中转-2
-      - 🇺🇸 美国 4-1A
-      - 台灣11-直連-1A
-      - 🇸🇬 新加坡NEW01优选
-      - 台灣03-直連-1A
+      - 🇯🇵 东京01
+      - 🇺🇸 美国WA
+      - 🇬🇧 UK | 英国 01
+      - 🇺🇸 美国CA
+      - 🇺🇸 美国 4-1B
+      - 🇸🇬 SG | 新加坡 02
+      - 🇯🇵 东京02
       - 🇸🇬 新加坡01
-      - 🇯🇵 日本中转-2
-      - 直连不能用是地区问题-1B
-      - 🇭🇰 HK | 香港 专线
+      - 🇺🇸 美国NEW01
+      - 🇮🇩 印尼
+      - 🇺🇸 美国中转-2
+      - 🇹🇼 TW | 台湾 01
+      - 🇸🇬 新加坡 1-1B
       - 🇮🇳 印度
-      - 台灣06-直連-1B
-      - 🇦🇺 澳大利亚
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇺🇸 美国 1-1A
+      - 🇭🇰 香港 1-1B
+      - 🇺🇸 US | 美国 02
+      - 🇸🇬 新加坡 2-1B
+      - 大版02
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇸🇬 新加坡NEW01优选
+      - 🇯🇵 日本中转-2
+      - 🇭🇰 HK | 香港 01
+      - 🇺🇸 美国 6-1B
+      - 🇯🇵 东京2UDP
       - 🇸🇬 新加坡02
       - 🇺🇸 美国 5-1B
-      - 🇸🇬 新加坡 3-1B
-      - 🇯🇵 日本02-直連0.2x-1A
-      - 台灣11-直連-1B
-      - 🇺🇸 US | 美国 01
-      - 🇬🇧 UK | 英国 01
-      - 台灣05-直連-1A
-      - 🇺🇸 美国 1-1B
-      - 直连不能用是地区问题-1A
-      - 台灣16-直連-1B
-      - 🇺🇸 美国 6-1A
-      - 🇸🇬 新加坡 3-1A
-      - 台灣07-直連-1B
-      - 🇹🇼 TW | 台湾 01
-      - 🇸🇬 新加坡 1-1A
-      - 🇳🇱 荷兰
-      - 🇺🇸 美国LA
-      - 大版01
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 JP | 日本 01
-      - 🇸🇬 新加坡中转-2
-      - 🇸🇬 新加坡 2-1B
-      - 🇺🇸 US | 美国 02
-      - 🇯🇵 东京02
-      - 🇯🇵 日本02-直連0.2x-1B
-      - 台灣01-直連-1B
-      - 🇸🇬 新加坡05
-      - 🇯🇵 日本1UDP
-      - 美國01-直連-0.5x-1B
-      - 台灣14-直連-1A
-      - 🇭🇰 2香港中转-2
-      - 🇺🇸 美国GA
-      - 🇭🇰 香港中转-2
-      - 🇯🇵 日本NEW01
-      - 🇺🇸 美国 6-1B
-      - 台灣15-直連-1A
-      - 台灣14-直連-1B
-      - 🇭🇰 香港 1-1B
-      - 🇰🇷 韓國01-直連0.1x-1A
-      - 🇺🇸 美国WA
-      - 台灣16-直連-1A
-      - 🇺🇸 美国 4-1B
-      - 🇬🇧 伦敦
-      - 台灣10-直連-1A
-      - 🇮🇩 印尼
-      - 台灣15-直連-1B
-      - 🇯🇵 日本01-直連0.2x-1A
-      - 🇯🇵 东京01
-      - 台灣09-直連-1A
+      - 🇺🇸 美国FL
+      - 🇯🇵 JP | 日本 专线
+      - 🇨🇦 加拿大
+      - 🇸🇬 新加坡03
+      - 🇹🇼 TW | 台湾 02
       - 🇰🇷 韩国NEW01
-      - 🇸🇬 新加坡01-直連0.2x-1B
-      - 🇸🇬 新加坡NEW01
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇭🇰 香港01-直連0.8x-1B
-      - 🇯🇵 日本01-直連0.2x-1B
+      - 🇸🇬 新加坡 1-1A
+      - 🇭🇰 香港3中转-2
+      - 🇬🇧 UK | 英国 02
+      - 🇳🇱 荷兰
+      - 🇸🇬 新加坡06
+      - 🇸🇬 新加坡04
+      - 🇺🇸 美国LL
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇹🇼 台湾中转-2
+      - 🇺🇸 美国LA
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国 6-1A
+      - 🇭🇰 2香港中转-2
+      - 🇺🇸 US | 美国 01
+      - 🇬🇧 伦敦
+      - 🇺🇸 旧金山SF
+      - 🇸🇬 新加坡 3-1A
+      - 🇧🇷 巴西NEW03优选
+      - 🇸🇬 新加坡 2-1A
+      - 🇦🇺 澳大利亚
+      - 🇭🇰 HK | 香港 02
+      - 🇯🇵 JP | 日本 01
+      - 🇺🇸 美国GA
+      - 🇧🇷 巴西NEW03
+      - 🇺🇸 美西CF
+      - 大版01
+      - 🇭🇰 香港 1-1A
+      - 🇭🇰 HK | 香港 专线
       - 🇯🇵 JP | 日本 02
       - 🇺🇸 美国 5-1A
-      - 🇸🇬 新加坡 1-1B
-      - 🇸🇬 新加坡03
-      - 🇺🇸 旧金山SF
-      - 台灣04-直連-1A
-      - 台灣02-直連-1B
-      - 🇸🇬 SG | 新加坡 02
-      - 台灣03-直連-1B
-      - 🇺🇸 美国LL
-      - 🇸🇬 新加坡 2-1A
-      - 大版02
-      - 🇩🇪 德国
-      - 🇺🇸 美国CA
-      - 🇹🇼 台湾中转-2
-      - 🇯🇵 东京2UDP
-      - 🇸🇬 新加坡04
-      - 🇸🇬 新加坡01-直連0.2x-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 台灣01-直連-1A
-      - 🇭🇰 香港01-直連0.8x-1A
-      - 🇰🇷 韓國01-直連0.1x-1B
-      - 🇺🇸 美西CF
-      - 🇺🇸 美国 1-1A
-      - 台灣13-直連-1B
-      - 美國02-直連-0.5x-1A
-      - 美國02-直連-0.5x-1B
-      - 🇺🇸 美国FL
-      - 台灣05-直連-1B
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 纽约NY
-      - 台灣12-直連-1A
-      - 🇺🇸 美国NEW01
-      - 台灣10-直連-1B
-      - 台灣08-直連-1A
+      - 🇸🇬 新加坡 3-1B
+      - 🇸🇬 SG | 新加坡 01
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡NEW01
       - 新德里
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本1UDP
+      - 🇺🇸 美国 1-1B
+      - 🇩🇪 德国
+      - 🇺🇸 美国 4-1A
+      - 🇸🇬 新加坡中转-2
+      - 🇭🇰 香港中转-2
+      - 🇺🇸 纽约NY
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 台灣02-直連-1A
-      - 台灣13-直連-1A
-      - 🇧🇷 巴西NEW03
-      - 🇭🇰 HK | 香港 02
-      - 🇹🇼 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇺🇸 美国中转-2
-      - 🇭🇰 HK | 香港 01
-      - 台灣04-直連-1B
-      - 台灣12-直連-1B
-      - 🇧🇷 巴西NEW03优选
-      - 🇯🇵 JP | 日本 专线
-      - 🇸🇬 新加坡07
-      - 台灣07-直連-1A
-      - 台灣08-直連-1B
-      - 🇨🇦 加拿大
-      - 🇸🇬 新加坡06
-      - 🇭🇰 香港 1-1A
-      - 美國01-直連-0.5x-1A
-      - 台灣09-直連-1B
-      - 台灣06-直連-1A
-      - 🇰🇿 哈萨克斯坦中转-2
-      - 🇺🇸 美国 4-1A
-      - 台灣11-直連-1A
-      - 🇸🇬 新加坡NEW01优选
-      - 台灣03-直連-1A
+      - 🇯🇵 东京01
+      - 🇺🇸 美国WA
+      - 🇬🇧 UK | 英国 01
+      - 🇺🇸 美国CA
+      - 🇺🇸 美国 4-1B
+      - 🇸🇬 SG | 新加坡 02
+      - 🇯🇵 东京02
       - 🇸🇬 新加坡01
-      - 🇯🇵 日本中转-2
-      - 直连不能用是地区问题-1B
-      - 🇭🇰 HK | 香港 专线
+      - 🇺🇸 美国NEW01
+      - 🇮🇩 印尼
+      - 🇺🇸 美国中转-2
+      - 🇹🇼 TW | 台湾 01
+      - 🇸🇬 新加坡 1-1B
       - 🇮🇳 印度
-      - 台灣06-直連-1B
-      - 🇦🇺 澳大利亚
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇺🇸 美国 1-1A
+      - 🇭🇰 香港 1-1B
+      - 🇺🇸 US | 美国 02
+      - 🇸🇬 新加坡 2-1B
+      - 大版02
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇸🇬 新加坡NEW01优选
+      - 🇯🇵 日本中转-2
+      - 🇭🇰 HK | 香港 01
+      - 🇺🇸 美国 6-1B
+      - 🇯🇵 东京2UDP
       - 🇸🇬 新加坡02
       - 🇺🇸 美国 5-1B
-      - 🇸🇬 新加坡 3-1B
-      - 🇯🇵 日本02-直連0.2x-1A
-      - 台灣11-直連-1B
-      - 🇺🇸 US | 美国 01
-      - 🇬🇧 UK | 英国 01
-      - 台灣05-直連-1A
-      - 🇺🇸 美国 1-1B
-      - 直连不能用是地区问题-1A
-      - 台灣16-直連-1B
-      - 🇺🇸 美国 6-1A
-      - 🇸🇬 新加坡 3-1A
-      - 台灣07-直連-1B
-      - 🇹🇼 TW | 台湾 01
-      - 🇸🇬 新加坡 1-1A
-      - 🇳🇱 荷兰
-      - 🇺🇸 美国LA
-      - 大版01
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 JP | 日本 01
-      - 🇸🇬 新加坡中转-2
-      - 🇸🇬 新加坡 2-1B
-      - 🇺🇸 US | 美国 02
-      - 🇯🇵 东京02
-      - 🇯🇵 日本02-直連0.2x-1B
-      - 台灣01-直連-1B
-      - 🇸🇬 新加坡05
-      - 🇯🇵 日本1UDP
-      - 美國01-直連-0.5x-1B
-      - 台灣14-直連-1A
-      - 🇭🇰 2香港中转-2
-      - 🇺🇸 美国GA
-      - 🇭🇰 香港中转-2
-      - 🇯🇵 日本NEW01
-      - 🇺🇸 美国 6-1B
-      - 台灣15-直連-1A
-      - 台灣14-直連-1B
-      - 🇭🇰 香港 1-1B
-      - 🇰🇷 韓國01-直連0.1x-1A
-      - 🇺🇸 美国WA
-      - 台灣16-直連-1A
-      - 🇺🇸 美国 4-1B
-      - 🇬🇧 伦敦
-      - 台灣10-直連-1A
-      - 🇮🇩 印尼
-      - 台灣15-直連-1B
-      - 🇯🇵 日本01-直連0.2x-1A
-      - 🇯🇵 东京01
-      - 台灣09-直連-1A
+      - 🇺🇸 美国FL
+      - 🇯🇵 JP | 日本 专线
+      - 🇨🇦 加拿大
+      - 🇸🇬 新加坡03
+      - 🇹🇼 TW | 台湾 02
       - 🇰🇷 韩国NEW01
-      - 🇸🇬 新加坡01-直連0.2x-1B
-      - 🇸🇬 新加坡NEW01
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇭🇰 香港01-直連0.8x-1B
-      - 🇯🇵 日本01-直連0.2x-1B
+      - 🇸🇬 新加坡 1-1A
+      - 🇭🇰 香港3中转-2
+      - 🇬🇧 UK | 英国 02
+      - 🇳🇱 荷兰
+      - 🇸🇬 新加坡06
+      - 🇸🇬 新加坡04
+      - 🇺🇸 美国LL
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇹🇼 台湾中转-2
+      - 🇺🇸 美国LA
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国 6-1A
+      - 🇭🇰 2香港中转-2
+      - 🇺🇸 US | 美国 01
+      - 🇬🇧 伦敦
+      - 🇺🇸 旧金山SF
+      - 🇸🇬 新加坡 3-1A
+      - 🇧🇷 巴西NEW03优选
+      - 🇸🇬 新加坡 2-1A
+      - 🇦🇺 澳大利亚
+      - 🇭🇰 HK | 香港 02
+      - 🇯🇵 JP | 日本 01
+      - 🇺🇸 美国GA
+      - 🇧🇷 巴西NEW03
+      - 🇺🇸 美西CF
+      - 大版01
+      - 🇭🇰 香港 1-1A
+      - 🇭🇰 HK | 香港 专线
       - 🇯🇵 JP | 日本 02
       - 🇺🇸 美国 5-1A
-      - 🇸🇬 新加坡 1-1B
-      - 🇸🇬 新加坡03
-      - 🇺🇸 旧金山SF
-      - 台灣04-直連-1A
-      - 台灣02-直連-1B
-      - 🇸🇬 SG | 新加坡 02
-      - 台灣03-直連-1B
-      - 🇺🇸 美国LL
-      - 🇸🇬 新加坡 2-1A
-      - 大版02
-      - 🇩🇪 德国
-      - 🇺🇸 美国CA
-      - 🇹🇼 台湾中转-2
-      - 🇯🇵 东京2UDP
-      - 🇸🇬 新加坡04
-      - 🇸🇬 新加坡01-直連0.2x-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 台灣01-直連-1A
-      - 🇭🇰 香港01-直連0.8x-1A
-      - 🇰🇷 韓國01-直連0.1x-1B
-      - 🇺🇸 美西CF
-      - 🇺🇸 美国 1-1A
-      - 台灣13-直連-1B
-      - 美國02-直連-0.5x-1A
-      - 美國02-直連-0.5x-1B
-      - 🇺🇸 美国FL
-      - 台灣05-直連-1B
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 纽约NY
-      - 台灣12-直連-1A
-      - 🇺🇸 美国NEW01
-      - 台灣10-直連-1B
-      - 台灣08-直連-1A
+      - 🇸🇬 新加坡 3-1B
+      - 🇸🇬 SG | 新加坡 01
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡NEW01
       - 新德里
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本1UDP
+      - 🇺🇸 美国 1-1B
+      - 🇩🇪 德国
+      - 🇺🇸 美国 4-1A
+      - 🇸🇬 新加坡中转-2
+      - 🇭🇰 香港中转-2
+      - 🇺🇸 纽约NY
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -540,571 +348,346 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 台灣02-直連-1A
-      - 台灣13-直連-1A
-      - 🇧🇷 巴西NEW03
-      - 🇭🇰 HK | 香港 02
-      - 🇹🇼 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇺🇸 美国中转-2
-      - 🇭🇰 HK | 香港 01
-      - 台灣04-直連-1B
-      - 台灣12-直連-1B
-      - 🇧🇷 巴西NEW03优选
-      - 🇯🇵 JP | 日本 专线
-      - 🇸🇬 新加坡07
-      - 台灣07-直連-1A
-      - 台灣08-直連-1B
-      - 🇨🇦 加拿大
-      - 🇸🇬 新加坡06
-      - 🇭🇰 香港 1-1A
-      - 美國01-直連-0.5x-1A
-      - 台灣09-直連-1B
-      - 台灣06-直連-1A
-      - 🇰🇿 哈萨克斯坦中转-2
-      - 🇺🇸 美国 4-1A
-      - 台灣11-直連-1A
-      - 🇸🇬 新加坡NEW01优选
-      - 台灣03-直連-1A
+      - 🇯🇵 东京01
+      - 🇺🇸 美国WA
+      - 🇬🇧 UK | 英国 01
+      - 🇺🇸 美国CA
+      - 🇺🇸 美国 4-1B
+      - 🇸🇬 SG | 新加坡 02
+      - 🇯🇵 东京02
       - 🇸🇬 新加坡01
-      - 🇯🇵 日本中转-2
-      - 直连不能用是地区问题-1B
-      - 🇭🇰 HK | 香港 专线
+      - 🇺🇸 美国NEW01
+      - 🇮🇩 印尼
+      - 🇺🇸 美国中转-2
+      - 🇹🇼 TW | 台湾 01
+      - 🇸🇬 新加坡 1-1B
       - 🇮🇳 印度
-      - 台灣06-直連-1B
-      - 🇦🇺 澳大利亚
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇺🇸 美国 1-1A
+      - 🇭🇰 香港 1-1B
+      - 🇺🇸 US | 美国 02
+      - 🇸🇬 新加坡 2-1B
+      - 大版02
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇸🇬 新加坡NEW01优选
+      - 🇯🇵 日本中转-2
+      - 🇭🇰 HK | 香港 01
+      - 🇺🇸 美国 6-1B
+      - 🇯🇵 东京2UDP
       - 🇸🇬 新加坡02
       - 🇺🇸 美国 5-1B
-      - 🇸🇬 新加坡 3-1B
-      - 🇯🇵 日本02-直連0.2x-1A
-      - 台灣11-直連-1B
-      - 🇺🇸 US | 美国 01
-      - 🇬🇧 UK | 英国 01
-      - 台灣05-直連-1A
-      - 🇺🇸 美国 1-1B
-      - 直连不能用是地区问题-1A
-      - 台灣16-直連-1B
-      - 🇺🇸 美国 6-1A
-      - 🇸🇬 新加坡 3-1A
-      - 台灣07-直連-1B
-      - 🇹🇼 TW | 台湾 01
-      - 🇸🇬 新加坡 1-1A
-      - 🇳🇱 荷兰
-      - 🇺🇸 美国LA
-      - 大版01
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 JP | 日本 01
-      - 🇸🇬 新加坡中转-2
-      - 🇸🇬 新加坡 2-1B
-      - 🇺🇸 US | 美国 02
-      - 🇯🇵 东京02
-      - 🇯🇵 日本02-直連0.2x-1B
-      - 台灣01-直連-1B
-      - 🇸🇬 新加坡05
-      - 🇯🇵 日本1UDP
-      - 美國01-直連-0.5x-1B
-      - 台灣14-直連-1A
-      - 🇭🇰 2香港中转-2
-      - 🇺🇸 美国GA
-      - 🇭🇰 香港中转-2
-      - 🇯🇵 日本NEW01
-      - 🇺🇸 美国 6-1B
-      - 台灣15-直連-1A
-      - 台灣14-直連-1B
-      - 🇭🇰 香港 1-1B
-      - 🇰🇷 韓國01-直連0.1x-1A
-      - 🇺🇸 美国WA
-      - 台灣16-直連-1A
-      - 🇺🇸 美国 4-1B
-      - 🇬🇧 伦敦
-      - 台灣10-直連-1A
-      - 🇮🇩 印尼
-      - 台灣15-直連-1B
-      - 🇯🇵 日本01-直連0.2x-1A
-      - 🇯🇵 东京01
-      - 台灣09-直連-1A
+      - 🇺🇸 美国FL
+      - 🇯🇵 JP | 日本 专线
+      - 🇨🇦 加拿大
+      - 🇸🇬 新加坡03
+      - 🇹🇼 TW | 台湾 02
       - 🇰🇷 韩国NEW01
-      - 🇸🇬 新加坡01-直連0.2x-1B
-      - 🇸🇬 新加坡NEW01
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇭🇰 香港01-直連0.8x-1B
-      - 🇯🇵 日本01-直連0.2x-1B
+      - 🇸🇬 新加坡 1-1A
+      - 🇭🇰 香港3中转-2
+      - 🇬🇧 UK | 英国 02
+      - 🇳🇱 荷兰
+      - 🇸🇬 新加坡06
+      - 🇸🇬 新加坡04
+      - 🇺🇸 美国LL
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇹🇼 台湾中转-2
+      - 🇺🇸 美国LA
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国 6-1A
+      - 🇭🇰 2香港中转-2
+      - 🇺🇸 US | 美国 01
+      - 🇬🇧 伦敦
+      - 🇺🇸 旧金山SF
+      - 🇸🇬 新加坡 3-1A
+      - 🇧🇷 巴西NEW03优选
+      - 🇸🇬 新加坡 2-1A
+      - 🇦🇺 澳大利亚
+      - 🇭🇰 HK | 香港 02
+      - 🇯🇵 JP | 日本 01
+      - 🇺🇸 美国GA
+      - 🇧🇷 巴西NEW03
+      - 🇺🇸 美西CF
+      - 大版01
+      - 🇭🇰 香港 1-1A
+      - 🇭🇰 HK | 香港 专线
       - 🇯🇵 JP | 日本 02
       - 🇺🇸 美国 5-1A
-      - 🇸🇬 新加坡 1-1B
-      - 🇸🇬 新加坡03
-      - 🇺🇸 旧金山SF
-      - 台灣04-直連-1A
-      - 台灣02-直連-1B
-      - 🇸🇬 SG | 新加坡 02
-      - 台灣03-直連-1B
-      - 🇺🇸 美国LL
-      - 🇸🇬 新加坡 2-1A
-      - 大版02
-      - 🇩🇪 德国
-      - 🇺🇸 美国CA
-      - 🇹🇼 台湾中转-2
-      - 🇯🇵 东京2UDP
-      - 🇸🇬 新加坡04
-      - 🇸🇬 新加坡01-直連0.2x-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 台灣01-直連-1A
-      - 🇭🇰 香港01-直連0.8x-1A
-      - 🇰🇷 韓國01-直連0.1x-1B
-      - 🇺🇸 美西CF
-      - 🇺🇸 美国 1-1A
-      - 台灣13-直連-1B
-      - 美國02-直連-0.5x-1A
-      - 美國02-直連-0.5x-1B
-      - 🇺🇸 美国FL
-      - 台灣05-直連-1B
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 纽约NY
-      - 台灣12-直連-1A
-      - 🇺🇸 美国NEW01
-      - 台灣10-直連-1B
-      - 台灣08-直連-1A
+      - 🇸🇬 新加坡 3-1B
+      - 🇸🇬 SG | 新加坡 01
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡NEW01
       - 新德里
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本1UDP
+      - 🇺🇸 美国 1-1B
+      - 🇩🇪 德国
+      - 🇺🇸 美国 4-1A
+      - 🇸🇬 新加坡中转-2
+      - 🇭🇰 香港中转-2
+      - 🇺🇸 纽约NY
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 台灣02-直連-1A
-      - 台灣13-直連-1A
-      - 🇭🇰 HK | 香港 02
-      - 🇹🇼 TW | 台湾 02
-      - 🇭🇰 HK | 香港 01
-      - 台灣04-直連-1B
-      - 台灣12-直連-1B
-      - 台灣07-直連-1A
-      - 台灣08-直連-1B
-      - 🇭🇰 香港 1-1A
-      - 台灣09-直連-1B
-      - 台灣06-直連-1A
-      - 台灣11-直連-1A
-      - 台灣03-直連-1A
-      - 🇭🇰 HK | 香港 专线
-      - 台灣06-直連-1B
-      - 台灣11-直連-1B
-      - 台灣05-直連-1A
-      - 台灣16-直連-1B
-      - 台灣07-直連-1B
       - 🇹🇼 TW | 台湾 01
-      - 台灣01-直連-1B
-      - 台灣14-直連-1A
-      - 🇭🇰 2香港中转-2
-      - 🇭🇰 香港中转-2
-      - 台灣15-直連-1A
-      - 台灣14-直連-1B
       - 🇭🇰 香港 1-1B
-      - 台灣16-直連-1A
-      - 台灣10-直連-1A
-      - 台灣15-直連-1B
-      - 台灣09-直連-1A
-      - 🇭🇰 香港01-直連0.8x-1B
-      - 台灣04-直連-1A
-      - 台灣02-直連-1B
-      - 台灣03-直連-1B
+      - 🇭🇰 HK | 香港 01
+      - 🇹🇼 TW | 台湾 02
+      - 🇭🇰 香港3中转-2
       - 🇹🇼 台湾中转-2
-      - 台灣01-直連-1A
-      - 🇭🇰 香港01-直連0.8x-1A
-      - 台灣13-直連-1B
-      - 台灣05-直連-1B
-      - 台灣12-直連-1A
-      - 台灣10-直連-1B
-      - 台灣08-直連-1A
+      - 🇭🇰 2香港中转-2
+      - 🇭🇰 HK | 香港 02
+      - 🇭🇰 香港 1-1A
+      - 🇭🇰 HK | 香港 专线
+      - 🇭🇰 香港中转-2
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 台灣02-直連-1A
-      - 台灣13-直連-1A
-      - 🇧🇷 巴西NEW03
-      - 🇭🇰 HK | 香港 02
-      - 🇹🇼 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇺🇸 美国中转-2
-      - 🇭🇰 HK | 香港 01
-      - 台灣04-直連-1B
-      - 台灣12-直連-1B
-      - 🇧🇷 巴西NEW03优选
-      - 🇯🇵 JP | 日本 专线
-      - 🇸🇬 新加坡07
-      - 台灣07-直連-1A
-      - 台灣08-直連-1B
-      - 🇨🇦 加拿大
-      - 🇸🇬 新加坡06
-      - 🇭🇰 香港 1-1A
-      - 美國01-直連-0.5x-1A
-      - 台灣09-直連-1B
-      - 台灣06-直連-1A
-      - 🇰🇿 哈萨克斯坦中转-2
-      - 🇺🇸 美国 4-1A
-      - 台灣11-直連-1A
-      - 🇸🇬 新加坡NEW01优选
-      - 台灣03-直連-1A
+      - 🇯🇵 东京01
+      - 🇺🇸 美国WA
+      - 🇬🇧 UK | 英国 01
+      - 🇺🇸 美国CA
+      - 🇺🇸 美国 4-1B
+      - 🇸🇬 SG | 新加坡 02
+      - 🇯🇵 东京02
       - 🇸🇬 新加坡01
-      - 🇯🇵 日本中转-2
-      - 直连不能用是地区问题-1B
-      - 🇭🇰 HK | 香港 专线
+      - 🇺🇸 美国NEW01
+      - 🇮🇩 印尼
+      - 🇺🇸 美国中转-2
+      - 🇹🇼 TW | 台湾 01
+      - 🇸🇬 新加坡 1-1B
       - 🇮🇳 印度
-      - 台灣06-直連-1B
-      - 🇦🇺 澳大利亚
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇺🇸 美国 1-1A
+      - 🇭🇰 香港 1-1B
+      - 🇺🇸 US | 美国 02
+      - 🇸🇬 新加坡 2-1B
+      - 大版02
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇸🇬 新加坡NEW01优选
+      - 🇯🇵 日本中转-2
+      - 🇭🇰 HK | 香港 01
+      - 🇺🇸 美国 6-1B
+      - 🇯🇵 东京2UDP
       - 🇸🇬 新加坡02
       - 🇺🇸 美国 5-1B
-      - 🇸🇬 新加坡 3-1B
-      - 🇯🇵 日本02-直連0.2x-1A
-      - 台灣11-直連-1B
-      - 🇺🇸 US | 美国 01
-      - 🇬🇧 UK | 英国 01
-      - 台灣05-直連-1A
-      - 🇺🇸 美国 1-1B
-      - 直连不能用是地区问题-1A
-      - 台灣16-直連-1B
-      - 🇺🇸 美国 6-1A
-      - 🇸🇬 新加坡 3-1A
-      - 台灣07-直連-1B
-      - 🇹🇼 TW | 台湾 01
-      - 🇸🇬 新加坡 1-1A
-      - 🇳🇱 荷兰
-      - 🇺🇸 美国LA
-      - 大版01
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 JP | 日本 01
-      - 🇸🇬 新加坡中转-2
-      - 🇸🇬 新加坡 2-1B
-      - 🇺🇸 US | 美国 02
-      - 🇯🇵 东京02
-      - 🇯🇵 日本02-直連0.2x-1B
-      - 台灣01-直連-1B
-      - 🇸🇬 新加坡05
-      - 🇯🇵 日本1UDP
-      - 美國01-直連-0.5x-1B
-      - 台灣14-直連-1A
-      - 🇭🇰 2香港中转-2
-      - 🇺🇸 美国GA
-      - 🇭🇰 香港中转-2
-      - 🇯🇵 日本NEW01
-      - 🇺🇸 美国 6-1B
-      - 台灣15-直連-1A
-      - 台灣14-直連-1B
-      - 🇭🇰 香港 1-1B
-      - 🇰🇷 韓國01-直連0.1x-1A
-      - 🇺🇸 美国WA
-      - 台灣16-直連-1A
-      - 🇺🇸 美国 4-1B
-      - 🇬🇧 伦敦
-      - 台灣10-直連-1A
-      - 🇮🇩 印尼
-      - 台灣15-直連-1B
-      - 🇯🇵 日本01-直連0.2x-1A
-      - 🇯🇵 东京01
-      - 台灣09-直連-1A
+      - 🇺🇸 美国FL
+      - 🇯🇵 JP | 日本 专线
+      - 🇨🇦 加拿大
+      - 🇸🇬 新加坡03
+      - 🇹🇼 TW | 台湾 02
       - 🇰🇷 韩国NEW01
-      - 🇸🇬 新加坡01-直連0.2x-1B
-      - 🇸🇬 新加坡NEW01
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇭🇰 香港01-直連0.8x-1B
-      - 🇯🇵 日本01-直連0.2x-1B
+      - 🇸🇬 新加坡 1-1A
+      - 🇭🇰 香港3中转-2
+      - 🇬🇧 UK | 英国 02
+      - 🇳🇱 荷兰
+      - 🇸🇬 新加坡06
+      - 🇸🇬 新加坡04
+      - 🇺🇸 美国LL
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇹🇼 台湾中转-2
+      - 🇺🇸 美国LA
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国 6-1A
+      - 🇭🇰 2香港中转-2
+      - 🇺🇸 US | 美国 01
+      - 🇬🇧 伦敦
+      - 🇺🇸 旧金山SF
+      - 🇸🇬 新加坡 3-1A
+      - 🇧🇷 巴西NEW03优选
+      - 🇸🇬 新加坡 2-1A
+      - 🇦🇺 澳大利亚
+      - 🇭🇰 HK | 香港 02
+      - 🇯🇵 JP | 日本 01
+      - 🇺🇸 美国GA
+      - 🇧🇷 巴西NEW03
+      - 🇺🇸 美西CF
+      - 大版01
+      - 🇭🇰 香港 1-1A
+      - 🇭🇰 HK | 香港 专线
       - 🇯🇵 JP | 日本 02
       - 🇺🇸 美国 5-1A
-      - 🇸🇬 新加坡 1-1B
-      - 🇸🇬 新加坡03
-      - 🇺🇸 旧金山SF
-      - 台灣04-直連-1A
-      - 台灣02-直連-1B
-      - 🇸🇬 SG | 新加坡 02
-      - 台灣03-直連-1B
-      - 🇺🇸 美国LL
-      - 🇸🇬 新加坡 2-1A
-      - 大版02
-      - 🇩🇪 德国
-      - 🇺🇸 美国CA
-      - 🇹🇼 台湾中转-2
-      - 🇯🇵 东京2UDP
-      - 🇸🇬 新加坡04
-      - 🇸🇬 新加坡01-直連0.2x-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 台灣01-直連-1A
-      - 🇭🇰 香港01-直連0.8x-1A
-      - 🇰🇷 韓國01-直連0.1x-1B
-      - 🇺🇸 美西CF
-      - 🇺🇸 美国 1-1A
-      - 台灣13-直連-1B
-      - 美國02-直連-0.5x-1A
-      - 美國02-直連-0.5x-1B
-      - 🇺🇸 美国FL
-      - 台灣05-直連-1B
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 纽约NY
-      - 台灣12-直連-1A
-      - 🇺🇸 美国NEW01
-      - 台灣10-直連-1B
-      - 台灣08-直連-1A
+      - 🇸🇬 新加坡 3-1B
+      - 🇸🇬 SG | 新加坡 01
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡NEW01
       - 新德里
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本1UDP
+      - 🇺🇸 美国 1-1B
+      - 🇩🇪 德国
+      - 🇺🇸 美国 4-1A
+      - 🇸🇬 新加坡中转-2
+      - 🇭🇰 香港中转-2
+      - 🇺🇸 纽约NY
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 台灣02-直連-1A
-      - 台灣13-直連-1A
-      - 🇧🇷 巴西NEW03
-      - 🇭🇰 HK | 香港 02
-      - 🇹🇼 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇺🇸 美国中转-2
-      - 🇭🇰 HK | 香港 01
-      - 台灣04-直連-1B
-      - 台灣12-直連-1B
-      - 🇧🇷 巴西NEW03优选
-      - 🇯🇵 JP | 日本 专线
-      - 🇸🇬 新加坡07
-      - 台灣07-直連-1A
-      - 台灣08-直連-1B
-      - 🇨🇦 加拿大
-      - 🇸🇬 新加坡06
-      - 🇭🇰 香港 1-1A
-      - 美國01-直連-0.5x-1A
-      - 台灣09-直連-1B
-      - 台灣06-直連-1A
-      - 🇰🇿 哈萨克斯坦中转-2
-      - 🇺🇸 美国 4-1A
-      - 台灣11-直連-1A
-      - 🇸🇬 新加坡NEW01优选
-      - 台灣03-直連-1A
+      - 🇯🇵 东京01
+      - 🇺🇸 美国WA
+      - 🇬🇧 UK | 英国 01
+      - 🇺🇸 美国CA
+      - 🇺🇸 美国 4-1B
+      - 🇸🇬 SG | 新加坡 02
+      - 🇯🇵 东京02
       - 🇸🇬 新加坡01
-      - 🇯🇵 日本中转-2
-      - 直连不能用是地区问题-1B
-      - 🇭🇰 HK | 香港 专线
+      - 🇺🇸 美国NEW01
+      - 🇮🇩 印尼
+      - 🇺🇸 美国中转-2
+      - 🇹🇼 TW | 台湾 01
+      - 🇸🇬 新加坡 1-1B
       - 🇮🇳 印度
-      - 台灣06-直連-1B
-      - 🇦🇺 澳大利亚
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇺🇸 美国 1-1A
+      - 🇭🇰 香港 1-1B
+      - 🇺🇸 US | 美国 02
+      - 🇸🇬 新加坡 2-1B
+      - 大版02
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇸🇬 新加坡NEW01优选
+      - 🇯🇵 日本中转-2
+      - 🇭🇰 HK | 香港 01
+      - 🇺🇸 美国 6-1B
+      - 🇯🇵 东京2UDP
       - 🇸🇬 新加坡02
       - 🇺🇸 美国 5-1B
-      - 🇸🇬 新加坡 3-1B
-      - 🇯🇵 日本02-直連0.2x-1A
-      - 台灣11-直連-1B
-      - 🇺🇸 US | 美国 01
-      - 🇬🇧 UK | 英国 01
-      - 台灣05-直連-1A
-      - 🇺🇸 美国 1-1B
-      - 直连不能用是地区问题-1A
-      - 台灣16-直連-1B
-      - 🇺🇸 美国 6-1A
-      - 🇸🇬 新加坡 3-1A
-      - 台灣07-直連-1B
-      - 🇹🇼 TW | 台湾 01
-      - 🇸🇬 新加坡 1-1A
-      - 🇳🇱 荷兰
-      - 🇺🇸 美国LA
-      - 大版01
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 JP | 日本 01
-      - 🇸🇬 新加坡中转-2
-      - 🇸🇬 新加坡 2-1B
-      - 🇺🇸 US | 美国 02
-      - 🇯🇵 东京02
-      - 🇯🇵 日本02-直連0.2x-1B
-      - 台灣01-直連-1B
-      - 🇸🇬 新加坡05
-      - 🇯🇵 日本1UDP
-      - 美國01-直連-0.5x-1B
-      - 台灣14-直連-1A
-      - 🇭🇰 2香港中转-2
-      - 🇺🇸 美国GA
-      - 🇭🇰 香港中转-2
-      - 🇯🇵 日本NEW01
-      - 🇺🇸 美国 6-1B
-      - 台灣15-直連-1A
-      - 台灣14-直連-1B
-      - 🇭🇰 香港 1-1B
-      - 🇰🇷 韓國01-直連0.1x-1A
-      - 🇺🇸 美国WA
-      - 台灣16-直連-1A
-      - 🇺🇸 美国 4-1B
-      - 🇬🇧 伦敦
-      - 台灣10-直連-1A
-      - 🇮🇩 印尼
-      - 台灣15-直連-1B
-      - 🇯🇵 日本01-直連0.2x-1A
-      - 🇯🇵 东京01
-      - 台灣09-直連-1A
+      - 🇺🇸 美国FL
+      - 🇯🇵 JP | 日本 专线
+      - 🇨🇦 加拿大
+      - 🇸🇬 新加坡03
+      - 🇹🇼 TW | 台湾 02
       - 🇰🇷 韩国NEW01
-      - 🇸🇬 新加坡01-直連0.2x-1B
-      - 🇸🇬 新加坡NEW01
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇭🇰 香港01-直連0.8x-1B
-      - 🇯🇵 日本01-直連0.2x-1B
+      - 🇸🇬 新加坡 1-1A
+      - 🇭🇰 香港3中转-2
+      - 🇬🇧 UK | 英国 02
+      - 🇳🇱 荷兰
+      - 🇸🇬 新加坡06
+      - 🇸🇬 新加坡04
+      - 🇺🇸 美国LL
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇹🇼 台湾中转-2
+      - 🇺🇸 美国LA
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国 6-1A
+      - 🇭🇰 2香港中转-2
+      - 🇺🇸 US | 美国 01
+      - 🇬🇧 伦敦
+      - 🇺🇸 旧金山SF
+      - 🇸🇬 新加坡 3-1A
+      - 🇧🇷 巴西NEW03优选
+      - 🇸🇬 新加坡 2-1A
+      - 🇦🇺 澳大利亚
+      - 🇭🇰 HK | 香港 02
+      - 🇯🇵 JP | 日本 01
+      - 🇺🇸 美国GA
+      - 🇧🇷 巴西NEW03
+      - 🇺🇸 美西CF
+      - 大版01
+      - 🇭🇰 香港 1-1A
+      - 🇭🇰 HK | 香港 专线
       - 🇯🇵 JP | 日本 02
       - 🇺🇸 美国 5-1A
-      - 🇸🇬 新加坡 1-1B
-      - 🇸🇬 新加坡03
-      - 🇺🇸 旧金山SF
-      - 台灣04-直連-1A
-      - 台灣02-直連-1B
-      - 🇸🇬 SG | 新加坡 02
-      - 台灣03-直連-1B
-      - 🇺🇸 美国LL
-      - 🇸🇬 新加坡 2-1A
-      - 大版02
-      - 🇩🇪 德国
-      - 🇺🇸 美国CA
-      - 🇹🇼 台湾中转-2
-      - 🇯🇵 东京2UDP
-      - 🇸🇬 新加坡04
-      - 🇸🇬 新加坡01-直連0.2x-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 台灣01-直連-1A
-      - 🇭🇰 香港01-直連0.8x-1A
-      - 🇰🇷 韓國01-直連0.1x-1B
-      - 🇺🇸 美西CF
-      - 🇺🇸 美国 1-1A
-      - 台灣13-直連-1B
-      - 美國02-直連-0.5x-1A
-      - 美國02-直連-0.5x-1B
-      - 🇺🇸 美国FL
-      - 台灣05-直連-1B
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 纽约NY
-      - 台灣12-直連-1A
-      - 🇺🇸 美国NEW01
-      - 台灣10-直連-1B
-      - 台灣08-直連-1A
+      - 🇸🇬 新加坡 3-1B
+      - 🇸🇬 SG | 新加坡 01
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡NEW01
       - 新德里
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本1UDP
+      - 🇺🇸 美国 1-1B
+      - 🇩🇪 德国
+      - 🇺🇸 美国 4-1A
+      - 🇸🇬 新加坡中转-2
+      - 🇭🇰 香港中转-2
+      - 🇺🇸 纽约NY
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 台灣02-直連-1A
-      - 台灣13-直連-1A
-      - 🇧🇷 巴西NEW03
-      - 🇭🇰 HK | 香港 02
-      - 🇹🇼 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇺🇸 美国中转-2
-      - 🇭🇰 HK | 香港 01
-      - 台灣04-直連-1B
-      - 台灣12-直連-1B
-      - 🇧🇷 巴西NEW03优选
-      - 🇯🇵 JP | 日本 专线
-      - 🇸🇬 新加坡07
-      - 台灣07-直連-1A
-      - 台灣08-直連-1B
-      - 🇨🇦 加拿大
-      - 🇸🇬 新加坡06
-      - 🇭🇰 香港 1-1A
-      - 美國01-直連-0.5x-1A
-      - 台灣09-直連-1B
-      - 台灣06-直連-1A
-      - 🇰🇿 哈萨克斯坦中转-2
-      - 🇺🇸 美国 4-1A
-      - 台灣11-直連-1A
-      - 🇸🇬 新加坡NEW01优选
-      - 台灣03-直連-1A
+      - 🇯🇵 东京01
+      - 🇺🇸 美国WA
+      - 🇬🇧 UK | 英国 01
+      - 🇺🇸 美国CA
+      - 🇺🇸 美国 4-1B
+      - 🇸🇬 SG | 新加坡 02
+      - 🇯🇵 东京02
       - 🇸🇬 新加坡01
-      - 🇯🇵 日本中转-2
-      - 直连不能用是地区问题-1B
-      - 🇭🇰 HK | 香港 专线
+      - 🇺🇸 美国NEW01
+      - 🇮🇩 印尼
+      - 🇺🇸 美国中转-2
+      - 🇹🇼 TW | 台湾 01
+      - 🇸🇬 新加坡 1-1B
       - 🇮🇳 印度
-      - 台灣06-直連-1B
-      - 🇦🇺 澳大利亚
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇺🇸 美国 1-1A
+      - 🇭🇰 香港 1-1B
+      - 🇺🇸 US | 美国 02
+      - 🇸🇬 新加坡 2-1B
+      - 大版02
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇸🇬 新加坡NEW01优选
+      - 🇯🇵 日本中转-2
+      - 🇭🇰 HK | 香港 01
+      - 🇺🇸 美国 6-1B
+      - 🇯🇵 东京2UDP
       - 🇸🇬 新加坡02
       - 🇺🇸 美国 5-1B
-      - 🇸🇬 新加坡 3-1B
-      - 🇯🇵 日本02-直連0.2x-1A
-      - 台灣11-直連-1B
-      - 🇺🇸 US | 美国 01
-      - 🇬🇧 UK | 英国 01
-      - 台灣05-直連-1A
-      - 🇺🇸 美国 1-1B
-      - 直连不能用是地区问题-1A
-      - 台灣16-直連-1B
-      - 🇺🇸 美国 6-1A
-      - 🇸🇬 新加坡 3-1A
-      - 台灣07-直連-1B
-      - 🇹🇼 TW | 台湾 01
-      - 🇸🇬 新加坡 1-1A
-      - 🇳🇱 荷兰
-      - 🇺🇸 美国LA
-      - 大版01
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 JP | 日本 01
-      - 🇸🇬 新加坡中转-2
-      - 🇸🇬 新加坡 2-1B
-      - 🇺🇸 US | 美国 02
-      - 🇯🇵 东京02
-      - 🇯🇵 日本02-直連0.2x-1B
-      - 台灣01-直連-1B
-      - 🇸🇬 新加坡05
-      - 🇯🇵 日本1UDP
-      - 美國01-直連-0.5x-1B
-      - 台灣14-直連-1A
-      - 🇭🇰 2香港中转-2
-      - 🇺🇸 美国GA
-      - 🇭🇰 香港中转-2
-      - 🇯🇵 日本NEW01
-      - 🇺🇸 美国 6-1B
-      - 台灣15-直連-1A
-      - 台灣14-直連-1B
-      - 🇭🇰 香港 1-1B
-      - 🇰🇷 韓國01-直連0.1x-1A
-      - 🇺🇸 美国WA
-      - 台灣16-直連-1A
-      - 🇺🇸 美国 4-1B
-      - 🇬🇧 伦敦
-      - 台灣10-直連-1A
-      - 🇮🇩 印尼
-      - 台灣15-直連-1B
-      - 🇯🇵 日本01-直連0.2x-1A
-      - 🇯🇵 东京01
-      - 台灣09-直連-1A
+      - 🇺🇸 美国FL
+      - 🇯🇵 JP | 日本 专线
+      - 🇨🇦 加拿大
+      - 🇸🇬 新加坡03
+      - 🇹🇼 TW | 台湾 02
       - 🇰🇷 韩国NEW01
-      - 🇸🇬 新加坡01-直連0.2x-1B
-      - 🇸🇬 新加坡NEW01
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇭🇰 香港01-直連0.8x-1B
-      - 🇯🇵 日本01-直連0.2x-1B
+      - 🇸🇬 新加坡 1-1A
+      - 🇭🇰 香港3中转-2
+      - 🇬🇧 UK | 英国 02
+      - 🇳🇱 荷兰
+      - 🇸🇬 新加坡06
+      - 🇸🇬 新加坡04
+      - 🇺🇸 美国LL
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇹🇼 台湾中转-2
+      - 🇺🇸 美国LA
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国 6-1A
+      - 🇭🇰 2香港中转-2
+      - 🇺🇸 US | 美国 01
+      - 🇬🇧 伦敦
+      - 🇺🇸 旧金山SF
+      - 🇸🇬 新加坡 3-1A
+      - 🇧🇷 巴西NEW03优选
+      - 🇸🇬 新加坡 2-1A
+      - 🇦🇺 澳大利亚
+      - 🇭🇰 HK | 香港 02
+      - 🇯🇵 JP | 日本 01
+      - 🇺🇸 美国GA
+      - 🇧🇷 巴西NEW03
+      - 🇺🇸 美西CF
+      - 大版01
+      - 🇭🇰 香港 1-1A
+      - 🇭🇰 HK | 香港 专线
       - 🇯🇵 JP | 日本 02
       - 🇺🇸 美国 5-1A
-      - 🇸🇬 新加坡 1-1B
-      - 🇸🇬 新加坡03
-      - 🇺🇸 旧金山SF
-      - 台灣04-直連-1A
-      - 台灣02-直連-1B
-      - 🇸🇬 SG | 新加坡 02
-      - 台灣03-直連-1B
-      - 🇺🇸 美国LL
-      - 🇸🇬 新加坡 2-1A
-      - 大版02
-      - 🇩🇪 德国
-      - 🇺🇸 美国CA
-      - 🇹🇼 台湾中转-2
-      - 🇯🇵 东京2UDP
-      - 🇸🇬 新加坡04
-      - 🇸🇬 新加坡01-直連0.2x-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 台灣01-直連-1A
-      - 🇭🇰 香港01-直連0.8x-1A
-      - 🇰🇷 韓國01-直連0.1x-1B
-      - 🇺🇸 美西CF
-      - 🇺🇸 美国 1-1A
-      - 台灣13-直連-1B
-      - 美國02-直連-0.5x-1A
-      - 美國02-直連-0.5x-1B
-      - 🇺🇸 美国FL
-      - 台灣05-直連-1B
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 纽约NY
-      - 台灣12-直連-1A
-      - 🇺🇸 美国NEW01
-      - 台灣10-直連-1B
-      - 台灣08-直連-1A
+      - 🇸🇬 新加坡 3-1B
+      - 🇸🇬 SG | 新加坡 01
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡NEW01
       - 新德里
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本1UDP
+      - 🇺🇸 美国 1-1B
+      - 🇩🇪 德国
+      - 🇺🇸 美国 4-1A
+      - 🇸🇬 新加坡中转-2
+      - 🇭🇰 香港中转-2
+      - 🇺🇸 纽约NY
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1120,131 +703,83 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 台灣02-直連-1A
-      - 台灣13-直連-1A
-      - 🇧🇷 巴西NEW03
-      - 🇭🇰 HK | 香港 02
-      - 🇹🇼 TW | 台湾 02
-      - 🇸🇬 SG | 新加坡 01
-      - 🇺🇸 美国中转-2
-      - 🇭🇰 HK | 香港 01
-      - 台灣04-直連-1B
-      - 台灣12-直連-1B
-      - 🇧🇷 巴西NEW03优选
-      - 🇯🇵 JP | 日本 专线
-      - 🇸🇬 新加坡07
-      - 台灣07-直連-1A
-      - 台灣08-直連-1B
-      - 🇨🇦 加拿大
-      - 🇸🇬 新加坡06
-      - 🇭🇰 香港 1-1A
-      - 美國01-直連-0.5x-1A
-      - 台灣09-直連-1B
-      - 台灣06-直連-1A
-      - 🇰🇿 哈萨克斯坦中转-2
-      - 🇺🇸 美国 4-1A
-      - 台灣11-直連-1A
-      - 🇸🇬 新加坡NEW01优选
-      - 台灣03-直連-1A
+      - 🇯🇵 东京01
+      - 🇺🇸 美国WA
+      - 🇬🇧 UK | 英国 01
+      - 🇺🇸 美国CA
+      - 🇺🇸 美国 4-1B
+      - 🇸🇬 SG | 新加坡 02
+      - 🇯🇵 东京02
       - 🇸🇬 新加坡01
-      - 🇯🇵 日本中转-2
-      - 直连不能用是地区问题-1B
-      - 🇭🇰 HK | 香港 专线
+      - 🇺🇸 美国NEW01
+      - 🇮🇩 印尼
+      - 🇺🇸 美国中转-2
+      - 🇹🇼 TW | 台湾 01
+      - 🇸🇬 新加坡 1-1B
       - 🇮🇳 印度
-      - 台灣06-直連-1B
-      - 🇦🇺 澳大利亚
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇺🇸 美国 1-1A
+      - 🇭🇰 香港 1-1B
+      - 🇺🇸 US | 美国 02
+      - 🇸🇬 新加坡 2-1B
+      - 大版02
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇸🇬 新加坡NEW01优选
+      - 🇯🇵 日本中转-2
+      - 🇭🇰 HK | 香港 01
+      - 🇺🇸 美国 6-1B
+      - 🇯🇵 东京2UDP
       - 🇸🇬 新加坡02
       - 🇺🇸 美国 5-1B
-      - 🇸🇬 新加坡 3-1B
-      - 🇯🇵 日本02-直連0.2x-1A
-      - 台灣11-直連-1B
-      - 🇺🇸 US | 美国 01
-      - 🇬🇧 UK | 英国 01
-      - 台灣05-直連-1A
-      - 🇺🇸 美国 1-1B
-      - 直连不能用是地区问题-1A
-      - 台灣16-直連-1B
-      - 🇺🇸 美国 6-1A
-      - 🇸🇬 新加坡 3-1A
-      - 台灣07-直連-1B
-      - 🇹🇼 TW | 台湾 01
-      - 🇸🇬 新加坡 1-1A
-      - 🇳🇱 荷兰
-      - 🇺🇸 美国LA
-      - 大版01
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 JP | 日本 01
-      - 🇸🇬 新加坡中转-2
-      - 🇸🇬 新加坡 2-1B
-      - 🇺🇸 US | 美国 02
-      - 🇯🇵 东京02
-      - 🇯🇵 日本02-直連0.2x-1B
-      - 台灣01-直連-1B
-      - 🇸🇬 新加坡05
-      - 🇯🇵 日本1UDP
-      - 美國01-直連-0.5x-1B
-      - 台灣14-直連-1A
-      - 🇭🇰 2香港中转-2
-      - 🇺🇸 美国GA
-      - 🇭🇰 香港中转-2
-      - 🇯🇵 日本NEW01
-      - 🇺🇸 美国 6-1B
-      - 台灣15-直連-1A
-      - 台灣14-直連-1B
-      - 🇭🇰 香港 1-1B
-      - 🇰🇷 韓國01-直連0.1x-1A
-      - 🇺🇸 美国WA
-      - 台灣16-直連-1A
-      - 🇺🇸 美国 4-1B
-      - 🇬🇧 伦敦
-      - 台灣10-直連-1A
-      - 🇮🇩 印尼
-      - 台灣15-直連-1B
-      - 🇯🇵 日本01-直連0.2x-1A
-      - 🇯🇵 东京01
-      - 台灣09-直連-1A
+      - 🇺🇸 美国FL
+      - 🇯🇵 JP | 日本 专线
+      - 🇨🇦 加拿大
+      - 🇸🇬 新加坡03
+      - 🇹🇼 TW | 台湾 02
       - 🇰🇷 韩国NEW01
-      - 🇸🇬 新加坡01-直連0.2x-1B
-      - 🇸🇬 新加坡NEW01
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇭🇰 香港01-直連0.8x-1B
-      - 🇯🇵 日本01-直連0.2x-1B
+      - 🇸🇬 新加坡 1-1A
+      - 🇭🇰 香港3中转-2
+      - 🇬🇧 UK | 英国 02
+      - 🇳🇱 荷兰
+      - 🇸🇬 新加坡06
+      - 🇸🇬 新加坡04
+      - 🇺🇸 美国LL
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇹🇼 台湾中转-2
+      - 🇺🇸 美国LA
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国 6-1A
+      - 🇭🇰 2香港中转-2
+      - 🇺🇸 US | 美国 01
+      - 🇬🇧 伦敦
+      - 🇺🇸 旧金山SF
+      - 🇸🇬 新加坡 3-1A
+      - 🇧🇷 巴西NEW03优选
+      - 🇸🇬 新加坡 2-1A
+      - 🇦🇺 澳大利亚
+      - 🇭🇰 HK | 香港 02
+      - 🇯🇵 JP | 日本 01
+      - 🇺🇸 美国GA
+      - 🇧🇷 巴西NEW03
+      - 🇺🇸 美西CF
+      - 大版01
+      - 🇭🇰 香港 1-1A
+      - 🇭🇰 HK | 香港 专线
       - 🇯🇵 JP | 日本 02
       - 🇺🇸 美国 5-1A
-      - 🇸🇬 新加坡 1-1B
-      - 🇸🇬 新加坡03
-      - 🇺🇸 旧金山SF
-      - 台灣04-直連-1A
-      - 台灣02-直連-1B
-      - 🇸🇬 SG | 新加坡 02
-      - 台灣03-直連-1B
-      - 🇺🇸 美国LL
-      - 🇸🇬 新加坡 2-1A
-      - 大版02
-      - 🇩🇪 德国
-      - 🇺🇸 美国CA
-      - 🇹🇼 台湾中转-2
-      - 🇯🇵 东京2UDP
-      - 🇸🇬 新加坡04
-      - 🇸🇬 新加坡01-直連0.2x-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 台灣01-直連-1A
-      - 🇭🇰 香港01-直連0.8x-1A
-      - 🇰🇷 韓國01-直連0.1x-1B
-      - 🇺🇸 美西CF
-      - 🇺🇸 美国 1-1A
-      - 台灣13-直連-1B
-      - 美國02-直連-0.5x-1A
-      - 美國02-直連-0.5x-1B
-      - 🇺🇸 美国FL
-      - 台灣05-直連-1B
-      - 🇬🇧 UK | 英国 02
-      - 🇺🇸 纽约NY
-      - 台灣12-直連-1A
-      - 🇺🇸 美国NEW01
-      - 台灣10-直連-1B
-      - 台灣08-直連-1A
+      - 🇸🇬 新加坡 3-1B
+      - 🇸🇬 SG | 新加坡 01
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡NEW01
       - 新德里
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本1UDP
+      - 🇺🇸 美国 1-1B
+      - 🇩🇪 德国
+      - 🇺🇸 美国 4-1A
+      - 🇸🇬 新加坡中转-2
+      - 🇭🇰 香港中转-2
+      - 🇺🇸 纽约NY
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
