@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-08-17 12:13:55
+# 创建时间：2024-08-17 18:38:57
 # 使用模版：ACL4SSR_Mini.ini
 # 节点数量：990
 # 节点类型：ss, vmess, trojan
@@ -1079,7 +1079,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 🔯 故障转移
+      - ♻️ 自动选择
       - DIRECT
       - 加拿大-864.1KB/s
       - 德国-123.2KB/s
@@ -2071,11 +2071,13 @@ proxy-groups:
       - 美国-4.91MB/s_2
       - 美国-224.8KB/s
       - 荷兰-222.0KB/s
-  - name: 🔯 故障转移
-    type: fallback
+  - name: ♻️ 自动选择
+    type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
     tolerance: 1
+    max-failed-times: 2
+    lazy: true 
     proxies:
       - 加拿大-864.1KB/s
       - 德国-123.2KB/s
@@ -3067,13 +3069,12 @@ proxy-groups:
       - 美国-4.91MB/s_2
       - 美国-224.8KB/s
       - 荷兰-222.0KB/s
-    strategy: latency
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - 🔯 故障转移
+      - ♻️ 自动选择
   - name: 🛑 全球拦截
     type: select
     proxies:
@@ -3084,7 +3085,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🔯 故障转移
+      - ♻️ 自动选择
       - 加拿大-864.1KB/s
       - 德国-123.2KB/s
       - 德国-199.6KB/s
