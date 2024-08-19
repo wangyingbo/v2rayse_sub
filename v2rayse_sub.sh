@@ -82,7 +82,6 @@ cd "$target_dir" || exit
 top_folder_name="top_size"
 top_folder_path="$temp_dir/$target_dir/${top_folder_name}"
 mkdir -p $top_folder_path
-log_file="${top_folder_path}/v2rayse_sub_log.txt"
 
 echo "\n"
 echo "当前路径: $PWD"
@@ -124,8 +123,8 @@ done
 # 输出结果
 echo "前 5 个文件大小最大的 .yaml 文件已复制到缓存文件夹的 ${top_folder_name} 子文件夹中，并重命名为 yb_v2rayse_sub 加序号。"
 
-cp ${top_folder_path}/${sub_file_name} $__ybpwd__/${top_folder_path}/${sub_file_name}
 cp -r $top_folder_path $__ybpwd__
+cp ${top_folder_path}/${sub_file_name} $__ybpwd__/${top_folder_name}/${sub_file_name}
 
 echo "\n"
 
@@ -134,6 +133,8 @@ echo "\n"
 
 # 回到工作目录
 cd $__ybpwd__
+
+log_file="${top_folder_name}/v2rayse_sub_log.txt"
 
 # log
 if [ -e $log_file ]; then
