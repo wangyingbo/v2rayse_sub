@@ -7,5 +7,8 @@
 ./wzdnzd_aggregator.sh -a https://gist.github.com/zoecsoulkey/4fb494052c2398bdbd36df8d20fb600e -f zoecsoulkey_sub -l zoecsoulkey_sub/zoecsoulkey_log.txt
 
 # 转换base64订阅地址
-./convert_base64_url_to_sub.sh -a https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/mix -f iboxz_free_v2ray_collector -l iboxz_free_v2ray_collector/iboxz_free_v2ray_collector_log.txt
-./convert_base64_url_to_sub.sh -a https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/trojan -f iboxz_free_v2ray_collector_trojan -l iboxz_free_v2ray_collector_trojan/iboxz_free_v2ray_collector_trojan_log.txt
+./convert_base64_url_to_sub.sh -a https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/mix -f iboxz_free_v2ray_collector/mix -l iboxz_free_v2ray_collector/mix/iboxz_free_v2ray_collector_mix_log.txt
+./convert_base64_url_to_sub.sh -a https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/trojan -f iboxz_free_v2ray_collector/trojan -l iboxz_free_v2ray_collector/trojan/iboxz_free_v2ray_collector_trojan_log.txt
+
+./convert_base64_url_to_sub.sh -a https://raw.githubusercontent.com/itsyebekhe/HiN-VPN/main/subscription/base64/mix -f itsyebekhe_HiN_VPN/mix -l itsyebekhe_HiN_VPN/mix/itsyebekhe_HiN_VPN_mix_log.txt
+./convert_base64_url_to_sub.sh -a https://raw.githubusercontent.com/itsyebekhe/HiN-VPN/main/subscription/base64/trojan -f itsyebekhe_HiN_VPN/trojan -l itsyebekhe_HiN_VPN/trojan/itsyebekhe_HiN_VPN_trojan_log.txt
