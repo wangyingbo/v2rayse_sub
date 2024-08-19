@@ -21,6 +21,7 @@ month=$(date +"%-m")
 # 获取当前小时（24小时制）
 current_hour=$(date +"%H")
 
+mkdir -p $tglaoshiji_foler
 
 # 检测操作系统类型
 OS_TYPE=$(uname)
