@@ -124,7 +124,7 @@ done
 # 输出结果
 echo "前 5 个文件大小最大的 .yaml 文件已复制到缓存文件夹的 ${top_folder_name} 子文件夹中，并重命名为 yb_v2rayse_sub 加序号。"
 
-cp $sub_file_name $__ybpwd__/$sub_file_name
+cp ${top_folder_path}/${sub_file_name} $__ybpwd__/${top_folder_path}/${sub_file_name}
 cp -r $top_folder_path $__ybpwd__
 
 echo "\n"
