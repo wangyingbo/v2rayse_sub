@@ -103,7 +103,7 @@ fi
 echo "最新的 .yaml 文件是：$latest_file"
 echo "\n"
 
-cat $latest_file > ${sub_file_name}
+cat $latest_file > ${top_folder_path}/${sub_file_name}
 
 if [ -e $sub_file_name ]; then
     echo "生成订阅配置文件：${sub_file_name}"
