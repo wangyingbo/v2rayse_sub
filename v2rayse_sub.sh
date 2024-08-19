@@ -13,7 +13,6 @@ yesterday=$today
 current_date=$(date +%Y%m%d)
 current_time=$(date +"Today is %A, %B %d, %Y %H:%M:%S")
 sub_file_name='yb_v2rayse_sub.yaml'
-log_file='v2rayse_sub_log.txt'
 __ybpwd__=$PWD
 OS_TYPE=$(uname)
 
@@ -83,6 +82,7 @@ cd "$target_dir" || exit
 top_folder_name="top_size"
 top_folder_path="$temp_dir/$target_dir/${top_folder_name}"
 mkdir -p $top_folder_path
+log_file="${top_folder_path}/v2rayse_sub_log.txt"
 
 echo "\n"
 echo "当前路径: $PWD"
