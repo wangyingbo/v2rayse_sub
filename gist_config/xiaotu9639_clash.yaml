@@ -5,63 +5,959 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 美国 6, server: m2-us3.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us3.m2network.icu}}, udp: true}
-  - {name: 新加坡 2, server: m2-sg2.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg2.m2network.icu}}, udp: true}
-  - {name: 新加坡 1, server: m2-sg1.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg1.m2network.icu}}, udp: true}
+  - {name: 日本|T05, server: 59lcrjxq8d0dg56ulk8xgz715pa2sp7i.01.05.jp.k7h.lol, port: 23718, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 香港03-1A, server: gdcub.yunnode.win, port: 15635, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 美国-03, server: us-03.speedup.club, port: 443, type: vmess, uuid: 473fcf71-391b-48f1-b0cf-44d09a614a31, alterId: 0, cipher: auto, tls: true, udp: true}
+  - {name: 新加坡|SG02, server: ubbexvcps2zxmfl8d9xdblwj7h2l5qrb.01.02.sg.k7h.lol, port: 14556, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: V2 新加坡 华南专线, server: azi.cm2.xiaomi-api.xyz, port: 31041, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: d929cc9c-2049-4c03-81f7-9276cf8088f1, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 美国01-1B, server: gd.xueyejiasu.com, port: 56011, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: 中港隧道-英国, server: jzgz.tcity8.monster, port: 22229, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 香港|HK07, server: cnjr8bct4osdfi8qigcq33dgbxlfyhtt.01.07.hk.k7h.lol, port: 34242, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: V1 台湾 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31021, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 香港01-1B, server: gd.xueyejiasu.com, port: 34338, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: 美国01丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 44592, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: 新加坡 A SG, server: sg1.iepl.cooc.icu, port: 35105, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: V3 日本 华南专线-NF, server: azi.cm3.xiaomi-api.xyz, port: 31331, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 日本 A JP, server: jp1.iepl.cooc.icu, port: 47100, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 香港05-备用, server: 140.249.160.81, port: 15639, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 美国02-1B, server: gd.xueyejiasu.com, port: 58159, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
   - {name: 美国 4, server: m2-us1.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.m2network.icu}}, udp: true}
-  - {name: 香港 1, server: m2-hk1.go-relay.top, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-hk1.go-relay.top}}, udp: true}
-  - {name: 美国 1, server: m2-us1.go-relay.top, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.go-relay.top}}, udp: true}
-  - {name: 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: f34c370f-efcf-44c8-bd09-f02628207072, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 新加坡 3, server: m2-sg3.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg3.m2network.icu}}, udp: true}
-  - {name: 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: d929cc9c-2049-4c03-81f7-9276cf8088f1, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 日本03丨广东移动优化, server: gzgjc123.xiyunchen.cn, port: 64902, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: V3 美国 华东专线-NF, server: azi.cn2.xiaomi-api.xyz, port: 31461, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 深港专线-澳大利亚, server: dzgz.tcity8.monster, port: 35220, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V2 越南 华南专线, server: azi.ct.xiaomi-api.xyz, port: 31182, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 中港隧道-香港2, server: jzgz.tcity8.monster, port: 22226, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 深港专线-台湾, server: dzgz.tcity8.monster, port: 35224, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国|PHX1, server: ylw36wrqepfywys903i0b0oh1bemi6zn.01.06.us.k7h.lol, port: 34467, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 新加坡|SG04, server: ni5u78xe9klwinkd6ucpdaaa893sgf2i.01.04.sg.k7h.lol, port: 33885, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 狮城03丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 24715, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: BRAZIL-1B, server: all.in.one.cdn.intacc-cdn.arjcet.org, port: 8080, type: vmess, uuid: aa2648a9-9bcd-4b54-96aa-5b18113f332d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/Microsoftupdate/TG@pwsair?ed=2048", headers: {Host: jardimperiperi.paulo.brazil.arjcet.org}}, udp: true}
   - {name: 美国 5, server: m2-us2.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us2.m2network.icu}}, udp: true}
+  - {name: V2 台湾 华中专线, server: azi.ct.xiaomi-api.xyz, port: 31121, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: UK-LONDON-01-1B, server: cdnblog.intacc-cdn.arjcet.org, port: 2082, type: vmess, uuid: aa2648a9-9bcd-4b54-96aa-5b18113f332d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair?ed=2048", headers: {Host: London.England.UnitedKingdom.internetcdn.internetacc.live}}, udp: true}
+  - {name: 深港专线-香港3, server: dzgz.tcity8.monster, port: 35214, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: US-NEWYORK5-1A, server: cdnblog.internetcdn.ggff.net, port: 8880, type: vmess, uuid: 8a245fa1-5382-4733-9456-b184a08b9c94, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: HK-KOWLOON 试用-1A, server: 61.167.215.35.bc.googleusercontent.com, port: 8080, type: vmess, uuid: 8a245fa1-5382-4733-9456-b184a08b9c94, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/amdgpu/TG@pwsair/amdcpu?ed=2048", headers: {Host: 129.152.215.35.bc.googleusercontent.com}}, udp: true}
+  - {name: V3 英国 华东专线, server: azi.cn1.xiaomi-api.xyz, port: 31492, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: US-NEWYORK2-1A, server: all.in.one.cdn.intacc-cdn.arjcet.org, port: 8880, type: vmess, uuid: 8a245fa1-5382-4733-9456-b184a08b9c94, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: 美国CF06, server: gdcub.yunnode.win, port: 15731, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 新加坡03, server: gdcub.yunnode.win, port: 15627, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: V3 新加坡 华南专线-NF, server: azi.cm3.xiaomi-api.xyz, port: 31341, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V2 美国 华南专线, server: azi.cm2.xiaomi-api.xyz, port: 31061, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: US 海外用户, server: us.cooc.icu, port: 35881, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 中港隧道-澳大利亚, server: jzgz.tcity8.monster, port: 22237, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V3 香港 华东专线-NF, server: azi.cn2.xiaomi-api.xyz, port: 31411, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V2 香港 华中专线, server: azi.ct.xiaomi-api.xyz, port: 31111, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V1 泰国 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31081, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V2 台湾 华南专线, server: azi.cm2.xiaomi-api.xyz, port: 31021, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: JP-TOKYO2 试用-1B, server: shibuya-tokyo-japan-amazon.sgqt.fun, port: 8080, type: vmess, uuid: aa2648a9-9bcd-4b54-96aa-5b18113f332d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/TG@pwsair/microsoft?ed=2048", headers: {Host: shibuya.tokyo.japan.amazon.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: 美国原生NO4, server: dzgz.tcity8.monster, port: 35208, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 新加坡 1, server: m2-sg1.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg1.m2network.icu}}, udp: true}
+  - {name: 香港02-1A, server: gdcub.yunnode.win, port: 15931, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 狮城03丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 44055, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: 中港隧道-印度, server: jzgz.tcity8.monster, port: 22238, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V3 台湾 华中专线-NF, server: azi.cn1.xiaomi-api.xyz, port: 31421, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 新加坡01, server: gdcub.yunnode.win, port: 15636, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: V2 日本 华南专线, server: azi.cm2.xiaomi-api.xyz, port: 31031, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 香港 1, server: m2-hk1.go-relay.top, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-hk1.go-relay.top}}, udp: true}
+  - {name: 新加坡|SG05, server: 0mkp03sm58v9imdlus81lpywdtrmnjzk.01.05.sg.k7h.lol, port: 48641, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: V1 新加坡 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31041, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 日本|T04, server: 8w4c7ank05l8iiamzvd07b0772c8ttjd.01.04.jp.k7h.lol, port: 36708, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 深港专线-印度, server: dzgz.tcity8.monster, port: 35223, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V1 德国 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31091, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 新加坡02, server: gdcub.yunnode.win, port: 15637, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 美国03, server: gd.xueyejiasu.com, port: 42414, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: 德国-01, server: visa.com, port: 80, type: vmess, uuid: 9548d5e9-3dbd-4cda-8857-8aac93dcfa23, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /de1, headers: {Host: nat-de-01.t3csyun.buzz}}, udp: true}
+  - {name: 香港|HK03, server: 8qxv7x5druqs530kxmho2p19e1zuzgko.01.03.hk.k7h.lol, port: 22299, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 日本|T01, server: te0vqtkc621xeb0odkc0vcvuxa1bghtu.01.01.jp.k7h.lol, port: 20037, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 深港专线-加拿大, server: dzgz.tcity8.monster, port: 35216, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 意大利|MIL1, server: jd8yx7tn8tpemdko9jj77c54brzyehv2.01.01.it.k7h.lol, port: 44191, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: V1 美国 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31061, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台湾|TW01, server: r8m5bwrazkp5cziims6mgpy1vh9uzb8m.01.01.tw.k7h.lol, port: 45614, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 韩国 A KR, server: kr1.iepl.cooc.icu, port: 35101, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 香港03-1B, server: gy.666666222.shop, port: 20052, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: 香港04丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 22333, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: 马来西亚 MY | BIZ, server: mas.cooc.icu, port: 35603, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 香港 C HK, server: hk3.iepl.cooc.icu, port: 23881, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 日本|T09, server: 932f6b684d1350jxglp6xnsqv7pu0yju.01.09.jp.k7h.lol, port: 27334, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 中港隧道-日本, server: jzgz.tcity8.monster, port: 22235, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V2 英国 华南专线, server: azi.ct.xiaomi-api.xyz, port: 31192, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 新加坡|SG01, server: g6lqxb2il2ftakfibcnurrqzrs2r1bc4.01.01.sg.k7h.lol, port: 34781, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 香港02-1B, server: gy.666666222.shop, port: 20035, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: 狮城02丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 22189, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: 稻妻0.5x 直连, server: cdn1.misaka-mikoto.xyz, port: 443, type: trojan, password: a3c559be-98a1-4b4e-bf46-aee659fd409c, sni: cdn1.misaka-mikoto.xyz, skip-cert-verify: false, udp: true}
+  - {name: V1 日本 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31031, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国 纽约01, server: gy.666666222.shop, port: 20013, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: 香港|HK01, server: b0cmsj2g4by8fjivwb0vr87qemjshix7.01.01.hk.k7h.lol, port: 40803, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: V3 越南 华中专线, server: azi.cn1.xiaomi-api.xyz, port: 31482, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 泰国 TH BIZ, server: th.cooc.icu, port: 35613, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: DE-建議啟用IPV6-1A, server: 2a01:4f8:272:5aa1:424f:59ad:652a:cc71, port: 2052, type: vmess, uuid: 8a245fa1-5382-4733-9456-b184a08b9c94, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoftvideo/HEAC?ed=2048", headers: {Host: falkenstein.saxony.germany.internetcdn.internetacc.live}}, udp: true}
+  - {name: 美国01丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 41775, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: 韩国 B KR, server: kr2.iepl.cooc.icu, port: 35102, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 美国04, server: gdcub.yunnode.win, port: 15728, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 香港04丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 24226, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: JP-TOKYO 试用-1B, server: 53.220.187.35.bc.googleusercontent.com, port: 8080, type: vmess, uuid: aa2648a9-9bcd-4b54-96aa-5b18113f332d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/amdgpu/TG@pwsair/amdcpu?ed=2048", headers: {Host: 53.220.187.35.bc.googleusercontent.com}}, udp: true}
+  - {name: US-NEWYORK2-1B, server: all.in.one.cdn.intacc-cdn.arjcet.org, port: 8880, type: vmess, uuid: aa2648a9-9bcd-4b54-96aa-5b18113f332d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 072c7e44-d3db-4834-8774-5a4fc12e8316, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 台湾 1, server: gy.666666222.shop, port: 20032, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: 德国 DE | BIZ, server: ge.cooc.icu, port: 35607, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 美国原生NO2, server: dzgz.tcity8.monster, port: 35209, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国CF07, server: gdcub.yunnode.win, port: 15733, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 深港专线-香港2, server: dzgz.tcity8.monster, port: 35213, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 新加坡|SG07, server: mv1o3vp77038y0c908r30igoxu8kkaz4.01.07.sg.k7h.lol, port: 19310, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: JP 海外用户, server: jp.cooc.icu, port: 10001, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 狮城02丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 22189, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: 深港专线-日本, server: dzgz.tcity8.monster, port: 35218, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V3 新加坡 华中专线-NF, server: azi.cn1.xiaomi-api.xyz, port: 31441, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 英国 UK | BIZ, server: uk.cooc.icu, port: 35605, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: V3 德国 华南专线, server: azi.cn1.xiaomi-api.xyz, port: 31491, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 香港|HK08, server: smcgpn2sltug42hfk2n4ufrokmt2coxm.01.08.hk.k7h.lol, port: 44071, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: US-FREENODE-1B, server: exclusively-foriran.internetcdn.ggff.net, port: 8880, type: vmess, uuid: aa2648a9-9bcd-4b54-96aa-5b18113f332d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: 深港专线-新加坡, server: dzgz.tcity8.monster, port: 35217, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 香港02丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 23416, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: 美国|SJ1, server: ngvxmhksbldzq1tyfnea1o96cvlosmrg.01.09.us.k7h.lol, port: 31479, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 英国-01, server: uk-01.speedup.club, port: 443, type: vmess, uuid: 473fcf71-391b-48f1-b0cf-44d09a614a31, alterId: 0, cipher: auto, tls: true, udp: true}
+  - {name: US-FREENODE-1A, server: exclusively-foriran.internetcdn.ggff.net, port: 8880, type: vmess, uuid: 8a245fa1-5382-4733-9456-b184a08b9c94, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: 香港直连01, server: hk01.xfxnode.top, port: 443, type: vmess, uuid: c628d6de-f9be-439d-87f8-c5320e9e32fc, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /hk01, headers: {Host: hk01.xfxnode.top}}, udp: true}
+  - {name: DE-建議啟用IPV6-1B, server: 2a01:4f8:272:5aa1:424f:59ad:652a:cc71, port: 2052, type: vmess, uuid: aa2648a9-9bcd-4b54-96aa-5b18113f332d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoftvideo/HEAC?ed=2048", headers: {Host: falkenstein.saxony.germany.internetcdn.internetacc.live}}, udp: true}
+  - {name: 美国 6, server: m2-us3.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us3.m2network.icu}}, udp: true}
+  - {name: 新加坡 B SG, server: sg2.iepl.cooc.icu, port: 35106, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: V2 德国 华南专线, server: azi.ct.xiaomi-api.xyz, port: 31191, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V3 美国 华南专线-NF, server: azi.cm3.xiaomi-api.xyz, port: 31361, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V2 日本 华中专线, server: azi.ct.xiaomi-api.xyz, port: 31131, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 韩国|SEL2, server: c5849ijggsbqg67jl41hfs7t6r12hctr.01.02.kr.k7h.lol, port: 23464, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 美国|DA1, server: amj0g7zkbkb6z8h251y54tr6tuvqedfz.01.01.us.k7h.lol, port: 15513, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: US-NEWYORK3-1B, server: cdn3.internetcdn.ggff.net, port: 8880, type: vmess, uuid: aa2648a9-9bcd-4b54-96aa-5b18113f332d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: 美国|SEA1, server: h6i8uaqrtu673hgl5ug0t8ycoou566a4.01.07.us.k7h.lol, port: 38322, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 日本03丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 42684, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: 美国CF08, server: gdcub.yunnode.win, port: 15735, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: JP-TOKYO2 试用-1A, server: shibuya-tokyo-japan-amazon.sgqt.fun, port: 8080, type: vmess, uuid: 8a245fa1-5382-4733-9456-b184a08b9c94, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/TG@pwsair/microsoft?ed=2048", headers: {Host: shibuya.tokyo.japan.amazon.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: V3 澳大利亚 华东专线, server: azi.cn1.xiaomi-api.xyz, port: 31493, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 新加坡|SG06, server: z4tfkud3wk99y8g8ohztxfuvswssw5po.01.06.sg.k7h.lol, port: 26515, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 美国 B US, server: usa2.iepl.cooc.icu, port: 32881, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: V1 越南 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31082, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 加拿大|CA1, server: 8gfry0izrou80f1412wrxf3mcw9t6ml4.01.01.ca.k7h.lol, port: 19915, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 日本|T06, server: ry06d97r36ffi37o3zv3728donyc5trg.01.06.jp.k7h.lol, port: 13465, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: V2 美国 华中专线, server: azi.ct.xiaomi-api.xyz, port: 31161, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 菲律宾|MNL2, server: gqc4ar2riqnjbl5y0yoabms73duaa27w.01.02.ph.k7h.lol, port: 31865, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: V1 英国 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31092, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V3 日本 华东专线-NF, server: azi.cn2.xiaomi-api.xyz, port: 31431, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国 A US, server: usa1.iepl.cooc.icu, port: 31881, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: f34c370f-efcf-44c8-bd09-f02628207072, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 美国|KS1, server: hwbnmha68cjqtwdjvzzi2h3unp4unpcf.01.02.us.k7h.lol, port: 14506, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: V3 台湾 华东专线-NF, server: azi.cn2.xiaomi-api.xyz, port: 31421, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国原生NO1, server: jzgz.tcity8.monster, port: 22000, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 越南01, server: gdcub.yunnode.win, port: 15642, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: V1 韩国 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31051, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V2 新加坡 华中专线, server: azi.ct.xiaomi-api.xyz, port: 31141, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 香港|HK04, server: aviely73o6kyviv5gk9dppbey75uma7q.01.04.hk.k7h.lol, port: 49486, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 俄罗斯 RU BIZ, server: ru.cooc.icu, port: 35645, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: BRAZIL-1A, server: all.in.one.cdn.intacc-cdn.arjcet.org, port: 8080, type: vmess, uuid: 8a245fa1-5382-4733-9456-b184a08b9c94, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/Microsoftupdate/TG@pwsair?ed=2048", headers: {Host: jardimperiperi.paulo.brazil.arjcet.org}}, udp: true}
+  - {name: 香港 B HK, server: hk2.iepl.cooc.icu, port: 22881, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 香港07-备用, server: 140.249.160.81, port: 15641, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 日本03, server: gy.666666222.shop, port: 20006, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: 中港隧道-香港3, server: jzgz.tcity8.monster, port: 22003, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V3 香港 华南专线-NF, server: azi.cm3.xiaomi-api.xyz, port: 31011, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 日本03丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 42684, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: V2 澳大利亚 华南专线, server: azi.ct.xiaomi-api.xyz, port: 31193, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 中港隧道-香港1, server: jzgz.tcity8.monster, port: 22224, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: US-NEWYORK3-1A, server: cdn3.internetcdn.ggff.net, port: 8880, type: vmess, uuid: 8a245fa1-5382-4733-9456-b184a08b9c94, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: TW 海外用户, server: tw.cooc.icu, port: 10001, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 香港|HK02, server: h6nuk79gmk6lfw1do9mue5s6z7iekh6w.01.02.hk.k7h.lol, port: 24517, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 深港专线-英国, server: dzgz.tcity8.monster, port: 35221, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 香港3, server: xg3.tcity8.buzz, port: 10010, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V2 泰国 华南专线, server: azi.ct.xiaomi-api.xyz, port: 31181, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 日本|T03, server: ey8fjifra77qvqfvx48rtlo97uk8u0kc.01.03.jp.k7h.lol, port: 40546, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 美国|LA1, server: c7r96zr6rodueegoklve4hnim84qflm5.01.04.us.k7h.lol, port: 17201, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 香港01-1A, server: gdcub.yunnode.win, port: 19630, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 美国|LA2, server: qipgm5kkpl73o8f4y32vx79hl2j1kx30.01.05.us.k7h.lol, port: 44432, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 日本01丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 18190, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: 美国|SJ0, server: xzyvpw6mbom9r5kr7xfmt8iavehdokkj.01.08.us.k7h.lol, port: 29126, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 香港-02, server: hk-02.speedup.club, port: 443, type: vmess, uuid: 473fcf71-391b-48f1-b0cf-44d09a614a31, alterId: 0, cipher: auto, tls: true, udp: true}
+  - {name: 新加坡|SG03, server: r28i2xggabv9xlgp8yg2ntbjwhh0wv9x.01.03.sg.k7h.lol, port: 24219, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 台湾 C TW, server: tw3.iepl.cooc.icu, port: 35111, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 香港01丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 18641, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: 新加坡|SG08, server: z8g5u2gf8gh33op9krzx0relkzpyiwec.01.08.sg.k7h.lol, port: 35197, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 香港 A HK, server: hk1.iepl.cooc.icu, port: 21881, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 台湾|TW02, server: e9782wm51iupk7t5r88rvzxrwd63n68t.01.02.tw.k7h.lol, port: 35805, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 日本 B JP, server: jp2.iepl.cooc.icu, port: 47101, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: FI-HELSINKI-ONLYIPV6-2-1B, server: helsinki.uusimaa.finland.fi.internetcdn.ggff.net, port: 55555, type: ss, cipher: chacha20-ietf-poly1305, password: aa2648a9-9bcd-4b54-96aa-5b18113f332d, udp: true}
+  - {name: 中港隧道-新加坡, server: jzgz.tcity8.monster, port: 22231, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 日本02, server: gy.666666222.shop, port: 20004, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: 法国 FR BIZ, server: fr.cooc.icu, port: 35611, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: UK-LONDON-01-1A, server: cdnblog.intacc-cdn.arjcet.org, port: 2082, type: vmess, uuid: 8a245fa1-5382-4733-9456-b184a08b9c94, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair?ed=2048", headers: {Host: London.England.UnitedKingdom.internetcdn.internetacc.live}}, udp: true}
+  - {name: 香港02丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 23416, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: 美国02-1A, server: gdcub.yunnode.win, port: 15628, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: HK-KOWLOON 试用-1B, server: 61.167.215.35.bc.googleusercontent.com, port: 8080, type: vmess, uuid: aa2648a9-9bcd-4b54-96aa-5b18113f332d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/amdgpu/TG@pwsair/amdcpu?ed=2048", headers: {Host: 129.152.215.35.bc.googleusercontent.com}}, udp: true}
+  - {name: 日本04, server: gy.666666222.shop, port: 20008, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: 日本|T02, server: 37wibcada2l1ms8dg2c28z0yz498t8gs.01.02.jp.k7h.lol, port: 10954, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 中港隧道-台湾, server: jzgz.tcity8.monster, port: 22240, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 新加坡|SG09, server: pt3kneehum6jwl2c1wglr79v1nilyrzf.01.09.sg.k7h.lol, port: 47558, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: FI-HELSINKI-ONLYIPV6-2-1A, server: helsinki.uusimaa.finland.fi.internetcdn.ggff.net, port: 55555, type: ss, cipher: chacha20-ietf-poly1305, password: 8a245fa1-5382-4733-9456-b184a08b9c94, udp: true}
+  - {name: V3 日本 华中专线-NF, server: azi.cn1.xiaomi-api.xyz, port: 31431, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国CF05, server: gdcub.yunnode.win, port: 15729, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 日本01丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 21744, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: V3 泰国 华南专线, server: azi.cn1.xiaomi-api.xyz, port: 31481, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 中港隧道-加拿大, server: jzgz.tcity8.monster, port: 22236, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 香港|HK35, server: fsknvk9vbvstaemqbsswrz7mp78x5p31.01.09.hk.k7h.lol, port: 33938, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 台湾 A TW, server: tw1.iepl.cooc.icu, port: 35109, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 深港专线-德国, server: dzgz.tcity8.monster, port: 35222, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 越南 VN | BIZ, server: vn.cooc.icu, port: 35601, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 台湾 B TW, server: tw2.iepl.cooc.icu, port: 35110, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 美国01-1A, server: gdcub.yunnode.win, port: 15532, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 新加坡 3, server: m2-sg3.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg3.m2network.icu}}, udp: true}
+  - {name: 日本01, server: gy.666666222.shop, port: 20002, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: 香港, server: xg1.tcity8.buzz, port: 10010, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 新加坡 C SG, server: sg3.iepl.cooc.icu, port: 35107, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: V3 香港 华中专线-NF, server: azi.cn1.xiaomi-api.xyz, port: 31411, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 孤云阁-03, server: gdcub.yunnode.win, port: 48138, type: vmess, uuid: a3c559be-98a1-4b4e-bf46-aee659fd409c, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 香港01丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 18641, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: V1 香港 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31011, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 新加坡 2, server: m2-sg2.m2network.icu, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-sg2.m2network.icu}}, udp: true}
+  - {name: 韩国 C KR, server: kr3.iepl.cooc.icu, port: 35609, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 香港|HK05, server: amua1dxj2k0gw0vhpr12lyu8pbh2hnwk.01.05.hk.k7h.lol, port: 48464, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 台湾01-1B, server: gd.xueyejiasu.com, port: 47564, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: 英国01, server: gdcub.yunnode.win, port: 15634, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 美国原生NO3, server: jzgz.tcity8.monster, port: 22002, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 狮城02丨广东移动优化, server: gzgjc123.xiyunchen.cn, port: 30544, type: ss, cipher: chacha20-ietf-poly1305, password: bef26e92-c1dd-4869-a3c1-515639fe8e2b, udp: true}
+  - {name: 台湾01-1A, server: gdcub.yunnode.win, port: 15632, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: V3 美国 华中专线-NF, server: azi.cn1.xiaomi-api.xyz, port: 31461, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V3 台湾 华南专线-NF, server: azi.cm3.xiaomi-api.xyz, port: 31021, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 香港04-备用, server: 140.249.160.81, port: 15638, type: ss, cipher: chacha20-ietf-poly1305, password: c628d6de-f9be-439d-87f8-c5320e9e32fc, udp: true}
+  - {name: 深港专线-香港1, server: dzgz.tcity8.monster, port: 35212, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国 C US, server: usa3.iepl.cooc.icu, port: 33881, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: V3 新加坡 华东专线-NF, server: azi.cn2.xiaomi-api.xyz, port: 31441, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美国 纽约2, server: gy.666666222.shop, port: 20016, type: ss, cipher: chacha20-ietf-poly1305, password: bf99ec91-61b5-4f6b-b907-8485eb4d3b55, udp: true}
+  - {name: JP-TOKYO 试用-1A, server: 53.220.187.35.bc.googleusercontent.com, port: 8080, type: vmess, uuid: 8a245fa1-5382-4733-9456-b184a08b9c94, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/amdgpu/TG@pwsair/amdcpu?ed=2048", headers: {Host: 53.220.187.35.bc.googleusercontent.com}}, udp: true}
+  - {name: 美国 1, server: m2-us1.go-relay.top, port: 80, type: vmess, uuid: bb60442a-c40d-4063-8705-ff76a3e01699, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: m2-us1.go-relay.top}}, udp: true}
+  - {name: V2 香港 华南专线, server: azi.cm2.xiaomi-api.xyz, port: 31011, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 日本 C JP, server: jp3.iepl.cooc.icu, port: 19881, type: ss, cipher: chacha20-ietf-poly1305, password: e566475b-cc8c-40e9-81b0-7535befae322, udp: true}
+  - {name: 巴西-01, server: oracle-kr-01.av5.buzz, port: 80, type: vmess, uuid: 9548d5e9-3dbd-4cda-8857-8aac93dcfa23, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /bra1, headers: {Host: nat-bra-01.t3csyun.buzz}}, udp: true}
+  - {name: 中港隧道-德国, server: jzgz.tcity8.monster, port: 22230, type: vmess, uuid: f4c9ea0d-de10-41fe-9496-24d79c919ce0, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: V1 澳大利亚 移动专线, server: azi.cm.xiaomi-api.xyz, port: 31093, type: vmess, uuid: 6a44cf43-de02-4229-9478-e8422c8319d3, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: US-NEWYORK5-1B, server: cdnblog.internetcdn.ggff.net, port: 8880, type: vmess, uuid: aa2648a9-9bcd-4b54-96aa-5b18113f332d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: 香港|HK09, server: fsknvk9vbvstaemqbsswrz7mp78x5p31.01.09.hk.k7h.lol, port: 24616, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
+  - {name: 香港|HK06, server: avsmv88x2nuexp260cwd5z94w7l65d4j.06.01.hk.k7h.lol, port: 37870, type: ss, cipher: chacha20-ietf-poly1305, password: 7cc10d17-5718-476d-a113-5b0b58206e76, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国 6
-      - 新加坡 2
-      - 新加坡 1
+      - 日本|T05
+      - 香港03-1A
+      - 美国-03
+      - 新加坡|SG02
+      - V2 新加坡 华南专线
+      - 韩国-三网优化2-1C
+      - 美国01-1B
+      - 中港隧道-英国
+      - 香港|HK07
+      - V1 台湾 移动专线
+      - 香港01-1B
+      - 美国01丨山东移动优化
+      - 新加坡 A SG
+      - V3 日本 华南专线-NF
+      - 日本 A JP
+      - 香港05-备用
+      - 美国02-1B
       - 美国 4
-      - 香港 1
-      - 美国 1
-      - 韩国-三网优化2-1A
-      - 新加坡 3
-      - 韩国-三网优化2-1B
+      - 日本03丨广东移动优化
+      - V3 美国 华东专线-NF
+      - 深港专线-澳大利亚
+      - V2 越南 华南专线
+      - 中港隧道-香港2
+      - 深港专线-台湾
+      - 美国|PHX1
+      - 新加坡|SG04
+      - 狮城03丨山东移动优化
+      - BRAZIL-1B
       - 美国 5
+      - V2 台湾 华中专线
+      - UK-LONDON-01-1B
+      - 深港专线-香港3
+      - US-NEWYORK5-1A
+      - HK-KOWLOON 试用-1A
+      - V3 英国 华东专线
+      - US-NEWYORK2-1A
+      - 美国CF06
+      - 新加坡03
+      - V3 新加坡 华南专线-NF
+      - V2 美国 华南专线
+      - US 海外用户
+      - 中港隧道-澳大利亚
+      - V3 香港 华东专线-NF
+      - V2 香港 华中专线
+      - V1 泰国 移动专线
+      - V2 台湾 华南专线
+      - JP-TOKYO2 试用-1B
+      - 美国原生NO4
+      - 新加坡 1
+      - 香港02-1A
+      - 狮城03丨江苏移动优化
+      - 中港隧道-印度
+      - V3 台湾 华中专线-NF
+      - 新加坡01
+      - V2 日本 华南专线
+      - 香港 1
+      - 新加坡|SG05
+      - V1 新加坡 移动专线
+      - 日本|T04
+      - 深港专线-印度
+      - V1 德国 移动专线
+      - 新加坡02
+      - 美国03
+      - 德国-01
+      - 香港|HK03
+      - 日本|T01
+      - 深港专线-加拿大
+      - 意大利|MIL1
+      - V1 美国 移动专线
+      - 台湾|TW01
+      - 韩国 A KR
+      - 香港03-1B
+      - 香港04丨江苏移动优化
+      - 马来西亚 MY | BIZ
+      - 香港 C HK
+      - 日本|T09
+      - 中港隧道-日本
+      - V2 英国 华南专线
+      - 新加坡|SG01
+      - 香港02-1B
+      - 狮城02丨江苏移动优化
+      - 稻妻0.5x 直连
+      - V1 日本 移动专线
+      - 美国 纽约01
+      - 香港|HK01
+      - V3 越南 华中专线
+      - 泰国 TH BIZ
+      - DE-建議啟用IPV6-1A
+      - 美国01丨江苏移动优化
+      - 韩国 B KR
+      - 美国04
+      - 香港04丨山东移动优化
+      - JP-TOKYO 试用-1B
+      - US-NEWYORK2-1B
+      - 韩国-三网优化2-1B
+      - 台湾 1
+      - 德国 DE | BIZ
+      - 美国原生NO2
+      - 美国CF07
+      - 深港专线-香港2
+      - 新加坡|SG07
+      - JP 海外用户
+      - 狮城02丨山东移动优化
+      - 深港专线-日本
+      - V3 新加坡 华中专线-NF
+      - 英国 UK | BIZ
+      - V3 德国 华南专线
+      - 香港|HK08
+      - US-FREENODE-1B
+      - 深港专线-新加坡
+      - 香港02丨江苏移动优化
+      - 美国|SJ1
+      - 英国-01
+      - US-FREENODE-1A
+      - 香港直连01
+      - DE-建議啟用IPV6-1B
+      - 美国 6
+      - 新加坡 B SG
+      - V2 德国 华南专线
+      - V3 美国 华南专线-NF
+      - V2 日本 华中专线
+      - 韩国|SEL2
+      - 美国|DA1
+      - US-NEWYORK3-1B
+      - 美国|SEA1
+      - 日本03丨江苏移动优化
+      - 美国CF08
+      - JP-TOKYO2 试用-1A
+      - V3 澳大利亚 华东专线
+      - 新加坡|SG06
+      - 美国 B US
+      - V1 越南 移动专线
+      - 加拿大|CA1
+      - 日本|T06
+      - V2 美国 华中专线
+      - 菲律宾|MNL2
+      - V1 英国 移动专线
+      - V3 日本 华东专线-NF
+      - 美国 A US
+      - 韩国-三网优化2-1A
+      - 美国|KS1
+      - V3 台湾 华东专线-NF
+      - 美国原生NO1
+      - 越南01
+      - V1 韩国 移动专线
+      - V2 新加坡 华中专线
+      - 香港|HK04
+      - 俄罗斯 RU BIZ
+      - BRAZIL-1A
+      - 香港 B HK
+      - 香港07-备用
+      - 日本03
+      - 中港隧道-香港3
+      - V3 香港 华南专线-NF
+      - 日本03丨山东移动优化
+      - V2 澳大利亚 华南专线
+      - 中港隧道-香港1
+      - US-NEWYORK3-1A
+      - TW 海外用户
+      - 香港|HK02
+      - 深港专线-英国
+      - 香港3
+      - V2 泰国 华南专线
+      - 日本|T03
+      - 美国|LA1
+      - 香港01-1A
+      - 美国|LA2
+      - 日本01丨江苏移动优化
+      - 美国|SJ0
+      - 香港-02
+      - 新加坡|SG03
+      - 台湾 C TW
+      - 香港01丨江苏移动优化
+      - 新加坡|SG08
+      - 香港 A HK
+      - 台湾|TW02
+      - 日本 B JP
+      - FI-HELSINKI-ONLYIPV6-2-1B
+      - 中港隧道-新加坡
+      - 日本02
+      - 法国 FR BIZ
+      - UK-LONDON-01-1A
+      - 香港02丨山东移动优化
+      - 美国02-1A
+      - HK-KOWLOON 试用-1B
+      - 日本04
+      - 日本|T02
+      - 中港隧道-台湾
+      - 新加坡|SG09
+      - FI-HELSINKI-ONLYIPV6-2-1A
+      - V3 日本 华中专线-NF
+      - 美国CF05
+      - 日本01丨山东移动优化
+      - V3 泰国 华南专线
+      - 中港隧道-加拿大
+      - 香港|HK35
+      - 台湾 A TW
+      - 深港专线-德国
+      - 越南 VN | BIZ
+      - 台湾 B TW
+      - 美国01-1A
+      - 新加坡 3
+      - 日本01
+      - 香港
+      - 新加坡 C SG
+      - V3 香港 华中专线-NF
+      - 孤云阁-03
+      - 香港01丨山东移动优化
+      - V1 香港 移动专线
+      - 新加坡 2
+      - 韩国 C KR
+      - 香港|HK05
+      - 台湾01-1B
+      - 英国01
+      - 美国原生NO3
+      - 狮城02丨广东移动优化
+      - 台湾01-1A
+      - V3 美国 华中专线-NF
+      - V3 台湾 华南专线-NF
+      - 香港04-备用
+      - 深港专线-香港1
+      - 美国 C US
+      - V3 新加坡 华东专线-NF
+      - 美国 纽约2
+      - JP-TOKYO 试用-1A
+      - 美国 1
+      - V2 香港 华南专线
+      - 日本 C JP
+      - 巴西-01
+      - 中港隧道-德国
+      - V1 澳大利亚 移动专线
+      - US-NEWYORK5-1B
+      - 香港|HK09
+      - 香港|HK06
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 美国 6
-      - 新加坡 2
-      - 新加坡 1
+      - 日本|T05
+      - 香港03-1A
+      - 美国-03
+      - 新加坡|SG02
+      - V2 新加坡 华南专线
+      - 韩国-三网优化2-1C
+      - 美国01-1B
+      - 中港隧道-英国
+      - 香港|HK07
+      - V1 台湾 移动专线
+      - 香港01-1B
+      - 美国01丨山东移动优化
+      - 新加坡 A SG
+      - V3 日本 华南专线-NF
+      - 日本 A JP
+      - 香港05-备用
+      - 美国02-1B
       - 美国 4
-      - 香港 1
-      - 美国 1
-      - 韩国-三网优化2-1A
-      - 新加坡 3
-      - 韩国-三网优化2-1B
+      - 日本03丨广东移动优化
+      - V3 美国 华东专线-NF
+      - 深港专线-澳大利亚
+      - V2 越南 华南专线
+      - 中港隧道-香港2
+      - 深港专线-台湾
+      - 美国|PHX1
+      - 新加坡|SG04
+      - 狮城03丨山东移动优化
+      - BRAZIL-1B
       - 美国 5
+      - V2 台湾 华中专线
+      - UK-LONDON-01-1B
+      - 深港专线-香港3
+      - US-NEWYORK5-1A
+      - HK-KOWLOON 试用-1A
+      - V3 英国 华东专线
+      - US-NEWYORK2-1A
+      - 美国CF06
+      - 新加坡03
+      - V3 新加坡 华南专线-NF
+      - V2 美国 华南专线
+      - US 海外用户
+      - 中港隧道-澳大利亚
+      - V3 香港 华东专线-NF
+      - V2 香港 华中专线
+      - V1 泰国 移动专线
+      - V2 台湾 华南专线
+      - JP-TOKYO2 试用-1B
+      - 美国原生NO4
+      - 新加坡 1
+      - 香港02-1A
+      - 狮城03丨江苏移动优化
+      - 中港隧道-印度
+      - V3 台湾 华中专线-NF
+      - 新加坡01
+      - V2 日本 华南专线
+      - 香港 1
+      - 新加坡|SG05
+      - V1 新加坡 移动专线
+      - 日本|T04
+      - 深港专线-印度
+      - V1 德国 移动专线
+      - 新加坡02
+      - 美国03
+      - 德国-01
+      - 香港|HK03
+      - 日本|T01
+      - 深港专线-加拿大
+      - 意大利|MIL1
+      - V1 美国 移动专线
+      - 台湾|TW01
+      - 韩国 A KR
+      - 香港03-1B
+      - 香港04丨江苏移动优化
+      - 马来西亚 MY | BIZ
+      - 香港 C HK
+      - 日本|T09
+      - 中港隧道-日本
+      - V2 英国 华南专线
+      - 新加坡|SG01
+      - 香港02-1B
+      - 狮城02丨江苏移动优化
+      - 稻妻0.5x 直连
+      - V1 日本 移动专线
+      - 美国 纽约01
+      - 香港|HK01
+      - V3 越南 华中专线
+      - 泰国 TH BIZ
+      - DE-建議啟用IPV6-1A
+      - 美国01丨江苏移动优化
+      - 韩国 B KR
+      - 美国04
+      - 香港04丨山东移动优化
+      - JP-TOKYO 试用-1B
+      - US-NEWYORK2-1B
+      - 韩国-三网优化2-1B
+      - 台湾 1
+      - 德国 DE | BIZ
+      - 美国原生NO2
+      - 美国CF07
+      - 深港专线-香港2
+      - 新加坡|SG07
+      - JP 海外用户
+      - 狮城02丨山东移动优化
+      - 深港专线-日本
+      - V3 新加坡 华中专线-NF
+      - 英国 UK | BIZ
+      - V3 德国 华南专线
+      - 香港|HK08
+      - US-FREENODE-1B
+      - 深港专线-新加坡
+      - 香港02丨江苏移动优化
+      - 美国|SJ1
+      - 英国-01
+      - US-FREENODE-1A
+      - 香港直连01
+      - DE-建議啟用IPV6-1B
+      - 美国 6
+      - 新加坡 B SG
+      - V2 德国 华南专线
+      - V3 美国 华南专线-NF
+      - V2 日本 华中专线
+      - 韩国|SEL2
+      - 美国|DA1
+      - US-NEWYORK3-1B
+      - 美国|SEA1
+      - 日本03丨江苏移动优化
+      - 美国CF08
+      - JP-TOKYO2 试用-1A
+      - V3 澳大利亚 华东专线
+      - 新加坡|SG06
+      - 美国 B US
+      - V1 越南 移动专线
+      - 加拿大|CA1
+      - 日本|T06
+      - V2 美国 华中专线
+      - 菲律宾|MNL2
+      - V1 英国 移动专线
+      - V3 日本 华东专线-NF
+      - 美国 A US
+      - 韩国-三网优化2-1A
+      - 美国|KS1
+      - V3 台湾 华东专线-NF
+      - 美国原生NO1
+      - 越南01
+      - V1 韩国 移动专线
+      - V2 新加坡 华中专线
+      - 香港|HK04
+      - 俄罗斯 RU BIZ
+      - BRAZIL-1A
+      - 香港 B HK
+      - 香港07-备用
+      - 日本03
+      - 中港隧道-香港3
+      - V3 香港 华南专线-NF
+      - 日本03丨山东移动优化
+      - V2 澳大利亚 华南专线
+      - 中港隧道-香港1
+      - US-NEWYORK3-1A
+      - TW 海外用户
+      - 香港|HK02
+      - 深港专线-英国
+      - 香港3
+      - V2 泰国 华南专线
+      - 日本|T03
+      - 美国|LA1
+      - 香港01-1A
+      - 美国|LA2
+      - 日本01丨江苏移动优化
+      - 美国|SJ0
+      - 香港-02
+      - 新加坡|SG03
+      - 台湾 C TW
+      - 香港01丨江苏移动优化
+      - 新加坡|SG08
+      - 香港 A HK
+      - 台湾|TW02
+      - 日本 B JP
+      - FI-HELSINKI-ONLYIPV6-2-1B
+      - 中港隧道-新加坡
+      - 日本02
+      - 法国 FR BIZ
+      - UK-LONDON-01-1A
+      - 香港02丨山东移动优化
+      - 美国02-1A
+      - HK-KOWLOON 试用-1B
+      - 日本04
+      - 日本|T02
+      - 中港隧道-台湾
+      - 新加坡|SG09
+      - FI-HELSINKI-ONLYIPV6-2-1A
+      - V3 日本 华中专线-NF
+      - 美国CF05
+      - 日本01丨山东移动优化
+      - V3 泰国 华南专线
+      - 中港隧道-加拿大
+      - 香港|HK35
+      - 台湾 A TW
+      - 深港专线-德国
+      - 越南 VN | BIZ
+      - 台湾 B TW
+      - 美国01-1A
+      - 新加坡 3
+      - 日本01
+      - 香港
+      - 新加坡 C SG
+      - V3 香港 华中专线-NF
+      - 孤云阁-03
+      - 香港01丨山东移动优化
+      - V1 香港 移动专线
+      - 新加坡 2
+      - 韩国 C KR
+      - 香港|HK05
+      - 台湾01-1B
+      - 英国01
+      - 美国原生NO3
+      - 狮城02丨广东移动优化
+      - 台湾01-1A
+      - V3 美国 华中专线-NF
+      - V3 台湾 华南专线-NF
+      - 香港04-备用
+      - 深港专线-香港1
+      - 美国 C US
+      - V3 新加坡 华东专线-NF
+      - 美国 纽约2
+      - JP-TOKYO 试用-1A
+      - 美国 1
+      - V2 香港 华南专线
+      - 日本 C JP
+      - 巴西-01
+      - 中港隧道-德国
+      - V1 澳大利亚 移动专线
+      - US-NEWYORK5-1B
+      - 香港|HK09
+      - 香港|HK06
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国 6
-      - 新加坡 2
-      - 新加坡 1
+      - 日本|T05
+      - 香港03-1A
+      - 美国-03
+      - 新加坡|SG02
+      - V2 新加坡 华南专线
+      - 韩国-三网优化2-1C
+      - 美国01-1B
+      - 中港隧道-英国
+      - 香港|HK07
+      - V1 台湾 移动专线
+      - 香港01-1B
+      - 美国01丨山东移动优化
+      - 新加坡 A SG
+      - V3 日本 华南专线-NF
+      - 日本 A JP
+      - 香港05-备用
+      - 美国02-1B
       - 美国 4
-      - 香港 1
-      - 美国 1
-      - 韩国-三网优化2-1A
-      - 新加坡 3
-      - 韩国-三网优化2-1B
+      - 日本03丨广东移动优化
+      - V3 美国 华东专线-NF
+      - 深港专线-澳大利亚
+      - V2 越南 华南专线
+      - 中港隧道-香港2
+      - 深港专线-台湾
+      - 美国|PHX1
+      - 新加坡|SG04
+      - 狮城03丨山东移动优化
+      - BRAZIL-1B
       - 美国 5
+      - V2 台湾 华中专线
+      - UK-LONDON-01-1B
+      - 深港专线-香港3
+      - US-NEWYORK5-1A
+      - HK-KOWLOON 试用-1A
+      - V3 英国 华东专线
+      - US-NEWYORK2-1A
+      - 美国CF06
+      - 新加坡03
+      - V3 新加坡 华南专线-NF
+      - V2 美国 华南专线
+      - US 海外用户
+      - 中港隧道-澳大利亚
+      - V3 香港 华东专线-NF
+      - V2 香港 华中专线
+      - V1 泰国 移动专线
+      - V2 台湾 华南专线
+      - JP-TOKYO2 试用-1B
+      - 美国原生NO4
+      - 新加坡 1
+      - 香港02-1A
+      - 狮城03丨江苏移动优化
+      - 中港隧道-印度
+      - V3 台湾 华中专线-NF
+      - 新加坡01
+      - V2 日本 华南专线
+      - 香港 1
+      - 新加坡|SG05
+      - V1 新加坡 移动专线
+      - 日本|T04
+      - 深港专线-印度
+      - V1 德国 移动专线
+      - 新加坡02
+      - 美国03
+      - 德国-01
+      - 香港|HK03
+      - 日本|T01
+      - 深港专线-加拿大
+      - 意大利|MIL1
+      - V1 美国 移动专线
+      - 台湾|TW01
+      - 韩国 A KR
+      - 香港03-1B
+      - 香港04丨江苏移动优化
+      - 马来西亚 MY | BIZ
+      - 香港 C HK
+      - 日本|T09
+      - 中港隧道-日本
+      - V2 英国 华南专线
+      - 新加坡|SG01
+      - 香港02-1B
+      - 狮城02丨江苏移动优化
+      - 稻妻0.5x 直连
+      - V1 日本 移动专线
+      - 美国 纽约01
+      - 香港|HK01
+      - V3 越南 华中专线
+      - 泰国 TH BIZ
+      - DE-建議啟用IPV6-1A
+      - 美国01丨江苏移动优化
+      - 韩国 B KR
+      - 美国04
+      - 香港04丨山东移动优化
+      - JP-TOKYO 试用-1B
+      - US-NEWYORK2-1B
+      - 韩国-三网优化2-1B
+      - 台湾 1
+      - 德国 DE | BIZ
+      - 美国原生NO2
+      - 美国CF07
+      - 深港专线-香港2
+      - 新加坡|SG07
+      - JP 海外用户
+      - 狮城02丨山东移动优化
+      - 深港专线-日本
+      - V3 新加坡 华中专线-NF
+      - 英国 UK | BIZ
+      - V3 德国 华南专线
+      - 香港|HK08
+      - US-FREENODE-1B
+      - 深港专线-新加坡
+      - 香港02丨江苏移动优化
+      - 美国|SJ1
+      - 英国-01
+      - US-FREENODE-1A
+      - 香港直连01
+      - DE-建議啟用IPV6-1B
+      - 美国 6
+      - 新加坡 B SG
+      - V2 德国 华南专线
+      - V3 美国 华南专线-NF
+      - V2 日本 华中专线
+      - 韩国|SEL2
+      - 美国|DA1
+      - US-NEWYORK3-1B
+      - 美国|SEA1
+      - 日本03丨江苏移动优化
+      - 美国CF08
+      - JP-TOKYO2 试用-1A
+      - V3 澳大利亚 华东专线
+      - 新加坡|SG06
+      - 美国 B US
+      - V1 越南 移动专线
+      - 加拿大|CA1
+      - 日本|T06
+      - V2 美国 华中专线
+      - 菲律宾|MNL2
+      - V1 英国 移动专线
+      - V3 日本 华东专线-NF
+      - 美国 A US
+      - 韩国-三网优化2-1A
+      - 美国|KS1
+      - V3 台湾 华东专线-NF
+      - 美国原生NO1
+      - 越南01
+      - V1 韩国 移动专线
+      - V2 新加坡 华中专线
+      - 香港|HK04
+      - 俄罗斯 RU BIZ
+      - BRAZIL-1A
+      - 香港 B HK
+      - 香港07-备用
+      - 日本03
+      - 中港隧道-香港3
+      - V3 香港 华南专线-NF
+      - 日本03丨山东移动优化
+      - V2 澳大利亚 华南专线
+      - 中港隧道-香港1
+      - US-NEWYORK3-1A
+      - TW 海外用户
+      - 香港|HK02
+      - 深港专线-英国
+      - 香港3
+      - V2 泰国 华南专线
+      - 日本|T03
+      - 美国|LA1
+      - 香港01-1A
+      - 美国|LA2
+      - 日本01丨江苏移动优化
+      - 美国|SJ0
+      - 香港-02
+      - 新加坡|SG03
+      - 台湾 C TW
+      - 香港01丨江苏移动优化
+      - 新加坡|SG08
+      - 香港 A HK
+      - 台湾|TW02
+      - 日本 B JP
+      - FI-HELSINKI-ONLYIPV6-2-1B
+      - 中港隧道-新加坡
+      - 日本02
+      - 法国 FR BIZ
+      - UK-LONDON-01-1A
+      - 香港02丨山东移动优化
+      - 美国02-1A
+      - HK-KOWLOON 试用-1B
+      - 日本04
+      - 日本|T02
+      - 中港隧道-台湾
+      - 新加坡|SG09
+      - FI-HELSINKI-ONLYIPV6-2-1A
+      - V3 日本 华中专线-NF
+      - 美国CF05
+      - 日本01丨山东移动优化
+      - V3 泰国 华南专线
+      - 中港隧道-加拿大
+      - 香港|HK35
+      - 台湾 A TW
+      - 深港专线-德国
+      - 越南 VN | BIZ
+      - 台湾 B TW
+      - 美国01-1A
+      - 新加坡 3
+      - 日本01
+      - 香港
+      - 新加坡 C SG
+      - V3 香港 华中专线-NF
+      - 孤云阁-03
+      - 香港01丨山东移动优化
+      - V1 香港 移动专线
+      - 新加坡 2
+      - 韩国 C KR
+      - 香港|HK05
+      - 台湾01-1B
+      - 英国01
+      - 美国原生NO3
+      - 狮城02丨广东移动优化
+      - 台湾01-1A
+      - V3 美国 华中专线-NF
+      - V3 台湾 华南专线-NF
+      - 香港04-备用
+      - 深港专线-香港1
+      - 美国 C US
+      - V3 新加坡 华东专线-NF
+      - 美国 纽约2
+      - JP-TOKYO 试用-1A
+      - 美国 1
+      - V2 香港 华南专线
+      - 日本 C JP
+      - 巴西-01
+      - 中港隧道-德国
+      - V1 澳大利亚 移动专线
+      - US-NEWYORK5-1B
+      - 香港|HK09
+      - 香港|HK06
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,68 +976,1038 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国 6
-      - 新加坡 2
-      - 新加坡 1
+      - 日本|T05
+      - 香港03-1A
+      - 美国-03
+      - 新加坡|SG02
+      - V2 新加坡 华南专线
+      - 韩国-三网优化2-1C
+      - 美国01-1B
+      - 中港隧道-英国
+      - 香港|HK07
+      - V1 台湾 移动专线
+      - 香港01-1B
+      - 美国01丨山东移动优化
+      - 新加坡 A SG
+      - V3 日本 华南专线-NF
+      - 日本 A JP
+      - 香港05-备用
+      - 美国02-1B
       - 美国 4
-      - 香港 1
-      - 美国 1
-      - 韩国-三网优化2-1A
-      - 新加坡 3
-      - 韩国-三网优化2-1B
+      - 日本03丨广东移动优化
+      - V3 美国 华东专线-NF
+      - 深港专线-澳大利亚
+      - V2 越南 华南专线
+      - 中港隧道-香港2
+      - 深港专线-台湾
+      - 美国|PHX1
+      - 新加坡|SG04
+      - 狮城03丨山东移动优化
+      - BRAZIL-1B
       - 美国 5
+      - V2 台湾 华中专线
+      - UK-LONDON-01-1B
+      - 深港专线-香港3
+      - US-NEWYORK5-1A
+      - HK-KOWLOON 试用-1A
+      - V3 英国 华东专线
+      - US-NEWYORK2-1A
+      - 美国CF06
+      - 新加坡03
+      - V3 新加坡 华南专线-NF
+      - V2 美国 华南专线
+      - US 海外用户
+      - 中港隧道-澳大利亚
+      - V3 香港 华东专线-NF
+      - V2 香港 华中专线
+      - V1 泰国 移动专线
+      - V2 台湾 华南专线
+      - JP-TOKYO2 试用-1B
+      - 美国原生NO4
+      - 新加坡 1
+      - 香港02-1A
+      - 狮城03丨江苏移动优化
+      - 中港隧道-印度
+      - V3 台湾 华中专线-NF
+      - 新加坡01
+      - V2 日本 华南专线
+      - 香港 1
+      - 新加坡|SG05
+      - V1 新加坡 移动专线
+      - 日本|T04
+      - 深港专线-印度
+      - V1 德国 移动专线
+      - 新加坡02
+      - 美国03
+      - 德国-01
+      - 香港|HK03
+      - 日本|T01
+      - 深港专线-加拿大
+      - 意大利|MIL1
+      - V1 美国 移动专线
+      - 台湾|TW01
+      - 韩国 A KR
+      - 香港03-1B
+      - 香港04丨江苏移动优化
+      - 马来西亚 MY | BIZ
+      - 香港 C HK
+      - 日本|T09
+      - 中港隧道-日本
+      - V2 英国 华南专线
+      - 新加坡|SG01
+      - 香港02-1B
+      - 狮城02丨江苏移动优化
+      - 稻妻0.5x 直连
+      - V1 日本 移动专线
+      - 美国 纽约01
+      - 香港|HK01
+      - V3 越南 华中专线
+      - 泰国 TH BIZ
+      - DE-建議啟用IPV6-1A
+      - 美国01丨江苏移动优化
+      - 韩国 B KR
+      - 美国04
+      - 香港04丨山东移动优化
+      - JP-TOKYO 试用-1B
+      - US-NEWYORK2-1B
+      - 韩国-三网优化2-1B
+      - 台湾 1
+      - 德国 DE | BIZ
+      - 美国原生NO2
+      - 美国CF07
+      - 深港专线-香港2
+      - 新加坡|SG07
+      - JP 海外用户
+      - 狮城02丨山东移动优化
+      - 深港专线-日本
+      - V3 新加坡 华中专线-NF
+      - 英国 UK | BIZ
+      - V3 德国 华南专线
+      - 香港|HK08
+      - US-FREENODE-1B
+      - 深港专线-新加坡
+      - 香港02丨江苏移动优化
+      - 美国|SJ1
+      - 英国-01
+      - US-FREENODE-1A
+      - 香港直连01
+      - DE-建議啟用IPV6-1B
+      - 美国 6
+      - 新加坡 B SG
+      - V2 德国 华南专线
+      - V3 美国 华南专线-NF
+      - V2 日本 华中专线
+      - 韩国|SEL2
+      - 美国|DA1
+      - US-NEWYORK3-1B
+      - 美国|SEA1
+      - 日本03丨江苏移动优化
+      - 美国CF08
+      - JP-TOKYO2 试用-1A
+      - V3 澳大利亚 华东专线
+      - 新加坡|SG06
+      - 美国 B US
+      - V1 越南 移动专线
+      - 加拿大|CA1
+      - 日本|T06
+      - V2 美国 华中专线
+      - 菲律宾|MNL2
+      - V1 英国 移动专线
+      - V3 日本 华东专线-NF
+      - 美国 A US
+      - 韩国-三网优化2-1A
+      - 美国|KS1
+      - V3 台湾 华东专线-NF
+      - 美国原生NO1
+      - 越南01
+      - V1 韩国 移动专线
+      - V2 新加坡 华中专线
+      - 香港|HK04
+      - 俄罗斯 RU BIZ
+      - BRAZIL-1A
+      - 香港 B HK
+      - 香港07-备用
+      - 日本03
+      - 中港隧道-香港3
+      - V3 香港 华南专线-NF
+      - 日本03丨山东移动优化
+      - V2 澳大利亚 华南专线
+      - 中港隧道-香港1
+      - US-NEWYORK3-1A
+      - TW 海外用户
+      - 香港|HK02
+      - 深港专线-英国
+      - 香港3
+      - V2 泰国 华南专线
+      - 日本|T03
+      - 美国|LA1
+      - 香港01-1A
+      - 美国|LA2
+      - 日本01丨江苏移动优化
+      - 美国|SJ0
+      - 香港-02
+      - 新加坡|SG03
+      - 台湾 C TW
+      - 香港01丨江苏移动优化
+      - 新加坡|SG08
+      - 香港 A HK
+      - 台湾|TW02
+      - 日本 B JP
+      - FI-HELSINKI-ONLYIPV6-2-1B
+      - 中港隧道-新加坡
+      - 日本02
+      - 法国 FR BIZ
+      - UK-LONDON-01-1A
+      - 香港02丨山东移动优化
+      - 美国02-1A
+      - HK-KOWLOON 试用-1B
+      - 日本04
+      - 日本|T02
+      - 中港隧道-台湾
+      - 新加坡|SG09
+      - FI-HELSINKI-ONLYIPV6-2-1A
+      - V3 日本 华中专线-NF
+      - 美国CF05
+      - 日本01丨山东移动优化
+      - V3 泰国 华南专线
+      - 中港隧道-加拿大
+      - 香港|HK35
+      - 台湾 A TW
+      - 深港专线-德国
+      - 越南 VN | BIZ
+      - 台湾 B TW
+      - 美国01-1A
+      - 新加坡 3
+      - 日本01
+      - 香港
+      - 新加坡 C SG
+      - V3 香港 华中专线-NF
+      - 孤云阁-03
+      - 香港01丨山东移动优化
+      - V1 香港 移动专线
+      - 新加坡 2
+      - 韩国 C KR
+      - 香港|HK05
+      - 台湾01-1B
+      - 英国01
+      - 美国原生NO3
+      - 狮城02丨广东移动优化
+      - 台湾01-1A
+      - V3 美国 华中专线-NF
+      - V3 台湾 华南专线-NF
+      - 香港04-备用
+      - 深港专线-香港1
+      - 美国 C US
+      - V3 新加坡 华东专线-NF
+      - 美国 纽约2
+      - JP-TOKYO 试用-1A
+      - 美国 1
+      - V2 香港 华南专线
+      - 日本 C JP
+      - 巴西-01
+      - 中港隧道-德国
+      - V1 澳大利亚 移动专线
+      - US-NEWYORK5-1B
+      - 香港|HK09
+      - 香港|HK06
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
+      - 香港03-1A
+      - 中港隧道-英国
+      - 香港|HK07
+      - V1 台湾 移动专线
+      - 香港01-1B
+      - 香港05-备用
+      - 深港专线-澳大利亚
+      - 中港隧道-香港2
+      - 深港专线-台湾
+      - V2 台湾 华中专线
+      - 深港专线-香港3
+      - 中港隧道-澳大利亚
+      - V3 香港 华东专线-NF
+      - V2 香港 华中专线
+      - V2 台湾 华南专线
+      - 香港02-1A
+      - 中港隧道-印度
+      - V3 台湾 华中专线-NF
       - 香港 1
+      - 深港专线-印度
+      - 香港|HK03
+      - 深港专线-加拿大
+      - 台湾|TW01
+      - 香港03-1B
+      - 香港04丨江苏移动优化
+      - 香港 C HK
+      - 中港隧道-日本
+      - 香港02-1B
+      - 香港|HK01
+      - 香港04丨山东移动优化
+      - 台湾 1
+      - 深港专线-香港2
+      - 深港专线-日本
+      - 香港|HK08
+      - 深港专线-新加坡
+      - 香港02丨江苏移动优化
+      - 香港直连01
+      - V3 台湾 华东专线-NF
+      - 香港|HK04
+      - 香港 B HK
+      - 香港07-备用
+      - 中港隧道-香港3
+      - V3 香港 华南专线-NF
+      - 中港隧道-香港1
+      - 香港|HK02
+      - 深港专线-英国
+      - 香港3
+      - 香港01-1A
+      - 香港-02
+      - 台湾 C TW
+      - 香港01丨江苏移动优化
+      - 香港 A HK
+      - 台湾|TW02
+      - 中港隧道-新加坡
+      - 香港02丨山东移动优化
+      - 中港隧道-台湾
+      - 中港隧道-加拿大
+      - 香港|HK35
+      - 台湾 A TW
+      - 深港专线-德国
+      - 台湾 B TW
+      - 香港
+      - V3 香港 华中专线-NF
+      - 香港01丨山东移动优化
+      - V1 香港 移动专线
+      - 香港|HK05
+      - 台湾01-1B
+      - 台湾01-1A
+      - V3 台湾 华南专线-NF
+      - 香港04-备用
+      - 深港专线-香港1
+      - V2 香港 华南专线
+      - 中港隧道-德国
+      - 香港|HK09
+      - 香港|HK06
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 美国 6
-      - 新加坡 2
-      - 新加坡 1
+      - 日本|T05
+      - 香港03-1A
+      - 美国-03
+      - 新加坡|SG02
+      - V2 新加坡 华南专线
+      - 韩国-三网优化2-1C
+      - 美国01-1B
+      - 中港隧道-英国
+      - 香港|HK07
+      - V1 台湾 移动专线
+      - 香港01-1B
+      - 美国01丨山东移动优化
+      - 新加坡 A SG
+      - V3 日本 华南专线-NF
+      - 日本 A JP
+      - 香港05-备用
+      - 美国02-1B
       - 美国 4
-      - 香港 1
-      - 美国 1
-      - 韩国-三网优化2-1A
-      - 新加坡 3
-      - 韩国-三网优化2-1B
+      - 日本03丨广东移动优化
+      - V3 美国 华东专线-NF
+      - 深港专线-澳大利亚
+      - V2 越南 华南专线
+      - 中港隧道-香港2
+      - 深港专线-台湾
+      - 美国|PHX1
+      - 新加坡|SG04
+      - 狮城03丨山东移动优化
+      - BRAZIL-1B
       - 美国 5
+      - V2 台湾 华中专线
+      - UK-LONDON-01-1B
+      - 深港专线-香港3
+      - US-NEWYORK5-1A
+      - HK-KOWLOON 试用-1A
+      - V3 英国 华东专线
+      - US-NEWYORK2-1A
+      - 美国CF06
+      - 新加坡03
+      - V3 新加坡 华南专线-NF
+      - V2 美国 华南专线
+      - US 海外用户
+      - 中港隧道-澳大利亚
+      - V3 香港 华东专线-NF
+      - V2 香港 华中专线
+      - V1 泰国 移动专线
+      - V2 台湾 华南专线
+      - JP-TOKYO2 试用-1B
+      - 美国原生NO4
+      - 新加坡 1
+      - 香港02-1A
+      - 狮城03丨江苏移动优化
+      - 中港隧道-印度
+      - V3 台湾 华中专线-NF
+      - 新加坡01
+      - V2 日本 华南专线
+      - 香港 1
+      - 新加坡|SG05
+      - V1 新加坡 移动专线
+      - 日本|T04
+      - 深港专线-印度
+      - V1 德国 移动专线
+      - 新加坡02
+      - 美国03
+      - 德国-01
+      - 香港|HK03
+      - 日本|T01
+      - 深港专线-加拿大
+      - 意大利|MIL1
+      - V1 美国 移动专线
+      - 台湾|TW01
+      - 韩国 A KR
+      - 香港03-1B
+      - 香港04丨江苏移动优化
+      - 马来西亚 MY | BIZ
+      - 香港 C HK
+      - 日本|T09
+      - 中港隧道-日本
+      - V2 英国 华南专线
+      - 新加坡|SG01
+      - 香港02-1B
+      - 狮城02丨江苏移动优化
+      - 稻妻0.5x 直连
+      - V1 日本 移动专线
+      - 美国 纽约01
+      - 香港|HK01
+      - V3 越南 华中专线
+      - 泰国 TH BIZ
+      - DE-建議啟用IPV6-1A
+      - 美国01丨江苏移动优化
+      - 韩国 B KR
+      - 美国04
+      - 香港04丨山东移动优化
+      - JP-TOKYO 试用-1B
+      - US-NEWYORK2-1B
+      - 韩国-三网优化2-1B
+      - 台湾 1
+      - 德国 DE | BIZ
+      - 美国原生NO2
+      - 美国CF07
+      - 深港专线-香港2
+      - 新加坡|SG07
+      - JP 海外用户
+      - 狮城02丨山东移动优化
+      - 深港专线-日本
+      - V3 新加坡 华中专线-NF
+      - 英国 UK | BIZ
+      - V3 德国 华南专线
+      - 香港|HK08
+      - US-FREENODE-1B
+      - 深港专线-新加坡
+      - 香港02丨江苏移动优化
+      - 美国|SJ1
+      - 英国-01
+      - US-FREENODE-1A
+      - 香港直连01
+      - DE-建議啟用IPV6-1B
+      - 美国 6
+      - 新加坡 B SG
+      - V2 德国 华南专线
+      - V3 美国 华南专线-NF
+      - V2 日本 华中专线
+      - 韩国|SEL2
+      - 美国|DA1
+      - US-NEWYORK3-1B
+      - 美国|SEA1
+      - 日本03丨江苏移动优化
+      - 美国CF08
+      - JP-TOKYO2 试用-1A
+      - V3 澳大利亚 华东专线
+      - 新加坡|SG06
+      - 美国 B US
+      - V1 越南 移动专线
+      - 加拿大|CA1
+      - 日本|T06
+      - V2 美国 华中专线
+      - 菲律宾|MNL2
+      - V1 英国 移动专线
+      - V3 日本 华东专线-NF
+      - 美国 A US
+      - 韩国-三网优化2-1A
+      - 美国|KS1
+      - V3 台湾 华东专线-NF
+      - 美国原生NO1
+      - 越南01
+      - V1 韩国 移动专线
+      - V2 新加坡 华中专线
+      - 香港|HK04
+      - 俄罗斯 RU BIZ
+      - BRAZIL-1A
+      - 香港 B HK
+      - 香港07-备用
+      - 日本03
+      - 中港隧道-香港3
+      - V3 香港 华南专线-NF
+      - 日本03丨山东移动优化
+      - V2 澳大利亚 华南专线
+      - 中港隧道-香港1
+      - US-NEWYORK3-1A
+      - TW 海外用户
+      - 香港|HK02
+      - 深港专线-英国
+      - 香港3
+      - V2 泰国 华南专线
+      - 日本|T03
+      - 美国|LA1
+      - 香港01-1A
+      - 美国|LA2
+      - 日本01丨江苏移动优化
+      - 美国|SJ0
+      - 香港-02
+      - 新加坡|SG03
+      - 台湾 C TW
+      - 香港01丨江苏移动优化
+      - 新加坡|SG08
+      - 香港 A HK
+      - 台湾|TW02
+      - 日本 B JP
+      - FI-HELSINKI-ONLYIPV6-2-1B
+      - 中港隧道-新加坡
+      - 日本02
+      - 法国 FR BIZ
+      - UK-LONDON-01-1A
+      - 香港02丨山东移动优化
+      - 美国02-1A
+      - HK-KOWLOON 试用-1B
+      - 日本04
+      - 日本|T02
+      - 中港隧道-台湾
+      - 新加坡|SG09
+      - FI-HELSINKI-ONLYIPV6-2-1A
+      - V3 日本 华中专线-NF
+      - 美国CF05
+      - 日本01丨山东移动优化
+      - V3 泰国 华南专线
+      - 中港隧道-加拿大
+      - 香港|HK35
+      - 台湾 A TW
+      - 深港专线-德国
+      - 越南 VN | BIZ
+      - 台湾 B TW
+      - 美国01-1A
+      - 新加坡 3
+      - 日本01
+      - 香港
+      - 新加坡 C SG
+      - V3 香港 华中专线-NF
+      - 孤云阁-03
+      - 香港01丨山东移动优化
+      - V1 香港 移动专线
+      - 新加坡 2
+      - 韩国 C KR
+      - 香港|HK05
+      - 台湾01-1B
+      - 英国01
+      - 美国原生NO3
+      - 狮城02丨广东移动优化
+      - 台湾01-1A
+      - V3 美国 华中专线-NF
+      - V3 台湾 华南专线-NF
+      - 香港04-备用
+      - 深港专线-香港1
+      - 美国 C US
+      - V3 新加坡 华东专线-NF
+      - 美国 纽约2
+      - JP-TOKYO 试用-1A
+      - 美国 1
+      - V2 香港 华南专线
+      - 日本 C JP
+      - 巴西-01
+      - 中港隧道-德国
+      - V1 澳大利亚 移动专线
+      - US-NEWYORK5-1B
+      - 香港|HK09
+      - 香港|HK06
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 美国 6
-      - 新加坡 2
-      - 新加坡 1
+      - 日本|T05
+      - 香港03-1A
+      - 美国-03
+      - 新加坡|SG02
+      - V2 新加坡 华南专线
+      - 韩国-三网优化2-1C
+      - 美国01-1B
+      - 中港隧道-英国
+      - 香港|HK07
+      - V1 台湾 移动专线
+      - 香港01-1B
+      - 美国01丨山东移动优化
+      - 新加坡 A SG
+      - V3 日本 华南专线-NF
+      - 日本 A JP
+      - 香港05-备用
+      - 美国02-1B
       - 美国 4
-      - 香港 1
-      - 美国 1
-      - 韩国-三网优化2-1A
-      - 新加坡 3
-      - 韩国-三网优化2-1B
+      - 日本03丨广东移动优化
+      - V3 美国 华东专线-NF
+      - 深港专线-澳大利亚
+      - V2 越南 华南专线
+      - 中港隧道-香港2
+      - 深港专线-台湾
+      - 美国|PHX1
+      - 新加坡|SG04
+      - 狮城03丨山东移动优化
+      - BRAZIL-1B
       - 美国 5
+      - V2 台湾 华中专线
+      - UK-LONDON-01-1B
+      - 深港专线-香港3
+      - US-NEWYORK5-1A
+      - HK-KOWLOON 试用-1A
+      - V3 英国 华东专线
+      - US-NEWYORK2-1A
+      - 美国CF06
+      - 新加坡03
+      - V3 新加坡 华南专线-NF
+      - V2 美国 华南专线
+      - US 海外用户
+      - 中港隧道-澳大利亚
+      - V3 香港 华东专线-NF
+      - V2 香港 华中专线
+      - V1 泰国 移动专线
+      - V2 台湾 华南专线
+      - JP-TOKYO2 试用-1B
+      - 美国原生NO4
+      - 新加坡 1
+      - 香港02-1A
+      - 狮城03丨江苏移动优化
+      - 中港隧道-印度
+      - V3 台湾 华中专线-NF
+      - 新加坡01
+      - V2 日本 华南专线
+      - 香港 1
+      - 新加坡|SG05
+      - V1 新加坡 移动专线
+      - 日本|T04
+      - 深港专线-印度
+      - V1 德国 移动专线
+      - 新加坡02
+      - 美国03
+      - 德国-01
+      - 香港|HK03
+      - 日本|T01
+      - 深港专线-加拿大
+      - 意大利|MIL1
+      - V1 美国 移动专线
+      - 台湾|TW01
+      - 韩国 A KR
+      - 香港03-1B
+      - 香港04丨江苏移动优化
+      - 马来西亚 MY | BIZ
+      - 香港 C HK
+      - 日本|T09
+      - 中港隧道-日本
+      - V2 英国 华南专线
+      - 新加坡|SG01
+      - 香港02-1B
+      - 狮城02丨江苏移动优化
+      - 稻妻0.5x 直连
+      - V1 日本 移动专线
+      - 美国 纽约01
+      - 香港|HK01
+      - V3 越南 华中专线
+      - 泰国 TH BIZ
+      - DE-建議啟用IPV6-1A
+      - 美国01丨江苏移动优化
+      - 韩国 B KR
+      - 美国04
+      - 香港04丨山东移动优化
+      - JP-TOKYO 试用-1B
+      - US-NEWYORK2-1B
+      - 韩国-三网优化2-1B
+      - 台湾 1
+      - 德国 DE | BIZ
+      - 美国原生NO2
+      - 美国CF07
+      - 深港专线-香港2
+      - 新加坡|SG07
+      - JP 海外用户
+      - 狮城02丨山东移动优化
+      - 深港专线-日本
+      - V3 新加坡 华中专线-NF
+      - 英国 UK | BIZ
+      - V3 德国 华南专线
+      - 香港|HK08
+      - US-FREENODE-1B
+      - 深港专线-新加坡
+      - 香港02丨江苏移动优化
+      - 美国|SJ1
+      - 英国-01
+      - US-FREENODE-1A
+      - 香港直连01
+      - DE-建議啟用IPV6-1B
+      - 美国 6
+      - 新加坡 B SG
+      - V2 德国 华南专线
+      - V3 美国 华南专线-NF
+      - V2 日本 华中专线
+      - 韩国|SEL2
+      - 美国|DA1
+      - US-NEWYORK3-1B
+      - 美国|SEA1
+      - 日本03丨江苏移动优化
+      - 美国CF08
+      - JP-TOKYO2 试用-1A
+      - V3 澳大利亚 华东专线
+      - 新加坡|SG06
+      - 美国 B US
+      - V1 越南 移动专线
+      - 加拿大|CA1
+      - 日本|T06
+      - V2 美国 华中专线
+      - 菲律宾|MNL2
+      - V1 英国 移动专线
+      - V3 日本 华东专线-NF
+      - 美国 A US
+      - 韩国-三网优化2-1A
+      - 美国|KS1
+      - V3 台湾 华东专线-NF
+      - 美国原生NO1
+      - 越南01
+      - V1 韩国 移动专线
+      - V2 新加坡 华中专线
+      - 香港|HK04
+      - 俄罗斯 RU BIZ
+      - BRAZIL-1A
+      - 香港 B HK
+      - 香港07-备用
+      - 日本03
+      - 中港隧道-香港3
+      - V3 香港 华南专线-NF
+      - 日本03丨山东移动优化
+      - V2 澳大利亚 华南专线
+      - 中港隧道-香港1
+      - US-NEWYORK3-1A
+      - TW 海外用户
+      - 香港|HK02
+      - 深港专线-英国
+      - 香港3
+      - V2 泰国 华南专线
+      - 日本|T03
+      - 美国|LA1
+      - 香港01-1A
+      - 美国|LA2
+      - 日本01丨江苏移动优化
+      - 美国|SJ0
+      - 香港-02
+      - 新加坡|SG03
+      - 台湾 C TW
+      - 香港01丨江苏移动优化
+      - 新加坡|SG08
+      - 香港 A HK
+      - 台湾|TW02
+      - 日本 B JP
+      - FI-HELSINKI-ONLYIPV6-2-1B
+      - 中港隧道-新加坡
+      - 日本02
+      - 法国 FR BIZ
+      - UK-LONDON-01-1A
+      - 香港02丨山东移动优化
+      - 美国02-1A
+      - HK-KOWLOON 试用-1B
+      - 日本04
+      - 日本|T02
+      - 中港隧道-台湾
+      - 新加坡|SG09
+      - FI-HELSINKI-ONLYIPV6-2-1A
+      - V3 日本 华中专线-NF
+      - 美国CF05
+      - 日本01丨山东移动优化
+      - V3 泰国 华南专线
+      - 中港隧道-加拿大
+      - 香港|HK35
+      - 台湾 A TW
+      - 深港专线-德国
+      - 越南 VN | BIZ
+      - 台湾 B TW
+      - 美国01-1A
+      - 新加坡 3
+      - 日本01
+      - 香港
+      - 新加坡 C SG
+      - V3 香港 华中专线-NF
+      - 孤云阁-03
+      - 香港01丨山东移动优化
+      - V1 香港 移动专线
+      - 新加坡 2
+      - 韩国 C KR
+      - 香港|HK05
+      - 台湾01-1B
+      - 英国01
+      - 美国原生NO3
+      - 狮城02丨广东移动优化
+      - 台湾01-1A
+      - V3 美国 华中专线-NF
+      - V3 台湾 华南专线-NF
+      - 香港04-备用
+      - 深港专线-香港1
+      - 美国 C US
+      - V3 新加坡 华东专线-NF
+      - 美国 纽约2
+      - JP-TOKYO 试用-1A
+      - 美国 1
+      - V2 香港 华南专线
+      - 日本 C JP
+      - 巴西-01
+      - 中港隧道-德国
+      - V1 澳大利亚 移动专线
+      - US-NEWYORK5-1B
+      - 香港|HK09
+      - 香港|HK06
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国 6
-      - 新加坡 2
-      - 新加坡 1
+      - 日本|T05
+      - 香港03-1A
+      - 美国-03
+      - 新加坡|SG02
+      - V2 新加坡 华南专线
+      - 韩国-三网优化2-1C
+      - 美国01-1B
+      - 中港隧道-英国
+      - 香港|HK07
+      - V1 台湾 移动专线
+      - 香港01-1B
+      - 美国01丨山东移动优化
+      - 新加坡 A SG
+      - V3 日本 华南专线-NF
+      - 日本 A JP
+      - 香港05-备用
+      - 美国02-1B
       - 美国 4
-      - 香港 1
-      - 美国 1
-      - 韩国-三网优化2-1A
-      - 新加坡 3
-      - 韩国-三网优化2-1B
+      - 日本03丨广东移动优化
+      - V3 美国 华东专线-NF
+      - 深港专线-澳大利亚
+      - V2 越南 华南专线
+      - 中港隧道-香港2
+      - 深港专线-台湾
+      - 美国|PHX1
+      - 新加坡|SG04
+      - 狮城03丨山东移动优化
+      - BRAZIL-1B
       - 美国 5
+      - V2 台湾 华中专线
+      - UK-LONDON-01-1B
+      - 深港专线-香港3
+      - US-NEWYORK5-1A
+      - HK-KOWLOON 试用-1A
+      - V3 英国 华东专线
+      - US-NEWYORK2-1A
+      - 美国CF06
+      - 新加坡03
+      - V3 新加坡 华南专线-NF
+      - V2 美国 华南专线
+      - US 海外用户
+      - 中港隧道-澳大利亚
+      - V3 香港 华东专线-NF
+      - V2 香港 华中专线
+      - V1 泰国 移动专线
+      - V2 台湾 华南专线
+      - JP-TOKYO2 试用-1B
+      - 美国原生NO4
+      - 新加坡 1
+      - 香港02-1A
+      - 狮城03丨江苏移动优化
+      - 中港隧道-印度
+      - V3 台湾 华中专线-NF
+      - 新加坡01
+      - V2 日本 华南专线
+      - 香港 1
+      - 新加坡|SG05
+      - V1 新加坡 移动专线
+      - 日本|T04
+      - 深港专线-印度
+      - V1 德国 移动专线
+      - 新加坡02
+      - 美国03
+      - 德国-01
+      - 香港|HK03
+      - 日本|T01
+      - 深港专线-加拿大
+      - 意大利|MIL1
+      - V1 美国 移动专线
+      - 台湾|TW01
+      - 韩国 A KR
+      - 香港03-1B
+      - 香港04丨江苏移动优化
+      - 马来西亚 MY | BIZ
+      - 香港 C HK
+      - 日本|T09
+      - 中港隧道-日本
+      - V2 英国 华南专线
+      - 新加坡|SG01
+      - 香港02-1B
+      - 狮城02丨江苏移动优化
+      - 稻妻0.5x 直连
+      - V1 日本 移动专线
+      - 美国 纽约01
+      - 香港|HK01
+      - V3 越南 华中专线
+      - 泰国 TH BIZ
+      - DE-建議啟用IPV6-1A
+      - 美国01丨江苏移动优化
+      - 韩国 B KR
+      - 美国04
+      - 香港04丨山东移动优化
+      - JP-TOKYO 试用-1B
+      - US-NEWYORK2-1B
+      - 韩国-三网优化2-1B
+      - 台湾 1
+      - 德国 DE | BIZ
+      - 美国原生NO2
+      - 美国CF07
+      - 深港专线-香港2
+      - 新加坡|SG07
+      - JP 海外用户
+      - 狮城02丨山东移动优化
+      - 深港专线-日本
+      - V3 新加坡 华中专线-NF
+      - 英国 UK | BIZ
+      - V3 德国 华南专线
+      - 香港|HK08
+      - US-FREENODE-1B
+      - 深港专线-新加坡
+      - 香港02丨江苏移动优化
+      - 美国|SJ1
+      - 英国-01
+      - US-FREENODE-1A
+      - 香港直连01
+      - DE-建議啟用IPV6-1B
+      - 美国 6
+      - 新加坡 B SG
+      - V2 德国 华南专线
+      - V3 美国 华南专线-NF
+      - V2 日本 华中专线
+      - 韩国|SEL2
+      - 美国|DA1
+      - US-NEWYORK3-1B
+      - 美国|SEA1
+      - 日本03丨江苏移动优化
+      - 美国CF08
+      - JP-TOKYO2 试用-1A
+      - V3 澳大利亚 华东专线
+      - 新加坡|SG06
+      - 美国 B US
+      - V1 越南 移动专线
+      - 加拿大|CA1
+      - 日本|T06
+      - V2 美国 华中专线
+      - 菲律宾|MNL2
+      - V1 英国 移动专线
+      - V3 日本 华东专线-NF
+      - 美国 A US
+      - 韩国-三网优化2-1A
+      - 美国|KS1
+      - V3 台湾 华东专线-NF
+      - 美国原生NO1
+      - 越南01
+      - V1 韩国 移动专线
+      - V2 新加坡 华中专线
+      - 香港|HK04
+      - 俄罗斯 RU BIZ
+      - BRAZIL-1A
+      - 香港 B HK
+      - 香港07-备用
+      - 日本03
+      - 中港隧道-香港3
+      - V3 香港 华南专线-NF
+      - 日本03丨山东移动优化
+      - V2 澳大利亚 华南专线
+      - 中港隧道-香港1
+      - US-NEWYORK3-1A
+      - TW 海外用户
+      - 香港|HK02
+      - 深港专线-英国
+      - 香港3
+      - V2 泰国 华南专线
+      - 日本|T03
+      - 美国|LA1
+      - 香港01-1A
+      - 美国|LA2
+      - 日本01丨江苏移动优化
+      - 美国|SJ0
+      - 香港-02
+      - 新加坡|SG03
+      - 台湾 C TW
+      - 香港01丨江苏移动优化
+      - 新加坡|SG08
+      - 香港 A HK
+      - 台湾|TW02
+      - 日本 B JP
+      - FI-HELSINKI-ONLYIPV6-2-1B
+      - 中港隧道-新加坡
+      - 日本02
+      - 法国 FR BIZ
+      - UK-LONDON-01-1A
+      - 香港02丨山东移动优化
+      - 美国02-1A
+      - HK-KOWLOON 试用-1B
+      - 日本04
+      - 日本|T02
+      - 中港隧道-台湾
+      - 新加坡|SG09
+      - FI-HELSINKI-ONLYIPV6-2-1A
+      - V3 日本 华中专线-NF
+      - 美国CF05
+      - 日本01丨山东移动优化
+      - V3 泰国 华南专线
+      - 中港隧道-加拿大
+      - 香港|HK35
+      - 台湾 A TW
+      - 深港专线-德国
+      - 越南 VN | BIZ
+      - 台湾 B TW
+      - 美国01-1A
+      - 新加坡 3
+      - 日本01
+      - 香港
+      - 新加坡 C SG
+      - V3 香港 华中专线-NF
+      - 孤云阁-03
+      - 香港01丨山东移动优化
+      - V1 香港 移动专线
+      - 新加坡 2
+      - 韩国 C KR
+      - 香港|HK05
+      - 台湾01-1B
+      - 英国01
+      - 美国原生NO3
+      - 狮城02丨广东移动优化
+      - 台湾01-1A
+      - V3 美国 华中专线-NF
+      - V3 台湾 华南专线-NF
+      - 香港04-备用
+      - 深港专线-香港1
+      - 美国 C US
+      - V3 新加坡 华东专线-NF
+      - 美国 纽约2
+      - JP-TOKYO 试用-1A
+      - 美国 1
+      - V2 香港 华南专线
+      - 日本 C JP
+      - 巴西-01
+      - 中港隧道-德国
+      - V1 澳大利亚 移动专线
+      - US-NEWYORK5-1B
+      - 香港|HK09
+      - 香港|HK06
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -157,16 +2023,240 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国 6
-      - 新加坡 2
-      - 新加坡 1
+      - 日本|T05
+      - 香港03-1A
+      - 美国-03
+      - 新加坡|SG02
+      - V2 新加坡 华南专线
+      - 韩国-三网优化2-1C
+      - 美国01-1B
+      - 中港隧道-英国
+      - 香港|HK07
+      - V1 台湾 移动专线
+      - 香港01-1B
+      - 美国01丨山东移动优化
+      - 新加坡 A SG
+      - V3 日本 华南专线-NF
+      - 日本 A JP
+      - 香港05-备用
+      - 美国02-1B
       - 美国 4
-      - 香港 1
-      - 美国 1
-      - 韩国-三网优化2-1A
-      - 新加坡 3
-      - 韩国-三网优化2-1B
+      - 日本03丨广东移动优化
+      - V3 美国 华东专线-NF
+      - 深港专线-澳大利亚
+      - V2 越南 华南专线
+      - 中港隧道-香港2
+      - 深港专线-台湾
+      - 美国|PHX1
+      - 新加坡|SG04
+      - 狮城03丨山东移动优化
+      - BRAZIL-1B
       - 美国 5
+      - V2 台湾 华中专线
+      - UK-LONDON-01-1B
+      - 深港专线-香港3
+      - US-NEWYORK5-1A
+      - HK-KOWLOON 试用-1A
+      - V3 英国 华东专线
+      - US-NEWYORK2-1A
+      - 美国CF06
+      - 新加坡03
+      - V3 新加坡 华南专线-NF
+      - V2 美国 华南专线
+      - US 海外用户
+      - 中港隧道-澳大利亚
+      - V3 香港 华东专线-NF
+      - V2 香港 华中专线
+      - V1 泰国 移动专线
+      - V2 台湾 华南专线
+      - JP-TOKYO2 试用-1B
+      - 美国原生NO4
+      - 新加坡 1
+      - 香港02-1A
+      - 狮城03丨江苏移动优化
+      - 中港隧道-印度
+      - V3 台湾 华中专线-NF
+      - 新加坡01
+      - V2 日本 华南专线
+      - 香港 1
+      - 新加坡|SG05
+      - V1 新加坡 移动专线
+      - 日本|T04
+      - 深港专线-印度
+      - V1 德国 移动专线
+      - 新加坡02
+      - 美国03
+      - 德国-01
+      - 香港|HK03
+      - 日本|T01
+      - 深港专线-加拿大
+      - 意大利|MIL1
+      - V1 美国 移动专线
+      - 台湾|TW01
+      - 韩国 A KR
+      - 香港03-1B
+      - 香港04丨江苏移动优化
+      - 马来西亚 MY | BIZ
+      - 香港 C HK
+      - 日本|T09
+      - 中港隧道-日本
+      - V2 英国 华南专线
+      - 新加坡|SG01
+      - 香港02-1B
+      - 狮城02丨江苏移动优化
+      - 稻妻0.5x 直连
+      - V1 日本 移动专线
+      - 美国 纽约01
+      - 香港|HK01
+      - V3 越南 华中专线
+      - 泰国 TH BIZ
+      - DE-建議啟用IPV6-1A
+      - 美国01丨江苏移动优化
+      - 韩国 B KR
+      - 美国04
+      - 香港04丨山东移动优化
+      - JP-TOKYO 试用-1B
+      - US-NEWYORK2-1B
+      - 韩国-三网优化2-1B
+      - 台湾 1
+      - 德国 DE | BIZ
+      - 美国原生NO2
+      - 美国CF07
+      - 深港专线-香港2
+      - 新加坡|SG07
+      - JP 海外用户
+      - 狮城02丨山东移动优化
+      - 深港专线-日本
+      - V3 新加坡 华中专线-NF
+      - 英国 UK | BIZ
+      - V3 德国 华南专线
+      - 香港|HK08
+      - US-FREENODE-1B
+      - 深港专线-新加坡
+      - 香港02丨江苏移动优化
+      - 美国|SJ1
+      - 英国-01
+      - US-FREENODE-1A
+      - 香港直连01
+      - DE-建議啟用IPV6-1B
+      - 美国 6
+      - 新加坡 B SG
+      - V2 德国 华南专线
+      - V3 美国 华南专线-NF
+      - V2 日本 华中专线
+      - 韩国|SEL2
+      - 美国|DA1
+      - US-NEWYORK3-1B
+      - 美国|SEA1
+      - 日本03丨江苏移动优化
+      - 美国CF08
+      - JP-TOKYO2 试用-1A
+      - V3 澳大利亚 华东专线
+      - 新加坡|SG06
+      - 美国 B US
+      - V1 越南 移动专线
+      - 加拿大|CA1
+      - 日本|T06
+      - V2 美国 华中专线
+      - 菲律宾|MNL2
+      - V1 英国 移动专线
+      - V3 日本 华东专线-NF
+      - 美国 A US
+      - 韩国-三网优化2-1A
+      - 美国|KS1
+      - V3 台湾 华东专线-NF
+      - 美国原生NO1
+      - 越南01
+      - V1 韩国 移动专线
+      - V2 新加坡 华中专线
+      - 香港|HK04
+      - 俄罗斯 RU BIZ
+      - BRAZIL-1A
+      - 香港 B HK
+      - 香港07-备用
+      - 日本03
+      - 中港隧道-香港3
+      - V3 香港 华南专线-NF
+      - 日本03丨山东移动优化
+      - V2 澳大利亚 华南专线
+      - 中港隧道-香港1
+      - US-NEWYORK3-1A
+      - TW 海外用户
+      - 香港|HK02
+      - 深港专线-英国
+      - 香港3
+      - V2 泰国 华南专线
+      - 日本|T03
+      - 美国|LA1
+      - 香港01-1A
+      - 美国|LA2
+      - 日本01丨江苏移动优化
+      - 美国|SJ0
+      - 香港-02
+      - 新加坡|SG03
+      - 台湾 C TW
+      - 香港01丨江苏移动优化
+      - 新加坡|SG08
+      - 香港 A HK
+      - 台湾|TW02
+      - 日本 B JP
+      - FI-HELSINKI-ONLYIPV6-2-1B
+      - 中港隧道-新加坡
+      - 日本02
+      - 法国 FR BIZ
+      - UK-LONDON-01-1A
+      - 香港02丨山东移动优化
+      - 美国02-1A
+      - HK-KOWLOON 试用-1B
+      - 日本04
+      - 日本|T02
+      - 中港隧道-台湾
+      - 新加坡|SG09
+      - FI-HELSINKI-ONLYIPV6-2-1A
+      - V3 日本 华中专线-NF
+      - 美国CF05
+      - 日本01丨山东移动优化
+      - V3 泰国 华南专线
+      - 中港隧道-加拿大
+      - 香港|HK35
+      - 台湾 A TW
+      - 深港专线-德国
+      - 越南 VN | BIZ
+      - 台湾 B TW
+      - 美国01-1A
+      - 新加坡 3
+      - 日本01
+      - 香港
+      - 新加坡 C SG
+      - V3 香港 华中专线-NF
+      - 孤云阁-03
+      - 香港01丨山东移动优化
+      - V1 香港 移动专线
+      - 新加坡 2
+      - 韩国 C KR
+      - 香港|HK05
+      - 台湾01-1B
+      - 英国01
+      - 美国原生NO3
+      - 狮城02丨广东移动优化
+      - 台湾01-1A
+      - V3 美国 华中专线-NF
+      - V3 台湾 华南专线-NF
+      - 香港04-备用
+      - 深港专线-香港1
+      - 美国 C US
+      - V3 新加坡 华东专线-NF
+      - 美国 纽约2
+      - JP-TOKYO 试用-1A
+      - 美国 1
+      - V2 香港 华南专线
+      - 日本 C JP
+      - 巴西-01
+      - 中港隧道-德国
+      - V1 澳大利亚 移动专线
+      - US-NEWYORK5-1B
+      - 香港|HK09
+      - 香港|HK06
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
