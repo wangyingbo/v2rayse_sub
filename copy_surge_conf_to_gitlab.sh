@@ -40,7 +40,7 @@ done
 
 
 
-cp $source_folder/tglaoshiji.yaml tglaoshiji.yaml
+rm -rf tglaoshiji; cp -r $source_folder/tglaoshiji tglaoshiji
 rm -rf gist_config; cp -r $source_folder/gist_config gist_config
 rm -rf github_config; cp -r $source_folder/github_config github_config
 rm -rf top_size; cp -r $source_folder/top_size top_size
