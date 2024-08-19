@@ -1,22 +1,22 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-08-18 23:45:12
+# 创建时间：2024-08-19 00:24:03
 # 使用模版：ACL4SSR_Mini.ini
 # 节点数量：990
 # 节点类型：ss, vmess, trojan
 ####################################
 mixed-port: 7890
-allow-lan: false
-log-level: silent
-external-controller: 127.0.0.1:9090
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
 dns:
   enabled: true
   listen: 0.0.0.0:1053
   ipv6: true
   default-nameserver:
-    - tls://1.1.1.1:443
-    - tls://9.9.9.9:443
+    - 223.5.5.5
+    - 114.114.114.114
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -77,12 +77,13 @@ dns:
     - stun.*.*.*
     - '*.mcdn.bilivideo.cn'
   nameserver:
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.quad9.net/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   fallback-filter:
-    geoip: true
+    geoip: false
     ipcidr:
       - 240.0.0.0/4
+      - 0.0.0.0/32
 
 proxies:
   - {"name":"加拿大-864.1KB/s","type":"ss","server":"38.114.114.143","port":7002,"password":"RexnBgU7EV5ADxG","cipher":"aes-256-gcm"}
@@ -2075,10 +2076,7 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 1
-    lazy: true
-    timeout: 1
-    max-failed-times: 1
+    fallback-auto: true
     proxies:
       - 加拿大-864.1KB/s
       - 德国-123.2KB/s
