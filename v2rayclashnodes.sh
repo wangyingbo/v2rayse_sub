@@ -14,6 +14,7 @@ current_date=$(date +%Y%m%d)
 current_time=$(date +"Today is %A, %B %d, %Y %H:%M:%S")
 year=$(date +"%Y")
 month=$(date +"%m")
+yesterday_month=$month
 # 获取当前小时（24小时制）
 current_hour=$(date +"%H")
 sub_file_folder='v2rayclashnodes'
@@ -28,22 +29,27 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "运行在 macOS 上 (Running on macOS) "
     echo "\n"
     yesterday=$(date -v-1d +"%Y%m%d")
+    yesterday_month=$(date -v-1d +"%m")
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     echo "运行在 Linux 上 (Running on Linux) "
     echo "\n"
     yesterday=$(date -d "yesterday" +"%Y%m%d")
+    yesterday_month=$(date -d "yesterday" +"%m")
 else
     echo "未知的操作系统: $OSTYPE (Unknown OS) "
     echo "\n"
     yesterday=$(date -d "yesterday" +"%Y%m%d")
+    yesterday_month=$(date -d "yesterday" +"%m")
 fi
 
-if [ $current_hour -ge 8 ]; then
-    echo "当前时间大于8点"
+if [ $current_hour -ge 20 ]; then
+    echo "当前时间大于20点"
     yesterday=$today
+    yesterday_month=$month
 else
-    echo "当前时间小于8点"
+    echo "当前时间小于20点"
     yesterday=$yesterday
+    yesterday_month=$yesterday_month
 fi
 echo "\n"
 
@@ -62,15 +68,15 @@ mkdir -p $sub_file_folder/$sub_category_v2ray
 
 
 # https://v2rayclashnodes.github.io/uploads/2024/08/0-20240819.yaml
-for i in {0..5}
+for i in {0..4}
 do
-	clash_url="https://v2rayclashnodes.github.io/uploads/${year}/$month/$i-${ybdate}.yaml"
+	clash_url="https://v2rayclashnodes.github.io/uploads/${year}/${yesterday_month}/$i-${ybdate}.yaml"
   	echo "Current clash download url: $clash_url"
   	echo "\n"
   	curl $clash_url > $sub_file_folder/$sub_category_clash/${sub_file_name}_clash$i.yaml
   	echo "\n"
 
-  	v2ray_url="https://v2rayclashnodes.github.io/uploads/${year}/$month/$i-${ybdate}.txt"
+  	v2ray_url="https://v2rayclashnodes.github.io/uploads/${year}/$yesterday_month/$i-${ybdate}.txt"
   	echo "Current v2ray download url: $v2ray_url"
   	echo "\n"
   	curl $v2ray_url > $sub_file_folder/$sub_category_v2ray/${sub_file_name}_v2ray$i.txt
