@@ -5,907 +5,487 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇸🇬 新加坡|SG07, server: mv1o3vp77038y0c908r30igoxu8kkaz4.01.07.sg.k7h.lol, port: 19310, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇰🇷 韩国 B KR, server: kr2.iepl.cooc.icu, port: 35102, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇺🇸 美国-03, server: us-03.speedup.club, port: 443, type: vmess, uuid: f9c62194-930b-41b7-8682-0c23068d4bae, alterId: 0, cipher: auto, tls: true, udp: true}
-  - {name: 🇺🇸 美国CF08, server: gdcub.yunnode.win, port: 15735, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇬🇧 英国1, server: haa.dashuai.cyou, port: 45064, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇯🇵 日本03丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 42684, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇮🇳 印度1, server: haa.dashuai.cyou, port: 45074, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇯🇵 日本-1-1A, server: oracle-amd-tokyo1.lanmaoyun.icu, port: 30001, type: hysteria2, password: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, auth: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, sni: tokyo.nodes.lanmaoyun.icu, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 日本|T02, server: 37wibcada2l1ms8dg2c28z0yz498t8gs.01.02.jp.k7h.lol, port: 10954, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇭🇰 香港-1B, server: xg1.tcity8.buzz, port: 10010, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇸🇬 新加坡-2, server: 47.236.31.135, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, flow: xtls-rprx-vision, servername: sg-al-2.wymv.top, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇺🇸 US-NEWYORK3, server: cdn3.internetcdn.ggff.net, port: 8880, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
-  - {name: 🇭🇰 香港|HK35, server: fsknvk9vbvstaemqbsswrz7mp78x5p31.01.09.hk.k7h.lol, port: 33938, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇭🇰 香港02丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 23416, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇭🇰 香港02-1B, server: gy.666666222.shop, port: 20035, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇭🇰 香港02-1A, server: gdcub.yunnode.win, port: 15931, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇦🇪 迪拜-CF多线-1, server: xn--b6gac.eu.org, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-dubai-1.wymv.top}}, udp: true}
-  - {name: 🇮🇳 印度2, server: xdd.dashuai.cyou, port: 45073, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 香港03-1B, server: gy.666666222.shop, port: 20052, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇲🇾 马来西亚 MY | BIZ, server: mas.cooc.icu, port: 35603, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇭🇰 香港04丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 24226, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇯🇵 IOVEVPN日本中转-2, server: gdcub.yunnode.win, port: 30347, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
-  - {name: 🇯🇵 日本-2-1A, server: oracle-amd-osaka1.lanmaoyun.icu, port: 30001, type: hysteria2, password: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, auth: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, sni: osaka.nodes.lanmaoyun.icu, skip-cert-verify: false, udp: true}
-  - {name: 🇸🇬 新加坡 A SG, server: sg1.iepl.cooc.icu, port: 35105, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 2, server: gdcub.yunnode.win, port: 38518, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
-  - {name: 🇹🇼 台湾1, server: haa.dashuai.cyou, port: 45078, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇺🇸 美国|KS1, server: hwbnmha68cjqtwdjvzzi2h3unp4unpcf.01.02.us.k7h.lol, port: 14506, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇰🇷 韩国|SEL2, server: c5849ijggsbqg67jl41hfs7t6r12hctr.01.02.kr.k7h.lol, port: 23464, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇯🇵 日本01丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 18190, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 孤云阁-03, server: gdcub.yunnode.win, port: 48138, type: vmess, uuid: db70909a-3583-4d76-b796-0e062c7235c0, alterId: 0, cipher: auto, tls: false, udp: true}
   - {name: 🇹🇼 台湾 1, server: gy.666666222.shop, port: 20032, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇭🇰 香港-3, server: 149.104.26.31, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, flow: xtls-rprx-vision, servername: hk-yc.wymv.top, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇹🇼 台湾01-1A, server: gdcub.yunnode.win, port: 15632, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇺🇸 美国02-1B, server: gd.xueyejiasu.com, port: 58159, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇺🇸 美国01丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 41775, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇺🇸 美国|SJ1, server: ngvxmhksbldzq1tyfnea1o96cvlosmrg.01.09.us.k7h.lol, port: 31479, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇭🇰 香港05-备用, server: 140.249.160.81, port: 15639, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇸🇬 新加坡|SG06, server: z4tfkud3wk99y8g8ohztxfuvswssw5po.01.06.sg.k7h.lol, port: 26515, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇺🇸 美国|LA2, server: qipgm5kkpl73o8f4y32vx79hl2j1kx30.01.05.us.k7h.lol, port: 44432, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇭🇰 中港隧道-澳大利亚, server: jzgz.tcity8.monster, port: 22237, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇩🇪 DE-建議啟用IPV6, server: 2a01:4f8:272:5aa1:424f:59ad:652a:cc71, port: 2052, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoftvideo/HEAC?ed=2048", headers: {Host: falkenstein.saxony.germany.internetcdn.internetacc.live}}, udp: true}
-  - {name: 🇫🇷 法国 FR BIZ, server: fr.cooc.icu, port: 35611, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇰🇷 韩国 C KR, server: kr3.iepl.cooc.icu, port: 35609, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇯🇵 日本NO.2, server: xdd.dashuai.cyou, port: 45057, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇯🇵 JP-TOKYO 试用, server: 53.220.187.35.bc.googleusercontent.com, port: 8080, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/amdgpu/TG@pwsair/amdcpu?ed=2048", headers: {Host: 53.220.187.35.bc.googleusercontent.com}}, udp: true}
-  - {name: 🇬🇧 英国 UK | BIZ, server: uk.cooc.icu, port: 35605, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇭🇰 香港 B HK, server: hk2.iepl.cooc.icu, port: 22881, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇭🇰 深港专线-香港1, server: dzgz.tcity8.monster, port: 35212, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇩🇪 德国 DE | BIZ, server: ge.cooc.icu, port: 35607, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇭🇰 香港|HK01, server: b0cmsj2g4by8fjivwb0vr87qemjshix7.01.01.hk.k7h.lol, port: 40803, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇯🇵 日本-1-1B, server: 8.211.128.156, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, flow: xtls-rprx-vision, servername: jp-al-1.wymv.top, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇹🇼 台湾A, server: haa.dashuai.cyou, port: 45058, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1D, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 0088a285-ff79-40a0-aecc-f72dacb037cb, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 日本-2-1B, server: 8.209.240.64, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, flow: xtls-rprx-vision, servername: jp-al-2.wymv.top, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇺🇸 美国|SJ0, server: xzyvpw6mbom9r5kr7xfmt8iavehdokkj.01.08.us.k7h.lol, port: 29126, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇺🇸 美国原生NO1, server: jzgz.tcity8.monster, port: 22000, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇯🇵 日本 B JP, server: jp2.iepl.cooc.icu, port: 47101, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇺🇸 美国|DA1, server: amj0g7zkbkb6z8h251y54tr6tuvqedfz.01.01.us.k7h.lol, port: 15513, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇯🇵 日本NO.1, server: haa.dashuai.cyou, port: 45056, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3591498b-14a6-46cc-8159-f02366139cd8, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇸🇬 IOVEVPN新加坡中转-2, server: gdcub.yunnode.win, port: 34188, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
-  - {name: 🇺🇸 美国2, server: xdd.dashuai.cyou, port: 45071, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 香港07-备用, server: 140.249.160.81, port: 15641, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇭🇰 香港-1, server: 47.238.115.89, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, servername: hk-al-1.wymv.top, network: tcp, udp: true}
-  - {name: 🇭🇰 中港隧道-加拿大, server: jzgz.tcity8.monster, port: 22236, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇺🇸 美国CF06, server: gdcub.yunnode.win, port: 15731, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇸🇬 新加坡|SG03, server: r28i2xggabv9xlgp8yg2ntbjwhh0wv9x.01.03.sg.k7h.lol, port: 24219, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇭🇰 中港隧道-香港3, server: jzgz.tcity8.monster, port: 22003, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇹🇼 台湾01-1B, server: gd.xueyejiasu.com, port: 47564, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇺🇸 美国1, server: haa.dashuai.cyou, port: 45070, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇸🇬 新加坡-1-1A, server: oracle-amd-singapore1.lanmaoyun.icu, port: 30001, type: hysteria2, password: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, auth: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, sni: main.nodes.lanmaoyun.icu, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: d1e6c794-5b4f-4a78-98c4-7c097f137b93, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇺🇸 美国 B US, server: usa2.iepl.cooc.icu, port: 32881, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇭🇰 香港-02, server: hk-02.speedup.club, port: 443, type: vmess, uuid: f9c62194-930b-41b7-8682-0c23068d4bae, alterId: 0, cipher: auto, tls: true, udp: true}
-  - {name: 🇷🇺 俄罗斯 RU BIZ, server: ru.cooc.icu, port: 35645, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇭🇰 深港专线-香港3, server: dzgz.tcity8.monster, port: 35214, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 中港隧道-印度, server: jzgz.tcity8.monster, port: 22238, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 深港专线-印度, server: dzgz.tcity8.monster, port: 35223, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 深港专线-香港2, server: dzgz.tcity8.monster, port: 35213, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇯🇵 日本|T03, server: ey8fjifra77qvqfvx48rtlo97uk8u0kc.01.03.jp.k7h.lol, port: 40546, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇸🇬 新加坡 C SG, server: sg3.iepl.cooc.icu, port: 35107, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇸🇬 新加坡NO.1, server: haa.dashuai.cyou, port: 45054, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 中港隧道-德国, server: jzgz.tcity8.monster, port: 22230, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 香港01丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 18641, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 多伦多-CF多线-1, server: cfip.cfcdn.vip, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-dubai-1.wymv.top}}, udp: true}
-  - {name: 🇹🇼 台湾 C TW, server: tw3.iepl.cooc.icu, port: 35111, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇺🇸 美国NO.1, server: haa.dashuai.cyou, port: 45052, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇸🇬 狮城03丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 24715, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇺🇸 美国04, server: gdcub.yunnode.win, port: 15728, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇬🇧 伦敦-CF多线-3, server: cnamefuckxxs.yuchen.icu, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-london-1.wymv.top}}, udp: true}
-  - {name: 3中转-2, server: gdcub.yunnode.win, port: 49757, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
-  - {name: 🇺🇸 IOVEVPN美国中转-2, server: gdcub.yunnode.win, port: 36455, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
-  - {name: 🇨🇦 加拿大|CA1, server: 8gfry0izrou80f1412wrxf3mcw9t6ml4.01.01.ca.k7h.lol, port: 19915, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇭🇰 中港隧道-英国, server: jzgz.tcity8.monster, port: 22229, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 香港02丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 23416, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇯🇵 日本 C JP, server: jp3.iepl.cooc.icu, port: 19881, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇭🇰 香港|HK02, server: h6nuk79gmk6lfw1do9mue5s6z7iekh6w.01.02.hk.k7h.lol, port: 24517, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇬🇧 UK-LONDON-01, server: cdnblog.intacc-cdn.arjcet.org, port: 2082, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair?ed=2048", headers: {Host: London.England.UnitedKingdom.internetcdn.internetacc.live}}, udp: true}
-  - {name: 🇺🇸 美国NO.2, server: xdd.dashuai.cyou, port: 45053, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇸🇬 新加坡01, server: gdcub.yunnode.win, port: 15636, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇺🇸 US-NEWYORK2, server: all.in.one.cdn.intacc-cdn.arjcet.org, port: 8880, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
-  - {name: 🇹🇼 台湾 B TW, server: tw2.iepl.cooc.icu, port: 35110, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇦🇺 澳大利亚原生2, server: xdd.dashuai.cyou, port: 45080, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇲🇴 澳门NO.2, server: xdd.dashuai.cyou, port: 45051, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 2香港中转-2, server: gdcub.yunnode.win, port: 59682, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
-  - {name: 🇭🇰 深港专线-澳大利亚, server: dzgz.tcity8.monster, port: 35220, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇺🇸 美国 A US, server: usa1.iepl.cooc.icu, port: 31881, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇯🇵 日本01, server: gy.666666222.shop, port: 20002, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 稻妻0.5x 直连, server: cdn1.misaka-mikoto.xyz, port: 443, type: trojan, password: db70909a-3583-4d76-b796-0e062c7235c0, sni: cdn1.misaka-mikoto.xyz, skip-cert-verify: false, udp: true}
-  - {name: 🇭🇰 香港 A HK, server: hk1.iepl.cooc.icu, port: 21881, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 1fef5da0-f2eb-4993-ae1f-86ff238f0cfb, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
   - {name: 🇺🇸 美国CF07, server: gdcub.yunnode.win, port: 15733, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇯🇵 日本|T09, server: 932f6b684d1350jxglp6xnsqv7pu0yju.01.09.jp.k7h.lol, port: 27334, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇭🇰 中港隧道-日本, server: jzgz.tcity8.monster, port: 22235, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇬🇧 英国2, server: xdd.dashuai.cyou, port: 45065, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇯🇵 日本02, server: gy.666666222.shop, port: 20004, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
+  - {name: 🇸🇬 新加坡|SG01, server: g6lqxb2il2ftakfibcnurrqzrs2r1bc4.01.01.sg.k7h.lol, port: 34781, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇹🇼 台湾|TW02, server: e9782wm51iupk7t5r88rvzxrwd63n68t.01.02.tw.k7h.lol, port: 35805, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇯🇵 大阪-CF多线-5, server: kcjb.cloudflare.182682.xyz, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-tokyo-5.wymv.top}}, udp: true}
+  - {name: 🇸🇬 新加坡|SG04, server: ni5u78xe9klwinkd6ucpdaaa893sgf2i.01.04.sg.k7h.lol, port: 33885, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇭🇰 香港04-备用, server: 140.249.160.81, port: 15638, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇬🇧 英国01, server: gdcub.yunnode.win, port: 15634, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
   - {name: 🇺🇸 美国01-1A, server: gdcub.yunnode.win, port: 15532, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
   - {name: 🇭🇰 香港直连01, server: hk01.xfxnode.top, port: 443, type: vmess, uuid: a39c8845-8ee4-4e62-9dcc-3cda2742a401, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /hk01, headers: {Host: hk01.xfxnode.top}}, udp: true}
-  - {name: 🇹🇼 台湾|TW01, server: r8m5bwrazkp5cziims6mgpy1vh9uzb8m.01.01.tw.k7h.lol, port: 45614, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇭🇰 香港01-1B, server: gd.xueyejiasu.com, port: 34338, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇰🇷 韩国 A KR, server: kr1.iepl.cooc.icu, port: 35101, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇭🇰 香港|HK05, server: amua1dxj2k0gw0vhpr12lyu8pbh2hnwk.01.05.hk.k7h.lol, port: 48464, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1F, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 68386a97-b7bf-4335-840c-df60d2f1e311, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇭🇰 中港隧道-香港1, server: jzgz.tcity8.monster, port: 22224, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇺🇸 美国 C US, server: usa3.iepl.cooc.icu, port: 33881, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇸🇬 新加坡|SG08, server: z8g5u2gf8gh33op9krzx0relkzpyiwec.01.08.sg.k7h.lol, port: 35197, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇸🇬 新加坡NO.2, server: xdd.dashuai.cyou, port: 45055, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1E, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 1fef5da0-f2eb-4993-ae1f-86ff238f0cfb, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-首尔, server: oracle-arm-seoul1.lanmaoyun.icu, port: 30001, type: hysteria2, password: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, auth: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, sni: korea.nodes.lanmaoyun.icu, skip-cert-verify: false, udp: true}
-  - {name: 🇵🇭 菲律宾|MNL2, server: gqc4ar2riqnjbl5y0yoabms73duaa27w.01.02.ph.k7h.lol, port: 31865, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇬🇧 伦敦-CF多线-1, server: cf.0sm.com, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-london-1.wymv.top}}, udp: true}
-  - {name: 🇺🇸 美国01-1B, server: gd.xueyejiasu.com, port: 56011, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇸🇬 新加坡|SG05, server: 0mkp03sm58v9imdlus81lpywdtrmnjzk.01.05.sg.k7h.lol, port: 48641, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇯🇵 日本02, server: gy.666666222.shop, port: 20004, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇭🇰 香港 C HK, server: hk3.iepl.cooc.icu, port: 23881, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: BRAZIL, server: all.in.one.cdn.intacc-cdn.arjcet.org, port: 8080, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/Microsoftupdate/TG@pwsair?ed=2048", headers: {Host: jardimperiperi.paulo.brazil.arjcet.org}}, udp: true}
-  - {name: 🇭🇰 深港专线-台湾, server: dzgz.tcity8.monster, port: 35224, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇸🇬 新加坡 B SG, server: sg2.iepl.cooc.icu, port: 35106, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇺🇸 美国|LA1, server: c7r96zr6rodueegoklve4hnim84qflm5.01.04.us.k7h.lol, port: 17201, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇰🇷 韩国-2, server: oracle-arm-chuncheon2.lanmaoyun.icu, port: 30001, type: hysteria2, password: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, auth: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, sni: korea.nodes.lanmaoyun.icu, skip-cert-verify: false, udp: true}
-  - {name: 🇭🇰 中港隧道-香港2, server: jzgz.tcity8.monster, port: 22226, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 中港隧道-新加坡, server: jzgz.tcity8.monster, port: 22231, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇺🇸 美国原生NO4, server: dzgz.tcity8.monster, port: 35208, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 香港NO.1, server: haa.dashuai.cyou, port: 45050, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇸🇬 新加坡|SG01, server: g6lqxb2il2ftakfibcnurrqzrs2r1bc4.01.01.sg.k7h.lol, port: 34781, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇯🇵 日本03丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 42684, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇬🇧 英国-01, server: uk-01.speedup.club, port: 443, type: vmess, uuid: f9c62194-930b-41b7-8682-0c23068d4bae, alterId: 0, cipher: auto, tls: true, udp: true}
-  - {name: 🇺🇸 美国CF05, server: gdcub.yunnode.win, port: 15729, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇺🇸 美国 纽约01, server: gy.666666222.shop, port: 20013, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇭🇰 香港|HK06, server: avsmv88x2nuexp260cwd5z94w7l65d4j.06.01.hk.k7h.lol, port: 37870, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇸🇬 新加坡-1-1B, server: 47.236.128.92, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, flow: xtls-rprx-vision, servername: sg-al.wymv.top, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇺🇸 US-FREENODE, server: exclusively-foriran.internetcdn.ggff.net, port: 8880, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
-  - {name: 🇮🇹 意大利|MIL1, server: jd8yx7tn8tpemdko9jj77c54brzyehv2.01.01.it.k7h.lol, port: 44191, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇹🇼 IOVEVPN台湾中转-2, server: gdcub.yunnode.win, port: 51168, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
-  - {name: 🇸🇬 狮城02丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 22189, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇭🇰 香港04丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 22333, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇭🇰 深港专线-英国, server: dzgz.tcity8.monster, port: 35221, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 深港专线-新加坡, server: dzgz.tcity8.monster, port: 35217, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇸🇬 IOVEVPN新加坡中转-2, server: gdcub.yunnode.win, port: 34188, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
+  - {name: 🇹🇼 TW-TAOYUAN 试用-20x 0828, server: 74.216.206.35.bc.googleusercontent.com, port: 8080, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/amdgpu/TG@pwsair/amdcpu?ed=2048", headers: {Host: 74.216.206.35.bc.googleusercontent.com}}, udp: true}
   - {name: 🇭🇰 香港03-1A, server: gdcub.yunnode.win, port: 15635, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇻🇳 越南01, server: gdcub.yunnode.win, port: 15642, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇺🇸 美国02-1A, server: gdcub.yunnode.win, port: 15628, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇯🇵 日本|T01, server: te0vqtkc621xeb0odkc0vcvuxa1bghtu.01.01.jp.k7h.lol, port: 20037, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇬🇧 英国01, server: gdcub.yunnode.win, port: 15634, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇯🇵 日本03丨广东移动优化, server: gzgjc123.xiyunchen.cn, port: 64902, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇭🇰 香港-1A, server: xg.dashuai.cyou, port: 19901, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇹🇼 台湾|TW02, server: e9782wm51iupk7t5r88rvzxrwd63n68t.01.02.tw.k7h.lol, port: 35805, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇺🇸 US 海外用户, server: us.cooc.icu, port: 35881, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇯🇵 日本|T06, server: ry06d97r36ffi37o3zv3728donyc5trg.01.06.jp.k7h.lol, port: 13465, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇭🇰 香港-2, server: 8.217.102.5, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, flow: xtls-rprx-vision, servername: hk-al-2.wymv.top, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 🇯🇵 日本 A JP, server: jp1.iepl.cooc.icu, port: 47100, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇯🇵 日本04, server: gy.666666222.shop, port: 20008, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇦🇺 澳大利亚原生1, server: haa.dashuai.cyou, port: 45062, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇹🇼 台湾 A TW, server: tw1.iepl.cooc.icu, port: 35109, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇺🇸 US-NEWYORK5, server: cdnblog.internetcdn.ggff.net, port: 8880, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
-  - {name: 🇺🇸 美国原生NO2, server: dzgz.tcity8.monster, port: 35209, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 香港|HK03, server: 8qxv7x5druqs530kxmho2p19e1zuzgko.01.03.hk.k7h.lol, port: 22299, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇺🇸 美国|SEA1, server: h6i8uaqrtu673hgl5ug0t8ycoou566a4.01.07.us.k7h.lol, port: 38322, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇭🇰 中港隧道-台湾, server: jzgz.tcity8.monster, port: 22240, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇻🇳 越南 VN | BIZ, server: vn.cooc.icu, port: 35601, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇯🇵 日本01丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 21744, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇭🇰 深港专线-加拿大, server: dzgz.tcity8.monster, port: 35216, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 香港01-1A, server: gdcub.yunnode.win, port: 19630, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇸🇬 狮城02丨广东移动优化, server: gzgjc123.xiyunchen.cn, port: 30544, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇸🇬 新加坡|SG04, server: ni5u78xe9klwinkd6ucpdaaa893sgf2i.01.04.sg.k7h.lol, port: 33885, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇹🇼 台湾B, server: xdd.dashuai.cyou, port: 45059, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 218e297e-6019-4905-b834-d6a4f8738df1, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇸🇬 狮城02丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 22189, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇯🇵 日本|T04, server: 8w4c7ank05l8iiamzvd07b0772c8ttjd.01.04.jp.k7h.lol, port: 36708, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇭🇰 HK-KOWLOON 试用, server: 61.167.215.35.bc.googleusercontent.com, port: 8080, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/amdgpu/TG@pwsair/amdcpu?ed=2048", headers: {Host: 129.152.215.35.bc.googleusercontent.com}}, udp: true}
-  - {name: 🇭🇰 香港|HK07, server: cnjr8bct4osdfi8qigcq33dgbxlfyhtt.01.07.hk.k7h.lol, port: 34242, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇯🇵 日本03, server: gy.666666222.shop, port: 20006, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇺🇸 美国|PHX1, server: ylw36wrqepfywys903i0b0oh1bemi6zn.01.06.us.k7h.lol, port: 34467, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇸🇬 新加坡|SG02, server: ubbexvcps2zxmfl8d9xdblwj7h2l5qrb.01.02.sg.k7h.lol, port: 14556, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇯🇵 日本|T05, server: 59lcrjxq8d0dg56ulk8xgz715pa2sp7i.01.05.jp.k7h.lol, port: 23718, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇺🇸 圣何塞-CF多线, server: cfip.xxxxxxxx.tk, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-sanjose.wymv.top}}, udp: true}
-  - {name: 🇺🇸 北美-US-圣何塞-2, server: oracle-amd-san-jose2.lanmaoyun.icu, port: 30001, type: hysteria2, password: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, auth: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, sni: san-jose2.nodes.lanmaoyun.icu, skip-cert-verify: false, udp: true}
-  - {name: 🇺🇸 美国 纽约2, server: gy.666666222.shop, port: 20016, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇺🇸 美国03, server: gd.xueyejiasu.com, port: 42414, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
-  - {name: 🇯🇵 大阪-CF多线-5, server: kcjb.cloudflare.182682.xyz, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-tokyo-5.wymv.top}}, udp: true}
-  - {name: 🇯🇵 JP 海外用户, server: jp.cooc.icu, port: 10001, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3591498b-14a6-46cc-8159-f02366139cd8, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇸🇬 新加坡-1, server: 47.236.128.92, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, flow: xtls-rprx-vision, servername: sg-al.wymv.top, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇩🇪 DE-建議啟用IPV6, server: 2a01:4f8:272:5aa1:424f:59ad:652a:cc71, port: 2052, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoftvideo/HEAC?ed=2048", headers: {Host: falkenstein.saxony.germany.internetcdn.internetacc.live}}, udp: true}
+  - {name: 🇺🇸 美国|LA1, server: c7r96zr6rodueegoklve4hnim84qflm5.01.04.us.k7h.lol, port: 17201, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇹🇼 台湾01-1A, server: gdcub.yunnode.win, port: 15632, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇸🇬 新加坡|SG05, server: 0mkp03sm58v9imdlus81lpywdtrmnjzk.01.05.sg.k7h.lol, port: 48641, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
   - {name: 马赛-CF多线-1, server: fast.issue.us.kg, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-marseille-1.wymv.top}}, udp: true}
+  - {name: 🇬🇧 UK-LONDON-01, server: cdnblog.intacc-cdn.arjcet.org, port: 2082, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair?ed=2048", headers: {Host: London.England.UnitedKingdom.internetcdn.internetacc.live}}, udp: true}
   - {name: 🇭🇰 香港|HK04, server: aviely73o6kyviv5gk9dppbey75uma7q.01.04.hk.k7h.lol, port: 49486, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇯🇵 JP-TOKYO2 试用, server: shibuya-tokyo-japan-amazon.sgqt.fun, port: 8080, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/TG@pwsair/microsoft?ed=2048", headers: {Host: shibuya.tokyo.japan.amazon.intacc-cdn.arjcet.org}}, udp: true}
-  - {name: 🇭🇰 深港专线-日本, server: dzgz.tcity8.monster, port: 35218, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇸🇬 狮城03丨江苏移动优化, server: 0e8383f2446d374c.cdn.jiashule.com, port: 44055, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇹🇼 台湾2, server: xdd.dashuai.cyou, port: 45077, type: vmess, uuid: 1d764384-d002-4125-90a4-67028131ea5a, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇭🇰 香港|HK08, server: smcgpn2sltug42hfk2n4ufrokmt2coxm.01.08.hk.k7h.lol, port: 44071, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇺🇸 美国原生NO3, server: jzgz.tcity8.monster, port: 22002, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇩🇪 欧洲-法兰克福-1, server: oracle-arm-frankfurt1.lanmaoyun.icu, port: 30001, type: hysteria2, password: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, auth: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, sni: frankfurt1.nodes.lanmaoyun.icu, skip-cert-verify: false, udp: true}
-  - {name: 🇪🇺 欧洲-伦敦-1, server: oracle-arm-london1.lanmaoyun.icu, port: 30001, type: hysteria2, password: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, auth: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, sni: london1.nodes.lanmaoyun.icu, skip-cert-verify: false, udp: true}
-  - {name: 🇸🇬 新加坡03, server: gdcub.yunnode.win, port: 15627, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇰🇷 韩国-1, server: oracle-arm-chuncheon1.lanmaoyun.icu, port: 30001, type: hysteria2, password: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, auth: c8d472e7-ada6-4b3c-aaad-4ca3b9c2012a, sni: korea.nodes.lanmaoyun.icu, skip-cert-verify: false, udp: true}
-  - {name: 🇺🇸 美国01丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 44592, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
-  - {name: 🇭🇰 香港3, server: xg3.tcity8.buzz, port: 10010, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇸🇬 新加坡|SG09, server: pt3kneehum6jwl2c1wglr79v1nilyrzf.01.09.sg.k7h.lol, port: 47558, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: FI-HELSINKI-ONLYIPV6-2, server: helsinki.uusimaa.finland.fi.internetcdn.ggff.net, port: 55555, type: ss, cipher: chacha20-ietf-poly1305, password: 4916d602-66bd-47dd-94db-fe72cad16e50, udp: true}
-  - {name: 🇭🇰 深港专线-德国, server: dzgz.tcity8.monster, port: 35222, type: vmess, uuid: 668c99cf-1249-4d5b-a6b2-91417314ae0b, alterId: 0, cipher: auto, tls: false, udp: true}
-  - {name: 🇹🇭 泰国 TH BIZ, server: th.cooc.icu, port: 35613, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
-  - {name: 🇭🇰 香港04-备用, server: 140.249.160.81, port: 15638, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
-  - {name: 🇭🇰 香港01丨山东移动优化, server: afa007d388783f3a.cdn.jiashule.com, port: 18641, type: ss, cipher: chacha20-ietf-poly1305, password: 0046a66d-473e-4929-a4de-ae0bd199d77e, udp: true}
+  - {name: 🇰🇷 韩国|SEL2, server: c5849ijggsbqg67jl41hfs7t6r12hctr.01.02.kr.k7h.lol, port: 23464, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇺🇸 美国CF08, server: gdcub.yunnode.win, port: 15735, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇭🇰 香港|HK01, server: b0cmsj2g4by8fjivwb0vr87qemjshix7.01.01.hk.k7h.lol, port: 40803, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇺🇸 美国|LA2, server: qipgm5kkpl73o8f4y32vx79hl2j1kx30.01.05.us.k7h.lol, port: 44432, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1E, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 0088a285-ff79-40a0-aecc-f72dacb037cb, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 日本|T02, server: 37wibcada2l1ms8dg2c28z0yz498t8gs.01.02.jp.k7h.lol, port: 10954, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇭🇰 香港|HK02, server: h6nuk79gmk6lfw1do9mue5s6z7iekh6w.01.02.hk.k7h.lol, port: 24517, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇬🇧 伦敦-CF多线-1, server: cf.0sm.com, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-london-1.wymv.top}}, udp: true}
+  - {name: 🇭🇰 香港07-备用, server: 140.249.160.81, port: 15641, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇺🇸 美国|PHX1, server: ylw36wrqepfywys903i0b0oh1bemi6zn.01.06.us.k7h.lol, port: 34467, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇯🇵 日本01, server: gy.666666222.shop, port: 20002, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
+  - {name: 🇭🇰 香港|HK35, server: fsknvk9vbvstaemqbsswrz7mp78x5p31.01.09.hk.k7h.lol, port: 33938, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇸🇬 新加坡|SG06, server: z4tfkud3wk99y8g8ohztxfuvswssw5po.01.06.sg.k7h.lol, port: 26515, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇻🇳 越南01, server: gdcub.yunnode.win, port: 15642, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇺🇸 美国02-1B, server: gd.xueyejiasu.com, port: 58159, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
+  - {name: 🇸🇬 新加坡|SG02, server: ubbexvcps2zxmfl8d9xdblwj7h2l5qrb.01.02.sg.k7h.lol, port: 14556, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇺🇸 美国03, server: gd.xueyejiasu.com, port: 42414, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
+  - {name: 🇺🇸 美国|KS1, server: hwbnmha68cjqtwdjvzzi2h3unp4unpcf.01.02.us.k7h.lol, port: 14506, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇯🇵 日本04, server: gy.666666222.shop, port: 20008, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
+  - {name: 🇭🇰 香港|HK07, server: cnjr8bct4osdfi8qigcq33dgbxlfyhtt.01.07.hk.k7h.lol, port: 34242, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇺🇸 IOVEVPN美国中转-2, server: gdcub.yunnode.win, port: 36455, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
+  - {name: 🇺🇸 美国|SEA1, server: h6i8uaqrtu673hgl5ug0t8ycoou566a4.01.07.us.k7h.lol, port: 38322, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇸🇬 新加坡-2, server: 47.236.31.135, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, flow: xtls-rprx-vision, servername: sg-al-2.wymv.top, client-fingerprint: chrome, network: tcp, udp: true}
   - {name: 🇸🇬 新加坡02, server: gdcub.yunnode.win, port: 15637, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇺🇸 美国01-1B, server: gd.xueyejiasu.com, port: 56011, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
+  - {name: 🇯🇵 日本-2, server: 8.209.240.64, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, flow: xtls-rprx-vision, servername: jp-al-2.wymv.top, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇺🇸 US-NEWYORK2, server: all.in.one.cdn.intacc-cdn.arjcet.org, port: 8880, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: 🇯🇵 日本-1, server: 8.211.128.156, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, flow: xtls-rprx-vision, servername: jp-al-1.wymv.top, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇸🇬 新加坡|SG07, server: mv1o3vp77038y0c908r30igoxu8kkaz4.01.07.sg.k7h.lol, port: 19310, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇭🇰 香港|HK06, server: avsmv88x2nuexp260cwd5z94w7l65d4j.06.01.hk.k7h.lol, port: 37870, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇯🇵 日本03, server: gy.666666222.shop, port: 20006, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
+  - {name: 🇭🇰 香港01-1A, server: gdcub.yunnode.win, port: 19630, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1F, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: d1e6c794-5b4f-4a78-98c4-7c097f137b93, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 多伦多-CF多线-1, server: cfip.cfcdn.vip, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-dubai-1.wymv.top}}, udp: true}
+  - {name: 🇺🇸 美国04, server: gdcub.yunnode.win, port: 15728, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 2, server: gdcub.yunnode.win, port: 38518, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
+  - {name: 🇸🇬 新加坡|SG03, server: r28i2xggabv9xlgp8yg2ntbjwhh0wv9x.01.03.sg.k7h.lol, port: 24219, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇺🇸 美国 纽约2, server: gy.666666222.shop, port: 20016, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
+  - {name: BRAZIL, server: all.in.one.cdn.intacc-cdn.arjcet.org, port: 8080, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/Microsoftupdate/TG@pwsair?ed=2048", headers: {Host: jardimperiperi.paulo.brazil.arjcet.org}}, udp: true}
+  - {name: 🇯🇵 日本|T04, server: 8w4c7ank05l8iiamzvd07b0772c8ttjd.01.04.jp.k7h.lol, port: 36708, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇬🇧 英国-01, server: uk-01.speedup.club, port: 443, type: vmess, uuid: f9c62194-930b-41b7-8682-0c23068d4bae, alterId: 0, cipher: auto, tls: true, udp: true}
+  - {name: 🇹🇼 台湾01-1B, server: gd.xueyejiasu.com, port: 47564, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
+  - {name: 🇭🇰 香港|HK03, server: 8qxv7x5druqs530kxmho2p19e1zuzgko.01.03.hk.k7h.lol, port: 22299, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇭🇰 香港|HK05, server: amua1dxj2k0gw0vhpr12lyu8pbh2hnwk.01.05.hk.k7h.lol, port: 48464, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 3中转-2, server: gdcub.yunnode.win, port: 49757, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
+  - {name: 🇺🇸 美国02-1A, server: gdcub.yunnode.win, port: 15628, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇺🇸 美国|NY1, server: 5skzlvgfg6jqnhaocw5eosx2cgc9co19.01.03.us.k7h.lol, port: 49465, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇺🇸 美国-03, server: us-03.speedup.club, port: 443, type: vmess, uuid: f9c62194-930b-41b7-8682-0c23068d4bae, alterId: 0, cipher: auto, tls: true, udp: true}
+  - {name: 🇭🇰 香港01-1B, server: gd.xueyejiasu.com, port: 34338, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
+  - {name: 🇺🇸 US-NEWYORK3, server: cdn3.internetcdn.ggff.net, port: 8880, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1D, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 218e297e-6019-4905-b834-d6a4f8738df1, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 日本|T01, server: te0vqtkc621xeb0odkc0vcvuxa1bghtu.01.01.jp.k7h.lol, port: 20037, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇭🇰 香港05-备用, server: 140.249.160.81, port: 15639, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇺🇸 美国|DA1, server: amj0g7zkbkb6z8h251y54tr6tuvqedfz.01.01.us.k7h.lol, port: 15513, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇭🇰 香港-2, server: 8.217.102.5, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, flow: xtls-rprx-vision, servername: hk-al-2.wymv.top, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇮🇹 意大利|MIL1, server: jd8yx7tn8tpemdko9jj77c54brzyehv2.01.01.it.k7h.lol, port: 44191, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇭🇰 香港02-1B, server: gy.666666222.shop, port: 20035, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
+  - {name: 🇺🇸 美国|SJ1, server: ngvxmhksbldzq1tyfnea1o96cvlosmrg.01.09.us.k7h.lol, port: 31479, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇺🇸 美国|SJ0, server: xzyvpw6mbom9r5kr7xfmt8iavehdokkj.01.08.us.k7h.lol, port: 29126, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇯🇵 JP-TOKYO2 试用, server: shibuya-tokyo-japan-amazon.sgqt.fun, port: 8080, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/TG@pwsair/microsoft?ed=2048", headers: {Host: shibuya.tokyo.japan.amazon.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: 🇭🇰 香港-3, server: 149.104.26.31, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, flow: xtls-rprx-vision, servername: hk-yc.wymv.top, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇸🇬 新加坡01, server: gdcub.yunnode.win, port: 15636, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇭🇰 香港|HK08, server: smcgpn2sltug42hfk2n4ufrokmt2coxm.01.08.hk.k7h.lol, port: 44071, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇭🇰 香港-02, server: hk-02.speedup.club, port: 443, type: vmess, uuid: f9c62194-930b-41b7-8682-0c23068d4bae, alterId: 0, cipher: auto, tls: true, udp: true}
+  - {name: 🇯🇵 日本|T05, server: 59lcrjxq8d0dg56ulk8xgz715pa2sp7i.01.05.jp.k7h.lol, port: 23718, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 2中转-2, server: gdcub.yunnode.win, port: 59682, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
+  - {name: 🇦🇪 迪拜-CF多线-1, server: xn--b6gac.eu.org, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-dubai-1.wymv.top}}, udp: true}
+  - {name: 🇺🇸 US-FREENODE, server: exclusively-foriran.internetcdn.ggff.net, port: 8880, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: 🇯🇵 日本|T03, server: ey8fjifra77qvqfvx48rtlo97uk8u0kc.01.03.jp.k7h.lol, port: 40546, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇨🇦 加拿大|CA1, server: 8gfry0izrou80f1412wrxf3mcw9t6ml4.01.01.ca.k7h.lol, port: 19915, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇹🇼 IOVEVPN台湾中转-2, server: gdcub.yunnode.win, port: 51168, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
+  - {name: 🇯🇵 IOVEVPN日本中转-2, server: gdcub.yunnode.win, port: 30347, type: ss, cipher: chacha20-ietf-poly1305, password: 85597182-5f90-417e-8894-b1e296f3a40a, udp: true}
+  - {name: 🇹🇼 台湾|TW01, server: r8m5bwrazkp5cziims6mgpy1vh9uzb8m.01.01.tw.k7h.lol, port: 45614, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇵🇭 菲律宾|MNL2, server: gqc4ar2riqnjbl5y0yoabms73duaa27w.01.02.ph.k7h.lol, port: 31865, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇬🇧 伦敦-CF多线-3, server: cnamefuckxxs.yuchen.icu, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-london-1.wymv.top}}, udp: true}
+  - {name: 🇸🇬 新加坡|SG09, server: pt3kneehum6jwl2c1wglr79v1nilyrzf.01.09.sg.k7h.lol, port: 47558, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇺🇸 美国CF05, server: gdcub.yunnode.win, port: 15729, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇯🇵 日本|T06, server: ry06d97r36ffi37o3zv3728donyc5trg.01.06.jp.k7h.lol, port: 13465, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇭🇰 香港-1, server: 47.238.115.89, port: 443, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: true, servername: hk-al-1.wymv.top, network: tcp, udp: true}
+  - {name: 🇺🇸 US-NEWYORK5, server: cdnblog.internetcdn.ggff.net, port: 8880, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/microsoft/TG@pwsair/internetcdn?ed=2048", headers: {Host: buffalo.newyork.us.intacc-cdn.arjcet.org}}, udp: true}
+  - {name: 🇸🇬 新加坡|SG08, server: z8g5u2gf8gh33op9krzx0relkzpyiwec.01.08.sg.k7h.lol, port: 35197, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇯🇵 日本|T09, server: 932f6b684d1350jxglp6xnsqv7pu0yju.01.09.jp.k7h.lol, port: 27334, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
+  - {name: 🇺🇸 圣何塞-CF多线, server: cfip.xxxxxxxx.tk, port: 80, type: vless, uuid: 69d3a1b8-3b66-4a3f-b60a-ed6cc3f0a250, tls: false, network: ws, ws-opts: {path: /, headers: {Host: dci-sanjose.wymv.top}}, udp: true}
+  - {name: 🇭🇰 香港02-1A, server: gdcub.yunnode.win, port: 15931, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇺🇸 美国CF06, server: gdcub.yunnode.win, port: 15731, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: 🇸🇬 新加坡03, server: gdcub.yunnode.win, port: 15627, type: ss, cipher: chacha20-ietf-poly1305, password: a39c8845-8ee4-4e62-9dcc-3cda2742a401, udp: true}
+  - {name: FI-HELSINKI-ONLYIPV6-2, server: helsinki.uusimaa.finland.fi.internetcdn.ggff.net, port: 55555, type: ss, cipher: chacha20-ietf-poly1305, password: 4916d602-66bd-47dd-94db-fe72cad16e50, udp: true}
   - {name: 🇭🇰 香港|HK09, server: fsknvk9vbvstaemqbsswrz7mp78x5p31.01.09.hk.k7h.lol, port: 24616, type: ss, cipher: chacha20-ietf-poly1305, password: c3eb7d1c-248f-447f-9a8d-f41decb986bc, udp: true}
-  - {name: 🇹🇼 TW 海外用户, server: tw.cooc.icu, port: 10001, type: ss, cipher: chacha20-ietf-poly1305, password: 98119fb5-e810-4b55-9f83-f0057d1394ba, udp: true}
+  - {name: 🇭🇰 香港03-1B, server: gy.666666222.shop, port: 20052, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 68386a97-b7bf-4335-840c-df60d2f1e311, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇭🇰 HK-KOWLOON 试用, server: 129.152.215.35.bc.googleusercontent.com, port: 8080, type: vmess, uuid: 4916d602-66bd-47dd-94db-fe72cad16e50, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/amdgpu/TG@pwsair/amdcpu?ed=2048", headers: {Host: 129.152.215.35.bc.googleusercontent.com}}, udp: true}
+  - {name: 🇺🇸 美国 纽约01, server: gy.666666222.shop, port: 20013, type: ss, cipher: chacha20-ietf-poly1305, password: 90a6f36d-b285-4a2c-a943-a5f4ea40fcbe, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇸🇬 新加坡|SG07
-      - 🇰🇷 韩国 B KR
-      - 🇺🇸 美国-03
-      - 🇺🇸 美国CF08
-      - 🇬🇧 英国1
-      - 🇯🇵 日本03丨江苏移动优化
-      - 🇮🇳 印度1
-      - 🇯🇵 日本-1-1A
-      - 🇯🇵 日本|T02
-      - 🇭🇰 香港-1B
-      - 🇸🇬 新加坡-2
-      - 🇺🇸 US-NEWYORK3
-      - 🇭🇰 香港|HK35
-      - 🇭🇰 香港02丨江苏移动优化
-      - 🇭🇰 香港02-1B
-      - 🇭🇰 香港02-1A
-      - 🇦🇪 迪拜-CF多线-1
-      - 🇮🇳 印度2
-      - 🇭🇰 香港03-1B
-      - 🇲🇾 马来西亚 MY | BIZ
-      - 🇭🇰 香港04丨山东移动优化
-      - 🇯🇵 IOVEVPN日本中转-2
-      - 🇯🇵 日本-2-1A
-      - 🇸🇬 新加坡 A SG
-      - 2
-      - 🇹🇼 台湾1
-      - 🇺🇸 美国|KS1
-      - 🇰🇷 韩国|SEL2
-      - 🇯🇵 日本01丨江苏移动优化
-      - 孤云阁-03
       - 🇹🇼 台湾 1
-      - 🇭🇰 香港-3
-      - 🇹🇼 台湾01-1A
-      - 🇺🇸 美国02-1B
-      - 🇺🇸 美国01丨江苏移动优化
-      - 🇺🇸 美国|SJ1
-      - 🇭🇰 香港05-备用
-      - 🇸🇬 新加坡|SG06
-      - 🇺🇸 美国|LA2
-      - 🇭🇰 中港隧道-澳大利亚
-      - 🇩🇪 DE-建議啟用IPV6
-      - 🇫🇷 法国 FR BIZ
-      - 🇰🇷 韩国 C KR
-      - 🇯🇵 日本NO.2
-      - 🇯🇵 JP-TOKYO 试用
-      - 🇬🇧 英国 UK | BIZ
-      - 🇭🇰 香港 B HK
-      - 🇭🇰 深港专线-香港1
-      - 🇩🇪 德国 DE | BIZ
-      - 🇭🇰 香港|HK01
-      - 🇯🇵 日本-1-1B
-      - 🇹🇼 台湾A
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇯🇵 日本-2-1B
-      - 🇺🇸 美国|SJ0
-      - 🇺🇸 美国原生NO1
-      - 🇯🇵 日本 B JP
-      - 🇺🇸 美国|DA1
-      - 🇯🇵 日本NO.1
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 🇺🇸 美国2
-      - 🇭🇰 香港07-备用
-      - 🇭🇰 香港-1
-      - 🇭🇰 中港隧道-加拿大
-      - 🇺🇸 美国CF06
-      - 🇸🇬 新加坡|SG03
-      - 🇭🇰 中港隧道-香港3
-      - 🇹🇼 台湾01-1B
-      - 🇺🇸 美国1
-      - 🇸🇬 新加坡-1-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇺🇸 美国 B US
-      - 🇭🇰 香港-02
-      - 🇷🇺 俄罗斯 RU BIZ
-      - 🇭🇰 深港专线-香港3
-      - 🇭🇰 中港隧道-印度
-      - 🇭🇰 深港专线-印度
-      - 🇭🇰 深港专线-香港2
-      - 🇯🇵 日本|T03
-      - 🇸🇬 新加坡 C SG
-      - 🇸🇬 新加坡NO.1
-      - 🇭🇰 中港隧道-德国
-      - 🇭🇰 香港01丨江苏移动优化
-      - 多伦多-CF多线-1
-      - 🇹🇼 台湾 C TW
-      - 🇺🇸 美国NO.1
-      - 🇸🇬 狮城03丨山东移动优化
-      - 🇺🇸 美国04
-      - 🇬🇧 伦敦-CF多线-3
-      - 3中转-2
-      - 🇺🇸 IOVEVPN美国中转-2
-      - 🇨🇦 加拿大|CA1
-      - 🇭🇰 中港隧道-英国
-      - 🇭🇰 香港02丨山东移动优化
-      - 🇯🇵 日本 C JP
-      - 🇭🇰 香港|HK02
-      - 🇬🇧 UK-LONDON-01
-      - 🇺🇸 美国NO.2
-      - 🇸🇬 新加坡01
-      - 🇺🇸 US-NEWYORK2
-      - 🇹🇼 台湾 B TW
-      - 🇦🇺 澳大利亚原生2
-      - 🇲🇴 澳门NO.2
-      - 🇭🇰 2香港中转-2
-      - 🇭🇰 深港专线-澳大利亚
-      - 🇺🇸 美国 A US
-      - 🇯🇵 日本01
-      - 稻妻0.5x 直连
-      - 🇭🇰 香港 A HK
       - 🇺🇸 美国CF07
-      - 🇯🇵 日本|T09
-      - 🇭🇰 中港隧道-日本
-      - 🇬🇧 英国2
+      - 🇯🇵 日本02
+      - 🇸🇬 新加坡|SG01
+      - 🇹🇼 台湾|TW02
+      - 🇯🇵 大阪-CF多线-5
+      - 🇸🇬 新加坡|SG04
+      - 🇭🇰 香港04-备用
+      - 🇬🇧 英国01
       - 🇺🇸 美国01-1A
       - 🇭🇰 香港直连01
-      - 🇹🇼 台湾|TW01
-      - 🇭🇰 香港01-1B
-      - 🇰🇷 韩国 A KR
-      - 🇭🇰 香港|HK05
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇭🇰 中港隧道-香港1
-      - 🇺🇸 美国 C US
-      - 🇸🇬 新加坡|SG08
-      - 🇸🇬 新加坡NO.2
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔
-      - 🇵🇭 菲律宾|MNL2
-      - 🇬🇧 伦敦-CF多线-1
-      - 🇺🇸 美国01-1B
-      - 🇸🇬 新加坡|SG05
-      - 🇯🇵 日本02
-      - 🇭🇰 香港 C HK
-      - BRAZIL
-      - 🇭🇰 深港专线-台湾
-      - 🇸🇬 新加坡 B SG
-      - 🇺🇸 美国|LA1
-      - 🇰🇷 韩国-2
-      - 🇭🇰 中港隧道-香港2
-      - 🇭🇰 中港隧道-新加坡
-      - 🇺🇸 美国原生NO4
-      - 🇭🇰 香港NO.1
-      - 🇸🇬 新加坡|SG01
-      - 🇯🇵 日本03丨山东移动优化
-      - 🇬🇧 英国-01
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国 纽约01
-      - 🇭🇰 香港|HK06
-      - 🇸🇬 新加坡-1-1B
-      - 🇺🇸 US-FREENODE
-      - 🇮🇹 意大利|MIL1
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇸🇬 狮城02丨山东移动优化
-      - 🇭🇰 香港04丨江苏移动优化
-      - 🇭🇰 深港专线-英国
-      - 🇭🇰 深港专线-新加坡
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 🇹🇼 TW-TAOYUAN 试用-20x 0828
       - 🇭🇰 香港03-1A
-      - 🇻🇳 越南01
-      - 🇺🇸 美国02-1A
-      - 🇯🇵 日本|T01
-      - 🇬🇧 英国01
-      - 🇯🇵 日本03丨广东移动优化
-      - 🇭🇰 香港-1A
-      - 🇹🇼 台湾|TW02
-      - 🇺🇸 US 海外用户
-      - 🇯🇵 日本|T06
-      - 🇭🇰 香港-2
-      - 🇯🇵 日本 A JP
-      - 🇯🇵 日本04
-      - 🇦🇺 澳大利亚原生1
-      - 🇹🇼 台湾 A TW
-      - 🇺🇸 US-NEWYORK5
-      - 🇺🇸 美国原生NO2
-      - 🇭🇰 香港|HK03
-      - 🇺🇸 美国|SEA1
-      - 🇭🇰 中港隧道-台湾
-      - 🇻🇳 越南 VN | BIZ
-      - 🇯🇵 日本01丨山东移动优化
-      - 🇭🇰 深港专线-加拿大
-      - 🇭🇰 香港01-1A
-      - 🇸🇬 狮城02丨广东移动优化
-      - 🇸🇬 新加坡|SG04
-      - 🇹🇼 台湾B
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 狮城02丨江苏移动优化
-      - 🇯🇵 日本|T04
-      - 🇭🇰 HK-KOWLOON 试用
-      - 🇭🇰 香港|HK07
-      - 🇯🇵 日本03
-      - 🇺🇸 美国|PHX1
-      - 🇸🇬 新加坡|SG02
-      - 🇯🇵 日本|T05
-      - 🇺🇸 圣何塞-CF多线
-      - 🇺🇸 北美-US-圣何塞-2
-      - 🇺🇸 美国 纽约2
-      - 🇺🇸 美国03
-      - 🇯🇵 大阪-CF多线-5
-      - 🇯🇵 JP 海外用户
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡-1
+      - 🇩🇪 DE-建議啟用IPV6
+      - 🇺🇸 美国|LA1
+      - 🇹🇼 台湾01-1A
+      - 🇸🇬 新加坡|SG05
       - 马赛-CF多线-1
+      - 🇬🇧 UK-LONDON-01
       - 🇭🇰 香港|HK04
-      - 🇯🇵 JP-TOKYO2 试用
-      - 🇭🇰 深港专线-日本
-      - 🇸🇬 狮城03丨江苏移动优化
-      - 🇹🇼 台湾2
-      - 🇭🇰 香港|HK08
-      - 🇺🇸 美国原生NO3
-      - 🇩🇪 欧洲-法兰克福-1
-      - 🇪🇺 欧洲-伦敦-1
-      - 🇸🇬 新加坡03
-      - 🇰🇷 韩国-1
-      - 🇺🇸 美国01丨山东移动优化
-      - 🇭🇰 香港3
-      - 🇸🇬 新加坡|SG09
-      - FI-HELSINKI-ONLYIPV6-2
-      - 🇭🇰 深港专线-德国
-      - 🇹🇭 泰国 TH BIZ
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港01丨山东移动优化
+      - 🇰🇷 韩国|SEL2
+      - 🇺🇸 美国CF08
+      - 🇭🇰 香港|HK01
+      - 🇺🇸 美国|LA2
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇯🇵 日本|T02
+      - 🇭🇰 香港|HK02
+      - 🇬🇧 伦敦-CF多线-1
+      - 🇭🇰 香港07-备用
+      - 🇺🇸 美国|PHX1
+      - 🇯🇵 日本01
+      - 🇭🇰 香港|HK35
+      - 🇸🇬 新加坡|SG06
+      - 🇻🇳 越南01
+      - 🇺🇸 美国02-1B
+      - 🇸🇬 新加坡|SG02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国|KS1
+      - 🇯🇵 日本04
+      - 🇭🇰 香港|HK07
+      - 🇺🇸 IOVEVPN美国中转-2
+      - 🇺🇸 美国|SEA1
+      - 🇸🇬 新加坡-2
       - 🇸🇬 新加坡02
+      - 🇺🇸 美国01-1B
+      - 🇯🇵 日本-2
+      - 🇺🇸 US-NEWYORK2
+      - 🇯🇵 日本-1
+      - 🇸🇬 新加坡|SG07
+      - 🇭🇰 香港|HK06
+      - 🇯🇵 日本03
+      - 🇭🇰 香港01-1A
+      - 🇰🇷 韩国-三网优化2-1F
+      - 多伦多-CF多线-1
+      - 🇺🇸 美国04
+      - 2
+      - 🇸🇬 新加坡|SG03
+      - 🇺🇸 美国 纽约2
+      - BRAZIL
+      - 🇯🇵 日本|T04
+      - 🇬🇧 英国-01
+      - 🇹🇼 台湾01-1B
+      - 🇭🇰 香港|HK03
+      - 🇭🇰 香港|HK05
+      - 3中转-2
+      - 🇺🇸 美国02-1A
+      - 🇺🇸 美国|NY1
+      - 🇺🇸 美国-03
+      - 🇭🇰 香港01-1B
+      - 🇺🇸 US-NEWYORK3
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇯🇵 日本|T01
+      - 🇭🇰 香港05-备用
+      - 🇺🇸 美国|DA1
+      - 🇭🇰 香港-2
+      - 🇮🇹 意大利|MIL1
+      - 🇭🇰 香港02-1B
+      - 🇺🇸 美国|SJ1
+      - 🇺🇸 美国|SJ0
+      - 🇯🇵 JP-TOKYO2 试用
+      - 🇭🇰 香港-3
+      - 🇸🇬 新加坡01
+      - 🇭🇰 香港|HK08
+      - 🇭🇰 香港-02
+      - 🇯🇵 日本|T05
+      - 2中转-2
+      - 🇦🇪 迪拜-CF多线-1
+      - 🇺🇸 US-FREENODE
+      - 🇯🇵 日本|T03
+      - 🇨🇦 加拿大|CA1
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇹🇼 台湾|TW01
+      - 🇵🇭 菲律宾|MNL2
+      - 🇬🇧 伦敦-CF多线-3
+      - 🇸🇬 新加坡|SG09
+      - 🇺🇸 美国CF05
+      - 🇯🇵 日本|T06
+      - 🇭🇰 香港-1
+      - 🇺🇸 US-NEWYORK5
+      - 🇸🇬 新加坡|SG08
+      - 🇯🇵 日本|T09
+      - 🇺🇸 圣何塞-CF多线
+      - 🇭🇰 香港02-1A
+      - 🇺🇸 美国CF06
+      - 🇸🇬 新加坡03
+      - FI-HELSINKI-ONLYIPV6-2
       - 🇭🇰 香港|HK09
-      - 🇹🇼 TW 海外用户
+      - 🇭🇰 香港03-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 HK-KOWLOON 试用
+      - 🇺🇸 美国 纽约01
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇸🇬 新加坡|SG07
-      - 🇰🇷 韩国 B KR
-      - 🇺🇸 美国-03
-      - 🇺🇸 美国CF08
-      - 🇬🇧 英国1
-      - 🇯🇵 日本03丨江苏移动优化
-      - 🇮🇳 印度1
-      - 🇯🇵 日本-1-1A
-      - 🇯🇵 日本|T02
-      - 🇭🇰 香港-1B
-      - 🇸🇬 新加坡-2
-      - 🇺🇸 US-NEWYORK3
-      - 🇭🇰 香港|HK35
-      - 🇭🇰 香港02丨江苏移动优化
-      - 🇭🇰 香港02-1B
-      - 🇭🇰 香港02-1A
-      - 🇦🇪 迪拜-CF多线-1
-      - 🇮🇳 印度2
-      - 🇭🇰 香港03-1B
-      - 🇲🇾 马来西亚 MY | BIZ
-      - 🇭🇰 香港04丨山东移动优化
-      - 🇯🇵 IOVEVPN日本中转-2
-      - 🇯🇵 日本-2-1A
-      - 🇸🇬 新加坡 A SG
-      - 2
-      - 🇹🇼 台湾1
-      - 🇺🇸 美国|KS1
-      - 🇰🇷 韩国|SEL2
-      - 🇯🇵 日本01丨江苏移动优化
-      - 孤云阁-03
       - 🇹🇼 台湾 1
-      - 🇭🇰 香港-3
-      - 🇹🇼 台湾01-1A
-      - 🇺🇸 美国02-1B
-      - 🇺🇸 美国01丨江苏移动优化
-      - 🇺🇸 美国|SJ1
-      - 🇭🇰 香港05-备用
-      - 🇸🇬 新加坡|SG06
-      - 🇺🇸 美国|LA2
-      - 🇭🇰 中港隧道-澳大利亚
-      - 🇩🇪 DE-建議啟用IPV6
-      - 🇫🇷 法国 FR BIZ
-      - 🇰🇷 韩国 C KR
-      - 🇯🇵 日本NO.2
-      - 🇯🇵 JP-TOKYO 试用
-      - 🇬🇧 英国 UK | BIZ
-      - 🇭🇰 香港 B HK
-      - 🇭🇰 深港专线-香港1
-      - 🇩🇪 德国 DE | BIZ
-      - 🇭🇰 香港|HK01
-      - 🇯🇵 日本-1-1B
-      - 🇹🇼 台湾A
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇯🇵 日本-2-1B
-      - 🇺🇸 美国|SJ0
-      - 🇺🇸 美国原生NO1
-      - 🇯🇵 日本 B JP
-      - 🇺🇸 美国|DA1
-      - 🇯🇵 日本NO.1
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 🇺🇸 美国2
-      - 🇭🇰 香港07-备用
-      - 🇭🇰 香港-1
-      - 🇭🇰 中港隧道-加拿大
-      - 🇺🇸 美国CF06
-      - 🇸🇬 新加坡|SG03
-      - 🇭🇰 中港隧道-香港3
-      - 🇹🇼 台湾01-1B
-      - 🇺🇸 美国1
-      - 🇸🇬 新加坡-1-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇺🇸 美国 B US
-      - 🇭🇰 香港-02
-      - 🇷🇺 俄罗斯 RU BIZ
-      - 🇭🇰 深港专线-香港3
-      - 🇭🇰 中港隧道-印度
-      - 🇭🇰 深港专线-印度
-      - 🇭🇰 深港专线-香港2
-      - 🇯🇵 日本|T03
-      - 🇸🇬 新加坡 C SG
-      - 🇸🇬 新加坡NO.1
-      - 🇭🇰 中港隧道-德国
-      - 🇭🇰 香港01丨江苏移动优化
-      - 多伦多-CF多线-1
-      - 🇹🇼 台湾 C TW
-      - 🇺🇸 美国NO.1
-      - 🇸🇬 狮城03丨山东移动优化
-      - 🇺🇸 美国04
-      - 🇬🇧 伦敦-CF多线-3
-      - 3中转-2
-      - 🇺🇸 IOVEVPN美国中转-2
-      - 🇨🇦 加拿大|CA1
-      - 🇭🇰 中港隧道-英国
-      - 🇭🇰 香港02丨山东移动优化
-      - 🇯🇵 日本 C JP
-      - 🇭🇰 香港|HK02
-      - 🇬🇧 UK-LONDON-01
-      - 🇺🇸 美国NO.2
-      - 🇸🇬 新加坡01
-      - 🇺🇸 US-NEWYORK2
-      - 🇹🇼 台湾 B TW
-      - 🇦🇺 澳大利亚原生2
-      - 🇲🇴 澳门NO.2
-      - 🇭🇰 2香港中转-2
-      - 🇭🇰 深港专线-澳大利亚
-      - 🇺🇸 美国 A US
-      - 🇯🇵 日本01
-      - 稻妻0.5x 直连
-      - 🇭🇰 香港 A HK
       - 🇺🇸 美国CF07
-      - 🇯🇵 日本|T09
-      - 🇭🇰 中港隧道-日本
-      - 🇬🇧 英国2
+      - 🇯🇵 日本02
+      - 🇸🇬 新加坡|SG01
+      - 🇹🇼 台湾|TW02
+      - 🇯🇵 大阪-CF多线-5
+      - 🇸🇬 新加坡|SG04
+      - 🇭🇰 香港04-备用
+      - 🇬🇧 英国01
       - 🇺🇸 美国01-1A
       - 🇭🇰 香港直连01
-      - 🇹🇼 台湾|TW01
-      - 🇭🇰 香港01-1B
-      - 🇰🇷 韩国 A KR
-      - 🇭🇰 香港|HK05
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇭🇰 中港隧道-香港1
-      - 🇺🇸 美国 C US
-      - 🇸🇬 新加坡|SG08
-      - 🇸🇬 新加坡NO.2
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔
-      - 🇵🇭 菲律宾|MNL2
-      - 🇬🇧 伦敦-CF多线-1
-      - 🇺🇸 美国01-1B
-      - 🇸🇬 新加坡|SG05
-      - 🇯🇵 日本02
-      - 🇭🇰 香港 C HK
-      - BRAZIL
-      - 🇭🇰 深港专线-台湾
-      - 🇸🇬 新加坡 B SG
-      - 🇺🇸 美国|LA1
-      - 🇰🇷 韩国-2
-      - 🇭🇰 中港隧道-香港2
-      - 🇭🇰 中港隧道-新加坡
-      - 🇺🇸 美国原生NO4
-      - 🇭🇰 香港NO.1
-      - 🇸🇬 新加坡|SG01
-      - 🇯🇵 日本03丨山东移动优化
-      - 🇬🇧 英国-01
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国 纽约01
-      - 🇭🇰 香港|HK06
-      - 🇸🇬 新加坡-1-1B
-      - 🇺🇸 US-FREENODE
-      - 🇮🇹 意大利|MIL1
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇸🇬 狮城02丨山东移动优化
-      - 🇭🇰 香港04丨江苏移动优化
-      - 🇭🇰 深港专线-英国
-      - 🇭🇰 深港专线-新加坡
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 🇹🇼 TW-TAOYUAN 试用-20x 0828
       - 🇭🇰 香港03-1A
-      - 🇻🇳 越南01
-      - 🇺🇸 美国02-1A
-      - 🇯🇵 日本|T01
-      - 🇬🇧 英国01
-      - 🇯🇵 日本03丨广东移动优化
-      - 🇭🇰 香港-1A
-      - 🇹🇼 台湾|TW02
-      - 🇺🇸 US 海外用户
-      - 🇯🇵 日本|T06
-      - 🇭🇰 香港-2
-      - 🇯🇵 日本 A JP
-      - 🇯🇵 日本04
-      - 🇦🇺 澳大利亚原生1
-      - 🇹🇼 台湾 A TW
-      - 🇺🇸 US-NEWYORK5
-      - 🇺🇸 美国原生NO2
-      - 🇭🇰 香港|HK03
-      - 🇺🇸 美国|SEA1
-      - 🇭🇰 中港隧道-台湾
-      - 🇻🇳 越南 VN | BIZ
-      - 🇯🇵 日本01丨山东移动优化
-      - 🇭🇰 深港专线-加拿大
-      - 🇭🇰 香港01-1A
-      - 🇸🇬 狮城02丨广东移动优化
-      - 🇸🇬 新加坡|SG04
-      - 🇹🇼 台湾B
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 狮城02丨江苏移动优化
-      - 🇯🇵 日本|T04
-      - 🇭🇰 HK-KOWLOON 试用
-      - 🇭🇰 香港|HK07
-      - 🇯🇵 日本03
-      - 🇺🇸 美国|PHX1
-      - 🇸🇬 新加坡|SG02
-      - 🇯🇵 日本|T05
-      - 🇺🇸 圣何塞-CF多线
-      - 🇺🇸 北美-US-圣何塞-2
-      - 🇺🇸 美国 纽约2
-      - 🇺🇸 美国03
-      - 🇯🇵 大阪-CF多线-5
-      - 🇯🇵 JP 海外用户
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡-1
+      - 🇩🇪 DE-建議啟用IPV6
+      - 🇺🇸 美国|LA1
+      - 🇹🇼 台湾01-1A
+      - 🇸🇬 新加坡|SG05
       - 马赛-CF多线-1
+      - 🇬🇧 UK-LONDON-01
       - 🇭🇰 香港|HK04
-      - 🇯🇵 JP-TOKYO2 试用
-      - 🇭🇰 深港专线-日本
-      - 🇸🇬 狮城03丨江苏移动优化
-      - 🇹🇼 台湾2
-      - 🇭🇰 香港|HK08
-      - 🇺🇸 美国原生NO3
-      - 🇩🇪 欧洲-法兰克福-1
-      - 🇪🇺 欧洲-伦敦-1
-      - 🇸🇬 新加坡03
-      - 🇰🇷 韩国-1
-      - 🇺🇸 美国01丨山东移动优化
-      - 🇭🇰 香港3
-      - 🇸🇬 新加坡|SG09
-      - FI-HELSINKI-ONLYIPV6-2
-      - 🇭🇰 深港专线-德国
-      - 🇹🇭 泰国 TH BIZ
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港01丨山东移动优化
+      - 🇰🇷 韩国|SEL2
+      - 🇺🇸 美国CF08
+      - 🇭🇰 香港|HK01
+      - 🇺🇸 美国|LA2
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇯🇵 日本|T02
+      - 🇭🇰 香港|HK02
+      - 🇬🇧 伦敦-CF多线-1
+      - 🇭🇰 香港07-备用
+      - 🇺🇸 美国|PHX1
+      - 🇯🇵 日本01
+      - 🇭🇰 香港|HK35
+      - 🇸🇬 新加坡|SG06
+      - 🇻🇳 越南01
+      - 🇺🇸 美国02-1B
+      - 🇸🇬 新加坡|SG02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国|KS1
+      - 🇯🇵 日本04
+      - 🇭🇰 香港|HK07
+      - 🇺🇸 IOVEVPN美国中转-2
+      - 🇺🇸 美国|SEA1
+      - 🇸🇬 新加坡-2
       - 🇸🇬 新加坡02
+      - 🇺🇸 美国01-1B
+      - 🇯🇵 日本-2
+      - 🇺🇸 US-NEWYORK2
+      - 🇯🇵 日本-1
+      - 🇸🇬 新加坡|SG07
+      - 🇭🇰 香港|HK06
+      - 🇯🇵 日本03
+      - 🇭🇰 香港01-1A
+      - 🇰🇷 韩国-三网优化2-1F
+      - 多伦多-CF多线-1
+      - 🇺🇸 美国04
+      - 2
+      - 🇸🇬 新加坡|SG03
+      - 🇺🇸 美国 纽约2
+      - BRAZIL
+      - 🇯🇵 日本|T04
+      - 🇬🇧 英国-01
+      - 🇹🇼 台湾01-1B
+      - 🇭🇰 香港|HK03
+      - 🇭🇰 香港|HK05
+      - 3中转-2
+      - 🇺🇸 美国02-1A
+      - 🇺🇸 美国|NY1
+      - 🇺🇸 美国-03
+      - 🇭🇰 香港01-1B
+      - 🇺🇸 US-NEWYORK3
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇯🇵 日本|T01
+      - 🇭🇰 香港05-备用
+      - 🇺🇸 美国|DA1
+      - 🇭🇰 香港-2
+      - 🇮🇹 意大利|MIL1
+      - 🇭🇰 香港02-1B
+      - 🇺🇸 美国|SJ1
+      - 🇺🇸 美国|SJ0
+      - 🇯🇵 JP-TOKYO2 试用
+      - 🇭🇰 香港-3
+      - 🇸🇬 新加坡01
+      - 🇭🇰 香港|HK08
+      - 🇭🇰 香港-02
+      - 🇯🇵 日本|T05
+      - 2中转-2
+      - 🇦🇪 迪拜-CF多线-1
+      - 🇺🇸 US-FREENODE
+      - 🇯🇵 日本|T03
+      - 🇨🇦 加拿大|CA1
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇹🇼 台湾|TW01
+      - 🇵🇭 菲律宾|MNL2
+      - 🇬🇧 伦敦-CF多线-3
+      - 🇸🇬 新加坡|SG09
+      - 🇺🇸 美国CF05
+      - 🇯🇵 日本|T06
+      - 🇭🇰 香港-1
+      - 🇺🇸 US-NEWYORK5
+      - 🇸🇬 新加坡|SG08
+      - 🇯🇵 日本|T09
+      - 🇺🇸 圣何塞-CF多线
+      - 🇭🇰 香港02-1A
+      - 🇺🇸 美国CF06
+      - 🇸🇬 新加坡03
+      - FI-HELSINKI-ONLYIPV6-2
       - 🇭🇰 香港|HK09
-      - 🇹🇼 TW 海外用户
+      - 🇭🇰 香港03-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 HK-KOWLOON 试用
+      - 🇺🇸 美国 纽约01
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇸🇬 新加坡|SG07
-      - 🇰🇷 韩国 B KR
-      - 🇺🇸 美国-03
-      - 🇺🇸 美国CF08
-      - 🇬🇧 英国1
-      - 🇯🇵 日本03丨江苏移动优化
-      - 🇮🇳 印度1
-      - 🇯🇵 日本-1-1A
-      - 🇯🇵 日本|T02
-      - 🇭🇰 香港-1B
-      - 🇸🇬 新加坡-2
-      - 🇺🇸 US-NEWYORK3
-      - 🇭🇰 香港|HK35
-      - 🇭🇰 香港02丨江苏移动优化
-      - 🇭🇰 香港02-1B
-      - 🇭🇰 香港02-1A
-      - 🇦🇪 迪拜-CF多线-1
-      - 🇮🇳 印度2
-      - 🇭🇰 香港03-1B
-      - 🇲🇾 马来西亚 MY | BIZ
-      - 🇭🇰 香港04丨山东移动优化
-      - 🇯🇵 IOVEVPN日本中转-2
-      - 🇯🇵 日本-2-1A
-      - 🇸🇬 新加坡 A SG
-      - 2
-      - 🇹🇼 台湾1
-      - 🇺🇸 美国|KS1
-      - 🇰🇷 韩国|SEL2
-      - 🇯🇵 日本01丨江苏移动优化
-      - 孤云阁-03
       - 🇹🇼 台湾 1
-      - 🇭🇰 香港-3
-      - 🇹🇼 台湾01-1A
-      - 🇺🇸 美国02-1B
-      - 🇺🇸 美国01丨江苏移动优化
-      - 🇺🇸 美国|SJ1
-      - 🇭🇰 香港05-备用
-      - 🇸🇬 新加坡|SG06
-      - 🇺🇸 美国|LA2
-      - 🇭🇰 中港隧道-澳大利亚
-      - 🇩🇪 DE-建議啟用IPV6
-      - 🇫🇷 法国 FR BIZ
-      - 🇰🇷 韩国 C KR
-      - 🇯🇵 日本NO.2
-      - 🇯🇵 JP-TOKYO 试用
-      - 🇬🇧 英国 UK | BIZ
-      - 🇭🇰 香港 B HK
-      - 🇭🇰 深港专线-香港1
-      - 🇩🇪 德国 DE | BIZ
-      - 🇭🇰 香港|HK01
-      - 🇯🇵 日本-1-1B
-      - 🇹🇼 台湾A
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇯🇵 日本-2-1B
-      - 🇺🇸 美国|SJ0
-      - 🇺🇸 美国原生NO1
-      - 🇯🇵 日本 B JP
-      - 🇺🇸 美国|DA1
-      - 🇯🇵 日本NO.1
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 🇺🇸 美国2
-      - 🇭🇰 香港07-备用
-      - 🇭🇰 香港-1
-      - 🇭🇰 中港隧道-加拿大
-      - 🇺🇸 美国CF06
-      - 🇸🇬 新加坡|SG03
-      - 🇭🇰 中港隧道-香港3
-      - 🇹🇼 台湾01-1B
-      - 🇺🇸 美国1
-      - 🇸🇬 新加坡-1-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇺🇸 美国 B US
-      - 🇭🇰 香港-02
-      - 🇷🇺 俄罗斯 RU BIZ
-      - 🇭🇰 深港专线-香港3
-      - 🇭🇰 中港隧道-印度
-      - 🇭🇰 深港专线-印度
-      - 🇭🇰 深港专线-香港2
-      - 🇯🇵 日本|T03
-      - 🇸🇬 新加坡 C SG
-      - 🇸🇬 新加坡NO.1
-      - 🇭🇰 中港隧道-德国
-      - 🇭🇰 香港01丨江苏移动优化
-      - 多伦多-CF多线-1
-      - 🇹🇼 台湾 C TW
-      - 🇺🇸 美国NO.1
-      - 🇸🇬 狮城03丨山东移动优化
-      - 🇺🇸 美国04
-      - 🇬🇧 伦敦-CF多线-3
-      - 3中转-2
-      - 🇺🇸 IOVEVPN美国中转-2
-      - 🇨🇦 加拿大|CA1
-      - 🇭🇰 中港隧道-英国
-      - 🇭🇰 香港02丨山东移动优化
-      - 🇯🇵 日本 C JP
-      - 🇭🇰 香港|HK02
-      - 🇬🇧 UK-LONDON-01
-      - 🇺🇸 美国NO.2
-      - 🇸🇬 新加坡01
-      - 🇺🇸 US-NEWYORK2
-      - 🇹🇼 台湾 B TW
-      - 🇦🇺 澳大利亚原生2
-      - 🇲🇴 澳门NO.2
-      - 🇭🇰 2香港中转-2
-      - 🇭🇰 深港专线-澳大利亚
-      - 🇺🇸 美国 A US
-      - 🇯🇵 日本01
-      - 稻妻0.5x 直连
-      - 🇭🇰 香港 A HK
       - 🇺🇸 美国CF07
-      - 🇯🇵 日本|T09
-      - 🇭🇰 中港隧道-日本
-      - 🇬🇧 英国2
+      - 🇯🇵 日本02
+      - 🇸🇬 新加坡|SG01
+      - 🇹🇼 台湾|TW02
+      - 🇯🇵 大阪-CF多线-5
+      - 🇸🇬 新加坡|SG04
+      - 🇭🇰 香港04-备用
+      - 🇬🇧 英国01
       - 🇺🇸 美国01-1A
       - 🇭🇰 香港直连01
-      - 🇹🇼 台湾|TW01
-      - 🇭🇰 香港01-1B
-      - 🇰🇷 韩国 A KR
-      - 🇭🇰 香港|HK05
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇭🇰 中港隧道-香港1
-      - 🇺🇸 美国 C US
-      - 🇸🇬 新加坡|SG08
-      - 🇸🇬 新加坡NO.2
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔
-      - 🇵🇭 菲律宾|MNL2
-      - 🇬🇧 伦敦-CF多线-1
-      - 🇺🇸 美国01-1B
-      - 🇸🇬 新加坡|SG05
-      - 🇯🇵 日本02
-      - 🇭🇰 香港 C HK
-      - BRAZIL
-      - 🇭🇰 深港专线-台湾
-      - 🇸🇬 新加坡 B SG
-      - 🇺🇸 美国|LA1
-      - 🇰🇷 韩国-2
-      - 🇭🇰 中港隧道-香港2
-      - 🇭🇰 中港隧道-新加坡
-      - 🇺🇸 美国原生NO4
-      - 🇭🇰 香港NO.1
-      - 🇸🇬 新加坡|SG01
-      - 🇯🇵 日本03丨山东移动优化
-      - 🇬🇧 英国-01
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国 纽约01
-      - 🇭🇰 香港|HK06
-      - 🇸🇬 新加坡-1-1B
-      - 🇺🇸 US-FREENODE
-      - 🇮🇹 意大利|MIL1
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇸🇬 狮城02丨山东移动优化
-      - 🇭🇰 香港04丨江苏移动优化
-      - 🇭🇰 深港专线-英国
-      - 🇭🇰 深港专线-新加坡
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 🇹🇼 TW-TAOYUAN 试用-20x 0828
       - 🇭🇰 香港03-1A
-      - 🇻🇳 越南01
-      - 🇺🇸 美国02-1A
-      - 🇯🇵 日本|T01
-      - 🇬🇧 英国01
-      - 🇯🇵 日本03丨广东移动优化
-      - 🇭🇰 香港-1A
-      - 🇹🇼 台湾|TW02
-      - 🇺🇸 US 海外用户
-      - 🇯🇵 日本|T06
-      - 🇭🇰 香港-2
-      - 🇯🇵 日本 A JP
-      - 🇯🇵 日本04
-      - 🇦🇺 澳大利亚原生1
-      - 🇹🇼 台湾 A TW
-      - 🇺🇸 US-NEWYORK5
-      - 🇺🇸 美国原生NO2
-      - 🇭🇰 香港|HK03
-      - 🇺🇸 美国|SEA1
-      - 🇭🇰 中港隧道-台湾
-      - 🇻🇳 越南 VN | BIZ
-      - 🇯🇵 日本01丨山东移动优化
-      - 🇭🇰 深港专线-加拿大
-      - 🇭🇰 香港01-1A
-      - 🇸🇬 狮城02丨广东移动优化
-      - 🇸🇬 新加坡|SG04
-      - 🇹🇼 台湾B
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 狮城02丨江苏移动优化
-      - 🇯🇵 日本|T04
-      - 🇭🇰 HK-KOWLOON 试用
-      - 🇭🇰 香港|HK07
-      - 🇯🇵 日本03
-      - 🇺🇸 美国|PHX1
-      - 🇸🇬 新加坡|SG02
-      - 🇯🇵 日本|T05
-      - 🇺🇸 圣何塞-CF多线
-      - 🇺🇸 北美-US-圣何塞-2
-      - 🇺🇸 美国 纽约2
-      - 🇺🇸 美国03
-      - 🇯🇵 大阪-CF多线-5
-      - 🇯🇵 JP 海外用户
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡-1
+      - 🇩🇪 DE-建議啟用IPV6
+      - 🇺🇸 美国|LA1
+      - 🇹🇼 台湾01-1A
+      - 🇸🇬 新加坡|SG05
       - 马赛-CF多线-1
+      - 🇬🇧 UK-LONDON-01
       - 🇭🇰 香港|HK04
-      - 🇯🇵 JP-TOKYO2 试用
-      - 🇭🇰 深港专线-日本
-      - 🇸🇬 狮城03丨江苏移动优化
-      - 🇹🇼 台湾2
-      - 🇭🇰 香港|HK08
-      - 🇺🇸 美国原生NO3
-      - 🇩🇪 欧洲-法兰克福-1
-      - 🇪🇺 欧洲-伦敦-1
-      - 🇸🇬 新加坡03
-      - 🇰🇷 韩国-1
-      - 🇺🇸 美国01丨山东移动优化
-      - 🇭🇰 香港3
-      - 🇸🇬 新加坡|SG09
-      - FI-HELSINKI-ONLYIPV6-2
-      - 🇭🇰 深港专线-德国
-      - 🇹🇭 泰国 TH BIZ
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港01丨山东移动优化
+      - 🇰🇷 韩国|SEL2
+      - 🇺🇸 美国CF08
+      - 🇭🇰 香港|HK01
+      - 🇺🇸 美国|LA2
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇯🇵 日本|T02
+      - 🇭🇰 香港|HK02
+      - 🇬🇧 伦敦-CF多线-1
+      - 🇭🇰 香港07-备用
+      - 🇺🇸 美国|PHX1
+      - 🇯🇵 日本01
+      - 🇭🇰 香港|HK35
+      - 🇸🇬 新加坡|SG06
+      - 🇻🇳 越南01
+      - 🇺🇸 美国02-1B
+      - 🇸🇬 新加坡|SG02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国|KS1
+      - 🇯🇵 日本04
+      - 🇭🇰 香港|HK07
+      - 🇺🇸 IOVEVPN美国中转-2
+      - 🇺🇸 美国|SEA1
+      - 🇸🇬 新加坡-2
       - 🇸🇬 新加坡02
+      - 🇺🇸 美国01-1B
+      - 🇯🇵 日本-2
+      - 🇺🇸 US-NEWYORK2
+      - 🇯🇵 日本-1
+      - 🇸🇬 新加坡|SG07
+      - 🇭🇰 香港|HK06
+      - 🇯🇵 日本03
+      - 🇭🇰 香港01-1A
+      - 🇰🇷 韩国-三网优化2-1F
+      - 多伦多-CF多线-1
+      - 🇺🇸 美国04
+      - 2
+      - 🇸🇬 新加坡|SG03
+      - 🇺🇸 美国 纽约2
+      - BRAZIL
+      - 🇯🇵 日本|T04
+      - 🇬🇧 英国-01
+      - 🇹🇼 台湾01-1B
+      - 🇭🇰 香港|HK03
+      - 🇭🇰 香港|HK05
+      - 3中转-2
+      - 🇺🇸 美国02-1A
+      - 🇺🇸 美国|NY1
+      - 🇺🇸 美国-03
+      - 🇭🇰 香港01-1B
+      - 🇺🇸 US-NEWYORK3
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇯🇵 日本|T01
+      - 🇭🇰 香港05-备用
+      - 🇺🇸 美国|DA1
+      - 🇭🇰 香港-2
+      - 🇮🇹 意大利|MIL1
+      - 🇭🇰 香港02-1B
+      - 🇺🇸 美国|SJ1
+      - 🇺🇸 美国|SJ0
+      - 🇯🇵 JP-TOKYO2 试用
+      - 🇭🇰 香港-3
+      - 🇸🇬 新加坡01
+      - 🇭🇰 香港|HK08
+      - 🇭🇰 香港-02
+      - 🇯🇵 日本|T05
+      - 2中转-2
+      - 🇦🇪 迪拜-CF多线-1
+      - 🇺🇸 US-FREENODE
+      - 🇯🇵 日本|T03
+      - 🇨🇦 加拿大|CA1
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇹🇼 台湾|TW01
+      - 🇵🇭 菲律宾|MNL2
+      - 🇬🇧 伦敦-CF多线-3
+      - 🇸🇬 新加坡|SG09
+      - 🇺🇸 美国CF05
+      - 🇯🇵 日本|T06
+      - 🇭🇰 香港-1
+      - 🇺🇸 US-NEWYORK5
+      - 🇸🇬 新加坡|SG08
+      - 🇯🇵 日本|T09
+      - 🇺🇸 圣何塞-CF多线
+      - 🇭🇰 香港02-1A
+      - 🇺🇸 美国CF06
+      - 🇸🇬 新加坡03
+      - FI-HELSINKI-ONLYIPV6-2
       - 🇭🇰 香港|HK09
-      - 🇹🇼 TW 海外用户
+      - 🇭🇰 香港03-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 HK-KOWLOON 试用
+      - 🇺🇸 美国 纽约01
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -924,984 +504,521 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇸🇬 新加坡|SG07
-      - 🇰🇷 韩国 B KR
-      - 🇺🇸 美国-03
-      - 🇺🇸 美国CF08
-      - 🇬🇧 英国1
-      - 🇯🇵 日本03丨江苏移动优化
-      - 🇮🇳 印度1
-      - 🇯🇵 日本-1-1A
-      - 🇯🇵 日本|T02
-      - 🇭🇰 香港-1B
-      - 🇸🇬 新加坡-2
-      - 🇺🇸 US-NEWYORK3
-      - 🇭🇰 香港|HK35
-      - 🇭🇰 香港02丨江苏移动优化
-      - 🇭🇰 香港02-1B
-      - 🇭🇰 香港02-1A
-      - 🇦🇪 迪拜-CF多线-1
-      - 🇮🇳 印度2
-      - 🇭🇰 香港03-1B
-      - 🇲🇾 马来西亚 MY | BIZ
-      - 🇭🇰 香港04丨山东移动优化
-      - 🇯🇵 IOVEVPN日本中转-2
-      - 🇯🇵 日本-2-1A
-      - 🇸🇬 新加坡 A SG
-      - 2
-      - 🇹🇼 台湾1
-      - 🇺🇸 美国|KS1
-      - 🇰🇷 韩国|SEL2
-      - 🇯🇵 日本01丨江苏移动优化
-      - 孤云阁-03
       - 🇹🇼 台湾 1
-      - 🇭🇰 香港-3
-      - 🇹🇼 台湾01-1A
-      - 🇺🇸 美国02-1B
-      - 🇺🇸 美国01丨江苏移动优化
-      - 🇺🇸 美国|SJ1
-      - 🇭🇰 香港05-备用
-      - 🇸🇬 新加坡|SG06
-      - 🇺🇸 美国|LA2
-      - 🇭🇰 中港隧道-澳大利亚
-      - 🇩🇪 DE-建議啟用IPV6
-      - 🇫🇷 法国 FR BIZ
-      - 🇰🇷 韩国 C KR
-      - 🇯🇵 日本NO.2
-      - 🇯🇵 JP-TOKYO 试用
-      - 🇬🇧 英国 UK | BIZ
-      - 🇭🇰 香港 B HK
-      - 🇭🇰 深港专线-香港1
-      - 🇩🇪 德国 DE | BIZ
-      - 🇭🇰 香港|HK01
-      - 🇯🇵 日本-1-1B
-      - 🇹🇼 台湾A
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇯🇵 日本-2-1B
-      - 🇺🇸 美国|SJ0
-      - 🇺🇸 美国原生NO1
-      - 🇯🇵 日本 B JP
-      - 🇺🇸 美国|DA1
-      - 🇯🇵 日本NO.1
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 🇺🇸 美国2
-      - 🇭🇰 香港07-备用
-      - 🇭🇰 香港-1
-      - 🇭🇰 中港隧道-加拿大
-      - 🇺🇸 美国CF06
-      - 🇸🇬 新加坡|SG03
-      - 🇭🇰 中港隧道-香港3
-      - 🇹🇼 台湾01-1B
-      - 🇺🇸 美国1
-      - 🇸🇬 新加坡-1-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇺🇸 美国 B US
-      - 🇭🇰 香港-02
-      - 🇷🇺 俄罗斯 RU BIZ
-      - 🇭🇰 深港专线-香港3
-      - 🇭🇰 中港隧道-印度
-      - 🇭🇰 深港专线-印度
-      - 🇭🇰 深港专线-香港2
-      - 🇯🇵 日本|T03
-      - 🇸🇬 新加坡 C SG
-      - 🇸🇬 新加坡NO.1
-      - 🇭🇰 中港隧道-德国
-      - 🇭🇰 香港01丨江苏移动优化
-      - 多伦多-CF多线-1
-      - 🇹🇼 台湾 C TW
-      - 🇺🇸 美国NO.1
-      - 🇸🇬 狮城03丨山东移动优化
-      - 🇺🇸 美国04
-      - 🇬🇧 伦敦-CF多线-3
-      - 3中转-2
-      - 🇺🇸 IOVEVPN美国中转-2
-      - 🇨🇦 加拿大|CA1
-      - 🇭🇰 中港隧道-英国
-      - 🇭🇰 香港02丨山东移动优化
-      - 🇯🇵 日本 C JP
-      - 🇭🇰 香港|HK02
-      - 🇬🇧 UK-LONDON-01
-      - 🇺🇸 美国NO.2
-      - 🇸🇬 新加坡01
-      - 🇺🇸 US-NEWYORK2
-      - 🇹🇼 台湾 B TW
-      - 🇦🇺 澳大利亚原生2
-      - 🇲🇴 澳门NO.2
-      - 🇭🇰 2香港中转-2
-      - 🇭🇰 深港专线-澳大利亚
-      - 🇺🇸 美国 A US
-      - 🇯🇵 日本01
-      - 稻妻0.5x 直连
-      - 🇭🇰 香港 A HK
       - 🇺🇸 美国CF07
-      - 🇯🇵 日本|T09
-      - 🇭🇰 中港隧道-日本
-      - 🇬🇧 英国2
+      - 🇯🇵 日本02
+      - 🇸🇬 新加坡|SG01
+      - 🇹🇼 台湾|TW02
+      - 🇯🇵 大阪-CF多线-5
+      - 🇸🇬 新加坡|SG04
+      - 🇭🇰 香港04-备用
+      - 🇬🇧 英国01
       - 🇺🇸 美国01-1A
       - 🇭🇰 香港直连01
-      - 🇹🇼 台湾|TW01
-      - 🇭🇰 香港01-1B
-      - 🇰🇷 韩国 A KR
-      - 🇭🇰 香港|HK05
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇭🇰 中港隧道-香港1
-      - 🇺🇸 美国 C US
-      - 🇸🇬 新加坡|SG08
-      - 🇸🇬 新加坡NO.2
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔
-      - 🇵🇭 菲律宾|MNL2
-      - 🇬🇧 伦敦-CF多线-1
-      - 🇺🇸 美国01-1B
-      - 🇸🇬 新加坡|SG05
-      - 🇯🇵 日本02
-      - 🇭🇰 香港 C HK
-      - BRAZIL
-      - 🇭🇰 深港专线-台湾
-      - 🇸🇬 新加坡 B SG
-      - 🇺🇸 美国|LA1
-      - 🇰🇷 韩国-2
-      - 🇭🇰 中港隧道-香港2
-      - 🇭🇰 中港隧道-新加坡
-      - 🇺🇸 美国原生NO4
-      - 🇭🇰 香港NO.1
-      - 🇸🇬 新加坡|SG01
-      - 🇯🇵 日本03丨山东移动优化
-      - 🇬🇧 英国-01
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国 纽约01
-      - 🇭🇰 香港|HK06
-      - 🇸🇬 新加坡-1-1B
-      - 🇺🇸 US-FREENODE
-      - 🇮🇹 意大利|MIL1
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇸🇬 狮城02丨山东移动优化
-      - 🇭🇰 香港04丨江苏移动优化
-      - 🇭🇰 深港专线-英国
-      - 🇭🇰 深港专线-新加坡
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 🇹🇼 TW-TAOYUAN 试用-20x 0828
       - 🇭🇰 香港03-1A
-      - 🇻🇳 越南01
-      - 🇺🇸 美国02-1A
-      - 🇯🇵 日本|T01
-      - 🇬🇧 英国01
-      - 🇯🇵 日本03丨广东移动优化
-      - 🇭🇰 香港-1A
-      - 🇹🇼 台湾|TW02
-      - 🇺🇸 US 海外用户
-      - 🇯🇵 日本|T06
-      - 🇭🇰 香港-2
-      - 🇯🇵 日本 A JP
-      - 🇯🇵 日本04
-      - 🇦🇺 澳大利亚原生1
-      - 🇹🇼 台湾 A TW
-      - 🇺🇸 US-NEWYORK5
-      - 🇺🇸 美国原生NO2
-      - 🇭🇰 香港|HK03
-      - 🇺🇸 美国|SEA1
-      - 🇭🇰 中港隧道-台湾
-      - 🇻🇳 越南 VN | BIZ
-      - 🇯🇵 日本01丨山东移动优化
-      - 🇭🇰 深港专线-加拿大
-      - 🇭🇰 香港01-1A
-      - 🇸🇬 狮城02丨广东移动优化
-      - 🇸🇬 新加坡|SG04
-      - 🇹🇼 台湾B
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 狮城02丨江苏移动优化
-      - 🇯🇵 日本|T04
-      - 🇭🇰 HK-KOWLOON 试用
-      - 🇭🇰 香港|HK07
-      - 🇯🇵 日本03
-      - 🇺🇸 美国|PHX1
-      - 🇸🇬 新加坡|SG02
-      - 🇯🇵 日本|T05
-      - 🇺🇸 圣何塞-CF多线
-      - 🇺🇸 北美-US-圣何塞-2
-      - 🇺🇸 美国 纽约2
-      - 🇺🇸 美国03
-      - 🇯🇵 大阪-CF多线-5
-      - 🇯🇵 JP 海外用户
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡-1
+      - 🇩🇪 DE-建議啟用IPV6
+      - 🇺🇸 美国|LA1
+      - 🇹🇼 台湾01-1A
+      - 🇸🇬 新加坡|SG05
       - 马赛-CF多线-1
+      - 🇬🇧 UK-LONDON-01
       - 🇭🇰 香港|HK04
-      - 🇯🇵 JP-TOKYO2 试用
-      - 🇭🇰 深港专线-日本
-      - 🇸🇬 狮城03丨江苏移动优化
-      - 🇹🇼 台湾2
-      - 🇭🇰 香港|HK08
-      - 🇺🇸 美国原生NO3
-      - 🇩🇪 欧洲-法兰克福-1
-      - 🇪🇺 欧洲-伦敦-1
-      - 🇸🇬 新加坡03
-      - 🇰🇷 韩国-1
-      - 🇺🇸 美国01丨山东移动优化
-      - 🇭🇰 香港3
-      - 🇸🇬 新加坡|SG09
-      - FI-HELSINKI-ONLYIPV6-2
-      - 🇭🇰 深港专线-德国
-      - 🇹🇭 泰国 TH BIZ
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港01丨山东移动优化
+      - 🇰🇷 韩国|SEL2
+      - 🇺🇸 美国CF08
+      - 🇭🇰 香港|HK01
+      - 🇺🇸 美国|LA2
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇯🇵 日本|T02
+      - 🇭🇰 香港|HK02
+      - 🇬🇧 伦敦-CF多线-1
+      - 🇭🇰 香港07-备用
+      - 🇺🇸 美国|PHX1
+      - 🇯🇵 日本01
+      - 🇭🇰 香港|HK35
+      - 🇸🇬 新加坡|SG06
+      - 🇻🇳 越南01
+      - 🇺🇸 美国02-1B
+      - 🇸🇬 新加坡|SG02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国|KS1
+      - 🇯🇵 日本04
+      - 🇭🇰 香港|HK07
+      - 🇺🇸 IOVEVPN美国中转-2
+      - 🇺🇸 美国|SEA1
+      - 🇸🇬 新加坡-2
       - 🇸🇬 新加坡02
+      - 🇺🇸 美国01-1B
+      - 🇯🇵 日本-2
+      - 🇺🇸 US-NEWYORK2
+      - 🇯🇵 日本-1
+      - 🇸🇬 新加坡|SG07
+      - 🇭🇰 香港|HK06
+      - 🇯🇵 日本03
+      - 🇭🇰 香港01-1A
+      - 🇰🇷 韩国-三网优化2-1F
+      - 多伦多-CF多线-1
+      - 🇺🇸 美国04
+      - 2
+      - 🇸🇬 新加坡|SG03
+      - 🇺🇸 美国 纽约2
+      - BRAZIL
+      - 🇯🇵 日本|T04
+      - 🇬🇧 英国-01
+      - 🇹🇼 台湾01-1B
+      - 🇭🇰 香港|HK03
+      - 🇭🇰 香港|HK05
+      - 3中转-2
+      - 🇺🇸 美国02-1A
+      - 🇺🇸 美国|NY1
+      - 🇺🇸 美国-03
+      - 🇭🇰 香港01-1B
+      - 🇺🇸 US-NEWYORK3
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇯🇵 日本|T01
+      - 🇭🇰 香港05-备用
+      - 🇺🇸 美国|DA1
+      - 🇭🇰 香港-2
+      - 🇮🇹 意大利|MIL1
+      - 🇭🇰 香港02-1B
+      - 🇺🇸 美国|SJ1
+      - 🇺🇸 美国|SJ0
+      - 🇯🇵 JP-TOKYO2 试用
+      - 🇭🇰 香港-3
+      - 🇸🇬 新加坡01
+      - 🇭🇰 香港|HK08
+      - 🇭🇰 香港-02
+      - 🇯🇵 日本|T05
+      - 2中转-2
+      - 🇦🇪 迪拜-CF多线-1
+      - 🇺🇸 US-FREENODE
+      - 🇯🇵 日本|T03
+      - 🇨🇦 加拿大|CA1
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇹🇼 台湾|TW01
+      - 🇵🇭 菲律宾|MNL2
+      - 🇬🇧 伦敦-CF多线-3
+      - 🇸🇬 新加坡|SG09
+      - 🇺🇸 美国CF05
+      - 🇯🇵 日本|T06
+      - 🇭🇰 香港-1
+      - 🇺🇸 US-NEWYORK5
+      - 🇸🇬 新加坡|SG08
+      - 🇯🇵 日本|T09
+      - 🇺🇸 圣何塞-CF多线
+      - 🇭🇰 香港02-1A
+      - 🇺🇸 美国CF06
+      - 🇸🇬 新加坡03
+      - FI-HELSINKI-ONLYIPV6-2
       - 🇭🇰 香港|HK09
-      - 🇹🇼 TW 海外用户
+      - 🇭🇰 香港03-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 HK-KOWLOON 试用
+      - 🇺🇸 美国 纽约01
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 香港-1B
-      - 🇭🇰 香港|HK35
-      - 🇭🇰 香港02丨江苏移动优化
-      - 🇭🇰 香港02-1B
-      - 🇭🇰 香港02-1A
-      - 🇭🇰 香港03-1B
-      - 🇭🇰 香港04丨山东移动优化
-      - 🇹🇼 台湾1
       - 🇹🇼 台湾 1
-      - 🇭🇰 香港-3
-      - 🇹🇼 台湾01-1A
-      - 🇭🇰 香港05-备用
-      - 🇭🇰 中港隧道-澳大利亚
-      - 🇭🇰 香港 B HK
-      - 🇭🇰 深港专线-香港1
-      - 🇭🇰 香港|HK01
-      - 🇹🇼 台湾A
-      - 🇭🇰 香港07-备用
-      - 🇭🇰 香港-1
-      - 🇭🇰 中港隧道-加拿大
-      - 🇭🇰 中港隧道-香港3
-      - 🇹🇼 台湾01-1B
-      - 🇭🇰 香港-02
-      - 🇭🇰 深港专线-香港3
-      - 🇭🇰 中港隧道-印度
-      - 🇭🇰 深港专线-印度
-      - 🇭🇰 深港专线-香港2
-      - 🇭🇰 中港隧道-德国
-      - 🇭🇰 香港01丨江苏移动优化
-      - 🇹🇼 台湾 C TW
-      - 🇭🇰 中港隧道-英国
-      - 🇭🇰 香港02丨山东移动优化
-      - 🇭🇰 香港|HK02
-      - 🇹🇼 台湾 B TW
-      - 🇭🇰 2香港中转-2
-      - 🇭🇰 深港专线-澳大利亚
-      - 🇭🇰 香港 A HK
-      - 🇭🇰 中港隧道-日本
-      - 🇭🇰 香港直连01
-      - 🇹🇼 台湾|TW01
-      - 🇭🇰 香港01-1B
-      - 🇭🇰 香港|HK05
-      - 🇭🇰 中港隧道-香港1
-      - 🇭🇰 香港 C HK
-      - 🇭🇰 深港专线-台湾
-      - 🇭🇰 中港隧道-香港2
-      - 🇭🇰 中港隧道-新加坡
-      - 🇭🇰 香港NO.1
-      - 🇭🇰 香港|HK06
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇭🇰 香港04丨江苏移动优化
-      - 🇭🇰 深港专线-英国
-      - 🇭🇰 深港专线-新加坡
-      - 🇭🇰 香港03-1A
-      - 🇭🇰 香港-1A
       - 🇹🇼 台湾|TW02
-      - 🇭🇰 香港-2
-      - 🇹🇼 台湾 A TW
-      - 🇭🇰 香港|HK03
-      - 🇭🇰 中港隧道-台湾
-      - 🇭🇰 深港专线-加拿大
-      - 🇭🇰 香港01-1A
-      - 🇹🇼 台湾B
-      - 🇭🇰 香港|HK07
-      - 🇭🇰 香港|HK04
-      - 🇭🇰 深港专线-日本
-      - 🇹🇼 台湾2
-      - 🇭🇰 香港|HK08
-      - 🇭🇰 香港3
-      - 🇭🇰 深港专线-德国
       - 🇭🇰 香港04-备用
-      - 🇭🇰 香港01丨山东移动优化
+      - 🇭🇰 香港直连01
+      - 🇭🇰 香港03-1A
+      - 🇹🇼 台湾01-1A
+      - 🇭🇰 香港|HK04
+      - 🇭🇰 香港|HK01
+      - 🇭🇰 香港|HK02
+      - 🇭🇰 香港07-备用
+      - 🇭🇰 香港|HK35
+      - 🇭🇰 香港|HK07
+      - 🇭🇰 香港|HK06
+      - 🇭🇰 香港01-1A
+      - 🇹🇼 台湾01-1B
+      - 🇭🇰 香港|HK03
+      - 🇭🇰 香港|HK05
+      - 🇭🇰 香港01-1B
+      - 🇭🇰 香港05-备用
+      - 🇭🇰 香港-2
+      - 🇭🇰 香港02-1B
+      - 🇭🇰 香港-3
+      - 🇭🇰 香港|HK08
+      - 🇭🇰 香港-02
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 🇹🇼 台湾|TW01
+      - 🇭🇰 香港-1
+      - 🇭🇰 香港02-1A
       - 🇭🇰 香港|HK09
+      - 🇭🇰 香港03-1B
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇸🇬 新加坡|SG07
-      - 🇰🇷 韩国 B KR
-      - 🇺🇸 美国-03
-      - 🇺🇸 美国CF08
-      - 🇬🇧 英国1
-      - 🇯🇵 日本03丨江苏移动优化
-      - 🇮🇳 印度1
-      - 🇯🇵 日本-1-1A
-      - 🇯🇵 日本|T02
-      - 🇭🇰 香港-1B
-      - 🇸🇬 新加坡-2
-      - 🇺🇸 US-NEWYORK3
-      - 🇭🇰 香港|HK35
-      - 🇭🇰 香港02丨江苏移动优化
-      - 🇭🇰 香港02-1B
-      - 🇭🇰 香港02-1A
-      - 🇦🇪 迪拜-CF多线-1
-      - 🇮🇳 印度2
-      - 🇭🇰 香港03-1B
-      - 🇲🇾 马来西亚 MY | BIZ
-      - 🇭🇰 香港04丨山东移动优化
-      - 🇯🇵 IOVEVPN日本中转-2
-      - 🇯🇵 日本-2-1A
-      - 🇸🇬 新加坡 A SG
-      - 2
-      - 🇹🇼 台湾1
-      - 🇺🇸 美国|KS1
-      - 🇰🇷 韩国|SEL2
-      - 🇯🇵 日本01丨江苏移动优化
-      - 孤云阁-03
       - 🇹🇼 台湾 1
-      - 🇭🇰 香港-3
-      - 🇹🇼 台湾01-1A
-      - 🇺🇸 美国02-1B
-      - 🇺🇸 美国01丨江苏移动优化
-      - 🇺🇸 美国|SJ1
-      - 🇭🇰 香港05-备用
-      - 🇸🇬 新加坡|SG06
-      - 🇺🇸 美国|LA2
-      - 🇭🇰 中港隧道-澳大利亚
-      - 🇩🇪 DE-建議啟用IPV6
-      - 🇫🇷 法国 FR BIZ
-      - 🇰🇷 韩国 C KR
-      - 🇯🇵 日本NO.2
-      - 🇯🇵 JP-TOKYO 试用
-      - 🇬🇧 英国 UK | BIZ
-      - 🇭🇰 香港 B HK
-      - 🇭🇰 深港专线-香港1
-      - 🇩🇪 德国 DE | BIZ
-      - 🇭🇰 香港|HK01
-      - 🇯🇵 日本-1-1B
-      - 🇹🇼 台湾A
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇯🇵 日本-2-1B
-      - 🇺🇸 美国|SJ0
-      - 🇺🇸 美国原生NO1
-      - 🇯🇵 日本 B JP
-      - 🇺🇸 美国|DA1
-      - 🇯🇵 日本NO.1
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 🇺🇸 美国2
-      - 🇭🇰 香港07-备用
-      - 🇭🇰 香港-1
-      - 🇭🇰 中港隧道-加拿大
-      - 🇺🇸 美国CF06
-      - 🇸🇬 新加坡|SG03
-      - 🇭🇰 中港隧道-香港3
-      - 🇹🇼 台湾01-1B
-      - 🇺🇸 美国1
-      - 🇸🇬 新加坡-1-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇺🇸 美国 B US
-      - 🇭🇰 香港-02
-      - 🇷🇺 俄罗斯 RU BIZ
-      - 🇭🇰 深港专线-香港3
-      - 🇭🇰 中港隧道-印度
-      - 🇭🇰 深港专线-印度
-      - 🇭🇰 深港专线-香港2
-      - 🇯🇵 日本|T03
-      - 🇸🇬 新加坡 C SG
-      - 🇸🇬 新加坡NO.1
-      - 🇭🇰 中港隧道-德国
-      - 🇭🇰 香港01丨江苏移动优化
-      - 多伦多-CF多线-1
-      - 🇹🇼 台湾 C TW
-      - 🇺🇸 美国NO.1
-      - 🇸🇬 狮城03丨山东移动优化
-      - 🇺🇸 美国04
-      - 🇬🇧 伦敦-CF多线-3
-      - 3中转-2
-      - 🇺🇸 IOVEVPN美国中转-2
-      - 🇨🇦 加拿大|CA1
-      - 🇭🇰 中港隧道-英国
-      - 🇭🇰 香港02丨山东移动优化
-      - 🇯🇵 日本 C JP
-      - 🇭🇰 香港|HK02
-      - 🇬🇧 UK-LONDON-01
-      - 🇺🇸 美国NO.2
-      - 🇸🇬 新加坡01
-      - 🇺🇸 US-NEWYORK2
-      - 🇹🇼 台湾 B TW
-      - 🇦🇺 澳大利亚原生2
-      - 🇲🇴 澳门NO.2
-      - 🇭🇰 2香港中转-2
-      - 🇭🇰 深港专线-澳大利亚
-      - 🇺🇸 美国 A US
-      - 🇯🇵 日本01
-      - 稻妻0.5x 直连
-      - 🇭🇰 香港 A HK
       - 🇺🇸 美国CF07
-      - 🇯🇵 日本|T09
-      - 🇭🇰 中港隧道-日本
-      - 🇬🇧 英国2
+      - 🇯🇵 日本02
+      - 🇸🇬 新加坡|SG01
+      - 🇹🇼 台湾|TW02
+      - 🇯🇵 大阪-CF多线-5
+      - 🇸🇬 新加坡|SG04
+      - 🇭🇰 香港04-备用
+      - 🇬🇧 英国01
       - 🇺🇸 美国01-1A
       - 🇭🇰 香港直连01
-      - 🇹🇼 台湾|TW01
-      - 🇭🇰 香港01-1B
-      - 🇰🇷 韩国 A KR
-      - 🇭🇰 香港|HK05
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇭🇰 中港隧道-香港1
-      - 🇺🇸 美国 C US
-      - 🇸🇬 新加坡|SG08
-      - 🇸🇬 新加坡NO.2
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔
-      - 🇵🇭 菲律宾|MNL2
-      - 🇬🇧 伦敦-CF多线-1
-      - 🇺🇸 美国01-1B
-      - 🇸🇬 新加坡|SG05
-      - 🇯🇵 日本02
-      - 🇭🇰 香港 C HK
-      - BRAZIL
-      - 🇭🇰 深港专线-台湾
-      - 🇸🇬 新加坡 B SG
-      - 🇺🇸 美国|LA1
-      - 🇰🇷 韩国-2
-      - 🇭🇰 中港隧道-香港2
-      - 🇭🇰 中港隧道-新加坡
-      - 🇺🇸 美国原生NO4
-      - 🇭🇰 香港NO.1
-      - 🇸🇬 新加坡|SG01
-      - 🇯🇵 日本03丨山东移动优化
-      - 🇬🇧 英国-01
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国 纽约01
-      - 🇭🇰 香港|HK06
-      - 🇸🇬 新加坡-1-1B
-      - 🇺🇸 US-FREENODE
-      - 🇮🇹 意大利|MIL1
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇸🇬 狮城02丨山东移动优化
-      - 🇭🇰 香港04丨江苏移动优化
-      - 🇭🇰 深港专线-英国
-      - 🇭🇰 深港专线-新加坡
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 🇹🇼 TW-TAOYUAN 试用-20x 0828
       - 🇭🇰 香港03-1A
-      - 🇻🇳 越南01
-      - 🇺🇸 美国02-1A
-      - 🇯🇵 日本|T01
-      - 🇬🇧 英国01
-      - 🇯🇵 日本03丨广东移动优化
-      - 🇭🇰 香港-1A
-      - 🇹🇼 台湾|TW02
-      - 🇺🇸 US 海外用户
-      - 🇯🇵 日本|T06
-      - 🇭🇰 香港-2
-      - 🇯🇵 日本 A JP
-      - 🇯🇵 日本04
-      - 🇦🇺 澳大利亚原生1
-      - 🇹🇼 台湾 A TW
-      - 🇺🇸 US-NEWYORK5
-      - 🇺🇸 美国原生NO2
-      - 🇭🇰 香港|HK03
-      - 🇺🇸 美国|SEA1
-      - 🇭🇰 中港隧道-台湾
-      - 🇻🇳 越南 VN | BIZ
-      - 🇯🇵 日本01丨山东移动优化
-      - 🇭🇰 深港专线-加拿大
-      - 🇭🇰 香港01-1A
-      - 🇸🇬 狮城02丨广东移动优化
-      - 🇸🇬 新加坡|SG04
-      - 🇹🇼 台湾B
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 狮城02丨江苏移动优化
-      - 🇯🇵 日本|T04
-      - 🇭🇰 HK-KOWLOON 试用
-      - 🇭🇰 香港|HK07
-      - 🇯🇵 日本03
-      - 🇺🇸 美国|PHX1
-      - 🇸🇬 新加坡|SG02
-      - 🇯🇵 日本|T05
-      - 🇺🇸 圣何塞-CF多线
-      - 🇺🇸 北美-US-圣何塞-2
-      - 🇺🇸 美国 纽约2
-      - 🇺🇸 美国03
-      - 🇯🇵 大阪-CF多线-5
-      - 🇯🇵 JP 海外用户
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡-1
+      - 🇩🇪 DE-建議啟用IPV6
+      - 🇺🇸 美国|LA1
+      - 🇹🇼 台湾01-1A
+      - 🇸🇬 新加坡|SG05
       - 马赛-CF多线-1
+      - 🇬🇧 UK-LONDON-01
       - 🇭🇰 香港|HK04
-      - 🇯🇵 JP-TOKYO2 试用
-      - 🇭🇰 深港专线-日本
-      - 🇸🇬 狮城03丨江苏移动优化
-      - 🇹🇼 台湾2
-      - 🇭🇰 香港|HK08
-      - 🇺🇸 美国原生NO3
-      - 🇩🇪 欧洲-法兰克福-1
-      - 🇪🇺 欧洲-伦敦-1
-      - 🇸🇬 新加坡03
-      - 🇰🇷 韩国-1
-      - 🇺🇸 美国01丨山东移动优化
-      - 🇭🇰 香港3
-      - 🇸🇬 新加坡|SG09
-      - FI-HELSINKI-ONLYIPV6-2
-      - 🇭🇰 深港专线-德国
-      - 🇹🇭 泰国 TH BIZ
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港01丨山东移动优化
+      - 🇰🇷 韩国|SEL2
+      - 🇺🇸 美国CF08
+      - 🇭🇰 香港|HK01
+      - 🇺🇸 美国|LA2
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇯🇵 日本|T02
+      - 🇭🇰 香港|HK02
+      - 🇬🇧 伦敦-CF多线-1
+      - 🇭🇰 香港07-备用
+      - 🇺🇸 美国|PHX1
+      - 🇯🇵 日本01
+      - 🇭🇰 香港|HK35
+      - 🇸🇬 新加坡|SG06
+      - 🇻🇳 越南01
+      - 🇺🇸 美国02-1B
+      - 🇸🇬 新加坡|SG02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国|KS1
+      - 🇯🇵 日本04
+      - 🇭🇰 香港|HK07
+      - 🇺🇸 IOVEVPN美国中转-2
+      - 🇺🇸 美国|SEA1
+      - 🇸🇬 新加坡-2
       - 🇸🇬 新加坡02
+      - 🇺🇸 美国01-1B
+      - 🇯🇵 日本-2
+      - 🇺🇸 US-NEWYORK2
+      - 🇯🇵 日本-1
+      - 🇸🇬 新加坡|SG07
+      - 🇭🇰 香港|HK06
+      - 🇯🇵 日本03
+      - 🇭🇰 香港01-1A
+      - 🇰🇷 韩国-三网优化2-1F
+      - 多伦多-CF多线-1
+      - 🇺🇸 美国04
+      - 2
+      - 🇸🇬 新加坡|SG03
+      - 🇺🇸 美国 纽约2
+      - BRAZIL
+      - 🇯🇵 日本|T04
+      - 🇬🇧 英国-01
+      - 🇹🇼 台湾01-1B
+      - 🇭🇰 香港|HK03
+      - 🇭🇰 香港|HK05
+      - 3中转-2
+      - 🇺🇸 美国02-1A
+      - 🇺🇸 美国|NY1
+      - 🇺🇸 美国-03
+      - 🇭🇰 香港01-1B
+      - 🇺🇸 US-NEWYORK3
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇯🇵 日本|T01
+      - 🇭🇰 香港05-备用
+      - 🇺🇸 美国|DA1
+      - 🇭🇰 香港-2
+      - 🇮🇹 意大利|MIL1
+      - 🇭🇰 香港02-1B
+      - 🇺🇸 美国|SJ1
+      - 🇺🇸 美国|SJ0
+      - 🇯🇵 JP-TOKYO2 试用
+      - 🇭🇰 香港-3
+      - 🇸🇬 新加坡01
+      - 🇭🇰 香港|HK08
+      - 🇭🇰 香港-02
+      - 🇯🇵 日本|T05
+      - 2中转-2
+      - 🇦🇪 迪拜-CF多线-1
+      - 🇺🇸 US-FREENODE
+      - 🇯🇵 日本|T03
+      - 🇨🇦 加拿大|CA1
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇹🇼 台湾|TW01
+      - 🇵🇭 菲律宾|MNL2
+      - 🇬🇧 伦敦-CF多线-3
+      - 🇸🇬 新加坡|SG09
+      - 🇺🇸 美国CF05
+      - 🇯🇵 日本|T06
+      - 🇭🇰 香港-1
+      - 🇺🇸 US-NEWYORK5
+      - 🇸🇬 新加坡|SG08
+      - 🇯🇵 日本|T09
+      - 🇺🇸 圣何塞-CF多线
+      - 🇭🇰 香港02-1A
+      - 🇺🇸 美国CF06
+      - 🇸🇬 新加坡03
+      - FI-HELSINKI-ONLYIPV6-2
       - 🇭🇰 香港|HK09
-      - 🇹🇼 TW 海外用户
+      - 🇭🇰 香港03-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 HK-KOWLOON 试用
+      - 🇺🇸 美国 纽约01
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇸🇬 新加坡|SG07
-      - 🇰🇷 韩国 B KR
-      - 🇺🇸 美国-03
-      - 🇺🇸 美国CF08
-      - 🇬🇧 英国1
-      - 🇯🇵 日本03丨江苏移动优化
-      - 🇮🇳 印度1
-      - 🇯🇵 日本-1-1A
-      - 🇯🇵 日本|T02
-      - 🇭🇰 香港-1B
-      - 🇸🇬 新加坡-2
-      - 🇺🇸 US-NEWYORK3
-      - 🇭🇰 香港|HK35
-      - 🇭🇰 香港02丨江苏移动优化
-      - 🇭🇰 香港02-1B
-      - 🇭🇰 香港02-1A
-      - 🇦🇪 迪拜-CF多线-1
-      - 🇮🇳 印度2
-      - 🇭🇰 香港03-1B
-      - 🇲🇾 马来西亚 MY | BIZ
-      - 🇭🇰 香港04丨山东移动优化
-      - 🇯🇵 IOVEVPN日本中转-2
-      - 🇯🇵 日本-2-1A
-      - 🇸🇬 新加坡 A SG
-      - 2
-      - 🇹🇼 台湾1
-      - 🇺🇸 美国|KS1
-      - 🇰🇷 韩国|SEL2
-      - 🇯🇵 日本01丨江苏移动优化
-      - 孤云阁-03
       - 🇹🇼 台湾 1
-      - 🇭🇰 香港-3
-      - 🇹🇼 台湾01-1A
-      - 🇺🇸 美国02-1B
-      - 🇺🇸 美国01丨江苏移动优化
-      - 🇺🇸 美国|SJ1
-      - 🇭🇰 香港05-备用
-      - 🇸🇬 新加坡|SG06
-      - 🇺🇸 美国|LA2
-      - 🇭🇰 中港隧道-澳大利亚
-      - 🇩🇪 DE-建議啟用IPV6
-      - 🇫🇷 法国 FR BIZ
-      - 🇰🇷 韩国 C KR
-      - 🇯🇵 日本NO.2
-      - 🇯🇵 JP-TOKYO 试用
-      - 🇬🇧 英国 UK | BIZ
-      - 🇭🇰 香港 B HK
-      - 🇭🇰 深港专线-香港1
-      - 🇩🇪 德国 DE | BIZ
-      - 🇭🇰 香港|HK01
-      - 🇯🇵 日本-1-1B
-      - 🇹🇼 台湾A
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇯🇵 日本-2-1B
-      - 🇺🇸 美国|SJ0
-      - 🇺🇸 美国原生NO1
-      - 🇯🇵 日本 B JP
-      - 🇺🇸 美国|DA1
-      - 🇯🇵 日本NO.1
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 🇺🇸 美国2
-      - 🇭🇰 香港07-备用
-      - 🇭🇰 香港-1
-      - 🇭🇰 中港隧道-加拿大
-      - 🇺🇸 美国CF06
-      - 🇸🇬 新加坡|SG03
-      - 🇭🇰 中港隧道-香港3
-      - 🇹🇼 台湾01-1B
-      - 🇺🇸 美国1
-      - 🇸🇬 新加坡-1-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇺🇸 美国 B US
-      - 🇭🇰 香港-02
-      - 🇷🇺 俄罗斯 RU BIZ
-      - 🇭🇰 深港专线-香港3
-      - 🇭🇰 中港隧道-印度
-      - 🇭🇰 深港专线-印度
-      - 🇭🇰 深港专线-香港2
-      - 🇯🇵 日本|T03
-      - 🇸🇬 新加坡 C SG
-      - 🇸🇬 新加坡NO.1
-      - 🇭🇰 中港隧道-德国
-      - 🇭🇰 香港01丨江苏移动优化
-      - 多伦多-CF多线-1
-      - 🇹🇼 台湾 C TW
-      - 🇺🇸 美国NO.1
-      - 🇸🇬 狮城03丨山东移动优化
-      - 🇺🇸 美国04
-      - 🇬🇧 伦敦-CF多线-3
-      - 3中转-2
-      - 🇺🇸 IOVEVPN美国中转-2
-      - 🇨🇦 加拿大|CA1
-      - 🇭🇰 中港隧道-英国
-      - 🇭🇰 香港02丨山东移动优化
-      - 🇯🇵 日本 C JP
-      - 🇭🇰 香港|HK02
-      - 🇬🇧 UK-LONDON-01
-      - 🇺🇸 美国NO.2
-      - 🇸🇬 新加坡01
-      - 🇺🇸 US-NEWYORK2
-      - 🇹🇼 台湾 B TW
-      - 🇦🇺 澳大利亚原生2
-      - 🇲🇴 澳门NO.2
-      - 🇭🇰 2香港中转-2
-      - 🇭🇰 深港专线-澳大利亚
-      - 🇺🇸 美国 A US
-      - 🇯🇵 日本01
-      - 稻妻0.5x 直连
-      - 🇭🇰 香港 A HK
       - 🇺🇸 美国CF07
-      - 🇯🇵 日本|T09
-      - 🇭🇰 中港隧道-日本
-      - 🇬🇧 英国2
+      - 🇯🇵 日本02
+      - 🇸🇬 新加坡|SG01
+      - 🇹🇼 台湾|TW02
+      - 🇯🇵 大阪-CF多线-5
+      - 🇸🇬 新加坡|SG04
+      - 🇭🇰 香港04-备用
+      - 🇬🇧 英国01
       - 🇺🇸 美国01-1A
       - 🇭🇰 香港直连01
-      - 🇹🇼 台湾|TW01
-      - 🇭🇰 香港01-1B
-      - 🇰🇷 韩国 A KR
-      - 🇭🇰 香港|HK05
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇭🇰 中港隧道-香港1
-      - 🇺🇸 美国 C US
-      - 🇸🇬 新加坡|SG08
-      - 🇸🇬 新加坡NO.2
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔
-      - 🇵🇭 菲律宾|MNL2
-      - 🇬🇧 伦敦-CF多线-1
-      - 🇺🇸 美国01-1B
-      - 🇸🇬 新加坡|SG05
-      - 🇯🇵 日本02
-      - 🇭🇰 香港 C HK
-      - BRAZIL
-      - 🇭🇰 深港专线-台湾
-      - 🇸🇬 新加坡 B SG
-      - 🇺🇸 美国|LA1
-      - 🇰🇷 韩国-2
-      - 🇭🇰 中港隧道-香港2
-      - 🇭🇰 中港隧道-新加坡
-      - 🇺🇸 美国原生NO4
-      - 🇭🇰 香港NO.1
-      - 🇸🇬 新加坡|SG01
-      - 🇯🇵 日本03丨山东移动优化
-      - 🇬🇧 英国-01
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国 纽约01
-      - 🇭🇰 香港|HK06
-      - 🇸🇬 新加坡-1-1B
-      - 🇺🇸 US-FREENODE
-      - 🇮🇹 意大利|MIL1
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇸🇬 狮城02丨山东移动优化
-      - 🇭🇰 香港04丨江苏移动优化
-      - 🇭🇰 深港专线-英国
-      - 🇭🇰 深港专线-新加坡
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 🇹🇼 TW-TAOYUAN 试用-20x 0828
       - 🇭🇰 香港03-1A
-      - 🇻🇳 越南01
-      - 🇺🇸 美国02-1A
-      - 🇯🇵 日本|T01
-      - 🇬🇧 英国01
-      - 🇯🇵 日本03丨广东移动优化
-      - 🇭🇰 香港-1A
-      - 🇹🇼 台湾|TW02
-      - 🇺🇸 US 海外用户
-      - 🇯🇵 日本|T06
-      - 🇭🇰 香港-2
-      - 🇯🇵 日本 A JP
-      - 🇯🇵 日本04
-      - 🇦🇺 澳大利亚原生1
-      - 🇹🇼 台湾 A TW
-      - 🇺🇸 US-NEWYORK5
-      - 🇺🇸 美国原生NO2
-      - 🇭🇰 香港|HK03
-      - 🇺🇸 美国|SEA1
-      - 🇭🇰 中港隧道-台湾
-      - 🇻🇳 越南 VN | BIZ
-      - 🇯🇵 日本01丨山东移动优化
-      - 🇭🇰 深港专线-加拿大
-      - 🇭🇰 香港01-1A
-      - 🇸🇬 狮城02丨广东移动优化
-      - 🇸🇬 新加坡|SG04
-      - 🇹🇼 台湾B
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 狮城02丨江苏移动优化
-      - 🇯🇵 日本|T04
-      - 🇭🇰 HK-KOWLOON 试用
-      - 🇭🇰 香港|HK07
-      - 🇯🇵 日本03
-      - 🇺🇸 美国|PHX1
-      - 🇸🇬 新加坡|SG02
-      - 🇯🇵 日本|T05
-      - 🇺🇸 圣何塞-CF多线
-      - 🇺🇸 北美-US-圣何塞-2
-      - 🇺🇸 美国 纽约2
-      - 🇺🇸 美国03
-      - 🇯🇵 大阪-CF多线-5
-      - 🇯🇵 JP 海外用户
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡-1
+      - 🇩🇪 DE-建議啟用IPV6
+      - 🇺🇸 美国|LA1
+      - 🇹🇼 台湾01-1A
+      - 🇸🇬 新加坡|SG05
       - 马赛-CF多线-1
+      - 🇬🇧 UK-LONDON-01
       - 🇭🇰 香港|HK04
-      - 🇯🇵 JP-TOKYO2 试用
-      - 🇭🇰 深港专线-日本
-      - 🇸🇬 狮城03丨江苏移动优化
-      - 🇹🇼 台湾2
-      - 🇭🇰 香港|HK08
-      - 🇺🇸 美国原生NO3
-      - 🇩🇪 欧洲-法兰克福-1
-      - 🇪🇺 欧洲-伦敦-1
-      - 🇸🇬 新加坡03
-      - 🇰🇷 韩国-1
-      - 🇺🇸 美国01丨山东移动优化
-      - 🇭🇰 香港3
-      - 🇸🇬 新加坡|SG09
-      - FI-HELSINKI-ONLYIPV6-2
-      - 🇭🇰 深港专线-德国
-      - 🇹🇭 泰国 TH BIZ
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港01丨山东移动优化
+      - 🇰🇷 韩国|SEL2
+      - 🇺🇸 美国CF08
+      - 🇭🇰 香港|HK01
+      - 🇺🇸 美国|LA2
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇯🇵 日本|T02
+      - 🇭🇰 香港|HK02
+      - 🇬🇧 伦敦-CF多线-1
+      - 🇭🇰 香港07-备用
+      - 🇺🇸 美国|PHX1
+      - 🇯🇵 日本01
+      - 🇭🇰 香港|HK35
+      - 🇸🇬 新加坡|SG06
+      - 🇻🇳 越南01
+      - 🇺🇸 美国02-1B
+      - 🇸🇬 新加坡|SG02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国|KS1
+      - 🇯🇵 日本04
+      - 🇭🇰 香港|HK07
+      - 🇺🇸 IOVEVPN美国中转-2
+      - 🇺🇸 美国|SEA1
+      - 🇸🇬 新加坡-2
       - 🇸🇬 新加坡02
+      - 🇺🇸 美国01-1B
+      - 🇯🇵 日本-2
+      - 🇺🇸 US-NEWYORK2
+      - 🇯🇵 日本-1
+      - 🇸🇬 新加坡|SG07
+      - 🇭🇰 香港|HK06
+      - 🇯🇵 日本03
+      - 🇭🇰 香港01-1A
+      - 🇰🇷 韩国-三网优化2-1F
+      - 多伦多-CF多线-1
+      - 🇺🇸 美国04
+      - 2
+      - 🇸🇬 新加坡|SG03
+      - 🇺🇸 美国 纽约2
+      - BRAZIL
+      - 🇯🇵 日本|T04
+      - 🇬🇧 英国-01
+      - 🇹🇼 台湾01-1B
+      - 🇭🇰 香港|HK03
+      - 🇭🇰 香港|HK05
+      - 3中转-2
+      - 🇺🇸 美国02-1A
+      - 🇺🇸 美国|NY1
+      - 🇺🇸 美国-03
+      - 🇭🇰 香港01-1B
+      - 🇺🇸 US-NEWYORK3
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇯🇵 日本|T01
+      - 🇭🇰 香港05-备用
+      - 🇺🇸 美国|DA1
+      - 🇭🇰 香港-2
+      - 🇮🇹 意大利|MIL1
+      - 🇭🇰 香港02-1B
+      - 🇺🇸 美国|SJ1
+      - 🇺🇸 美国|SJ0
+      - 🇯🇵 JP-TOKYO2 试用
+      - 🇭🇰 香港-3
+      - 🇸🇬 新加坡01
+      - 🇭🇰 香港|HK08
+      - 🇭🇰 香港-02
+      - 🇯🇵 日本|T05
+      - 2中转-2
+      - 🇦🇪 迪拜-CF多线-1
+      - 🇺🇸 US-FREENODE
+      - 🇯🇵 日本|T03
+      - 🇨🇦 加拿大|CA1
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇹🇼 台湾|TW01
+      - 🇵🇭 菲律宾|MNL2
+      - 🇬🇧 伦敦-CF多线-3
+      - 🇸🇬 新加坡|SG09
+      - 🇺🇸 美国CF05
+      - 🇯🇵 日本|T06
+      - 🇭🇰 香港-1
+      - 🇺🇸 US-NEWYORK5
+      - 🇸🇬 新加坡|SG08
+      - 🇯🇵 日本|T09
+      - 🇺🇸 圣何塞-CF多线
+      - 🇭🇰 香港02-1A
+      - 🇺🇸 美国CF06
+      - 🇸🇬 新加坡03
+      - FI-HELSINKI-ONLYIPV6-2
       - 🇭🇰 香港|HK09
-      - 🇹🇼 TW 海外用户
+      - 🇭🇰 香港03-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 HK-KOWLOON 试用
+      - 🇺🇸 美国 纽约01
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇸🇬 新加坡|SG07
-      - 🇰🇷 韩国 B KR
-      - 🇺🇸 美国-03
-      - 🇺🇸 美国CF08
-      - 🇬🇧 英国1
-      - 🇯🇵 日本03丨江苏移动优化
-      - 🇮🇳 印度1
-      - 🇯🇵 日本-1-1A
-      - 🇯🇵 日本|T02
-      - 🇭🇰 香港-1B
-      - 🇸🇬 新加坡-2
-      - 🇺🇸 US-NEWYORK3
-      - 🇭🇰 香港|HK35
-      - 🇭🇰 香港02丨江苏移动优化
-      - 🇭🇰 香港02-1B
-      - 🇭🇰 香港02-1A
-      - 🇦🇪 迪拜-CF多线-1
-      - 🇮🇳 印度2
-      - 🇭🇰 香港03-1B
-      - 🇲🇾 马来西亚 MY | BIZ
-      - 🇭🇰 香港04丨山东移动优化
-      - 🇯🇵 IOVEVPN日本中转-2
-      - 🇯🇵 日本-2-1A
-      - 🇸🇬 新加坡 A SG
-      - 2
-      - 🇹🇼 台湾1
-      - 🇺🇸 美国|KS1
-      - 🇰🇷 韩国|SEL2
-      - 🇯🇵 日本01丨江苏移动优化
-      - 孤云阁-03
       - 🇹🇼 台湾 1
-      - 🇭🇰 香港-3
-      - 🇹🇼 台湾01-1A
-      - 🇺🇸 美国02-1B
-      - 🇺🇸 美国01丨江苏移动优化
-      - 🇺🇸 美国|SJ1
-      - 🇭🇰 香港05-备用
-      - 🇸🇬 新加坡|SG06
-      - 🇺🇸 美国|LA2
-      - 🇭🇰 中港隧道-澳大利亚
-      - 🇩🇪 DE-建議啟用IPV6
-      - 🇫🇷 法国 FR BIZ
-      - 🇰🇷 韩国 C KR
-      - 🇯🇵 日本NO.2
-      - 🇯🇵 JP-TOKYO 试用
-      - 🇬🇧 英国 UK | BIZ
-      - 🇭🇰 香港 B HK
-      - 🇭🇰 深港专线-香港1
-      - 🇩🇪 德国 DE | BIZ
-      - 🇭🇰 香港|HK01
-      - 🇯🇵 日本-1-1B
-      - 🇹🇼 台湾A
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇯🇵 日本-2-1B
-      - 🇺🇸 美国|SJ0
-      - 🇺🇸 美国原生NO1
-      - 🇯🇵 日本 B JP
-      - 🇺🇸 美国|DA1
-      - 🇯🇵 日本NO.1
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 🇺🇸 美国2
-      - 🇭🇰 香港07-备用
-      - 🇭🇰 香港-1
-      - 🇭🇰 中港隧道-加拿大
-      - 🇺🇸 美国CF06
-      - 🇸🇬 新加坡|SG03
-      - 🇭🇰 中港隧道-香港3
-      - 🇹🇼 台湾01-1B
-      - 🇺🇸 美国1
-      - 🇸🇬 新加坡-1-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇺🇸 美国 B US
-      - 🇭🇰 香港-02
-      - 🇷🇺 俄罗斯 RU BIZ
-      - 🇭🇰 深港专线-香港3
-      - 🇭🇰 中港隧道-印度
-      - 🇭🇰 深港专线-印度
-      - 🇭🇰 深港专线-香港2
-      - 🇯🇵 日本|T03
-      - 🇸🇬 新加坡 C SG
-      - 🇸🇬 新加坡NO.1
-      - 🇭🇰 中港隧道-德国
-      - 🇭🇰 香港01丨江苏移动优化
-      - 多伦多-CF多线-1
-      - 🇹🇼 台湾 C TW
-      - 🇺🇸 美国NO.1
-      - 🇸🇬 狮城03丨山东移动优化
-      - 🇺🇸 美国04
-      - 🇬🇧 伦敦-CF多线-3
-      - 3中转-2
-      - 🇺🇸 IOVEVPN美国中转-2
-      - 🇨🇦 加拿大|CA1
-      - 🇭🇰 中港隧道-英国
-      - 🇭🇰 香港02丨山东移动优化
-      - 🇯🇵 日本 C JP
-      - 🇭🇰 香港|HK02
-      - 🇬🇧 UK-LONDON-01
-      - 🇺🇸 美国NO.2
-      - 🇸🇬 新加坡01
-      - 🇺🇸 US-NEWYORK2
-      - 🇹🇼 台湾 B TW
-      - 🇦🇺 澳大利亚原生2
-      - 🇲🇴 澳门NO.2
-      - 🇭🇰 2香港中转-2
-      - 🇭🇰 深港专线-澳大利亚
-      - 🇺🇸 美国 A US
-      - 🇯🇵 日本01
-      - 稻妻0.5x 直连
-      - 🇭🇰 香港 A HK
       - 🇺🇸 美国CF07
-      - 🇯🇵 日本|T09
-      - 🇭🇰 中港隧道-日本
-      - 🇬🇧 英国2
+      - 🇯🇵 日本02
+      - 🇸🇬 新加坡|SG01
+      - 🇹🇼 台湾|TW02
+      - 🇯🇵 大阪-CF多线-5
+      - 🇸🇬 新加坡|SG04
+      - 🇭🇰 香港04-备用
+      - 🇬🇧 英国01
       - 🇺🇸 美国01-1A
       - 🇭🇰 香港直连01
-      - 🇹🇼 台湾|TW01
-      - 🇭🇰 香港01-1B
-      - 🇰🇷 韩国 A KR
-      - 🇭🇰 香港|HK05
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇭🇰 中港隧道-香港1
-      - 🇺🇸 美国 C US
-      - 🇸🇬 新加坡|SG08
-      - 🇸🇬 新加坡NO.2
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔
-      - 🇵🇭 菲律宾|MNL2
-      - 🇬🇧 伦敦-CF多线-1
-      - 🇺🇸 美国01-1B
-      - 🇸🇬 新加坡|SG05
-      - 🇯🇵 日本02
-      - 🇭🇰 香港 C HK
-      - BRAZIL
-      - 🇭🇰 深港专线-台湾
-      - 🇸🇬 新加坡 B SG
-      - 🇺🇸 美国|LA1
-      - 🇰🇷 韩国-2
-      - 🇭🇰 中港隧道-香港2
-      - 🇭🇰 中港隧道-新加坡
-      - 🇺🇸 美国原生NO4
-      - 🇭🇰 香港NO.1
-      - 🇸🇬 新加坡|SG01
-      - 🇯🇵 日本03丨山东移动优化
-      - 🇬🇧 英国-01
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国 纽约01
-      - 🇭🇰 香港|HK06
-      - 🇸🇬 新加坡-1-1B
-      - 🇺🇸 US-FREENODE
-      - 🇮🇹 意大利|MIL1
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇸🇬 狮城02丨山东移动优化
-      - 🇭🇰 香港04丨江苏移动优化
-      - 🇭🇰 深港专线-英国
-      - 🇭🇰 深港专线-新加坡
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 🇹🇼 TW-TAOYUAN 试用-20x 0828
       - 🇭🇰 香港03-1A
-      - 🇻🇳 越南01
-      - 🇺🇸 美国02-1A
-      - 🇯🇵 日本|T01
-      - 🇬🇧 英国01
-      - 🇯🇵 日本03丨广东移动优化
-      - 🇭🇰 香港-1A
-      - 🇹🇼 台湾|TW02
-      - 🇺🇸 US 海外用户
-      - 🇯🇵 日本|T06
-      - 🇭🇰 香港-2
-      - 🇯🇵 日本 A JP
-      - 🇯🇵 日本04
-      - 🇦🇺 澳大利亚原生1
-      - 🇹🇼 台湾 A TW
-      - 🇺🇸 US-NEWYORK5
-      - 🇺🇸 美国原生NO2
-      - 🇭🇰 香港|HK03
-      - 🇺🇸 美国|SEA1
-      - 🇭🇰 中港隧道-台湾
-      - 🇻🇳 越南 VN | BIZ
-      - 🇯🇵 日本01丨山东移动优化
-      - 🇭🇰 深港专线-加拿大
-      - 🇭🇰 香港01-1A
-      - 🇸🇬 狮城02丨广东移动优化
-      - 🇸🇬 新加坡|SG04
-      - 🇹🇼 台湾B
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 狮城02丨江苏移动优化
-      - 🇯🇵 日本|T04
-      - 🇭🇰 HK-KOWLOON 试用
-      - 🇭🇰 香港|HK07
-      - 🇯🇵 日本03
-      - 🇺🇸 美国|PHX1
-      - 🇸🇬 新加坡|SG02
-      - 🇯🇵 日本|T05
-      - 🇺🇸 圣何塞-CF多线
-      - 🇺🇸 北美-US-圣何塞-2
-      - 🇺🇸 美国 纽约2
-      - 🇺🇸 美国03
-      - 🇯🇵 大阪-CF多线-5
-      - 🇯🇵 JP 海外用户
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡-1
+      - 🇩🇪 DE-建議啟用IPV6
+      - 🇺🇸 美国|LA1
+      - 🇹🇼 台湾01-1A
+      - 🇸🇬 新加坡|SG05
       - 马赛-CF多线-1
+      - 🇬🇧 UK-LONDON-01
       - 🇭🇰 香港|HK04
-      - 🇯🇵 JP-TOKYO2 试用
-      - 🇭🇰 深港专线-日本
-      - 🇸🇬 狮城03丨江苏移动优化
-      - 🇹🇼 台湾2
-      - 🇭🇰 香港|HK08
-      - 🇺🇸 美国原生NO3
-      - 🇩🇪 欧洲-法兰克福-1
-      - 🇪🇺 欧洲-伦敦-1
-      - 🇸🇬 新加坡03
-      - 🇰🇷 韩国-1
-      - 🇺🇸 美国01丨山东移动优化
-      - 🇭🇰 香港3
-      - 🇸🇬 新加坡|SG09
-      - FI-HELSINKI-ONLYIPV6-2
-      - 🇭🇰 深港专线-德国
-      - 🇹🇭 泰国 TH BIZ
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港01丨山东移动优化
+      - 🇰🇷 韩国|SEL2
+      - 🇺🇸 美国CF08
+      - 🇭🇰 香港|HK01
+      - 🇺🇸 美国|LA2
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇯🇵 日本|T02
+      - 🇭🇰 香港|HK02
+      - 🇬🇧 伦敦-CF多线-1
+      - 🇭🇰 香港07-备用
+      - 🇺🇸 美国|PHX1
+      - 🇯🇵 日本01
+      - 🇭🇰 香港|HK35
+      - 🇸🇬 新加坡|SG06
+      - 🇻🇳 越南01
+      - 🇺🇸 美国02-1B
+      - 🇸🇬 新加坡|SG02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国|KS1
+      - 🇯🇵 日本04
+      - 🇭🇰 香港|HK07
+      - 🇺🇸 IOVEVPN美国中转-2
+      - 🇺🇸 美国|SEA1
+      - 🇸🇬 新加坡-2
       - 🇸🇬 新加坡02
+      - 🇺🇸 美国01-1B
+      - 🇯🇵 日本-2
+      - 🇺🇸 US-NEWYORK2
+      - 🇯🇵 日本-1
+      - 🇸🇬 新加坡|SG07
+      - 🇭🇰 香港|HK06
+      - 🇯🇵 日本03
+      - 🇭🇰 香港01-1A
+      - 🇰🇷 韩国-三网优化2-1F
+      - 多伦多-CF多线-1
+      - 🇺🇸 美国04
+      - 2
+      - 🇸🇬 新加坡|SG03
+      - 🇺🇸 美国 纽约2
+      - BRAZIL
+      - 🇯🇵 日本|T04
+      - 🇬🇧 英国-01
+      - 🇹🇼 台湾01-1B
+      - 🇭🇰 香港|HK03
+      - 🇭🇰 香港|HK05
+      - 3中转-2
+      - 🇺🇸 美国02-1A
+      - 🇺🇸 美国|NY1
+      - 🇺🇸 美国-03
+      - 🇭🇰 香港01-1B
+      - 🇺🇸 US-NEWYORK3
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇯🇵 日本|T01
+      - 🇭🇰 香港05-备用
+      - 🇺🇸 美国|DA1
+      - 🇭🇰 香港-2
+      - 🇮🇹 意大利|MIL1
+      - 🇭🇰 香港02-1B
+      - 🇺🇸 美国|SJ1
+      - 🇺🇸 美国|SJ0
+      - 🇯🇵 JP-TOKYO2 试用
+      - 🇭🇰 香港-3
+      - 🇸🇬 新加坡01
+      - 🇭🇰 香港|HK08
+      - 🇭🇰 香港-02
+      - 🇯🇵 日本|T05
+      - 2中转-2
+      - 🇦🇪 迪拜-CF多线-1
+      - 🇺🇸 US-FREENODE
+      - 🇯🇵 日本|T03
+      - 🇨🇦 加拿大|CA1
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇹🇼 台湾|TW01
+      - 🇵🇭 菲律宾|MNL2
+      - 🇬🇧 伦敦-CF多线-3
+      - 🇸🇬 新加坡|SG09
+      - 🇺🇸 美国CF05
+      - 🇯🇵 日本|T06
+      - 🇭🇰 香港-1
+      - 🇺🇸 US-NEWYORK5
+      - 🇸🇬 新加坡|SG08
+      - 🇯🇵 日本|T09
+      - 🇺🇸 圣何塞-CF多线
+      - 🇭🇰 香港02-1A
+      - 🇺🇸 美国CF06
+      - 🇸🇬 新加坡03
+      - FI-HELSINKI-ONLYIPV6-2
       - 🇭🇰 香港|HK09
-      - 🇹🇼 TW 海外用户
+      - 🇭🇰 香港03-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 HK-KOWLOON 试用
+      - 🇺🇸 美国 纽约01
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1917,227 +1034,122 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇸🇬 新加坡|SG07
-      - 🇰🇷 韩国 B KR
-      - 🇺🇸 美国-03
-      - 🇺🇸 美国CF08
-      - 🇬🇧 英国1
-      - 🇯🇵 日本03丨江苏移动优化
-      - 🇮🇳 印度1
-      - 🇯🇵 日本-1-1A
-      - 🇯🇵 日本|T02
-      - 🇭🇰 香港-1B
-      - 🇸🇬 新加坡-2
-      - 🇺🇸 US-NEWYORK3
-      - 🇭🇰 香港|HK35
-      - 🇭🇰 香港02丨江苏移动优化
-      - 🇭🇰 香港02-1B
-      - 🇭🇰 香港02-1A
-      - 🇦🇪 迪拜-CF多线-1
-      - 🇮🇳 印度2
-      - 🇭🇰 香港03-1B
-      - 🇲🇾 马来西亚 MY | BIZ
-      - 🇭🇰 香港04丨山东移动优化
-      - 🇯🇵 IOVEVPN日本中转-2
-      - 🇯🇵 日本-2-1A
-      - 🇸🇬 新加坡 A SG
-      - 2
-      - 🇹🇼 台湾1
-      - 🇺🇸 美国|KS1
-      - 🇰🇷 韩国|SEL2
-      - 🇯🇵 日本01丨江苏移动优化
-      - 孤云阁-03
       - 🇹🇼 台湾 1
-      - 🇭🇰 香港-3
-      - 🇹🇼 台湾01-1A
-      - 🇺🇸 美国02-1B
-      - 🇺🇸 美国01丨江苏移动优化
-      - 🇺🇸 美国|SJ1
-      - 🇭🇰 香港05-备用
-      - 🇸🇬 新加坡|SG06
-      - 🇺🇸 美国|LA2
-      - 🇭🇰 中港隧道-澳大利亚
-      - 🇩🇪 DE-建議啟用IPV6
-      - 🇫🇷 法国 FR BIZ
-      - 🇰🇷 韩国 C KR
-      - 🇯🇵 日本NO.2
-      - 🇯🇵 JP-TOKYO 试用
-      - 🇬🇧 英国 UK | BIZ
-      - 🇭🇰 香港 B HK
-      - 🇭🇰 深港专线-香港1
-      - 🇩🇪 德国 DE | BIZ
-      - 🇭🇰 香港|HK01
-      - 🇯🇵 日本-1-1B
-      - 🇹🇼 台湾A
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇯🇵 日本-2-1B
-      - 🇺🇸 美国|SJ0
-      - 🇺🇸 美国原生NO1
-      - 🇯🇵 日本 B JP
-      - 🇺🇸 美国|DA1
-      - 🇯🇵 日本NO.1
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 🇺🇸 美国2
-      - 🇭🇰 香港07-备用
-      - 🇭🇰 香港-1
-      - 🇭🇰 中港隧道-加拿大
-      - 🇺🇸 美国CF06
-      - 🇸🇬 新加坡|SG03
-      - 🇭🇰 中港隧道-香港3
-      - 🇹🇼 台湾01-1B
-      - 🇺🇸 美国1
-      - 🇸🇬 新加坡-1-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇺🇸 美国 B US
-      - 🇭🇰 香港-02
-      - 🇷🇺 俄罗斯 RU BIZ
-      - 🇭🇰 深港专线-香港3
-      - 🇭🇰 中港隧道-印度
-      - 🇭🇰 深港专线-印度
-      - 🇭🇰 深港专线-香港2
-      - 🇯🇵 日本|T03
-      - 🇸🇬 新加坡 C SG
-      - 🇸🇬 新加坡NO.1
-      - 🇭🇰 中港隧道-德国
-      - 🇭🇰 香港01丨江苏移动优化
-      - 多伦多-CF多线-1
-      - 🇹🇼 台湾 C TW
-      - 🇺🇸 美国NO.1
-      - 🇸🇬 狮城03丨山东移动优化
-      - 🇺🇸 美国04
-      - 🇬🇧 伦敦-CF多线-3
-      - 3中转-2
-      - 🇺🇸 IOVEVPN美国中转-2
-      - 🇨🇦 加拿大|CA1
-      - 🇭🇰 中港隧道-英国
-      - 🇭🇰 香港02丨山东移动优化
-      - 🇯🇵 日本 C JP
-      - 🇭🇰 香港|HK02
-      - 🇬🇧 UK-LONDON-01
-      - 🇺🇸 美国NO.2
-      - 🇸🇬 新加坡01
-      - 🇺🇸 US-NEWYORK2
-      - 🇹🇼 台湾 B TW
-      - 🇦🇺 澳大利亚原生2
-      - 🇲🇴 澳门NO.2
-      - 🇭🇰 2香港中转-2
-      - 🇭🇰 深港专线-澳大利亚
-      - 🇺🇸 美国 A US
-      - 🇯🇵 日本01
-      - 稻妻0.5x 直连
-      - 🇭🇰 香港 A HK
       - 🇺🇸 美国CF07
-      - 🇯🇵 日本|T09
-      - 🇭🇰 中港隧道-日本
-      - 🇬🇧 英国2
+      - 🇯🇵 日本02
+      - 🇸🇬 新加坡|SG01
+      - 🇹🇼 台湾|TW02
+      - 🇯🇵 大阪-CF多线-5
+      - 🇸🇬 新加坡|SG04
+      - 🇭🇰 香港04-备用
+      - 🇬🇧 英国01
       - 🇺🇸 美国01-1A
       - 🇭🇰 香港直连01
-      - 🇹🇼 台湾|TW01
-      - 🇭🇰 香港01-1B
-      - 🇰🇷 韩国 A KR
-      - 🇭🇰 香港|HK05
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇭🇰 中港隧道-香港1
-      - 🇺🇸 美国 C US
-      - 🇸🇬 新加坡|SG08
-      - 🇸🇬 新加坡NO.2
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔
-      - 🇵🇭 菲律宾|MNL2
-      - 🇬🇧 伦敦-CF多线-1
-      - 🇺🇸 美国01-1B
-      - 🇸🇬 新加坡|SG05
-      - 🇯🇵 日本02
-      - 🇭🇰 香港 C HK
-      - BRAZIL
-      - 🇭🇰 深港专线-台湾
-      - 🇸🇬 新加坡 B SG
-      - 🇺🇸 美国|LA1
-      - 🇰🇷 韩国-2
-      - 🇭🇰 中港隧道-香港2
-      - 🇭🇰 中港隧道-新加坡
-      - 🇺🇸 美国原生NO4
-      - 🇭🇰 香港NO.1
-      - 🇸🇬 新加坡|SG01
-      - 🇯🇵 日本03丨山东移动优化
-      - 🇬🇧 英国-01
-      - 🇺🇸 美国CF05
-      - 🇺🇸 美国 纽约01
-      - 🇭🇰 香港|HK06
-      - 🇸🇬 新加坡-1-1B
-      - 🇺🇸 US-FREENODE
-      - 🇮🇹 意大利|MIL1
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇸🇬 狮城02丨山东移动优化
-      - 🇭🇰 香港04丨江苏移动优化
-      - 🇭🇰 深港专线-英国
-      - 🇭🇰 深港专线-新加坡
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 🇹🇼 TW-TAOYUAN 试用-20x 0828
       - 🇭🇰 香港03-1A
-      - 🇻🇳 越南01
-      - 🇺🇸 美国02-1A
-      - 🇯🇵 日本|T01
-      - 🇬🇧 英国01
-      - 🇯🇵 日本03丨广东移动优化
-      - 🇭🇰 香港-1A
-      - 🇹🇼 台湾|TW02
-      - 🇺🇸 US 海外用户
-      - 🇯🇵 日本|T06
-      - 🇭🇰 香港-2
-      - 🇯🇵 日本 A JP
-      - 🇯🇵 日本04
-      - 🇦🇺 澳大利亚原生1
-      - 🇹🇼 台湾 A TW
-      - 🇺🇸 US-NEWYORK5
-      - 🇺🇸 美国原生NO2
-      - 🇭🇰 香港|HK03
-      - 🇺🇸 美国|SEA1
-      - 🇭🇰 中港隧道-台湾
-      - 🇻🇳 越南 VN | BIZ
-      - 🇯🇵 日本01丨山东移动优化
-      - 🇭🇰 深港专线-加拿大
-      - 🇭🇰 香港01-1A
-      - 🇸🇬 狮城02丨广东移动优化
-      - 🇸🇬 新加坡|SG04
-      - 🇹🇼 台湾B
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 狮城02丨江苏移动优化
-      - 🇯🇵 日本|T04
-      - 🇭🇰 HK-KOWLOON 试用
-      - 🇭🇰 香港|HK07
-      - 🇯🇵 日本03
-      - 🇺🇸 美国|PHX1
-      - 🇸🇬 新加坡|SG02
-      - 🇯🇵 日本|T05
-      - 🇺🇸 圣何塞-CF多线
-      - 🇺🇸 北美-US-圣何塞-2
-      - 🇺🇸 美国 纽约2
-      - 🇺🇸 美国03
-      - 🇯🇵 大阪-CF多线-5
-      - 🇯🇵 JP 海外用户
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡-1
+      - 🇩🇪 DE-建議啟用IPV6
+      - 🇺🇸 美国|LA1
+      - 🇹🇼 台湾01-1A
+      - 🇸🇬 新加坡|SG05
       - 马赛-CF多线-1
+      - 🇬🇧 UK-LONDON-01
       - 🇭🇰 香港|HK04
-      - 🇯🇵 JP-TOKYO2 试用
-      - 🇭🇰 深港专线-日本
-      - 🇸🇬 狮城03丨江苏移动优化
-      - 🇹🇼 台湾2
-      - 🇭🇰 香港|HK08
-      - 🇺🇸 美国原生NO3
-      - 🇩🇪 欧洲-法兰克福-1
-      - 🇪🇺 欧洲-伦敦-1
-      - 🇸🇬 新加坡03
-      - 🇰🇷 韩国-1
-      - 🇺🇸 美国01丨山东移动优化
-      - 🇭🇰 香港3
-      - 🇸🇬 新加坡|SG09
-      - FI-HELSINKI-ONLYIPV6-2
-      - 🇭🇰 深港专线-德国
-      - 🇹🇭 泰国 TH BIZ
-      - 🇭🇰 香港04-备用
-      - 🇭🇰 香港01丨山东移动优化
+      - 🇰🇷 韩国|SEL2
+      - 🇺🇸 美国CF08
+      - 🇭🇰 香港|HK01
+      - 🇺🇸 美国|LA2
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇯🇵 日本|T02
+      - 🇭🇰 香港|HK02
+      - 🇬🇧 伦敦-CF多线-1
+      - 🇭🇰 香港07-备用
+      - 🇺🇸 美国|PHX1
+      - 🇯🇵 日本01
+      - 🇭🇰 香港|HK35
+      - 🇸🇬 新加坡|SG06
+      - 🇻🇳 越南01
+      - 🇺🇸 美国02-1B
+      - 🇸🇬 新加坡|SG02
+      - 🇺🇸 美国03
+      - 🇺🇸 美国|KS1
+      - 🇯🇵 日本04
+      - 🇭🇰 香港|HK07
+      - 🇺🇸 IOVEVPN美国中转-2
+      - 🇺🇸 美国|SEA1
+      - 🇸🇬 新加坡-2
       - 🇸🇬 新加坡02
+      - 🇺🇸 美国01-1B
+      - 🇯🇵 日本-2
+      - 🇺🇸 US-NEWYORK2
+      - 🇯🇵 日本-1
+      - 🇸🇬 新加坡|SG07
+      - 🇭🇰 香港|HK06
+      - 🇯🇵 日本03
+      - 🇭🇰 香港01-1A
+      - 🇰🇷 韩国-三网优化2-1F
+      - 多伦多-CF多线-1
+      - 🇺🇸 美国04
+      - 2
+      - 🇸🇬 新加坡|SG03
+      - 🇺🇸 美国 纽约2
+      - BRAZIL
+      - 🇯🇵 日本|T04
+      - 🇬🇧 英国-01
+      - 🇹🇼 台湾01-1B
+      - 🇭🇰 香港|HK03
+      - 🇭🇰 香港|HK05
+      - 3中转-2
+      - 🇺🇸 美国02-1A
+      - 🇺🇸 美国|NY1
+      - 🇺🇸 美国-03
+      - 🇭🇰 香港01-1B
+      - 🇺🇸 US-NEWYORK3
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇯🇵 日本|T01
+      - 🇭🇰 香港05-备用
+      - 🇺🇸 美国|DA1
+      - 🇭🇰 香港-2
+      - 🇮🇹 意大利|MIL1
+      - 🇭🇰 香港02-1B
+      - 🇺🇸 美国|SJ1
+      - 🇺🇸 美国|SJ0
+      - 🇯🇵 JP-TOKYO2 试用
+      - 🇭🇰 香港-3
+      - 🇸🇬 新加坡01
+      - 🇭🇰 香港|HK08
+      - 🇭🇰 香港-02
+      - 🇯🇵 日本|T05
+      - 2中转-2
+      - 🇦🇪 迪拜-CF多线-1
+      - 🇺🇸 US-FREENODE
+      - 🇯🇵 日本|T03
+      - 🇨🇦 加拿大|CA1
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇹🇼 台湾|TW01
+      - 🇵🇭 菲律宾|MNL2
+      - 🇬🇧 伦敦-CF多线-3
+      - 🇸🇬 新加坡|SG09
+      - 🇺🇸 美国CF05
+      - 🇯🇵 日本|T06
+      - 🇭🇰 香港-1
+      - 🇺🇸 US-NEWYORK5
+      - 🇸🇬 新加坡|SG08
+      - 🇯🇵 日本|T09
+      - 🇺🇸 圣何塞-CF多线
+      - 🇭🇰 香港02-1A
+      - 🇺🇸 美国CF06
+      - 🇸🇬 新加坡03
+      - FI-HELSINKI-ONLYIPV6-2
       - 🇭🇰 香港|HK09
-      - 🇹🇼 TW 海外用户
+      - 🇭🇰 香港03-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 HK-KOWLOON 试用
+      - 🇺🇸 美国 纽约01
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
