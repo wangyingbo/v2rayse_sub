@@ -5,725 +5,637 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 93ms, server: 3.79.71.191, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 91ms, server: 3.126.87.68, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 6ms, server: 44.219.78.149, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 24ms, server: 18.116.105.199, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 28ms, server: 18.224.154.81, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms, server: 15.157.206.193, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms 2, server: 15.156.167.109, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 6ms, server: 104.26.14.85, port: 80, type: vmess, uuid: c0f3f890-d329-42fc-8311-16ae31c22c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /V2LINE-TELEGRAM-CHANNEL-VMESS-WS, headers: {Host: 68690907783461163508239105253758.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou}}}
-  - {name: freakconfig 🔒 SS-TCP-TLS 🆥🆥  331ms, server: api.namasha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
-  - {name: freakconfig 🔒 SS-TCP-TLS 🆥🆥  241ms, server: api.namasha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
-  - {name: 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 6ms, server: 198.41.202.5, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: pages.dev, network: ws, ws-opts: {path: /ca1, headers: {Host: fastxv.pages.dev}}}
-  - {name: 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 123ms, server: 195.2.76.71, port: 60422, type: ss, cipher: chacha20-ietf-poly1305, password: 9CZ99gRHmzp4SlKF2NxaxR}
-  - {name: 🇨🇦 ip_cf 🔒 SS-TCP-TLS 🇨🇦 CA 28ms, server: 38.111.114.133, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
-  - {name: 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 6ms, server: 198.41.202.5, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: pages.dev, network: ws, ws-opts: {path: /ca1, headers: {Host: fastxv.pages.dev}}}
-  - {name: 🇺🇸 oneclickvpnkeys 🔓 VM-WS-N/A 🇺🇸 US 5ms, server: 172.64.154.211, port: 80, type: vmess, uuid: ee92bd8b-04cd-4b48-bafb-390801194eb4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /V2LINE-TELEGRAM-CHANNEL-VMESS-WS, headers: {Host: 99806388192980142300309475767578.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou}}}
-  - {name: 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms, server: 104.26.12.54, port: 443, type: trojan, password: auto, sni: e9464f45.trauma-2r4.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: e9464f45.trauma-2r4.pages.dev}}}
-  - {name: 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 19ms, server: 173.245.49.20, port: 2096, type: trojan, password: Watashi_VPN, sni: t-watashi-r-jacket-o-people-jan.watashi-java.ir, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: t-watashi-r-jacket-o-people-jan.watashi-java.ir}}}
-  - {name: 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms, server: 104.16.159.7, port: 443, type: trojan, password: 4732adfa16c6450bbef87264e41332db, sni: bangladeshipatri.com, skip-cert-verify: true, network: ws, ws-opts: {path: /6b777a91, headers: {Host: bangladeshipatri.com}}}
-  - {name: 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 2, server: 104.17.148.22, port: 443, type: trojan, password: Watashi_VPN, sni: t-watashi-r-jacket-o-people-jan.watashi-java.ir, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: t-watashi-r-jacket-o-people-jan.watashi-java.ir}}}
-  - {name: 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 2, server: 104.20.19.168, port: 2083, type: trojan, password: auto, sni: e9464f45.trauma-2r4.pages.dev, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: e9464f45.trauma-2r4.pages.dev}}}
-  - {name: 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 3, server: 104.18.12.229, port: 2053, type: trojan, password: Watashi_VPN, sni: t-watashi-r-jacket-o-people-jan.watashi-java.ir, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: t-watashi-r-jacket-o-people-jan.watashi-java.ir}}}
-  - {name: 🇬🇧 oneclickvpnkeys 🔒 TR-WS-N/A 🇬🇧 GB 6ms, server: 154.197.121.127, port: 443, type: trojan, password: moist, sni: trojan.freenods.sbs, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: trojan.freenods.sbs}}}
-  - {name: 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 4, server: 104.27.7.142, port: 2053, type: trojan, password: Watashi_VPN, sni: t-watashi-r-jacket-o-people-jan.watashi-java.ir, skip-cert-verify: true, network: ws, ws-opts: {path: "/?TM@AZARBAYJAB1+TM@AZARBAYJAB1+@AZARBAYJAB1", headers: {Host: t-watashi-r-jacket-o-people-jan.watashi-java.ir}}}
-  - {name: 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 3, server: 104.18.38.122, port: 8443, type: trojan, password: Watashi_VPN, sni: t-watashi-r-jacket-o-people-jan.watashi-java.ir, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: t-watashi-r-jacket-o-people-jan.watashi-java.ir}}}
-  - {name: 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 5, server: 104.16.159.6, port: 443, type: trojan, password: 669d0ac7b5b64ebbb1abb75d5d540a5c, sni: bangladeshipatri.com, skip-cert-verify: true, network: ws, ws-opts: {path: /6b777a91, headers: {Host: bangladeshipatri.com}}}
-  - {name: 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 5ms, server: 104.17.148.22, port: 443, type: trojan, password: Watashi_VPN, sni: t-watashi-r-jacket-o-people-jan.watashi-java.ir, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: t-watashi-r-jacket-o-people-jan.watashi-java.ir}}}
-  - {name: 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 211ms, server: 159.65.149.72, port: 51348, type: ss, cipher: chacha20-ietf-poly1305, password: p7EhC8MR7o7GuRn27YF8SQNAKJ2lUbBNIjcyqSmBHsy8wLbJ}
-  - {name: 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 80ms, server: 172.99.190.186, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 82ms, server: 162.19.25.207, port: 34232, type: ss, cipher: aes-256-gcm, password: 3b9ktZGztC}
-  - {name: outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 117ms, server: 141.98.169.248, port: 25757, type: ss, cipher: chacha20-ietf-poly1305, password: kywNKLOlAakmgRxa9xqvHU}
-  - {name: privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms, server: 52.210.183.150, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 2, server: 54.228.213.246, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms, server: 18.135.140.238, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 84ms, server: 3.10.245.6, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 85ms, server: 35.180.235.131, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 86ms, server: 35.181.220.218, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 93ms, server: 3.123.175.157, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 94ms, server: 3.78.120.158, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 119ms, server: 51.21.65.93, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 108ms, server: 16.170.161.91, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 3, server: 99.80.130.48, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 4, server: 52.51.116.29, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms 2, server: 18.135.188.0, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
-  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  243ms, server: series-a2.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
-  - {name: 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms, server: 205.134.180.137, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: g13S7doXar0A}
-  - {name: proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms, server: 95.164.9.144, port: 2927, type: ss, cipher: chacha20-ietf-poly1305, password: ug4Fu79SEREdFGlt2sUyT4}
-  - {name: 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 129ms, server: 195.2.76.71, port: 60422, type: ss, cipher: chacha20-ietf-poly1305, password: cq079FNA6HLc7gnfGZIHW9}
-  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  246ms, server: series-a2-mec.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
-  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  104ms, server: series-a2.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
-  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  210ms, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
-  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  336ms, server: series-a2-me.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ}
-  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  216ms, server: series-a2-mec.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
-  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  112ms, server: series-a2.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
-  - {name: 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms 2, server: 205.134.180.137, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: g13S7doXar0A}
-  - {name: proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms 2, server: 95.164.9.144, port: 2927, type: ss, cipher: chacha20-ietf-poly1305, password: ug4Fu79SEREdFGlt2sUyT4}
-  - {name: 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 126ms, server: 195.2.76.71, port: 60422, type: ss, cipher: chacha20-ietf-poly1305, password: cq079FNA6HLc7gnfGZIHW9}
-  - {name: 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 127ms, server: 95.164.35.90, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: MDJhZGE5}
-  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  276ms, server: series-a2-mec.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
-  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  108ms, server: series-a2.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
-  - {name: proxystore11 🔒 SS-TCP-TLS 🆥🆥  255ms, server: series-a2-mec.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
-  - {name: 🇵🇱 proxystore11 🔒 SS-TCP-TLS 🇵🇱 PL 103ms, server: 95.164.35.90, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: MDJhZGE5}
-  - {name: 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 124ms, server: 195.2.76.71, port: 60422, type: ss, cipher: chacha20-ietf-poly1305, password: 9CZ99gRHmzp4SlKF2NxaxR}
-  - {name: 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 126ms, server: 195.2.76.71, port: 60422, type: ss, cipher: chacha20-ietf-poly1305, password: 9CZ99gRHmzp4SlKF2NxaxR}
-  - {name: proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 92ms, server: 95.164.9.144, port: 2927, type: ss, cipher: chacha20-ietf-poly1305, password: ug4Fu79SEREdFGlt2sUyT4}
-  - {name: 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 6ms, server: 172.64.154.211, port: 80, type: vmess, uuid: ee92bd8b-04cd-4b48-bafb-390801194eb4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /V2LINE-TELEGRAM-CHANNEL-VMESS-WS, headers: {Host: 99806388192980142300309475767578.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou}}}
-  - {name: 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 5ms, server: 104.26.14.85, port: 80, type: vmess, uuid: c0f3f890-d329-42fc-8311-16ae31c22c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /V2LINE-TELEGRAM-CHANNEL-VMESS-WS, headers: {Host: 68690907783461163508239105253758.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou}}}
-  - {name: 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 104ms, server: 95.164.35.90, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: MDJhZGE5}
-  - {name: 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms, server: 104.25.181.33, port: 80, type: vmess, uuid: 4797db37-41dc-4bfc-a59f-6c7055b1d15b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess, headers: {Host: 1270.0.1.dl3.烏克爾拯救聖.yркельпасаетcанту.филь.www.speedtest.com.wonkacapitano.buzz.}}}
-  - {name: 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 2, server: 172.67.67.67, port: 80, type: vmess, uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /f4, headers: {Host: Telegram-XV2ry2---XV2ry2---XV2ry2---XV2ry2---XV2ry2---XV2ry2.w.w.w.speedtest.net.xn--g28h.dns-dynamic.net.}}}
-  - {name: 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 3, server: 172.67.67.67, port: 80, type: vmess, uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /f4, headers: {Host: Telegram-XV2ry2---XV2ry2---XV2ry2---XV2ry2---XV2ry2---XV2ry2.w.w.w.speedtest.net.xn--g28h.dns-dynamic.net.}}}
-  - {name: 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 5ms, server: 104.16.16.16, port: 443, type: vmess, uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: pages.dev, network: ws, ws-opts: {path: /f4, headers: {Host: Telegram---XV2ray---XV2ray---XV2ray---XV2ray---XV2ray.Pages.dev}}}
-  - {name: 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 6ms, server: 104.16.16.16, port: 443, type: vmess, uuid: 62aa5f80-0328-4004-a375-7f5a59df4022, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: pages.dev, network: ws, ws-opts: {path: /d3, headers: {Host: Telegram---XV2ray---XV2ray---XV2ray---XV2ray---XV2ray.Pages.dev}}}
-  - {name: v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  233ms, server: series-a2-mec.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
-  - {name: v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  112ms, server: series-a2.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
-  - {name: v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  104ms, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
-  - {name: v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  298ms, server: api.namasha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
-  - {name: 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 12ms, server: 104.244.90.43, port: 20272, type: vmess, uuid: 57f5c2bd-bb79-4fd8-eea1-a84d1ddf3a21, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
-  - {name: 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 7ms, server: 104.26.0.56, port: 2086, type: vmess, uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip14.freegradely.xyz}}}
-  - {name: 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 5ms, server: 162.159.152.2, port: 443, type: trojan, password: 242a3d8eee5e4ed1a6bfa4141d549a25, sni: jobscareerforlawyers.com, skip-cert-verify: true, network: ws, ws-opts: {path: 6b777a91, headers: {Host: jobscareerforlawyers.com}}}
-  - {name: vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  176ms, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
-  - {name: 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 6ms, server: 104.18.13.229, port: 2053, type: trojan, password: Watashi_VPN, sni: t-watashi-r-jacket-o-people-jan.watashi-java.ir, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: t-watashi-r-jacket-o-people-jan.watashi-java.ir}}}
-  - {name: vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  85ms, server: series-a2.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
-  - {name: vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  103ms, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
-  - {name: vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  112ms, server: series-a2.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
-  - {name: vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  247ms, server: series-a2-me.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ}
+  - {name: 🇳🇱 dailyv2ry 🔓 TR-TCP-N/A 🇳🇱 NL 136ms, server: 38.180.70.206, port: 2096, type: trojan, password: aRh4GRxYO6, skip-cert-verify: true}
+  - {name: 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 128ms, server: 13.38.247.162, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 130ms, server: 13.38.167.105, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 153ms, server: 13.50.209.131, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 152ms, server: 16.16.174.235, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms, server: 3.79.71.191, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms 2, server: 3.126.87.68, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 72ms, server: 44.219.78.149, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms, server: 18.116.105.199, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms 2, server: 18.224.154.81, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 75ms, server: 15.157.206.193, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 73ms, server: 15.156.167.109, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 9ms, server: 104.26.14.85, port: 80, type: vmess, uuid: c0f3f890-d329-42fc-8311-16ae31c22c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /V2LINE-TELEGRAM-CHANNEL-VMESS-WS, headers: {Host: 68690907783461163508239105253758.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou}}}
+  - {name: freakconfig 🔒 SS-TCP-TLS 🆥🆥  643ms, server: api.namasha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
+  - {name: freakconfig 🔒 SS-TCP-TLS 🆥🆥  283ms, server: api.namasha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
+  - {name: 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 8ms, server: 198.41.202.5, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: pages.dev, network: ws, ws-opts: {path: /ca1, headers: {Host: fastxv.pages.dev}}}
+  - {name: 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 165ms, server: 195.2.76.71, port: 60422, type: ss, cipher: chacha20-ietf-poly1305, password: 9CZ99gRHmzp4SlKF2NxaxR}
+  - {name: 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 9ms, server: 198.41.202.5, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: pages.dev, network: ws, ws-opts: {path: /ca1, headers: {Host: fastxv.pages.dev}}}
+  - {name: 🇩🇪 ip_cf 🔒 SS-TCP-TLS 🇩🇪 DE 161ms, server: 23.158.56.196, port: 8882, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4}
+  - {name: 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 16ms, server: 104.17.148.22, port: 443, type: trojan, password: Watashi_VPN, sni: t-watashi-r-jacket-o-people-jan.watashi-java.ir, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: t-watashi-r-jacket-o-people-jan.watashi-java.ir}}}
+  - {name: 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 250ms, server: 159.65.149.72, port: 51348, type: ss, cipher: chacha20-ietf-poly1305, password: p7EhC8MR7o7GuRn27YF8SQNAKJ2lUbBNIjcyqSmBHsy8wLbJ}
+  - {name: 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 130ms, server: 172.99.190.186, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 149ms, server: 162.19.25.207, port: 34232, type: ss, cipher: aes-256-gcm, password: 3b9ktZGztC}
+  - {name: outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 161ms, server: 141.98.169.248, port: 25757, type: ss, cipher: chacha20-ietf-poly1305, password: kywNKLOlAakmgRxa9xqvHU}
+  - {name: 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 138ms, server: 18.199.192.194, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 155ms, server: 51.21.116.31, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms, server: 13.49.99.44, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms, server: 52.210.183.150, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 128ms, server: 54.228.213.246, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 130ms, server: 18.135.140.238, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 126ms, server: 3.10.245.6, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 131ms, server: 35.180.235.131, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 133ms, server: 35.181.220.218, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 143ms, server: 3.78.120.158, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms 2, server: 51.21.65.93, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 151ms, server: 16.170.161.91, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 125ms, server: 99.80.130.48, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms 2, server: 52.51.116.29, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 129ms, server: 18.135.188.0, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true}
+  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  384ms, server: series-a2.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
+  - {name: 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 65ms, server: 205.134.180.137, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: g13S7doXar0A}
+  - {name: proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 143ms, server: 95.164.9.144, port: 2927, type: ss, cipher: chacha20-ietf-poly1305, password: ug4Fu79SEREdFGlt2sUyT4}
+  - {name: 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 176ms, server: 195.2.76.71, port: 60422, type: ss, cipher: chacha20-ietf-poly1305, password: cq079FNA6HLc7gnfGZIHW9}
+  - {name: 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 146ms, server: 95.164.35.90, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: MDJhZGE5}
+  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  284ms, server: series-a2-mec.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
+  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  217ms, server: series-a2.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
+  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  240ms, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
+  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  327ms, server: series-a2-me.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ}
+  - {name: proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  248ms, server: series-a2-mec.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
+  - {name: proxystore11 🔒 SS-TCP-TLS 🆥🆥  277ms, server: series-a2-mec.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
+  - {name: 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 164ms, server: 195.2.76.71, port: 60422, type: ss, cipher: chacha20-ietf-poly1305, password: 9CZ99gRHmzp4SlKF2NxaxR}
+  - {name: 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 176ms, server: 195.2.76.71, port: 60422, type: ss, cipher: chacha20-ietf-poly1305, password: 9CZ99gRHmzp4SlKF2NxaxR}
+  - {name: proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 142ms, server: 95.164.9.144, port: 2927, type: ss, cipher: chacha20-ietf-poly1305, password: ug4Fu79SEREdFGlt2sUyT4}
+  - {name: 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 9ms, server: 172.64.154.211, port: 80, type: vmess, uuid: ee92bd8b-04cd-4b48-bafb-390801194eb4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /V2LINE-TELEGRAM-CHANNEL-VMESS-WS, headers: {Host: 99806388192980142300309475767578.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou}}}
+  - {name: 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 8ms, server: 104.26.14.85, port: 80, type: vmess, uuid: c0f3f890-d329-42fc-8311-16ae31c22c6b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /V2LINE-TELEGRAM-CHANNEL-VMESS-WS, headers: {Host: 68690907783461163508239105253758.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou}}}
+  - {name: 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 146ms, server: 95.164.35.90, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: MDJhZGE5}
+  - {name: 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms, server: 104.25.181.33, port: 80, type: vmess, uuid: 4797db37-41dc-4bfc-a59f-6c7055b1d15b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess, headers: {Host: 1270.0.1.dl3.烏克爾拯救聖.yркельпасаетcанту.филь.www.speedtest.com.wonkacapitano.buzz.}}}
+  - {name: 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 8ms, server: 172.67.67.67, port: 80, type: vmess, uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /f4, headers: {Host: Telegram-XV2ry2---XV2ry2---XV2ry2---XV2ry2---XV2ry2---XV2ry2.w.w.w.speedtest.net.xn--g28h.dns-dynamic.net.}}}
+  - {name: 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms 2, server: 172.67.67.67, port: 80, type: vmess, uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /f4, headers: {Host: Telegram-XV2ry2---XV2ry2---XV2ry2---XV2ry2---XV2ry2---XV2ry2.w.w.w.speedtest.net.xn--g28h.dns-dynamic.net.}}}
+  - {name: 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 16ms, server: 104.16.16.16, port: 443, type: vmess, uuid: 6c168fcc-2231-4f3b-8c1e-f6391692df4a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: pages.dev, network: ws, ws-opts: {path: /f4, headers: {Host: Telegram---XV2ray---XV2ray---XV2ray---XV2ray---XV2ray.Pages.dev}}}
+  - {name: 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 17ms, server: 104.16.16.16, port: 443, type: vmess, uuid: 62aa5f80-0328-4004-a375-7f5a59df4022, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: pages.dev, network: ws, ws-opts: {path: /d3, headers: {Host: Telegram---XV2ray---XV2ray---XV2ray---XV2ray---XV2ray.Pages.dev}}}
+  - {name: v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  245ms, server: series-a2-mec.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
+  - {name: v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  201ms, server: series-a2.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
+  - {name: v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  133ms, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
+  - {name: v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  240ms, server: api.namasha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c}
+  - {name: 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 60ms, server: 104.244.90.43, port: 20272, type: vmess, uuid: 57f5c2bd-bb79-4fd8-eea1-a84d1ddf3a21, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
+  - {name: 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 9ms, server: 104.26.0.56, port: 2086, type: vmess, uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip14.freegradely.xyz}}}
+  - {name: 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 8ms, server: 162.159.152.2, port: 443, type: trojan, password: 242a3d8eee5e4ed1a6bfa4141d549a25, sni: jobscareerforlawyers.com, skip-cert-verify: true, network: ws, ws-opts: {path: 6b777a91, headers: {Host: jobscareerforlawyers.com}}}
+  - {name: vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  179ms, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
+  - {name: 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 9ms, server: 104.18.13.229, port: 2053, type: trojan, password: Watashi_VPN, sni: t-watashi-r-jacket-o-people-jan.watashi-java.ir, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: t-watashi-r-jacket-o-people-jan.watashi-java.ir}}}
+  - {name: vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  190ms, server: series-a2.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
+  - {name: vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  131ms, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA}
+  - {name: vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  149ms, server: series-a2.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg}
+  - {name: vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  281ms, server: series-a2-me.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 91ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 6ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 24ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 28ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms 2
-      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  331ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  241ms
-      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 123ms
-      - 🇨🇦 ip_cf 🔒 SS-TCP-TLS 🇨🇦 CA 28ms
-      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 19ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 3
-      - 🇬🇧 oneclickvpnkeys 🔒 TR-WS-N/A 🇬🇧 GB 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 4
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 3
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 5
-      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 211ms
-      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 80ms
-      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 82ms
-      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 117ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 2
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 84ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 85ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 86ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 94ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 119ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 108ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 3
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 4
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  243ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 129ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  246ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  210ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  336ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  216ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms 2
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 127ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  276ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  108ms
-      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  255ms
-      - 🇵🇱 proxystore11 🔒 SS-TCP-TLS 🇵🇱 PL 103ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 124ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 92ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 104ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 3
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 5ms
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  233ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  298ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 12ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 7ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  176ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  85ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  103ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  247ms
+      - 🇳🇱 dailyv2ry 🔓 TR-TCP-N/A 🇳🇱 NL 136ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 128ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 130ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 153ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms 2
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 72ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms 2
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 75ms
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 73ms
+      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  643ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  283ms
+      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 8ms
+      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 165ms
+      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 9ms
+      - 🇩🇪 ip_cf 🔒 SS-TCP-TLS 🇩🇪 DE 161ms
+      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 16ms
+      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 250ms
+      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 130ms
+      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 149ms
+      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 161ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 138ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 155ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 128ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 130ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 126ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 131ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 133ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 143ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms 2
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 151ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 125ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms 2
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 129ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  384ms
+      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 65ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 143ms
+      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  284ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  217ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  327ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  248ms
+      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  277ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 164ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 142ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms 2
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 16ms
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 17ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  245ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  201ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  133ms
+      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 60ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 8ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  179ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 9ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  190ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  131ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  149ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  281ms
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 91ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 6ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 24ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 28ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms 2
-      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  331ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  241ms
-      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 123ms
-      - 🇨🇦 ip_cf 🔒 SS-TCP-TLS 🇨🇦 CA 28ms
-      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 19ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 3
-      - 🇬🇧 oneclickvpnkeys 🔒 TR-WS-N/A 🇬🇧 GB 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 4
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 3
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 5
-      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 211ms
-      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 80ms
-      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 82ms
-      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 117ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 2
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 84ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 85ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 86ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 94ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 119ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 108ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 3
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 4
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  243ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 129ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  246ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  210ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  336ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  216ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms 2
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 127ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  276ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  108ms
-      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  255ms
-      - 🇵🇱 proxystore11 🔒 SS-TCP-TLS 🇵🇱 PL 103ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 124ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 92ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 104ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 3
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 5ms
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  233ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  298ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 12ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 7ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  176ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  85ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  103ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  247ms
+      - 🇳🇱 dailyv2ry 🔓 TR-TCP-N/A 🇳🇱 NL 136ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 128ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 130ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 153ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms 2
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 72ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms 2
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 75ms
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 73ms
+      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  643ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  283ms
+      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 8ms
+      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 165ms
+      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 9ms
+      - 🇩🇪 ip_cf 🔒 SS-TCP-TLS 🇩🇪 DE 161ms
+      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 16ms
+      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 250ms
+      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 130ms
+      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 149ms
+      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 161ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 138ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 155ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 128ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 130ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 126ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 131ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 133ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 143ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms 2
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 151ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 125ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms 2
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 129ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  384ms
+      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 65ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 143ms
+      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  284ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  217ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  327ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  248ms
+      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  277ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 164ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 142ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms 2
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 16ms
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 17ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  245ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  201ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  133ms
+      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 60ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 8ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  179ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 9ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  190ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  131ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  149ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  281ms
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 91ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 6ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 24ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 28ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms 2
-      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  331ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  241ms
-      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 123ms
-      - 🇨🇦 ip_cf 🔒 SS-TCP-TLS 🇨🇦 CA 28ms
-      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 19ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 3
-      - 🇬🇧 oneclickvpnkeys 🔒 TR-WS-N/A 🇬🇧 GB 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 4
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 3
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 5
-      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 211ms
-      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 80ms
-      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 82ms
-      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 117ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 2
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 84ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 85ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 86ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 94ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 119ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 108ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 3
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 4
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  243ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 129ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  246ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  210ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  336ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  216ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms 2
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 127ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  276ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  108ms
-      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  255ms
-      - 🇵🇱 proxystore11 🔒 SS-TCP-TLS 🇵🇱 PL 103ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 124ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 92ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 104ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 3
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 5ms
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  233ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  298ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 12ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 7ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  176ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  85ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  103ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  247ms
+      - 🇳🇱 dailyv2ry 🔓 TR-TCP-N/A 🇳🇱 NL 136ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 128ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 130ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 153ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms 2
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 72ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms 2
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 75ms
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 73ms
+      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  643ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  283ms
+      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 8ms
+      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 165ms
+      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 9ms
+      - 🇩🇪 ip_cf 🔒 SS-TCP-TLS 🇩🇪 DE 161ms
+      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 16ms
+      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 250ms
+      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 130ms
+      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 149ms
+      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 161ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 138ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 155ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 128ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 130ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 126ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 131ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 133ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 143ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms 2
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 151ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 125ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms 2
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 129ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  384ms
+      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 65ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 143ms
+      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  284ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  217ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  327ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  248ms
+      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  277ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 164ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 142ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms 2
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 16ms
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 17ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  245ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  201ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  133ms
+      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 60ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 8ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  179ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 9ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  190ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  131ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  149ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  281ms
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 91ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 6ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 24ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 28ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms 2
-      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  331ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  241ms
-      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 123ms
-      - 🇨🇦 ip_cf 🔒 SS-TCP-TLS 🇨🇦 CA 28ms
-      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 19ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 3
-      - 🇬🇧 oneclickvpnkeys 🔒 TR-WS-N/A 🇬🇧 GB 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 4
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 3
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 5
-      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 211ms
-      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 80ms
-      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 82ms
-      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 117ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 2
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 84ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 85ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 86ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 94ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 119ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 108ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 3
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 4
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  243ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 129ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  246ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  210ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  336ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  216ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms 2
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 127ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  276ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  108ms
-      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  255ms
-      - 🇵🇱 proxystore11 🔒 SS-TCP-TLS 🇵🇱 PL 103ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 124ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 92ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 104ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 3
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 5ms
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  233ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  298ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 12ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 7ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  176ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  85ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  103ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  247ms
+      - 🇳🇱 dailyv2ry 🔓 TR-TCP-N/A 🇳🇱 NL 136ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 128ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 130ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 153ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms 2
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 72ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms 2
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 75ms
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 73ms
+      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  643ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  283ms
+      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 8ms
+      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 165ms
+      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 9ms
+      - 🇩🇪 ip_cf 🔒 SS-TCP-TLS 🇩🇪 DE 161ms
+      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 16ms
+      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 250ms
+      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 130ms
+      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 149ms
+      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 161ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 138ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 155ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 128ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 130ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 126ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 131ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 133ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 143ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms 2
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 151ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 125ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms 2
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 129ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  384ms
+      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 65ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 143ms
+      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  284ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  217ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  327ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  248ms
+      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  277ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 164ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 142ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms 2
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 16ms
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 17ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  245ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  201ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  133ms
+      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 60ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 8ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  179ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 9ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  190ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  131ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  149ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  281ms
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 91ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 6ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 24ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 28ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms 2
-      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  331ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  241ms
-      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 123ms
-      - 🇨🇦 ip_cf 🔒 SS-TCP-TLS 🇨🇦 CA 28ms
-      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 19ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 3
-      - 🇬🇧 oneclickvpnkeys 🔒 TR-WS-N/A 🇬🇧 GB 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 4
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 3
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 5
-      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 211ms
-      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 80ms
-      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 82ms
-      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 117ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 2
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 84ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 85ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 86ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 94ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 119ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 108ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 3
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 4
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  243ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 129ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  246ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  210ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  336ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  216ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms 2
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 127ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  276ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  108ms
-      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  255ms
-      - 🇵🇱 proxystore11 🔒 SS-TCP-TLS 🇵🇱 PL 103ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 124ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 92ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 104ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 3
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 5ms
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  233ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  298ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 12ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 7ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  176ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  85ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  103ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  247ms
+      - 🇳🇱 dailyv2ry 🔓 TR-TCP-N/A 🇳🇱 NL 136ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 128ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 130ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 153ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms 2
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 72ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms 2
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 75ms
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 73ms
+      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  643ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  283ms
+      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 8ms
+      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 165ms
+      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 9ms
+      - 🇩🇪 ip_cf 🔒 SS-TCP-TLS 🇩🇪 DE 161ms
+      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 16ms
+      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 250ms
+      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 130ms
+      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 149ms
+      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 161ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 138ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 155ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 128ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 130ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 126ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 131ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 133ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 143ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms 2
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 151ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 125ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms 2
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 129ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  384ms
+      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 65ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 143ms
+      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  284ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  217ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  327ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  248ms
+      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  277ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 164ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 142ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms 2
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 16ms
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 17ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  245ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  201ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  133ms
+      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 60ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 8ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  179ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 9ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  190ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  131ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  149ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  281ms
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 91ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 6ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 24ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 28ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms 2
-      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  331ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  241ms
-      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 123ms
-      - 🇨🇦 ip_cf 🔒 SS-TCP-TLS 🇨🇦 CA 28ms
-      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 19ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 3
-      - 🇬🇧 oneclickvpnkeys 🔒 TR-WS-N/A 🇬🇧 GB 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 4
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 3
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 5
-      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 211ms
-      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 80ms
-      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 82ms
-      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 117ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 2
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 84ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 85ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 86ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 94ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 119ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 108ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 3
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 4
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  243ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 129ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  246ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  210ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  336ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  216ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms 2
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 127ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  276ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  108ms
-      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  255ms
-      - 🇵🇱 proxystore11 🔒 SS-TCP-TLS 🇵🇱 PL 103ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 124ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 92ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 104ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 3
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 5ms
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  233ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  298ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 12ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 7ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  176ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  85ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  103ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  247ms
+      - 🇳🇱 dailyv2ry 🔓 TR-TCP-N/A 🇳🇱 NL 136ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 128ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 130ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 153ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms 2
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 72ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms 2
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 75ms
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 73ms
+      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  643ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  283ms
+      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 8ms
+      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 165ms
+      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 9ms
+      - 🇩🇪 ip_cf 🔒 SS-TCP-TLS 🇩🇪 DE 161ms
+      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 16ms
+      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 250ms
+      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 130ms
+      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 149ms
+      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 161ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 138ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 155ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 128ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 130ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 126ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 131ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 133ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 143ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms 2
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 151ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 125ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms 2
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 129ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  384ms
+      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 65ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 143ms
+      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  284ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  217ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  327ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  248ms
+      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  277ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 164ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 142ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms 2
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 16ms
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 17ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  245ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  201ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  133ms
+      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 60ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 8ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  179ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 9ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  190ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  131ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  149ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  281ms
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 91ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 6ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 24ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 28ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms 2
-      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  331ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  241ms
-      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 123ms
-      - 🇨🇦 ip_cf 🔒 SS-TCP-TLS 🇨🇦 CA 28ms
-      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 19ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 3
-      - 🇬🇧 oneclickvpnkeys 🔒 TR-WS-N/A 🇬🇧 GB 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 4
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 3
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 5
-      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 211ms
-      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 80ms
-      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 82ms
-      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 117ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 2
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 84ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 85ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 86ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 94ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 119ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 108ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 3
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 4
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  243ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 129ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  246ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  210ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  336ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  216ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms 2
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 127ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  276ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  108ms
-      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  255ms
-      - 🇵🇱 proxystore11 🔒 SS-TCP-TLS 🇵🇱 PL 103ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 124ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 92ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 104ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 3
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 5ms
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  233ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  298ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 12ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 7ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  176ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  85ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  103ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  247ms
+      - 🇳🇱 dailyv2ry 🔓 TR-TCP-N/A 🇳🇱 NL 136ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 128ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 130ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 153ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms 2
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 72ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms 2
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 75ms
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 73ms
+      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  643ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  283ms
+      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 8ms
+      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 165ms
+      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 9ms
+      - 🇩🇪 ip_cf 🔒 SS-TCP-TLS 🇩🇪 DE 161ms
+      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 16ms
+      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 250ms
+      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 130ms
+      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 149ms
+      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 161ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 138ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 155ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 128ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 130ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 126ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 131ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 133ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 143ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms 2
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 151ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 125ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms 2
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 129ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  384ms
+      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 65ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 143ms
+      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  284ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  217ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  327ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  248ms
+      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  277ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 164ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 142ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms 2
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 16ms
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 17ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  245ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  201ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  133ms
+      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 60ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 8ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  179ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 9ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  190ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  131ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  149ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  281ms
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -746,91 +658,80 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 91ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 6ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 24ms
-      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 28ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms
-      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 23ms 2
-      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  331ms
-      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  241ms
-      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 123ms
-      - 🇨🇦 ip_cf 🔒 SS-TCP-TLS 🇨🇦 CA 28ms
-      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 19ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 3
-      - 🇬🇧 oneclickvpnkeys 🔒 TR-WS-N/A 🇬🇧 GB 6ms
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 4
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 5ms 3
-      - 🇺🇸 oneclickvpnkeys 🔒 TR-WS-N/A 🇺🇸 US 6ms 5
-      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 211ms
-      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 80ms
-      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 82ms
-      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 117ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 2
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 84ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 85ms
-      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 86ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 93ms
-      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 94ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 119ms
-      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 108ms
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 3
-      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 71ms 4
-      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 81ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  243ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 129ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  246ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  210ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  336ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  216ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 7ms 2
-      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 93ms 2
-      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 127ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  276ms
-      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  108ms
-      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  255ms
-      - 🇵🇱 proxystore11 🔒 SS-TCP-TLS 🇵🇱 PL 103ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 124ms
-      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 126ms
-      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 92ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 5ms
-      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 104ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 2
-      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 6ms 3
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 5ms
-      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 6ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  233ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  104ms
-      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  298ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 12ms
-      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 7ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 5ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  176ms
-      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 6ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  85ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  103ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  112ms
-      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  247ms
+      - 🇳🇱 dailyv2ry 🔓 TR-TCP-N/A 🇳🇱 NL 136ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 128ms
+      - 🇫🇷 directvpn 🔒 TR-TCP-N/A 🇫🇷 FR 130ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 153ms
+      - directvpn 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms
+      - 🇩🇪 directvpn 🔒 TR-TCP-N/A 🇩🇪 DE 141ms 2
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 72ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms
+      - 🇺🇸 directvpn 🔒 TR-TCP-N/A 🇺🇸 US 61ms 2
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 75ms
+      - 🇨🇦 directvpn 🔒 TR-TCP-N/A 🇨🇦 CA 73ms
+      - 🇺🇸 freakconfig 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  643ms
+      - freakconfig 🔒 SS-TCP-TLS 🆥🆥  283ms
+      - 🇺🇸 freakconfig 🔒 VM-WS-TLS 🇺🇸 US 8ms
+      - 🇷🇺 ip_cf 🔒 SS-TCP-TLS 🇷🇺 RU 165ms
+      - 🇺🇸 ip_cf 🔒 VM-WS-TLS 🇺🇸 US 9ms
+      - 🇩🇪 ip_cf 🔒 SS-TCP-TLS 🇩🇪 DE 161ms
+      - 🇺🇸 outlinev2rayng 🔒 TR-WS-N/A 🇺🇸 US 16ms
+      - 🇮🇳 outlinevpnofficial 🔒 SS-TCP-TLS 🇮🇳 IN 250ms
+      - 🇬🇧 outlinevpnofficial 🔒 SS-TCP-TLS 🇬🇧 GB 130ms
+      - 🇫🇷 outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇷 FR 149ms
+      - outlinevpnofficial 🔒 SS-TCP-TLS 🇫🇮 FI 161ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 138ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 155ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 128ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 130ms
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 126ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 131ms
+      - 🇫🇷 privatevpns 🔒 TR-TCP-N/A 🇫🇷 FR 133ms
+      - 🇩🇪 privatevpns 🔒 TR-TCP-N/A 🇩🇪 DE 143ms
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 152ms 2
+      - privatevpns 🔒 TR-TCP-N/A 🇸🇪 SE 151ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 125ms
+      - privatevpns 🔒 TR-TCP-N/A 🇮🇪 IE 129ms 2
+      - 🇬🇧 privatevpns 🔒 TR-TCP-N/A 🇬🇧 GB 129ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  384ms
+      - 🇺🇸 proxy_mtm 🔒 SS-TCP-TLS 🇺🇸 US 65ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🇦🇹 AT 143ms
+      - 🇷🇺 proxy_mtm 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - 🇵🇱 proxy_mtm 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  284ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  217ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  327ms
+      - proxy_mtm 🔒 SS-TCP-TLS 🆥🆥  248ms
+      - proxystore11 🔒 SS-TCP-TLS 🆥🆥  277ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 164ms
+      - 🇷🇺 proxystore11 🔒 SS-TCP-TLS 🇷🇺 RU 176ms
+      - proxystore11 🔒 SS-TCP-TLS 🇦🇹 AT 142ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2line 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇵🇱 v2ray1_ng 🔒 SS-TCP-TLS 🇵🇱 PL 146ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 8ms
+      - 🇺🇸 v2ray1_ng 🔓 VM-WS-N/A 🇺🇸 US 9ms 2
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 16ms
+      - 🇺🇸 v2ray1_ng 🔒 VM-WS-TLS 🇺🇸 US 17ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  245ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  201ms
+      - v2ray1_ng 🔒 SS-TCP-TLS 🆥🆥  133ms
+      - v2rayng_vpnrog 🔒 SS-TCP-TLS 🆥🆥  240ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 60ms
+      - 🇺🇸 vmessprotocol 🔓 VM-WS-N/A 🇺🇸 US 9ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 8ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  179ms
+      - 🇺🇸 vmessprotocol 🔒 TR-WS-N/A 🇺🇸 US 9ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  190ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  131ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  149ms
+      - vmessprotocol 🔒 SS-TCP-TLS 🆥🆥  281ms
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
