@@ -67,3 +67,7 @@ cd ..
 
 ./after_push.sh "${target_folder}/thuhollow2_myconfig_log.txt"
 
+rm -rf ${target_folder}/.git
+
+./after_push.sh "${target_folder}/thuhollow2_myconfig_log.txt"
+
