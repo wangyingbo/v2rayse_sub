@@ -72,10 +72,7 @@ rm -rf .git
 # 返回上一级目录
 cd ..
 
-./after_push.sh "${target_folder}/thuhollow2_myconfig_log.txt"
-
 rm -rf ${target_folder}/.git
-rm -rf ${target_folder}/.gitkeep
 
 ./after_push.sh "${target_folder}/thuhollow2_myconfig_log.txt"
 
