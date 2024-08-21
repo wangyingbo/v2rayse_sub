@@ -26,8 +26,6 @@ echo "\n"
 if [[ -d $target_folder ]]; then
     echo "\n"
     rm -rf $target_folder
-else 
-    echo "${target_folder} not exist!!"
 fi
 
 # 克隆仓库的元数据
@@ -41,7 +39,8 @@ else
 fi
 
 # 进入仓库目录
-cd $target_folder || { echo "Failed to enter the repository directory"; cd ..; exit 1; }
+# cd $target_folder || { echo "Failed to enter the repository directory"; cd ..; exit 1; }
+cd $target_folder
 
 # 初始化稀疏检出
 git sparse-checkout init --cone
@@ -74,6 +73,8 @@ git sparse-checkout set $folders $files
 echo "Downloaded files:"
 ls -R
 
+git sparse-checkout disable
+git checkout .
 rm -rf .git
 
 # 返回上一级目录
