@@ -26,6 +26,13 @@ echo "\n"
 # 克隆仓库的元数据
 git clone --depth=1 --filter=blob:none --sparse "$repo_url"
 
+if [[ -d $target_folder ]]; then
+    echo "\n"
+else 
+    echo "${target_folder} not exist!!"
+    exit 1
+fi
+
 # 进入仓库目录
 cd $target_folder || { echo "Failed to enter the repository directory"; cd ..; exit 1; }
 
@@ -68,6 +75,7 @@ cd ..
 ./after_push.sh "${target_folder}/thuhollow2_myconfig_log.txt"
 
 rm -rf ${target_folder}/.git
+rm -rf ${target_folder}/.gitkeep
 
 ./after_push.sh "${target_folder}/thuhollow2_myconfig_log.txt"
 
