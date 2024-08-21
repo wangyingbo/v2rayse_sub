@@ -30,11 +30,20 @@ cd myconfig || { echo "Failed to enter the repository directory"; cd ..; exit 1;
 # 初始化稀疏检出
 git sparse-checkout init --cone
 
-# 下载所有文件夹
-git sparse-checkout set /*/
+# 获取所有顶层目录和文件
+folders=$(git ls-tree -d --name-only HEAD)
+files=$(git ls-tree -r HEAD --name-only | grep 'config.yaml')
+
+# 设置稀疏检出，逐一下载顶层文件夹及config.yaml
+for folder in $folders; do
+    echo "folder enum: ${folder}"
+    git sparse-checkout set "$folder"
+done
 
 # 下载config.yaml文件
-git sparse-checkout set config.yaml
+if [ -n "$files" ]; then
+    git sparse-checkout set $files
+fi
 
 # 完成后，显示工作目录下的文件和文件夹
 echo "Downloaded files:"
