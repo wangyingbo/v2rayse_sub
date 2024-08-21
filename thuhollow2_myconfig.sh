@@ -23,6 +23,13 @@ echo "\n"
 
 ./before_pull.sh
 
+if [[ -d $target_folder ]]; then
+    echo "\n"
+    rm -rf $target_folder
+else 
+    echo "${target_folder} not exist!!"
+fi
+
 # 克隆仓库的元数据
 git clone --depth=1 --filter=blob:none --sparse "$repo_url"
 
