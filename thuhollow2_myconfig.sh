@@ -31,7 +31,11 @@ if [[ -d $target_folder ]]; then
 fi
 
 # 克隆仓库的元数据
-git clone --depth=1 --filter=blob:none --sparse "$repo_url"
+if [[ $yb_device == 'macOS' ]]; then
+    git clone --depth=1 --filter=blob:none --sparse "$repo_url"
+else
+    git clone --depth=1 --filter=blob:none "$repo_url"
+fi
 # git clone  "$repo_url"
 
 
