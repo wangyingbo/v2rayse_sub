@@ -26,12 +26,13 @@ echo "\n"
 if [[ -d $target_folder ]]; then
     echo "\n"
     echo "${target_folder} has exist!!!"
+    echo "\n"
     rm -rf $target_folder
 fi
 
 # 克隆仓库的元数据
-# git clone --depth=1 --filter=blob:none --sparse "$repo_url"
-git clone  "$repo_url"
+git clone --depth=1 --filter=blob:none --sparse "$repo_url"
+# git clone  "$repo_url"
 
 
 if [[ -d $target_folder ]]; then
@@ -46,46 +47,46 @@ fi
 # -------------------------------------------------------------
 
 
-# # 进入仓库目录
-# # cd $target_folder || { echo "Failed to enter the repository directory"; cd ..; exit 1; }
-# cd $target_folder
+# 进入仓库目录
+# cd $target_folder || { echo "Failed to enter the repository directory"; cd ..; exit 1; }
+cd $target_folder
 
-# # 初始化稀疏检出
-# git sparse-checkout init --cone
+# 初始化稀疏检出
+git sparse-checkout init --cone
 
-# # 获取所有顶层目录和文件
-# folders=($(git ls-tree -d --name-only HEAD))
-# files=$(git ls-tree -r HEAD --name-only | grep 'config.yaml')
+# 获取所有顶层目录和文件
+folders=($(git ls-tree -d --name-only HEAD))
+files=$(git ls-tree -r HEAD --name-only | grep 'config.yaml')
 
-# # 打印所有文件夹（用于调试）
-# echo "Found folders:"
+# 打印所有文件夹（用于调试）
+echo "Found folders:"
+for folder in "${folders[@]}"; do
+  echo "$folder"
+done
+
+# # 逐一下载每个文件夹
 # for folder in "${folders[@]}"; do
-#   echo "$folder"
+#     echo "$folder"
+#     git sparse-checkout set "$folder"
 # done
 
-# # # 逐一下载每个文件夹
-# # for folder in "${folders[@]}"; do
-# #     echo "$folder"
-# #     git sparse-checkout set "$folder"
-# # done
+# # 下载config.yaml文件
+# if [ -n "$files" ]; then
+#     git sparse-checkout set $files
+# fi
 
-# # # 下载config.yaml文件
-# # if [ -n "$files" ]; then
-# #     git sparse-checkout set $files
-# # fi
+# 将所有文件夹和config.yaml文件一次性设置到sparse-checkout中
+git sparse-checkout set $folders $files
 
-# # 将所有文件夹和config.yaml文件一次性设置到sparse-checkout中
-# git sparse-checkout set $folders $files
+# 完成后，显示工作目录下的文件和文件夹
+echo "Downloaded files:"
+ls -R
 
-# # 完成后，显示工作目录下的文件和文件夹
-# echo "Downloaded files:"
-# ls -R
+git sparse-checkout disable
+git checkout .
 
-# git sparse-checkout disable
-# git checkout .
-
-# # 返回上一级目录
-# cd ..
+# 返回上一级目录
+cd ..
 
 
 # -------------------------------------------------------------
