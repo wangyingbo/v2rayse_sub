@@ -47,6 +47,7 @@ rm -rf top_size; cp -r $source_folder/top_size top_size
 rm -rf iboxz_free_v2ray_collector; cp -r $source_folder/iboxz_free_v2ray_collector iboxz_free_v2ray_collector
 rm -rf itsyebekhe_HiN_VPN; cp -r $source_folder/itsyebekhe_HiN_VPN itsyebekhe_HiN_VPN
 rm -rf v2rayclashnodes; cp -r $source_folder/v2rayclashnodes v2rayclashnodes
+rm -rf myconfig; cp -r $source_folder/myconfig myconfig
 
 echo "\n"
 ./after_push.sh copy_to_gitlab_log.txt
