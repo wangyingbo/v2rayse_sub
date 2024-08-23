@@ -44,6 +44,7 @@ rm -rf tglaoshiji; cp -r $source_folder/tglaoshiji tglaoshiji
 rm -rf gist_config; cp -r $source_folder/gist_config gist_config
 rm -rf github_config; cp -r $source_folder/github_config github_config
 rm -rf top_size; cp -r $source_folder/top_size top_size
+rm -rf gist_aggregator; cp -r $source_folder/gist_aggregator gist_aggregator
 rm -rf convert_base64; cp -r $source_folder/convert_base64 convert_base64
 rm -rf v2rayclashnodes; cp -r $source_folder/v2rayclashnodes v2rayclashnodes
 rm -rf myconfig; cp -r $source_folder/myconfig myconfig
