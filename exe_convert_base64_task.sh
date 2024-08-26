@@ -10,4 +10,4 @@
 
 
 # token 会变，暂时注释掉
-# ./convert_base64_url_to_sub.sh -a http://103.196.20.127/api/v1/client/subscribe\?token\=5e12501924f6c0356eb7b12781ed4569 -f convert_base64/103_196_20_127 -l convert_base64/103_196_20_127/kuai_chi_ji_ba_log.txt
+./convert_base64_url_to_sub.sh -a http://103.196.20.127/api/v1/client/subscribe?token=5e12501924f6c0356eb7b12781ed4569 -f convert_base64/103_196_20_127 -l convert_base64/103_196_20_127/kuai_chi_ji_ba_log.txt
