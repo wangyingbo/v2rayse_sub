@@ -5,55 +5,51 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇰🇷 韩国-三网优化2-1F, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 218e297e-6019-4905-b834-d6a4f8738df1, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 日本2 | 1x, server: jp2.1vpn.sbs, port: 443, type: vmess, uuid: 4c02cf92-c04b-4ca6-a577-b3208853b91d, alterId: 0, cipher: auto, tls: true, servername: jp2.1vpn.sbs, network: ws, ws-opts: {path: /yutfgujjo, headers: {Host: jp2.1vpn.sbs}}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 01b03b05-da65-4ca3-8c58-2c6505753bb0, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 1fef5da0-f2eb-4993-ae1f-86ff238f0cfb, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇸🇬 新加坡 | 1x, server: sg1.1vpn.sbs, port: 443, type: vmess, uuid: 4c02cf92-c04b-4ca6-a577-b3208853b91d, alterId: 0, cipher: auto, tls: true, servername: sg1.1vpn.sbs, network: ws, ws-opts: {path: /oihuih6788, headers: {Host: sg1.1vpn.sbs}}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3591498b-14a6-46cc-8159-f02366139cd8, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 日本2 | 1x, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: 4c02cf92-c04b-4ca6-a577-b3208853b91d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /rgherjwaqw, headers: {Host: jp2.1vpn.sbs}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 218e297e-6019-4905-b834-d6a4f8738df1, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
   - {name: 🇰🇷 韩国-三网优化2-1E, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: d1e6c794-5b4f-4a78-98c4-7c097f137b93, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 01b03b05-da65-4ca3-8c58-2c6505753bb0, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
   - {name: 🇰🇷 韩国-三网优化2-1D, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 68386a97-b7bf-4335-840c-df60d2f1e311, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3591498b-14a6-46cc-8159-f02366139cd8, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇸🇬 新加坡 | 1x, server: sg1.1vpn.sbs, port: 80, type: vmess, uuid: 4c02cf92-c04b-4ca6-a577-b3208853b91d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kuurtreeh, headers: {Host: sg1.1vpn.sbs}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1F
       - 🇯🇵 日本2 | 1x
-      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 新加坡 | 1x
-      - 🇰🇷 韩国-三网优化2-1C
       - 🇰🇷 韩国-三网优化2-1E
+      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡 | 1x
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇰🇷 韩国-三网优化2-1F
       - 🇯🇵 日本2 | 1x
-      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 新加坡 | 1x
-      - 🇰🇷 韩国-三网优化2-1C
       - 🇰🇷 韩国-三网优化2-1E
+      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡 | 1x
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1F
       - 🇯🇵 日本2 | 1x
-      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 新加坡 | 1x
-      - 🇰🇷 韩国-三网优化2-1C
       - 🇰🇷 韩国-三网优化2-1E
+      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡 | 1x
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -72,14 +68,13 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1F
       - 🇯🇵 日本2 | 1x
-      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 新加坡 | 1x
-      - 🇰🇷 韩国-三网优化2-1C
       - 🇰🇷 韩国-三网优化2-1E
+      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡 | 1x
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -90,41 +85,38 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇰🇷 韩国-三网优化2-1F
       - 🇯🇵 日本2 | 1x
-      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 新加坡 | 1x
-      - 🇰🇷 韩国-三网优化2-1C
       - 🇰🇷 韩国-三网优化2-1E
+      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡 | 1x
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1F
       - 🇯🇵 日本2 | 1x
-      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 新加坡 | 1x
-      - 🇰🇷 韩国-三网优化2-1C
       - 🇰🇷 韩国-三网优化2-1E
+      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡 | 1x
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇰🇷 韩国-三网优化2-1F
       - 🇯🇵 日本2 | 1x
-      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 新加坡 | 1x
-      - 🇰🇷 韩国-三网优化2-1C
       - 🇰🇷 韩国-三网优化2-1E
+      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡 | 1x
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -140,14 +132,13 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇰🇷 韩国-三网优化2-1F
       - 🇯🇵 日本2 | 1x
-      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1B
-      - 🇸🇬 新加坡 | 1x
-      - 🇰🇷 韩国-三网优化2-1C
       - 🇰🇷 韩国-三网优化2-1E
+      - 🇰🇷 韩国-三网优化2-1A
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇸🇬 新加坡 | 1x
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
