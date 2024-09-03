@@ -2,8 +2,8 @@
 
 # WebDAV 信息
 WEBDAV_URL="https://webdav.nps.52wxb.top"
-USERNAME="admin"
-PASSWORD="SDYZxl2721020990"
+USERNAME="wyb"
+PASSWORD="Yb123456"
 
 # 目标文件夹
 FOLDER_NAME="wzdnzd_aggregator_sub"
