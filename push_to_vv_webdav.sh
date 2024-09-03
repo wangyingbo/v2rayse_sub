@@ -8,9 +8,9 @@ PASSWORD="avahyj2vpiwxpj9g" # Yb123456
 
 
 # WebDAV信息
-WEBDAV_URL="https://dav.jianguoyun.com/dav/"
-USERNAME="wangyingbo528@163.com"
-PASSWORD="avahyj2vpiwxpj9g"
+WEBDAV_URL="http://webdav.nps.52wxb.top/webdav"
+USERNAME="wyb"
+PASSWORD="Yb123456"
 FOLDER_NAME="wzdnzd_aggregator_sub"
 
 # 检查文件夹是否存在
