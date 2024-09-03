@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # WebDAV 信息
-WEBDAV_URL="https://webdav.nps.52wxb.top"
+WEBDAV_URL="http://webdav.nps.52wxb.top"
 USERNAME="wyb"
 PASSWORD="Yb123456"
 
