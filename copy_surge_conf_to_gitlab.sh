@@ -15,8 +15,6 @@ echo "\n"
 
 source_paths=(
   "wzdnzd_aggregator_sub"
-  "johnzhang0707_sub"
-  "zoecsoulkey_sub"
 )
 
 keywords=("Clash" "V2Ray" "SingBox" "Loon" "Surge" "QuantumultX")
