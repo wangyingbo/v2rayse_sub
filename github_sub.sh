@@ -17,7 +17,8 @@ curl $bpb_worker_pannel > "${github_config}/bpb-worker-panel.yaml"
 # base64订阅: https://github.com/Surfboardv2ray/Proxy-sorter
 curl "https://yun-api.subcloud.xyz/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2FSurfboardv2ray%2FProxy-sorter%2Fmain%2Fsubmerge%2Fconverted.txt&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true" > "${github_config}/Surfboardv2ray_Proxy-sorter_clash.yaml"
 
-
+# https://linux.do/t/topic/156977
+curl "https://gist.githubusercontent.com/freeorgworld/5c03561e27f929bdfaf5734bcadd1882/raw/freeorgOP.yaml" > "${github_config}/freeorgOP.yaml"
 
 
 ./after_push.sh "${github_config}/github_sub_log.txt"
