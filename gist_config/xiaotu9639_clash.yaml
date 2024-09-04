@@ -5,103 +5,35 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 台湾 1, server: gy.666666222.shop, port: 20032, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
-  - {name: 美国02, server: gd.xueyejiasu.com, port: 58159, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
-  - {name: 德鸡, server: deji.kcapsys.com, port: 80, type: vmess, uuid: 4fa80be6-916d-41aa-8eda-04e30fc0a13e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: deji.kcapsys.com}}, udp: true}
-  - {name: 美国03, server: gd.xueyejiasu.com, port: 42414, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
-  - {name: 香港01, server: gd.xueyejiasu.com, port: 34338, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
-  - {name: 美国 纽约2, server: gy.666666222.shop, port: 20016, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
-  - {name: 日本04, server: gy.666666222.shop, port: 20008, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
+  - {name: 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 64c17fad-b955-456a-9b4f-1f7c84767e41, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 51f6da98-d8e5-434b-a2ce-85cf7676f2f4, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
   - {name: 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 072c7e44-d3db-4834-8774-5a4fc12e8316, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 美国01, server: gd.xueyejiasu.com, port: 56011, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
-  - {name: 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 64c17fad-b955-456a-9b4f-1f7c84767e41, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 台湾01, server: gd.xueyejiasu.com, port: 47564, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
-  - {name: 日本02, server: gy.666666222.shop, port: 20004, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
-  - {name: 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 51f6da98-d8e5-434b-a2ce-85cf7676f2f4, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 法国, server: faguoipv6.kcapsys.com, port: 80, type: vmess, uuid: 4fa80be6-916d-41aa-8eda-04e30fc0a13e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: faguoipv6.kcapsys.com}}, udp: true}
-  - {name: 波兰, server: blang.kcapsys.com, port: 80, type: vmess, uuid: 4fa80be6-916d-41aa-8eda-04e30fc0a13e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: blang.kcapsys.com}}, udp: true}
-  - {name: 香港02, server: gy.666666222.shop, port: 20035, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
-  - {name: 香港03, server: gy.666666222.shop, port: 20052, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
-  - {name: 美国 纽约01, server: gy.666666222.shop, port: 20013, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
-  - {name: 日本01, server: gy.666666222.shop, port: 20002, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
-  - {name: 日本03, server: gy.666666222.shop, port: 20006, type: ss, cipher: chacha20-ietf-poly1305, password: 3df70505-4286-432c-b837-73d35c64235a, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 台湾 1
-      - 美国02
-      - 德鸡
-      - 美国03
-      - 香港01
-      - 美国 纽约2
-      - 日本04
-      - 韩国-三网优化2-1C
-      - 美国01
-      - 韩国-三网优化2-1A
-      - 台湾01
-      - 日本02
       - 韩国-三网优化2-1B
-      - 法国
-      - 波兰
-      - 香港02
-      - 香港03
-      - 美国 纽约01
-      - 日本01
-      - 日本03
+      - 韩国-三网优化2-1A
+      - 韩国-三网优化2-1C
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 台湾 1
-      - 美国02
-      - 德鸡
-      - 美国03
-      - 香港01
-      - 美国 纽约2
-      - 日本04
-      - 韩国-三网优化2-1C
-      - 美国01
-      - 韩国-三网优化2-1A
-      - 台湾01
-      - 日本02
       - 韩国-三网优化2-1B
-      - 法国
-      - 波兰
-      - 香港02
-      - 香港03
-      - 美国 纽约01
-      - 日本01
-      - 日本03
+      - 韩国-三网优化2-1A
+      - 韩国-三网优化2-1C
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 台湾 1
-      - 美国02
-      - 德鸡
-      - 美国03
-      - 香港01
-      - 美国 纽约2
-      - 日本04
-      - 韩国-三网优化2-1C
-      - 美国01
-      - 韩国-三网优化2-1A
-      - 台湾01
-      - 日本02
       - 韩国-三网优化2-1B
-      - 法国
-      - 波兰
-      - 香港02
-      - 香港03
-      - 美国 纽约01
-      - 日本01
-      - 日本03
+      - 韩国-三网优化2-1A
+      - 韩国-三网优化2-1C
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -120,112 +52,39 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 台湾 1
-      - 美国02
-      - 德鸡
-      - 美国03
-      - 香港01
-      - 美国 纽约2
-      - 日本04
-      - 韩国-三网优化2-1C
-      - 美国01
-      - 韩国-三网优化2-1A
-      - 台湾01
-      - 日本02
       - 韩国-三网优化2-1B
-      - 法国
-      - 波兰
-      - 香港02
-      - 香港03
-      - 美国 纽约01
-      - 日本01
-      - 日本03
+      - 韩国-三网优化2-1A
+      - 韩国-三网优化2-1C
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 台湾 1
-      - 香港01
-      - 台湾01
-      - 香港02
-      - 香港03
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 台湾 1
-      - 美国02
-      - 德鸡
-      - 美国03
-      - 香港01
-      - 美国 纽约2
-      - 日本04
-      - 韩国-三网优化2-1C
-      - 美国01
-      - 韩国-三网优化2-1A
-      - 台湾01
-      - 日本02
       - 韩国-三网优化2-1B
-      - 法国
-      - 波兰
-      - 香港02
-      - 香港03
-      - 美国 纽约01
-      - 日本01
-      - 日本03
+      - 韩国-三网优化2-1A
+      - 韩国-三网优化2-1C
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 台湾 1
-      - 美国02
-      - 德鸡
-      - 美国03
-      - 香港01
-      - 美国 纽约2
-      - 日本04
-      - 韩国-三网优化2-1C
-      - 美国01
-      - 韩国-三网优化2-1A
-      - 台湾01
-      - 日本02
       - 韩国-三网优化2-1B
-      - 法国
-      - 波兰
-      - 香港02
-      - 香港03
-      - 美国 纽约01
-      - 日本01
-      - 日本03
+      - 韩国-三网优化2-1A
+      - 韩国-三网优化2-1C
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 台湾 1
-      - 美国02
-      - 德鸡
-      - 美国03
-      - 香港01
-      - 美国 纽约2
-      - 日本04
-      - 韩国-三网优化2-1C
-      - 美国01
-      - 韩国-三网优化2-1A
-      - 台湾01
-      - 日本02
       - 韩国-三网优化2-1B
-      - 法国
-      - 波兰
-      - 香港02
-      - 香港03
-      - 美国 纽约01
-      - 日本01
-      - 日本03
+      - 韩国-三网优化2-1A
+      - 韩国-三网优化2-1C
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -241,26 +100,9 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 台湾 1
-      - 美国02
-      - 德鸡
-      - 美国03
-      - 香港01
-      - 美国 纽约2
-      - 日本04
-      - 韩国-三网优化2-1C
-      - 美国01
-      - 韩国-三网优化2-1A
-      - 台湾01
-      - 日本02
       - 韩国-三网优化2-1B
-      - 法国
-      - 波兰
-      - 香港02
-      - 香港03
-      - 美国 纽约01
-      - 日本01
-      - 日本03
+      - 韩国-三网优化2-1A
+      - 韩国-三网优化2-1C
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve

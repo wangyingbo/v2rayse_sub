@@ -5,199 +5,191 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇺🇸 美国01, server: gd.xueyejiasu.com, port: 56011, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇹🇼 台湾 1, server: gy.666666222.shop, port: 20032, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇯🇵 东京2UDP, server: hy204.ludounow.tech, port: 20008, type: hysteria2, password: 4560d340-03a4-4784-ae0c-90be6a27073d, auth: 4560d340-03a4-4784-ae0c-90be6a27073d, sni: hy204.ludounow.tech, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 美国FL, server: q18.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usfl.ludou.us.kg}}, udp: true}
-  - {name: 🇺🇸 美西CF, server: q1.ludou.us.kg, port: 80, type: vless, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: /hgalaoa, headers: {Host: q1.ludou.us.kg}}, udp: true}
-  - {name: 新德里, server: q33.ludou.us.kg, port: 80, type: vless, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q33.ludou.us.kg}}, udp: true}
-  - {name: 🇺🇸 美国LL, server: q21.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usll.ludou.us.kg}}, udp: true}
-  - {name: 🇮🇩 印尼, server: q34.ludou.us.kg, port: 80, type: vless, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q34.ludou.us.kg}}, udp: true}
-  - {name: 🇺🇸 美国GA, server: q16.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usga.ludou.us.kg}}, udp: true}
-  - {name: 德鸡, server: deji.kcapsys.com, port: 80, type: vmess, uuid: 8060fd47-1450-4c34-9472-51e5d4c3ec75, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: deji.kcapsys.com}}, udp: true}
-  - {name: 🇺🇸 美国02, server: gd.xueyejiasu.com, port: 58159, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇸🇬 新加坡 | 1x-1A, server: sg1.1vpn.sbs, port: 80, type: vmess, uuid: 38931361-4d7b-4210-9325-ac4c0dabac6f, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kuurtreeh, headers: {Host: sg1.1vpn.sbs}}, udp: true}
-  - {name: 🇯🇵 日本2 | 1x-1A, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: 38931361-4d7b-4210-9325-ac4c0dabac6f, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiuluuiuqqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
-  - {name: 🇸🇬 新加坡 | 1x-1B, server: sg1.1vpn.sbs, port: 80, type: vmess, uuid: ee5d0f2d-4746-42ce-935d-dac2f6f81937, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kuurtreeh, headers: {Host: sg1.1vpn.sbs}}, udp: true}
-  - {name: 🇭🇰 香港03, server: gy.666666222.shop, port: 20052, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇯🇵 东京02, server: q28.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jduarwtq.ludounow.tech}}, udp: true}
-  - {name: 🇯🇵 日本2 | 1x-1B, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: ee5d0f2d-4746-42ce-935d-dac2f6f81937, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiuluuiuqqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
-  - {name: 🇸🇬 新加坡02, server: q32.ludou.us.kg, port: 80, type: vless, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q32.ludou.us.kg}}, udp: true}
-  - {name: 大版01, server: q23.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cmi-665441.ludounow.tech}}, udp: true}
-  - {name: 🇹🇼 台湾, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: f0eb6558-394c-4f21-92ef-d6dc1341aab7, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: tw.colacloud.free.hr}}, udp: true}
-  - {name: 🇺🇸 美国CA, server: q15.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usca.ludou.us.kg}}, udp: true}
-  - {name: 墨尔本, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: f0eb6558-394c-4f21-92ef-d6dc1341aab7, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 大版02, server: q24.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cmi-64475841.ludounow.tech}}, udp: true}
-  - {name: 🇫🇷 法国, server: faguoipv6.kcapsys.com, port: 80, type: vmess, uuid: 8060fd47-1450-4c34-9472-51e5d4c3ec75, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: faguoipv6.kcapsys.com}}, udp: true}
-  - {name: 🇵🇱 波兰, server: blang.kcapsys.com, port: 80, type: vmess, uuid: 8060fd47-1450-4c34-9472-51e5d4c3ec75, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: blang.kcapsys.com}}, udp: true}
-  - {name: 🇺🇸 美国 纽约01, server: gy.666666222.shop, port: 20013, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇸🇬 新加坡07, server: q26.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sg.ludou.us.kg}}, udp: true}
-  - {name: 🇯🇵 日本04, server: gy.666666222.shop, port: 20008, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇹🇼 台湾01, server: gd.xueyejiasu.com, port: 47564, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇸🇬 新加坡04, server: q30.ludou.us.kg, port: 80, type: vless, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q30.ludou.us.kg}}, udp: true}
-  - {name: 🇬🇧 伦敦, server: q7.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b1.ludou.us.kg}}, udp: true}
-  - {name: 🇺🇸 美国WA, server: q17.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: uswa.ludou.us.kg}}, udp: true}
+  - {name: 🇹🇼 台湾01, server: gd.xueyejiasu.com, port: 47564, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
   - {name: 🇸🇬 新加坡03, server: q31.ludou.us.kg, port: 80, type: vless, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q31.ludou.us.kg}}, udp: true}
+  - {name: 🇯🇵 日本04, server: gy.666666222.shop, port: 20008, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
+  - {name: 🇭🇰 香港01, server: gd.xueyejiasu.com, port: 34338, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
+  - {name: 🇺🇸 美国LL, server: q21.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usll.ludou.us.kg}}, udp: true}
+  - {name: 🇺🇸 美国01, server: gd.xueyejiasu.com, port: 56011, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
+  - {name: 🇹🇼 台湾-1B, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: d08e04b3-ebfb-4376-ac81-57d80d337d35, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: tw.colacloud.free.hr}}, udp: true}
+  - {name: 🇺🇸 美国FL, server: q18.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usfl.ludou.us.kg}}, udp: true}
   - {name: 🇺🇸 纽约NY, server: q8.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: or.ludou.us.kg}}, udp: true}
-  - {name: 🇺🇸 美国 纽约2, server: gy.666666222.shop, port: 20016, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇭🇰 香港02, server: gy.666666222.shop, port: 20035, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇯🇵 日本03, server: gy.666666222.shop, port: 20006, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇯🇵 东京01, server: q25.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jpaaddda5dd.ludou.us.kg}}, udp: true}
-  - {name: 🇺🇸 美国03, server: gd.xueyejiasu.com, port: 42414, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇸🇬 新加坡05, server: q5.ludou.us.kg, port: 8080, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /vccmn, headers: {Host: 66666.ludou.us.kg}}, udp: true}
+  - {name: 🇭🇰 香港02, server: gy.666666222.shop, port: 20035, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
+  - {name: 🇯🇵 日本03, server: gy.666666222.shop, port: 20006, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
+  - {name: 🇺🇸 美国GA, server: q16.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usga.ludou.us.kg}}, udp: true}
+  - {name: 墨尔本-1A, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: f0eb6558-394c-4f21-92ef-d6dc1341aab7, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 🇺🇸 美国 纽约01, server: gy.666666222.shop, port: 20013, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
+  - {name: 墨尔本-1B, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: d08e04b3-ebfb-4376-ac81-57d80d337d35, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
   - {name: 🇺🇸 美国LA, server: q19.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usla.ludou.us.kg}}, udp: true}
-  - {name: 🇭🇰 香港01, server: gd.xueyejiasu.com, port: 34338, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇯🇵 日本01, server: gy.666666222.shop, port: 20002, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
-  - {name: 🇯🇵 日本02, server: gy.666666222.shop, port: 20004, type: ss, cipher: chacha20-ietf-poly1305, password: 89a1740d-b021-4ccc-9630-d2d1820e74af, udp: true}
+  - {name: 🇭🇰 香港03, server: gy.666666222.shop, port: 20052, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
+  - {name: 🇯🇵 日本02, server: gy.666666222.shop, port: 20004, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
+  - {name: 🇬🇧 伦敦, server: q7.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: b1.ludou.us.kg}}, udp: true}
+  - {name: 🇺🇸 美国CA, server: q15.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: usca.ludou.us.kg}}, udp: true}
+  - {name: 🇯🇵 日本01, server: gy.666666222.shop, port: 20002, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
+  - {name: 🇯🇵 东京02, server: q28.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jduarwtq.ludounow.tech}}, udp: true}
+  - {name: 🇯🇵 日本2 | 1x-1A, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: ee5d0f2d-4746-42ce-935d-dac2f6f81937, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiuluuiuqqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
+  - {name: 🇺🇸 美西CF, server: q1.ludou.us.kg, port: 80, type: vless, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: /hgalaoa, headers: {Host: q1.ludou.us.kg}}, udp: true}
+  - {name: 🇺🇸 美国02, server: gd.xueyejiasu.com, port: 58159, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
+  - {name: 🇺🇸 美国 纽约2, server: gy.666666222.shop, port: 20016, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
+  - {name: 🇮🇩 印尼, server: q34.ludou.us.kg, port: 80, type: vless, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q34.ludou.us.kg}}, udp: true}
+  - {name: 🇯🇵 日本2 | 1x-1B, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: 38931361-4d7b-4210-9325-ac4c0dabac6f, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiuluuiuqqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
+  - {name: 🇸🇬 新加坡04, server: q30.ludou.us.kg, port: 80, type: vless, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q30.ludou.us.kg}}, udp: true}
+  - {name: 🇯🇵 东京2UDP, server: hy204.ludounow.tech, port: 20008, type: hysteria2, password: 4560d340-03a4-4784-ae0c-90be6a27073d, auth: 4560d340-03a4-4784-ae0c-90be6a27073d, sni: hy204.ludounow.tech, skip-cert-verify: true, udp: true}
+  - {name: 新德里, server: q33.ludou.us.kg, port: 80, type: vless, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q33.ludou.us.kg}}, udp: true}
+  - {name: 🇯🇵 东京01, server: q25.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jpaaddda5dd.ludou.us.kg}}, udp: true}
+  - {name: 🇹🇼 台湾-1A, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: f0eb6558-394c-4f21-92ef-d6dc1341aab7, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: tw.colacloud.free.hr}}, udp: true}
+  - {name: 大版02, server: q24.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cmi-64475841.ludounow.tech}}, udp: true}
+  - {name: 🇸🇬 新加坡02, server: q32.ludou.us.kg, port: 80, type: vless, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, tls: false, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: q32.ludou.us.kg}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: cce5ae28-ec80-4d30-b932-4811518f3bd1, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇸🇬 新加坡05, server: q5.ludou.us.kg, port: 8080, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /vccmn, headers: {Host: 66666.ludou.us.kg}}, udp: true}
+  - {name: 🇺🇸 美国WA, server: q17.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: uswa.ludou.us.kg}}, udp: true}
+  - {name: 大版01, server: q23.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cmi-665441.ludounow.tech}}, udp: true}
+  - {name: 🇹🇼 台湾 1, server: gy.666666222.shop, port: 20032, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
+  - {name: 🇸🇬 新加坡07, server: q26.ludou.us.kg, port: 80, type: vmess, uuid: 4560d340-03a4-4784-ae0c-90be6a27073d, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: sg.ludou.us.kg}}, udp: true}
+  - {name: 🇺🇸 美国03, server: gd.xueyejiasu.com, port: 42414, type: ss, cipher: chacha20-ietf-poly1305, password: 024704ed-b60f-461f-930d-2fc7ea6c56ad, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸 美国01
-      - 🇹🇼 台湾 1
-      - 🇯🇵 东京2UDP
-      - 🇺🇸 美国FL
-      - 🇺🇸 美西CF
-      - 新德里
-      - 🇺🇸 美国LL
-      - 🇮🇩 印尼
-      - 🇺🇸 美国GA
-      - 德鸡
-      - 🇺🇸 美国02
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇸🇬 新加坡 | 1x-1B
-      - 🇭🇰 香港03
-      - 🇯🇵 东京02
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇸🇬 新加坡02
-      - 大版01
-      - 🇹🇼 台湾
-      - 🇺🇸 美国CA
-      - 墨尔本
-      - 大版02
-      - 🇫🇷 法国
-      - 🇵🇱 波兰
-      - 🇺🇸 美国 纽约01
-      - 🇸🇬 新加坡07
-      - 🇯🇵 日本04
       - 🇹🇼 台湾01
-      - 🇸🇬 新加坡04
-      - 🇬🇧 伦敦
-      - 🇺🇸 美国WA
       - 🇸🇬 新加坡03
+      - 🇯🇵 日本04
+      - 🇭🇰 香港01
+      - 🇺🇸 美国LL
+      - 🇺🇸 美国01
+      - 🇹🇼 台湾-1B
+      - 🇺🇸 美国FL
       - 🇺🇸 纽约NY
-      - 🇺🇸 美国 纽约2
       - 🇭🇰 香港02
       - 🇯🇵 日本03
-      - 🇯🇵 东京01
-      - 🇺🇸 美国03
-      - 🇸🇬 新加坡05
+      - 🇺🇸 美国GA
+      - 墨尔本-1A
+      - 🇺🇸 美国 纽约01
+      - 墨尔本-1B
       - 🇺🇸 美国LA
-      - 🇭🇰 香港01
-      - 🇯🇵 日本01
+      - 🇭🇰 香港03
       - 🇯🇵 日本02
+      - 🇬🇧 伦敦
+      - 🇺🇸 美国CA
+      - 🇯🇵 日本01
+      - 🇯🇵 东京02
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇺🇸 美西CF
+      - 🇺🇸 美国02
+      - 🇺🇸 美国 纽约2
+      - 🇮🇩 印尼
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇸🇬 新加坡04
+      - 🇯🇵 东京2UDP
+      - 新德里
+      - 🇯🇵 东京01
+      - 🇹🇼 台湾-1A
+      - 大版02
+      - 🇸🇬 新加坡02
+      - 🇰🇷 韩国-三网优化2
+      - 🇸🇬 新加坡05
+      - 🇺🇸 美国WA
+      - 大版01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国03
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇺🇸 美国01
-      - 🇹🇼 台湾 1
-      - 🇯🇵 东京2UDP
-      - 🇺🇸 美国FL
-      - 🇺🇸 美西CF
-      - 新德里
-      - 🇺🇸 美国LL
-      - 🇮🇩 印尼
-      - 🇺🇸 美国GA
-      - 德鸡
-      - 🇺🇸 美国02
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇸🇬 新加坡 | 1x-1B
-      - 🇭🇰 香港03
-      - 🇯🇵 东京02
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇸🇬 新加坡02
-      - 大版01
-      - 🇹🇼 台湾
-      - 🇺🇸 美国CA
-      - 墨尔本
-      - 大版02
-      - 🇫🇷 法国
-      - 🇵🇱 波兰
-      - 🇺🇸 美国 纽约01
-      - 🇸🇬 新加坡07
-      - 🇯🇵 日本04
       - 🇹🇼 台湾01
-      - 🇸🇬 新加坡04
-      - 🇬🇧 伦敦
-      - 🇺🇸 美国WA
       - 🇸🇬 新加坡03
+      - 🇯🇵 日本04
+      - 🇭🇰 香港01
+      - 🇺🇸 美国LL
+      - 🇺🇸 美国01
+      - 🇹🇼 台湾-1B
+      - 🇺🇸 美国FL
       - 🇺🇸 纽约NY
-      - 🇺🇸 美国 纽约2
       - 🇭🇰 香港02
       - 🇯🇵 日本03
-      - 🇯🇵 东京01
-      - 🇺🇸 美国03
-      - 🇸🇬 新加坡05
+      - 🇺🇸 美国GA
+      - 墨尔本-1A
+      - 🇺🇸 美国 纽约01
+      - 墨尔本-1B
       - 🇺🇸 美国LA
-      - 🇭🇰 香港01
-      - 🇯🇵 日本01
+      - 🇭🇰 香港03
       - 🇯🇵 日本02
+      - 🇬🇧 伦敦
+      - 🇺🇸 美国CA
+      - 🇯🇵 日本01
+      - 🇯🇵 东京02
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇺🇸 美西CF
+      - 🇺🇸 美国02
+      - 🇺🇸 美国 纽约2
+      - 🇮🇩 印尼
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇸🇬 新加坡04
+      - 🇯🇵 东京2UDP
+      - 新德里
+      - 🇯🇵 东京01
+      - 🇹🇼 台湾-1A
+      - 大版02
+      - 🇸🇬 新加坡02
+      - 🇰🇷 韩国-三网优化2
+      - 🇸🇬 新加坡05
+      - 🇺🇸 美国WA
+      - 大版01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国03
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸 美国01
-      - 🇹🇼 台湾 1
-      - 🇯🇵 东京2UDP
-      - 🇺🇸 美国FL
-      - 🇺🇸 美西CF
-      - 新德里
-      - 🇺🇸 美国LL
-      - 🇮🇩 印尼
-      - 🇺🇸 美国GA
-      - 德鸡
-      - 🇺🇸 美国02
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇸🇬 新加坡 | 1x-1B
-      - 🇭🇰 香港03
-      - 🇯🇵 东京02
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇸🇬 新加坡02
-      - 大版01
-      - 🇹🇼 台湾
-      - 🇺🇸 美国CA
-      - 墨尔本
-      - 大版02
-      - 🇫🇷 法国
-      - 🇵🇱 波兰
-      - 🇺🇸 美国 纽约01
-      - 🇸🇬 新加坡07
-      - 🇯🇵 日本04
       - 🇹🇼 台湾01
-      - 🇸🇬 新加坡04
-      - 🇬🇧 伦敦
-      - 🇺🇸 美国WA
       - 🇸🇬 新加坡03
+      - 🇯🇵 日本04
+      - 🇭🇰 香港01
+      - 🇺🇸 美国LL
+      - 🇺🇸 美国01
+      - 🇹🇼 台湾-1B
+      - 🇺🇸 美国FL
       - 🇺🇸 纽约NY
-      - 🇺🇸 美国 纽约2
       - 🇭🇰 香港02
       - 🇯🇵 日本03
-      - 🇯🇵 东京01
-      - 🇺🇸 美国03
-      - 🇸🇬 新加坡05
+      - 🇺🇸 美国GA
+      - 墨尔本-1A
+      - 🇺🇸 美国 纽约01
+      - 墨尔本-1B
       - 🇺🇸 美国LA
-      - 🇭🇰 香港01
-      - 🇯🇵 日本01
+      - 🇭🇰 香港03
       - 🇯🇵 日本02
+      - 🇬🇧 伦敦
+      - 🇺🇸 美国CA
+      - 🇯🇵 日本01
+      - 🇯🇵 东京02
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇺🇸 美西CF
+      - 🇺🇸 美国02
+      - 🇺🇸 美国 纽约2
+      - 🇮🇩 印尼
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇸🇬 新加坡04
+      - 🇯🇵 东京2UDP
+      - 新德里
+      - 🇯🇵 东京01
+      - 🇹🇼 台湾-1A
+      - 大版02
+      - 🇸🇬 新加坡02
+      - 🇰🇷 韩国-三网优化2
+      - 🇸🇬 新加坡05
+      - 🇺🇸 美国WA
+      - 大版01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国03
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -216,209 +208,202 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸 美国01
-      - 🇹🇼 台湾 1
-      - 🇯🇵 东京2UDP
-      - 🇺🇸 美国FL
-      - 🇺🇸 美西CF
-      - 新德里
-      - 🇺🇸 美国LL
-      - 🇮🇩 印尼
-      - 🇺🇸 美国GA
-      - 德鸡
-      - 🇺🇸 美国02
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇸🇬 新加坡 | 1x-1B
-      - 🇭🇰 香港03
-      - 🇯🇵 东京02
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇸🇬 新加坡02
-      - 大版01
-      - 🇹🇼 台湾
-      - 🇺🇸 美国CA
-      - 墨尔本
-      - 大版02
-      - 🇫🇷 法国
-      - 🇵🇱 波兰
-      - 🇺🇸 美国 纽约01
-      - 🇸🇬 新加坡07
-      - 🇯🇵 日本04
       - 🇹🇼 台湾01
-      - 🇸🇬 新加坡04
-      - 🇬🇧 伦敦
-      - 🇺🇸 美国WA
       - 🇸🇬 新加坡03
+      - 🇯🇵 日本04
+      - 🇭🇰 香港01
+      - 🇺🇸 美国LL
+      - 🇺🇸 美国01
+      - 🇹🇼 台湾-1B
+      - 🇺🇸 美国FL
       - 🇺🇸 纽约NY
-      - 🇺🇸 美国 纽约2
       - 🇭🇰 香港02
       - 🇯🇵 日本03
-      - 🇯🇵 东京01
-      - 🇺🇸 美国03
-      - 🇸🇬 新加坡05
+      - 🇺🇸 美国GA
+      - 墨尔本-1A
+      - 🇺🇸 美国 纽约01
+      - 墨尔本-1B
       - 🇺🇸 美国LA
-      - 🇭🇰 香港01
-      - 🇯🇵 日本01
+      - 🇭🇰 香港03
       - 🇯🇵 日本02
+      - 🇬🇧 伦敦
+      - 🇺🇸 美国CA
+      - 🇯🇵 日本01
+      - 🇯🇵 东京02
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇺🇸 美西CF
+      - 🇺🇸 美国02
+      - 🇺🇸 美国 纽约2
+      - 🇮🇩 印尼
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇸🇬 新加坡04
+      - 🇯🇵 东京2UDP
+      - 新德里
+      - 🇯🇵 东京01
+      - 🇹🇼 台湾-1A
+      - 大版02
+      - 🇸🇬 新加坡02
+      - 🇰🇷 韩国-三网优化2
+      - 🇸🇬 新加坡05
+      - 🇺🇸 美国WA
+      - 大版01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国03
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇹🇼 台湾 1
-      - 🇭🇰 香港03
-      - 🇹🇼 台湾
       - 🇹🇼 台湾01
-      - 🇭🇰 香港02
       - 🇭🇰 香港01
+      - 🇹🇼 台湾-1B
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇹🇼 台湾-1A
+      - 🇹🇼 台湾 1
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇺🇸 美国01
-      - 🇹🇼 台湾 1
-      - 🇯🇵 东京2UDP
-      - 🇺🇸 美国FL
-      - 🇺🇸 美西CF
-      - 新德里
-      - 🇺🇸 美国LL
-      - 🇮🇩 印尼
-      - 🇺🇸 美国GA
-      - 德鸡
-      - 🇺🇸 美国02
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇸🇬 新加坡 | 1x-1B
-      - 🇭🇰 香港03
-      - 🇯🇵 东京02
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇸🇬 新加坡02
-      - 大版01
-      - 🇹🇼 台湾
-      - 🇺🇸 美国CA
-      - 墨尔本
-      - 大版02
-      - 🇫🇷 法国
-      - 🇵🇱 波兰
-      - 🇺🇸 美国 纽约01
-      - 🇸🇬 新加坡07
-      - 🇯🇵 日本04
       - 🇹🇼 台湾01
-      - 🇸🇬 新加坡04
-      - 🇬🇧 伦敦
-      - 🇺🇸 美国WA
       - 🇸🇬 新加坡03
+      - 🇯🇵 日本04
+      - 🇭🇰 香港01
+      - 🇺🇸 美国LL
+      - 🇺🇸 美国01
+      - 🇹🇼 台湾-1B
+      - 🇺🇸 美国FL
       - 🇺🇸 纽约NY
-      - 🇺🇸 美国 纽约2
       - 🇭🇰 香港02
       - 🇯🇵 日本03
-      - 🇯🇵 东京01
-      - 🇺🇸 美国03
-      - 🇸🇬 新加坡05
+      - 🇺🇸 美国GA
+      - 墨尔本-1A
+      - 🇺🇸 美国 纽约01
+      - 墨尔本-1B
       - 🇺🇸 美国LA
-      - 🇭🇰 香港01
-      - 🇯🇵 日本01
+      - 🇭🇰 香港03
       - 🇯🇵 日本02
+      - 🇬🇧 伦敦
+      - 🇺🇸 美国CA
+      - 🇯🇵 日本01
+      - 🇯🇵 东京02
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇺🇸 美西CF
+      - 🇺🇸 美国02
+      - 🇺🇸 美国 纽约2
+      - 🇮🇩 印尼
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇸🇬 新加坡04
+      - 🇯🇵 东京2UDP
+      - 新德里
+      - 🇯🇵 东京01
+      - 🇹🇼 台湾-1A
+      - 大版02
+      - 🇸🇬 新加坡02
+      - 🇰🇷 韩国-三网优化2
+      - 🇸🇬 新加坡05
+      - 🇺🇸 美国WA
+      - 大版01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国03
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇺🇸 美国01
-      - 🇹🇼 台湾 1
-      - 🇯🇵 东京2UDP
-      - 🇺🇸 美国FL
-      - 🇺🇸 美西CF
-      - 新德里
-      - 🇺🇸 美国LL
-      - 🇮🇩 印尼
-      - 🇺🇸 美国GA
-      - 德鸡
-      - 🇺🇸 美国02
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇸🇬 新加坡 | 1x-1B
-      - 🇭🇰 香港03
-      - 🇯🇵 东京02
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇸🇬 新加坡02
-      - 大版01
-      - 🇹🇼 台湾
-      - 🇺🇸 美国CA
-      - 墨尔本
-      - 大版02
-      - 🇫🇷 法国
-      - 🇵🇱 波兰
-      - 🇺🇸 美国 纽约01
-      - 🇸🇬 新加坡07
-      - 🇯🇵 日本04
       - 🇹🇼 台湾01
-      - 🇸🇬 新加坡04
-      - 🇬🇧 伦敦
-      - 🇺🇸 美国WA
       - 🇸🇬 新加坡03
+      - 🇯🇵 日本04
+      - 🇭🇰 香港01
+      - 🇺🇸 美国LL
+      - 🇺🇸 美国01
+      - 🇹🇼 台湾-1B
+      - 🇺🇸 美国FL
       - 🇺🇸 纽约NY
-      - 🇺🇸 美国 纽约2
       - 🇭🇰 香港02
       - 🇯🇵 日本03
-      - 🇯🇵 东京01
-      - 🇺🇸 美国03
-      - 🇸🇬 新加坡05
+      - 🇺🇸 美国GA
+      - 墨尔本-1A
+      - 🇺🇸 美国 纽约01
+      - 墨尔本-1B
       - 🇺🇸 美国LA
-      - 🇭🇰 香港01
-      - 🇯🇵 日本01
+      - 🇭🇰 香港03
       - 🇯🇵 日本02
+      - 🇬🇧 伦敦
+      - 🇺🇸 美国CA
+      - 🇯🇵 日本01
+      - 🇯🇵 东京02
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇺🇸 美西CF
+      - 🇺🇸 美国02
+      - 🇺🇸 美国 纽约2
+      - 🇮🇩 印尼
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇸🇬 新加坡04
+      - 🇯🇵 东京2UDP
+      - 新德里
+      - 🇯🇵 东京01
+      - 🇹🇼 台湾-1A
+      - 大版02
+      - 🇸🇬 新加坡02
+      - 🇰🇷 韩国-三网优化2
+      - 🇸🇬 新加坡05
+      - 🇺🇸 美国WA
+      - 大版01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国03
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸 美国01
-      - 🇹🇼 台湾 1
-      - 🇯🇵 东京2UDP
-      - 🇺🇸 美国FL
-      - 🇺🇸 美西CF
-      - 新德里
-      - 🇺🇸 美国LL
-      - 🇮🇩 印尼
-      - 🇺🇸 美国GA
-      - 德鸡
-      - 🇺🇸 美国02
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇸🇬 新加坡 | 1x-1B
-      - 🇭🇰 香港03
-      - 🇯🇵 东京02
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇸🇬 新加坡02
-      - 大版01
-      - 🇹🇼 台湾
-      - 🇺🇸 美国CA
-      - 墨尔本
-      - 大版02
-      - 🇫🇷 法国
-      - 🇵🇱 波兰
-      - 🇺🇸 美国 纽约01
-      - 🇸🇬 新加坡07
-      - 🇯🇵 日本04
       - 🇹🇼 台湾01
-      - 🇸🇬 新加坡04
-      - 🇬🇧 伦敦
-      - 🇺🇸 美国WA
       - 🇸🇬 新加坡03
+      - 🇯🇵 日本04
+      - 🇭🇰 香港01
+      - 🇺🇸 美国LL
+      - 🇺🇸 美国01
+      - 🇹🇼 台湾-1B
+      - 🇺🇸 美国FL
       - 🇺🇸 纽约NY
-      - 🇺🇸 美国 纽约2
       - 🇭🇰 香港02
       - 🇯🇵 日本03
-      - 🇯🇵 东京01
-      - 🇺🇸 美国03
-      - 🇸🇬 新加坡05
+      - 🇺🇸 美国GA
+      - 墨尔本-1A
+      - 🇺🇸 美国 纽约01
+      - 墨尔本-1B
       - 🇺🇸 美国LA
-      - 🇭🇰 香港01
-      - 🇯🇵 日本01
+      - 🇭🇰 香港03
       - 🇯🇵 日本02
+      - 🇬🇧 伦敦
+      - 🇺🇸 美国CA
+      - 🇯🇵 日本01
+      - 🇯🇵 东京02
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇺🇸 美西CF
+      - 🇺🇸 美国02
+      - 🇺🇸 美国 纽约2
+      - 🇮🇩 印尼
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇸🇬 新加坡04
+      - 🇯🇵 东京2UDP
+      - 新德里
+      - 🇯🇵 东京01
+      - 🇹🇼 台湾-1A
+      - 大版02
+      - 🇸🇬 新加坡02
+      - 🇰🇷 韩国-三网优化2
+      - 🇸🇬 新加坡05
+      - 🇺🇸 美国WA
+      - 大版01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国03
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -434,50 +419,48 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸 美国01
-      - 🇹🇼 台湾 1
-      - 🇯🇵 东京2UDP
-      - 🇺🇸 美国FL
-      - 🇺🇸 美西CF
-      - 新德里
-      - 🇺🇸 美国LL
-      - 🇮🇩 印尼
-      - 🇺🇸 美国GA
-      - 德鸡
-      - 🇺🇸 美国02
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇸🇬 新加坡 | 1x-1B
-      - 🇭🇰 香港03
-      - 🇯🇵 东京02
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇸🇬 新加坡02
-      - 大版01
-      - 🇹🇼 台湾
-      - 🇺🇸 美国CA
-      - 墨尔本
-      - 大版02
-      - 🇫🇷 法国
-      - 🇵🇱 波兰
-      - 🇺🇸 美国 纽约01
-      - 🇸🇬 新加坡07
-      - 🇯🇵 日本04
       - 🇹🇼 台湾01
-      - 🇸🇬 新加坡04
-      - 🇬🇧 伦敦
-      - 🇺🇸 美国WA
       - 🇸🇬 新加坡03
+      - 🇯🇵 日本04
+      - 🇭🇰 香港01
+      - 🇺🇸 美国LL
+      - 🇺🇸 美国01
+      - 🇹🇼 台湾-1B
+      - 🇺🇸 美国FL
       - 🇺🇸 纽约NY
-      - 🇺🇸 美国 纽约2
       - 🇭🇰 香港02
       - 🇯🇵 日本03
-      - 🇯🇵 东京01
-      - 🇺🇸 美国03
-      - 🇸🇬 新加坡05
+      - 🇺🇸 美国GA
+      - 墨尔本-1A
+      - 🇺🇸 美国 纽约01
+      - 墨尔本-1B
       - 🇺🇸 美国LA
-      - 🇭🇰 香港01
-      - 🇯🇵 日本01
+      - 🇭🇰 香港03
       - 🇯🇵 日本02
+      - 🇬🇧 伦敦
+      - 🇺🇸 美国CA
+      - 🇯🇵 日本01
+      - 🇯🇵 东京02
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇺🇸 美西CF
+      - 🇺🇸 美国02
+      - 🇺🇸 美国 纽约2
+      - 🇮🇩 印尼
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇸🇬 新加坡04
+      - 🇯🇵 东京2UDP
+      - 新德里
+      - 🇯🇵 东京01
+      - 🇹🇼 台湾-1A
+      - 大版02
+      - 🇸🇬 新加坡02
+      - 🇰🇷 韩国-三网优化2
+      - 🇸🇬 新加坡05
+      - 🇺🇸 美国WA
+      - 大版01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 新加坡07
+      - 🇺🇸 美国03
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve

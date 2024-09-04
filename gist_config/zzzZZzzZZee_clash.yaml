@@ -5,107 +5,87 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 2-1B, server: gdcub.yunnode.win, port: 20829, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 🇹🇼 IOVEVPN台湾中转-2, server: gdcub.yunnode.win, port: 51167, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: ddf8851b-9d74-4d37-ac3c-b3f1525e00fb, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3e13898e-1e9e-4a75-b3a1-5823f19e1bca, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 2-1A, server: gdcub.yunnode.win, port: 32193, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 🇸🇬 IOVEVPN新加坡中转-2, server: gdcub.yunnode.win, port: 14121, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 墨尔本, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 68a8cb12-15ce-45c9-8fa0-497547cc8769, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 3中转-2, server: gdcub.yunnode.win, port: 52688, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 🇸🇬 新加坡 | 1x-1A, server: sg1.1vpn.sbs, port: 80, type: vmess, uuid: 73d03e39-0476-400c-9c93-821b0c008c93, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kuurtreeh, headers: {Host: sg1.1vpn.sbs}}, udp: true}
-  - {name: 🇹🇼 台湾, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 68a8cb12-15ce-45c9-8fa0-497547cc8769, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: tw.colacloud.free.hr}}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3ea06745-dde5-49bf-998f-06b919893159, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 日本2 | 1x-1B, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: 99673b89-38e7-466e-8f04-a48c79688356, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiuluuiuqqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
-  - {name: 🇯🇵 日本2 | 1x-1A, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: 73d03e39-0476-400c-9c93-821b0c008c93, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiuluuiuqqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
-  - {name: 🇵🇱 波兰, server: blang.kcapsys.com, port: 80, type: vmess, uuid: 66e184af-6e2c-414d-a740-43ff4160f964, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: blang.kcapsys.com}}, udp: true}
-  - {name: 🇺🇸 美国V2直连, server: v2.frtm99d.cyou, port: 2083, type: vmess, uuid: 367f56c7-eb03-4d03-a946-6088052b7094, alterId: 0, cipher: auto, tls: true, servername: v2.frtm99d.cyou, network: ws, ws-opts: {path: /, headers: {Host: v2.frtm99d.cyou}}, udp: true}
-  - {name: 2中转-2, server: gdcub.yunnode.win, port: 27047, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
-  - {name: 🇫🇷 法国, server: faguoipv6.kcapsys.com, port: 80, type: vmess, uuid: 66e184af-6e2c-414d-a740-43ff4160f964, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: faguoipv6.kcapsys.com}}, udp: true}
-  - {name: 🇸🇬 新加坡 | 1x-1B, server: sg1.1vpn.sbs, port: 80, type: vmess, uuid: 99673b89-38e7-466e-8f04-a48c79688356, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kuurtreeh, headers: {Host: sg1.1vpn.sbs}}, udp: true}
-  - {name: 德鸡, server: deji.kcapsys.com, port: 80, type: vmess, uuid: 66e184af-6e2c-414d-a740-43ff4160f964, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: deji.kcapsys.com}}, udp: true}
-  - {name: 🇯🇵 IOVEVPN日本中转-2, server: gdcub.yunnode.win, port: 40859, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇯🇵 日本2 | 1x-1B, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: 73d03e39-0476-400c-9c93-821b0c008c93, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiuluuiuqqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
   - {name: 🇺🇸 IOVEVPN美国中转-2, server: gdcub.yunnode.win, port: 36455, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3e13898e-1e9e-4a75-b3a1-5823f19e1bca, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 3中转-2, server: gdcub.yunnode.win, port: 52688, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇹🇼 IOVEVPN台湾中转-2, server: gdcub.yunnode.win, port: 51167, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 2-1A, server: gdcub.yunnode.win, port: 32193, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇯🇵 日本2 | 1x-1A, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: 99673b89-38e7-466e-8f04-a48c79688356, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiuluuiuqqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
+  - {name: 🇯🇵 IOVEVPN日本中转-2, server: gdcub.yunnode.win, port: 40859, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇸🇬 IOVEVPN新加坡中转-2, server: gdcub.yunnode.win, port: 14121, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 2-1B, server: gdcub.yunnode.win, port: 20829, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: ddf8851b-9d74-4d37-ac3c-b3f1525e00fb, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇹🇼 台湾, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 68a8cb12-15ce-45c9-8fa0-497547cc8769, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: tw.colacloud.free.hr}}, udp: true}
+  - {name: 墨尔本, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 68a8cb12-15ce-45c9-8fa0-497547cc8769, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 🇺🇸 美国V2直连, server: v2.frtm99d.cyou, port: 2083, type: vmess, uuid: 367f56c7-eb03-4d03-a946-6088052b7094, alterId: 0, cipher: auto, tls: true, servername: v2.frtm99d.cyou, network: ws, ws-opts: {path: /, headers: {Host: v2.frtm99d.cyou}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3ea06745-dde5-49bf-998f-06b919893159, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 2中转-2, server: gdcub.yunnode.win, port: 27047, type: ss, cipher: chacha20-ietf-poly1305, password: 367f56c7-eb03-4d03-a946-6088052b7094, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 2-1B
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 墨尔本
-      - 3中转-2
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇹🇼 台湾
-      - 🇰🇷 韩国-三网优化2-1B
       - 🇯🇵 日本2 | 1x-1B
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇵🇱 波兰
-      - 🇺🇸 美国V2直连
-      - 2中转-2
-      - 🇫🇷 法国
-      - 🇸🇬 新加坡 | 1x-1B
-      - 德鸡
-      - 🇯🇵 IOVEVPN日本中转-2
       - 🇺🇸 IOVEVPN美国中转-2
+      - 🇰🇷 韩国-三网优化2-1B
+      - 3中转-2
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 2-1A
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 2-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇹🇼 台湾
+      - 墨尔本
+      - 🇺🇸 美国V2直连
+      - 🇰🇷 韩国-三网优化2-1C
+      - 2中转-2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 2-1B
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 墨尔本
-      - 3中转-2
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇹🇼 台湾
-      - 🇰🇷 韩国-三网优化2-1B
       - 🇯🇵 日本2 | 1x-1B
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇵🇱 波兰
-      - 🇺🇸 美国V2直连
-      - 2中转-2
-      - 🇫🇷 法国
-      - 🇸🇬 新加坡 | 1x-1B
-      - 德鸡
-      - 🇯🇵 IOVEVPN日本中转-2
       - 🇺🇸 IOVEVPN美国中转-2
+      - 🇰🇷 韩国-三网优化2-1B
+      - 3中转-2
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 2-1A
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 2-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇹🇼 台湾
+      - 墨尔本
+      - 🇺🇸 美国V2直连
+      - 🇰🇷 韩国-三网优化2-1C
+      - 2中转-2
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 2-1B
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 墨尔本
-      - 3中转-2
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇹🇼 台湾
-      - 🇰🇷 韩国-三网优化2-1B
       - 🇯🇵 日本2 | 1x-1B
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇵🇱 波兰
-      - 🇺🇸 美国V2直连
-      - 2中转-2
-      - 🇫🇷 法国
-      - 🇸🇬 新加坡 | 1x-1B
-      - 德鸡
-      - 🇯🇵 IOVEVPN日本中转-2
       - 🇺🇸 IOVEVPN美国中转-2
+      - 🇰🇷 韩国-三网优化2-1B
+      - 3中转-2
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 2-1A
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 2-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇹🇼 台湾
+      - 墨尔本
+      - 🇺🇸 美国V2直连
+      - 🇰🇷 韩国-三网优化2-1C
+      - 2中转-2
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -124,27 +104,22 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 2-1B
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 墨尔本
-      - 3中转-2
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇹🇼 台湾
-      - 🇰🇷 韩国-三网优化2-1B
       - 🇯🇵 日本2 | 1x-1B
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇵🇱 波兰
-      - 🇺🇸 美国V2直连
-      - 2中转-2
-      - 🇫🇷 法国
-      - 🇸🇬 新加坡 | 1x-1B
-      - 德鸡
-      - 🇯🇵 IOVEVPN日本中转-2
       - 🇺🇸 IOVEVPN美国中转-2
+      - 🇰🇷 韩国-三网优化2-1B
+      - 3中转-2
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 2-1A
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 2-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇹🇼 台湾
+      - 墨尔本
+      - 🇺🇸 美国V2直连
+      - 🇰🇷 韩国-三网优化2-1C
+      - 2中转-2
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -157,80 +132,65 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 2-1B
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 墨尔本
-      - 3中转-2
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇹🇼 台湾
-      - 🇰🇷 韩国-三网优化2-1B
       - 🇯🇵 日本2 | 1x-1B
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇵🇱 波兰
-      - 🇺🇸 美国V2直连
-      - 2中转-2
-      - 🇫🇷 法国
-      - 🇸🇬 新加坡 | 1x-1B
-      - 德鸡
-      - 🇯🇵 IOVEVPN日本中转-2
       - 🇺🇸 IOVEVPN美国中转-2
+      - 🇰🇷 韩国-三网优化2-1B
+      - 3中转-2
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 2-1A
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 2-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇹🇼 台湾
+      - 墨尔本
+      - 🇺🇸 美国V2直连
+      - 🇰🇷 韩国-三网优化2-1C
+      - 2中转-2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 2-1B
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 墨尔本
-      - 3中转-2
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇹🇼 台湾
-      - 🇰🇷 韩国-三网优化2-1B
       - 🇯🇵 日本2 | 1x-1B
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇵🇱 波兰
-      - 🇺🇸 美国V2直连
-      - 2中转-2
-      - 🇫🇷 法国
-      - 🇸🇬 新加坡 | 1x-1B
-      - 德鸡
-      - 🇯🇵 IOVEVPN日本中转-2
       - 🇺🇸 IOVEVPN美国中转-2
+      - 🇰🇷 韩国-三网优化2-1B
+      - 3中转-2
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 2-1A
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 2-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇹🇼 台湾
+      - 墨尔本
+      - 🇺🇸 美国V2直连
+      - 🇰🇷 韩国-三网优化2-1C
+      - 2中转-2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 2-1B
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 墨尔本
-      - 3中转-2
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇹🇼 台湾
-      - 🇰🇷 韩国-三网优化2-1B
       - 🇯🇵 日本2 | 1x-1B
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇵🇱 波兰
-      - 🇺🇸 美国V2直连
-      - 2中转-2
-      - 🇫🇷 法国
-      - 🇸🇬 新加坡 | 1x-1B
-      - 德鸡
-      - 🇯🇵 IOVEVPN日本中转-2
       - 🇺🇸 IOVEVPN美国中转-2
+      - 🇰🇷 韩国-三网优化2-1B
+      - 3中转-2
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 2-1A
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 2-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇹🇼 台湾
+      - 墨尔本
+      - 🇺🇸 美国V2直连
+      - 🇰🇷 韩国-三网优化2-1C
+      - 2中转-2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -246,27 +206,22 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 2-1B
-      - 🇹🇼 IOVEVPN台湾中转-2
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 2-1A
-      - 🇸🇬 IOVEVPN新加坡中转-2
-      - 墨尔本
-      - 3中转-2
-      - 🇸🇬 新加坡 | 1x-1A
-      - 🇹🇼 台湾
-      - 🇰🇷 韩国-三网优化2-1B
       - 🇯🇵 日本2 | 1x-1B
-      - 🇯🇵 日本2 | 1x-1A
-      - 🇵🇱 波兰
-      - 🇺🇸 美国V2直连
-      - 2中转-2
-      - 🇫🇷 法国
-      - 🇸🇬 新加坡 | 1x-1B
-      - 德鸡
-      - 🇯🇵 IOVEVPN日本中转-2
       - 🇺🇸 IOVEVPN美国中转-2
+      - 🇰🇷 韩国-三网优化2-1B
+      - 3中转-2
+      - 🇹🇼 IOVEVPN台湾中转-2
+      - 2-1A
+      - 🇯🇵 日本2 | 1x-1A
+      - 🇯🇵 IOVEVPN日本中转-2
+      - 🇸🇬 IOVEVPN新加坡中转-2
+      - 2-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇹🇼 台湾
+      - 墨尔本
+      - 🇺🇸 美国V2直连
+      - 🇰🇷 韩国-三网优化2-1C
+      - 2中转-2
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
