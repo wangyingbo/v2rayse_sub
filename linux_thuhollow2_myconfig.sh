@@ -37,7 +37,7 @@ fi
 #     git clone --depth=1 --filter=blob:none "$repo_url"
 # fi
 
-git clone  "$repo_url"
+git clone --single-branch --branch main "$repo_url"
 
 
 if [[ -d $target_folder ]]; then
