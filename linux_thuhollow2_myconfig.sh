@@ -9,7 +9,7 @@ target_folder="myconfig"
 # 检测操作系统类型
 yb_device=$(./getos.sh)
 
-
+echo "\n"
 if [[ $yb_device == 'macOS' ]]; then
     # 在 macOS 上执行的命令或操作
     echo "on device mac"
