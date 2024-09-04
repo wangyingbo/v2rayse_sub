@@ -1,0 +1,512 @@
+port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+unified-delay: true
+global-client-fingerprint: chrome
+external-controller: :9090
+
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip # redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+  - tls://1.1.1.1
+  - tls://8.8.8.8
+  - 1.1.1.1
+  - 8.8.8.8
+  - https://cloudflare-dns.com/dns-query
+  - https://dns.google/dns-query
+  default-nameserver:
+  - tls://1.12.12.12
+  - 119.29.29.29
+  - 223.5.5.5
+  - 223.6.6.6
+  
+  fallback:
+    - tls://1.1.1.1:853
+    - tls://8.8.8.8:853
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - 'localhost.ptlogin2.qq.com'
+    - 'dns.msftncsi.com'
+    - 'www.msftncsi.com'
+    - 'www.msftconnecttest.com'
+
+proxies:
+
+  - name: ⏬️ WARP
+    type: wireguard
+    server: 162.159.192.1
+    port: 2408
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:b400:91:eadb:887f
+    private-key: +Cgu25E1zo9PkW5fC299zgbGVGKJamWgF6/iqQdoUW0=
+    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+    v4: 172.16.0.2
+    v6: 2606:4700:110:805e:1441:a533:975b:8a39
+    udp: true
+    ip-version: ipv6-prefer
+    remote-dns-resolve: true  
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    dialer-proxy: "WARP前置节点"
+
+###开始建立锚点
+
+# 自动选择
+fly: &fly {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
+
+# 手动切换
+all: &all {type: select, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
+
+# 精选节点
+best: &best {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 8, 订阅 12]}
+
+# 解锁 AI
+ai: &ai {type: url-test, url: "http://www.google.com/generate_204", interval: 120, tolerance: 50, lazy: true, use: [订阅 1, 订阅 7], filter: "(?!.*(hong kong|hk|香港|香|港|hk😈))(?i)(us|unitedstates|united states|usa|jp|sg|zgo|tw|sjc|中转 US|中转 TW|中转 JP|GPT|解锁|台湾|日本|新加坡|美国)"}
+
+# 解锁节点
+node: &node {type: url-test, url: "http://www.google.com/generate_204", interval: 120, tolerance: 50, lazy: true, use: [订阅 7, 订阅 9]}
+
+# 备用应急
+backup: &backup {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 3, 订阅 11, 订阅 12]}
+
+# 突破限制
+BTB: &BTB {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 3, 订阅 2]}
+
+
+# 订阅更新和延迟测试相关
+p: &p {type: http, interval: 21600, health-check: {enable: true, url: "http://www.google.com/generate_204", interval: 1800, filter: "(?i)^(?!unavailable).*$"}}
+
+###结束建立锚点
+
+proxy-providers:  # Meta支持机场通用订阅
+
+  订阅 1: # 项目地址：https://github.com/Pawdroid/Free-servers?tab=readme-ov-file
+    <<: *p
+    url: "https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fproxy.v2gh.com%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2FPawdroid%2FFree-servers%2Fmain%2Fsub&insert=false&config=https%3A%2F%2Fu.lainbo.com%2Fclash-config-mini&list=false&tfo=false&scv=false&fdn=false&sort=false&new_name=true"
+  
+  订阅 2: # 项目地址：https://github.com/Ruk1ng001/freeSub
+    <<: *p
+    url: "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash_top30.yaml"
+  
+  订阅 3: # 项目地址：https://github.com/alex-mikan88/chromego_pure Chromego warp 部分网站无法访问
+    <<: *p
+    url: "https://raw.githubusercontent.com/alex-mikan88/chromego_pure/main/outputs/clash_meta_warp.yaml"
+ 
+  订阅 4: # 项目地址：https://github.com/xrayfree/free-ssr-ss-v2ray-vpn-clash
+    <<: *p
+    url: "https://www.xrayvip.com/free.yaml"
+    
+  订阅 5: # 项目地址：https://github.com/chengaopan/AutoMergePublicNodes 强解锁
+    <<: *p
+    url: "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml"
+    
+  订阅 6: # 项目地址：https://github.com/ermaozi/get_subscribe
+    <<: *p
+    url: "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml"
+    
+  订阅 7: # github free_proxies 项目地址：https://github.com/vxiaov/free_proxies
+    <<: *p
+    url: "https://raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml"
+    
+  订阅 8: # 项目地址：https://github.com/ripaojiedian/freenode 强解锁
+    <<: *p
+    url: "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
+    
+  订阅 9: # Chromego warp
+    <<: *p
+    url: "https://warp.neobirdfly.eu.org"
+
+  订阅 10: # 项目地址：https://github.com/snakem982/proxypool
+    <<: *p
+    url: "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml"
+
+  订阅 11: # 项目地址：https://github.com/peasoft/NoMoreWalls
+    <<: *p
+    url: "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml"
+
+  订阅 12: # 项目地址：https://github.com/MadisonWirtanen/WARP-Clash-with-ZJU-Rules?tab=readme-ov-file
+    <<: *p
+    url: "https://gist.githubusercontent.com/freeorgworld/128c0e7260148f61f8708c9566aed5ab/raw/publicvless.yaml"
+
+
+
+proxy-groups:
+
+# 功能分组
+  
+  - name: 🌏️ 节点选择
+    type: select
+    proxies:
+      - ⬇ 精选节点
+      - 🚀 自动选择
+      - 🔄 手动切换
+      - ⏬️ WARP
+      - 🔀 AI 服务
+      - ⬇ 解锁节点
+      - ⬇ 备用应急
+      - DIRECT
+
+  - name: ⬇ 精选节点
+    <<: *best
+
+  - name: 🚀 自动选择
+    <<: *fly
+    filter: "(?i)^(?!unavailable).*$"
+    
+  - name: 🔄 手动切换
+    <<: *all
+    filter: "(?i)^(?!unavailable).*$"
+
+  - name: 🔀 AI 服务
+    type: select
+    proxies:
+      - ✅ 解锁 AI
+      - ⬇ 解锁节点
+      - 🔄 手动切换
+
+  - name: ⬇ 解锁节点
+    <<: *node 
+
+  - name: ⬇ 备用应急
+    <<: *backup
+    filter: "(?i)^(?!unavailable).*$"
+
+  - name: ✅ 解锁 AI
+    <<: *ai
+
+  - name: WARP前置节点
+    type: select
+    proxies:
+      - ⬇ 精选节点
+      - 🔄 手动切换
+      - "DIRECT"
+
+  - name: ⛔️ 拦截广告
+    type: select
+    proxies:
+      - "DIRECT"
+      - "REJECT"
+
+  - name: ↪️ 漏网之鱼
+    type: select
+    proxies:
+      - 🌏️ 节点选择
+      - DIRECT
+
+# 规则
+rules:
+
+# 解锁AI
+  - RULE-SET,ai,🔀 AI 服务
+  - RULE-SET,Gemini,🔀 AI 服务
+  - RULE-SET,Claude,🔀 AI 服务
+  - DOMAIN,meta.ai,🔀 AI 服务
+  - DOMAIN,claude.ai,🔀 AI 服务
+  - DOMAIN,groq.com,⬇ 精选节点
+  - DOMAIN-SUFFIX,console.anthropic.com,🔀 AI 服务
+  - DOMAIN,anthropic.com,🔀 AI 服务
+  - DOMAIN,claude.ai,🔀 AI 服务
+  - DOMAIN,console.anthropic.com,🔀 AI 服务
+  - DOMAIN,anthropic.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,aistudio.google.com,🔀 AI 服务
+  - DOMAIN,browser-intake-datadoghq.com,🔀 AI 服务
+  - DOMAIN,static.cloudflareinsights.com,🔀 AI 服务
+  - DOMAIN,ai-pro.org,🔀 AI 服务
+  - DOMAIN-SUFFIX,ai.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,algolia.net,🔀 AI 服务
+  - DOMAIN-SUFFIX,api.statsig.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,auth0.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,chatgpt.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,chatgpt.livekit.cloud,🔀 AI 服务
+  - DOMAIN-SUFFIX,client-api.arkoselabs.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,events.statsigapi.net,🔀 AI 服务
+  - DOMAIN-SUFFIX,featuregates.org,🔀 AI 服务
+  - DOMAIN-SUFFIX,host.livekit.cloud,🔀 AI 服务
+  - DOMAIN-SUFFIX,identrust.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,intercom.io,🔀 AI 服务
+  - DOMAIN-SUFFIX,intercomcdn.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,launchdarkly.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,oaistatic.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,oaiusercontent.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,observeit.net,🔀 AI 服务
+  - DOMAIN-SUFFIX,poe.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,segment.io,🔀 AI 服务
+  - DOMAIN-SUFFIX,sentry.io,🔀 AI 服务
+  - DOMAIN-SUFFIX,stripe.com,🔀 AI 服务
+  - DOMAIN-SUFFIX,turn.livekit.cloud,🔀 AI 服务
+  - DOMAIN-KEYWORD,openai,🔀 AI 服务
+
+# 服务类
+  - RULE-SET,TikTok,⬇ 解锁节点
+  - RULE-SET,PayPal,🌏️ 节点选择
+  - RULE-SET,telegramcidr,🌏️ 节点选择
+  - DOMAIN-KEYWORD,oaifree,DIRECT
+  - DOMAIN-SUFFIX,shared.oaifree.com,DIRECT
+  
+
+# 屏蔽广告
+  - RULE-SET,AdBlock,⛔️ 拦截广告
+  - RULE-SET,reject,⛔️ 拦截广告
+  - RULE-SET,BanAD,⛔️ 拦截广告
+  - RULE-SET,BanProgramAD,⛔️ 拦截广告
+  - RULE-SET,BanEasyList,⛔️ 拦截广告
+  
+# 补丁规则
+  - RULE-SET,gfw,🌏️ 节点选择
+  - RULE-SET,proxy,🌏️ 节点选择
+  - RULE-SET,tld-not-cn,🌏️ 节点选择
+  - RULE-SET,ProxyGFWlist,🌏️ 节点选择
+  - RULE-SET,ProxyClient,🌏️ 节点选择
+  - RULE-SET,ChinaDomain,DIRECT,no-resolve
+  - RULE-SET,ChinaCompanyIp,DIRECT,no-resolve
+  - RULE-SET,cncidr,DIRECT,no-resolve
+  - RULE-SET,China,DIRECT,no-resolve
+  - RULE-SET,lancidr,DIRECT,no-resolve
+  - RULE-SET,collection,DIRECT,no-resolve
+
+# 默认规则 
+  - GEOIP,CN,DIRECT,no-resolve
+  - GEOSITE,geolocation-cn,DIRECT
+  - GEOSITE,geolocation-!cn,🌏️ 节点选择
+  - MATCH,↪️ 漏网之鱼
+
+rule-providers:
+
+# AI 类
+  ai:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/ai.yaml
+    url: "https://fastly.jsdelivr.net/gh/MadisonWirtanen/WARP-Clash-with-ZJU-Rules@main/ai.yaml"
+    interval: 86400
+    
+  Gemini: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/Gemini.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Gemini.yaml"
+    interval: 86400
+
+  Claude: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/Claude.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Claude.yaml"
+    interval: 86400
+
+# 广告类
+  AdBlock:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/AdBlock.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/AdBlock.yaml"
+    interval: 86400
+    
+  BanAD:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+    path: ./ruleset/BanAD.yaml
+    interval: 86400
+
+  BanProgramAD:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+    path: ./ruleset/BanProgramAD.yaml
+    interval: 86400
+
+  BanEasyList:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list"
+    path: ./ruleset/BanEasyList.yaml
+    interval: 86400
+
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+# 补丁类
+  collection: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/collection.yaml
+    url: "https://gist.githubusercontent.com/cnfree8964/0864fd1d2e88936a095fb40d74ce4993/raw/collection.yaml"
+
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+
+  ProxyGFWlist:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list"
+    path: ./ruleset/BanEasyList.yaml
+    interval: 86400
+
+  ProxyClient: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/ProxyClient.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/ProxyClient.yaml"
+
+  ChinaDomain:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/ChinaDomain.yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
+    interval: 86400
+
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/ChinaCompanyIp.yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
+    interval: 86400
+
+  China: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/China.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/China.yaml"
+    interval: 86400
+
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+
+# 服务类
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+
+  PayPal: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/PayPal.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/PayPal.yaml"
+    interval: 86400
+
+  TikTok: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/TikTok.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/TikTok.yaml"
+    interval: 86400
+
+  IDM: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/IDM.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/IDM.yaml"
+
+# 流媒体
+  Amazon: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/Amazon.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Amazon.yaml"
+    interval: 86400
+
+  Netflix: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/Netflix.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Netflix.yaml"
+    interval: 86400
+
+  Spotify: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/Spotify.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Spotify.yaml"
+    interval: 86400
+    
+  DisneyPlus: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/DisneyPlus.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/DisneyPlus.yaml"
+    
+  Hulu: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/Hulu.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Hulu.yaml"
+
+  HBO: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/HBO.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/HBO.yaml"
+
+# 游戏类
+  Steam: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/Steam.yaml
+    url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Steam.yaml"
+    interval: 86400
