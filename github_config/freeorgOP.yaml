@@ -62,13 +62,13 @@ proxies:
 ###开始建立锚点
 
 # 自动选择
-fly: &fly {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
+fly: &fly {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12, 订阅 13, 订阅 14]}
 
 # 手动切换
-all: &all {type: select, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12]}
+all: &all {type: select, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 7, 订阅 8, 订阅 9, 订阅 10, 订阅 11, 订阅 12, 订阅 13, 订阅 14]}
 
 # 精选节点
-best: &best {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 2, 订阅 3, 订阅 4, 订阅 5, 订阅 6, 订阅 8, 订阅 12]}
+best: &best {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 4, 订阅 12, 订阅 13, 订阅 14]}
 
 # 解锁 AI
 ai: &ai {type: url-test, url: "http://www.google.com/generate_204", interval: 120, tolerance: 50, lazy: true, use: [订阅 1, 订阅 7], filter: "(?!.*(hong kong|hk|香港|香|港|hk😈))(?i)(us|unitedstates|united states|usa|jp|sg|zgo|tw|sjc|中转 US|中转 TW|中转 JP|GPT|解锁|台湾|日本|新加坡|美国)"}
@@ -90,9 +90,9 @@ p: &p {type: http, interval: 21600, health-check: {enable: true, url: "http://ww
 
 proxy-providers:  # Meta支持机场通用订阅
 
-  订阅 1: # 项目地址：https://github.com/Pawdroid/Free-servers?tab=readme-ov-file
+  订阅 1: # Cloudflare Worker 筛选节点 项目地址：https://linux.do/t/topic/197070#p-1711108-aggregator-6collect-2
     <<: *p
-    url: "https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fproxy.v2gh.com%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2FPawdroid%2FFree-servers%2Fmain%2Fsub&insert=false&config=https%3A%2F%2Fu.lainbo.com%2Fclash-config-mini&list=false&tfo=false&scv=false&fdn=false&sort=false&new_name=true"
+    url: "https://sub.mxlweb.xyz/free"
   
   订阅 2: # 项目地址：https://github.com/Ruk1ng001/freeSub
     <<: *p
@@ -137,6 +137,15 @@ proxy-providers:  # Meta支持机场通用订阅
   订阅 12: # 项目地址：https://github.com/MadisonWirtanen/WARP-Clash-with-ZJU-Rules?tab=readme-ov-file
     <<: *p
     url: "https://gist.githubusercontent.com/freeorgworld/128c0e7260148f61f8708c9566aed5ab/raw/publicvless.yaml"
+
+  订阅 13: # 自动获取全网机场试用订阅 aggregator项目 地址：https://linux.do/t/topic/197070#p-1711108-aggregator-6collect-2
+    <<: *p
+    url: "https://sub.mxlweb.xyz/aggregatorfull"
+
+  订阅 14: # 
+    <<: *p
+    url: "https://sub.玄隐.xyz/api/v1/client/subscribe?token=cbb686c1d37fba0bcce1bccef0ca7382"
+    
 
 
 
