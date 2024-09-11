@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-09-07 17:27:44
+# 创建时间：2024-09-11 21:51:05
 # 使用模版：V2RaySE 默认模版
-# 节点数量：2
+# 节点数量：1
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -85,53 +85,46 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"洛杉矶住宅ip_1","type":"vmess","server":"test.stampclub.shop","port":41809,"cipher":"auto","uuid":"8f57b457-8149-4c77-c2fc-2b92d457fa74","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/fdgs"}}
-  - {"name":"洛杉矶住宅ip_2","type":"trojan","server":"38.46.3.25","port":13944,"udp":true,"password":"wsVHgdR7oG","skip-cert-verify":true}
+  - {"name":"🏁RELAY-172.64.175.213-2531","type":"vmess","server":"172.64.175.213","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip11.freegradely.xyz"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 洛杉矶住宅ip_1
-      - 洛杉矶住宅ip_2
+      - 🏁RELAY-172.64.175.213-2531
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 洛杉矶住宅ip_1
-      - 洛杉矶住宅ip_2
+      - 🏁RELAY-172.64.175.213-2531
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 洛杉矶住宅ip_1
-      - 洛杉矶住宅ip_2
+      - 🏁RELAY-172.64.175.213-2531
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 洛杉矶住宅ip_1
-      - 洛杉矶住宅ip_2
+      - 🏁RELAY-172.64.175.213-2531
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 洛杉矶住宅ip_1
-      - 洛杉矶住宅ip_2
+      - 🏁RELAY-172.64.175.213-2531
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 洛杉矶住宅ip_1
-      - 洛杉矶住宅ip_2
+      - 🏁RELAY-172.64.175.213-2531
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -154,8 +147,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 洛杉矶住宅ip_1
-      - 洛杉矶住宅ip_2
+      - 🏁RELAY-172.64.175.213-2531
 
 rules:
 # 本地/局域网地址
