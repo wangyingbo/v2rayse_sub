@@ -5,163 +5,227 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 墨尔本-1D, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 8d5b1052-d3ba-42f7-9ed9-08c8a558f9c6, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 墨尔本-1A, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: a8505636-fa45-45cf-a1fa-56e6c92a8cc8, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 🇷🇺 俄罗斯 莫死磕 CDN加速, server: ghfxsdfxbcvb_cdn.hfhfb.homes, port: 2086, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: hkcdn.fask511.cfd}}, udp: true}
-  - {name: 🇫🇷 法国 巴黎 CDN加速, server: qxcstxwbcvb_cdn.hfhfb.homes, port: 2095, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: frcdn.fask511.cfd}}, udp: true}
-  - {name: 🇯🇵 日本2 | 1x-1E, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: d1e9e0bf-fa95-419b-9567-5bfd40ab95f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiulujunuqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
-  - {name: 🇨🇦 加拿大-1A, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: a8505636-fa45-45cf-a1fa-56e6c92a8cc8, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
-  - {name: 🇷🇺 公益|俄罗斯|V2-1B, server: 45.130.147.178, port: 40045, type: vmess, uuid: e132010e-9fbd-4029-abb5-d43ef7c89535, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1G, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 8a8eaa19-74f7-4966-a9c5-2b0dab698a27, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇩🇪 德国 法兰克福 CDN加速, server: ydtxwbcvb_cdn.hfhfb.homes, port: 2095, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: decdn.fask511.cfd}}, udp: true}
-  - {name: 🇬🇧 公益|英国|V2-1A, server: 5.39.254.196, port: 40125, type: vmess, uuid: ffe12a31-d42d-4345-9c4d-41b4c506e51e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1E, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 78b60ed8-c2d4-48ee-a317-8fa1f4487af1, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇮🇹 意大利 MILAN CDN加速, server: sdhdffjblkgfh_cdn.hfhfb.homes, port: 2095, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: itcdn.fask511.cfd}}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1F, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3832ba49-0ddf-4db4-aa32-6926e3839945, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 日本2 | 1x-1C, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: ced0763f-a864-4ade-b26f-3dcf9142de35, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiulujunuqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 8c401f3e-09b7-48d2-b109-b1f8a8e4eb3f, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 日本2 | 1x-1B, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: fe294da0-5d1c-4f26-8da6-9dea3cd9f6ed, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiulujunuqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
+  - {name: 🇬🇧 公益|英国|V2-1C, server: 5.39.254.196, port: 40125, type: vmess, uuid: e132010e-9fbd-4029-abb5-d43ef7c89535, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇷🇺 公益|俄罗斯|V2-1B, server: 45.130.147.178, port: 40045, type: vmess, uuid: 9cd0f380-bb3e-4287-a56b-9f5aeb4ea2c7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1I, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 78b60ed8-c2d4-48ee-a317-8fa1f4487af1, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 墨尔本-1A, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 8d5b1052-d3ba-42f7-9ed9-08c8a558f9c6, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 墨尔本-1D, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: a8505636-fa45-45cf-a1fa-56e6c92a8cc8, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 公益|HK01|V2-1A, server: duoduotw.cdn-sgp.xyz, port: 40037, type: vmess, uuid: ffe12a31-d42d-4345-9c4d-41b4c506e51e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: duoduotw.cdn-sgp.xyz}}, udp: true}
   - {name: 🇷🇺 公益|俄罗斯|V2-1A, server: 45.130.147.178, port: 40045, type: vmess, uuid: ffe12a31-d42d-4345-9c4d-41b4c506e51e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 墨尔本-1C, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: dee5f225-327b-4997-9ada-9ec137e5a93d, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1D, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: fc07cd70-2235-4f36-8c7b-ea3108a802da, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇬🇧 公益|英国|V2-1B, server: 5.39.254.196, port: 40125, type: vmess, uuid: e132010e-9fbd-4029-abb5-d43ef7c89535, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇯🇵 日本2 | 1x-1A, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: 38931361-4d7b-4210-9325-ac4c0dabac6f, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiulujunuqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
-  - {name: 🇯🇵 日本 冻精 CDN加速, server: aqerdsf_cdn.hfhfb.homes, port: 2086, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: rbcdn.fask511.cfd}}, udp: true}
-  - {name: 🇦🇪 阿联酋 阿布扎比 CDN加速, server: rvxcstxwbcvb_cdn.hfhfb.homes, port: 2095, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: kialq.hfhfb.homes}}, udp: true}
-  - {name: 🇨🇦 加拿大-1C, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: dee5f225-327b-4997-9ada-9ec137e5a93d, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
-  - {name: 🇨🇦 加拿大-1B, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: a7ee723d-a526-412e-bcd8-6dc545755b54, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
-  - {name: 🇭🇰 公益|香港|V2-1A, server: 220.246.57.225, port: 30068, type: vmess, uuid: ffe12a31-d42d-4345-9c4d-41b4c506e51e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: ad0b0fad-00c5-4e47-975e-3df46e7af0cc, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 31b8ecb3-3130-433a-8851-303054a6f71a, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇭🇰 公益|香港|V2-1B, server: 220.246.57.225, port: 30068, type: vmess, uuid: e132010e-9fbd-4029-abb5-d43ef7c89535, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇺🇸 美国 落山鸡 CDN加速, server: afgsdvxcv_cdn.hfhfb.homes, port: 2095, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: mgcdn.hfhfb.homes}}, udp: true}
-  - {name: 墨尔本-1B, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: a7ee723d-a526-412e-bcd8-6dc545755b54, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 🇭🇰 香港01, server: 79ff1f5a-8fe4-911a-3287-a1b47bb52000.096888.xyz, port: 443, type: vless, uuid: b2c1bdfa-fc18-4a6c-b72f-1a96d5d5ad25, tls: true, network: ws, ws-opts: {path: /trub, headers: {Host: 79ff1f5a-8fe4-911a-3287-a1b47bb52000.096888.xyz}}, udp: true}
   - {name: 🇸🇬 新加坡 信家婆 CDN加速, server: apivgbndf_cdn.hfhfb.homes, port: 2095, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: sgcdn.fask511.cfd}}, udp: true}
-  - {name: 🇯🇵 日本2 | 1x-1D, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: ee5d0f2d-4746-42ce-935d-dac2f6f81937, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiulujunuqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1G, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3832ba49-0ddf-4db4-aa32-6926e3839945, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇩🇪 德国 法兰克福 CDN加速, server: ydtxwbcvb_cdn.hfhfb.homes, port: 2095, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: decdn.fask511.cfd}}, udp: true}
+  - {name: 🇷🇺 公益|俄罗斯|V2-1C, server: 45.130.147.178, port: 40045, type: vmess, uuid: e132010e-9fbd-4029-abb5-d43ef7c89535, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇮🇹 意大利 MILAN CDN加速, server: sdhdffjblkgfh_cdn.hfhfb.homes, port: 2095, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: itcdn.fask511.cfd}}, udp: true}
+  - {name: 墨尔本-1B, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: dee5f225-327b-4997-9ada-9ec137e5a93d, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: fc07cd70-2235-4f36-8c7b-ea3108a802da, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇬🇧 公益|英国|V2-1A, server: 5.39.254.196, port: 40125, type: vmess, uuid: ffe12a31-d42d-4345-9c4d-41b4c506e51e, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇺🇸 美国01, server: 72cbc61e-8f3f-130a-e058-ca7e9a6b67ef.096888.xyz, port: 443, type: vless, uuid: b2c1bdfa-fc18-4a6c-b72f-1a96d5d5ad25, tls: true, network: ws, ws-opts: {path: /webx, headers: {Host: 72cbc61e-8f3f-130a-e058-ca7e9a6b67ef.096888.xyz}}, udp: true}
+  - {name: 🇨🇦 加拿大-1A, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 8d5b1052-d3ba-42f7-9ed9-08c8a558f9c6, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
+  - {name: 🇬🇧 公益|英国|V2-1B, server: 5.39.254.196, port: 40125, type: vmess, uuid: 9cd0f380-bb3e-4287-a56b-9f5aeb4ea2c7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇯🇵 日本2 | 1x-1A, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: d1e9e0bf-fa95-419b-9567-5bfd40ab95f0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiulujunuqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
+  - {name: 公益|HK01|V2-1C, server: duoduotw.cdn-sgp.xyz, port: 40037, type: vmess, uuid: e132010e-9fbd-4029-abb5-d43ef7c89535, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: duoduotw.cdn-sgp.xyz}}, udp: true}
+  - {name: 🇨🇦 加拿大-1D, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: a8505636-fa45-45cf-a1fa-56e6c92a8cc8, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
+  - {name: 墨尔本-1C, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: a7ee723d-a526-412e-bcd8-6dc545755b54, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 🇬🇧 公益|英国|V2-1D, server: 5.39.254.196, port: 40125, type: vmess, uuid: 20d55953-61d2-4dd5-a31a-b268538984ca, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3c405c82-c2a2-409f-89e2-745066802e07, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
   - {name: 🇰🇷 韩国-三网优化2-1H, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: cce5ae28-ec80-4d30-b932-4811518f3bd1, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇨🇦 加拿大-1D, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 8d5b1052-d3ba-42f7-9ed9-08c8a558f9c6, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
+  - {name: 🇯🇵 日本2 | 1x-1E, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: ee5d0f2d-4746-42ce-935d-dac2f6f81937, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiulujunuqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
+  - {name: 🇭🇰 香港02, server: 86184567-0d4c-e935-b94c-94298c3a72a8.096888.xyz, port: 443, type: vless, uuid: b2c1bdfa-fc18-4a6c-b72f-1a96d5d5ad25, tls: true, network: ws, ws-opts: {path: /push, headers: {Host: 86184567-0d4c-e935-b94c-94298c3a72a8.096888.xyz}}, udp: true}
+  - {name: 🇦🇪 阿联酋 阿布扎比 CDN加速, server: rvxcstxwbcvb_cdn.hfhfb.homes, port: 2095, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: kialq.hfhfb.homes}}, udp: true}
+  - {name: 🇺🇸 美国 落山鸡 CDN加速, server: afgsdvxcv_cdn.hfhfb.homes, port: 2095, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: mgcdn.hfhfb.homes}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1D, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 8a8eaa19-74f7-4966-a9c5-2b0dab698a27, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇷🇺 俄罗斯 莫死磕 CDN加速, server: ghfxsdfxbcvb_cdn.hfhfb.homes, port: 2086, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: hkcdn.fask511.cfd}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1F, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: ad0b0fad-00c5-4e47-975e-3df46e7af0cc, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇭🇰 香港03, server: 86184567-0d4c-e935-b94c-94298c3a72a9.096888.xyz, port: 443, type: vless, uuid: b2c1bdfa-fc18-4a6c-b72f-1a96d5d5ad25, tls: true, network: ws, ws-opts: {path: /popup, headers: {Host: 86184567-0d4c-e935-b94c-94298c3a72a9.096888.xyz}}, udp: true}
+  - {name: 🇨🇦 加拿大-1C, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: a7ee723d-a526-412e-bcd8-6dc545755b54, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
+  - {name: 🇳🇬 尼日利亚备用, server: fbi.gov, port: 443, type: vless, uuid: b2c1bdfa-fc18-4a6c-b72f-1a96d5d5ad25, tls: true, network: ws, ws-opts: {path: /repl, headers: {Host: da6f9f10-7928-a801-0d79-d3c970cfac81.096888.xyz}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 8c401f3e-09b7-48d2-b109-b1f8a8e4eb3f, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 日本2 | 1x-1D, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: 38931361-4d7b-4210-9325-ac4c0dabac6f, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiulujunuqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
+  - {name: 🇯🇵 日本2 | 1x-1C, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: ced0763f-a864-4ade-b26f-3dcf9142de35, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiulujunuqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
+  - {name: 🇷🇺 公益|俄罗斯|V2-1D, server: 45.130.147.178, port: 40045, type: vmess, uuid: 20d55953-61d2-4dd5-a31a-b268538984ca, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1E, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 31b8ecb3-3130-433a-8851-303054a6f71a, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇨🇦 加拿大-1B, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: dee5f225-327b-4997-9ada-9ec137e5a93d, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
+  - {name: 🇯🇵 日本 冻精 CDN加速, server: aqerdsf_cdn.hfhfb.homes, port: 2086, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: rbcdn.fask511.cfd}}, udp: true}
+  - {name: 🇹🇼 台湾01, server: c8d403ba-ee43-ef78-ed61-94d47ea93129.096888.xyz, port: 443, type: vless, uuid: b2c1bdfa-fc18-4a6c-b72f-1a96d5d5ad25, tls: true, network: ws, ws-opts: {path: /hine, headers: {Host: c8d403ba-ee43-ef78-ed61-94d47ea93129.096888.xyz}}, udp: true}
+  - {name: 🇯🇵 日本01, server: 923257f0-3587-ad35-93db-8b29ba6d6cc8.096888.xyz, port: 443, type: vless, uuid: b2c1bdfa-fc18-4a6c-b72f-1a96d5d5ad25, tls: true, network: ws, ws-opts: {path: /prof, headers: {Host: 923257f0-3587-ad35-93db-8b29ba6d6cc8.096888.xyz}}, udp: true}
+  - {name: 公益|HK01|V2-1D, server: duoduotw.cdn-sgp.xyz, port: 40037, type: vmess, uuid: 20d55953-61d2-4dd5-a31a-b268538984ca, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: duoduotw.cdn-sgp.xyz}}, udp: true}
+  - {name: 🇳🇬 尼日利亚01, server: c82bc59c-73b0-61ce-f3ab-5100f5814cdd.096888.xyz, port: 443, type: vless, uuid: b2c1bdfa-fc18-4a6c-b72f-1a96d5d5ad25, tls: true, network: ws, ws-opts: {path: /webp, headers: {Host: c82bc59c-73b0-61ce-f3ab-5100f5814cdd.096888.xyz}}, udp: true}
+  - {name: 公益|HK01|V2-1B, server: duoduotw.cdn-sgp.xyz, port: 40037, type: vmess, uuid: 9cd0f380-bb3e-4287-a56b-9f5aeb4ea2c7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: duoduotw.cdn-sgp.xyz}}, udp: true}
+  - {name: 🇸🇬 新加坡01, server: 53772507-a056-6cda-95c9-d43c85d2eab0.096888.xyz, port: 443, type: vless, uuid: b2c1bdfa-fc18-4a6c-b72f-1a96d5d5ad25, tls: true, network: ws, ws-opts: {path: /stun, headers: {Host: 53772507-a056-6cda-95c9-d43c85d2eab0.096888.xyz}}, udp: true}
+  - {name: 🇯🇵 日本2 | 1x-1B, server: jp2.1vpn.sbs, port: 80, type: vmess, uuid: fe294da0-5d1c-4f26-8da6-9dea3cd9f6ed, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /kiulujunuqs, headers: {Host: jp2.1vpn.sbs}}, udp: true}
+  - {name: 🇫🇷 法国 巴黎 CDN加速, server: qxcstxwbcvb_cdn.hfhfb.homes, port: 2095, type: vmess, uuid: b129c518-df95-4205-bf66-82d4990acdb7, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/?ed=1024", headers: {Host: frcdn.fask511.cfd}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 墨尔本-1D
-      - 墨尔本-1A
-      - 🇷🇺 俄罗斯 莫死磕 CDN加速
-      - 🇫🇷 法国 巴黎 CDN加速
-      - 🇯🇵 日本2 | 1x-1E
-      - 🇨🇦 加拿大-1A
+      - 🇬🇧 公益|英国|V2-1C
       - 🇷🇺 公益|俄罗斯|V2-1B
+      - 🇰🇷 韩国-三网优化2-1I
+      - 墨尔本-1A
+      - 墨尔本-1D
+      - 公益|HK01|V2-1A
+      - 🇷🇺 公益|俄罗斯|V2-1A
+      - 🇭🇰 香港01
+      - 🇸🇬 新加坡 信家婆 CDN加速
       - 🇰🇷 韩国-三网优化2-1G
       - 🇩🇪 德国 法兰克福 CDN加速
-      - 🇬🇧 公益|英国|V2-1A
-      - 🇰🇷 韩国-三网优化2-1E
+      - 🇷🇺 公益|俄罗斯|V2-1C
       - 🇮🇹 意大利 MILAN CDN加速
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇯🇵 日本2 | 1x-1C
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇷🇺 公益|俄罗斯|V2-1A
-      - 墨尔本-1C
-      - 🇰🇷 韩国-三网优化2-1D
+      - 墨尔本-1B
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇬🇧 公益|英国|V2-1A
+      - 🇺🇸 美国01
+      - 🇨🇦 加拿大-1A
       - 🇬🇧 公益|英国|V2-1B
       - 🇯🇵 日本2 | 1x-1A
-      - 🇯🇵 日本 冻精 CDN加速
-      - 🇦🇪 阿联酋 阿布扎比 CDN加速
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇭🇰 公益|香港|V2-1A
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 公益|香港|V2-1B
-      - 🇺🇸 美国 落山鸡 CDN加速
-      - 墨尔本-1B
-      - 🇸🇬 新加坡 信家婆 CDN加速
-      - 🇯🇵 日本2 | 1x-1D
-      - 🇰🇷 韩国-三网优化2-1H
+      - 公益|HK01|V2-1C
       - 🇨🇦 加拿大-1D
+      - 墨尔本-1C
+      - 🇬🇧 公益|英国|V2-1D
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇰🇷 韩国-三网优化2-1H
+      - 🇯🇵 日本2 | 1x-1E
+      - 🇭🇰 香港02
+      - 🇦🇪 阿联酋 阿布扎比 CDN加速
+      - 🇺🇸 美国 落山鸡 CDN加速
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇷🇺 俄罗斯 莫死磕 CDN加速
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇭🇰 香港03
+      - 🇨🇦 加拿大-1C
+      - 🇳🇬 尼日利亚备用
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇯🇵 日本2 | 1x-1D
+      - 🇯🇵 日本2 | 1x-1C
+      - 🇷🇺 公益|俄罗斯|V2-1D
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇨🇦 加拿大-1B
+      - 🇯🇵 日本 冻精 CDN加速
+      - 🇹🇼 台湾01
+      - 🇯🇵 日本01
+      - 公益|HK01|V2-1D
+      - 🇳🇬 尼日利亚01
+      - 公益|HK01|V2-1B
+      - 🇸🇬 新加坡01
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇫🇷 法国 巴黎 CDN加速
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 墨尔本-1D
-      - 墨尔本-1A
-      - 🇷🇺 俄罗斯 莫死磕 CDN加速
-      - 🇫🇷 法国 巴黎 CDN加速
-      - 🇯🇵 日本2 | 1x-1E
-      - 🇨🇦 加拿大-1A
+      - 🇬🇧 公益|英国|V2-1C
       - 🇷🇺 公益|俄罗斯|V2-1B
+      - 🇰🇷 韩国-三网优化2-1I
+      - 墨尔本-1A
+      - 墨尔本-1D
+      - 公益|HK01|V2-1A
+      - 🇷🇺 公益|俄罗斯|V2-1A
+      - 🇭🇰 香港01
+      - 🇸🇬 新加坡 信家婆 CDN加速
       - 🇰🇷 韩国-三网优化2-1G
       - 🇩🇪 德国 法兰克福 CDN加速
-      - 🇬🇧 公益|英国|V2-1A
-      - 🇰🇷 韩国-三网优化2-1E
+      - 🇷🇺 公益|俄罗斯|V2-1C
       - 🇮🇹 意大利 MILAN CDN加速
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇯🇵 日本2 | 1x-1C
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇷🇺 公益|俄罗斯|V2-1A
-      - 墨尔本-1C
-      - 🇰🇷 韩国-三网优化2-1D
+      - 墨尔本-1B
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇬🇧 公益|英国|V2-1A
+      - 🇺🇸 美国01
+      - 🇨🇦 加拿大-1A
       - 🇬🇧 公益|英国|V2-1B
       - 🇯🇵 日本2 | 1x-1A
-      - 🇯🇵 日本 冻精 CDN加速
-      - 🇦🇪 阿联酋 阿布扎比 CDN加速
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇭🇰 公益|香港|V2-1A
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 公益|香港|V2-1B
-      - 🇺🇸 美国 落山鸡 CDN加速
-      - 墨尔本-1B
-      - 🇸🇬 新加坡 信家婆 CDN加速
-      - 🇯🇵 日本2 | 1x-1D
-      - 🇰🇷 韩国-三网优化2-1H
+      - 公益|HK01|V2-1C
       - 🇨🇦 加拿大-1D
+      - 墨尔本-1C
+      - 🇬🇧 公益|英国|V2-1D
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇰🇷 韩国-三网优化2-1H
+      - 🇯🇵 日本2 | 1x-1E
+      - 🇭🇰 香港02
+      - 🇦🇪 阿联酋 阿布扎比 CDN加速
+      - 🇺🇸 美国 落山鸡 CDN加速
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇷🇺 俄罗斯 莫死磕 CDN加速
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇭🇰 香港03
+      - 🇨🇦 加拿大-1C
+      - 🇳🇬 尼日利亚备用
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇯🇵 日本2 | 1x-1D
+      - 🇯🇵 日本2 | 1x-1C
+      - 🇷🇺 公益|俄罗斯|V2-1D
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇨🇦 加拿大-1B
+      - 🇯🇵 日本 冻精 CDN加速
+      - 🇹🇼 台湾01
+      - 🇯🇵 日本01
+      - 公益|HK01|V2-1D
+      - 🇳🇬 尼日利亚01
+      - 公益|HK01|V2-1B
+      - 🇸🇬 新加坡01
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇫🇷 法国 巴黎 CDN加速
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 墨尔本-1D
-      - 墨尔本-1A
-      - 🇷🇺 俄罗斯 莫死磕 CDN加速
-      - 🇫🇷 法国 巴黎 CDN加速
-      - 🇯🇵 日本2 | 1x-1E
-      - 🇨🇦 加拿大-1A
+      - 🇬🇧 公益|英国|V2-1C
       - 🇷🇺 公益|俄罗斯|V2-1B
+      - 🇰🇷 韩国-三网优化2-1I
+      - 墨尔本-1A
+      - 墨尔本-1D
+      - 公益|HK01|V2-1A
+      - 🇷🇺 公益|俄罗斯|V2-1A
+      - 🇭🇰 香港01
+      - 🇸🇬 新加坡 信家婆 CDN加速
       - 🇰🇷 韩国-三网优化2-1G
       - 🇩🇪 德国 法兰克福 CDN加速
-      - 🇬🇧 公益|英国|V2-1A
-      - 🇰🇷 韩国-三网优化2-1E
+      - 🇷🇺 公益|俄罗斯|V2-1C
       - 🇮🇹 意大利 MILAN CDN加速
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇯🇵 日本2 | 1x-1C
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇷🇺 公益|俄罗斯|V2-1A
-      - 墨尔本-1C
-      - 🇰🇷 韩国-三网优化2-1D
+      - 墨尔本-1B
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇬🇧 公益|英国|V2-1A
+      - 🇺🇸 美国01
+      - 🇨🇦 加拿大-1A
       - 🇬🇧 公益|英国|V2-1B
       - 🇯🇵 日本2 | 1x-1A
-      - 🇯🇵 日本 冻精 CDN加速
-      - 🇦🇪 阿联酋 阿布扎比 CDN加速
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇭🇰 公益|香港|V2-1A
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 公益|香港|V2-1B
-      - 🇺🇸 美国 落山鸡 CDN加速
-      - 墨尔本-1B
-      - 🇸🇬 新加坡 信家婆 CDN加速
-      - 🇯🇵 日本2 | 1x-1D
-      - 🇰🇷 韩国-三网优化2-1H
+      - 公益|HK01|V2-1C
       - 🇨🇦 加拿大-1D
+      - 墨尔本-1C
+      - 🇬🇧 公益|英国|V2-1D
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇰🇷 韩国-三网优化2-1H
+      - 🇯🇵 日本2 | 1x-1E
+      - 🇭🇰 香港02
+      - 🇦🇪 阿联酋 阿布扎比 CDN加速
+      - 🇺🇸 美国 落山鸡 CDN加速
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇷🇺 俄罗斯 莫死磕 CDN加速
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇭🇰 香港03
+      - 🇨🇦 加拿大-1C
+      - 🇳🇬 尼日利亚备用
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇯🇵 日本2 | 1x-1D
+      - 🇯🇵 日本2 | 1x-1C
+      - 🇷🇺 公益|俄罗斯|V2-1D
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇨🇦 加拿大-1B
+      - 🇯🇵 日本 冻精 CDN加速
+      - 🇹🇼 台湾01
+      - 🇯🇵 日本01
+      - 公益|HK01|V2-1D
+      - 🇳🇬 尼日利亚01
+      - 公益|HK01|V2-1B
+      - 🇸🇬 新加坡01
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇫🇷 法国 巴黎 CDN加速
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -180,169 +244,235 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 墨尔本-1D
-      - 墨尔本-1A
-      - 🇷🇺 俄罗斯 莫死磕 CDN加速
-      - 🇫🇷 法国 巴黎 CDN加速
-      - 🇯🇵 日本2 | 1x-1E
-      - 🇨🇦 加拿大-1A
+      - 🇬🇧 公益|英国|V2-1C
       - 🇷🇺 公益|俄罗斯|V2-1B
+      - 🇰🇷 韩国-三网优化2-1I
+      - 墨尔本-1A
+      - 墨尔本-1D
+      - 公益|HK01|V2-1A
+      - 🇷🇺 公益|俄罗斯|V2-1A
+      - 🇭🇰 香港01
+      - 🇸🇬 新加坡 信家婆 CDN加速
       - 🇰🇷 韩国-三网优化2-1G
       - 🇩🇪 德国 法兰克福 CDN加速
-      - 🇬🇧 公益|英国|V2-1A
-      - 🇰🇷 韩国-三网优化2-1E
+      - 🇷🇺 公益|俄罗斯|V2-1C
       - 🇮🇹 意大利 MILAN CDN加速
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇯🇵 日本2 | 1x-1C
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇷🇺 公益|俄罗斯|V2-1A
-      - 墨尔本-1C
-      - 🇰🇷 韩国-三网优化2-1D
+      - 墨尔本-1B
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇬🇧 公益|英国|V2-1A
+      - 🇺🇸 美国01
+      - 🇨🇦 加拿大-1A
       - 🇬🇧 公益|英国|V2-1B
       - 🇯🇵 日本2 | 1x-1A
-      - 🇯🇵 日本 冻精 CDN加速
-      - 🇦🇪 阿联酋 阿布扎比 CDN加速
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇭🇰 公益|香港|V2-1A
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 公益|香港|V2-1B
-      - 🇺🇸 美国 落山鸡 CDN加速
-      - 墨尔本-1B
-      - 🇸🇬 新加坡 信家婆 CDN加速
-      - 🇯🇵 日本2 | 1x-1D
-      - 🇰🇷 韩国-三网优化2-1H
+      - 公益|HK01|V2-1C
       - 🇨🇦 加拿大-1D
+      - 墨尔本-1C
+      - 🇬🇧 公益|英国|V2-1D
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇰🇷 韩国-三网优化2-1H
+      - 🇯🇵 日本2 | 1x-1E
+      - 🇭🇰 香港02
+      - 🇦🇪 阿联酋 阿布扎比 CDN加速
+      - 🇺🇸 美国 落山鸡 CDN加速
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇷🇺 俄罗斯 莫死磕 CDN加速
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇭🇰 香港03
+      - 🇨🇦 加拿大-1C
+      - 🇳🇬 尼日利亚备用
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇯🇵 日本2 | 1x-1D
+      - 🇯🇵 日本2 | 1x-1C
+      - 🇷🇺 公益|俄罗斯|V2-1D
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇨🇦 加拿大-1B
+      - 🇯🇵 日本 冻精 CDN加速
+      - 🇹🇼 台湾01
+      - 🇯🇵 日本01
+      - 公益|HK01|V2-1D
+      - 🇳🇬 尼日利亚01
+      - 公益|HK01|V2-1B
+      - 🇸🇬 新加坡01
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇫🇷 法国 巴黎 CDN加速
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 公益|香港|V2-1A
-      - 🇭🇰 公益|香港|V2-1B
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇹🇼 台湾01
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 墨尔本-1D
-      - 墨尔本-1A
-      - 🇷🇺 俄罗斯 莫死磕 CDN加速
-      - 🇫🇷 法国 巴黎 CDN加速
-      - 🇯🇵 日本2 | 1x-1E
-      - 🇨🇦 加拿大-1A
+      - 🇬🇧 公益|英国|V2-1C
       - 🇷🇺 公益|俄罗斯|V2-1B
+      - 🇰🇷 韩国-三网优化2-1I
+      - 墨尔本-1A
+      - 墨尔本-1D
+      - 公益|HK01|V2-1A
+      - 🇷🇺 公益|俄罗斯|V2-1A
+      - 🇭🇰 香港01
+      - 🇸🇬 新加坡 信家婆 CDN加速
       - 🇰🇷 韩国-三网优化2-1G
       - 🇩🇪 德国 法兰克福 CDN加速
-      - 🇬🇧 公益|英国|V2-1A
-      - 🇰🇷 韩国-三网优化2-1E
+      - 🇷🇺 公益|俄罗斯|V2-1C
       - 🇮🇹 意大利 MILAN CDN加速
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇯🇵 日本2 | 1x-1C
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇷🇺 公益|俄罗斯|V2-1A
-      - 墨尔本-1C
-      - 🇰🇷 韩国-三网优化2-1D
+      - 墨尔本-1B
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇬🇧 公益|英国|V2-1A
+      - 🇺🇸 美国01
+      - 🇨🇦 加拿大-1A
       - 🇬🇧 公益|英国|V2-1B
       - 🇯🇵 日本2 | 1x-1A
-      - 🇯🇵 日本 冻精 CDN加速
-      - 🇦🇪 阿联酋 阿布扎比 CDN加速
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇭🇰 公益|香港|V2-1A
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 公益|香港|V2-1B
-      - 🇺🇸 美国 落山鸡 CDN加速
-      - 墨尔本-1B
-      - 🇸🇬 新加坡 信家婆 CDN加速
-      - 🇯🇵 日本2 | 1x-1D
-      - 🇰🇷 韩国-三网优化2-1H
+      - 公益|HK01|V2-1C
       - 🇨🇦 加拿大-1D
+      - 墨尔本-1C
+      - 🇬🇧 公益|英国|V2-1D
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇰🇷 韩国-三网优化2-1H
+      - 🇯🇵 日本2 | 1x-1E
+      - 🇭🇰 香港02
+      - 🇦🇪 阿联酋 阿布扎比 CDN加速
+      - 🇺🇸 美国 落山鸡 CDN加速
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇷🇺 俄罗斯 莫死磕 CDN加速
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇭🇰 香港03
+      - 🇨🇦 加拿大-1C
+      - 🇳🇬 尼日利亚备用
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇯🇵 日本2 | 1x-1D
+      - 🇯🇵 日本2 | 1x-1C
+      - 🇷🇺 公益|俄罗斯|V2-1D
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇨🇦 加拿大-1B
+      - 🇯🇵 日本 冻精 CDN加速
+      - 🇹🇼 台湾01
+      - 🇯🇵 日本01
+      - 公益|HK01|V2-1D
+      - 🇳🇬 尼日利亚01
+      - 公益|HK01|V2-1B
+      - 🇸🇬 新加坡01
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇫🇷 法国 巴黎 CDN加速
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 墨尔本-1D
-      - 墨尔本-1A
-      - 🇷🇺 俄罗斯 莫死磕 CDN加速
-      - 🇫🇷 法国 巴黎 CDN加速
-      - 🇯🇵 日本2 | 1x-1E
-      - 🇨🇦 加拿大-1A
+      - 🇬🇧 公益|英国|V2-1C
       - 🇷🇺 公益|俄罗斯|V2-1B
+      - 🇰🇷 韩国-三网优化2-1I
+      - 墨尔本-1A
+      - 墨尔本-1D
+      - 公益|HK01|V2-1A
+      - 🇷🇺 公益|俄罗斯|V2-1A
+      - 🇭🇰 香港01
+      - 🇸🇬 新加坡 信家婆 CDN加速
       - 🇰🇷 韩国-三网优化2-1G
       - 🇩🇪 德国 法兰克福 CDN加速
-      - 🇬🇧 公益|英国|V2-1A
-      - 🇰🇷 韩国-三网优化2-1E
+      - 🇷🇺 公益|俄罗斯|V2-1C
       - 🇮🇹 意大利 MILAN CDN加速
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇯🇵 日本2 | 1x-1C
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇷🇺 公益|俄罗斯|V2-1A
-      - 墨尔本-1C
-      - 🇰🇷 韩国-三网优化2-1D
+      - 墨尔本-1B
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇬🇧 公益|英国|V2-1A
+      - 🇺🇸 美国01
+      - 🇨🇦 加拿大-1A
       - 🇬🇧 公益|英国|V2-1B
       - 🇯🇵 日本2 | 1x-1A
-      - 🇯🇵 日本 冻精 CDN加速
-      - 🇦🇪 阿联酋 阿布扎比 CDN加速
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇭🇰 公益|香港|V2-1A
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 公益|香港|V2-1B
-      - 🇺🇸 美国 落山鸡 CDN加速
-      - 墨尔本-1B
-      - 🇸🇬 新加坡 信家婆 CDN加速
-      - 🇯🇵 日本2 | 1x-1D
-      - 🇰🇷 韩国-三网优化2-1H
+      - 公益|HK01|V2-1C
       - 🇨🇦 加拿大-1D
+      - 墨尔本-1C
+      - 🇬🇧 公益|英国|V2-1D
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇰🇷 韩国-三网优化2-1H
+      - 🇯🇵 日本2 | 1x-1E
+      - 🇭🇰 香港02
+      - 🇦🇪 阿联酋 阿布扎比 CDN加速
+      - 🇺🇸 美国 落山鸡 CDN加速
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇷🇺 俄罗斯 莫死磕 CDN加速
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇭🇰 香港03
+      - 🇨🇦 加拿大-1C
+      - 🇳🇬 尼日利亚备用
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇯🇵 日本2 | 1x-1D
+      - 🇯🇵 日本2 | 1x-1C
+      - 🇷🇺 公益|俄罗斯|V2-1D
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇨🇦 加拿大-1B
+      - 🇯🇵 日本 冻精 CDN加速
+      - 🇹🇼 台湾01
+      - 🇯🇵 日本01
+      - 公益|HK01|V2-1D
+      - 🇳🇬 尼日利亚01
+      - 公益|HK01|V2-1B
+      - 🇸🇬 新加坡01
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇫🇷 法国 巴黎 CDN加速
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 墨尔本-1D
-      - 墨尔本-1A
-      - 🇷🇺 俄罗斯 莫死磕 CDN加速
-      - 🇫🇷 法国 巴黎 CDN加速
-      - 🇯🇵 日本2 | 1x-1E
-      - 🇨🇦 加拿大-1A
+      - 🇬🇧 公益|英国|V2-1C
       - 🇷🇺 公益|俄罗斯|V2-1B
+      - 🇰🇷 韩国-三网优化2-1I
+      - 墨尔本-1A
+      - 墨尔本-1D
+      - 公益|HK01|V2-1A
+      - 🇷🇺 公益|俄罗斯|V2-1A
+      - 🇭🇰 香港01
+      - 🇸🇬 新加坡 信家婆 CDN加速
       - 🇰🇷 韩国-三网优化2-1G
       - 🇩🇪 德国 法兰克福 CDN加速
-      - 🇬🇧 公益|英国|V2-1A
-      - 🇰🇷 韩国-三网优化2-1E
+      - 🇷🇺 公益|俄罗斯|V2-1C
       - 🇮🇹 意大利 MILAN CDN加速
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇯🇵 日本2 | 1x-1C
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇷🇺 公益|俄罗斯|V2-1A
-      - 墨尔本-1C
-      - 🇰🇷 韩国-三网优化2-1D
+      - 墨尔本-1B
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇬🇧 公益|英国|V2-1A
+      - 🇺🇸 美国01
+      - 🇨🇦 加拿大-1A
       - 🇬🇧 公益|英国|V2-1B
       - 🇯🇵 日本2 | 1x-1A
-      - 🇯🇵 日本 冻精 CDN加速
-      - 🇦🇪 阿联酋 阿布扎比 CDN加速
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇭🇰 公益|香港|V2-1A
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 公益|香港|V2-1B
-      - 🇺🇸 美国 落山鸡 CDN加速
-      - 墨尔本-1B
-      - 🇸🇬 新加坡 信家婆 CDN加速
-      - 🇯🇵 日本2 | 1x-1D
-      - 🇰🇷 韩国-三网优化2-1H
+      - 公益|HK01|V2-1C
       - 🇨🇦 加拿大-1D
+      - 墨尔本-1C
+      - 🇬🇧 公益|英国|V2-1D
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇰🇷 韩国-三网优化2-1H
+      - 🇯🇵 日本2 | 1x-1E
+      - 🇭🇰 香港02
+      - 🇦🇪 阿联酋 阿布扎比 CDN加速
+      - 🇺🇸 美国 落山鸡 CDN加速
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇷🇺 俄罗斯 莫死磕 CDN加速
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇭🇰 香港03
+      - 🇨🇦 加拿大-1C
+      - 🇳🇬 尼日利亚备用
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇯🇵 日本2 | 1x-1D
+      - 🇯🇵 日本2 | 1x-1C
+      - 🇷🇺 公益|俄罗斯|V2-1D
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇨🇦 加拿大-1B
+      - 🇯🇵 日本 冻精 CDN加速
+      - 🇹🇼 台湾01
+      - 🇯🇵 日本01
+      - 公益|HK01|V2-1D
+      - 🇳🇬 尼日利亚01
+      - 公益|HK01|V2-1B
+      - 🇸🇬 新加坡01
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇫🇷 法国 巴黎 CDN加速
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -358,41 +488,57 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 墨尔本-1D
-      - 墨尔本-1A
-      - 🇷🇺 俄罗斯 莫死磕 CDN加速
-      - 🇫🇷 法国 巴黎 CDN加速
-      - 🇯🇵 日本2 | 1x-1E
-      - 🇨🇦 加拿大-1A
+      - 🇬🇧 公益|英国|V2-1C
       - 🇷🇺 公益|俄罗斯|V2-1B
+      - 🇰🇷 韩国-三网优化2-1I
+      - 墨尔本-1A
+      - 墨尔本-1D
+      - 公益|HK01|V2-1A
+      - 🇷🇺 公益|俄罗斯|V2-1A
+      - 🇭🇰 香港01
+      - 🇸🇬 新加坡 信家婆 CDN加速
       - 🇰🇷 韩国-三网优化2-1G
       - 🇩🇪 德国 法兰克福 CDN加速
-      - 🇬🇧 公益|英国|V2-1A
-      - 🇰🇷 韩国-三网优化2-1E
+      - 🇷🇺 公益|俄罗斯|V2-1C
       - 🇮🇹 意大利 MILAN CDN加速
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇯🇵 日本2 | 1x-1C
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本2 | 1x-1B
-      - 🇷🇺 公益|俄罗斯|V2-1A
-      - 墨尔本-1C
-      - 🇰🇷 韩国-三网优化2-1D
+      - 墨尔本-1B
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇬🇧 公益|英国|V2-1A
+      - 🇺🇸 美国01
+      - 🇨🇦 加拿大-1A
       - 🇬🇧 公益|英国|V2-1B
       - 🇯🇵 日本2 | 1x-1A
-      - 🇯🇵 日本 冻精 CDN加速
-      - 🇦🇪 阿联酋 阿布扎比 CDN加速
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇭🇰 公益|香港|V2-1A
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 公益|香港|V2-1B
-      - 🇺🇸 美国 落山鸡 CDN加速
-      - 墨尔本-1B
-      - 🇸🇬 新加坡 信家婆 CDN加速
-      - 🇯🇵 日本2 | 1x-1D
-      - 🇰🇷 韩国-三网优化2-1H
+      - 公益|HK01|V2-1C
       - 🇨🇦 加拿大-1D
+      - 墨尔本-1C
+      - 🇬🇧 公益|英国|V2-1D
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇰🇷 韩国-三网优化2-1H
+      - 🇯🇵 日本2 | 1x-1E
+      - 🇭🇰 香港02
+      - 🇦🇪 阿联酋 阿布扎比 CDN加速
+      - 🇺🇸 美国 落山鸡 CDN加速
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇷🇺 俄罗斯 莫死磕 CDN加速
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇭🇰 香港03
+      - 🇨🇦 加拿大-1C
+      - 🇳🇬 尼日利亚备用
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇯🇵 日本2 | 1x-1D
+      - 🇯🇵 日本2 | 1x-1C
+      - 🇷🇺 公益|俄罗斯|V2-1D
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇨🇦 加拿大-1B
+      - 🇯🇵 日本 冻精 CDN加速
+      - 🇹🇼 台湾01
+      - 🇯🇵 日本01
+      - 公益|HK01|V2-1D
+      - 🇳🇬 尼日利亚01
+      - 公益|HK01|V2-1B
+      - 🇸🇬 新加坡01
+      - 🇯🇵 日本2 | 1x-1B
+      - 🇫🇷 法国 巴黎 CDN加速
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
