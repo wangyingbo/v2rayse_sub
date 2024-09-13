@@ -1,10 +1,11 @@
 ####################################
 # 创建者：v2rayse.com
-# 客户端：Clash
-# 创建时间：2024-09-11 21:51:05
+# 客户端：Clash.Meta
+# 创建时间：12-09-2024 22:40:39
 # 使用模版：V2RaySE 默认模版
-# 节点数量：1
+# 节点数量：2
 ####################################
+# !!当前配置文件请使用基于 Clash.Meta 内核程序
 mixed-port: 7890
 allow-lan: true
 log-level: info
@@ -85,46 +86,53 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"🏁RELAY-172.64.175.213-2531","type":"vmess","server":"172.64.175.213","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"github.com/Alvin9999","headers":{"host":"ip11.freegradely.xyz"}}}
+  - {"name":"[🇺🇸]t.me/ConfigsHub`","type":"vless","server":"speedtest.net","port":443,"uuid":"66bcb167-7663-45ca-a3ad-e4ef21f18b6c","tls":true,"servername":"dfuighrtguibgjkbngihbghib.com","network":"ws","ws-opts":{"path":"ws/?ed=2048","headers":{"host":"dfuighrtguibgjkbngihbghib.com"}}}
+  - {"name":"🆔@v2ray_configs_pool`","type":"vless","server":"151.101.2.219","port":443,"uuid":"66bcb167-7663-45ca-a3ad-e4ef21f18b6c","tls":true,"servername":"dfuighrtguibgjkbngihbghib.com","network":"ws","ws-opts":{"path":"ws/?ed=2048","headers":{"host":"dfuighrtguibgjkbngihbghib.com"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🏁RELAY-172.64.175.213-2531
+      - '[🇺🇸]t.me/ConfigsHub`'
+      - 🆔@v2ray_configs_pool`
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🏁RELAY-172.64.175.213-2531
+      - '[🇺🇸]t.me/ConfigsHub`'
+      - 🆔@v2ray_configs_pool`
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🏁RELAY-172.64.175.213-2531
+      - '[🇺🇸]t.me/ConfigsHub`'
+      - 🆔@v2ray_configs_pool`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🏁RELAY-172.64.175.213-2531
+      - '[🇺🇸]t.me/ConfigsHub`'
+      - 🆔@v2ray_configs_pool`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🏁RELAY-172.64.175.213-2531
+      - '[🇺🇸]t.me/ConfigsHub`'
+      - 🆔@v2ray_configs_pool`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🏁RELAY-172.64.175.213-2531
+      - '[🇺🇸]t.me/ConfigsHub`'
+      - 🆔@v2ray_configs_pool`
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -147,7 +155,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🏁RELAY-172.64.175.213-2531
+      - '[🇺🇸]t.me/ConfigsHub`'
+      - 🆔@v2ray_configs_pool`
 
 rules:
 # 本地/局域网地址
