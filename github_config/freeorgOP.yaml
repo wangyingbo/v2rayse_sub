@@ -41,24 +41,6 @@ dns:
     - 'www.msftncsi.com'
     - 'www.msftconnecttest.com'
 
-proxies:
-
-  - name: ⏬️ WARP
-    type: wireguard
-    server: 162.159.192.1
-    port: 2408
-    ip: 172.16.0.2
-    ipv6: 2606:4700:110:87ad:b400:91:eadb:887f
-    private-key: +Cgu25E1zo9PkW5fC299zgbGVGKJamWgF6/iqQdoUW0=
-    public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-    v4: 172.16.0.2
-    v6: 2606:4700:110:805e:1441:a533:975b:8a39
-    udp: true
-    ip-version: ipv6-prefer
-    remote-dns-resolve: true  
-    dns: [ 1.1.1.1, 8.8.8.8 ]
-    dialer-proxy: "WARP前置节点"
-
 ###开始建立锚点
 
 # 自动选择
@@ -147,8 +129,6 @@ proxy-providers:  # Meta支持机场通用订阅
     url: "https://raw.githubusercontent.com/Flikify/getNode/main/clash.yaml"
     
 
-
-
 proxy-groups:
 
 # 功能分组
@@ -159,7 +139,6 @@ proxy-groups:
       - ⬇ 精选节点
       - 🚀 自动选择
       - 🔄 手动切换
-      - ⏬️ WARP
       - 🔀 AI 服务
       - ⬇ 解锁节点
       - ⬇ 备用应急
@@ -192,13 +171,6 @@ proxy-groups:
 
   - name: ✅ 解锁 AI
     <<: *ai
-
-  - name: WARP前置节点
-    type: select
-    proxies:
-      - ⬇ 精选节点
-      - 🔄 手动切换
-      - "DIRECT"
 
   - name: ⛔️ 拦截广告
     type: select
