@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-09-13 03:08:41
+# 创建时间：15-09-2024 15:33:29
 # 使用模版：V2RaySE 默认模版
-# 节点数量：1
+# 节点数量：3
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -85,46 +85,60 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"🇺🇸US-34.223.226.135-0949","type":"ss","server":"34.223.226.135","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
+  - {"name":"GRPC-HK-3","type":"vmess","server":"grpc-hk-3.axe.is","port":50003,"udp":true,"cipher":"auto","uuid":"4BFDEFF1-F510-4E0A-AFCE-A3E3AE71D557","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","version":2}
+  - {"name":"GRPC-TW-1","type":"vmess","server":"grpc-tw-1.axe.is","port":50001,"udp":true,"cipher":"auto","uuid":"4BFDEFF1-F510-4E0A-AFCE-A3E3AE71D557","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","version":2}
+  - {"name":"GRPC-TW-2","type":"vmess","server":"grpc-tw-2.axe.is","port":50002,"udp":true,"cipher":"auto","uuid":"4BFDEFF1-F510-4E0A-AFCE-A3E3AE71D557","alterId":0,"tls":true,"skip-cert-verify":true,"network":"grpc","version":2}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇺🇸US-34.223.226.135-0949
+      - GRPC-HK-3
+      - GRPC-TW-1
+      - GRPC-TW-2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇺🇸US-34.223.226.135-0949
+      - GRPC-HK-3
+      - GRPC-TW-1
+      - GRPC-TW-2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸US-34.223.226.135-0949
+      - GRPC-HK-3
+      - GRPC-TW-1
+      - GRPC-TW-2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸US-34.223.226.135-0949
+      - GRPC-HK-3
+      - GRPC-TW-1
+      - GRPC-TW-2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇺🇸US-34.223.226.135-0949
+      - GRPC-HK-3
+      - GRPC-TW-1
+      - GRPC-TW-2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸US-34.223.226.135-0949
+      - GRPC-HK-3
+      - GRPC-TW-1
+      - GRPC-TW-2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -147,7 +161,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸US-34.223.226.135-0949
+      - GRPC-HK-3
+      - GRPC-TW-1
+      - GRPC-TW-2
 
 rules:
 # 本地/局域网地址
