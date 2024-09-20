@@ -1,23 +1,22 @@
 ####################################
 # 创建者：v2rayse.com
-# 客户端：Clash.Meta
-# 创建时间：2024-09-15 10:13:26
-# 使用模版：20240915-1
-# 节点数量：10
-# 节点类型：ss, vmess, ssr, trojan, http, socks5, hysteria, vless
-# !!当前配置文件请使用基于 Clash.Meta 内核程序
+# 客户端：Clash
+# 创建时间：2024-09-20 17:31:22
+# 使用模版：ACL4SSR_Mini.ini
+# 节点数量：203
+# 节点类型：ss, vmess, trojan
 ####################################
 mixed-port: 7890
-allow-lan: true
-log-level: info
-external-controller: 0.0.0.0:9090
+allow-lan: false
+log-level: Silent
+external-controller: 127.0.0.1:9090
 dns:
   enabled: true
-  listen: 0.0.0.0:1053
-  ipv6: true
+  listen: 127.0.0.1:1053
+  ipv6: false
   default-nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
+    - tls://223.5.5.5:853
+    - tls://114.114.114.114:853
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -81,119 +80,858 @@ dns:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
   fallback-filter:
-    geoip: false
+    geoip: true
     ipcidr:
       - 240.0.0.0/4
-      - 0.0.0.0/32
 
 proxies:
-  - {"name":"v2rayse_test_1","type":"ss","server":"198.57.27.218","port":5004,"password":"g5MeD6Ft3CWlJId","cipher":"aes-256-gcm"}
-  - {"name":"v2rayse_test_2","type":"vmess","server":"154.23.190.162","port":443,"cipher":"auto","uuid":"b9984674-f771-4e67-a198-c7e60720ba2c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws"}
-  - {"name":"v2rayse_test_3","type":"vmess","server":"154.23.190.162","port":443,"cipher":"auto","uuid":"b9984674-f771-4e67-a198-c7e60720ba2c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws"}
-  - {"name":"defaultName_1","type":"ssr","server":"20.239.49.44","port":59814,"password":"3df57276-03ef-45cf-bdd4-4edb6dfaa0ef","cipher":"dummy","obfs":"plain","protocol":"origin","group":"https://v2rayse.com"}
-  - {"name":"v2rayse_test_4","type":"trojan","server":"ca-trojan.bonds.id","port":443,"udp":true,"password":"bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272","skip-cert-verify":true}
-  - {"name":"defaultName_2","type":"http","server":"124.15.12.24","port":251,"username":"username","password":"password"}
-  - {"name":"defaultName_3","type":"socks5","server":"124.15.12.24","port":2312}
-  - {"name":"Hys-1.2.3.4","type":"hysteria","server":"1.2.3.4","port":12854,"sni":"wechat.com","skip-cert-verify":true,"alpn":["h3"],"protocol":"udp","auth_str":"pekopeko","up":50,"down":250}
-  - {"name":"test","type":"vless","server":"1.2.3.4","port":7777,"uuid":"abc-def-ghi-fge-zsx","tls":true,"network":"tcp"}
-  - {"name":"defaultName_4","type":"socks5","server":"1.2.3.4","port":123,"username":"username","password":"password"}
+  - {"name":"BA-185.164.35.9-0734 | 8.727MB","type":"ss","server":"185.164.35.9","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"BE-192.71.249.78-0779 | 1.952MB","type":"ss","server":"192.71.249.78","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"CO-190.120.231.45-1490 | 4.008MB","type":"ss","server":"190.120.231.45","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"CY-45.83.21.66-0732 | 20.247MB","type":"ss","server":"45.83.21.66","port":14783,"password":"LvmguTb6K7HzEtee22mls6","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"FI-66.151.34.98-1838 | 16.363MB","type":"ss","server":"66.151.34.98","port":57261,"password":"vmZAyPv7783p3b8QkS5VMx","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"KZ-213.156.137.67-0740 | 13.552MB","type":"ss","server":"213.156.137.67","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"MX-190.103.179.23-0784 | 2.342MB","type":"ss","server":"190.103.179.23","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"PA-138.186.142.4-0744 | 4.737MB","type":"ss","server":"138.186.142.4","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"RELAY-104.16.148.244-0417 | 1.592MB","type":"vmess","server":"104.16.148.244","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.60.8-0504 | 6.49MB","type":"vmess","server":"104.16.60.8","port":8880,"cipher":"auto","uuid":"4b5e4565-322f-4223-a891-78a84f189726","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.60.8-1117 | 24.562MB","type":"vmess","server":"104.16.60.8","port":80,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.60.8-1161 | 78.076MB","type":"vmess","server":"104.16.60.8","port":2086,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.60.8-1194 | 58.726MB","type":"vmess","server":"104.16.60.8","port":2095,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.60.8-1200 | 3.087MB","type":"vmess","server":"104.16.60.8","port":443,"cipher":"auto","uuid":"2a8a10fb-9ca3-367e-a234-cf09f841be4f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.61.8-1185 | 25.799MB","type":"vmess","server":"104.16.61.8","port":8880,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.61.8-1196 | 54.961MB","type":"vmess","server":"104.16.61.8","port":80,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.61.8-1842 | 31.308MB","type":"vmess","server":"104.16.61.8","port":80,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.68.38-1154 | 112.323MB","type":"vmess","server":"104.16.68.38","port":2086,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.68.38-1209 | 25.284MB","type":"vmess","server":"104.16.68.38","port":8080,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.68.38-1220 | 116.506MB","type":"vmess","server":"104.16.68.38","port":8880,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.68.38-1807 | 114.716MB","type":"vmess","server":"104.16.68.38","port":2082,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.68.38-1809 | 30.201MB","type":"vmess","server":"104.16.68.38","port":2086,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.16.97.64-1253 | 21.461MB","type":"vmess","server":"cfcdn1.sanfencdn9.com","port":2052,"cipher":"auto","uuid":"7928c5c4-f653-4733-8409-9b1ca0a117a1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.19.124.251-1249 | 11.93MB","type":"vmess","server":"cfcdn3.sanfencdn9.com","port":80,"cipher":"auto","uuid":"7928c5c4-f653-4733-8409-9b1ca0a117a1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.19.32.46-0343 | 1.543MB","type":"vmess","server":"104.19.32.46","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.19.32.46-1155 | 1.49MB","type":"vmess","server":"104.19.32.46","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.19.42.49-1218 | 2.084MB","type":"vmess","server":"104.19.42.49","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.19.45.11-0263 | 1.377MB","type":"vmess","server":"104.19.45.11","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.19.46.233-1140 | 2.027MB","type":"vmess","server":"104.19.46.233","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.19.46.59-0333 | 2.091MB","type":"vmess","server":"104.19.46.59","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.19.47.27-0278 | 1.38MB","type":"vmess","server":"104.19.47.27","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.19.47.80-0356 | 2.084MB","type":"vmess","server":"104.19.47.80","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.19.47.88-0408 | 2.088MB","type":"vmess","server":"104.19.47.88","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.19.51.232-0213 | 1.752MB","type":"vmess","server":"104.19.51.232","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.19.59.89-0296 | 2.086MB","type":"vmess","server":"104.19.59.89","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.20.17.186-0285 | 1.832MB","type":"vmess","server":"104.20.17.186","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.21.24.170-0262 | 139.793MB","type":"vmess","server":"104.21.24.170","port":443,"cipher":"auto","uuid":"b321fd5d-e6ec-4293-a644-164e3885f52e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.21.24.170-0494 | 189.441MB","type":"vmess","server":"denc36.xtooltech.cfd","port":443,"cipher":"auto","uuid":"b321fd5d-e6ec-4293-a644-164e3885f52e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.21.52.103-0427 | 25.938MB","type":"vmess","server":"s.marktred.com","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.21.61.246-0726 | 23.633MB","type":"vmess","server":"104.21.61.246","port":443,"cipher":"auto","uuid":"f9ccede9-ca9c-4719-b105-e494742499e3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.21.71.88-0305 | 7.192MB","type":"vmess","server":"us3e-mmnnfr9dop0.v2freevpn.com","port":80,"cipher":"auto","uuid":"2a8a10fb-9ca3-367e-a234-cf09f841be4f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.21.82.17-0488 | 141.589MB","type":"vmess","server":"104.21.82.17","port":443,"cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.21.95.165-0522 | 31.098MB","type":"vmess","server":"104.21.95.165","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.26.5.57-0209 | 55.197MB","type":"vmess","server":"russia.com","port":8880,"cipher":"auto","uuid":"06d65689-a12a-467c-9ff8-0363fe90c0b4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.26.7.132-0312 | 1.395MB","type":"vmess","server":"104.26.7.132","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-104.26.8.156-1091 | 2.082MB","type":"vmess","server":"104.26.8.156","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-162.159.140.89-1170 | 2.094MB","type":"vmess","server":"162.159.140.89","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-172.64.198.249-0250 | 2.11MB","type":"vmess","server":"172.64.198.249","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-172.67.132.209-0466 | 108.48MB","type":"vmess","server":"upload.ir","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-172.67.146.10-0472 | 31.211MB","type":"vmess","server":"sareikela.com","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-172.67.170.103-1090 | 128.467MB","type":"vmess","server":"172.67.170.103","port":2095,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-172.67.174.42-2812 | 127.406MB","type":"vmess","server":"hms082.gwdef.sbs","port":443,"cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-172.67.203.227-0541 | 27.009MB","type":"vmess","server":"beyonddbc.sbs","port":443,"cipher":"auto","uuid":"8d90c129-4156-4d6c-9115-24df25f26a02","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-172.67.220.83-0451 | 24.543MB","type":"vmess","server":"lin0502.hwcar.sbs","port":443,"cipher":"auto","uuid":"39cec18f-a439-427c-9a4e-aeb6fcdf6f53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-185.146.173.158-1835 | 24.379MB","type":"vmess","server":"Back.MsV2ray.online","port":80,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-185.146.173.59-0322 | 24.571MB","type":"vmess","server":"185.146.173.59","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-185.146.173.59-1165 | 60.144MB","type":"vmess","server":"185.146.173.59","port":80,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-185.146.173.63-1217 | 21.727MB","type":"vmess","server":"185.146.173.63","port":80,"cipher":"auto","uuid":"b1fecac5-0eb0-440c-ba9b-a937b34881d6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-23.227.38.3-0428 | 2.085MB","type":"vmess","server":"23.227.38.3","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-23.227.38.5-0233 | 1.492MB","type":"vmess","server":"23.227.38.5","port":2086,"cipher":"auto","uuid":"29eebb60-b27b-4a9d-bba5-947763d9205e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RELAY-23.227.38.8-1143 | 2.087MB","type":"vmess","server":"23.227.38.8","port":2086,"cipher":"auto","uuid":"e9e3cc13-db48-4cc1-8c24-7626439a5339","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"RS-194.71.126.31-0729 | 21.557MB","type":"ss","server":"194.71.126.31","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"SE-121.127.46.147-0728 | 22.082MB","type":"ss","server":"121.127.46.147","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"TR-5.188.168.230-0579 | 18.91MB","type":"ss","server":"5.188.168.230","port":51348,"password":"OGKNzzOLNYCmjA03zWXRyIERaxDT93HiN0RGvYbJbaBcwjIn","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇨🇦CA-142.4.216.225-0697 | 22.847MB","type":"ss","server":"142.4.216.225","port":80,"password":"JIhN6rBKkaEboLNXVSv5rq","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇨🇦CA-158.51.121.36-2936 | 77.631MB","type":"vmess","server":"158.51.121.36","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇨🇳TW-1.175.237.10-0741 | 8.18MB","type":"vmess","server":"uu.flmweb.cc","port":40046,"cipher":"auto","uuid":"4a289d53-0f15-4801-94af-89d0109c4532","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇩🇪DE-130.162.47.123-8854 | 24.932MB","type":"vmess","server":"130.162.47.123","port":6854,"cipher":"auto","uuid":"b5f7e932-f730-4ad2-b425-40977b9db332","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇩🇪DE-130.162.47.123-8856 | 25.094MB","type":"vmess","server":"130.162.47.123","port":6854,"cipher":"auto","uuid":"b5f7e932-f730-4ad2-b425-40977b9db332","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇩🇰DK-192.36.27.94-0767 | 2.732MB","type":"ss","server":"192.36.27.94","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇪🇸ES-5.188.181.201-0699 | 26.157MB","type":"ss","server":"5.188.181.201","port":9030,"password":"GeregetR8cvQHzYr","cipher":"aes-256-cfb"}
+  - {"name":"🇪🇸ES-5.188.181.201-0730 | 27.409MB","type":"ss","server":"5.188.181.201","port":9041,"password":"U6qnYRhfyDmn8sgn","cipher":"aes-256-cfb"}
+  - {"name":"🇪🇸ES-5.188.181.201-0737 | 28.394MB","type":"ss","server":"5.188.181.201","port":9037,"password":"TN2YqghxeFDKZfLU","cipher":"aes-256-cfb"}
+  - {"name":"🇪🇸ES-5.188.181.201-0747 | 27.376MB","type":"ss","server":"5.188.181.201","port":9042,"password":"S7KwUu7yBy58S3Ga","cipher":"aes-256-cfb"}
+  - {"name":"🇪🇸ES-5.188.181.201-1534 | 26.943MB","type":"ss","server":"5.188.181.201","port":9031,"password":"BwcAUZk8hUFAkDGN","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷FR-146.19.168.161-0492 | 25.021MB","type":"vmess","server":"az05.beyondy.cfd","port":443,"cipher":"auto","uuid":"3f638f34-8dba-4186-bc43-2716a7ddd4be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇫🇷FR-193.160.130.245-0294 | 24.407MB","type":"vmess","server":"beyonddsz.cfd","port":443,"cipher":"auto","uuid":"9b456c2a-f2c1-45e1-87a9-b7628b04bb24","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇫🇷FR-195.154.169.198-0708 | 26.101MB","type":"ss","server":"195.154.169.198","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷FR-195.154.185.174-0717 | 27.072MB","type":"ss","server":"195.154.185.174","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷FR-51.15.27.48-0706 | 26.996MB","type":"ss","server":"51.15.27.48","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇫🇷FR-51.159.111.208-0711 | 25.568MB","type":"ss","server":"51.159.111.208","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇬🇧 United Kingdom 01 @nodpai","type":"vmess","server":"172.99.190.109","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws"}}
+  - {"name":"🇬🇧GB-212.102.53.194-0102 | 27.999MB","type":"ss","server":"212.102.53.194","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+  - {"name":"🇬🇧GB-212.102.53.195-6030 | 29.057MB","type":"ss","server":"212.102.53.195","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+  - {"name":"🇬🇧GB-212.102.53.196-8425 | 28.711MB","type":"ss","server":"212.102.53.196","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+  - {"name":"🇬🇧GB-212.102.53.197-5932 | 28.255MB","type":"ss","server":"212.102.53.197","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+  - {"name":"🇬🇧GB-212.102.53.78-5114 | 28.739MB","type":"ss","server":"212.102.53.78","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+  - {"name":"🇬🇧GB-212.102.53.80-2928 | 28.548MB","type":"ss","server":"212.102.53.80","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+  - {"name":"🇬🇧GB-212.102.53.81-5931 | 28.443MB","type":"ss","server":"212.102.53.81","port":443,"password":"shadowsocks","cipher":"aes-128-gcm"}
+  - {"name":"🇬🇧GB-77.72.5.150-0704 | 24.311MB","type":"ss","server":"77.72.5.150","port":989,"password":"f8f7aCzcPKbsF8p3","cipher":"aes-256-cfb"}
+  - {"name":"🇭🇰HK-103.30.76.172-0720 | 11.768MB","type":"vmess","server":"103.30.76.172","port":33722,"cipher":"auto","uuid":"0ff2eedc-bb21-4620-9092-9823cf298d76","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇮🇳IN-103.174.86.113-0742 | 7.491MB","type":"ss","server":"103.174.86.113","port":51348,"password":"vZr8MlUXUihNEndqIpjDxQdSeqi37FbgoHBmQ1syy6ZjkbBn","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵JP-13.112.106.148-2863 | 17.573MB","type":"ss","server":"13.112.106.148","port":443,"password":"amazonskr05","cipher":"aes-256-cfb"}
+  - {"name":"🇯🇵JP-152.69.197.74-2395 | 12.863MB","type":"vmess","server":"152.69.197.74","port":12345,"cipher":"auto","uuid":"b8a6bf58-485a-4046-b386-b3661bf65eff","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇯🇵JP-185.172.113.182-0750 | 3.824MB","type":"ss","server":"185.172.113.182","port":809,"password":"G!yBwPWH3Vao","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵JP-185.172.113.182-0753 | 3.854MB","type":"ss","server":"185.172.113.182","port":804,"password":"G!yBwPWH3Vao","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵JP-185.172.113.182-0756 | 3.86MB","type":"ss","server":"185.172.113.182","port":800,"password":"G!yBwPWH3Vao","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵JP-185.172.113.182-0757 | 4.018MB","type":"ss","server":"185.172.113.182","port":811,"password":"G!yBwPWH3Vao","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵JP-185.172.113.182-0758 | 3.732MB","type":"ss","server":"185.172.113.182","port":812,"password":"G!yBwPWH3Vao","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵JP-185.172.113.182-0759 | 3.902MB","type":"ss","server":"185.172.113.182","port":806,"password":"G!yBwPWH3Vao","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇯🇵JP-185.172.113.182-0760 | 3.866MB","type":"ss","server":"185.172.113.182","port":810,"password":"G!yBwPWH3Vao","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇰🇷KR-146.56.191.191-0698 | 14.018MB","type":"trojan","server":"146.56.191.191","port":443,"udp":true,"password":"1dfba761-c1e0-422e-98b6-062da56afb53","sni":"jkrf1.969799.xyz","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇳🇱NL-109.201.152.181-0709 | 27.415MB","type":"ss","server":"109.201.152.181","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"🇷🇺RU-45.153.231.33-0738 | 15.311MB","type":"ss","server":"45.153.231.33","port":46980,"password":"aiHo3hBGF8h1cNg8yqtcO4","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇸🇬SG-213.35.113.150-0731 | 10.911MB","type":"vmess","server":"213.35.113.150","port":80,"cipher":"auto","uuid":"eaf5e01b-f27d-44cf-94ae-87196143eef9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇺🇸 United States 01 @nodpai","type":"vmess","server":"hytron.io","port":8080,"cipher":"auto","uuid":"9c4a3ad3-4f1d-4138-e7ee-8bb5325b411d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇺🇸US-107.173.114.6-0591 | 67.748MB","type":"ss","server":"107.173.114.6","port":30128,"password":"Yc2CtrIz8L","cipher":"aes-128-gcm"}
+  - {"name":"🇺🇸US-107.173.114.6-0596 | 66.236MB","type":"ss","server":"107.173.114.6","port":30129,"password":"Yc2CtrIz8L","cipher":"aes-128-gcm"}
+  - {"name":"🇺🇸US-142.202.49.74-1812 | 1.075MB","type":"ss","server":"142.202.49.74","port":6697,"password":"TEzjfAYq2IjtuoS","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-142.202.49.75-1805 | 1.076MB","type":"ss","server":"142.202.49.75","port":8000,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-184.170.241.194-0682 | 54.688MB","type":"ss","server":"184.170.241.194","port":443,"password":"shadowsocks","cipher":"aes-128-cfb"}
+  - {"name":"🇺🇸US-192.227.206.115-0551 | 56.394MB","type":"ss","server":"192.227.206.115","port":30129,"password":"Yc2CtrIz8L","cipher":"aes-128-gcm"}
+  - {"name":"🇺🇸US-192.3.150.233-8489 | 51.466MB","type":"vmess","server":"192.3.150.233","port":8443,"cipher":"auto","uuid":"a6a37e04-5e81-44c9-be53-baa3ff46eb8b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"🇺🇸US-205.134.180.137-0688 | 59.695MB","type":"ss","server":"205.134.180.137","port":443,"password":"g13S7doXar0A","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸US-205.134.180.139-0689 | 83.936MB","type":"ss","server":"205.134.180.139","port":443,"password":"lWaGPVFjmnag","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸US-205.134.180.145-1564 | 95.266MB","type":"ss","server":"205.134.180.145","port":443,"password":"hgLCgfLRgB6d","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸US-205.134.180.147-0687 | 89.45MB","type":"ss","server":"205.134.180.147","port":443,"password":"9Bvkw5aupNy8","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸US-205.134.180.151-0690 | 84.984MB","type":"ss","server":"205.134.180.151","port":443,"password":"5cp9Z3iWnJZ2","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸US-23.150.152.53-0829 | 1.076MB","type":"ss","server":"23.150.152.53","port":9101,"password":"e4FCWrgpkji3QY","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-23.157.40.103-0841 | 1.075MB","type":"ss","server":"23.157.40.103","port":9101,"password":"e4FCWrgpkji3QY","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-23.157.40.113-0607 | 1.075MB","type":"ss","server":"23.157.40.113","port":7307,"password":"FoOiGlkAA9yPEGP","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-23.157.40.113-0609 | 1.074MB","type":"ss","server":"23.157.40.113","port":8080,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-23.157.40.113-0610 | 1.074MB","type":"ss","server":"23.157.40.113","port":8118,"password":"cdBIDV42DCwnfIN","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-23.157.40.113-0611 | 1.075MB","type":"ss","server":"23.157.40.113","port":7001,"password":"RexnBgU7EV5ADxG","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-23.157.40.113-0614 | 1.079MB","type":"ss","server":"23.157.40.113","port":8882,"password":"kDWvXYZoTBcGkC4","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-23.157.40.87-1827 | 1.075MB","type":"ss","server":"23.157.40.87","port":5498,"password":"lGqs95QkFHo2NV","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-23.157.40.89-0577 | 1.075MB","type":"ss","server":"23.157.40.89","port":8119,"password":"cdBIDV42DCwnfIN","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-23.94.76.55-0694 | 80.437MB","type":"ss","server":"23.94.76.55","port":51981,"password":"06gZKkeC2J","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.107.226.146-0743 | 25.888MB","type":"ss","server":"38.107.226.146","port":1230,"password":"H5S0hvcxRi#YLmgU","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸US-38.110.1.105-0608 | 1.078MB","type":"ss","server":"38.110.1.105","port":5601,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.143-0816 | 1.076MB","type":"ss","server":"38.114.114.143","port":443,"password":"pKEW8JPByTVTLtM","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.143-1591 | 1.076MB","type":"ss","server":"38.114.114.143","port":2376,"password":"faBAoD54k87UJG7","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.158-0852 | 1.074MB","type":"ss","server":"38.114.114.158","port":443,"password":"pKEW8JPByTVTLtM","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.46-0821 | 1.075MB","type":"ss","server":"38.114.114.46","port":8080,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-0828 | 1.075MB","type":"ss","server":"38.114.114.69","port":2376,"password":"faBAoD54k87UJG7","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-0838 | 1.075MB","type":"ss","server":"38.114.114.69","port":6679,"password":"TEzjfAYq2IjtuoS","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-0849 | 1.075MB","type":"ss","server":"38.114.114.69","port":3389,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-1594 | 1.075MB","type":"ss","server":"38.114.114.69","port":7307,"password":"FoOiGlkAA9yPEGP","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-1596 | 1.077MB","type":"ss","server":"38.114.114.69","port":443,"password":"pKEW8JPByTVTLtM","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-1601 | 1.075MB","type":"ss","server":"38.114.114.69","port":4444,"password":"pKEW8JPByTVTLtM","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-1603 | 1.076MB","type":"ss","server":"38.114.114.69","port":5003,"password":"g5MeD6Ft3CWlJId","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-1606 | 1.075MB","type":"ss","server":"38.114.114.69","port":5500,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-1608 | 1.075MB","type":"ss","server":"38.114.114.69","port":8119,"password":"cdBIDV42DCwnfIN","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-6993 | 1.075MB","type":"ss","server":"38.114.114.69","port":8008,"password":"XKFKl2rULjIp74","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-7018 | 1.079MB","type":"ss","server":"38.114.114.69","port":8000,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-7055 | 1.076MB","type":"ss","server":"38.114.114.69","port":8009,"password":"XKFKl2rULjIp74","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.114.114.69-7670 | 1.075MB","type":"ss","server":"38.114.114.69","port":6379,"password":"zDNVedRFPQexG9v","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.142-1613 | 1.075MB","type":"ss","server":"38.121.43.142","port":7306,"password":"FoOiGlkAA9yPEGP","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.142-7496 | 1.078MB","type":"ss","server":"38.121.43.142","port":9101,"password":"e4FCWrgpkji3QY","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.51-0846 | 1.078MB","type":"ss","server":"38.121.43.51","port":2376,"password":"faBAoD54k87UJG7","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.65-0842 | 1.076MB","type":"ss","server":"38.121.43.65","port":2375,"password":"faBAoD54k87UJG7","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-0844 | 1.075MB","type":"ss","server":"38.121.43.71","port":6697,"password":"TEzjfAYq2IjtuoS","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-0853 | 1.076MB","type":"ss","server":"38.121.43.71","port":5004,"password":"g5MeD6Ft3CWlJId","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-0890 | 1.076MB","type":"ss","server":"38.121.43.71","port":8119,"password":"cdBIDV42DCwnfIN","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-0900 | 1.075MB","type":"ss","server":"38.121.43.71","port":8882,"password":"kDWvXYZoTBcGkC4","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1617 | 1.076MB","type":"ss","server":"38.121.43.71","port":5600,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1618 | 1.076MB","type":"ss","server":"38.121.43.71","port":9101,"password":"e4FCWrgpkji3QY","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1620 | 1.076MB","type":"ss","server":"38.121.43.71","port":3306,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1622 | 1.076MB","type":"ss","server":"38.121.43.71","port":2375,"password":"faBAoD54k87UJG7","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1624 | 1.076MB","type":"ss","server":"38.121.43.71","port":5003,"password":"g5MeD6Ft3CWlJId","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1625 | 1.076MB","type":"ss","server":"38.121.43.71","port":6679,"password":"TEzjfAYq2IjtuoS","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1627 | 1.177MB","type":"ss","server":"38.121.43.71","port":8091,"password":"PCnnH6SQSnfoS27","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1628 | 1.076MB","type":"ss","server":"38.121.43.71","port":8888,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1629 | 1.075MB","type":"ss","server":"38.121.43.71","port":5000,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1631 | 1.075MB","type":"ss","server":"38.121.43.71","port":443,"password":"pKEW8JPByTVTLtM","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1632 | 1.076MB","type":"ss","server":"38.121.43.71","port":5500,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1633 | 1.075MB","type":"ss","server":"38.121.43.71","port":5001,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1636 | 1.076MB","type":"ss","server":"38.121.43.71","port":8000,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.71-1638 | 1.074MB","type":"ss","server":"38.121.43.71","port":2376,"password":"faBAoD54k87UJG7","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.97-0557 | 1.075MB","type":"ss","server":"38.121.43.97","port":8119,"password":"cdBIDV42DCwnfIN","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.97-1639 | 1.076MB","type":"ss","server":"38.121.43.97","port":8881,"password":"kDWvXYZoTBcGkC4","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.97-1640 | 1.076MB","type":"ss","server":"38.121.43.97","port":6697,"password":"TEzjfAYq2IjtuoS","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.97-1641 | 1.075MB","type":"ss","server":"38.121.43.97","port":8091,"password":"PCnnH6SQSnfoS27","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.121.43.97-6731 | 1.075MB","type":"ss","server":"38.121.43.97","port":8080,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.143.66.87-0856 | 1.075MB","type":"ss","server":"38.143.66.87","port":6697,"password":"TEzjfAYq2IjtuoS","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.143.66.87-0858 | 1.075MB","type":"ss","server":"38.143.66.87","port":5000,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.143.66.87-1646 | 1.076MB","type":"ss","server":"38.143.66.87","port":3389,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.134.9-0865 | 1.075MB","type":"ss","server":"38.68.134.9","port":5500,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.134.9-1651 | 1.075MB","type":"ss","server":"38.68.134.9","port":6679,"password":"TEzjfAYq2IjtuoS","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.134.9-1656 | 1.075MB","type":"ss","server":"38.68.134.9","port":8000,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.134.9-1659 | 1.075MB","type":"ss","server":"38.68.134.9","port":3306,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.134.9-1660 | 1.078MB","type":"ss","server":"38.68.134.9","port":7001,"password":"RexnBgU7EV5ADxG","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.134.9-6096 | 1.078MB","type":"ss","server":"38.68.134.9","port":8882,"password":"kDWvXYZoTBcGkC4","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.134.9-6109 | 1.074MB","type":"ss","server":"38.68.134.9","port":3389,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.135.19-0857 | 1.075MB","type":"ss","server":"38.68.135.19","port":7001,"password":"RexnBgU7EV5ADxG","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.135.19-1667 | 1.075MB","type":"ss","server":"38.68.135.19","port":8881,"password":"kDWvXYZoTBcGkC4","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.135.19-1668 | 1.074MB","type":"ss","server":"38.68.135.19","port":8090,"password":"PCnnH6SQSnfoS27","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.135.19-1669 | 1.076MB","type":"ss","server":"38.68.135.19","port":5003,"password":"g5MeD6Ft3CWlJId","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.135.19-1671 | 1.075MB","type":"ss","server":"38.68.135.19","port":6379,"password":"zDNVedRFPQexG9v","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.135.19-1675 | 1.181MB","type":"ss","server":"38.68.135.19","port":5001,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.135.19-1677 | 1.075MB","type":"ss","server":"38.68.135.19","port":5004,"password":"g5MeD6Ft3CWlJId","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.68.135.19-1678 | 1.076MB","type":"ss","server":"38.68.135.19","port":2375,"password":"faBAoD54k87UJG7","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.86.135.31-0565 | 1.075MB","type":"ss","server":"38.86.135.31","port":5499,"password":"lGqs95QkFHo2NV","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.86.135.31-0585 | 1.077MB","type":"ss","server":"38.86.135.31","port":5601,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-38.86.135.31-0588 | 1.075MB","type":"ss","server":"38.86.135.31","port":443,"password":"pKEW8JPByTVTLtM","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-40.172.69.111-0745 | 11.355MB","type":"ss","server":"series-a2-mec.varzesh360.co","port":443,"password":"u17T3BvpYaaiuW2c","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🇺🇸US-69.50.92.55-0867 | 1.074MB","type":"ss","server":"69.50.92.55","port":8000,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-69.50.92.82-0864 | 1.076MB","type":"ss","server":"69.50.92.82","port":9090,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-69.50.92.99-1832 | 1.074MB","type":"ss","server":"69.50.92.99","port":6379,"password":"zDNVedRFPQexG9v","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-69.50.95.179-1826 | 1.076MB","type":"ss","server":"69.50.95.179","port":8080,"password":"KixLvKzwjekG00rm","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-69.50.95.180-0860 | 1.076MB","type":"ss","server":"69.50.95.180","port":5000,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-69.50.95.39-1689 | 1.075MB","type":"ss","server":"69.50.95.39","port":9101,"password":"e4FCWrgpkji3QY","cipher":"aes-256-gcm"}
+  - {"name":"🇺🇸US-69.50.95.86-1690 | 1.076MB","type":"ss","server":"69.50.95.86","port":5498,"password":"lGqs95QkFHo2NV","cipher":"aes-256-gcm"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - ⚖️ 负载均衡-轮询
-      - ⚖️ 负载均衡-散列
-      - ♻️ 自动选择
+      - 🔯 故障转移
       - DIRECT
-      - v2rayse_test_1
-      - v2rayse_test_2
-      - v2rayse_test_3
-      - defaultName_1
-      - v2rayse_test_4
-      - defaultName_2
-      - defaultName_3
-      - Hys-1.2.3.4
-      - test
-      - defaultName_4
-  - name: ♻️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+      - BA-185.164.35.9-0734 | 8.727MB
+      - BE-192.71.249.78-0779 | 1.952MB
+      - CO-190.120.231.45-1490 | 4.008MB
+      - CY-45.83.21.66-0732 | 20.247MB
+      - FI-66.151.34.98-1838 | 16.363MB
+      - KZ-213.156.137.67-0740 | 13.552MB
+      - MX-190.103.179.23-0784 | 2.342MB
+      - PA-138.186.142.4-0744 | 4.737MB
+      - RELAY-104.16.148.244-0417 | 1.592MB
+      - RELAY-104.16.60.8-0504 | 6.49MB
+      - RELAY-104.16.60.8-1117 | 24.562MB
+      - RELAY-104.16.60.8-1161 | 78.076MB
+      - RELAY-104.16.60.8-1194 | 58.726MB
+      - RELAY-104.16.60.8-1200 | 3.087MB
+      - RELAY-104.16.61.8-1185 | 25.799MB
+      - RELAY-104.16.61.8-1196 | 54.961MB
+      - RELAY-104.16.61.8-1842 | 31.308MB
+      - RELAY-104.16.68.38-1154 | 112.323MB
+      - RELAY-104.16.68.38-1209 | 25.284MB
+      - RELAY-104.16.68.38-1220 | 116.506MB
+      - RELAY-104.16.68.38-1807 | 114.716MB
+      - RELAY-104.16.68.38-1809 | 30.201MB
+      - RELAY-104.16.97.64-1253 | 21.461MB
+      - RELAY-104.19.124.251-1249 | 11.93MB
+      - RELAY-104.19.32.46-0343 | 1.543MB
+      - RELAY-104.19.32.46-1155 | 1.49MB
+      - RELAY-104.19.42.49-1218 | 2.084MB
+      - RELAY-104.19.45.11-0263 | 1.377MB
+      - RELAY-104.19.46.233-1140 | 2.027MB
+      - RELAY-104.19.46.59-0333 | 2.091MB
+      - RELAY-104.19.47.27-0278 | 1.38MB
+      - RELAY-104.19.47.80-0356 | 2.084MB
+      - RELAY-104.19.47.88-0408 | 2.088MB
+      - RELAY-104.19.51.232-0213 | 1.752MB
+      - RELAY-104.19.59.89-0296 | 2.086MB
+      - RELAY-104.20.17.186-0285 | 1.832MB
+      - RELAY-104.21.24.170-0262 | 139.793MB
+      - RELAY-104.21.24.170-0494 | 189.441MB
+      - RELAY-104.21.52.103-0427 | 25.938MB
+      - RELAY-104.21.61.246-0726 | 23.633MB
+      - RELAY-104.21.71.88-0305 | 7.192MB
+      - RELAY-104.21.82.17-0488 | 141.589MB
+      - RELAY-104.21.95.165-0522 | 31.098MB
+      - RELAY-104.26.5.57-0209 | 55.197MB
+      - RELAY-104.26.7.132-0312 | 1.395MB
+      - RELAY-104.26.8.156-1091 | 2.082MB
+      - RELAY-162.159.140.89-1170 | 2.094MB
+      - RELAY-172.64.198.249-0250 | 2.11MB
+      - RELAY-172.67.132.209-0466 | 108.48MB
+      - RELAY-172.67.146.10-0472 | 31.211MB
+      - RELAY-172.67.170.103-1090 | 128.467MB
+      - RELAY-172.67.174.42-2812 | 127.406MB
+      - RELAY-172.67.203.227-0541 | 27.009MB
+      - RELAY-172.67.220.83-0451 | 24.543MB
+      - RELAY-185.146.173.158-1835 | 24.379MB
+      - RELAY-185.146.173.59-0322 | 24.571MB
+      - RELAY-185.146.173.59-1165 | 60.144MB
+      - RELAY-185.146.173.63-1217 | 21.727MB
+      - RELAY-23.227.38.3-0428 | 2.085MB
+      - RELAY-23.227.38.5-0233 | 1.492MB
+      - RELAY-23.227.38.8-1143 | 2.087MB
+      - RS-194.71.126.31-0729 | 21.557MB
+      - SE-121.127.46.147-0728 | 22.082MB
+      - TR-5.188.168.230-0579 | 18.91MB
+      - 🇨🇦CA-142.4.216.225-0697 | 22.847MB
+      - 🇨🇦CA-158.51.121.36-2936 | 77.631MB
+      - 🇨🇳TW-1.175.237.10-0741 | 8.18MB
+      - 🇩🇪DE-130.162.47.123-8854 | 24.932MB
+      - 🇩🇪DE-130.162.47.123-8856 | 25.094MB
+      - 🇩🇰DK-192.36.27.94-0767 | 2.732MB
+      - 🇪🇸ES-5.188.181.201-0699 | 26.157MB
+      - 🇪🇸ES-5.188.181.201-0730 | 27.409MB
+      - 🇪🇸ES-5.188.181.201-0737 | 28.394MB
+      - 🇪🇸ES-5.188.181.201-0747 | 27.376MB
+      - 🇪🇸ES-5.188.181.201-1534 | 26.943MB
+      - 🇫🇷FR-146.19.168.161-0492 | 25.021MB
+      - 🇫🇷FR-193.160.130.245-0294 | 24.407MB
+      - 🇫🇷FR-195.154.169.198-0708 | 26.101MB
+      - 🇫🇷FR-195.154.185.174-0717 | 27.072MB
+      - 🇫🇷FR-51.15.27.48-0706 | 26.996MB
+      - 🇫🇷FR-51.159.111.208-0711 | 25.568MB
+      - 🇬🇧 United Kingdom 01 @nodpai
+      - 🇬🇧GB-212.102.53.194-0102 | 27.999MB
+      - 🇬🇧GB-212.102.53.195-6030 | 29.057MB
+      - 🇬🇧GB-212.102.53.196-8425 | 28.711MB
+      - 🇬🇧GB-212.102.53.197-5932 | 28.255MB
+      - 🇬🇧GB-212.102.53.78-5114 | 28.739MB
+      - 🇬🇧GB-212.102.53.80-2928 | 28.548MB
+      - 🇬🇧GB-212.102.53.81-5931 | 28.443MB
+      - 🇬🇧GB-77.72.5.150-0704 | 24.311MB
+      - 🇭🇰HK-103.30.76.172-0720 | 11.768MB
+      - 🇮🇳IN-103.174.86.113-0742 | 7.491MB
+      - 🇯🇵JP-13.112.106.148-2863 | 17.573MB
+      - 🇯🇵JP-152.69.197.74-2395 | 12.863MB
+      - 🇯🇵JP-185.172.113.182-0750 | 3.824MB
+      - 🇯🇵JP-185.172.113.182-0753 | 3.854MB
+      - 🇯🇵JP-185.172.113.182-0756 | 3.86MB
+      - 🇯🇵JP-185.172.113.182-0757 | 4.018MB
+      - 🇯🇵JP-185.172.113.182-0758 | 3.732MB
+      - 🇯🇵JP-185.172.113.182-0759 | 3.902MB
+      - 🇯🇵JP-185.172.113.182-0760 | 3.866MB
+      - 🇰🇷KR-146.56.191.191-0698 | 14.018MB
+      - 🇳🇱NL-109.201.152.181-0709 | 27.415MB
+      - 🇷🇺RU-45.153.231.33-0738 | 15.311MB
+      - 🇸🇬SG-213.35.113.150-0731 | 10.911MB
+      - 🇺🇸 United States 01 @nodpai
+      - 🇺🇸US-107.173.114.6-0591 | 67.748MB
+      - 🇺🇸US-107.173.114.6-0596 | 66.236MB
+      - 🇺🇸US-142.202.49.74-1812 | 1.075MB
+      - 🇺🇸US-142.202.49.75-1805 | 1.076MB
+      - 🇺🇸US-184.170.241.194-0682 | 54.688MB
+      - 🇺🇸US-192.227.206.115-0551 | 56.394MB
+      - 🇺🇸US-192.3.150.233-8489 | 51.466MB
+      - 🇺🇸US-205.134.180.137-0688 | 59.695MB
+      - 🇺🇸US-205.134.180.139-0689 | 83.936MB
+      - 🇺🇸US-205.134.180.145-1564 | 95.266MB
+      - 🇺🇸US-205.134.180.147-0687 | 89.45MB
+      - 🇺🇸US-205.134.180.151-0690 | 84.984MB
+      - 🇺🇸US-23.150.152.53-0829 | 1.076MB
+      - 🇺🇸US-23.157.40.103-0841 | 1.075MB
+      - 🇺🇸US-23.157.40.113-0607 | 1.075MB
+      - 🇺🇸US-23.157.40.113-0609 | 1.074MB
+      - 🇺🇸US-23.157.40.113-0610 | 1.074MB
+      - 🇺🇸US-23.157.40.113-0611 | 1.075MB
+      - 🇺🇸US-23.157.40.113-0614 | 1.079MB
+      - 🇺🇸US-23.157.40.87-1827 | 1.075MB
+      - 🇺🇸US-23.157.40.89-0577 | 1.075MB
+      - 🇺🇸US-23.94.76.55-0694 | 80.437MB
+      - 🇺🇸US-38.107.226.146-0743 | 25.888MB
+      - 🇺🇸US-38.110.1.105-0608 | 1.078MB
+      - 🇺🇸US-38.114.114.143-0816 | 1.076MB
+      - 🇺🇸US-38.114.114.143-1591 | 1.076MB
+      - 🇺🇸US-38.114.114.158-0852 | 1.074MB
+      - 🇺🇸US-38.114.114.46-0821 | 1.075MB
+      - 🇺🇸US-38.114.114.69-0828 | 1.075MB
+      - 🇺🇸US-38.114.114.69-0838 | 1.075MB
+      - 🇺🇸US-38.114.114.69-0849 | 1.075MB
+      - 🇺🇸US-38.114.114.69-1594 | 1.075MB
+      - 🇺🇸US-38.114.114.69-1596 | 1.077MB
+      - 🇺🇸US-38.114.114.69-1601 | 1.075MB
+      - 🇺🇸US-38.114.114.69-1603 | 1.076MB
+      - 🇺🇸US-38.114.114.69-1606 | 1.075MB
+      - 🇺🇸US-38.114.114.69-1608 | 1.075MB
+      - 🇺🇸US-38.114.114.69-6993 | 1.075MB
+      - 🇺🇸US-38.114.114.69-7018 | 1.079MB
+      - 🇺🇸US-38.114.114.69-7055 | 1.076MB
+      - 🇺🇸US-38.114.114.69-7670 | 1.075MB
+      - 🇺🇸US-38.121.43.142-1613 | 1.075MB
+      - 🇺🇸US-38.121.43.142-7496 | 1.078MB
+      - 🇺🇸US-38.121.43.51-0846 | 1.078MB
+      - 🇺🇸US-38.121.43.65-0842 | 1.076MB
+      - 🇺🇸US-38.121.43.71-0844 | 1.075MB
+      - 🇺🇸US-38.121.43.71-0853 | 1.076MB
+      - 🇺🇸US-38.121.43.71-0890 | 1.076MB
+      - 🇺🇸US-38.121.43.71-0900 | 1.075MB
+      - 🇺🇸US-38.121.43.71-1617 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1618 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1620 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1622 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1624 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1625 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1627 | 1.177MB
+      - 🇺🇸US-38.121.43.71-1628 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1629 | 1.075MB
+      - 🇺🇸US-38.121.43.71-1631 | 1.075MB
+      - 🇺🇸US-38.121.43.71-1632 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1633 | 1.075MB
+      - 🇺🇸US-38.121.43.71-1636 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1638 | 1.074MB
+      - 🇺🇸US-38.121.43.97-0557 | 1.075MB
+      - 🇺🇸US-38.121.43.97-1639 | 1.076MB
+      - 🇺🇸US-38.121.43.97-1640 | 1.076MB
+      - 🇺🇸US-38.121.43.97-1641 | 1.075MB
+      - 🇺🇸US-38.121.43.97-6731 | 1.075MB
+      - 🇺🇸US-38.143.66.87-0856 | 1.075MB
+      - 🇺🇸US-38.143.66.87-0858 | 1.075MB
+      - 🇺🇸US-38.143.66.87-1646 | 1.076MB
+      - 🇺🇸US-38.68.134.9-0865 | 1.075MB
+      - 🇺🇸US-38.68.134.9-1651 | 1.075MB
+      - 🇺🇸US-38.68.134.9-1656 | 1.075MB
+      - 🇺🇸US-38.68.134.9-1659 | 1.075MB
+      - 🇺🇸US-38.68.134.9-1660 | 1.078MB
+      - 🇺🇸US-38.68.134.9-6096 | 1.078MB
+      - 🇺🇸US-38.68.134.9-6109 | 1.074MB
+      - 🇺🇸US-38.68.135.19-0857 | 1.075MB
+      - 🇺🇸US-38.68.135.19-1667 | 1.075MB
+      - 🇺🇸US-38.68.135.19-1668 | 1.074MB
+      - 🇺🇸US-38.68.135.19-1669 | 1.076MB
+      - 🇺🇸US-38.68.135.19-1671 | 1.075MB
+      - 🇺🇸US-38.68.135.19-1675 | 1.181MB
+      - 🇺🇸US-38.68.135.19-1677 | 1.075MB
+      - 🇺🇸US-38.68.135.19-1678 | 1.076MB
+      - 🇺🇸US-38.86.135.31-0565 | 1.075MB
+      - 🇺🇸US-38.86.135.31-0585 | 1.077MB
+      - 🇺🇸US-38.86.135.31-0588 | 1.075MB
+      - 🇺🇸US-40.172.69.111-0745 | 11.355MB
+      - 🇺🇸US-69.50.92.55-0867 | 1.074MB
+      - 🇺🇸US-69.50.92.82-0864 | 1.076MB
+      - 🇺🇸US-69.50.92.99-1832 | 1.074MB
+      - 🇺🇸US-69.50.95.179-1826 | 1.076MB
+      - 🇺🇸US-69.50.95.180-0860 | 1.076MB
+      - 🇺🇸US-69.50.95.39-1689 | 1.075MB
+      - 🇺🇸US-69.50.95.86-1690 | 1.076MB
+  - name: 🔯 故障转移
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 180
     proxies:
-      - v2rayse_test_1
-      - v2rayse_test_2
-      - v2rayse_test_3
-      - defaultName_1
-      - v2rayse_test_4
-      - defaultName_2
-      - defaultName_3
-      - Hys-1.2.3.4
-      - test
-      - defaultName_4
+      - BA-185.164.35.9-0734 | 8.727MB
+      - BE-192.71.249.78-0779 | 1.952MB
+      - CO-190.120.231.45-1490 | 4.008MB
+      - CY-45.83.21.66-0732 | 20.247MB
+      - FI-66.151.34.98-1838 | 16.363MB
+      - KZ-213.156.137.67-0740 | 13.552MB
+      - MX-190.103.179.23-0784 | 2.342MB
+      - PA-138.186.142.4-0744 | 4.737MB
+      - RELAY-104.16.148.244-0417 | 1.592MB
+      - RELAY-104.16.60.8-0504 | 6.49MB
+      - RELAY-104.16.60.8-1117 | 24.562MB
+      - RELAY-104.16.60.8-1161 | 78.076MB
+      - RELAY-104.16.60.8-1194 | 58.726MB
+      - RELAY-104.16.60.8-1200 | 3.087MB
+      - RELAY-104.16.61.8-1185 | 25.799MB
+      - RELAY-104.16.61.8-1196 | 54.961MB
+      - RELAY-104.16.61.8-1842 | 31.308MB
+      - RELAY-104.16.68.38-1154 | 112.323MB
+      - RELAY-104.16.68.38-1209 | 25.284MB
+      - RELAY-104.16.68.38-1220 | 116.506MB
+      - RELAY-104.16.68.38-1807 | 114.716MB
+      - RELAY-104.16.68.38-1809 | 30.201MB
+      - RELAY-104.16.97.64-1253 | 21.461MB
+      - RELAY-104.19.124.251-1249 | 11.93MB
+      - RELAY-104.19.32.46-0343 | 1.543MB
+      - RELAY-104.19.32.46-1155 | 1.49MB
+      - RELAY-104.19.42.49-1218 | 2.084MB
+      - RELAY-104.19.45.11-0263 | 1.377MB
+      - RELAY-104.19.46.233-1140 | 2.027MB
+      - RELAY-104.19.46.59-0333 | 2.091MB
+      - RELAY-104.19.47.27-0278 | 1.38MB
+      - RELAY-104.19.47.80-0356 | 2.084MB
+      - RELAY-104.19.47.88-0408 | 2.088MB
+      - RELAY-104.19.51.232-0213 | 1.752MB
+      - RELAY-104.19.59.89-0296 | 2.086MB
+      - RELAY-104.20.17.186-0285 | 1.832MB
+      - RELAY-104.21.24.170-0262 | 139.793MB
+      - RELAY-104.21.24.170-0494 | 189.441MB
+      - RELAY-104.21.52.103-0427 | 25.938MB
+      - RELAY-104.21.61.246-0726 | 23.633MB
+      - RELAY-104.21.71.88-0305 | 7.192MB
+      - RELAY-104.21.82.17-0488 | 141.589MB
+      - RELAY-104.21.95.165-0522 | 31.098MB
+      - RELAY-104.26.5.57-0209 | 55.197MB
+      - RELAY-104.26.7.132-0312 | 1.395MB
+      - RELAY-104.26.8.156-1091 | 2.082MB
+      - RELAY-162.159.140.89-1170 | 2.094MB
+      - RELAY-172.64.198.249-0250 | 2.11MB
+      - RELAY-172.67.132.209-0466 | 108.48MB
+      - RELAY-172.67.146.10-0472 | 31.211MB
+      - RELAY-172.67.170.103-1090 | 128.467MB
+      - RELAY-172.67.174.42-2812 | 127.406MB
+      - RELAY-172.67.203.227-0541 | 27.009MB
+      - RELAY-172.67.220.83-0451 | 24.543MB
+      - RELAY-185.146.173.158-1835 | 24.379MB
+      - RELAY-185.146.173.59-0322 | 24.571MB
+      - RELAY-185.146.173.59-1165 | 60.144MB
+      - RELAY-185.146.173.63-1217 | 21.727MB
+      - RELAY-23.227.38.3-0428 | 2.085MB
+      - RELAY-23.227.38.5-0233 | 1.492MB
+      - RELAY-23.227.38.8-1143 | 2.087MB
+      - RS-194.71.126.31-0729 | 21.557MB
+      - SE-121.127.46.147-0728 | 22.082MB
+      - TR-5.188.168.230-0579 | 18.91MB
+      - 🇨🇦CA-142.4.216.225-0697 | 22.847MB
+      - 🇨🇦CA-158.51.121.36-2936 | 77.631MB
+      - 🇨🇳TW-1.175.237.10-0741 | 8.18MB
+      - 🇩🇪DE-130.162.47.123-8854 | 24.932MB
+      - 🇩🇪DE-130.162.47.123-8856 | 25.094MB
+      - 🇩🇰DK-192.36.27.94-0767 | 2.732MB
+      - 🇪🇸ES-5.188.181.201-0699 | 26.157MB
+      - 🇪🇸ES-5.188.181.201-0730 | 27.409MB
+      - 🇪🇸ES-5.188.181.201-0737 | 28.394MB
+      - 🇪🇸ES-5.188.181.201-0747 | 27.376MB
+      - 🇪🇸ES-5.188.181.201-1534 | 26.943MB
+      - 🇫🇷FR-146.19.168.161-0492 | 25.021MB
+      - 🇫🇷FR-193.160.130.245-0294 | 24.407MB
+      - 🇫🇷FR-195.154.169.198-0708 | 26.101MB
+      - 🇫🇷FR-195.154.185.174-0717 | 27.072MB
+      - 🇫🇷FR-51.15.27.48-0706 | 26.996MB
+      - 🇫🇷FR-51.159.111.208-0711 | 25.568MB
+      - 🇬🇧 United Kingdom 01 @nodpai
+      - 🇬🇧GB-212.102.53.194-0102 | 27.999MB
+      - 🇬🇧GB-212.102.53.195-6030 | 29.057MB
+      - 🇬🇧GB-212.102.53.196-8425 | 28.711MB
+      - 🇬🇧GB-212.102.53.197-5932 | 28.255MB
+      - 🇬🇧GB-212.102.53.78-5114 | 28.739MB
+      - 🇬🇧GB-212.102.53.80-2928 | 28.548MB
+      - 🇬🇧GB-212.102.53.81-5931 | 28.443MB
+      - 🇬🇧GB-77.72.5.150-0704 | 24.311MB
+      - 🇭🇰HK-103.30.76.172-0720 | 11.768MB
+      - 🇮🇳IN-103.174.86.113-0742 | 7.491MB
+      - 🇯🇵JP-13.112.106.148-2863 | 17.573MB
+      - 🇯🇵JP-152.69.197.74-2395 | 12.863MB
+      - 🇯🇵JP-185.172.113.182-0750 | 3.824MB
+      - 🇯🇵JP-185.172.113.182-0753 | 3.854MB
+      - 🇯🇵JP-185.172.113.182-0756 | 3.86MB
+      - 🇯🇵JP-185.172.113.182-0757 | 4.018MB
+      - 🇯🇵JP-185.172.113.182-0758 | 3.732MB
+      - 🇯🇵JP-185.172.113.182-0759 | 3.902MB
+      - 🇯🇵JP-185.172.113.182-0760 | 3.866MB
+      - 🇰🇷KR-146.56.191.191-0698 | 14.018MB
+      - 🇳🇱NL-109.201.152.181-0709 | 27.415MB
+      - 🇷🇺RU-45.153.231.33-0738 | 15.311MB
+      - 🇸🇬SG-213.35.113.150-0731 | 10.911MB
+      - 🇺🇸 United States 01 @nodpai
+      - 🇺🇸US-107.173.114.6-0591 | 67.748MB
+      - 🇺🇸US-107.173.114.6-0596 | 66.236MB
+      - 🇺🇸US-142.202.49.74-1812 | 1.075MB
+      - 🇺🇸US-142.202.49.75-1805 | 1.076MB
+      - 🇺🇸US-184.170.241.194-0682 | 54.688MB
+      - 🇺🇸US-192.227.206.115-0551 | 56.394MB
+      - 🇺🇸US-192.3.150.233-8489 | 51.466MB
+      - 🇺🇸US-205.134.180.137-0688 | 59.695MB
+      - 🇺🇸US-205.134.180.139-0689 | 83.936MB
+      - 🇺🇸US-205.134.180.145-1564 | 95.266MB
+      - 🇺🇸US-205.134.180.147-0687 | 89.45MB
+      - 🇺🇸US-205.134.180.151-0690 | 84.984MB
+      - 🇺🇸US-23.150.152.53-0829 | 1.076MB
+      - 🇺🇸US-23.157.40.103-0841 | 1.075MB
+      - 🇺🇸US-23.157.40.113-0607 | 1.075MB
+      - 🇺🇸US-23.157.40.113-0609 | 1.074MB
+      - 🇺🇸US-23.157.40.113-0610 | 1.074MB
+      - 🇺🇸US-23.157.40.113-0611 | 1.075MB
+      - 🇺🇸US-23.157.40.113-0614 | 1.079MB
+      - 🇺🇸US-23.157.40.87-1827 | 1.075MB
+      - 🇺🇸US-23.157.40.89-0577 | 1.075MB
+      - 🇺🇸US-23.94.76.55-0694 | 80.437MB
+      - 🇺🇸US-38.107.226.146-0743 | 25.888MB
+      - 🇺🇸US-38.110.1.105-0608 | 1.078MB
+      - 🇺🇸US-38.114.114.143-0816 | 1.076MB
+      - 🇺🇸US-38.114.114.143-1591 | 1.076MB
+      - 🇺🇸US-38.114.114.158-0852 | 1.074MB
+      - 🇺🇸US-38.114.114.46-0821 | 1.075MB
+      - 🇺🇸US-38.114.114.69-0828 | 1.075MB
+      - 🇺🇸US-38.114.114.69-0838 | 1.075MB
+      - 🇺🇸US-38.114.114.69-0849 | 1.075MB
+      - 🇺🇸US-38.114.114.69-1594 | 1.075MB
+      - 🇺🇸US-38.114.114.69-1596 | 1.077MB
+      - 🇺🇸US-38.114.114.69-1601 | 1.075MB
+      - 🇺🇸US-38.114.114.69-1603 | 1.076MB
+      - 🇺🇸US-38.114.114.69-1606 | 1.075MB
+      - 🇺🇸US-38.114.114.69-1608 | 1.075MB
+      - 🇺🇸US-38.114.114.69-6993 | 1.075MB
+      - 🇺🇸US-38.114.114.69-7018 | 1.079MB
+      - 🇺🇸US-38.114.114.69-7055 | 1.076MB
+      - 🇺🇸US-38.114.114.69-7670 | 1.075MB
+      - 🇺🇸US-38.121.43.142-1613 | 1.075MB
+      - 🇺🇸US-38.121.43.142-7496 | 1.078MB
+      - 🇺🇸US-38.121.43.51-0846 | 1.078MB
+      - 🇺🇸US-38.121.43.65-0842 | 1.076MB
+      - 🇺🇸US-38.121.43.71-0844 | 1.075MB
+      - 🇺🇸US-38.121.43.71-0853 | 1.076MB
+      - 🇺🇸US-38.121.43.71-0890 | 1.076MB
+      - 🇺🇸US-38.121.43.71-0900 | 1.075MB
+      - 🇺🇸US-38.121.43.71-1617 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1618 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1620 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1622 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1624 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1625 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1627 | 1.177MB
+      - 🇺🇸US-38.121.43.71-1628 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1629 | 1.075MB
+      - 🇺🇸US-38.121.43.71-1631 | 1.075MB
+      - 🇺🇸US-38.121.43.71-1632 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1633 | 1.075MB
+      - 🇺🇸US-38.121.43.71-1636 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1638 | 1.074MB
+      - 🇺🇸US-38.121.43.97-0557 | 1.075MB
+      - 🇺🇸US-38.121.43.97-1639 | 1.076MB
+      - 🇺🇸US-38.121.43.97-1640 | 1.076MB
+      - 🇺🇸US-38.121.43.97-1641 | 1.075MB
+      - 🇺🇸US-38.121.43.97-6731 | 1.075MB
+      - 🇺🇸US-38.143.66.87-0856 | 1.075MB
+      - 🇺🇸US-38.143.66.87-0858 | 1.075MB
+      - 🇺🇸US-38.143.66.87-1646 | 1.076MB
+      - 🇺🇸US-38.68.134.9-0865 | 1.075MB
+      - 🇺🇸US-38.68.134.9-1651 | 1.075MB
+      - 🇺🇸US-38.68.134.9-1656 | 1.075MB
+      - 🇺🇸US-38.68.134.9-1659 | 1.075MB
+      - 🇺🇸US-38.68.134.9-1660 | 1.078MB
+      - 🇺🇸US-38.68.134.9-6096 | 1.078MB
+      - 🇺🇸US-38.68.134.9-6109 | 1.074MB
+      - 🇺🇸US-38.68.135.19-0857 | 1.075MB
+      - 🇺🇸US-38.68.135.19-1667 | 1.075MB
+      - 🇺🇸US-38.68.135.19-1668 | 1.074MB
+      - 🇺🇸US-38.68.135.19-1669 | 1.076MB
+      - 🇺🇸US-38.68.135.19-1671 | 1.075MB
+      - 🇺🇸US-38.68.135.19-1675 | 1.181MB
+      - 🇺🇸US-38.68.135.19-1677 | 1.075MB
+      - 🇺🇸US-38.68.135.19-1678 | 1.076MB
+      - 🇺🇸US-38.86.135.31-0565 | 1.075MB
+      - 🇺🇸US-38.86.135.31-0585 | 1.077MB
+      - 🇺🇸US-38.86.135.31-0588 | 1.075MB
+      - 🇺🇸US-40.172.69.111-0745 | 11.355MB
+      - 🇺🇸US-69.50.92.55-0867 | 1.074MB
+      - 🇺🇸US-69.50.92.82-0864 | 1.076MB
+      - 🇺🇸US-69.50.92.99-1832 | 1.074MB
+      - 🇺🇸US-69.50.95.179-1826 | 1.076MB
+      - 🇺🇸US-69.50.95.180-0860 | 1.076MB
+      - 🇺🇸US-69.50.95.39-1689 | 1.075MB
+      - 🇺🇸US-69.50.95.86-1690 | 1.076MB
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - ♻️ 自动选择
+      - 🔯 故障转移
   - name: 🛑 全球拦截
     type: select
     proxies:
       - REJECT
       - DIRECT
-  - name: ⚖️ 负载均衡-散列
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-      - v2rayse_test_1
-      - v2rayse_test_2
-      - v2rayse_test_3
-      - defaultName_1
-      - v2rayse_test_4
-      - defaultName_2
-      - defaultName_3
-      - Hys-1.2.3.4
-      - test
-      - defaultName_4
-    strategy: consistent-hashing
-  - name: ⚖️ 负载均衡-轮询
-    type: load-balance
-    url: http://www.google.com/generate_204
-    interval: 300
-    proxies:
-      - DIRECT
-      - v2rayse_test_1
-      - v2rayse_test_2
-      - v2rayse_test_3
-      - defaultName_1
-      - v2rayse_test_4
-      - defaultName_2
-      - defaultName_3
-      - Hys-1.2.3.4
-      - test
-      - defaultName_4
-    strategy: round-robin
   - name: 🐟 漏网之鱼
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ♻️ 自动选择
-      - v2rayse_test_1
-      - v2rayse_test_2
-      - v2rayse_test_3
-      - defaultName_1
-      - v2rayse_test_4
-      - defaultName_2
-      - defaultName_3
-      - Hys-1.2.3.4
-      - test
-      - defaultName_4
+      - 🔯 故障转移
+      - BA-185.164.35.9-0734 | 8.727MB
+      - BE-192.71.249.78-0779 | 1.952MB
+      - CO-190.120.231.45-1490 | 4.008MB
+      - CY-45.83.21.66-0732 | 20.247MB
+      - FI-66.151.34.98-1838 | 16.363MB
+      - KZ-213.156.137.67-0740 | 13.552MB
+      - MX-190.103.179.23-0784 | 2.342MB
+      - PA-138.186.142.4-0744 | 4.737MB
+      - RELAY-104.16.148.244-0417 | 1.592MB
+      - RELAY-104.16.60.8-0504 | 6.49MB
+      - RELAY-104.16.60.8-1117 | 24.562MB
+      - RELAY-104.16.60.8-1161 | 78.076MB
+      - RELAY-104.16.60.8-1194 | 58.726MB
+      - RELAY-104.16.60.8-1200 | 3.087MB
+      - RELAY-104.16.61.8-1185 | 25.799MB
+      - RELAY-104.16.61.8-1196 | 54.961MB
+      - RELAY-104.16.61.8-1842 | 31.308MB
+      - RELAY-104.16.68.38-1154 | 112.323MB
+      - RELAY-104.16.68.38-1209 | 25.284MB
+      - RELAY-104.16.68.38-1220 | 116.506MB
+      - RELAY-104.16.68.38-1807 | 114.716MB
+      - RELAY-104.16.68.38-1809 | 30.201MB
+      - RELAY-104.16.97.64-1253 | 21.461MB
+      - RELAY-104.19.124.251-1249 | 11.93MB
+      - RELAY-104.19.32.46-0343 | 1.543MB
+      - RELAY-104.19.32.46-1155 | 1.49MB
+      - RELAY-104.19.42.49-1218 | 2.084MB
+      - RELAY-104.19.45.11-0263 | 1.377MB
+      - RELAY-104.19.46.233-1140 | 2.027MB
+      - RELAY-104.19.46.59-0333 | 2.091MB
+      - RELAY-104.19.47.27-0278 | 1.38MB
+      - RELAY-104.19.47.80-0356 | 2.084MB
+      - RELAY-104.19.47.88-0408 | 2.088MB
+      - RELAY-104.19.51.232-0213 | 1.752MB
+      - RELAY-104.19.59.89-0296 | 2.086MB
+      - RELAY-104.20.17.186-0285 | 1.832MB
+      - RELAY-104.21.24.170-0262 | 139.793MB
+      - RELAY-104.21.24.170-0494 | 189.441MB
+      - RELAY-104.21.52.103-0427 | 25.938MB
+      - RELAY-104.21.61.246-0726 | 23.633MB
+      - RELAY-104.21.71.88-0305 | 7.192MB
+      - RELAY-104.21.82.17-0488 | 141.589MB
+      - RELAY-104.21.95.165-0522 | 31.098MB
+      - RELAY-104.26.5.57-0209 | 55.197MB
+      - RELAY-104.26.7.132-0312 | 1.395MB
+      - RELAY-104.26.8.156-1091 | 2.082MB
+      - RELAY-162.159.140.89-1170 | 2.094MB
+      - RELAY-172.64.198.249-0250 | 2.11MB
+      - RELAY-172.67.132.209-0466 | 108.48MB
+      - RELAY-172.67.146.10-0472 | 31.211MB
+      - RELAY-172.67.170.103-1090 | 128.467MB
+      - RELAY-172.67.174.42-2812 | 127.406MB
+      - RELAY-172.67.203.227-0541 | 27.009MB
+      - RELAY-172.67.220.83-0451 | 24.543MB
+      - RELAY-185.146.173.158-1835 | 24.379MB
+      - RELAY-185.146.173.59-0322 | 24.571MB
+      - RELAY-185.146.173.59-1165 | 60.144MB
+      - RELAY-185.146.173.63-1217 | 21.727MB
+      - RELAY-23.227.38.3-0428 | 2.085MB
+      - RELAY-23.227.38.5-0233 | 1.492MB
+      - RELAY-23.227.38.8-1143 | 2.087MB
+      - RS-194.71.126.31-0729 | 21.557MB
+      - SE-121.127.46.147-0728 | 22.082MB
+      - TR-5.188.168.230-0579 | 18.91MB
+      - 🇨🇦CA-142.4.216.225-0697 | 22.847MB
+      - 🇨🇦CA-158.51.121.36-2936 | 77.631MB
+      - 🇨🇳TW-1.175.237.10-0741 | 8.18MB
+      - 🇩🇪DE-130.162.47.123-8854 | 24.932MB
+      - 🇩🇪DE-130.162.47.123-8856 | 25.094MB
+      - 🇩🇰DK-192.36.27.94-0767 | 2.732MB
+      - 🇪🇸ES-5.188.181.201-0699 | 26.157MB
+      - 🇪🇸ES-5.188.181.201-0730 | 27.409MB
+      - 🇪🇸ES-5.188.181.201-0737 | 28.394MB
+      - 🇪🇸ES-5.188.181.201-0747 | 27.376MB
+      - 🇪🇸ES-5.188.181.201-1534 | 26.943MB
+      - 🇫🇷FR-146.19.168.161-0492 | 25.021MB
+      - 🇫🇷FR-193.160.130.245-0294 | 24.407MB
+      - 🇫🇷FR-195.154.169.198-0708 | 26.101MB
+      - 🇫🇷FR-195.154.185.174-0717 | 27.072MB
+      - 🇫🇷FR-51.15.27.48-0706 | 26.996MB
+      - 🇫🇷FR-51.159.111.208-0711 | 25.568MB
+      - 🇬🇧 United Kingdom 01 @nodpai
+      - 🇬🇧GB-212.102.53.194-0102 | 27.999MB
+      - 🇬🇧GB-212.102.53.195-6030 | 29.057MB
+      - 🇬🇧GB-212.102.53.196-8425 | 28.711MB
+      - 🇬🇧GB-212.102.53.197-5932 | 28.255MB
+      - 🇬🇧GB-212.102.53.78-5114 | 28.739MB
+      - 🇬🇧GB-212.102.53.80-2928 | 28.548MB
+      - 🇬🇧GB-212.102.53.81-5931 | 28.443MB
+      - 🇬🇧GB-77.72.5.150-0704 | 24.311MB
+      - 🇭🇰HK-103.30.76.172-0720 | 11.768MB
+      - 🇮🇳IN-103.174.86.113-0742 | 7.491MB
+      - 🇯🇵JP-13.112.106.148-2863 | 17.573MB
+      - 🇯🇵JP-152.69.197.74-2395 | 12.863MB
+      - 🇯🇵JP-185.172.113.182-0750 | 3.824MB
+      - 🇯🇵JP-185.172.113.182-0753 | 3.854MB
+      - 🇯🇵JP-185.172.113.182-0756 | 3.86MB
+      - 🇯🇵JP-185.172.113.182-0757 | 4.018MB
+      - 🇯🇵JP-185.172.113.182-0758 | 3.732MB
+      - 🇯🇵JP-185.172.113.182-0759 | 3.902MB
+      - 🇯🇵JP-185.172.113.182-0760 | 3.866MB
+      - 🇰🇷KR-146.56.191.191-0698 | 14.018MB
+      - 🇳🇱NL-109.201.152.181-0709 | 27.415MB
+      - 🇷🇺RU-45.153.231.33-0738 | 15.311MB
+      - 🇸🇬SG-213.35.113.150-0731 | 10.911MB
+      - 🇺🇸 United States 01 @nodpai
+      - 🇺🇸US-107.173.114.6-0591 | 67.748MB
+      - 🇺🇸US-107.173.114.6-0596 | 66.236MB
+      - 🇺🇸US-142.202.49.74-1812 | 1.075MB
+      - 🇺🇸US-142.202.49.75-1805 | 1.076MB
+      - 🇺🇸US-184.170.241.194-0682 | 54.688MB
+      - 🇺🇸US-192.227.206.115-0551 | 56.394MB
+      - 🇺🇸US-192.3.150.233-8489 | 51.466MB
+      - 🇺🇸US-205.134.180.137-0688 | 59.695MB
+      - 🇺🇸US-205.134.180.139-0689 | 83.936MB
+      - 🇺🇸US-205.134.180.145-1564 | 95.266MB
+      - 🇺🇸US-205.134.180.147-0687 | 89.45MB
+      - 🇺🇸US-205.134.180.151-0690 | 84.984MB
+      - 🇺🇸US-23.150.152.53-0829 | 1.076MB
+      - 🇺🇸US-23.157.40.103-0841 | 1.075MB
+      - 🇺🇸US-23.157.40.113-0607 | 1.075MB
+      - 🇺🇸US-23.157.40.113-0609 | 1.074MB
+      - 🇺🇸US-23.157.40.113-0610 | 1.074MB
+      - 🇺🇸US-23.157.40.113-0611 | 1.075MB
+      - 🇺🇸US-23.157.40.113-0614 | 1.079MB
+      - 🇺🇸US-23.157.40.87-1827 | 1.075MB
+      - 🇺🇸US-23.157.40.89-0577 | 1.075MB
+      - 🇺🇸US-23.94.76.55-0694 | 80.437MB
+      - 🇺🇸US-38.107.226.146-0743 | 25.888MB
+      - 🇺🇸US-38.110.1.105-0608 | 1.078MB
+      - 🇺🇸US-38.114.114.143-0816 | 1.076MB
+      - 🇺🇸US-38.114.114.143-1591 | 1.076MB
+      - 🇺🇸US-38.114.114.158-0852 | 1.074MB
+      - 🇺🇸US-38.114.114.46-0821 | 1.075MB
+      - 🇺🇸US-38.114.114.69-0828 | 1.075MB
+      - 🇺🇸US-38.114.114.69-0838 | 1.075MB
+      - 🇺🇸US-38.114.114.69-0849 | 1.075MB
+      - 🇺🇸US-38.114.114.69-1594 | 1.075MB
+      - 🇺🇸US-38.114.114.69-1596 | 1.077MB
+      - 🇺🇸US-38.114.114.69-1601 | 1.075MB
+      - 🇺🇸US-38.114.114.69-1603 | 1.076MB
+      - 🇺🇸US-38.114.114.69-1606 | 1.075MB
+      - 🇺🇸US-38.114.114.69-1608 | 1.075MB
+      - 🇺🇸US-38.114.114.69-6993 | 1.075MB
+      - 🇺🇸US-38.114.114.69-7018 | 1.079MB
+      - 🇺🇸US-38.114.114.69-7055 | 1.076MB
+      - 🇺🇸US-38.114.114.69-7670 | 1.075MB
+      - 🇺🇸US-38.121.43.142-1613 | 1.075MB
+      - 🇺🇸US-38.121.43.142-7496 | 1.078MB
+      - 🇺🇸US-38.121.43.51-0846 | 1.078MB
+      - 🇺🇸US-38.121.43.65-0842 | 1.076MB
+      - 🇺🇸US-38.121.43.71-0844 | 1.075MB
+      - 🇺🇸US-38.121.43.71-0853 | 1.076MB
+      - 🇺🇸US-38.121.43.71-0890 | 1.076MB
+      - 🇺🇸US-38.121.43.71-0900 | 1.075MB
+      - 🇺🇸US-38.121.43.71-1617 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1618 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1620 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1622 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1624 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1625 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1627 | 1.177MB
+      - 🇺🇸US-38.121.43.71-1628 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1629 | 1.075MB
+      - 🇺🇸US-38.121.43.71-1631 | 1.075MB
+      - 🇺🇸US-38.121.43.71-1632 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1633 | 1.075MB
+      - 🇺🇸US-38.121.43.71-1636 | 1.076MB
+      - 🇺🇸US-38.121.43.71-1638 | 1.074MB
+      - 🇺🇸US-38.121.43.97-0557 | 1.075MB
+      - 🇺🇸US-38.121.43.97-1639 | 1.076MB
+      - 🇺🇸US-38.121.43.97-1640 | 1.076MB
+      - 🇺🇸US-38.121.43.97-1641 | 1.075MB
+      - 🇺🇸US-38.121.43.97-6731 | 1.075MB
+      - 🇺🇸US-38.143.66.87-0856 | 1.075MB
+      - 🇺🇸US-38.143.66.87-0858 | 1.075MB
+      - 🇺🇸US-38.143.66.87-1646 | 1.076MB
+      - 🇺🇸US-38.68.134.9-0865 | 1.075MB
+      - 🇺🇸US-38.68.134.9-1651 | 1.075MB
+      - 🇺🇸US-38.68.134.9-1656 | 1.075MB
+      - 🇺🇸US-38.68.134.9-1659 | 1.075MB
+      - 🇺🇸US-38.68.134.9-1660 | 1.078MB
+      - 🇺🇸US-38.68.134.9-6096 | 1.078MB
+      - 🇺🇸US-38.68.134.9-6109 | 1.074MB
+      - 🇺🇸US-38.68.135.19-0857 | 1.075MB
+      - 🇺🇸US-38.68.135.19-1667 | 1.075MB
+      - 🇺🇸US-38.68.135.19-1668 | 1.074MB
+      - 🇺🇸US-38.68.135.19-1669 | 1.076MB
+      - 🇺🇸US-38.68.135.19-1671 | 1.075MB
+      - 🇺🇸US-38.68.135.19-1675 | 1.181MB
+      - 🇺🇸US-38.68.135.19-1677 | 1.075MB
+      - 🇺🇸US-38.68.135.19-1678 | 1.076MB
+      - 🇺🇸US-38.86.135.31-0565 | 1.075MB
+      - 🇺🇸US-38.86.135.31-0585 | 1.077MB
+      - 🇺🇸US-38.86.135.31-0588 | 1.075MB
+      - 🇺🇸US-40.172.69.111-0745 | 11.355MB
+      - 🇺🇸US-69.50.92.55-0867 | 1.074MB
+      - 🇺🇸US-69.50.92.82-0864 | 1.076MB
+      - 🇺🇸US-69.50.92.99-1832 | 1.074MB
+      - 🇺🇸US-69.50.95.179-1826 | 1.076MB
+      - 🇺🇸US-69.50.95.180-0860 | 1.076MB
+      - 🇺🇸US-69.50.95.39-1689 | 1.075MB
+      - 🇺🇸US-69.50.95.86-1690 | 1.076MB
 
 rules:
+# 本地/局域网地址
+# 参考：https://en.wikipedia.org/wiki/Reserved_IP_addresses
+# ACL4SSR标志 如没有，代表不是用ACL4SSR规则
+# 本地/局域网地址
+# Router managed 路由器管理域名
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
@@ -229,6 +967,12 @@ rules:
   - DOMAIN-SUFFIX,zte.home,🎯 全球直连
   - DOMAIN-SUFFIX,tplogin.cn,🎯 全球直连
   - DOMAIN-SUFFIX,wifi.cmcc,🎯 全球直连
+# 本碎片只包含常见广告关键字、广告联盟。无副作用，放心使用
+# 广告关键词
+# 广告联盟-国内****************
+# 广告联盟-国外****************
+# 垃圾站点****************
+# 运营商广告****************
   - DOMAIN-KEYWORD,admarvel,🛑 全球拦截
   - DOMAIN-KEYWORD,admaster,🛑 全球拦截
   - DOMAIN-KEYWORD,adsage,🛑 全球拦截
@@ -546,7 +1290,6 @@ rules:
   - DOMAIN-SUFFIX,rtbasia.com,🛑 全球拦截
   - DOMAIN-SUFFIX,sanya1.com,🛑 全球拦截
   - DOMAIN-SUFFIX,scupio.com,🛑 全球拦截
-  - DOMAIN-SUFFIX,serving-sys.com,🛑 全球拦截
   - DOMAIN-SUFFIX,shuiguo.com,🛑 全球拦截
   - DOMAIN-SUFFIX,shuzilm.cn,🛑 全球拦截
   - DOMAIN-SUFFIX,similarweb.com,🛑 全球拦截
@@ -614,6 +1357,7 @@ rules:
   - DOMAIN-SUFFIX,wqmobile.com,🛑 全球拦截
   - DOMAIN-SUFFIX,wrating.com,🛑 全球拦截
   - DOMAIN-SUFFIX,wumii.cn,🛑 全球拦截
+  - DOMAIN-SUFFIX,wwads.cn,🛑 全球拦截
   - DOMAIN-SUFFIX,xcy8.com,🛑 全球拦截
   - DOMAIN-SUFFIX,xdrig.com,🛑 全球拦截
   - DOMAIN-SUFFIX,xiaozhen.com,🛑 全球拦截
@@ -820,6 +1564,66 @@ rules:
   - DOMAIN-SUFFIX,go.10086.cn,🛑 全球拦截
   - DOMAIN-SUFFIX,hivedata.cc,🛑 全球拦截
   - DOMAIN-SUFFIX,navi.gd.chinamobile.com,🛑 全球拦截
+# 包含常用应用的各种去广告规则。
+# 可能有轻微副作用，可放心使用。（如果网站功能和广告冲突，会删掉去广告规则）
+# 163
+# 17173
+# 178
+# 2345
+# 360
+# 58
+# Alibaba
+# Adobe
+# Apple
+# AutoHome
+# Baidu
+# Book-app 起点 掌阅 书旗 宜搜
+# ByteDance 头条抖音
+# Dangdang
+# Duomi
+# Facebook
+# Fang
+# Google
+# JD
+# Kugou
+# Kuwo
+# Meizu flyme 魅族
+# Meitu
+# Miui 小米
+# Moji
+# Qingting.fm
+# QQ
+# RenRen
+# Sina
+# Sougou
+# Teleplus
+# Twitter
+# UC ali
+# Weifeng
+# WPS Office
+# Wi-Fi key
+# Ximalaya 喜马拉雅
+# Xunlei 迅雷app&看看
+# Yahoo
+# Zhihu
+# Ads in Video apps 下面都是 ********************
+# 6间房
+# Baofeng 暴风影音
+# Douyu
+# Fenghuang 凤凰TV
+# Funshion 风行
+# iqiyi PPS 爱奇艺
+# Ku6 酷6
+# LeTV 乐视
+# MGTV 芒果TV
+# Sohu 搜狐
+# PPTV、PPLive
+# QQ Live
+# Youku & Tudou
+# Youtube
+# Others ads in Video apps
+# Ads in Video apps end 上面都是 ********************
+# 常用网站广告
   - DOMAIN-SUFFIX,a.youdao.com,🛑 全球拦截
   - DOMAIN-SUFFIX,adgeo.corp.163.com,🛑 全球拦截
   - DOMAIN-SUFFIX,analytics.126.net,🛑 全球拦截
@@ -1843,6 +2647,7 @@ rules:
   - DOMAIN-SUFFIX,tralog.ganji.com,🛑 全球拦截
   - DOMAIN-SUFFIX,up.qingdaonews.com,🛑 全球拦截
   - DOMAIN-SUFFIX,vaserviece.10jqka.com.cn,🛑 全球拦截
+# Google China
   - DOMAIN-SUFFIX,265.com,🎯 全球直连
   - DOMAIN-SUFFIX,2mdn.net,🎯 全球直连
   - DOMAIN-SUFFIX,alt1-mtalk.google.com,🎯 全球直连
@@ -1872,6 +2677,8 @@ rules:
   - DOMAIN-SUFFIX,tools.google.com,🎯 全球直连
   - DOMAIN-SUFFIX,tools.l.google.com,🎯 全球直连
   - DOMAIN-SUFFIX,www-googletagmanager.l.google.com,🎯 全球直连
+# 内容：SteamCN
+# 数量：16条
   - DOMAIN,csgo.wmsj.cn,🎯 全球直连
   - DOMAIN,dl.steam.clngaa.com,🎯 全球直连
   - DOMAIN,dl.steam.ksyna.com,🎯 全球直连
@@ -1888,10 +2695,14 @@ rules:
   - DOMAIN-SUFFIX,steamchina.com,🎯 全球直连
   - DOMAIN-SUFFIX,steamcontent.com,🎯 全球直连
   - DOMAIN-SUFFIX,steamusercontent.com,🎯 全球直连
+# 长风网站，自动注入
   - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
   - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
   - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
   - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
+# Telegram
+#PROCESS-NAME,Telegram.exe
+#PROCESS-NAME,org.telegram.messenger
   - DOMAIN-SUFFIX,t.me,🚀 节点选择
   - DOMAIN-SUFFIX,tdesktop.com,🚀 节点选择
   - DOMAIN-SUFFIX,telegra.ph,🚀 节点选择
@@ -1904,16 +2715,65 @@ rules:
   - IP-CIDR6,2001:67c:4e8::/48,🚀 节点选择,no-resolve
   - IP-CIDR6,2001:b28:f23d::/48,🚀 节点选择,no-resolve
   - IP-CIDR6,2001:b28:f23f::/48,🚀 节点选择,no-resolve
+# 内容：国外媒体列表
+# 更新：2024-08-27 13:51:18
+# 数量：367条
+# ABC
+# AbemaTV
+# All4
+# Amazon
+# AppleNews
+# AppleTV
+# BBCiPlayer
+# Bahamut
+# DAZN
+# Deezer
+# DiscoveryPlus
+# DisneyPlus
+# EncoreTVB
+# FoxNow
+# HBO
+# HBO_GO_HKG
+# HWTV
+# Hulu
+# HuluJapan
+# ITV
+# Iwara
+# JOOX
+# Japonx
+# KKBOX
+# KKTV
+# LiTV
+# LineTV
+# My5
+# MyTVSuper
+# Netflix
+# Niconico
+# NivodTV
+# Olevod
+# OpenAi
+# PBS
+# Pandora
+# Pornhub
+# Qobuz
+# SoundCloud
+# Spotify
+# TIDAL
+# TaiWanGood 台湾好
+# TikTok
+# Twitch
+# ViuTV
+# YouTube
+# YouTubeMusic
   - DOMAIN-SUFFIX,edgedatg.com,🚀 节点选择
   - DOMAIN-SUFFIX,go.com,🚀 节点选择
+#   - USER-AGENT,AbemaTV*,🚀 节点选择
   - DOMAIN-KEYWORD,abematv.akamaized.net,🚀 节点选择
-  - DOMAIN,api-abematv.bucketeer.jp,🚀 节点选择
-  - DOMAIN-SUFFIX,abema-tv.com,🚀 节点选择
   - DOMAIN-SUFFIX,abema.io,🚀 节点选择
   - DOMAIN-SUFFIX,abema.tv,🚀 节点选择
   - DOMAIN-SUFFIX,ameba.jp,🚀 节点选择
   - DOMAIN-SUFFIX,hayabusa.io,🚀 节点选择
-  - DOMAIN-SUFFIX,hayabusa.media,🚀 节点选择
+#   - USER-AGENT,All4*,🚀 节点选择
   - DOMAIN-SUFFIX,c4assets.com,🚀 节点选择
   - DOMAIN-SUFFIX,channel4.com,🚀 节点选择
   - DOMAIN-KEYWORD,avoddashs,🚀 节点选择
@@ -1938,10 +2798,14 @@ rules:
   - DOMAIN-SUFFIX,media-amazon.com,🚀 节点选择
   - DOMAIN-SUFFIX,pv-cdn.net,🚀 节点选择
   - DOMAIN-SUFFIX,seattlespheres.com,🚀 节点选择
+#   - URL-REGEX,^https?:\/\/www\.amazon\.com\/(Amazon-Video|gp\/video)\/,🚀 节点选择
+#   - USER-AGENT,AppleNews*,🚀 节点选择
+#   - USER-AGENT,com.apple.news*,🚀 节点选择
   - DOMAIN,gspe1-ssl.ls.apple.com,🚀 节点选择
   - DOMAIN,np-edge.itunes.apple.com,🚀 节点选择
   - DOMAIN,play-edge.itunes.apple.com,🚀 节点选择
   - DOMAIN-SUFFIX,tv.apple.com,🚀 节点选择
+#   - USER-AGENT,BBCiPlayer*,🚀 节点选择
   - DOMAIN-KEYWORD,bbcfmt,🚀 节点选择
   - DOMAIN-KEYWORD,uk-live,🚀 节点选择
   - DOMAIN,aod-dash-uk-live.akamaized.net,🚀 节点选择
@@ -1956,11 +2820,13 @@ rules:
   - DOMAIN-SUFFIX,bbci.co,🚀 节点选择
   - DOMAIN-SUFFIX,bbci.co.uk,🚀 节点选择
   - DOMAIN-SUFFIX,bidi.net.uk,🚀 节点选择
+#   - USER-AGENT,Anime*,🚀 节点选择
   - DOMAIN,bahamut.akamaized.net,🚀 节点选择
   - DOMAIN,gamer-cds.cdn.hinet.net,🚀 节点选择
   - DOMAIN,gamer2-cds.cdn.hinet.net,🚀 节点选择
   - DOMAIN-SUFFIX,bahamut.com.tw,🚀 节点选择
   - DOMAIN-SUFFIX,gamer.com.tw,🚀 节点选择
+#   - USER-AGENT,DAZN*,🚀 节点选择
   - DOMAIN-KEYWORD,voddazn,🚀 节点选择
   - DOMAIN,d151l6v8er5bdm.cloudfront.net,🚀 节点选择
   - DOMAIN-SUFFIX,d151l6v8er5bdm.cloudfront.net,🚀 节点选择
@@ -1972,11 +2838,14 @@ rules:
   - DOMAIN-SUFFIX,indazn.com,🚀 节点选择
   - DOMAIN-SUFFIX,indaznlab.com,🚀 节点选择
   - DOMAIN-SUFFIX,sentry.io,🚀 节点选择
+#   - USER-AGENT,Deezer*,🚀 节点选择
   - DOMAIN-SUFFIX,deezer.com,🚀 节点选择
   - DOMAIN-SUFFIX,dzcdn.net,🚀 节点选择
   - DOMAIN-SUFFIX,disco-api.com,🚀 节点选择
   - DOMAIN-SUFFIX,discovery.com,🚀 节点选择
   - DOMAIN-SUFFIX,uplynk.com,🚀 节点选择
+#   - USER-AGENT,Disney*,🚀 节点选择
+#   - USER-AGENT,Disney+*,🚀 节点选择
   - DOMAIN,cdn.registerdisney.go.com,🚀 节点选择
   - DOMAIN-SUFFIX,adobedtm.com,🚀 节点选择
   - DOMAIN-SUFFIX,bam.nr-data.net,🚀 节点选择
@@ -1997,20 +2866,24 @@ rules:
   - DOMAIN-SUFFIX,dssott.com,🚀 节点选择
   - DOMAIN-SUFFIX,execute-api.us-east-1.amazonaws.com,🚀 节点选择
   - DOMAIN-SUFFIX,js-agent.newrelic.com,🚀 节点选择
+#   - USER-AGENT,encoreTVB*,🚀 节点选择
   - DOMAIN,bcbolt446c5271-a.akamaihd.net,🚀 节点选择
   - DOMAIN,content.jwplatform.com,🚀 节点选择
   - DOMAIN,edge.api.brightcove.com,🚀 节点选择
   - DOMAIN,videos-f.jwpsrv.com,🚀 节点选择
   - DOMAIN-SUFFIX,encoretvb.com,🚀 节点选择
+#   - USER-AGENT,FOX%20NOW*,🚀 节点选择
   - DOMAIN-SUFFIX,fox.com,🚀 节点选择
   - DOMAIN-SUFFIX,foxdcg.com,🚀 节点选择
   - DOMAIN-SUFFIX,uplynk.com,🚀 节点选择
+#   - USER-AGENT,HBO%20NOW*,🚀 节点选择
+#   - USER-AGENT,HBOMAX*,🚀 节点选择
   - DOMAIN-SUFFIX,hbo.com,🚀 节点选择
   - DOMAIN-SUFFIX,hbogo.com,🚀 节点选择
   - DOMAIN-SUFFIX,hbomax.com,🚀 节点选择
   - DOMAIN-SUFFIX,hbomaxcdn.com,🚀 节点选择
   - DOMAIN-SUFFIX,hbonow.com,🚀 节点选择
-  - DOMAIN-KEYWORD,.hbogoasia.,🚀 节点选择
+#   - USER-AGENT,HBO%20GO%20PROD*,🚀 节点选择
   - DOMAIN-KEYWORD,hbogoasia,🚀 节点选择
   - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,🚀 节点选择
   - DOMAIN,bcbolthboa-a.akamaihd.net,🚀 节点选择
@@ -2030,6 +2903,7 @@ rules:
   - DOMAIN-SUFFIX,hboasia.com,🚀 节点选择
   - DOMAIN-SUFFIX,hbogoasia.com,🚀 节点选择
   - DOMAIN-SUFFIX,hbogoasia.hk,🚀 节点选择
+#   - USER-AGENT,HWTVMobile*,🚀 节点选择
   - DOMAIN-SUFFIX,5itv.tv,🚀 节点选择
   - DOMAIN-SUFFIX,ocnttv.com,🚀 节点选择
   - DOMAIN-SUFFIX,cws-hulu.conviva.com,🚀 节点选择
@@ -2045,9 +2919,13 @@ rules:
   - DOMAIN-SUFFIX,prod.hjholdings.tv,🚀 节点选择
   - DOMAIN-SUFFIX,streaks.jp,🚀 节点选择
   - DOMAIN-SUFFIX,yb.uncn.jp,🚀 节点选择
+#   - USER-AGENT,ITV_Player*,🚀 节点选择
   - DOMAIN,itvpnpmobile-a.akamaihd.net,🚀 节点选择
   - DOMAIN-SUFFIX,itv.com,🚀 节点选择
   - DOMAIN-SUFFIX,itvstatic.com,🚀 节点选择
+  - DOMAIN-SUFFIX,iwara.tv,🚀 节点选择
+#   - USER-AGENT,JOOX*,🚀 节点选择
+#   - USER-AGENT,WeMusic*,🚀 节点选择
   - DOMAIN-KEYWORD,jooxweb-api,🚀 节点选择
   - DOMAIN-SUFFIX,joox.com,🚀 节点选择
   - DOMAIN-KEYWORD,japonx,🚀 节点选择
@@ -2063,25 +2941,32 @@ rules:
   - DOMAIN-SUFFIX,kfs.io,🚀 节点选择
   - DOMAIN-SUFFIX,kkbox.com,🚀 节点选择
   - DOMAIN-SUFFIX,kkbox.com.tw,🚀 节点选择
+#   - USER-AGENT,KKTV*,🚀 节点选择
+#   - USER-AGENT,com.kktv.ios.kktv*,🚀 节点选择
   - DOMAIN,kktv-theater.kk.stream,🚀 节点选择
   - DOMAIN,theater-kktv.cdn.hinet.net,🚀 节点选择
   - DOMAIN-SUFFIX,kktv.com.tw,🚀 节点选择
   - DOMAIN-SUFFIX,kktv.me,🚀 节点选择
   - DOMAIN,litvfreemobile-hichannel.cdn.hinet.net,🚀 节点选择
   - DOMAIN-SUFFIX,litv.tv,🚀 节点选择
+#   - USER-AGENT,LINE%20TV*,🚀 节点选择
+#   - USER-AGENT,LINE*,🚀 节点选择
   - DOMAIN,d3c7rimkq79yfu.cloudfront.net,🚀 节点选择
   - DOMAIN-SUFFIX,d3c7rimkq79yfu.cloudfront.net,🚀 节点选择
   - DOMAIN-SUFFIX,linetv.tw,🚀 节点选择
   - DOMAIN-SUFFIX,profile.line-scdn.net,🚀 节点选择
+#   - USER-AGENT,My5*,🚀 节点选择
   - DOMAIN,d349g9zuie06uo.cloudfront.net,🚀 节点选择
   - DOMAIN-SUFFIX,channel5.com,🚀 节点选择
   - DOMAIN-SUFFIX,my5.tv,🚀 节点选择
+#   - USER-AGENT,mytv*,🚀 节点选择
   - DOMAIN-KEYWORD,nowtv100,🚀 节点选择
   - DOMAIN-KEYWORD,rthklive,🚀 节点选择
   - DOMAIN,mytvsuperlimited.hb.omtrdc.net,🚀 节点选择
   - DOMAIN,mytvsuperlimited.sc.omtrdc.net,🚀 节点选择
   - DOMAIN-SUFFIX,mytvsuper.com,🚀 节点选择
   - DOMAIN-SUFFIX,tvb.com,🚀 节点选择
+#   - USER-AGENT,Argo*,🚀 节点选择
   - DOMAIN-KEYWORD,apiproxy-device-prod-nlb-,🚀 节点选择
   - DOMAIN-KEYWORD,dualstack.apiproxy-,🚀 节点选择
   - DOMAIN-KEYWORD,netflixdnstest,🚀 节点选择
@@ -2122,6 +3007,7 @@ rules:
   - IP-CIDR,203.75.84.0/24,🚀 节点选择,no-resolve
   - IP-CIDR,207.45.72.0/22,🚀 节点选择,no-resolve
   - IP-CIDR,208.75.76.0/22,🚀 节点选择,no-resolve
+#   - USER-AGENT,Niconico*,🚀 节点选择
   - DOMAIN-SUFFIX,dmc.nico,🚀 节点选择
   - DOMAIN-SUFFIX,nicovideo.jp,🚀 节点选择
   - DOMAIN-SUFFIX,nimg.jp,🚀 节点选择
@@ -2148,26 +3034,33 @@ rules:
   - DOMAIN-KEYWORD,openai,🚀 节点选择
   - DOMAIN-SUFFIX,auth0.com,🚀 节点选择
   - DOMAIN-SUFFIX,challenges.cloudflare.com,🚀 节点选择
+  - DOMAIN-SUFFIX,chatgpt.com,🚀 节点选择
   - DOMAIN-SUFFIX,client-api.arkoselabs.com,🚀 节点选择
   - DOMAIN-SUFFIX,events.statsigapi.net,🚀 节点选择
   - DOMAIN-SUFFIX,featuregates.org,🚀 节点选择
   - DOMAIN-SUFFIX,identrust.com,🚀 节点选择
   - DOMAIN-SUFFIX,intercom.io,🚀 节点选择
   - DOMAIN-SUFFIX,intercomcdn.com,🚀 节点选择
+  - DOMAIN-SUFFIX,oaistatic.com,🚀 节点选择
+  - DOMAIN-SUFFIX,oaiusercontent.com,🚀 节点选择
   - DOMAIN-SUFFIX,openai.com,🚀 节点选择
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🚀 节点选择
   - DOMAIN-SUFFIX,sentry.io,🚀 节点选择
   - DOMAIN-SUFFIX,stripe.com,🚀 节点选择
+#   - USER-AGENT,PBS*,🚀 节点选择
   - DOMAIN-SUFFIX,pbs.org,🚀 节点选择
+#   - USER-AGENT,Pandora*,🚀 节点选择
   - DOMAIN-SUFFIX,pandora.com,🚀 节点选择
   - DOMAIN-SUFFIX,phncdn.com,🚀 节点选择
   - DOMAIN-SUFFIX,phprcdn.com,🚀 节点选择
   - DOMAIN-SUFFIX,pornhub.com,🚀 节点选择
   - DOMAIN-SUFFIX,pornhubpremium.com,🚀 节点选择
   - DOMAIN-SUFFIX,qobuz.com,🚀 节点选择
+#   - USER-AGENT,SoundCloud*,🚀 节点选择
   - DOMAIN-SUFFIX,p-cdn.us,🚀 节点选择
   - DOMAIN-SUFFIX,sndcdn.com,🚀 节点选择
   - DOMAIN-SUFFIX,soundcloud.com,🚀 节点选择
+#   - USER-AGENT,Spotify*,🚀 节点选择
   - DOMAIN-KEYWORD,-spotify-,🚀 节点选择
   - DOMAIN-KEYWORD,spotify.com,🚀 节点选择
   - DOMAIN-SUFFIX,pscdn.co,🚀 节点选择
@@ -2176,11 +3069,14 @@ rules:
   - DOMAIN-SUFFIX,spotify.com,🚀 节点选择
   - DOMAIN-SUFFIX,spotifycdn.com,🚀 节点选择
   - DOMAIN-SUFFIX,spotifycdn.net,🚀 节点选择
+#   - USER-AGENT,TIDAL*,🚀 节点选择
   - DOMAIN-SUFFIX,tidal-cms.s3.amazonaws.com,🚀 节点选择
   - DOMAIN-SUFFIX,tidal.com,🚀 节点选择
   - DOMAIN-SUFFIX,tidalhifi.com,🚀 节点选择
+#   - USER-AGENT,TaiwanGood*,🚀 节点选择
   - DOMAIN,hamifans.emome.net,🚀 节点选择
   - DOMAIN-SUFFIX,skyking.com.tw,🚀 节点选择
+#   - USER-AGENT,TikTok*,🚀 节点选择
   - DOMAIN-KEYWORD,tiktokcdn,🚀 节点选择
   - DOMAIN-SUFFIX,byteoversea.com,🚀 节点选择
   - DOMAIN-SUFFIX,ibytedtos.com,🚀 节点选择
@@ -2198,6 +3094,7 @@ rules:
   - DOMAIN-SUFFIX,twitch-ext.rootonline.de,🚀 节点选择
   - DOMAIN-SUFFIX,twitch.tv,🚀 节点选择
   - DOMAIN-SUFFIX,twitchcdn.net,🚀 节点选择
+#   - USER-AGENT,Viu*,🚀 节点选择
   - PROCESS-NAME,com.viu.pad,🚀 节点选择
   - PROCESS-NAME,com.viu.phone,🚀 节点选择
   - PROCESS-NAME,com.vuclip.viu,🚀 节点选择
@@ -2213,6 +3110,9 @@ rules:
   - DOMAIN-SUFFIX,viu.com,🚀 节点选择
   - DOMAIN-SUFFIX,viu.now.com,🚀 节点选择
   - DOMAIN-SUFFIX,viu.tv,🚀 节点选择
+#   - USER-AGENT,*youtube*,🚀 节点选择
+#   - USER-AGENT,YouTube*,🚀 节点选择
+#   - USER-AGENT,com.google.ios.youtube*,🚀 节点选择
   - DOMAIN-KEYWORD,youtube,🚀 节点选择
   - DOMAIN,youtubei.googleapis.com,🚀 节点选择
   - DOMAIN,yt3.ggpht.com,🚀 节点选择
@@ -2227,7 +3127,48 @@ rules:
   - DOMAIN-SUFFIX,youtubekids.com,🚀 节点选择
   - DOMAIN-SUFFIX,yt.be,🚀 节点选择
   - DOMAIN-SUFFIX,ytimg.com,🚀 节点选择
+#   - USER-AGENT,*YouTubeMusic*,🚀 节点选择
+#   - USER-AGENT,*com.google.ios.youtubemusic*,🚀 节点选择
+#   - USER-AGENT,YouTubeMusic*,🚀 节点选择
+#   - USER-AGENT,com.google.ios.youtubemusic*,🚀 节点选择
   - DOMAIN,music.youtube.com,🚀 节点选择
+# 代理列表
+# MyList && Other
+# 国外域名
+# 国外域名关键字
+# Top Blocked Sites
+# Amazon
+# BBC
+# Claude
+# Developer 开发者常用国外网站、镜像和论坛
+# Docker
+# Discord
+# Facebook
+# Github
+# Google
+# GoogleCNProxyIP 谷歌中国服务 services.googleapis.cn
+# Instagram
+# Iwara
+# Kakao Talk
+# Line
+# OpenAi
+# OneDrive
+#DOMAIN-SUFFIX,aria.microsoft.com
+# Porn
+# Pixiv
+# Spark
+# Steam
+# TapTap
+# Twitch
+# Twitter
+# Telegram
+# TeraBox
+# Whatsapp
+# Wikipedia 维基相关域名
+# Zoom
+#飞流直播
+#华文电视
+# VikACG
   - DOMAIN-SUFFIX,1password.com,🚀 节点选择
   - DOMAIN-SUFFIX,adguard.org,🚀 节点选择
   - DOMAIN-SUFFIX,bit.no.com,🚀 节点选择
@@ -2248,6 +3189,7 @@ rules:
   - DOMAIN-SUFFIX,tumbex.com,🚀 节点选择
   - DOMAIN-SUFFIX,twdvd.com,🚀 节点选择
   - DOMAIN-SUFFIX,unsplash.com,🚀 节点选择
+  - DOMAIN-SUFFIX,buzzsprout.com,🚀 节点选择
   - DOMAIN-SUFFIX,eu,🚀 节点选择
   - DOMAIN-SUFFIX,hk,🚀 节点选择
   - DOMAIN-SUFFIX,jp,🚀 节点选择
@@ -2405,8 +3347,11 @@ rules:
   - DOMAIN-KEYWORD,uk-live,🚀 节点选择
   - DOMAIN-SUFFIX,bbc.co,🚀 节点选择
   - DOMAIN-SUFFIX,bbc.com,🚀 节点选择
+  - DOMAIN-SUFFIX,claude.ai,🚀 节点选择
+  - DOMAIN-SUFFIX,anthropic.com,🚀 节点选择
   - DOMAIN-SUFFIX,apache.org,🚀 节点选择
   - DOMAIN-SUFFIX,docker.com,🚀 节点选择
+  - DOMAIN-SUFFIX,docker.io,🚀 节点选择
   - DOMAIN-SUFFIX,elastic.co,🚀 节点选择
   - DOMAIN-SUFFIX,elastic.com,🚀 节点选择
   - DOMAIN-SUFFIX,gcr.io,🚀 节点选择
@@ -2424,6 +3369,13 @@ rules:
   - DOMAIN-SUFFIX,spring.io,🚀 节点选择
   - DOMAIN-SUFFIX,spring.net,🚀 节点选择
   - DOMAIN-SUFFIX,stackoverflow.com,🚀 节点选择
+  - DOMAIN,d1q6f0aelx0por.cloudfront.net,🚀 节点选择
+  - DOMAIN,d2wy8f7a9ursnm.cloudfront.net,🚀 节点选择
+  - DOMAIN,d36jcksde1wxzq.cloudfront.net,🚀 节点选择
+  - DOMAIN-SUFFIX,compose-spec.io,🚀 节点选择
+  - DOMAIN-SUFFIX,docker.com,🚀 节点选择
+  - DOMAIN-SUFFIX,docker.io,🚀 节点选择
+  - DOMAIN-SUFFIX,dockerhub.com,🚀 节点选择
   - DOMAIN-SUFFIX,discord.co,🚀 节点选择
   - DOMAIN-SUFFIX,discord.com,🚀 节点选择
   - DOMAIN-SUFFIX,discord.gg,🚀 节点选择
@@ -2497,6 +3449,7 @@ rules:
   - DOMAIN-SUFFIX,cdninstagram.com,🚀 节点选择
   - DOMAIN-SUFFIX,instagram.com,🚀 节点选择
   - DOMAIN-SUFFIX,instagr.am,🚀 节点选择
+  - DOMAIN-SUFFIX,iwara.tv,🚀 节点选择
   - DOMAIN-SUFFIX,kakao.com,🚀 节点选择
   - DOMAIN-SUFFIX,kakao.co.kr,🚀 节点选择
   - DOMAIN-SUFFIX,kakaocdn.net,🚀 节点选择
@@ -2560,6 +3513,7 @@ rules:
   - DOMAIN-SUFFIX,ypncdn.com,🚀 节点选择
   - DOMAIN-SUFFIX,pixiv.net,🚀 节点选择
   - DOMAIN-SUFFIX,pximg.net,🚀 节点选择
+  - DOMAIN-SUFFIX,fanbox.cc,🚀 节点选择
   - DOMAIN-SUFFIX,amplitude.com,🚀 节点选择
   - DOMAIN-SUFFIX,firebaseio.com,🚀 节点选择
   - DOMAIN-SUFFIX,hockeyapp.net,🚀 节点选择
@@ -2634,12 +3588,61 @@ rules:
   - DOMAIN-SUFFIX,wikiversity.org,🚀 节点选择
   - DOMAIN-SUFFIX,wikivoyage.org,🚀 节点选择
   - DOMAIN-SUFFIX,wiktionary.org,🚀 节点选择
+  - DOMAIN-SUFFIX,zoom.us,🚀 节点选择
+  - DOMAIN-SUFFIX,zoomgov.com,🚀 节点选择
   - DOMAIN-SUFFIX,neulion.com,🚀 节点选择
   - DOMAIN-SUFFIX,icntv.xyz,🚀 节点选择
   - DOMAIN-SUFFIX,flzbcdn.xyz,🚀 节点选择
   - DOMAIN-SUFFIX,ocnttv.com,🚀 节点选择
   - DOMAIN-SUFFIX,vikacg.com,🚀 节点选择
   - DOMAIN-SUFFIX,picjs.xyz,🚀 节点选择
+# 直连列表
+# MyList
+# CN域名直连(中国|公司|网络)
+# 中国国内常见域名关键词直连
+# 360
+# 4399
+# 58
+# Alibaba
+# Baidu
+# Bilibili
+# ByteDance
+# CCTV
+# ChinaNet
+# DiDi
+# Douyu 斗鱼
+# Epic
+# HuaWei
+# Heytap
+# Iflytek 科大讯飞
+# Iqiyi
+# JD
+# Kingsoft
+# Kuaishou 快手
+# Meitu
+# LeTV 乐视
+# MGTV 芒果TV
+# MI
+# NetEase
+# PPTV、PPLive
+# PDD 拼多多
+# Sina
+# Sohu Sogo
+# Sony
+# SteamCN
+# Tencent
+# Vip 唯品会
+# Ximalaya 喜马拉雅
+# Xunlei 迅雷
+# YYeTs 人人影视
+# TeamViewer
+# Public Direct CDN 公共直连
+#DOMAIN-SUFFIX,ajax.aspnetcdn.com
+#DOMAIN-SUFFIX,ajax.cloudflare.com
+#DOMAIN-SUFFIX,cdnjs.cloudflare.com
+#DOMAIN-SUFFIX,code.jquery.com
+# China DNS
+# AccelerateDirectSites
   - DOMAIN-SUFFIX,13th.tech,🎯 全球直连
   - DOMAIN-SUFFIX,423down.com,🎯 全球直连
   - DOMAIN-SUFFIX,bokecc.com,🎯 全球直连
@@ -2656,6 +3659,7 @@ rules:
   - DOMAIN-SUFFIX,zhenguanyu.biz,🎯 全球直连
   - DOMAIN-SUFFIX,zhenguanyu.com,🎯 全球直连
   - DOMAIN-SUFFIX,snapdrop.net,🎯 全球直连
+  - DOMAIN-SUFFIX,tebex.io,🎯 全球直连
   - DOMAIN-SUFFIX,cn,🎯 全球直连
   - DOMAIN-SUFFIX,xn--fiqs8s,🎯 全球直连
   - DOMAIN-SUFFIX,xn--55qx5d,🎯 全球直连
@@ -2706,6 +3710,7 @@ rules:
   - DOMAIN-SUFFIX,aliyuncdn.com,🎯 全球直连
   - DOMAIN-SUFFIX,aliyuncs.com,🎯 全球直连
   - DOMAIN-SUFFIX,aliyundrive.com,🎯 全球直连
+  - DOMAIN-SUFFIX,aliyundrive.net,🎯 全球直连
   - DOMAIN-SUFFIX,amap.com,🎯 全球直连
   - DOMAIN-SUFFIX,autonavi.com,🎯 全球直连
   - DOMAIN-SUFFIX,dingtalk.com,🎯 全球直连
@@ -2745,6 +3750,8 @@ rules:
   - DOMAIN-SUFFIX,biliapi.com,🎯 全球直连
   - DOMAIN-SUFFIX,biliapi.net,🎯 全球直连
   - DOMAIN-SUFFIX,bilibili.com,🎯 全球直连
+  - DOMAIN-SUFFIX,bilibili.co,🎯 全球直连
+  - DOMAIN-SUFFIX,biliintl.co,🎯 全球直连
   - DOMAIN-SUFFIX,biligame.com,🎯 全球直连
   - DOMAIN-SUFFIX,biligame.net,🎯 全球直连
   - DOMAIN-SUFFIX,bilivideo.com,🎯 全球直连
@@ -2803,6 +3810,8 @@ rules:
   - DOMAIN-SUFFIX,didialift.com,🎯 全球直连
   - DOMAIN-SUFFIX,didiglobal.com,🎯 全球直连
   - DOMAIN-SUFFIX,udache.com,🎯 全球直连
+  - DOMAIN-SUFFIX,bytefcdnrd.com,🎯 全球直连
+  - DOMAIN-SUFFIX,edgesrv.com,🎯 全球直连
   - DOMAIN-SUFFIX,douyu.com,🎯 全球直连
   - DOMAIN-SUFFIX,douyu.tv,🎯 全球直连
   - DOMAIN-SUFFIX,douyuscdn.com,🎯 全球直连
@@ -3032,6 +4041,7 @@ rules:
   - DOMAIN-SUFFIX,biqudu.com,🎯 全球直连
   - DOMAIN-SUFFIX,biquge.com,🎯 全球直连
   - DOMAIN-SUFFIX,bitauto.com,🎯 全球直连
+  - DOMAIN-SUFFIX,bosszhipin.com,🎯 全球直连
   - DOMAIN-SUFFIX,c-ctrip.com,🎯 全球直连
   - DOMAIN-SUFFIX,camera360.com,🎯 全球直连
   - DOMAIN-SUFFIX,cdnmama.com,🎯 全球直连
@@ -3111,6 +4121,7 @@ rules:
   - DOMAIN-SUFFIX,kaola.com,🎯 全球直连
   - DOMAIN-SUFFIX,knewone.com,🎯 全球直连
   - DOMAIN-SUFFIX,koowo.com,🎯 全球直连
+  - DOMAIN-SUFFIX,koyso.com,🎯 全球直连
   - DOMAIN-SUFFIX,ksyungslb.com,🎯 全球直连
   - DOMAIN-SUFFIX,kuaidi100.com,🎯 全球直连
   - DOMAIN-SUFFIX,kugou.com,🎯 全球直连
@@ -3240,8 +4251,16 @@ rules:
   - DOMAIN-SUFFIX,zhaopin.com,🎯 全球直连
   - DOMAIN-SUFFIX,zhihu.com,🎯 全球直连
   - DOMAIN-SUFFIX,zhimg.com,🎯 全球直连
+  - DOMAIN-SUFFIX,zhipin.com,🎯 全球直连
   - DOMAIN-SUFFIX,zhongsou.com,🎯 全球直连
   - DOMAIN-SUFFIX,zhuihd.com,🎯 全球直连
+# 中国云服务商ip端
+# 阿里
+# 腾讯 qq
+# 百度 Baidu
+# 华为 huwei
+# 网易 NetEase
+# 360
   - IP-CIDR,8.128.0.0/10,🎯 全球直连,no-resolve
   - IP-CIDR,8.208.0.0/12,🎯 全球直连,no-resolve
   - IP-CIDR,14.1.112.0/22,🎯 全球直连,no-resolve
