@@ -5,8 +5,8 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: CA_1_@Surfboardv2ray, server: 104.26.13.72, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: cake.capellare.com, network: ws, ws-opts: {path: /linkvws, headers: {Host: cake.capellare.com}}}
-  - {name: CA_2_@Surfboardv2ray, server: 172.67.70.167, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: cake.capellare.com, network: ws, ws-opts: {path: /linkvws, headers: {Host: cake.capellare.com}}}
+  - {name: CA_1_@Surfboardv2ray, server: 172.67.71.160, port: 443, type: vmess, uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: obdii.cfd, network: ws, ws-opts: {path: /linkws, headers: {Host: obdii.cfd}}}
+  - {name: US_2_@Surfboardv2ray, server: speedtest.net, port: 443, type: vmess, uuid: 39ccc4df-fcdb-4386-827e-d6ff38332fb8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: speedtest.net, network: ws, ws-opts: {path: "ws/?ed=2048", headers: {Host: Dbdjhiw72ebsu272hs519j.com}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -14,7 +14,7 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - CA_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -22,7 +22,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - CA_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -30,28 +30,28 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - CA_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - CA_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - CA_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - CA_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -59,7 +59,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - CA_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -83,7 +83,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - CA_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
