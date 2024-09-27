@@ -5,91 +5,227 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 🇭🇰 香港02, server: gy.666666222.shop, port: 20035, type: ss, cipher: chacha20-ietf-poly1305, password: c43390e6-07e8-4da3-9a44-a210f5fcb5ca, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 89762620-4ac8-4a17-a766-e46bf18ffccf, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
   - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3e13898e-1e9e-4a75-b3a1-5823f19e1bca, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: ddf8851b-9d74-4d37-ac3c-b3f1525e00fb, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇸🇬 SG-01 0x-1B, server: sg.maple.icu, port: 24021, type: vless, uuid: a7ebf181-36bf-4c3b-a74b-8edb60c3ff43, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: RpeUUI-GjeFRNOOUBauRNYvvM7yVk5yihRI9Tig4jxc, short-id: "23aae802" }, servername: www.apple.com, client-fingerprint: ios, network: tcp, udp: true}
-  - {name: 🇰🇷 KR-01 0x-1B, server: kr.maple.icu, port: 24021, type: vless, uuid: a7ebf181-36bf-4c3b-a74b-8edb60c3ff43, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: XfkuAyN_XfbUJ8qwmp5ILy4rfXcafsie9C-SYxdyKhQ, short-id: "0ab19147" }, servername: www.apple.com, client-fingerprint: edge, network: tcp, udp: true}
-  - {name: 墨尔本-1B, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: c2c4c27e-6c37-4ee4-97f6-ec8a647fe133, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 🇨🇦 加拿大-1C, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 68a8cb12-15ce-45c9-8fa0-497547cc8769, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
-  - {name: 🇨🇦 加拿大-1B, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: c2c4c27e-6c37-4ee4-97f6-ec8a647fe133, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
-  - {name: 🇸🇬 SG-01 0x-1A, server: sg.maple.icu, port: 24021, type: vless, uuid: 99173e7c-0326-4cf6-ae0d-a83c14f42a0e, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: RpeUUI-GjeFRNOOUBauRNYvvM7yVk5yihRI9Tig4jxc, short-id: "23aae802" }, servername: www.apple.com, client-fingerprint: ios, network: tcp, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1E, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 89762620-4ac8-4a17-a766-e46bf18ffccf, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1D, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3b9361e7-7ea7-417c-ba9b-a18576c0a30c, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 墨尔本-1A, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 35a4ca6b-1930-4105-b041-3ef0cf8a19b2, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 🇨🇦 加拿大-1A, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 35a4ca6b-1930-4105-b041-3ef0cf8a19b2, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
-  - {name: 🇰🇷 KR-01 0x-1A, server: kr.maple.icu, port: 24021, type: vless, uuid: 99173e7c-0326-4cf6-ae0d-a83c14f42a0e, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: XfkuAyN_XfbUJ8qwmp5ILy4rfXcafsie9C-SYxdyKhQ, short-id: "0ab19147" }, servername: www.apple.com, client-fingerprint: safari, network: tcp, udp: true}
-  - {name: 🇺🇸 US-03 0x-1B, server: us3.maple.icu, port: 24021, type: vless, uuid: a7ebf181-36bf-4c3b-a74b-8edb60c3ff43, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: kKB-jjAA58dRdROFi4JrB5i0ETHIOyHK1HwYbff8lnk, short-id: "afb60060" }, servername: www.apple.com, client-fingerprint: chrome, network: tcp, udp: true}
-  - {name: 墨尔本-1C, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 68a8cb12-15ce-45c9-8fa0-497547cc8769, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 🇺🇸 US-03 0x-1A, server: us3.maple.icu, port: 24021, type: vless, uuid: 99173e7c-0326-4cf6-ae0d-a83c14f42a0e, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: kKB-jjAA58dRdROFi4JrB5i0ETHIOyHK1HwYbff8lnk, short-id: "afb60060" }, servername: www.apple.com, client-fingerprint: safari, network: tcp, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 0d5468c9-9d5c-47f0-8435-0fccc15a1041, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇭🇰 香港01, server: gy.666666222.shop, port: 34338, type: ss, cipher: chacha20-ietf-poly1305, password: c43390e6-07e8-4da3-9a44-a210f5fcb5ca, udp: true}
+  - {name: 🇯🇵 日本01, server: gy.666666222.shop, port: 20002, type: ss, cipher: chacha20-ietf-poly1305, password: c43390e6-07e8-4da3-9a44-a210f5fcb5ca, udp: true}
+  - {name: 🇨🇦 加拿大-1A, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: c2c4c27e-6c37-4ee4-97f6-ec8a647fe133, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
+  - {name: 🇺🇸 US-03 0x-1B, server: us3.maple.icu, port: 24021, type: vless, uuid: 99173e7c-0326-4cf6-ae0d-a83c14f42a0e, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: kKB-jjAA58dRdROFi4JrB5i0ETHIOyHK1HwYbff8lnk, short-id: "afb60060" }, servername: www.apple.com, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇹🇷 土耳其, server: cmcc2.blackpink520.cyou, port: 32611, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1D, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: bb3d9cdd-e407-4adb-9e72-10daa677fbf0, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇰🇷 KR-01 0x-1B, server: kr.maple.icu, port: 24021, type: vless, uuid: 99173e7c-0326-4cf6-ae0d-a83c14f42a0e, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: XfkuAyN_XfbUJ8qwmp5ILy4rfXcafsie9C-SYxdyKhQ, short-id: "0ab19147" }, servername: www.apple.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 🇰🇷 KR-01 0x-1C, server: kr.maple.icu, port: 24021, type: vless, uuid: 208cf8a9-b4dc-4e13-a4e7-b7281d49713b, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: XfkuAyN_XfbUJ8qwmp5ILy4rfXcafsie9C-SYxdyKhQ, short-id: "0ab19147" }, servername: www.apple.com, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇺🇸 美国 02, server: 180.103.101.4, port: 50219, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇯🇵 日本02, server: gy.666666222.shop, port: 20004, type: ss, cipher: chacha20-ietf-poly1305, password: c43390e6-07e8-4da3-9a44-a210f5fcb5ca, udp: true}
+  - {name: 🇺🇸 美国 01, server: cmcc2.blackpink520.cyou, port: 22601, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 墨尔本-1B, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 68a8cb12-15ce-45c9-8fa0-497547cc8769, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 🇨🇦 加拿大-1B, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 68a8cb12-15ce-45c9-8fa0-497547cc8769, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
+  - {name: 🇰🇷 KR-01 0x-1A, server: kr.maple.icu, port: 24021, type: vless, uuid: c593f1c2-3508-4c2b-9c24-bf94a3f0caf9, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: XfkuAyN_XfbUJ8qwmp5ILy4rfXcafsie9C-SYxdyKhQ, short-id: "0ab19147" }, servername: www.apple.com, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇺🇸 美国 纽约2, server: gy.666666222.shop, port: 20016, type: ss, cipher: chacha20-ietf-poly1305, password: c43390e6-07e8-4da3-9a44-a210f5fcb5ca, udp: true}
+  - {name: 🇺🇸 US-03 0x-1C, server: us3.maple.icu, port: 24021, type: vless, uuid: 208cf8a9-b4dc-4e13-a4e7-b7281d49713b, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: kKB-jjAA58dRdROFi4JrB5i0ETHIOyHK1HwYbff8lnk, short-id: "afb60060" }, servername: www.apple.com, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 墨尔本-1C, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 35a4ca6b-1930-4105-b041-3ef0cf8a19b2, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 🇯🇵 日本 01, server: cmcc2.blackpink520.cyou, port: 34950, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇷🇺 俄罗斯, server: cmcc2.blackpink520.cyou, port: 41737, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇸🇬 新加坡 03, server: 180.103.101.4, port: 37779, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇹🇼 台湾 02, server: 180.103.101.4, port: 57467, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 墨尔本-1A, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: c2c4c27e-6c37-4ee4-97f6-ec8a647fe133, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 🇺🇸 US-03 0x-1A, server: us3.maple.icu, port: 24021, type: vless, uuid: c593f1c2-3508-4c2b-9c24-bf94a3f0caf9, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: kKB-jjAA58dRdROFi4JrB5i0ETHIOyHK1HwYbff8lnk, short-id: "afb60060" }, servername: www.apple.com, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇹🇭 泰国, server: cmcc2.blackpink520.cyou, port: 22149, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇭🇰 香港 03, server: cmcc2.blackpink520.cyou, port: 19259, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇸🇬 SG-01 0x-1D, server: sg.maple.icu, port: 24021, type: vless, uuid: a7ebf181-36bf-4c3b-a74b-8edb60c3ff43, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: RpeUUI-GjeFRNOOUBauRNYvvM7yVk5yihRI9Tig4jxc, short-id: "23aae802" }, servername: www.apple.com, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇹🇼 台湾01, server: gy.666666222.shop, port: 47564, type: ss, cipher: chacha20-ietf-poly1305, password: c43390e6-07e8-4da3-9a44-a210f5fcb5ca, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3b9361e7-7ea7-417c-ba9b-a18576c0a30c, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 日本 02, server: 180.103.101.4, port: 26278, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇸🇬 新加坡 02, server: cmcc2.blackpink520.cyou, port: 18545, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇭🇰 香港03, server: gy.666666222.shop, port: 20052, type: ss, cipher: chacha20-ietf-poly1305, password: c43390e6-07e8-4da3-9a44-a210f5fcb5ca, udp: true}
+  - {name: 🇹🇼 台湾 01, server: cmcc2.blackpink520.cyou, port: 12923, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇭🇰 香港 01, server: cmcc2.blackpink520.cyou, port: 24189, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇳🇬 尼日利亚, server: cmcc2.blackpink520.cyou, port: 48327, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇰🇷 KR-01 0x-1D, server: kr.maple.icu, port: 24021, type: vless, uuid: a7ebf181-36bf-4c3b-a74b-8edb60c3ff43, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: XfkuAyN_XfbUJ8qwmp5ILy4rfXcafsie9C-SYxdyKhQ, short-id: "0ab19147" }, servername: www.apple.com, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇯🇵 日本04, server: gy.666666222.shop, port: 20008, type: ss, cipher: chacha20-ietf-poly1305, password: c43390e6-07e8-4da3-9a44-a210f5fcb5ca, udp: true}
+  - {name: 🇺🇸 US-03 0x-1D, server: us3.maple.icu, port: 24021, type: vless, uuid: a7ebf181-36bf-4c3b-a74b-8edb60c3ff43, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: kKB-jjAA58dRdROFi4JrB5i0ETHIOyHK1HwYbff8lnk, short-id: "afb60060" }, servername: www.apple.com, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇸🇬 SG-01 0x-1C, server: sg.maple.icu, port: 24021, type: vless, uuid: 208cf8a9-b4dc-4e13-a4e7-b7281d49713b, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: RpeUUI-GjeFRNOOUBauRNYvvM7yVk5yihRI9Tig4jxc, short-id: "23aae802" }, servername: www.apple.com, client-fingerprint: qq, network: tcp, udp: true}
+  - {name: 🇻🇳 越南家宽, server: cmcc2.blackpink520.cyou, port: 40979, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇸🇬 SG-01 0x-1B, server: sg.maple.icu, port: 24021, type: vless, uuid: 99173e7c-0326-4cf6-ae0d-a83c14f42a0e, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: RpeUUI-GjeFRNOOUBauRNYvvM7yVk5yihRI9Tig4jxc, short-id: "23aae802" }, servername: www.apple.com, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇭🇰 香港 02, server: 180.103.101.4, port: 15267, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1E, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 0d5468c9-9d5c-47f0-8435-0fccc15a1041, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇸🇬 新加坡 01, server: cmcc2.blackpink520.cyou, port: 17368, type: ss, cipher: aes-128-gcm, password: 527ad278-799e-4522-85bf-f0cd134e7161, udp: true}
+  - {name: 🇨🇦 加拿大-1C, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 35a4ca6b-1930-4105-b041-3ef0cf8a19b2, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
+  - {name: 🇯🇵 日本03, server: gy.666666222.shop, port: 20006, type: ss, cipher: chacha20-ietf-poly1305, password: c43390e6-07e8-4da3-9a44-a210f5fcb5ca, udp: true}
+  - {name: 🇺🇸 美国 纽约01, server: gy.666666222.shop, port: 20013, type: ss, cipher: chacha20-ietf-poly1305, password: c43390e6-07e8-4da3-9a44-a210f5fcb5ca, udp: true}
+  - {name: 🇹🇼 台湾 1, server: gy.666666222.shop, port: 20032, type: ss, cipher: chacha20-ietf-poly1305, password: c43390e6-07e8-4da3-9a44-a210f5fcb5ca, udp: true}
+  - {name: 🇸🇬 SG-01 0x-1A, server: sg.maple.icu, port: 24021, type: vless, uuid: c593f1c2-3508-4c2b-9c24-bf94a3f0caf9, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: RpeUUI-GjeFRNOOUBauRNYvvM7yVk5yihRI9Tig4jxc, short-id: "23aae802" }, servername: www.apple.com, client-fingerprint: chrome, network: tcp, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港02
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 SG-01 0x-1B
-      - 🇰🇷 KR-01 0x-1B
-      - 墨尔本-1B
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇸🇬 SG-01 0x-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 墨尔本-1A
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港01
+      - 🇯🇵 日本01
       - 🇨🇦 加拿大-1A
-      - 🇰🇷 KR-01 0x-1A
       - 🇺🇸 US-03 0x-1B
+      - 🇹🇷 土耳其
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 KR-01 0x-1B
+      - 🇰🇷 KR-01 0x-1C
+      - 🇺🇸 美国 02
+      - 🇯🇵 日本02
+      - 🇺🇸 美国 01
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1B
+      - 🇰🇷 KR-01 0x-1A
+      - 🇺🇸 美国 纽约2
+      - 🇺🇸 US-03 0x-1C
       - 墨尔本-1C
+      - 🇯🇵 日本 01
+      - 🇷🇺 俄罗斯
+      - 🇸🇬 新加坡 03
+      - 🇹🇼 台湾 02
+      - 墨尔本-1A
       - 🇺🇸 US-03 0x-1A
+      - 🇹🇭 泰国
+      - 🇭🇰 香港 03
+      - 🇸🇬 SG-01 0x-1D
+      - 🇹🇼 台湾01
       - 🇰🇷 韩国-三网优化2-1C
+      - 🇯🇵 日本 02
+      - 🇸🇬 新加坡 02
+      - 🇭🇰 香港03
+      - 🇹🇼 台湾 01
+      - 🇭🇰 香港 01
+      - 🇳🇬 尼日利亚
+      - 🇰🇷 KR-01 0x-1D
+      - 🇯🇵 日本04
+      - 🇺🇸 US-03 0x-1D
+      - 🇸🇬 SG-01 0x-1C
+      - 🇻🇳 越南家宽
+      - 🇸🇬 SG-01 0x-1B
+      - 🇭🇰 香港 02
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇸🇬 新加坡 01
+      - 🇨🇦 加拿大-1C
+      - 🇯🇵 日本03
+      - 🇺🇸 美国 纽约01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 SG-01 0x-1A
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港02
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 SG-01 0x-1B
-      - 🇰🇷 KR-01 0x-1B
-      - 墨尔本-1B
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇸🇬 SG-01 0x-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 墨尔本-1A
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港01
+      - 🇯🇵 日本01
       - 🇨🇦 加拿大-1A
-      - 🇰🇷 KR-01 0x-1A
       - 🇺🇸 US-03 0x-1B
+      - 🇹🇷 土耳其
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 KR-01 0x-1B
+      - 🇰🇷 KR-01 0x-1C
+      - 🇺🇸 美国 02
+      - 🇯🇵 日本02
+      - 🇺🇸 美国 01
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1B
+      - 🇰🇷 KR-01 0x-1A
+      - 🇺🇸 美国 纽约2
+      - 🇺🇸 US-03 0x-1C
       - 墨尔本-1C
+      - 🇯🇵 日本 01
+      - 🇷🇺 俄罗斯
+      - 🇸🇬 新加坡 03
+      - 🇹🇼 台湾 02
+      - 墨尔本-1A
       - 🇺🇸 US-03 0x-1A
+      - 🇹🇭 泰国
+      - 🇭🇰 香港 03
+      - 🇸🇬 SG-01 0x-1D
+      - 🇹🇼 台湾01
       - 🇰🇷 韩国-三网优化2-1C
+      - 🇯🇵 日本 02
+      - 🇸🇬 新加坡 02
+      - 🇭🇰 香港03
+      - 🇹🇼 台湾 01
+      - 🇭🇰 香港 01
+      - 🇳🇬 尼日利亚
+      - 🇰🇷 KR-01 0x-1D
+      - 🇯🇵 日本04
+      - 🇺🇸 US-03 0x-1D
+      - 🇸🇬 SG-01 0x-1C
+      - 🇻🇳 越南家宽
+      - 🇸🇬 SG-01 0x-1B
+      - 🇭🇰 香港 02
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇸🇬 新加坡 01
+      - 🇨🇦 加拿大-1C
+      - 🇯🇵 日本03
+      - 🇺🇸 美国 纽约01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 SG-01 0x-1A
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港02
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 SG-01 0x-1B
-      - 🇰🇷 KR-01 0x-1B
-      - 墨尔本-1B
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇸🇬 SG-01 0x-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 墨尔本-1A
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港01
+      - 🇯🇵 日本01
       - 🇨🇦 加拿大-1A
-      - 🇰🇷 KR-01 0x-1A
       - 🇺🇸 US-03 0x-1B
+      - 🇹🇷 土耳其
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 KR-01 0x-1B
+      - 🇰🇷 KR-01 0x-1C
+      - 🇺🇸 美国 02
+      - 🇯🇵 日本02
+      - 🇺🇸 美国 01
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1B
+      - 🇰🇷 KR-01 0x-1A
+      - 🇺🇸 美国 纽约2
+      - 🇺🇸 US-03 0x-1C
       - 墨尔本-1C
+      - 🇯🇵 日本 01
+      - 🇷🇺 俄罗斯
+      - 🇸🇬 新加坡 03
+      - 🇹🇼 台湾 02
+      - 墨尔本-1A
       - 🇺🇸 US-03 0x-1A
+      - 🇹🇭 泰国
+      - 🇭🇰 香港 03
+      - 🇸🇬 SG-01 0x-1D
+      - 🇹🇼 台湾01
       - 🇰🇷 韩国-三网优化2-1C
+      - 🇯🇵 日本 02
+      - 🇸🇬 新加坡 02
+      - 🇭🇰 香港03
+      - 🇹🇼 台湾 01
+      - 🇭🇰 香港 01
+      - 🇳🇬 尼日利亚
+      - 🇰🇷 KR-01 0x-1D
+      - 🇯🇵 日本04
+      - 🇺🇸 US-03 0x-1D
+      - 🇸🇬 SG-01 0x-1C
+      - 🇻🇳 越南家宽
+      - 🇸🇬 SG-01 0x-1B
+      - 🇭🇰 香港 02
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇸🇬 新加坡 01
+      - 🇨🇦 加拿大-1C
+      - 🇯🇵 日本03
+      - 🇺🇸 美国 纽约01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 SG-01 0x-1A
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -108,95 +244,241 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港02
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 SG-01 0x-1B
-      - 🇰🇷 KR-01 0x-1B
-      - 墨尔本-1B
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇸🇬 SG-01 0x-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 墨尔本-1A
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港01
+      - 🇯🇵 日本01
       - 🇨🇦 加拿大-1A
-      - 🇰🇷 KR-01 0x-1A
       - 🇺🇸 US-03 0x-1B
+      - 🇹🇷 土耳其
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 KR-01 0x-1B
+      - 🇰🇷 KR-01 0x-1C
+      - 🇺🇸 美国 02
+      - 🇯🇵 日本02
+      - 🇺🇸 美国 01
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1B
+      - 🇰🇷 KR-01 0x-1A
+      - 🇺🇸 美国 纽约2
+      - 🇺🇸 US-03 0x-1C
       - 墨尔本-1C
+      - 🇯🇵 日本 01
+      - 🇷🇺 俄罗斯
+      - 🇸🇬 新加坡 03
+      - 🇹🇼 台湾 02
+      - 墨尔本-1A
       - 🇺🇸 US-03 0x-1A
+      - 🇹🇭 泰国
+      - 🇭🇰 香港 03
+      - 🇸🇬 SG-01 0x-1D
+      - 🇹🇼 台湾01
       - 🇰🇷 韩国-三网优化2-1C
+      - 🇯🇵 日本 02
+      - 🇸🇬 新加坡 02
+      - 🇭🇰 香港03
+      - 🇹🇼 台湾 01
+      - 🇭🇰 香港 01
+      - 🇳🇬 尼日利亚
+      - 🇰🇷 KR-01 0x-1D
+      - 🇯🇵 日本04
+      - 🇺🇸 US-03 0x-1D
+      - 🇸🇬 SG-01 0x-1C
+      - 🇻🇳 越南家宽
+      - 🇸🇬 SG-01 0x-1B
+      - 🇭🇰 香港 02
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇸🇬 新加坡 01
+      - 🇨🇦 加拿大-1C
+      - 🇯🇵 日本03
+      - 🇺🇸 美国 纽约01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 SG-01 0x-1A
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
+      - 🇭🇰 香港02
+      - 🇭🇰 香港01
+      - 🇹🇼 台湾 02
+      - 🇭🇰 香港 03
+      - 🇹🇼 台湾01
+      - 🇭🇰 香港03
+      - 🇹🇼 台湾 01
+      - 🇭🇰 香港 01
+      - 🇭🇰 香港 02
+      - 🇹🇼 台湾 1
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港02
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 SG-01 0x-1B
-      - 🇰🇷 KR-01 0x-1B
-      - 墨尔本-1B
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇸🇬 SG-01 0x-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 墨尔本-1A
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港01
+      - 🇯🇵 日本01
       - 🇨🇦 加拿大-1A
-      - 🇰🇷 KR-01 0x-1A
       - 🇺🇸 US-03 0x-1B
+      - 🇹🇷 土耳其
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 KR-01 0x-1B
+      - 🇰🇷 KR-01 0x-1C
+      - 🇺🇸 美国 02
+      - 🇯🇵 日本02
+      - 🇺🇸 美国 01
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1B
+      - 🇰🇷 KR-01 0x-1A
+      - 🇺🇸 美国 纽约2
+      - 🇺🇸 US-03 0x-1C
       - 墨尔本-1C
+      - 🇯🇵 日本 01
+      - 🇷🇺 俄罗斯
+      - 🇸🇬 新加坡 03
+      - 🇹🇼 台湾 02
+      - 墨尔本-1A
       - 🇺🇸 US-03 0x-1A
+      - 🇹🇭 泰国
+      - 🇭🇰 香港 03
+      - 🇸🇬 SG-01 0x-1D
+      - 🇹🇼 台湾01
       - 🇰🇷 韩国-三网优化2-1C
+      - 🇯🇵 日本 02
+      - 🇸🇬 新加坡 02
+      - 🇭🇰 香港03
+      - 🇹🇼 台湾 01
+      - 🇭🇰 香港 01
+      - 🇳🇬 尼日利亚
+      - 🇰🇷 KR-01 0x-1D
+      - 🇯🇵 日本04
+      - 🇺🇸 US-03 0x-1D
+      - 🇸🇬 SG-01 0x-1C
+      - 🇻🇳 越南家宽
+      - 🇸🇬 SG-01 0x-1B
+      - 🇭🇰 香港 02
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇸🇬 新加坡 01
+      - 🇨🇦 加拿大-1C
+      - 🇯🇵 日本03
+      - 🇺🇸 美国 纽约01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 SG-01 0x-1A
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港02
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 SG-01 0x-1B
-      - 🇰🇷 KR-01 0x-1B
-      - 墨尔本-1B
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇸🇬 SG-01 0x-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 墨尔本-1A
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港01
+      - 🇯🇵 日本01
       - 🇨🇦 加拿大-1A
-      - 🇰🇷 KR-01 0x-1A
       - 🇺🇸 US-03 0x-1B
+      - 🇹🇷 土耳其
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 KR-01 0x-1B
+      - 🇰🇷 KR-01 0x-1C
+      - 🇺🇸 美国 02
+      - 🇯🇵 日本02
+      - 🇺🇸 美国 01
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1B
+      - 🇰🇷 KR-01 0x-1A
+      - 🇺🇸 美国 纽约2
+      - 🇺🇸 US-03 0x-1C
       - 墨尔本-1C
+      - 🇯🇵 日本 01
+      - 🇷🇺 俄罗斯
+      - 🇸🇬 新加坡 03
+      - 🇹🇼 台湾 02
+      - 墨尔本-1A
       - 🇺🇸 US-03 0x-1A
+      - 🇹🇭 泰国
+      - 🇭🇰 香港 03
+      - 🇸🇬 SG-01 0x-1D
+      - 🇹🇼 台湾01
       - 🇰🇷 韩国-三网优化2-1C
+      - 🇯🇵 日本 02
+      - 🇸🇬 新加坡 02
+      - 🇭🇰 香港03
+      - 🇹🇼 台湾 01
+      - 🇭🇰 香港 01
+      - 🇳🇬 尼日利亚
+      - 🇰🇷 KR-01 0x-1D
+      - 🇯🇵 日本04
+      - 🇺🇸 US-03 0x-1D
+      - 🇸🇬 SG-01 0x-1C
+      - 🇻🇳 越南家宽
+      - 🇸🇬 SG-01 0x-1B
+      - 🇭🇰 香港 02
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇸🇬 新加坡 01
+      - 🇨🇦 加拿大-1C
+      - 🇯🇵 日本03
+      - 🇺🇸 美国 纽约01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 SG-01 0x-1A
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港02
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 SG-01 0x-1B
-      - 🇰🇷 KR-01 0x-1B
-      - 墨尔本-1B
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇸🇬 SG-01 0x-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 墨尔本-1A
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港01
+      - 🇯🇵 日本01
       - 🇨🇦 加拿大-1A
-      - 🇰🇷 KR-01 0x-1A
       - 🇺🇸 US-03 0x-1B
+      - 🇹🇷 土耳其
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 KR-01 0x-1B
+      - 🇰🇷 KR-01 0x-1C
+      - 🇺🇸 美国 02
+      - 🇯🇵 日本02
+      - 🇺🇸 美国 01
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1B
+      - 🇰🇷 KR-01 0x-1A
+      - 🇺🇸 美国 纽约2
+      - 🇺🇸 US-03 0x-1C
       - 墨尔本-1C
+      - 🇯🇵 日本 01
+      - 🇷🇺 俄罗斯
+      - 🇸🇬 新加坡 03
+      - 🇹🇼 台湾 02
+      - 墨尔本-1A
       - 🇺🇸 US-03 0x-1A
+      - 🇹🇭 泰国
+      - 🇭🇰 香港 03
+      - 🇸🇬 SG-01 0x-1D
+      - 🇹🇼 台湾01
       - 🇰🇷 韩国-三网优化2-1C
+      - 🇯🇵 日本 02
+      - 🇸🇬 新加坡 02
+      - 🇭🇰 香港03
+      - 🇹🇼 台湾 01
+      - 🇭🇰 香港 01
+      - 🇳🇬 尼日利亚
+      - 🇰🇷 KR-01 0x-1D
+      - 🇯🇵 日本04
+      - 🇺🇸 US-03 0x-1D
+      - 🇸🇬 SG-01 0x-1C
+      - 🇻🇳 越南家宽
+      - 🇸🇬 SG-01 0x-1B
+      - 🇭🇰 香港 02
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇸🇬 新加坡 01
+      - 🇨🇦 加拿大-1C
+      - 🇯🇵 日本03
+      - 🇺🇸 美国 纽约01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 SG-01 0x-1A
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -212,23 +494,57 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港02
       - 🇰🇷 韩国-三网优化2-1A
-      - 🇸🇬 SG-01 0x-1B
-      - 🇰🇷 KR-01 0x-1B
-      - 墨尔本-1B
-      - 🇨🇦 加拿大-1C
-      - 🇨🇦 加拿大-1B
-      - 🇸🇬 SG-01 0x-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 墨尔本-1A
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇭🇰 香港01
+      - 🇯🇵 日本01
       - 🇨🇦 加拿大-1A
-      - 🇰🇷 KR-01 0x-1A
       - 🇺🇸 US-03 0x-1B
+      - 🇹🇷 土耳其
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 KR-01 0x-1B
+      - 🇰🇷 KR-01 0x-1C
+      - 🇺🇸 美国 02
+      - 🇯🇵 日本02
+      - 🇺🇸 美国 01
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1B
+      - 🇰🇷 KR-01 0x-1A
+      - 🇺🇸 美国 纽约2
+      - 🇺🇸 US-03 0x-1C
       - 墨尔本-1C
+      - 🇯🇵 日本 01
+      - 🇷🇺 俄罗斯
+      - 🇸🇬 新加坡 03
+      - 🇹🇼 台湾 02
+      - 墨尔本-1A
       - 🇺🇸 US-03 0x-1A
+      - 🇹🇭 泰国
+      - 🇭🇰 香港 03
+      - 🇸🇬 SG-01 0x-1D
+      - 🇹🇼 台湾01
       - 🇰🇷 韩国-三网优化2-1C
+      - 🇯🇵 日本 02
+      - 🇸🇬 新加坡 02
+      - 🇭🇰 香港03
+      - 🇹🇼 台湾 01
+      - 🇭🇰 香港 01
+      - 🇳🇬 尼日利亚
+      - 🇰🇷 KR-01 0x-1D
+      - 🇯🇵 日本04
+      - 🇺🇸 US-03 0x-1D
+      - 🇸🇬 SG-01 0x-1C
+      - 🇻🇳 越南家宽
+      - 🇸🇬 SG-01 0x-1B
+      - 🇭🇰 香港 02
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇸🇬 新加坡 01
+      - 🇨🇦 加拿大-1C
+      - 🇯🇵 日本03
+      - 🇺🇸 美国 纽约01
+      - 🇹🇼 台湾 1
+      - 🇸🇬 SG-01 0x-1A
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
