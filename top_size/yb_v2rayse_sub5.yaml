@@ -1,20 +1,22 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-10-01 23:50:27
+# 创建时间：2024-10-02 15:50:02
 # 使用模版：ACL4SSR_Mini_Fallback.ini
 # 节点数量：204
 # 节点类型：vmess
 ####################################
 mixed-port: 7890
-allow-lan: true
-log-level: info
-external-controller: 0.0.0.0:9090
+allow-lan: false
+log-level: silent
+external-controller: 127.0.0.1:9090
 dns:
   enabled: true
-  listen: 0.0.0.0:1053
-  ipv6: true
+  listen: 127.0.0.1:1053
+  ipv6: false
   default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
     - 223.5.5.5
     - 114.114.114.114
   enhanced-mode: fake-ip
@@ -77,10 +79,12 @@ dns:
     - stun.*.*.*
     - '*.mcdn.bilivideo.cn'
   nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
   fallback-filter:
-    geoip: false
+    geoip: true
     ipcidr:
       - 240.0.0.0/4
       - 0.0.0.0/32
@@ -295,7 +299,6 @@ proxy-groups:
     type: select
     proxies:
       - 🔯 故障转移
-      - 🌍 国外媒体
       - DIRECT
       - 美国_由快嘴科技提供：kkzui.com美国_1_由快嘴科技提供：kkzui.com1
       - 美国_由快嘴科技提供：kkzui.com美国_2_由快嘴科技提供：kkzui.com2
@@ -713,9 +716,9 @@ proxy-groups:
   - name: 🌍 国外媒体
     type: select
     proxies:
-     - 🚀 节点选择
-     - 🔯 故障转移
-     - 🎯 全球直连
+      - 🚀 节点选择
+      - 🔯 故障转移
+      - 🎯 全球直连
       - 美国_由快嘴科技提供：kkzui.com美国_1_由快嘴科技提供：kkzui.com1
       - 美国_由快嘴科技提供：kkzui.com美国_2_由快嘴科技提供：kkzui.com2
       - 美国_由快嘴科技提供：kkzui.com美国_3_由快嘴科技提供：kkzui.com3
@@ -937,7 +940,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🔯 故障转移
-      - 🌍 国外媒体
       - 美国_由快嘴科技提供：kkzui.com美国_1_由快嘴科技提供：kkzui.com1
       - 美国_由快嘴科技提供：kkzui.com美国_2_由快嘴科技提供：kkzui.com2
       - 美国_由快嘴科技提供：kkzui.com美国_3_由快嘴科技提供：kkzui.com3
