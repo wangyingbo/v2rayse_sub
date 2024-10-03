@@ -1,8 +1,8 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-10-02 15:50:02
-# 使用模版：ACL4SSR_Mini_Fallback.ini
+# 创建时间：2024-10-03 16:20:14
+# 使用模版：ACL4SSR_Mini_MultiMode.ini
 # 节点数量：204
 # 节点类型：vmess
 ####################################
@@ -15,7 +15,7 @@ dns:
   listen: 127.0.0.1:1053
   ipv6: false
   default-nameserver:
-    - 1.1.1.1
+    - 1.0.0.1
     - 8.8.8.8
     - 223.5.5.5
     - 114.114.114.114
@@ -299,6 +299,7 @@ proxy-groups:
     type: select
     proxies:
       - 🔯 故障转移
+      - 🔮 负载均衡
       - DIRECT
       - 美国_由快嘴科技提供：kkzui.com美国_1_由快嘴科技提供：kkzui.com1
       - 美国_由快嘴科技提供：kkzui.com美国_2_由快嘴科技提供：kkzui.com2
@@ -713,11 +714,221 @@ proxy-groups:
       - 美国_由快嘴科技提供：kkzui.com美国_202_由快嘴科技提供：kkzui.com202
       - 美国_由快嘴科技提供：kkzui.com美国_203_由快嘴科技提供：kkzui.com203
       - 美国_由快嘴科技提供：kkzui.com美国_204_由快嘴科技提供：kkzui.com204
+  - name: 🔮 负载均衡
+    type: load-balance
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    proxies:
+      - 美国_由快嘴科技提供：kkzui.com美国_1_由快嘴科技提供：kkzui.com1
+      - 美国_由快嘴科技提供：kkzui.com美国_2_由快嘴科技提供：kkzui.com2
+      - 美国_由快嘴科技提供：kkzui.com美国_3_由快嘴科技提供：kkzui.com3
+      - 巴西_由快嘴科技提供：kkzui.com巴西_4_由快嘴科技提供：kkzui.com4
+      - 美国_由快嘴科技提供：kkzui.com美国_5_由快嘴科技提供：kkzui.com5
+      - 美国_由快嘴科技提供：kkzui.com美国_6_由快嘴科技提供：kkzui.com6
+      - 未知_由快嘴科技提供：kkzui.com未知_7_由快嘴科技提供：kkzui.com7
+      - 加拿大_由快嘴科技提供：kkzui.com加拿大_8_由快嘴科技提供：kkzui.com8
+      - 美国_由快嘴科技提供：kkzui.com美国_9_由快嘴科技提供：kkzui.com9
+      - 美国_由快嘴科技提供：kkzui.com美国_10_由快嘴科技提供：kkzui.com10
+      - 美国_由快嘴科技提供：kkzui.com美国_11_由快嘴科技提供：kkzui.com11
+      - 美国_由快嘴科技提供：kkzui.com美国_12_由快嘴科技提供：kkzui.com12
+      - 美国_由快嘴科技提供：kkzui.com美国_13_由快嘴科技提供：kkzui.com13
+      - 美国_由快嘴科技提供：kkzui.com美国_14_由快嘴科技提供：kkzui.com14
+      - 美国_由快嘴科技提供：kkzui.com美国_15_由快嘴科技提供：kkzui.com15
+      - 美国_由快嘴科技提供：kkzui.com美国_16_由快嘴科技提供：kkzui.com16
+      - 美国_由快嘴科技提供：kkzui.com美国_17_由快嘴科技提供：kkzui.com17
+      - 美国_由快嘴科技提供：kkzui.com美国_18_由快嘴科技提供：kkzui.com18
+      - 美国_由快嘴科技提供：kkzui.com美国_19_由快嘴科技提供：kkzui.com19
+      - 美国_由快嘴科技提供：kkzui.com美国_20_由快嘴科技提供：kkzui.com20
+      - 美国_由快嘴科技提供：kkzui.com美国_21_由快嘴科技提供：kkzui.com21
+      - 美国_由快嘴科技提供：kkzui.com美国_22_由快嘴科技提供：kkzui.com22
+      - 美国_由快嘴科技提供：kkzui.com美国_23_由快嘴科技提供：kkzui.com23
+      - 美国_由快嘴科技提供：kkzui.com美国_24_由快嘴科技提供：kkzui.com24
+      - 美国_由快嘴科技提供：kkzui.com美国_25_由快嘴科技提供：kkzui.com25
+      - 美国_由快嘴科技提供：kkzui.com美国_26_由快嘴科技提供：kkzui.com26
+      - 美国_由快嘴科技提供：kkzui.com美国_27_由快嘴科技提供：kkzui.com27
+      - 美国_由快嘴科技提供：kkzui.com美国_28_由快嘴科技提供：kkzui.com28
+      - 美国_由快嘴科技提供：kkzui.com美国_29_由快嘴科技提供：kkzui.com29
+      - 美国_由快嘴科技提供：kkzui.com美国_30_由快嘴科技提供：kkzui.com30
+      - 美国_由快嘴科技提供：kkzui.com美国_31_由快嘴科技提供：kkzui.com31
+      - 美国_由快嘴科技提供：kkzui.com美国_32_由快嘴科技提供：kkzui.com32
+      - 美国_由快嘴科技提供：kkzui.com美国_33_由快嘴科技提供：kkzui.com33
+      - 美国_由快嘴科技提供：kkzui.com美国_34_由快嘴科技提供：kkzui.com34
+      - 美国_由快嘴科技提供：kkzui.com美国_35_由快嘴科技提供：kkzui.com35
+      - 美国_由快嘴科技提供：kkzui.com美国_36_由快嘴科技提供：kkzui.com36
+      - 美国_由快嘴科技提供：kkzui.com美国_37_由快嘴科技提供：kkzui.com37
+      - 美国_由快嘴科技提供：kkzui.com美国_38_由快嘴科技提供：kkzui.com38
+      - 美国_由快嘴科技提供：kkzui.com美国_39_由快嘴科技提供：kkzui.com39
+      - 美国_由快嘴科技提供：kkzui.com美国_40_由快嘴科技提供：kkzui.com40
+      - 美国_由快嘴科技提供：kkzui.com美国_41_由快嘴科技提供：kkzui.com41
+      - 美国_由快嘴科技提供：kkzui.com美国_42_由快嘴科技提供：kkzui.com42
+      - 美国_由快嘴科技提供：kkzui.com美国_43_由快嘴科技提供：kkzui.com43
+      - 美国_由快嘴科技提供：kkzui.com美国_44_由快嘴科技提供：kkzui.com44
+      - 美国_由快嘴科技提供：kkzui.com美国_45_由快嘴科技提供：kkzui.com45
+      - 美国_由快嘴科技提供：kkzui.com美国_46_由快嘴科技提供：kkzui.com46
+      - 美国_由快嘴科技提供：kkzui.com美国_47_由快嘴科技提供：kkzui.com47
+      - 美国_由快嘴科技提供：kkzui.com美国_48_由快嘴科技提供：kkzui.com48
+      - 美国_由快嘴科技提供：kkzui.com美国_49_由快嘴科技提供：kkzui.com49
+      - 美国_由快嘴科技提供：kkzui.com美国_50_由快嘴科技提供：kkzui.com50
+      - 美国_由快嘴科技提供：kkzui.com美国_51_由快嘴科技提供：kkzui.com51
+      - 美国_由快嘴科技提供：kkzui.com美国_52_由快嘴科技提供：kkzui.com52
+      - 美国_由快嘴科技提供：kkzui.com美国_53_由快嘴科技提供：kkzui.com53
+      - 美国_由快嘴科技提供：kkzui.com美国_54_由快嘴科技提供：kkzui.com54
+      - 美国_由快嘴科技提供：kkzui.com美国_55_由快嘴科技提供：kkzui.com55
+      - 美国_由快嘴科技提供：kkzui.com美国_56_由快嘴科技提供：kkzui.com56
+      - 美国_由快嘴科技提供：kkzui.com美国_57_由快嘴科技提供：kkzui.com57
+      - 美国_由快嘴科技提供：kkzui.com美国_58_由快嘴科技提供：kkzui.com58
+      - 美国_由快嘴科技提供：kkzui.com美国_59_由快嘴科技提供：kkzui.com59
+      - 美国_由快嘴科技提供：kkzui.com美国_60_由快嘴科技提供：kkzui.com60
+      - 美国_由快嘴科技提供：kkzui.com美国_61_由快嘴科技提供：kkzui.com61
+      - 美国_由快嘴科技提供：kkzui.com美国_62_由快嘴科技提供：kkzui.com62
+      - 美国_由快嘴科技提供：kkzui.com美国_63_由快嘴科技提供：kkzui.com63
+      - 美国_由快嘴科技提供：kkzui.com美国_64_由快嘴科技提供：kkzui.com64
+      - 美国_由快嘴科技提供：kkzui.com美国_65_由快嘴科技提供：kkzui.com65
+      - 美国_由快嘴科技提供：kkzui.com美国_66_由快嘴科技提供：kkzui.com66
+      - 美国_由快嘴科技提供：kkzui.com美国_67_由快嘴科技提供：kkzui.com67
+      - 美国_由快嘴科技提供：kkzui.com美国_68_由快嘴科技提供：kkzui.com68
+      - 美国_由快嘴科技提供：kkzui.com美国_69_由快嘴科技提供：kkzui.com69
+      - 美国_由快嘴科技提供：kkzui.com美国_70_由快嘴科技提供：kkzui.com70
+      - 美国_由快嘴科技提供：kkzui.com美国_71_由快嘴科技提供：kkzui.com71
+      - 美国_由快嘴科技提供：kkzui.com美国_72_由快嘴科技提供：kkzui.com72
+      - 美国_由快嘴科技提供：kkzui.com美国_73_由快嘴科技提供：kkzui.com73
+      - 加拿大_由快嘴科技提供：kkzui.com加拿大_74_由快嘴科技提供：kkzui.com74
+      - 美国_由快嘴科技提供：kkzui.com美国_75_由快嘴科技提供：kkzui.com75
+      - 美国_由快嘴科技提供：kkzui.com美国_76_由快嘴科技提供：kkzui.com76
+      - 美国_由快嘴科技提供：kkzui.com美国_77_由快嘴科技提供：kkzui.com77
+      - 美国_由快嘴科技提供：kkzui.com美国_78_由快嘴科技提供：kkzui.com78
+      - 美国_由快嘴科技提供：kkzui.com美国_79_由快嘴科技提供：kkzui.com79
+      - 美国_由快嘴科技提供：kkzui.com美国_80_由快嘴科技提供：kkzui.com80
+      - 美国_由快嘴科技提供：kkzui.com美国_81_由快嘴科技提供：kkzui.com81
+      - 美国_由快嘴科技提供：kkzui.com美国_82_由快嘴科技提供：kkzui.com82
+      - 美国_由快嘴科技提供：kkzui.com美国_83_由快嘴科技提供：kkzui.com83
+      - 美国_由快嘴科技提供：kkzui.com美国_84_由快嘴科技提供：kkzui.com84
+      - 美国_由快嘴科技提供：kkzui.com美国_85_由快嘴科技提供：kkzui.com85
+      - 加拿大_由快嘴科技提供：kkzui.com加拿大_86_由快嘴科技提供：kkzui.com86
+      - 巴西_由快嘴科技提供：kkzui.com巴西_87_由快嘴科技提供：kkzui.com87
+      - 巴西_由快嘴科技提供：kkzui.com巴西_88_由快嘴科技提供：kkzui.com88
+      - 英国_由快嘴科技提供：kkzui.com英国_89_由快嘴科技提供：kkzui.com89
+      - 荷兰_由快嘴科技提供：kkzui.com荷兰_90_由快嘴科技提供：kkzui.com90
+      - 美国_由快嘴科技提供：kkzui.com美国_91_由快嘴科技提供：kkzui.com91
+      - 美国_由快嘴科技提供：kkzui.com美国_92_由快嘴科技提供：kkzui.com92
+      - 美国_由快嘴科技提供：kkzui.com美国_93_由快嘴科技提供：kkzui.com93
+      - 美国_由快嘴科技提供：kkzui.com美国_94_由快嘴科技提供：kkzui.com94
+      - 美国_由快嘴科技提供：kkzui.com美国_95_由快嘴科技提供：kkzui.com95
+      - 美国_由快嘴科技提供：kkzui.com美国_96_由快嘴科技提供：kkzui.com96
+      - 美国_由快嘴科技提供：kkzui.com美国_97_由快嘴科技提供：kkzui.com97
+      - 美国_由快嘴科技提供：kkzui.com美国_98_由快嘴科技提供：kkzui.com98
+      - 美国_由快嘴科技提供：kkzui.com美国_99_由快嘴科技提供：kkzui.com99
+      - 美国_由快嘴科技提供：kkzui.com美国_100_由快嘴科技提供：kkzui.com100
+      - 美国_由快嘴科技提供：kkzui.com美国_101_由快嘴科技提供：kkzui.com101
+      - 巴西_由快嘴科技提供：kkzui.com巴西_102_由快嘴科技提供：kkzui.com102
+      - 巴西_由快嘴科技提供：kkzui.com巴西_103_由快嘴科技提供：kkzui.com103
+      - 巴西_由快嘴科技提供：kkzui.com巴西_104_由快嘴科技提供：kkzui.com104
+      - 美国_由快嘴科技提供：kkzui.com美国_105_由快嘴科技提供：kkzui.com105
+      - 美国_由快嘴科技提供：kkzui.com美国_106_由快嘴科技提供：kkzui.com106
+      - 爱尔兰_由快嘴科技提供：kkzui.com爱尔兰_107_由快嘴科技提供：kkzui.com107
+      - 美国_由快嘴科技提供：kkzui.com美国_108_由快嘴科技提供：kkzui.com108
+      - 美国_由快嘴科技提供：kkzui.com美国_109_由快嘴科技提供：kkzui.com109
+      - 美国_由快嘴科技提供：kkzui.com美国_110_由快嘴科技提供：kkzui.com110
+      - 美国_由快嘴科技提供：kkzui.com美国_111_由快嘴科技提供：kkzui.com111
+      - 美国_由快嘴科技提供：kkzui.com美国_112_由快嘴科技提供：kkzui.com112
+      - 澳大利亚_由快嘴科技提供：kkzui.com澳大利亚_113_由快嘴科技提供：kkzui.com113
+      - 美国_由快嘴科技提供：kkzui.com美国_114_由快嘴科技提供：kkzui.com114
+      - 巴西_由快嘴科技提供：kkzui.com巴西_115_由快嘴科技提供：kkzui.com115
+      - 巴西_由快嘴科技提供：kkzui.com巴西_116_由快嘴科技提供：kkzui.com116
+      - 巴西_由快嘴科技提供：kkzui.com巴西_117_由快嘴科技提供：kkzui.com117
+      - 法国_由快嘴科技提供：kkzui.com法国_118_由快嘴科技提供：kkzui.com118
+      - 英国_由快嘴科技提供：kkzui.com英国_119_由快嘴科技提供：kkzui.com119
+      - 美国_由快嘴科技提供：kkzui.com美国_120_由快嘴科技提供：kkzui.com120
+      - 美国_由快嘴科技提供：kkzui.com美国_121_由快嘴科技提供：kkzui.com121
+      - 瑞典_由快嘴科技提供：kkzui.com瑞典_122_由快嘴科技提供：kkzui.com122
+      - 美国_由快嘴科技提供：kkzui.com美国_123_由快嘴科技提供：kkzui.com123
+      - 美国_由快嘴科技提供：kkzui.com美国_124_由快嘴科技提供：kkzui.com124
+      - 美国_由快嘴科技提供：kkzui.com美国_125_由快嘴科技提供：kkzui.com125
+      - 美国_由快嘴科技提供：kkzui.com美国_126_由快嘴科技提供：kkzui.com126
+      - 美国_由快嘴科技提供：kkzui.com美国_127_由快嘴科技提供：kkzui.com127
+      - 美国_由快嘴科技提供：kkzui.com美国_128_由快嘴科技提供：kkzui.com128
+      - 美国_由快嘴科技提供：kkzui.com美国_129_由快嘴科技提供：kkzui.com129
+      - 美国_由快嘴科技提供：kkzui.com美国_130_由快嘴科技提供：kkzui.com130
+      - 美国_由快嘴科技提供：kkzui.com美国_131_由快嘴科技提供：kkzui.com131
+      - 美国_由快嘴科技提供：kkzui.com美国_132_由快嘴科技提供：kkzui.com132
+      - 美国_由快嘴科技提供：kkzui.com美国_133_由快嘴科技提供：kkzui.com133
+      - 美国_由快嘴科技提供：kkzui.com美国_134_由快嘴科技提供：kkzui.com134
+      - 巴西_由快嘴科技提供：kkzui.com巴西_135_由快嘴科技提供：kkzui.com135
+      - 巴西_由快嘴科技提供：kkzui.com巴西_136_由快嘴科技提供：kkzui.com136
+      - 俄罗斯_由快嘴科技提供：kkzui.com俄罗斯_137_由快嘴科技提供：kkzui.com137
+      - 未知_由快嘴科技提供：kkzui.com未知_138_由快嘴科技提供：kkzui.com138
+      - 未知_由快嘴科技提供：kkzui.com未知_139_由快嘴科技提供：kkzui.com139
+      - 中国_由快嘴科技提供：kkzui.com中国_140_由快嘴科技提供：kkzui.com140
+      - 瑞典_由快嘴科技提供：kkzui.com瑞典_141_由快嘴科技提供：kkzui.com141
+      - 瑞典_由快嘴科技提供：kkzui.com瑞典_142_由快嘴科技提供：kkzui.com142
+      - 瑞典_由快嘴科技提供：kkzui.com瑞典_143_由快嘴科技提供：kkzui.com143
+      - 瑞典_由快嘴科技提供：kkzui.com瑞典_144_由快嘴科技提供：kkzui.com144
+      - 美国_由快嘴科技提供：kkzui.com美国_145_由快嘴科技提供：kkzui.com145
+      - 美国_由快嘴科技提供：kkzui.com美国_146_由快嘴科技提供：kkzui.com146
+      - 美国_由快嘴科技提供：kkzui.com美国_147_由快嘴科技提供：kkzui.com147
+      - 美国_由快嘴科技提供：kkzui.com美国_148_由快嘴科技提供：kkzui.com148
+      - 美国_由快嘴科技提供：kkzui.com美国_149_由快嘴科技提供：kkzui.com149
+      - 美国_由快嘴科技提供：kkzui.com美国_150_由快嘴科技提供：kkzui.com150
+      - 美国_由快嘴科技提供：kkzui.com美国_151_由快嘴科技提供：kkzui.com151
+      - 美国_由快嘴科技提供：kkzui.com美国_152_由快嘴科技提供：kkzui.com152
+      - 美国_由快嘴科技提供：kkzui.com美国_153_由快嘴科技提供：kkzui.com153
+      - 美国_由快嘴科技提供：kkzui.com美国_154_由快嘴科技提供：kkzui.com154
+      - 美国_由快嘴科技提供：kkzui.com美国_155_由快嘴科技提供：kkzui.com155
+      - 美国_由快嘴科技提供：kkzui.com美国_156_由快嘴科技提供：kkzui.com156
+      - 美国_由快嘴科技提供：kkzui.com美国_157_由快嘴科技提供：kkzui.com157
+      - 美国_由快嘴科技提供：kkzui.com美国_158_由快嘴科技提供：kkzui.com158
+      - 美国_由快嘴科技提供：kkzui.com美国_159_由快嘴科技提供：kkzui.com159
+      - 美国_由快嘴科技提供：kkzui.com美国_160_由快嘴科技提供：kkzui.com160
+      - 美国_由快嘴科技提供：kkzui.com美国_161_由快嘴科技提供：kkzui.com161
+      - 美国_由快嘴科技提供：kkzui.com美国_162_由快嘴科技提供：kkzui.com162
+      - 美国_由快嘴科技提供：kkzui.com美国_163_由快嘴科技提供：kkzui.com163
+      - 美国_由快嘴科技提供：kkzui.com美国_164_由快嘴科技提供：kkzui.com164
+      - 美国_由快嘴科技提供：kkzui.com美国_165_由快嘴科技提供：kkzui.com165
+      - 美国_由快嘴科技提供：kkzui.com美国_166_由快嘴科技提供：kkzui.com166
+      - 美国_由快嘴科技提供：kkzui.com美国_167_由快嘴科技提供：kkzui.com167
+      - 美国_由快嘴科技提供：kkzui.com美国_168_由快嘴科技提供：kkzui.com168
+      - 美国_由快嘴科技提供：kkzui.com美国_169_由快嘴科技提供：kkzui.com169
+      - 美国_由快嘴科技提供：kkzui.com美国_170_由快嘴科技提供：kkzui.com170
+      - 美国_由快嘴科技提供：kkzui.com美国_171_由快嘴科技提供：kkzui.com171
+      - 美国_由快嘴科技提供：kkzui.com美国_172_由快嘴科技提供：kkzui.com172
+      - 美国_由快嘴科技提供：kkzui.com美国_173_由快嘴科技提供：kkzui.com173
+      - 美国_由快嘴科技提供：kkzui.com美国_174_由快嘴科技提供：kkzui.com174
+      - 美国_由快嘴科技提供：kkzui.com美国_175_由快嘴科技提供：kkzui.com175
+      - 美国_由快嘴科技提供：kkzui.com美国_176_由快嘴科技提供：kkzui.com176
+      - 美国_由快嘴科技提供：kkzui.com美国_177_由快嘴科技提供：kkzui.com177
+      - 美国_由快嘴科技提供：kkzui.com美国_178_由快嘴科技提供：kkzui.com178
+      - 美国_由快嘴科技提供：kkzui.com美国_179_由快嘴科技提供：kkzui.com179
+      - 美国_由快嘴科技提供：kkzui.com美国_180_由快嘴科技提供：kkzui.com180
+      - 美国_由快嘴科技提供：kkzui.com美国_181_由快嘴科技提供：kkzui.com181
+      - 美国_由快嘴科技提供：kkzui.com美国_182_由快嘴科技提供：kkzui.com182
+      - 美国_由快嘴科技提供：kkzui.com美国_183_由快嘴科技提供：kkzui.com183
+      - 美国_由快嘴科技提供：kkzui.com美国_184_由快嘴科技提供：kkzui.com184
+      - 美国_由快嘴科技提供：kkzui.com美国_185_由快嘴科技提供：kkzui.com185
+      - 美国_由快嘴科技提供：kkzui.com美国_186_由快嘴科技提供：kkzui.com186
+      - 美国_由快嘴科技提供：kkzui.com美国_187_由快嘴科技提供：kkzui.com187
+      - 美国_由快嘴科技提供：kkzui.com美国_188_由快嘴科技提供：kkzui.com188
+      - 美国_由快嘴科技提供：kkzui.com美国_189_由快嘴科技提供：kkzui.com189
+      - 美国_由快嘴科技提供：kkzui.com美国_190_由快嘴科技提供：kkzui.com190
+      - 美国_由快嘴科技提供：kkzui.com美国_191_由快嘴科技提供：kkzui.com191
+      - 美国_由快嘴科技提供：kkzui.com美国_192_由快嘴科技提供：kkzui.com192
+      - 美国_由快嘴科技提供：kkzui.com美国_193_由快嘴科技提供：kkzui.com193
+      - 美国_由快嘴科技提供：kkzui.com美国_194_由快嘴科技提供：kkzui.com194
+      - 未知_由快嘴科技提供：kkzui.com未知_195_由快嘴科技提供：kkzui.com195
+      - 美国_由快嘴科技提供：kkzui.com美国_196_由快嘴科技提供：kkzui.com196
+      - 美国_由快嘴科技提供：kkzui.com美国_197_由快嘴科技提供：kkzui.com197
+      - 美国_由快嘴科技提供：kkzui.com美国_198_由快嘴科技提供：kkzui.com198
+      - 未知_由快嘴科技提供：kkzui.com未知_199_由快嘴科技提供：kkzui.com199
+      - 美国_由快嘴科技提供：kkzui.com美国_200_由快嘴科技提供：kkzui.com200
+      - 美国_由快嘴科技提供：kkzui.com美国_201_由快嘴科技提供：kkzui.com201
+      - 美国_由快嘴科技提供：kkzui.com美国_202_由快嘴科技提供：kkzui.com202
+      - 美国_由快嘴科技提供：kkzui.com美国_203_由快嘴科技提供：kkzui.com203
+      - 美国_由快嘴科技提供：kkzui.com美国_204_由快嘴科技提供：kkzui.com204
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - 🔯 故障转移
+      - 🔮 负载均衡
       - 🎯 全球直连
       - 美国_由快嘴科技提供：kkzui.com美国_1_由快嘴科技提供：kkzui.com1
       - 美国_由快嘴科技提供：kkzui.com美国_2_由快嘴科技提供：kkzui.com2
@@ -927,8 +1138,8 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - 🚀 节点选择
       - 🔯 故障转移
+      - 🔮 负载均衡
   - name: 🛑 全球拦截
     type: select
     proxies:
@@ -940,6 +1151,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🔯 故障转移
+      - 🔮 负载均衡
       - 美国_由快嘴科技提供：kkzui.com美国_1_由快嘴科技提供：kkzui.com1
       - 美国_由快嘴科技提供：kkzui.com美国_2_由快嘴科技提供：kkzui.com2
       - 美国_由快嘴科技提供：kkzui.com美国_3_由快嘴科技提供：kkzui.com3
