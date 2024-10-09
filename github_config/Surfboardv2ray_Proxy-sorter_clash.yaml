@@ -5,53 +5,117 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: CA_1_@Surfboardv2ray, server: 172.67.161.77, port: 443, type: vmess, uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: linde06.indiavideo.sbs, network: ws, ws-opts: {path: /linkws, headers: {Host: linde06.indiavideo.sbs}}}
+  - {name: US_1_@Surfboardv2ray, server: 66.241.124.229, port: 443, type: vmess, uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: cold-dawn-9246.fly.dev, network: ws, ws-opts: {path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm, headers: {Host: cold-dawn-9246.fly.dev}}}
+  - {name: RU_2_@Surfboardv2ray, server: 80.85.152.179, port: 12910, type: vmess, uuid: 8259cb1c-dd6c-4739-9c88-af550d977525, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: 22.lwdh.us, network: ws, ws-opts: {path: /, headers: {Host: 22.lwdh.us}}}
+  - {name: US_3_@Surfboardv2ray, server: 104.16.67.38, port: 80, type: vmess, uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /v118-fccxmxm35, headers: {Host: us3e-mmnnfr9dop0.v2freevpn.com}}}
+  - {name: US_4_@Surfboardv2ray, server: 104.21.46.121, port: 443, type: vmess, uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: ivideos.sbs, network: ws, ws-opts: {path: /linkws, headers: {Host: ivideos.sbs}}}
+  - {name: NL_5_@Surfboardv2ray, server: 154.47.21.54, port: 8099, type: vmess, uuid: fa1897db-1925-4c86-a495-939a959af900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: US_6_@Surfboardv2ray, server: live.989bull.com, port: 443, type: vmess, uuid: 9ab6d7b4-cd08-4510-8bca-a01f461f8eb5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: live.989bull.com, network: ws, ws-opts: {path: "ws/?ed=2048", headers: {Host: Dbdjhiw72ebsu272hs519j.com}}}
+  - {name: US_7_@Surfboardv2ray, server: live.989bull.com, port: 443, type: vmess, uuid: 9ab6d7b4-cd08-4510-8bca-a01f461f8eb5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: live.989bull.com, network: ws, ws-opts: {path: "ws/?ed=2048", headers: {Host: Dbdjhiw72ebsu272hs519j.com}}}
+  - {name: US_8_@Surfboardv2ray, server: live.989bull.com, port: 443, type: vmess, uuid: 9ab6d7b4-cd08-4510-8bca-a01f461f8eb5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: live.989bull.com, network: ws, ws-opts: {path: "ws/?ed=2048", headers: {Host: Dbdjhiw72ebsu272hs519j.com}}}
+  - {name: CA_11_@Surfboardv2ray, server: s1c.v2.v001sss.xyz, port: 2082, type: vmess, uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: s1c.v2.v001sss.xyz}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - CA_1_@Surfboardv2ray
+      - US_1_@Surfboardv2ray
+      - RU_2_@Surfboardv2ray
+      - US_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - NL_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_11_@Surfboardv2ray
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - CA_1_@Surfboardv2ray
+      - US_1_@Surfboardv2ray
+      - RU_2_@Surfboardv2ray
+      - US_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - NL_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_11_@Surfboardv2ray
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - CA_1_@Surfboardv2ray
+      - US_1_@Surfboardv2ray
+      - RU_2_@Surfboardv2ray
+      - US_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - NL_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_11_@Surfboardv2ray
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - CA_1_@Surfboardv2ray
+      - US_1_@Surfboardv2ray
+      - RU_2_@Surfboardv2ray
+      - US_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - NL_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_11_@Surfboardv2ray
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - CA_1_@Surfboardv2ray
+      - US_1_@Surfboardv2ray
+      - RU_2_@Surfboardv2ray
+      - US_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - NL_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_11_@Surfboardv2ray
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - CA_1_@Surfboardv2ray
+      - US_1_@Surfboardv2ray
+      - RU_2_@Surfboardv2ray
+      - US_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - NL_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_11_@Surfboardv2ray
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - CA_1_@Surfboardv2ray
+      - US_1_@Surfboardv2ray
+      - RU_2_@Surfboardv2ray
+      - US_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - NL_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_11_@Surfboardv2ray
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -74,7 +138,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - CA_1_@Surfboardv2ray
+      - US_1_@Surfboardv2ray
+      - RU_2_@Surfboardv2ray
+      - US_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - NL_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_11_@Surfboardv2ray
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
@@ -3422,109 +3494,6 @@ rules:
   - IP-CIDR,116.71.136.0/22,🎯 全球直连,no-resolve
   - IP-CIDR,116.71.141.0/24,🎯 全球直连,no-resolve
   - IP-CIDR,116.71.142.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,116.71.243.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,116.71.244.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,116.71.251.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,117.78.0.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,119.3.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,119.8.0.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,119.8.32.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,121.36.0.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,121.36.128.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,121.37.0.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,122.112.128.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.0.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.64.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.100.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.104.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.112.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.128.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.192.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.224.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.240.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,139.9.248.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,139.159.128.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,139.159.160.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,139.159.164.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,139.159.168.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,139.159.176.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,139.159.192.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.0.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.64.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.79.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.80.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.96.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.112.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.125.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.128.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.192.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.223.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,159.138.224.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,168.195.92.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,185.176.76.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,197.199.0.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,197.210.163.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,197.252.1.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,197.252.2.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,197.252.4.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,197.252.8.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,200.32.52.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,200.32.54.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,200.32.57.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.0.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.4.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.8.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.11.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.13.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.20.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.22.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.24.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.26.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.29.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.33.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.38.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.40.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.43.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.48.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,203.135.50.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,42.186.0.0/16,🎯 全球直连,no-resolve
-  - IP-CIDR,45.127.128.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,45.195.24.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,45.253.132.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,45.253.240.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,45.254.48.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,59.111.0.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,59.111.128.0/17,🎯 全球直连,no-resolve
-  - IP-CIDR,103.71.120.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.71.128.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.71.196.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.71.200.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.12.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.18.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.24.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.28.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.38.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.40.0/23,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.44.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.48.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.72.128.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.74.24.0/21,🎯 全球直连,no-resolve
-  - IP-CIDR,103.74.48.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.126.92.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.129.252.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.131.252.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.135.240.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,103.196.64.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,106.2.32.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,106.2.64.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,114.113.196.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,114.113.200.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,115.236.112.0/20,🎯 全球直连,no-resolve
-  - IP-CIDR,115.238.76.0/22,🎯 全球直连,no-resolve
-  - IP-CIDR,123.58.160.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,223.252.192.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,101.198.128.0/18,🎯 全球直连,no-resolve
-  - IP-CIDR,101.198.192.0/19,🎯 全球直连,no-resolve
-  - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
+  - IP-CIDR,116.71.243.0/24,🎯 全球直连,no-resol
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
