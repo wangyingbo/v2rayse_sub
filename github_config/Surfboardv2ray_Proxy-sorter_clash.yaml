@@ -5,15 +5,8 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: US_1_@Surfboardv2ray, server: 66.241.124.229, port: 443, type: vmess, uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: cold-dawn-9246.fly.dev, network: ws, ws-opts: {path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm, headers: {Host: cold-dawn-9246.fly.dev}}}
-  - {name: RU_2_@Surfboardv2ray, server: 80.85.152.179, port: 12910, type: vmess, uuid: 8259cb1c-dd6c-4739-9c88-af550d977525, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: 22.lwdh.us, network: ws, ws-opts: {path: /, headers: {Host: 22.lwdh.us}}}
-  - {name: US_3_@Surfboardv2ray, server: 104.16.67.38, port: 80, type: vmess, uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /v118-fccxmxm35, headers: {Host: us3e-mmnnfr9dop0.v2freevpn.com}}}
-  - {name: US_4_@Surfboardv2ray, server: 104.21.46.121, port: 443, type: vmess, uuid: 441da342-ce90-441e-bff9-d2ceb55e68ca, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: ivideos.sbs, network: ws, ws-opts: {path: /linkws, headers: {Host: ivideos.sbs}}}
-  - {name: NL_5_@Surfboardv2ray, server: 154.47.21.54, port: 8099, type: vmess, uuid: fa1897db-1925-4c86-a495-939a959af900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: US_6_@Surfboardv2ray, server: live.989bull.com, port: 443, type: vmess, uuid: 9ab6d7b4-cd08-4510-8bca-a01f461f8eb5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: live.989bull.com, network: ws, ws-opts: {path: "ws/?ed=2048", headers: {Host: Dbdjhiw72ebsu272hs519j.com}}}
-  - {name: US_7_@Surfboardv2ray, server: live.989bull.com, port: 443, type: vmess, uuid: 9ab6d7b4-cd08-4510-8bca-a01f461f8eb5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: live.989bull.com, network: ws, ws-opts: {path: "ws/?ed=2048", headers: {Host: Dbdjhiw72ebsu272hs519j.com}}}
-  - {name: US_8_@Surfboardv2ray, server: live.989bull.com, port: 443, type: vmess, uuid: 9ab6d7b4-cd08-4510-8bca-a01f461f8eb5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: live.989bull.com, network: ws, ws-opts: {path: "ws/?ed=2048", headers: {Host: Dbdjhiw72ebsu272hs519j.com}}}
-  - {name: CA_11_@Surfboardv2ray, server: s1c.v2.v001sss.xyz, port: 2082, type: vmess, uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: s1c.v2.v001sss.xyz}}}
+  - {name: US_1_@Surfboardv2ray, server: 23.154.136.47, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: 23.154.136.47, network: ws, ws-opts: {path: linkvws, headers: {Host: 23.154.136.47}}}
+  - {name: US_3_@Surfboardv2ray, server: live.theworldwidewolf.com, port: 443, type: vmess, uuid: 5cce2682-3688-460f-ba3d-ee15d1488110, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: live.theworldwidewolf.com, network: ws, ws-opts: {path: "ws/?ed=2048", headers: {Host: Dbdjhiw72ebsu272hs519j.com}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -21,14 +14,7 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - US_1_@Surfboardv2ray
-      - RU_2_@Surfboardv2ray
       - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
-      - NL_5_@Surfboardv2ray
-      - US_6_@Surfboardv2ray
-      - US_7_@Surfboardv2ray
-      - US_8_@Surfboardv2ray
-      - CA_11_@Surfboardv2ray
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -36,14 +22,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - US_1_@Surfboardv2ray
-      - RU_2_@Surfboardv2ray
       - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
-      - NL_5_@Surfboardv2ray
-      - US_6_@Surfboardv2ray
-      - US_7_@Surfboardv2ray
-      - US_8_@Surfboardv2ray
-      - CA_11_@Surfboardv2ray
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -51,56 +30,28 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - US_1_@Surfboardv2ray
-      - RU_2_@Surfboardv2ray
       - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
-      - NL_5_@Surfboardv2ray
-      - US_6_@Surfboardv2ray
-      - US_7_@Surfboardv2ray
-      - US_8_@Surfboardv2ray
-      - CA_11_@Surfboardv2ray
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - US_1_@Surfboardv2ray
-      - RU_2_@Surfboardv2ray
       - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
-      - NL_5_@Surfboardv2ray
-      - US_6_@Surfboardv2ray
-      - US_7_@Surfboardv2ray
-      - US_8_@Surfboardv2ray
-      - CA_11_@Surfboardv2ray
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - US_1_@Surfboardv2ray
-      - RU_2_@Surfboardv2ray
       - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
-      - NL_5_@Surfboardv2ray
-      - US_6_@Surfboardv2ray
-      - US_7_@Surfboardv2ray
-      - US_8_@Surfboardv2ray
-      - CA_11_@Surfboardv2ray
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - US_1_@Surfboardv2ray
-      - RU_2_@Surfboardv2ray
       - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
-      - NL_5_@Surfboardv2ray
-      - US_6_@Surfboardv2ray
-      - US_7_@Surfboardv2ray
-      - US_8_@Surfboardv2ray
-      - CA_11_@Surfboardv2ray
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -108,14 +59,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - US_1_@Surfboardv2ray
-      - RU_2_@Surfboardv2ray
       - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
-      - NL_5_@Surfboardv2ray
-      - US_6_@Surfboardv2ray
-      - US_7_@Surfboardv2ray
-      - US_8_@Surfboardv2ray
-      - CA_11_@Surfboardv2ray
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -139,14 +83,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - US_1_@Surfboardv2ray
-      - RU_2_@Surfboardv2ray
       - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
-      - NL_5_@Surfboardv2ray
-      - US_6_@Surfboardv2ray
-      - US_7_@Surfboardv2ray
-      - US_8_@Surfboardv2ray
-      - CA_11_@Surfboardv2ray
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
@@ -1895,85 +1832,6 @@ rules:
   - DOMAIN-SUFFIX,steamchina.com,🎯 全球直连
   - DOMAIN-SUFFIX,steamcontent.com,🎯 全球直连
   - DOMAIN-SUFFIX,steamusercontent.com,🎯 全球直连
-  - DOMAIN-KEYWORD,1drv,Ⓜ️ 微软服务
-  - DOMAIN-KEYWORD,microsoft,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,aadrm.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,acompli.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,acompli.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,aka.ms,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,akadns.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,aspnetcdn.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,assets-yammer.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,azure.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,azure.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,azureedge.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,azureiotcentral.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,azurerms.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,bing.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,bing.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,bingapis.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,cloudapp.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,cloudappsecurity.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,edgesuite.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,gfx.ms,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,hotmail.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,live.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,live.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,lync.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msappproxy.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msauth.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msauthimages.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msecnd.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msedge.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msft.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msftauth.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msftauthimages.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msftidentity.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msidentity.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msn.cn,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msn.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msocdn.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,msocsp.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,mstea.ms,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,o365weve.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,oaspapps.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,office.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,office.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,office365.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,officeppe.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,omniroot.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,onedrive.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,onenote.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,onenote.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,onestore.ms,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,outlook.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,outlookmobile.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,phonefactor.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,public-trust.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,sfbassets.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,sfx.ms,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,sharepoint.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,sharepointonline.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,skype.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,skypeassets.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,skypeforbusiness.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,staffhub.ms,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,svc.ms,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,sway-cdn.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,sway-extensions.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,sway.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,trafficmanager.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,uservoice.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,virtualearth.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,visualstudio.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,windows-ppe.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,windows.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,windows.net,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,windowsazure.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,windowsupdate.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,wunderlist.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,yammer.com,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,yammerusercontent.com,Ⓜ️ 微软服务
   - DOMAIN,apple.comscoreresearch.com,🍎 苹果服务
   - DOMAIN-SUFFIX,aaplimg.com,🍎 苹果服务
   - DOMAIN-SUFFIX,akadns.net,🍎 苹果服务
