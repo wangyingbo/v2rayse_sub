@@ -5,61 +5,93 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: US_1_@Surfboardv2ray, server: www.Kayak.com, port: 443, type: vmess, uuid: 6529ee7d-b090-4515-8595-8bbdb6227fe1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: www.Kayak.com, network: ws, ws-opts: {path: /racevpn, headers: {Host: gerMAnyISvP.iR.}}}
-  - {name: US_2_@Surfboardv2ray, server: kalavryta.org, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: kalavryta.org, network: ws, ws-opts: {path: linkvws, headers: {Host: kalavryta.org}}}
+  - {name: CA_1_@Surfboardv2ray, server: 172.67.175.56, port: 443, type: vmess, uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: obdii.cfd, network: ws, ws-opts: {path: /linkws, headers: {Host: obdii.cfd}}}
+  - {name: PL_2_@Surfboardv2ray, server: wlf3072.ip-dynamic.org, port: 3073, type: vmess, uuid: 5adf06ba-0dca-432c-befc-81a8b19c46e7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: grpc, servername: wlf3072.ip-dynamic.org, grpc-opts: {grpc-service-name: JoinTelegram=@AstroVPN_Official}}
+  - {name: CA_4_@Surfboardv2ray, server: hms19.best-tizi.top, port: 443, type: vmess, uuid: 62aa5f80-0328-4004-a375-7f5a59df4022, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: hms19.best-tizi.top, network: ws, ws-opts: {path: /linkws, headers: {Host: hms19.best-tizi.top}}}
+  - {name: CA_5_@Surfboardv2ray, server: lammaland.org, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: lammaland.org, network: ws, ws-opts: {path: linkvws, headers: {Host: lammaland.org}}}
+  - {name: US_6_@Surfboardv2ray, server: plex.com, port: 80, type: vmess, uuid: a888b89a-08ac-40e6-8ad7-cfce9569f967, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /racevpn, headers: {Host: gerMAnyISvP.iR}}}
+  - {name: US_7_@Surfboardv2ray, server: plex.com, port: 443, type: vmess, uuid: a888b89a-08ac-40e6-8ad7-cfce9569f967, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: plex.com, network: ws, ws-opts: {path: /racevpn, headers: {Host: gerMAnyISvP.iR}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
+      - PL_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - CA_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
+      - PL_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - CA_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
+      - PL_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - CA_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
+      - PL_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - CA_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
+      - PL_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - CA_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
+      - PL_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - CA_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
+      - PL_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - CA_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -82,8 +114,12 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
+      - PL_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - CA_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
