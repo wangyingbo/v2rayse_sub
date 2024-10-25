@@ -5,99 +5,95 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇯🇵 日本-东京-500M-1-1A, server: tokyo2-500m.node.xn--l6qx3lcvp58x.com, port: 24153, type: hysteria2, password: 3b902638-960c-4f20-85ac-3aab9585e020, auth: 3b902638-960c-4f20-85ac-3aab9585e020, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇨🇭 瑞士专线, server: xr005.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: 4b9d387d-53f0-4bde-bb85-e90860b94e35, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇯🇵 日本-东京-500M-2-1A, server: tokyo3-500m.node.xn--l6qx3lcvp58x.com, port: 22915, type: hysteria2, password: 3b902638-960c-4f20-85ac-3aab9585e020, auth: 3b902638-960c-4f20-85ac-3aab9585e020, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 日本-东京-500M-1-1B, server: tokyo2-500m.node.xn--l6qx3lcvp58x.com, port: 20013, type: hysteria2, password: 99cc4039-dcc3-4685-afab-ff4427d3d96c, auth: 99cc4039-dcc3-4685-afab-ff4427d3d96c, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 日本-东京-500M-2-1B, server: tokyo3-500m.node.xn--l6qx3lcvp58x.com, port: 22458, type: hysteria2, password: 99cc4039-dcc3-4685-afab-ff4427d3d96c, auth: 99cc4039-dcc3-4685-afab-ff4427d3d96c, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-首尔3-1A, server: seoul3-500m.node.xn--l6qx3lcvp58x.com, port: 21789, type: hysteria2, password: 3b902638-960c-4f20-85ac-3aab9585e020, auth: 3b902638-960c-4f20-85ac-3aab9585e020, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇺🇸 美国-纽约专线, server: xr007.louwangzhiyu.xyz, port: 30001, type: vmess, uuid: 4b9d387d-53f0-4bde-bb85-e90860b94e35, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇰🇷 韩国-首尔3-1B, server: seoul3-500m.node.xn--l6qx3lcvp58x.com, port: 23237, type: hysteria2, password: 99cc4039-dcc3-4685-afab-ff4427d3d96c, auth: 99cc4039-dcc3-4685-afab-ff4427d3d96c, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇩🇪 德国-法兰克福-1B, server: frankfurt1-2500m.node.xn--l6qx3lcvp58x.com, port: 21561, type: hysteria2, password: 99cc4039-dcc3-4685-afab-ff4427d3d96c, auth: 99cc4039-dcc3-4685-afab-ff4427d3d96c, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇷🇺 莫斯科专线, server: xr002.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: 4b9d387d-53f0-4bde-bb85-e90860b94e35, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇦🇺 墨尔本, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 72c447c1-d7ed-4111-84c4-0eeaca040ed3, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 🇰🇷 韩国-首尔4-1B, server: seoul4-500m.node.xn--l6qx3lcvp58x.com, port: 22370, type: hysteria2, password: 99cc4039-dcc3-4685-afab-ff4427d3d96c, auth: 99cc4039-dcc3-4685-afab-ff4427d3d96c, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-首尔4-1A, server: seoul4-500m.node.xn--l6qx3lcvp58x.com, port: 24687, type: hysteria2, password: 3b902638-960c-4f20-85ac-3aab9585e020, auth: 3b902638-960c-4f20-85ac-3aab9585e020, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇬🇧 伦敦专线, server: xr004.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: 4b9d387d-53f0-4bde-bb85-e90860b94e35, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
+  - {name: 🇩🇪 德国-法兰克福-500M 1-1B, server: frankfurt2-500m.node.xn--l6qx3lcvp58x.com, port: 21926, type: hysteria2, password: 3b902638-960c-4f20-85ac-3aab9585e020, auth: 3b902638-960c-4f20-85ac-3aab9585e020, sni: 199.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇰🇷 韩国-首尔4-1A, server: seoul4-500m.node.xn--l6qx3lcvp58x.com, port: 24956, type: hysteria2, password: 99cc4039-dcc3-4685-afab-ff4427d3d96c, auth: 99cc4039-dcc3-4685-afab-ff4427d3d96c, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇨🇦 加拿大专线, server: xr003.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: 4b9d387d-53f0-4bde-bb85-e90860b94e35, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
   - {name: 🇨🇦 加拿大, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 72c447c1-d7ed-4111-84c4-0eeaca040ed3, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
-  - {name: 🇺🇸 美国-拉斯维加斯专线2, server: xr008.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: 4b9d387d-53f0-4bde-bb85-e90860b94e35, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇩🇪 德国-法兰克福-1A, server: frankfurt1-2500m.node.xn--l6qx3lcvp58x.com, port: 23563, type: hysteria2, password: 3b902638-960c-4f20-85ac-3aab9585e020, auth: 3b902638-960c-4f20-85ac-3aab9585e020, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇩🇪 德国-法兰克福-500M 1-1B, server: frankfurt2-500m.node.xn--l6qx3lcvp58x.com, port: 22068, type: hysteria2, password: 99cc4039-dcc3-4685-afab-ff4427d3d96c, auth: 99cc4039-dcc3-4685-afab-ff4427d3d96c, sni: 199.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇩🇪 德国-法兰克福-500M 1-1A, server: frankfurt2-500m.node.xn--l6qx3lcvp58x.com, port: 22456, type: hysteria2, password: 3b902638-960c-4f20-85ac-3aab9585e020, auth: 3b902638-960c-4f20-85ac-3aab9585e020, sni: 199.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇰🇷 韩国-首尔4-1B, server: seoul4-500m.node.xn--l6qx3lcvp58x.com, port: 23679, type: hysteria2, password: 3b902638-960c-4f20-85ac-3aab9585e020, auth: 3b902638-960c-4f20-85ac-3aab9585e020, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 日本-东京-500M-1-1A, server: tokyo2-500m.node.xn--l6qx3lcvp58x.com, port: 22743, type: hysteria2, password: 99cc4039-dcc3-4685-afab-ff4427d3d96c, auth: 99cc4039-dcc3-4685-afab-ff4427d3d96c, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇬🇧 伦敦专线, server: xr004.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: 4b9d387d-53f0-4bde-bb85-e90860b94e35, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
+  - {name: 🇯🇵 日本-东京-500M-2-1B, server: tokyo3-500m.node.xn--l6qx3lcvp58x.com, port: 22311, type: hysteria2, password: 3b902638-960c-4f20-85ac-3aab9585e020, auth: 3b902638-960c-4f20-85ac-3aab9585e020, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇦🇺 墨尔本, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 72c447c1-d7ed-4111-84c4-0eeaca040ed3, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 🇯🇵 日本-东京-500M-1-1B, server: tokyo2-500m.node.xn--l6qx3lcvp58x.com, port: 21962, type: hysteria2, password: 3b902638-960c-4f20-85ac-3aab9585e020, auth: 3b902638-960c-4f20-85ac-3aab9585e020, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇩🇪 德国-法兰克福-1B, server: frankfurt1-2500m.node.xn--l6qx3lcvp58x.com, port: 20871, type: hysteria2, password: 3b902638-960c-4f20-85ac-3aab9585e020, auth: 3b902638-960c-4f20-85ac-3aab9585e020, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇩🇪 德国-法兰克福-1A, server: frankfurt1-2500m.node.xn--l6qx3lcvp58x.com, port: 20219, type: hysteria2, password: 99cc4039-dcc3-4685-afab-ff4427d3d96c, auth: 99cc4039-dcc3-4685-afab-ff4427d3d96c, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇷🇺 莫斯科专线, server: xr002.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: 4b9d387d-53f0-4bde-bb85-e90860b94e35, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
+  - {name: 🇯🇵 日本-东京-500M-2-1A, server: tokyo3-500m.node.xn--l6qx3lcvp58x.com, port: 22491, type: hysteria2, password: 99cc4039-dcc3-4685-afab-ff4427d3d96c, auth: 99cc4039-dcc3-4685-afab-ff4427d3d96c, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇰🇷 韩国-首尔3-1B, server: seoul3-500m.node.xn--l6qx3lcvp58x.com, port: 21955, type: hysteria2, password: 3b902638-960c-4f20-85ac-3aab9585e020, auth: 3b902638-960c-4f20-85ac-3aab9585e020, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇨🇭 瑞士专线, server: xr005.louwangzhiyu.xyz, port: 8080, type: vmess, uuid: 4b9d387d-53f0-4bde-bb85-e90860b94e35, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
+  - {name: 🇩🇪 德国-法兰克福-500M 1-1A, server: frankfurt2-500m.node.xn--l6qx3lcvp58x.com, port: 23694, type: hysteria2, password: 99cc4039-dcc3-4685-afab-ff4427d3d96c, auth: 99cc4039-dcc3-4685-afab-ff4427d3d96c, sni: 199.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇰🇷 韩国-首尔3-1A, server: seoul3-500m.node.xn--l6qx3lcvp58x.com, port: 22147, type: hysteria2, password: 99cc4039-dcc3-4685-afab-ff4427d3d96c, auth: 99cc4039-dcc3-4685-afab-ff4427d3d96c, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇨🇭 瑞士专线
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇯🇵 日本-东京-500M-2-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇺🇸 美国-纽约专线
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇷🇺 莫斯科专线
-      - 🇦🇺 墨尔本
-      - 🇰🇷 韩国-首尔4-1B
-      - 🇰🇷 韩国-首尔4-1A
-      - 🇬🇧 伦敦专线
-      - 🇨🇦 加拿大
-      - 🇺🇸 美国-拉斯维加斯专线2
-      - 🇩🇪 德国-法兰克福-1A
       - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇰🇷 韩国-首尔4-1A
+      - 🇨🇦 加拿大专线
+      - 🇨🇦 加拿大
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 伦敦专线
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇦🇺 墨尔本
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇷🇺 莫斯科专线
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇨🇭 瑞士专线
       - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇰🇷 韩国-首尔3-1A
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇨🇭 瑞士专线
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇯🇵 日本-东京-500M-2-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇺🇸 美国-纽约专线
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇷🇺 莫斯科专线
-      - 🇦🇺 墨尔本
-      - 🇰🇷 韩国-首尔4-1B
-      - 🇰🇷 韩国-首尔4-1A
-      - 🇬🇧 伦敦专线
-      - 🇨🇦 加拿大
-      - 🇺🇸 美国-拉斯维加斯专线2
-      - 🇩🇪 德国-法兰克福-1A
       - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇰🇷 韩国-首尔4-1A
+      - 🇨🇦 加拿大专线
+      - 🇨🇦 加拿大
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 伦敦专线
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇦🇺 墨尔本
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇷🇺 莫斯科专线
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇨🇭 瑞士专线
       - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇰🇷 韩国-首尔3-1A
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇨🇭 瑞士专线
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇯🇵 日本-东京-500M-2-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇺🇸 美国-纽约专线
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇷🇺 莫斯科专线
-      - 🇦🇺 墨尔本
-      - 🇰🇷 韩国-首尔4-1B
-      - 🇰🇷 韩国-首尔4-1A
-      - 🇬🇧 伦敦专线
-      - 🇨🇦 加拿大
-      - 🇺🇸 美国-拉斯维加斯专线2
-      - 🇩🇪 德国-法兰克福-1A
       - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇰🇷 韩国-首尔4-1A
+      - 🇨🇦 加拿大专线
+      - 🇨🇦 加拿大
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 伦敦专线
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇦🇺 墨尔本
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇷🇺 莫斯科专线
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇨🇭 瑞士专线
       - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇰🇷 韩国-首尔3-1A
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -116,25 +112,24 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇨🇭 瑞士专线
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇯🇵 日本-东京-500M-2-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇺🇸 美国-纽约专线
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇷🇺 莫斯科专线
-      - 🇦🇺 墨尔本
-      - 🇰🇷 韩国-首尔4-1B
-      - 🇰🇷 韩国-首尔4-1A
-      - 🇬🇧 伦敦专线
-      - 🇨🇦 加拿大
-      - 🇺🇸 美国-拉斯维加斯专线2
-      - 🇩🇪 德国-法兰克福-1A
       - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇰🇷 韩国-首尔4-1A
+      - 🇨🇦 加拿大专线
+      - 🇨🇦 加拿大
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 伦敦专线
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇦🇺 墨尔本
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇷🇺 莫斯科专线
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇨🇭 瑞士专线
       - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇰🇷 韩国-首尔3-1A
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -145,74 +140,71 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇨🇭 瑞士专线
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇯🇵 日本-东京-500M-2-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇺🇸 美国-纽约专线
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇷🇺 莫斯科专线
-      - 🇦🇺 墨尔本
-      - 🇰🇷 韩国-首尔4-1B
-      - 🇰🇷 韩国-首尔4-1A
-      - 🇬🇧 伦敦专线
-      - 🇨🇦 加拿大
-      - 🇺🇸 美国-拉斯维加斯专线2
-      - 🇩🇪 德国-法兰克福-1A
       - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇰🇷 韩国-首尔4-1A
+      - 🇨🇦 加拿大专线
+      - 🇨🇦 加拿大
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 伦敦专线
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇦🇺 墨尔本
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇷🇺 莫斯科专线
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇨🇭 瑞士专线
       - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇰🇷 韩国-首尔3-1A
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇨🇭 瑞士专线
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇯🇵 日本-东京-500M-2-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇺🇸 美国-纽约专线
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇷🇺 莫斯科专线
-      - 🇦🇺 墨尔本
-      - 🇰🇷 韩国-首尔4-1B
-      - 🇰🇷 韩国-首尔4-1A
-      - 🇬🇧 伦敦专线
-      - 🇨🇦 加拿大
-      - 🇺🇸 美国-拉斯维加斯专线2
-      - 🇩🇪 德国-法兰克福-1A
       - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇰🇷 韩国-首尔4-1A
+      - 🇨🇦 加拿大专线
+      - 🇨🇦 加拿大
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 伦敦专线
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇦🇺 墨尔本
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇷🇺 莫斯科专线
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇨🇭 瑞士专线
       - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇰🇷 韩国-首尔3-1A
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇨🇭 瑞士专线
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇯🇵 日本-东京-500M-2-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇺🇸 美国-纽约专线
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇷🇺 莫斯科专线
-      - 🇦🇺 墨尔本
-      - 🇰🇷 韩国-首尔4-1B
-      - 🇰🇷 韩国-首尔4-1A
-      - 🇬🇧 伦敦专线
-      - 🇨🇦 加拿大
-      - 🇺🇸 美国-拉斯维加斯专线2
-      - 🇩🇪 德国-法兰克福-1A
       - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇰🇷 韩国-首尔4-1A
+      - 🇨🇦 加拿大专线
+      - 🇨🇦 加拿大
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 伦敦专线
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇦🇺 墨尔本
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇷🇺 莫斯科专线
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇨🇭 瑞士专线
       - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇰🇷 韩国-首尔3-1A
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -228,25 +220,24 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇨🇭 瑞士专线
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇯🇵 日本-东京-500M-2-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇺🇸 美国-纽约专线
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇷🇺 莫斯科专线
-      - 🇦🇺 墨尔本
-      - 🇰🇷 韩国-首尔4-1B
-      - 🇰🇷 韩国-首尔4-1A
-      - 🇬🇧 伦敦专线
-      - 🇨🇦 加拿大
-      - 🇺🇸 美国-拉斯维加斯专线2
-      - 🇩🇪 德国-法兰克福-1A
       - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇰🇷 韩国-首尔4-1A
+      - 🇨🇦 加拿大专线
+      - 🇨🇦 加拿大
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 伦敦专线
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇦🇺 墨尔本
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇷🇺 莫斯科专线
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇨🇭 瑞士专线
       - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇰🇷 韩国-首尔3-1A
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
