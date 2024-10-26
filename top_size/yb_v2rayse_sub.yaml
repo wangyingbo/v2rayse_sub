@@ -1,18 +1,18 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-10-25 14:37:41
+# 创建时间：2024-10-25 13:31:29
 # 使用模版：ACL4SSR_Mini.ini
 # 节点数量：2813
 # 节点类型：vmess, trojan, ss
 ####################################
 mixed-port: 7890
-allow-lan: true
-log-level: info
-external-controller: 0.0.0.0:9090
+allow-lan: false
+log-level: silent
+external-controller: 127.0.0.1:9090
 dns:
   enabled: true
-  listen: 0.0.0.0:1053
+  listen: 127.0.0.1:1053
   ipv6: true
   default-nameserver:
     - 223.5.5.5
@@ -80,7 +80,7 @@ dns:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
   fallback-filter:
-    geoip: false
+    geoip: true
     ipcidr:
       - 240.0.0.0/4
       - 0.0.0.0/32
@@ -2903,7 +2903,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - ♻️ 自动选择
+      - 🔯 故障转移
       - DIRECT
       - 美国(yudou66.com 玉豆免费节点)
       - 美国(yudou66.com 玉豆免费节点) 2
@@ -5718,11 +5718,10 @@ proxy-groups:
       - 美国-2.80MB/s
       - 日本-102.6KB/s
       - 日本-749.0KB/s
-  - name: ♻️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+  - name: 🔯 故障转移
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 1800
     proxies:
       - 美国(yudou66.com 玉豆免费节点)
       - 美国(yudou66.com 玉豆免费节点) 2
@@ -8542,7 +8541,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - ♻️ 自动选择
+      - 🔯 故障转移
   - name: 🛑 全球拦截
     type: select
     proxies:
@@ -8553,7 +8552,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ♻️ 自动选择
+      - 🔯 故障转移
       - 美国(yudou66.com 玉豆免费节点)
       - 美国(yudou66.com 玉豆免费节点) 2
       - 美国(yudou66.com 玉豆免费节点) 3
