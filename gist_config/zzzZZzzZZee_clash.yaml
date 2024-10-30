@@ -5,251 +5,327 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: bb3d9cdd-e407-4adb-9e72-10daa677fbf0, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇯🇵 日本-东京-500M-2-1A, server: tokyo3-500m.node.xn--l6qx3lcvp58x.com, port: 23696, type: hysteria2, password: a1abd7ca-236e-48be-8b48-437e26f5d523, auth: a1abd7ca-236e-48be-8b48-437e26f5d523, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 9336eaf3-aa2f-4933-821c-bb50b9e20ae3, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇭🇰 中国-香港专线-1C, server: m004.mmzhk.website, port: 8080, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: m004.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
-  - {name: 🇦🇺 澳大利亚 悉尼, server: syd-01.oci.ee, port: 10086, type: ss, cipher: chacha20-ietf-poly1305, password: df715a09-c610-454a-97f6-993bc7eb5eb4, udp: true}
-  - {name: 🇷🇺 俄罗斯-新西伯利亚专线1-1C, server: n002.kovmk.website, port: 8080, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: n002.kovmk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.kovmk.website}}, udp: true}
-  - {name: 🇷🇺 俄罗斯-圣彼得堡专线1-1A, server: m003.mmzhk.website, port: 8080, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: m003.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
+  - {name: 🇨🇦 加拿大-多伦多专线1-1A, server: m011.mmzhk.website, port: 443, type: vless, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, tls: true, servername: m011.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m011.mmzhk.website}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1G, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: a2560c2a-a20e-4469-9c4f-4b948a77dba4, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯专线2-1C, server: m005.mmzhk.website, port: 443, type: vless, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, tls: true, servername: m005.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m005.mmzhk.website}}, udp: true}
+  - {name: 🇰🇷 韩国-首尔4-1A, server: seoul4-500m.node.xn--l6qx3lcvp58x.com, port: 24234, type: hysteria2, password: a1abd7ca-236e-48be-8b48-437e26f5d523, auth: a1abd7ca-236e-48be-8b48-437e26f5d523, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1D, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 9336eaf3-aa2f-4933-821c-bb50b9e20ae3, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯专线3-1C, server: m008.mmzhk.website, port: 443, type: vless, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, tls: true, servername: m008.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m008.mmzhk.website}}, udp: true}
+  - {name: 🇩🇪 德国-法兰克福-1B, server: frankfurt1-2500m.node.xn--l6qx3lcvp58x.com, port: 22655, type: hysteria2, password: 47cf01c8-eed0-43d2-b881-e2625a9ee124, auth: 47cf01c8-eed0-43d2-b881-e2625a9ee124, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇷🇺 俄罗斯-圣彼得堡专线1-1C, server: m003.mmzhk.website, port: 8080, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: m003.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
+  - {name: 🇷🇺 莫斯科专线-1C, server: xr002.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯专线4-1C, server: m009.mmzhk.website, port: 443, type: vless, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, tls: true, servername: m009.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m009.mmzhk.website}}, udp: true}
   - {name: 🇸🇬 新加坡-1B, server: m002.mmzhk.website, port: 8080, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: m002.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
-  - {name: 🇦🇪 阿联酋 迪拜, server: dubai0.oraclenat.cc, port: 10086, type: ss, cipher: chacha20-ietf-poly1305, password: df715a09-c610-454a-97f6-993bc7eb5eb4, udp: true}
-  - {name: 🇺🇸 美国 5, server: qrzv.youxuan.wiki, port: 2095, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: true, network: ws, ws-opts: {path: /sssddd, headers: {Host: us5.7896543.xyz}}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1F, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 89762620-4ac8-4a17-a766-e46bf18ffccf, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇩🇪 德国-法兰克福-1B, server: frankfurt1-2500m.node.xn--l6qx3lcvp58x.com, port: 21747, type: hysteria2, password: 47cf01c8-eed0-43d2-b881-e2625a9ee124, auth: 47cf01c8-eed0-43d2-b881-e2625a9ee124, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇨🇭 瑞士专线-1A, server: xr005.louwangzhiyu.xyz, port: 8080, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇷🇺 莫斯科专线-1A, server: xr002.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇭🇰 香港 7, server: hk7.7896543.xyz, port: 8080, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: E7VwjkTF7vncmWCIxttt2oeOhNM70flBTI5k562ZjBk, short-id: "f0c23ef6" }, servername: aliorpse.tech, client-fingerprint: ios, network: tcp, udp: true}
-  - {name: 🇭🇰 中国-香港专线-1A, server: m004.mmzhk.website, port: 8080, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: m004.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
-  - {name: 🇯🇵 日本 大阪, server: osaka002-a.oraclenat.cc, port: 10089, type: ss, cipher: chacha20-ietf-poly1305, password: df715a09-c610-454a-97f6-993bc7eb5eb4, udp: true}
-  - {name: 🇨🇦 加拿大-1A, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 2bee3b79-84d5-4ad2-bd6e-6c58fd2c88c6, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
-  - {name: 🇬🇧 伦敦专线-1A, server: xr004.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇨🇦 加拿大-1B, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 97052d3f-8130-4812-b4ed-bd82547685c4, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
-  - {name: 🇷🇺 俄罗斯-圣彼得堡专线1-1B, server: m003.mmzhk.website, port: 8080, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: m003.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
-  - {name: 🇭🇰 中国-香港专线-1B, server: m004.mmzhk.website, port: 8080, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: m004.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
-  - {name: 🇭🇰 香港 5, server: hk5.7896543.xyz, port: 8080, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: E7VwjkTF7vncmWCIxttt2oeOhNM70flBTI5k562ZjBk, short-id: "f0c23ef6" }, servername: aliorpse.tech, client-fingerprint: ios, network: tcp, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: a2560c2a-a20e-4469-9c4f-4b948a77dba4, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇷🇺 俄罗斯-新西伯利亚专线1-1A, server: n002.kovmk.website, port: 8080, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: n002.kovmk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.kovmk.website}}, udp: true}
-  - {name: 🇯🇵 日本-东京-500M-2-1B, server: tokyo3-500m.node.xn--l6qx3lcvp58x.com, port: 23695, type: hysteria2, password: 47cf01c8-eed0-43d2-b881-e2625a9ee124, auth: 47cf01c8-eed0-43d2-b881-e2625a9ee124, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1G, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 790057b7-3096-4c73-a67a-5f0df434fadf, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇷🇺 俄罗斯-莫斯科专线1-1A, server: n001.kovmk.website, port: 8080, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: n001.kovmk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.kovmk.website}}, udp: true}
-  - {name: 🇸🇬 新加坡-1C, server: m002.mmzhk.website, port: 8080, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: m002.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
-  - {name: 🇷🇺 莫斯科专线-1B, server: xr002.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇬🇧 伦敦专线-1C, server: xr004.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇷🇺 俄罗斯-圣彼得堡专线1-1C, server: m003.mmzhk.website, port: 8080, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: m003.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
-  - {name: 🇰🇷 韩国-首尔4-1B, server: seoul4-500m.node.xn--l6qx3lcvp58x.com, port: 22041, type: hysteria2, password: 47cf01c8-eed0-43d2-b881-e2625a9ee124, auth: 47cf01c8-eed0-43d2-b881-e2625a9ee124, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-首尔4-1A, server: seoul4-500m.node.xn--l6qx3lcvp58x.com, port: 21141, type: hysteria2, password: a1abd7ca-236e-48be-8b48-437e26f5d523, auth: a1abd7ca-236e-48be-8b48-437e26f5d523, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1E, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 9a40799a-aa59-4354-b468-72a14e596129, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-首尔3-1B, server: seoul3-500m.node.xn--l6qx3lcvp58x.com, port: 22150, type: hysteria2, password: 47cf01c8-eed0-43d2-b881-e2625a9ee124, auth: 47cf01c8-eed0-43d2-b881-e2625a9ee124, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇩🇪 德国-法兰克福-500M 1-1B, server: frankfurt2-500m.node.xn--l6qx3lcvp58x.com, port: 23266, type: hysteria2, password: 47cf01c8-eed0-43d2-b881-e2625a9ee124, auth: 47cf01c8-eed0-43d2-b881-e2625a9ee124, sni: 199.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇩🇪 德国-法兰克福-1A, server: frankfurt1-2500m.node.xn--l6qx3lcvp58x.com, port: 24276, type: hysteria2, password: a1abd7ca-236e-48be-8b48-437e26f5d523, auth: a1abd7ca-236e-48be-8b48-437e26f5d523, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇨🇭 瑞士专线-1C, server: xr005.louwangzhiyu.xyz, port: 8080, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇬🇧 伦敦专线-1B, server: xr004.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇷🇺 俄罗斯-莫斯科专线1-1B, server: n001.kovmk.website, port: 8080, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: n001.kovmk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.kovmk.website}}, udp: true}
-  - {name: 🇨🇦 加拿大-1C, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 58c53ec2-1afb-4a2f-aabc-6bdb487fa11a, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
-  - {name: 🇸🇬 新加坡-1A, server: m002.mmzhk.website, port: 8080, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: m002.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
-  - {name: 墨尔本-1A, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 2bee3b79-84d5-4ad2-bd6e-6c58fd2c88c6, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 墨尔本-1B, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 97052d3f-8130-4812-b4ed-bd82547685c4, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 🇷🇺 俄罗斯-莫斯科专线1-1C, server: n001.kovmk.website, port: 8080, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: n001.kovmk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.kovmk.website}}, udp: true}
-  - {name: 🇯🇵 日本-东京-500M-1-1B, server: tokyo2-500m.node.xn--l6qx3lcvp58x.com, port: 21425, type: hysteria2, password: 47cf01c8-eed0-43d2-b881-e2625a9ee124, auth: 47cf01c8-eed0-43d2-b881-e2625a9ee124, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-首尔3-1A, server: seoul3-500m.node.xn--l6qx3lcvp58x.com, port: 20176, type: hysteria2, password: a1abd7ca-236e-48be-8b48-437e26f5d523, auth: a1abd7ca-236e-48be-8b48-437e26f5d523, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 🇨🇭 瑞士专线-1B, server: xr005.louwangzhiyu.xyz, port: 8080, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇯🇵 日本-东京-500M-1-1A, server: tokyo2-500m.node.xn--l6qx3lcvp58x.com, port: 23472, type: hysteria2, password: a1abd7ca-236e-48be-8b48-437e26f5d523, auth: a1abd7ca-236e-48be-8b48-437e26f5d523, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇩🇪 德国-法兰克福-500M 1-1A, server: frankfurt2-500m.node.xn--l6qx3lcvp58x.com, port: 20659, type: hysteria2, password: a1abd7ca-236e-48be-8b48-437e26f5d523, auth: a1abd7ca-236e-48be-8b48-437e26f5d523, sni: 199.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇯🇵 日本-东京-500M-1-1A, server: tokyo2-500m.node.xn--l6qx3lcvp58x.com, port: 22337, type: hysteria2, password: a1abd7ca-236e-48be-8b48-437e26f5d523, auth: a1abd7ca-236e-48be-8b48-437e26f5d523, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇬🇧 英国-英格兰专线-1A, server: m010.mmzhk.website, port: 443, type: vless, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, tls: true, servername: m010.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m010.mmzhk.website}}, udp: true}
   - {name: 🇷🇺 俄罗斯-新西伯利亚专线1-1B, server: n002.kovmk.website, port: 8080, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: n002.kovmk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.kovmk.website}}, udp: true}
-  - {name: 🇷🇺 莫斯科专线-1C, server: xr002.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
-  - {name: 🇭🇰 香港 2, server: hk2.youxuan.wiki, port: 8080, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ykBTZq-ZnVnRyHzfeZ0n2Tgbnjs6XutIHZDfKDPGDHc, short-id: "b6e0cf87" }, servername: zabbix.mikunet.work, client-fingerprint: edge, network: tcp, udp: true}
-  - {name: 🇲🇽 墨西哥 1, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: mx1.youxuan.wiki}}, udp: true}
-  - {name: 🇩🇪 德国-法兰克福-500M 1-1A, server: frankfurt2-500m.node.xn--l6qx3lcvp58x.com, port: 22399, type: hysteria2, password: a1abd7ca-236e-48be-8b48-437e26f5d523, auth: a1abd7ca-236e-48be-8b48-437e26f5d523, sni: 199.nodes.yljc.online, skip-cert-verify: false, udp: true}
-  - {name: 墨尔本-1C, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 58c53ec2-1afb-4a2f-aabc-6bdb487fa11a, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1D, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3f41f765-ac75-495f-ad80-1aa96bb9e6d7, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇩🇪 德国-法兰克福-500M 1-1B, server: frankfurt2-500m.node.xn--l6qx3lcvp58x.com, port: 21599, type: hysteria2, password: 47cf01c8-eed0-43d2-b881-e2625a9ee124, auth: 47cf01c8-eed0-43d2-b881-e2625a9ee124, sni: 199.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇦🇺 澳大利亚 悉尼, server: syd-01.oci.ee, port: 10086, type: ss, cipher: chacha20-ietf-poly1305, password: df715a09-c610-454a-97f6-993bc7eb5eb4, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯专线2-1A, server: m005.mmzhk.website, port: 443, type: vless, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, tls: true, servername: m005.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m005.mmzhk.website}}, udp: true}
+  - {name: 🇨🇭 瑞士专线-1A, server: xr005.louwangzhiyu.xyz, port: 8080, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
+  - {name: 🇸🇬 新加坡-1A, server: m002.mmzhk.website, port: 8080, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: m002.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯专线2-1B, server: m005.mmzhk.website, port: 443, type: vless, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, tls: true, servername: m005.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m005.mmzhk.website}}, udp: true}
+  - {name: 🇭🇰 香港 2, server: hk2.youxuan.wiki, port: 8080, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ykBTZq-ZnVnRyHzfeZ0n2Tgbnjs6XutIHZDfKDPGDHc, short-id: "b6e0cf87" }, servername: zabbix.mikunet.work, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇷🇺 俄罗斯-圣彼得堡专线1-1B, server: m003.mmzhk.website, port: 8080, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: m003.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
+  - {name: 🇺🇸 美国-纽约专线2-1A, server: m007.mmzhk.website, port: 443, type: vless, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, tls: true, servername: m007.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m007.mmzhk.website}}, udp: true}
+  - {name: 🇭🇰 中国-香港专线-1B, server: m004.mmzhk.website, port: 8080, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: m004.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
+  - {name: 🇨🇦 加拿大-多伦多专线1-1B, server: m011.mmzhk.website, port: 443, type: vless, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, tls: true, servername: m011.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m011.mmzhk.website}}, udp: true}
+  - {name: 🇺🇸 美国-纽约专线2-1C, server: m007.mmzhk.website, port: 443, type: vless, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, tls: true, servername: m007.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m007.mmzhk.website}}, udp: true}
+  - {name: 墨尔本-1A, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 58c53ec2-1afb-4a2f-aabc-6bdb487fa11a, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 🇰🇷 韩国-首尔3-1A, server: seoul3-500m.node.xn--l6qx3lcvp58x.com, port: 23635, type: hysteria2, password: a1abd7ca-236e-48be-8b48-437e26f5d523, auth: a1abd7ca-236e-48be-8b48-437e26f5d523, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇬🇧 英国-英格兰专线-1B, server: m010.mmzhk.website, port: 443, type: vless, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, tls: true, servername: m010.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m010.mmzhk.website}}, udp: true}
+  - {name: 🇺🇸 美国-纽约专线1-1A, server: m006.mmzhk.website, port: 443, type: vless, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, tls: true, servername: m006.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m006.mmzhk.website}}, udp: true}
+  - {name: 🇭🇰 中国-香港专线-1C, server: m004.mmzhk.website, port: 8080, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: m004.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
+  - {name: 🇨🇦 加拿大-1B, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 2bee3b79-84d5-4ad2-bd6e-6c58fd2c88c6, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
+  - {name: 🇺🇸 美国-纽约专线2-1B, server: m007.mmzhk.website, port: 443, type: vless, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, tls: true, servername: m007.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m007.mmzhk.website}}, udp: true}
+  - {name: 🇹🇼 台湾 1, server: tw.youxuan.wiki, port: 20530, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: _VV1HHy3iC9Q1GY0cu_oP9UffkvebWdRaVXWdPt3wls, short-id: "4777e889" }, servername: jellyfin.illya.tw, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇨🇭 瑞士专线-1B, server: xr005.louwangzhiyu.xyz, port: 8080, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
+  - {name: 墨尔本-1B, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 2bee3b79-84d5-4ad2-bd6e-6c58fd2c88c6, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 🇨🇦 加拿大-1A, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 58c53ec2-1afb-4a2f-aabc-6bdb487fa11a, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯专线3-1A, server: m008.mmzhk.website, port: 443, type: vless, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, tls: true, servername: m008.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m008.mmzhk.website}}, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯专线1-1C, server: m001.mmzhk.website, port: 443, type: vless, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, tls: true, servername: m001.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m001.mmzhk.website}}, udp: true}
+  - {name: 🇸🇬 新加坡-1C, server: m002.mmzhk.website, port: 8080, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: m002.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
+  - {name: 🇺🇸 美国-纽约专线1-1B, server: m006.mmzhk.website, port: 443, type: vless, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, tls: true, servername: m006.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m006.mmzhk.website}}, udp: true}
+  - {name: 🇷🇺 俄罗斯-新西伯利亚专线1-1C, server: n002.kovmk.website, port: 8080, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: n002.kovmk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.kovmk.website}}, udp: true}
+  - {name: 🇯🇵 日本-东京-500M-2-1A, server: tokyo3-500m.node.xn--l6qx3lcvp58x.com, port: 20414, type: hysteria2, password: a1abd7ca-236e-48be-8b48-437e26f5d523, auth: a1abd7ca-236e-48be-8b48-437e26f5d523, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇭🇰 香港 1, server: qrzv.youxuan.wiki, port: 2095, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: false, network: ws, ws-opts: {path: /sssddd, headers: {Host: hk1.youxuan.wiki}}, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科专线1-1B, server: n001.kovmk.website, port: 8080, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: n001.kovmk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.kovmk.website}}, udp: true}
+  - {name: 🇨🇭 瑞士专线-1C, server: xr005.louwangzhiyu.xyz, port: 8080, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯专线1-1A, server: m001.mmzhk.website, port: 443, type: vless, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, tls: true, servername: m001.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m001.mmzhk.website}}, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科专线1-1A, server: n001.kovmk.website, port: 8080, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: n001.kovmk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.kovmk.website}}, udp: true}
+  - {name: 🇯🇵 日本-东京-500M-1-1B, server: tokyo2-500m.node.xn--l6qx3lcvp58x.com, port: 23891, type: hysteria2, password: 47cf01c8-eed0-43d2-b881-e2625a9ee124, auth: 47cf01c8-eed0-43d2-b881-e2625a9ee124, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯专线3-1B, server: m008.mmzhk.website, port: 443, type: vless, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, tls: true, servername: m008.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m008.mmzhk.website}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1F, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3f41f765-ac75-495f-ad80-1aa96bb9e6d7, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 89762620-4ac8-4a17-a766-e46bf18ffccf, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科专线1-1C, server: n001.kovmk.website, port: 8080, type: vmess, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, alterId: 0, cipher: auto, tls: true, servername: n001.kovmk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.kovmk.website}}, udp: true}
+  - {name: 🇬🇧 英国-英格兰专线-1C, server: m010.mmzhk.website, port: 443, type: vless, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, tls: true, servername: m010.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m010.mmzhk.website}}, udp: true}
+  - {name: 🇯🇵 日本 大阪, server: osaka002-a.oraclenat.cc, port: 10089, type: ss, cipher: chacha20-ietf-poly1305, password: df715a09-c610-454a-97f6-993bc7eb5eb4, udp: true}
+  - {name: 🇹🇼 台湾 2, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: tw2.youxuan.wiki}}, udp: true}
+  - {name: 🇷🇺 俄罗斯-新西伯利亚专线1-1A, server: n002.kovmk.website, port: 8080, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: n002.kovmk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.kovmk.website}}, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯专线1-1B, server: m001.mmzhk.website, port: 443, type: vless, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, tls: true, servername: m001.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m001.mmzhk.website}}, udp: true}
+  - {name: 🇯🇵 日本-东京-500M-2-1B, server: tokyo3-500m.node.xn--l6qx3lcvp58x.com, port: 24213, type: hysteria2, password: 47cf01c8-eed0-43d2-b881-e2625a9ee124, auth: 47cf01c8-eed0-43d2-b881-e2625a9ee124, sni: 2.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇨🇦 加拿大-多伦多专线1-1C, server: m011.mmzhk.website, port: 443, type: vless, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, tls: true, servername: m011.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m011.mmzhk.website}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 790057b7-3096-4c73-a67a-5f0df434fadf, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇷🇺 俄罗斯-圣彼得堡专线1-1A, server: m003.mmzhk.website, port: 8080, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: m003.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
+  - {name: 🇷🇺 莫斯科专线-1A, server: xr002.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
+  - {name: 🇭🇰 香港 5, server: hk5.7896543.xyz, port: 8080, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: E7VwjkTF7vncmWCIxttt2oeOhNM70flBTI5k562ZjBk, short-id: "f0c23ef6" }, servername: aliorpse.tech, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇩🇪 德国-法兰克福-1A, server: frankfurt1-2500m.node.xn--l6qx3lcvp58x.com, port: 22363, type: hysteria2, password: a1abd7ca-236e-48be-8b48-437e26f5d523, auth: a1abd7ca-236e-48be-8b48-437e26f5d523, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇦🇪 阿联酋 迪拜, server: dubai0.oraclenat.cc, port: 10086, type: ss, cipher: chacha20-ietf-poly1305, password: df715a09-c610-454a-97f6-993bc7eb5eb4, udp: true}
+  - {name: 🇰🇷 韩国-首尔3-1B, server: seoul3-500m.node.xn--l6qx3lcvp58x.com, port: 22841, type: hysteria2, password: 47cf01c8-eed0-43d2-b881-e2625a9ee124, auth: 47cf01c8-eed0-43d2-b881-e2625a9ee124, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: bb3d9cdd-e407-4adb-9e72-10daa677fbf0, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇷🇺 莫斯科专线-1B, server: xr002.louwangzhiyu.xyz, port: 30000, type: vmess, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, alterId: 0, cipher: auto, tls: true, servername: xr001.louwangzhiyu.xyz, network: ws, ws-opts: {path: /xyz, headers: {Host: www.louwangzhiyu.xyz}}, udp: true}
+  - {name: 🇺🇸 美国-纽约专线1-1C, server: m006.mmzhk.website, port: 443, type: vless, uuid: b114a99d-90d8-49e5-b66e-88d6bde7b60b, tls: true, servername: m006.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m006.mmzhk.website}}, udp: true}
+  - {name: 🇰🇷 韩国-首尔4-1B, server: seoul4-500m.node.xn--l6qx3lcvp58x.com, port: 21531, type: hysteria2, password: 47cf01c8-eed0-43d2-b881-e2625a9ee124, auth: 47cf01c8-eed0-43d2-b881-e2625a9ee124, sni: 1.nodes.yljc.online, skip-cert-verify: false, udp: true}
+  - {name: 🇭🇰 中国-香港专线-1A, server: m004.mmzhk.website, port: 8080, type: vmess, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, alterId: 0, cipher: auto, tls: true, servername: m004.mmzhk.website, network: ws, ws-opts: {path: /xyz, headers: {Host: daohang.mmzhk.website}}, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯专线4-1A, server: m009.mmzhk.website, port: 443, type: vless, uuid: 448b07fe-5f82-48ce-8e9f-e539c9360d05, tls: true, servername: m009.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m009.mmzhk.website}}, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯专线4-1B, server: m009.mmzhk.website, port: 443, type: vless, uuid: a9884aa3-a1a8-45b4-a5fc-37384d101497, tls: true, servername: m009.mmzhk.website, network: ws, ws-opts: {path: /, headers: {Host: m009.mmzhk.website}}, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1E, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 9a40799a-aa59-4354-b468-72a14e596129, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 中国-香港专线-1C
-      - 🇦🇺 澳大利亚 悉尼
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
-      - 🇸🇬 新加坡-1B
-      - 🇦🇪 阿联酋 迪拜
-      - 🇺🇸 美国 5
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇨🇭 瑞士专线-1A
-      - 🇷🇺 莫斯科专线-1A
-      - 🇭🇰 香港 7
-      - 🇭🇰 中国-香港专线-1A
-      - 🇯🇵 日本 大阪
-      - 🇨🇦 加拿大-1A
-      - 🇬🇧 伦敦专线-1A
-      - 🇨🇦 加拿大-1B
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
-      - 🇭🇰 中国-香港专线-1B
-      - 🇭🇰 香港 5
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
-      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1A
       - 🇰🇷 韩国-三网优化2-1G
-      - 🇷🇺 俄罗斯-莫斯科专线1-1A
-      - 🇸🇬 新加坡-1C
-      - 🇷🇺 莫斯科专线-1B
-      - 🇬🇧 伦敦专线-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
-      - 🇰🇷 韩国-首尔4-1B
+      - 🇺🇸 美国-拉斯维加斯专线2-1C
       - 🇰🇷 韩国-首尔4-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-500M 1-1B
-      - 🇩🇪 德国-法兰克福-1A
-      - 🇨🇭 瑞士专线-1C
-      - 🇬🇧 伦敦专线-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1B
-      - 🇨🇦 加拿大-1C
-      - 🇸🇬 新加坡-1A
-      - 墨尔本-1A
-      - 墨尔本-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1C
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇨🇭 瑞士专线-1B
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
-      - 🇷🇺 莫斯科专线-1C
-      - 🇭🇰 香港 2
-      - 🇲🇽 墨西哥 1
-      - 🇩🇪 德国-法兰克福-500M 1-1A
-      - 墨尔本-1C
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇺🇸 美国-拉斯维加斯专线3-1C
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
+      - 🇷🇺 莫斯科专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线4-1C
+      - 🇸🇬 新加坡-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 英国-英格兰专线-1A
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇦🇺 澳大利亚 悉尼
+      - 🇺🇸 美国-拉斯维加斯专线2-1A
+      - 🇨🇭 瑞士专线-1A
+      - 🇸🇬 新加坡-1A
+      - 🇺🇸 美国-拉斯维加斯专线2-1B
+      - 🇭🇰 香港 2
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
+      - 🇺🇸 美国-纽约专线2-1A
+      - 🇭🇰 中国-香港专线-1B
+      - 🇨🇦 加拿大-多伦多专线1-1B
+      - 🇺🇸 美国-纽约专线2-1C
+      - 墨尔本-1A
+      - 🇰🇷 韩国-首尔3-1A
+      - 🇬🇧 英国-英格兰专线-1B
+      - 🇺🇸 美国-纽约专线1-1A
+      - 🇭🇰 中国-香港专线-1C
+      - 🇨🇦 加拿大-1B
+      - 🇺🇸 美国-纽约专线2-1B
+      - 🇹🇼 台湾 1
+      - 🇨🇭 瑞士专线-1B
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1A
+      - 🇺🇸 美国-拉斯维加斯专线3-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1C
+      - 🇸🇬 新加坡-1C
+      - 🇺🇸 美国-纽约专线1-1B
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇭🇰 香港 1
+      - 🇷🇺 俄罗斯-莫斯科专线1-1B
+      - 🇨🇭 瑞士专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线1-1A
+      - 🇷🇺 俄罗斯-莫斯科专线1-1A
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇺🇸 美国-拉斯维加斯专线3-1B
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇷🇺 俄罗斯-莫斯科专线1-1C
+      - 🇬🇧 英国-英格兰专线-1C
+      - 🇯🇵 日本 大阪
+      - 🇹🇼 台湾 2
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1B
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1C
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
+      - 🇷🇺 莫斯科专线-1A
+      - 🇭🇰 香港 5
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇦🇪 阿联酋 迪拜
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇷🇺 莫斯科专线-1B
+      - 🇺🇸 美国-纽约专线1-1C
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇭🇰 中国-香港专线-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1B
+      - 🇰🇷 韩国-三网优化2-1E
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 中国-香港专线-1C
-      - 🇦🇺 澳大利亚 悉尼
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
-      - 🇸🇬 新加坡-1B
-      - 🇦🇪 阿联酋 迪拜
-      - 🇺🇸 美国 5
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇨🇭 瑞士专线-1A
-      - 🇷🇺 莫斯科专线-1A
-      - 🇭🇰 香港 7
-      - 🇭🇰 中国-香港专线-1A
-      - 🇯🇵 日本 大阪
-      - 🇨🇦 加拿大-1A
-      - 🇬🇧 伦敦专线-1A
-      - 🇨🇦 加拿大-1B
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
-      - 🇭🇰 中国-香港专线-1B
-      - 🇭🇰 香港 5
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
-      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1A
       - 🇰🇷 韩国-三网优化2-1G
-      - 🇷🇺 俄罗斯-莫斯科专线1-1A
-      - 🇸🇬 新加坡-1C
-      - 🇷🇺 莫斯科专线-1B
-      - 🇬🇧 伦敦专线-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
-      - 🇰🇷 韩国-首尔4-1B
+      - 🇺🇸 美国-拉斯维加斯专线2-1C
       - 🇰🇷 韩国-首尔4-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-500M 1-1B
-      - 🇩🇪 德国-法兰克福-1A
-      - 🇨🇭 瑞士专线-1C
-      - 🇬🇧 伦敦专线-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1B
-      - 🇨🇦 加拿大-1C
-      - 🇸🇬 新加坡-1A
-      - 墨尔本-1A
-      - 墨尔本-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1C
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇨🇭 瑞士专线-1B
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
-      - 🇷🇺 莫斯科专线-1C
-      - 🇭🇰 香港 2
-      - 🇲🇽 墨西哥 1
-      - 🇩🇪 德国-法兰克福-500M 1-1A
-      - 墨尔本-1C
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇺🇸 美国-拉斯维加斯专线3-1C
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
+      - 🇷🇺 莫斯科专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线4-1C
+      - 🇸🇬 新加坡-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 英国-英格兰专线-1A
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇦🇺 澳大利亚 悉尼
+      - 🇺🇸 美国-拉斯维加斯专线2-1A
+      - 🇨🇭 瑞士专线-1A
+      - 🇸🇬 新加坡-1A
+      - 🇺🇸 美国-拉斯维加斯专线2-1B
+      - 🇭🇰 香港 2
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
+      - 🇺🇸 美国-纽约专线2-1A
+      - 🇭🇰 中国-香港专线-1B
+      - 🇨🇦 加拿大-多伦多专线1-1B
+      - 🇺🇸 美国-纽约专线2-1C
+      - 墨尔本-1A
+      - 🇰🇷 韩国-首尔3-1A
+      - 🇬🇧 英国-英格兰专线-1B
+      - 🇺🇸 美国-纽约专线1-1A
+      - 🇭🇰 中国-香港专线-1C
+      - 🇨🇦 加拿大-1B
+      - 🇺🇸 美国-纽约专线2-1B
+      - 🇹🇼 台湾 1
+      - 🇨🇭 瑞士专线-1B
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1A
+      - 🇺🇸 美国-拉斯维加斯专线3-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1C
+      - 🇸🇬 新加坡-1C
+      - 🇺🇸 美国-纽约专线1-1B
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇭🇰 香港 1
+      - 🇷🇺 俄罗斯-莫斯科专线1-1B
+      - 🇨🇭 瑞士专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线1-1A
+      - 🇷🇺 俄罗斯-莫斯科专线1-1A
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇺🇸 美国-拉斯维加斯专线3-1B
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇷🇺 俄罗斯-莫斯科专线1-1C
+      - 🇬🇧 英国-英格兰专线-1C
+      - 🇯🇵 日本 大阪
+      - 🇹🇼 台湾 2
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1B
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1C
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
+      - 🇷🇺 莫斯科专线-1A
+      - 🇭🇰 香港 5
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇦🇪 阿联酋 迪拜
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇷🇺 莫斯科专线-1B
+      - 🇺🇸 美国-纽约专线1-1C
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇭🇰 中国-香港专线-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1B
+      - 🇰🇷 韩国-三网优化2-1E
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 中国-香港专线-1C
-      - 🇦🇺 澳大利亚 悉尼
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
-      - 🇸🇬 新加坡-1B
-      - 🇦🇪 阿联酋 迪拜
-      - 🇺🇸 美国 5
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇨🇭 瑞士专线-1A
-      - 🇷🇺 莫斯科专线-1A
-      - 🇭🇰 香港 7
-      - 🇭🇰 中国-香港专线-1A
-      - 🇯🇵 日本 大阪
-      - 🇨🇦 加拿大-1A
-      - 🇬🇧 伦敦专线-1A
-      - 🇨🇦 加拿大-1B
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
-      - 🇭🇰 中国-香港专线-1B
-      - 🇭🇰 香港 5
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
-      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1A
       - 🇰🇷 韩国-三网优化2-1G
-      - 🇷🇺 俄罗斯-莫斯科专线1-1A
-      - 🇸🇬 新加坡-1C
-      - 🇷🇺 莫斯科专线-1B
-      - 🇬🇧 伦敦专线-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
-      - 🇰🇷 韩国-首尔4-1B
+      - 🇺🇸 美国-拉斯维加斯专线2-1C
       - 🇰🇷 韩国-首尔4-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-500M 1-1B
-      - 🇩🇪 德国-法兰克福-1A
-      - 🇨🇭 瑞士专线-1C
-      - 🇬🇧 伦敦专线-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1B
-      - 🇨🇦 加拿大-1C
-      - 🇸🇬 新加坡-1A
-      - 墨尔本-1A
-      - 墨尔本-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1C
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇨🇭 瑞士专线-1B
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
-      - 🇷🇺 莫斯科专线-1C
-      - 🇭🇰 香港 2
-      - 🇲🇽 墨西哥 1
-      - 🇩🇪 德国-法兰克福-500M 1-1A
-      - 墨尔本-1C
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇺🇸 美国-拉斯维加斯专线3-1C
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
+      - 🇷🇺 莫斯科专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线4-1C
+      - 🇸🇬 新加坡-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 英国-英格兰专线-1A
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇦🇺 澳大利亚 悉尼
+      - 🇺🇸 美国-拉斯维加斯专线2-1A
+      - 🇨🇭 瑞士专线-1A
+      - 🇸🇬 新加坡-1A
+      - 🇺🇸 美国-拉斯维加斯专线2-1B
+      - 🇭🇰 香港 2
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
+      - 🇺🇸 美国-纽约专线2-1A
+      - 🇭🇰 中国-香港专线-1B
+      - 🇨🇦 加拿大-多伦多专线1-1B
+      - 🇺🇸 美国-纽约专线2-1C
+      - 墨尔本-1A
+      - 🇰🇷 韩国-首尔3-1A
+      - 🇬🇧 英国-英格兰专线-1B
+      - 🇺🇸 美国-纽约专线1-1A
+      - 🇭🇰 中国-香港专线-1C
+      - 🇨🇦 加拿大-1B
+      - 🇺🇸 美国-纽约专线2-1B
+      - 🇹🇼 台湾 1
+      - 🇨🇭 瑞士专线-1B
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1A
+      - 🇺🇸 美国-拉斯维加斯专线3-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1C
+      - 🇸🇬 新加坡-1C
+      - 🇺🇸 美国-纽约专线1-1B
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇭🇰 香港 1
+      - 🇷🇺 俄罗斯-莫斯科专线1-1B
+      - 🇨🇭 瑞士专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线1-1A
+      - 🇷🇺 俄罗斯-莫斯科专线1-1A
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇺🇸 美国-拉斯维加斯专线3-1B
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇷🇺 俄罗斯-莫斯科专线1-1C
+      - 🇬🇧 英国-英格兰专线-1C
+      - 🇯🇵 日本 大阪
+      - 🇹🇼 台湾 2
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1B
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1C
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
+      - 🇷🇺 莫斯科专线-1A
+      - 🇭🇰 香港 5
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇦🇪 阿联酋 迪拜
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇷🇺 莫斯科专线-1B
+      - 🇺🇸 美国-纽约专线1-1C
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇭🇰 中国-香港专线-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1B
+      - 🇰🇷 韩国-三网优化2-1E
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -268,261 +344,339 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 中国-香港专线-1C
-      - 🇦🇺 澳大利亚 悉尼
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
-      - 🇸🇬 新加坡-1B
-      - 🇦🇪 阿联酋 迪拜
-      - 🇺🇸 美国 5
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇨🇭 瑞士专线-1A
-      - 🇷🇺 莫斯科专线-1A
-      - 🇭🇰 香港 7
-      - 🇭🇰 中国-香港专线-1A
-      - 🇯🇵 日本 大阪
-      - 🇨🇦 加拿大-1A
-      - 🇬🇧 伦敦专线-1A
-      - 🇨🇦 加拿大-1B
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
-      - 🇭🇰 中国-香港专线-1B
-      - 🇭🇰 香港 5
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
-      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1A
       - 🇰🇷 韩国-三网优化2-1G
-      - 🇷🇺 俄罗斯-莫斯科专线1-1A
-      - 🇸🇬 新加坡-1C
-      - 🇷🇺 莫斯科专线-1B
-      - 🇬🇧 伦敦专线-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
-      - 🇰🇷 韩国-首尔4-1B
+      - 🇺🇸 美国-拉斯维加斯专线2-1C
       - 🇰🇷 韩国-首尔4-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-500M 1-1B
-      - 🇩🇪 德国-法兰克福-1A
-      - 🇨🇭 瑞士专线-1C
-      - 🇬🇧 伦敦专线-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1B
-      - 🇨🇦 加拿大-1C
-      - 🇸🇬 新加坡-1A
-      - 墨尔本-1A
-      - 墨尔本-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1C
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇨🇭 瑞士专线-1B
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
-      - 🇷🇺 莫斯科专线-1C
-      - 🇭🇰 香港 2
-      - 🇲🇽 墨西哥 1
-      - 🇩🇪 德国-法兰克福-500M 1-1A
-      - 墨尔本-1C
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇺🇸 美国-拉斯维加斯专线3-1C
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
+      - 🇷🇺 莫斯科专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线4-1C
+      - 🇸🇬 新加坡-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 英国-英格兰专线-1A
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇦🇺 澳大利亚 悉尼
+      - 🇺🇸 美国-拉斯维加斯专线2-1A
+      - 🇨🇭 瑞士专线-1A
+      - 🇸🇬 新加坡-1A
+      - 🇺🇸 美国-拉斯维加斯专线2-1B
+      - 🇭🇰 香港 2
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
+      - 🇺🇸 美国-纽约专线2-1A
+      - 🇭🇰 中国-香港专线-1B
+      - 🇨🇦 加拿大-多伦多专线1-1B
+      - 🇺🇸 美国-纽约专线2-1C
+      - 墨尔本-1A
+      - 🇰🇷 韩国-首尔3-1A
+      - 🇬🇧 英国-英格兰专线-1B
+      - 🇺🇸 美国-纽约专线1-1A
+      - 🇭🇰 中国-香港专线-1C
+      - 🇨🇦 加拿大-1B
+      - 🇺🇸 美国-纽约专线2-1B
+      - 🇹🇼 台湾 1
+      - 🇨🇭 瑞士专线-1B
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1A
+      - 🇺🇸 美国-拉斯维加斯专线3-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1C
+      - 🇸🇬 新加坡-1C
+      - 🇺🇸 美国-纽约专线1-1B
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇭🇰 香港 1
+      - 🇷🇺 俄罗斯-莫斯科专线1-1B
+      - 🇨🇭 瑞士专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线1-1A
+      - 🇷🇺 俄罗斯-莫斯科专线1-1A
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇺🇸 美国-拉斯维加斯专线3-1B
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇷🇺 俄罗斯-莫斯科专线1-1C
+      - 🇬🇧 英国-英格兰专线-1C
+      - 🇯🇵 日本 大阪
+      - 🇹🇼 台湾 2
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1B
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1C
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
+      - 🇷🇺 莫斯科专线-1A
+      - 🇭🇰 香港 5
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇦🇪 阿联酋 迪拜
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇷🇺 莫斯科专线-1B
+      - 🇺🇸 美国-纽约专线1-1C
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇭🇰 中国-香港专线-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1B
+      - 🇰🇷 韩国-三网优化2-1E
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 中国-香港专线-1C
-      - 🇭🇰 香港 7
-      - 🇭🇰 中国-香港专线-1A
-      - 🇭🇰 中国-香港专线-1B
-      - 🇭🇰 香港 5
       - 🇭🇰 香港 2
+      - 🇭🇰 中国-香港专线-1B
+      - 🇭🇰 中国-香港专线-1C
+      - 🇹🇼 台湾 1
+      - 🇭🇰 香港 1
+      - 🇹🇼 台湾 2
+      - 🇭🇰 香港 5
+      - 🇭🇰 中国-香港专线-1A
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 中国-香港专线-1C
-      - 🇦🇺 澳大利亚 悉尼
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
-      - 🇸🇬 新加坡-1B
-      - 🇦🇪 阿联酋 迪拜
-      - 🇺🇸 美国 5
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇨🇭 瑞士专线-1A
-      - 🇷🇺 莫斯科专线-1A
-      - 🇭🇰 香港 7
-      - 🇭🇰 中国-香港专线-1A
-      - 🇯🇵 日本 大阪
-      - 🇨🇦 加拿大-1A
-      - 🇬🇧 伦敦专线-1A
-      - 🇨🇦 加拿大-1B
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
-      - 🇭🇰 中国-香港专线-1B
-      - 🇭🇰 香港 5
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
-      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1A
       - 🇰🇷 韩国-三网优化2-1G
-      - 🇷🇺 俄罗斯-莫斯科专线1-1A
-      - 🇸🇬 新加坡-1C
-      - 🇷🇺 莫斯科专线-1B
-      - 🇬🇧 伦敦专线-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
-      - 🇰🇷 韩国-首尔4-1B
+      - 🇺🇸 美国-拉斯维加斯专线2-1C
       - 🇰🇷 韩国-首尔4-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-500M 1-1B
-      - 🇩🇪 德国-法兰克福-1A
-      - 🇨🇭 瑞士专线-1C
-      - 🇬🇧 伦敦专线-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1B
-      - 🇨🇦 加拿大-1C
-      - 🇸🇬 新加坡-1A
-      - 墨尔本-1A
-      - 墨尔本-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1C
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇨🇭 瑞士专线-1B
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
-      - 🇷🇺 莫斯科专线-1C
-      - 🇭🇰 香港 2
-      - 🇲🇽 墨西哥 1
-      - 🇩🇪 德国-法兰克福-500M 1-1A
-      - 墨尔本-1C
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇺🇸 美国-拉斯维加斯专线3-1C
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
+      - 🇷🇺 莫斯科专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线4-1C
+      - 🇸🇬 新加坡-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 英国-英格兰专线-1A
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇦🇺 澳大利亚 悉尼
+      - 🇺🇸 美国-拉斯维加斯专线2-1A
+      - 🇨🇭 瑞士专线-1A
+      - 🇸🇬 新加坡-1A
+      - 🇺🇸 美国-拉斯维加斯专线2-1B
+      - 🇭🇰 香港 2
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
+      - 🇺🇸 美国-纽约专线2-1A
+      - 🇭🇰 中国-香港专线-1B
+      - 🇨🇦 加拿大-多伦多专线1-1B
+      - 🇺🇸 美国-纽约专线2-1C
+      - 墨尔本-1A
+      - 🇰🇷 韩国-首尔3-1A
+      - 🇬🇧 英国-英格兰专线-1B
+      - 🇺🇸 美国-纽约专线1-1A
+      - 🇭🇰 中国-香港专线-1C
+      - 🇨🇦 加拿大-1B
+      - 🇺🇸 美国-纽约专线2-1B
+      - 🇹🇼 台湾 1
+      - 🇨🇭 瑞士专线-1B
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1A
+      - 🇺🇸 美国-拉斯维加斯专线3-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1C
+      - 🇸🇬 新加坡-1C
+      - 🇺🇸 美国-纽约专线1-1B
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇭🇰 香港 1
+      - 🇷🇺 俄罗斯-莫斯科专线1-1B
+      - 🇨🇭 瑞士专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线1-1A
+      - 🇷🇺 俄罗斯-莫斯科专线1-1A
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇺🇸 美国-拉斯维加斯专线3-1B
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇷🇺 俄罗斯-莫斯科专线1-1C
+      - 🇬🇧 英国-英格兰专线-1C
+      - 🇯🇵 日本 大阪
+      - 🇹🇼 台湾 2
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1B
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1C
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
+      - 🇷🇺 莫斯科专线-1A
+      - 🇭🇰 香港 5
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇦🇪 阿联酋 迪拜
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇷🇺 莫斯科专线-1B
+      - 🇺🇸 美国-纽约专线1-1C
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇭🇰 中国-香港专线-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1B
+      - 🇰🇷 韩国-三网优化2-1E
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 中国-香港专线-1C
-      - 🇦🇺 澳大利亚 悉尼
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
-      - 🇸🇬 新加坡-1B
-      - 🇦🇪 阿联酋 迪拜
-      - 🇺🇸 美国 5
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇨🇭 瑞士专线-1A
-      - 🇷🇺 莫斯科专线-1A
-      - 🇭🇰 香港 7
-      - 🇭🇰 中国-香港专线-1A
-      - 🇯🇵 日本 大阪
-      - 🇨🇦 加拿大-1A
-      - 🇬🇧 伦敦专线-1A
-      - 🇨🇦 加拿大-1B
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
-      - 🇭🇰 中国-香港专线-1B
-      - 🇭🇰 香港 5
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
-      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1A
       - 🇰🇷 韩国-三网优化2-1G
-      - 🇷🇺 俄罗斯-莫斯科专线1-1A
-      - 🇸🇬 新加坡-1C
-      - 🇷🇺 莫斯科专线-1B
-      - 🇬🇧 伦敦专线-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
-      - 🇰🇷 韩国-首尔4-1B
+      - 🇺🇸 美国-拉斯维加斯专线2-1C
       - 🇰🇷 韩国-首尔4-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-500M 1-1B
-      - 🇩🇪 德国-法兰克福-1A
-      - 🇨🇭 瑞士专线-1C
-      - 🇬🇧 伦敦专线-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1B
-      - 🇨🇦 加拿大-1C
-      - 🇸🇬 新加坡-1A
-      - 墨尔本-1A
-      - 墨尔本-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1C
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇨🇭 瑞士专线-1B
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
-      - 🇷🇺 莫斯科专线-1C
-      - 🇭🇰 香港 2
-      - 🇲🇽 墨西哥 1
-      - 🇩🇪 德国-法兰克福-500M 1-1A
-      - 墨尔本-1C
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇺🇸 美国-拉斯维加斯专线3-1C
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
+      - 🇷🇺 莫斯科专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线4-1C
+      - 🇸🇬 新加坡-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 英国-英格兰专线-1A
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇦🇺 澳大利亚 悉尼
+      - 🇺🇸 美国-拉斯维加斯专线2-1A
+      - 🇨🇭 瑞士专线-1A
+      - 🇸🇬 新加坡-1A
+      - 🇺🇸 美国-拉斯维加斯专线2-1B
+      - 🇭🇰 香港 2
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
+      - 🇺🇸 美国-纽约专线2-1A
+      - 🇭🇰 中国-香港专线-1B
+      - 🇨🇦 加拿大-多伦多专线1-1B
+      - 🇺🇸 美国-纽约专线2-1C
+      - 墨尔本-1A
+      - 🇰🇷 韩国-首尔3-1A
+      - 🇬🇧 英国-英格兰专线-1B
+      - 🇺🇸 美国-纽约专线1-1A
+      - 🇭🇰 中国-香港专线-1C
+      - 🇨🇦 加拿大-1B
+      - 🇺🇸 美国-纽约专线2-1B
+      - 🇹🇼 台湾 1
+      - 🇨🇭 瑞士专线-1B
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1A
+      - 🇺🇸 美国-拉斯维加斯专线3-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1C
+      - 🇸🇬 新加坡-1C
+      - 🇺🇸 美国-纽约专线1-1B
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇭🇰 香港 1
+      - 🇷🇺 俄罗斯-莫斯科专线1-1B
+      - 🇨🇭 瑞士专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线1-1A
+      - 🇷🇺 俄罗斯-莫斯科专线1-1A
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇺🇸 美国-拉斯维加斯专线3-1B
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇷🇺 俄罗斯-莫斯科专线1-1C
+      - 🇬🇧 英国-英格兰专线-1C
+      - 🇯🇵 日本 大阪
+      - 🇹🇼 台湾 2
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1B
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1C
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
+      - 🇷🇺 莫斯科专线-1A
+      - 🇭🇰 香港 5
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇦🇪 阿联酋 迪拜
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇷🇺 莫斯科专线-1B
+      - 🇺🇸 美国-纽约专线1-1C
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇭🇰 中国-香港专线-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1B
+      - 🇰🇷 韩国-三网优化2-1E
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 中国-香港专线-1C
-      - 🇦🇺 澳大利亚 悉尼
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
-      - 🇸🇬 新加坡-1B
-      - 🇦🇪 阿联酋 迪拜
-      - 🇺🇸 美国 5
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇨🇭 瑞士专线-1A
-      - 🇷🇺 莫斯科专线-1A
-      - 🇭🇰 香港 7
-      - 🇭🇰 中国-香港专线-1A
-      - 🇯🇵 日本 大阪
-      - 🇨🇦 加拿大-1A
-      - 🇬🇧 伦敦专线-1A
-      - 🇨🇦 加拿大-1B
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
-      - 🇭🇰 中国-香港专线-1B
-      - 🇭🇰 香港 5
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
-      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1A
       - 🇰🇷 韩国-三网优化2-1G
-      - 🇷🇺 俄罗斯-莫斯科专线1-1A
-      - 🇸🇬 新加坡-1C
-      - 🇷🇺 莫斯科专线-1B
-      - 🇬🇧 伦敦专线-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
-      - 🇰🇷 韩国-首尔4-1B
+      - 🇺🇸 美国-拉斯维加斯专线2-1C
       - 🇰🇷 韩国-首尔4-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-500M 1-1B
-      - 🇩🇪 德国-法兰克福-1A
-      - 🇨🇭 瑞士专线-1C
-      - 🇬🇧 伦敦专线-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1B
-      - 🇨🇦 加拿大-1C
-      - 🇸🇬 新加坡-1A
-      - 墨尔本-1A
-      - 墨尔本-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1C
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇨🇭 瑞士专线-1B
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
-      - 🇷🇺 莫斯科专线-1C
-      - 🇭🇰 香港 2
-      - 🇲🇽 墨西哥 1
-      - 🇩🇪 德国-法兰克福-500M 1-1A
-      - 墨尔本-1C
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇺🇸 美国-拉斯维加斯专线3-1C
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
+      - 🇷🇺 莫斯科专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线4-1C
+      - 🇸🇬 新加坡-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 英国-英格兰专线-1A
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇦🇺 澳大利亚 悉尼
+      - 🇺🇸 美国-拉斯维加斯专线2-1A
+      - 🇨🇭 瑞士专线-1A
+      - 🇸🇬 新加坡-1A
+      - 🇺🇸 美国-拉斯维加斯专线2-1B
+      - 🇭🇰 香港 2
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
+      - 🇺🇸 美国-纽约专线2-1A
+      - 🇭🇰 中国-香港专线-1B
+      - 🇨🇦 加拿大-多伦多专线1-1B
+      - 🇺🇸 美国-纽约专线2-1C
+      - 墨尔本-1A
+      - 🇰🇷 韩国-首尔3-1A
+      - 🇬🇧 英国-英格兰专线-1B
+      - 🇺🇸 美国-纽约专线1-1A
+      - 🇭🇰 中国-香港专线-1C
+      - 🇨🇦 加拿大-1B
+      - 🇺🇸 美国-纽约专线2-1B
+      - 🇹🇼 台湾 1
+      - 🇨🇭 瑞士专线-1B
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1A
+      - 🇺🇸 美国-拉斯维加斯专线3-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1C
+      - 🇸🇬 新加坡-1C
+      - 🇺🇸 美国-纽约专线1-1B
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇭🇰 香港 1
+      - 🇷🇺 俄罗斯-莫斯科专线1-1B
+      - 🇨🇭 瑞士专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线1-1A
+      - 🇷🇺 俄罗斯-莫斯科专线1-1A
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇺🇸 美国-拉斯维加斯专线3-1B
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇷🇺 俄罗斯-莫斯科专线1-1C
+      - 🇬🇧 英国-英格兰专线-1C
+      - 🇯🇵 日本 大阪
+      - 🇹🇼 台湾 2
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1B
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1C
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
+      - 🇷🇺 莫斯科专线-1A
+      - 🇭🇰 香港 5
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇦🇪 阿联酋 迪拜
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇷🇺 莫斯科专线-1B
+      - 🇺🇸 美国-纽约专线1-1C
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇭🇰 中国-香港专线-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1B
+      - 🇰🇷 韩国-三网优化2-1E
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -538,63 +692,82 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇯🇵 日本-东京-500M-2-1A
-      - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 中国-香港专线-1C
-      - 🇦🇺 澳大利亚 悉尼
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
-      - 🇸🇬 新加坡-1B
-      - 🇦🇪 阿联酋 迪拜
-      - 🇺🇸 美国 5
-      - 🇰🇷 韩国-三网优化2-1F
-      - 🇩🇪 德国-法兰克福-1B
-      - 🇨🇭 瑞士专线-1A
-      - 🇷🇺 莫斯科专线-1A
-      - 🇭🇰 香港 7
-      - 🇭🇰 中国-香港专线-1A
-      - 🇯🇵 日本 大阪
-      - 🇨🇦 加拿大-1A
-      - 🇬🇧 伦敦专线-1A
-      - 🇨🇦 加拿大-1B
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
-      - 🇭🇰 中国-香港专线-1B
-      - 🇭🇰 香港 5
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
-      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1A
       - 🇰🇷 韩国-三网优化2-1G
-      - 🇷🇺 俄罗斯-莫斯科专线1-1A
-      - 🇸🇬 新加坡-1C
-      - 🇷🇺 莫斯科专线-1B
-      - 🇬🇧 伦敦专线-1C
-      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
-      - 🇰🇷 韩国-首尔4-1B
+      - 🇺🇸 美国-拉斯维加斯专线2-1C
       - 🇰🇷 韩国-首尔4-1A
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-首尔3-1B
-      - 🇩🇪 德国-法兰克福-500M 1-1B
-      - 🇩🇪 德国-法兰克福-1A
-      - 🇨🇭 瑞士专线-1C
-      - 🇬🇧 伦敦专线-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1B
-      - 🇨🇦 加拿大-1C
-      - 🇸🇬 新加坡-1A
-      - 墨尔本-1A
-      - 墨尔本-1B
-      - 🇷🇺 俄罗斯-莫斯科专线1-1C
-      - 🇯🇵 日本-东京-500M-1-1B
-      - 🇰🇷 韩国-首尔3-1A
-      - 🇨🇭 瑞士专线-1B
-      - 🇯🇵 日本-东京-500M-1-1A
-      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
-      - 🇷🇺 莫斯科专线-1C
-      - 🇭🇰 香港 2
-      - 🇲🇽 墨西哥 1
-      - 🇩🇪 德国-法兰克福-500M 1-1A
-      - 墨尔本-1C
       - 🇰🇷 韩国-三网优化2-1D
+      - 🇺🇸 美国-拉斯维加斯专线3-1C
+      - 🇩🇪 德国-法兰克福-1B
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1C
+      - 🇷🇺 莫斯科专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线4-1C
+      - 🇸🇬 新加坡-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1A
+      - 🇯🇵 日本-东京-500M-1-1A
+      - 🇬🇧 英国-英格兰专线-1A
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1B
+      - 🇩🇪 德国-法兰克福-500M 1-1B
+      - 🇦🇺 澳大利亚 悉尼
+      - 🇺🇸 美国-拉斯维加斯专线2-1A
+      - 🇨🇭 瑞士专线-1A
+      - 🇸🇬 新加坡-1A
+      - 🇺🇸 美国-拉斯维加斯专线2-1B
+      - 🇭🇰 香港 2
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1B
+      - 🇺🇸 美国-纽约专线2-1A
+      - 🇭🇰 中国-香港专线-1B
+      - 🇨🇦 加拿大-多伦多专线1-1B
+      - 🇺🇸 美国-纽约专线2-1C
+      - 墨尔本-1A
+      - 🇰🇷 韩国-首尔3-1A
+      - 🇬🇧 英国-英格兰专线-1B
+      - 🇺🇸 美国-纽约专线1-1A
+      - 🇭🇰 中国-香港专线-1C
+      - 🇨🇦 加拿大-1B
+      - 🇺🇸 美国-纽约专线2-1B
+      - 🇹🇼 台湾 1
+      - 🇨🇭 瑞士专线-1B
+      - 墨尔本-1B
+      - 🇨🇦 加拿大-1A
+      - 🇺🇸 美国-拉斯维加斯专线3-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1C
+      - 🇸🇬 新加坡-1C
+      - 🇺🇸 美国-纽约专线1-1B
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1C
+      - 🇯🇵 日本-东京-500M-2-1A
+      - 🇭🇰 香港 1
+      - 🇷🇺 俄罗斯-莫斯科专线1-1B
+      - 🇨🇭 瑞士专线-1C
+      - 🇺🇸 美国-拉斯维加斯专线1-1A
+      - 🇷🇺 俄罗斯-莫斯科专线1-1A
+      - 🇯🇵 日本-东京-500M-1-1B
+      - 🇺🇸 美国-拉斯维加斯专线3-1B
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇰🇷 韩国-三网优化2-1B
+      - 🇷🇺 俄罗斯-莫斯科专线1-1C
+      - 🇬🇧 英国-英格兰专线-1C
+      - 🇯🇵 日本 大阪
+      - 🇹🇼 台湾 2
+      - 🇷🇺 俄罗斯-新西伯利亚专线1-1A
+      - 🇺🇸 美国-拉斯维加斯专线1-1B
+      - 🇯🇵 日本-东京-500M-2-1B
+      - 🇨🇦 加拿大-多伦多专线1-1C
+      - 🇰🇷 韩国-三网优化2-1C
+      - 🇷🇺 俄罗斯-圣彼得堡专线1-1A
+      - 🇷🇺 莫斯科专线-1A
+      - 🇭🇰 香港 5
+      - 🇩🇪 德国-法兰克福-1A
+      - 🇦🇪 阿联酋 迪拜
+      - 🇰🇷 韩国-首尔3-1B
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇷🇺 莫斯科专线-1B
+      - 🇺🇸 美国-纽约专线1-1C
+      - 🇰🇷 韩国-首尔4-1B
+      - 🇭🇰 中国-香港专线-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1A
+      - 🇺🇸 美国-拉斯维加斯专线4-1B
+      - 🇰🇷 韩国-三网优化2-1E
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
