@@ -5,10 +5,14 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: US_1_@Surfboardv2ray, server: 104.16.61.8, port: 80, type: vmess, uuid: 4804f14b-c1f8-452d-a6ec-eff1490aeac9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /lRkGCkYS9X5GDNJYMWXN7kCm3lL, headers: {Host: hdfy6d3.freelines.net}}}
-  - {name: CA_2_@Surfboardv2ray, server: 172.67.190.98, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: lammaland.org, network: ws, ws-opts: {path: linkvws, headers: {Host: lammaland.org}}}
-  - {name: US_3_@Surfboardv2ray, server: 38.68.135.74, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: 38.68.135.74, network: ws, ws-opts: {path: linkvws, headers: {Host: 38.68.135.74}}}
-  - {name: US_4_@Surfboardv2ray, server: 38.75.137.27, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: US_1_@Surfboardv2ray, server: 104.19.32.0, port: 443, type: vmess, uuid: 93ea486a-bada-42a4-ac38-d088b320fa1e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: xmivideo.cfd, network: ws, ws-opts: {path: /linkws, headers: {Host: xmivideo.cfd}}}
+  - {name: US_2_@Surfboardv2ray, server: 104.21.24.170, port: 443, type: vmess, uuid: b321fd5d-e6ec-4293-a644-164e3885f52e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: adenc36v.xtooltech.cfd, network: ws, ws-opts: {path: /linkws, headers: {Host: adenc36v.xtooltech.cfd}}}
+  - {name: CA_4_@Surfboardv2ray, server: anaviriti.info, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: anaviriti.info, network: ws, ws-opts: {path: linkvws, headers: {Host: anaviriti.info}}}
+  - {name: US_5_@Surfboardv2ray, server: d.kampong.org, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: d.kampong.org, network: ws, ws-opts: {path: linkvws, headers: {Host: d.kampong.org}}}
+  - {name: US_6_@Surfboardv2ray, server: masjide.org, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: masjide.org, network: ws, ws-opts: {path: linkvws, headers: {Host: masjide.org}}}
+  - {name: US_7_@Surfboardv2ray, server: obdii.cfd, port: 443, type: vmess, uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: obdii.cfd, network: ws, ws-opts: {path: /linkws, headers: {Host: obdii.cfd}}}
+  - {name: US_8_@Surfboardv2ray, server: p.valkinin.org, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: p.valkinin.org, network: ws, ws-opts: {path: linkvws, headers: {Host: p.valkinin.org}}}
+  - {name: CA_9_@Surfboardv2ray, server: shs.xiaoqi666.xyz, port: 2086, type: vmess, uuid: 3fd7b958-2161-46e1-b6fc-bd6bb2165312, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shs.xiaoqi666.xyz}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -16,9 +20,13 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - US_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_9_@Surfboardv2ray
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -26,9 +34,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - US_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_9_@Surfboardv2ray
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -36,36 +48,52 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - US_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_9_@Surfboardv2ray
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - US_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_9_@Surfboardv2ray
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - US_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_9_@Surfboardv2ray
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - US_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_9_@Surfboardv2ray
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -73,9 +101,13 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - US_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_9_@Surfboardv2ray
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -99,9 +131,13 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - US_1_@Surfboardv2ray
-      - CA_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
-      - US_4_@Surfboardv2ray
+      - US_2_@Surfboardv2ray
+      - CA_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
+      - US_6_@Surfboardv2ray
+      - US_7_@Surfboardv2ray
+      - US_8_@Surfboardv2ray
+      - CA_9_@Surfboardv2ray
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
