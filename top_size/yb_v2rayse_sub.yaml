@@ -1,9 +1,9 @@
 #
 #-------------------------------------------------------------#
 #  创建者：https://v2rayse.com
-#  创建时间：2024-11-07 13:34:30
+#  创建时间：2024-11-07 12:59:33
 #  模版：v2rayse默认模版
-#  节点数量：10
+#  节点数量：9
 #-------------------------------------------------------------#
 #
 port: 7890
@@ -13,109 +13,102 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - {"type":"vmess","name":"13|🇺🇸美国4|@ripaojiedian","server":"183.236.51.23","port":52112,"uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"cipher":"auto","network":"tcp"}
-  - {"type":"ss","name":"US_1","server":"54.213.247.125","port":443,"cipher":"aes-256-cfb","password":"amazonskr05"}
-  - {"type":"ss","name":"🇺🇸_US_美国_1","server":"54.213.228.61","port":443,"cipher":"aes-256-cfb","password":"amazonskr05"}
-  - {"type":"ss","name":"🇩🇪_DE_德国_1","server":"45.87.175.192","port":8080,"cipher":"chacha20-ietf-poly1305","password":"cvII85TrW6n0OGyfpHVS1u"}
-  - {"type":"ss","name":"🇺🇸_US_美国_2","server":"156.146.38.168","port":443,"cipher":"aes-128-gcm","password":"shadowsocks"}
-  - {"type":"ss","name":"🇩🇪_DE_德国_2","server":"45.87.175.192","port":8080,"cipher":"chacha20-ietf-poly1305","password":"cvII85TrW6n0OGyfpHVS1u"}
-  - {"type":"ss","name":"🇱🇹LT_488","server":"45.87.175.164","port":8080,"cipher":"chacha20-ietf-poly1305","password":"cvII85TrW6n0OGyfpHVS1u"}
-  - {"type":"vless","name":"🇺🇸_US_美国->🇬🇧_GB_英国","server":"151.101.64.155","port":80,"uuid":"5276274b-a746-4252-8509-45eeace383c1","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"fast.net.bomb.joinspdnet.net","ws-opts":{"path":"/Channel,SPDNET,SPDNET?ed=443","headers":{"host":"fast.net.bomb.joinspdnet.net"}}}
-  - {"type":"ss","name":"🇺🇸_US_美国_3","server":"34.209.103.254","port":443,"cipher":"aes-256-cfb","password":"amazonskr05"}
-  - {"type":"ss","name":"US_2","server":"54.187.244.22","port":443,"cipher":"aes-256-cfb","password":"amazonskr05"}
+  - {"type":"ss","name":"v2rayse_test_1","server":"198.57.27.218","port":5004,"cipher":"aes-256-gcm","password":"g5MeD6Ft3CWlJId"}
+  - {"type":"vmess","name":"v2rayse_test_2","ws-opts":{"path":"/"},"server":"154.23.190.162","port":443,"uuid":"b9984674-f771-4e67-a198-c7e60720ba2c","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"ssr","name":"v2rayse_test_3","server":"20.239.49.44","port":59814,"protocol":"origin","cipher":"dummy","obfs":"plain","password":"3df57276-03ef-45cf-bdd4-4edb6dfaa0ef"}
+  - {"type":"trojan","name":"v2rayse_test_4","server":"ca-trojan.bonds.id","port":443,"password":"bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nY206Q1VuZFNabllzUEtjdTaclWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272","udp":true,"skip-cert-verify":true}
+  - {"type":"http","name":"http_proxy","server":"124.15.12.24","port":251,"username":"username","password":"password","udp":true}
+  - {"type":"socks5","name":"socks5_proxy","server":"124.15.12.24","port":2312,"udp":true}
+  - {"type":"hysteria","name":"Hys-1.2.3.4","server":"1.2.3.4","port":12854,"auth_str":"pekopeko","alpn":"h3","protocol":"udp","up":50,"down":250,"sni":"wechat.com","skip-cert-verify":true,"recv_window":104857600,"recv_window_conn":26214400,"disable_mtu_discovery":true}
+  - {"type":"vless","name":"test","server":"1.2.3.4","port":7777,"uuid":"abc-def-ghi-fge-zsx","skip-cert-verify":true,"network":"tcp","tls":true,"udp":true}
+  - {"type":"socks5","name":"telegram_proxy","server":"1.2.3.4","port":123,"username":"username","password":"password","udp":true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 13|🇺🇸美国4|@ripaojiedian
-      - US_1
-      - 🇺🇸_US_美国_1
-      - 🇩🇪_DE_德国_1
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国_2
-      - 🇱🇹LT_488
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
-      - 🇺🇸_US_美国_3
-      - US_2
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - v2rayse_test_4
+      - http_proxy
+      - socks5_proxy
+      - Hys-1.2.3.4
+      - test
+      - telegram_proxy
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 13|🇺🇸美国4|@ripaojiedian
-      - US_1
-      - 🇺🇸_US_美国_1
-      - 🇩🇪_DE_德国_1
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国_2
-      - 🇱🇹LT_488
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
-      - 🇺🇸_US_美国_3
-      - US_2
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - v2rayse_test_4
+      - http_proxy
+      - socks5_proxy
+      - Hys-1.2.3.4
+      - test
+      - telegram_proxy
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 13|🇺🇸美国4|@ripaojiedian
-      - US_1
-      - 🇺🇸_US_美国_1
-      - 🇩🇪_DE_德国_1
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国_2
-      - 🇱🇹LT_488
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
-      - 🇺🇸_US_美国_3
-      - US_2
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - v2rayse_test_4
+      - http_proxy
+      - socks5_proxy
+      - Hys-1.2.3.4
+      - test
+      - telegram_proxy
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 13|🇺🇸美国4|@ripaojiedian
-      - US_1
-      - 🇺🇸_US_美国_1
-      - 🇩🇪_DE_德国_1
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国_2
-      - 🇱🇹LT_488
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
-      - 🇺🇸_US_美国_3
-      - US_2
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - v2rayse_test_4
+      - http_proxy
+      - socks5_proxy
+      - Hys-1.2.3.4
+      - test
+      - telegram_proxy
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 13|🇺🇸美国4|@ripaojiedian
-      - US_1
-      - 🇺🇸_US_美国_1
-      - 🇩🇪_DE_德国_1
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国_2
-      - 🇱🇹LT_488
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
-      - 🇺🇸_US_美国_3
-      - US_2
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - v2rayse_test_4
+      - http_proxy
+      - socks5_proxy
+      - Hys-1.2.3.4
+      - test
+      - telegram_proxy
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 13|🇺🇸美国4|@ripaojiedian
-      - US_1
-      - 🇺🇸_US_美国_1
-      - 🇩🇪_DE_德国_1
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国_2
-      - 🇱🇹LT_488
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
-      - 🇺🇸_US_美国_3
-      - US_2
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - v2rayse_test_4
+      - http_proxy
+      - socks5_proxy
+      - Hys-1.2.3.4
+      - test
+      - telegram_proxy
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -138,16 +131,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 13|🇺🇸美国4|@ripaojiedian
-      - US_1
-      - 🇺🇸_US_美国_1
-      - 🇩🇪_DE_德国_1
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国_2
-      - 🇱🇹LT_488
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
-      - 🇺🇸_US_美国_3
-      - US_2
+      - v2rayse_test_1
+      - v2rayse_test_2
+      - v2rayse_test_3
+      - v2rayse_test_4
+      - http_proxy
+      - socks5_proxy
+      - Hys-1.2.3.4
+      - test
+      - telegram_proxy
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
