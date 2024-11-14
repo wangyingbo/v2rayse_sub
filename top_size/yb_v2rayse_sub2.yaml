@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-11-13 14:04:28
+# 创建时间：2024-11-14 14:19:58
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：2024
 # 节点类型：vmess, trojan
@@ -9,10 +9,10 @@
 mixed-port: 7890
 allow-lan: false
 log-level: silent
-external-controller: 0.0.0.0:9090
+external-controller: 127.0.0.1:9090
 dns:
   enabled: true
-  listen: 0.0.0.0:1053
+  listen: 127.0.0.1:1053
   ipv6: true
   default-nameserver:
     - 223.5.5.5
@@ -4149,8 +4149,9 @@ proxy-groups:
   - name: ♻️ 自动选择
     type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    retries: 0
+    interval: 600
+    tolerance: 100
+    retries: 2
     failover: true
     proxies:
       - 👉www.85la.com👉美国US_4
@@ -8230,8 +8231,9 @@ proxy-groups:
   - name: 🇯🇵 日本节点
     type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    retries: 0
+    interval: 600
+    tolerance: 100
+    retries: 2
     failover: true
     proxies:
       - 👉www.85la.com👉日本JP_25
@@ -8239,8 +8241,9 @@ proxy-groups:
   - name: 🇺🇲 美国节点
     type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    retries: 0
+    interval: 600
+    tolerance: 100
+    retries: 2
     failover: true
     proxies:
       - 👉www.85la.com👉美国US_4
@@ -11965,6 +11968,7 @@ rules:
   - DOMAIN-SUFFIX,telegram.org,🚀 节点选择
   - DOMAIN-SUFFIX,telesco.pe,🚀 节点选择
   - IP-CIDR,91.108.0.0/16,🚀 节点选择,no-resolve
+  - IP-CIDR,95.161.64.0/20,🚀 节点选择,no-resolve
   - IP-CIDR,109.239.140.0/24,🚀 节点选择,no-resolve
   - IP-CIDR,149.154.160.0/20,🚀 节点选择,no-resolve
   - IP-CIDR6,2001:67c:4e8::/48,🚀 节点选择,no-resolve
@@ -12802,6 +12806,7 @@ rules:
   - DOMAIN-SUFFIX,twimg.co,🚀 节点选择
   - DOMAIN-SUFFIX,twimg.com,🚀 节点选择
   - DOMAIN-SUFFIX,twimg.org,🚀 节点选择
+  - DOMAIN-SUFFIX,x.com,🚀 节点选择
   - DOMAIN-SUFFIX,t.me,🚀 节点选择
   - DOMAIN-SUFFIX,tdesktop.com,🚀 节点选择
   - DOMAIN-SUFFIX,telegra.ph,🚀 节点选择

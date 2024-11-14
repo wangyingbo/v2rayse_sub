@@ -1,18 +1,18 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-11-13 22:09:58
+# 创建时间：2024-11-14 19:40:24
 # 使用模版：ACL4SSR_Online_Full_Google.ini
-# 节点数量：462
+# 节点数量：610
 # 节点类型：trojan, vmess
 ####################################
 mixed-port: 7890
-allow-lan: true
-log-level: info
-external-controller: 0.0.0.0:9090
+allow-lan: false
+log-level: silent
+external-controller: 127.0.0.1:9090
 dns:
   enabled: true
-  listen: 0.0.0.0:1053
+  listen: 127.0.0.1:1053
   ipv6: true
   default-nameserver:
     - 223.5.5.5
@@ -80,7 +80,7 @@ dns:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
   fallback-filter:
-    geoip: false
+    geoip: true
     ipcidr:
       - 240.0.0.0/4
       - 0.0.0.0/32
@@ -89,102 +89,102 @@ proxies:
   - {"name":"美国_由快嘴科技提供：kkzui.com16","type":"trojan","server":"tw02.trojanyyds.xyz","port":443,"udp":true,"password":"675821fd-e6d1-4e8e-b56e-efc84bc819a0","sni":"tw02.trojanyyds.xyz","skip-cert-verify":true,"network":"tcp"}
   - {"name":"中国_由快嘴科技提供：kkzui.com49","type":"vmess","server":"143.92.42.65","port":2902,"cipher":"auto","uuid":"640c1077-d10b-4225-a9fb-d3e9c3ce7a00","alterId":0,"tls":false,"skip-cert-verify":true,"network":"http"}
   - {"name":"巴西_由快嘴科技提供：kkzui.com50","type":"vmess","server":"181.215.6.181","port":80,"cipher":"auto","uuid":"af107203-1679-4d7e-cd40-2ece097a0613","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/80","headers":{"host":"181.215.6.181"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com51","type":"vmess","server":"158.51.121.36","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"158.51.121.36"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com51_1","type":"vmess","server":"158.51.121.36","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"158.51.121.36"}}}
   - {"name":"荷兰_由快嘴科技提供：kkzui.com52","type":"vmess","server":"45.145.167.103","port":443,"cipher":"auto","uuid":"425c5e6e-30a0-4984-8a13-ee6f72053162","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"indiavideo.sbs"}}}
   - {"name":"荷兰_由快嘴科技提供：kkzui.com53","type":"vmess","server":"indiavideo.sbs","port":443,"cipher":"auto","uuid":"425c5e6e-30a0-4984-8a13-ee6f72053162","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"indiavideo.sbs"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com54","type":"vmess","server":"192.210.231.217","port":80,"cipher":"auto","uuid":"19d01a72-b30e-40d3-e87b-d16114368040","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/aa","headers":{"host":"192.210.231.217"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com55","type":"vmess","server":"38.99.82.203","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"38.99.82.203"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com56","type":"vmess","server":"38.75.136.73","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"38.75.136.73"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com57","type":"vmess","server":"172.64.170.159","port":443,"cipher":"auto","uuid":"bf67437e-6c90-45ca-abc2-c7240a5ce2aa","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/eisasqa","headers":{"host":"foxlux.fovi.tk"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com58","type":"vmess","server":"172.67.51.186","port":443,"cipher":"auto","uuid":"bf67437e-6c90-45ca-abc2-c7240a5ce2aa","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/eisasqa","headers":{"host":"foxlux.fovi.tk"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com59","type":"vmess","server":"104.16.120.250","port":443,"cipher":"auto","uuid":"bf67437e-6c90-45ca-abc2-c7240a5ce2aa","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/eisasqa","headers":{"host":"foxlux.fovi.tk"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com60","type":"vmess","server":"cf.fovi.tk","port":443,"cipher":"auto","uuid":"bf67437e-6c90-45ca-abc2-c7240a5ce2aa","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/eisasqa","headers":{"host":"foxlux.fovi.tk"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com61","type":"vmess","server":"172.67.169.40","port":443,"cipher":"auto","uuid":"fa5b55cd-cafc-4de0-a4c8-722e02a9f58e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms03.dongfeng.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com56_1","type":"vmess","server":"38.75.136.73","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"38.75.136.73"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com57_1","type":"vmess","server":"172.64.170.159","port":443,"cipher":"auto","uuid":"bf67437e-6c90-45ca-abc2-c7240a5ce2aa","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/eisasqa","headers":{"host":"foxlux.fovi.tk"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com58_1","type":"vmess","server":"172.67.51.186","port":443,"cipher":"auto","uuid":"bf67437e-6c90-45ca-abc2-c7240a5ce2aa","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/eisasqa","headers":{"host":"foxlux.fovi.tk"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com59_1","type":"vmess","server":"104.16.120.250","port":443,"cipher":"auto","uuid":"bf67437e-6c90-45ca-abc2-c7240a5ce2aa","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/eisasqa","headers":{"host":"foxlux.fovi.tk"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com60_1","type":"vmess","server":"cf.fovi.tk","port":443,"cipher":"auto","uuid":"bf67437e-6c90-45ca-abc2-c7240a5ce2aa","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/eisasqa","headers":{"host":"foxlux.fovi.tk"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com61_1","type":"vmess","server":"172.67.169.40","port":443,"cipher":"auto","uuid":"fa5b55cd-cafc-4de0-a4c8-722e02a9f58e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms03.dongfeng.cfd"}}}
   - {"name":"保加利亚_由快嘴科技提供：kkzui.com62","type":"vmess","server":"147.78.140.231","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/afrhms16v.bestxray.buzz/linkws","headers":{"host":"llow-disk-4b7b.bigapax481.workers.dev"}}}
   - {"name":"巴西_由快嘴科技提供：kkzui.com63","type":"vmess","server":"188.114.97.3","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
   - {"name":"巴西_由快嘴科技提供：kkzui.com64","type":"vmess","server":"188.114.96.3","port":443,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.cfd"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com65","type":"vmess","server":"hms26.xpengmotors.sbs","port":443,"cipher":"auto","uuid":"fb0a2de6-bf06-4ff0-97ce-c21abcdc2d55","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms26.xpengmotors.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com65_1","type":"vmess","server":"hms26.xpengmotors.sbs","port":443,"cipher":"auto","uuid":"fb0a2de6-bf06-4ff0-97ce-c21abcdc2d55","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms26.xpengmotors.sbs"}}}
   - {"name":"未知_由快嘴科技提供：kkzui.com66","type":"vmess","server":"149.7.16.248","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"149.7.16.248"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com67","type":"vmess","server":"172.99.190.206","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"172.99.190.206"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com67_1","type":"vmess","server":"172.99.190.206","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"172.99.190.206"}}}
   - {"name":"未知_由快嘴科技提供：kkzui.com68","type":"vmess","server":"149.7.16.188","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"149.7.16.188"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com69","type":"vmess","server":"172.99.190.50","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"172.99.190.50"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com69_1","type":"vmess","server":"172.99.190.50","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"172.99.190.50"}}}
   - {"name":"英国_由快嘴科技提供：kkzui.com70","type":"vmess","server":"185.221.219.107","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"185.221.219.107"}}}
   - {"name":"中国_由快嘴科技提供：kkzui.com71","type":"vmess","server":"5.188.33.172","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"5.188.33.172"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com72","type":"vmess","server":"172.67.222.233","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"yichueng.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com73","type":"vmess","server":"172.67.136.70","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.usaha.homes"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com74","type":"vmess","server":"172.67.128.110","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"kampong.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com75","type":"vmess","server":"172.67.214.16","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.seribus.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com72_1","type":"vmess","server":"172.67.222.233","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"yichueng.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com73_1","type":"vmess","server":"172.67.136.70","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.usaha.homes"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com74_1","type":"vmess","server":"172.67.128.110","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"kampong.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com75_1","type":"vmess","server":"172.67.214.16","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.seribus.org"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com76","type":"vmess","server":"172.67.128.179","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.jannah.homes"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com77","type":"vmess","server":"67.220.66.51","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"67.220.66.51"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com78","type":"vmess","server":"b.tampay.info","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.tampay.info"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com79","type":"vmess","server":"38.99.82.2","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"38.99.82.2"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com80","type":"vmess","server":"172.67.156.210","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com81","type":"vmess","server":"b.jannah.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.jannah.homes"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com82","type":"vmess","server":"172.67.131.108","port":443,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.cfd"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com83","type":"vmess","server":"38.114.120.211","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"38.114.120.211"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com84","type":"vmess","server":"172.233.19.143","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"172.233.19.143"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com85","type":"vmess","server":"172.67.244.191","port":443,"cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"gwdef.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com86","type":"vmess","server":"172.67.181.241","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"afrhms16v.bestxray.buzz"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com87","type":"vmess","server":"ParsVds.ir","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com88","type":"vmess","server":"172.67.198.187","port":443,"cipher":"auto","uuid":"93ea486a-bada-42a4-ac38-d088b320fa1e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"xmivideo.cfd"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com89","type":"vmess","server":"parsvds.ir","port":443,"cipher":"auto","uuid":"62aa5f80-0328-4004-a375-7f5a59df4022","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms19.best-tizi.top"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com90","type":"vmess","server":"172.67.164.164","port":443,"cipher":"auto","uuid":"a1655f51-1e20-4a92-8a11-b7ca30a7a353","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"afrhms07.xfixedfloat.cfd"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com91","type":"vmess","server":"172.67.193.108","port":443,"cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"gwdef.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com92","type":"vmess","server":"be.anaviriti.info","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"be.anaviriti.info"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com93","type":"vmess","server":"Zula.ir","port":443,"cipher":"auto","uuid":"f9ccede9-ca9c-4719-b105-e494742499e3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"kmz3.sassanidempire.com"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com77_1","type":"vmess","server":"67.220.66.51","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"67.220.66.51"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com78_1","type":"vmess","server":"b.tampay.info","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.tampay.info"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com79_1","type":"vmess","server":"38.99.82.2","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"38.99.82.2"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com80_1","type":"vmess","server":"172.67.156.210","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com81_1","type":"vmess","server":"b.jannah.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.jannah.homes"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com82_1","type":"vmess","server":"172.67.131.108","port":443,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com83_1","type":"vmess","server":"38.114.120.211","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"38.114.120.211"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com84_1","type":"vmess","server":"172.233.19.143","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"172.233.19.143"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com85_1","type":"vmess","server":"172.67.244.191","port":443,"cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"gwdef.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com86_1","type":"vmess","server":"172.67.181.241","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"afrhms16v.bestxray.buzz"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com87_1","type":"vmess","server":"ParsVds.ir","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com88_1","type":"vmess","server":"172.67.198.187","port":443,"cipher":"auto","uuid":"93ea486a-bada-42a4-ac38-d088b320fa1e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"xmivideo.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com89_1","type":"vmess","server":"parsvds.ir","port":443,"cipher":"auto","uuid":"62aa5f80-0328-4004-a375-7f5a59df4022","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms19.best-tizi.top"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com90_1","type":"vmess","server":"172.67.164.164","port":443,"cipher":"auto","uuid":"a1655f51-1e20-4a92-8a11-b7ca30a7a353","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"afrhms07.xfixedfloat.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com91_1","type":"vmess","server":"172.67.193.108","port":443,"cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"gwdef.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com92_1","type":"vmess","server":"be.anaviriti.info","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"be.anaviriti.info"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com93_1","type":"vmess","server":"Zula.ir","port":443,"cipher":"auto","uuid":"f9ccede9-ca9c-4719-b105-e494742499e3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"kmz3.sassanidempire.com"}}}
   - {"name":"加拿大_由快嘴科技提供：kkzui.com94","type":"vmess","server":"68.168.31.196","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"68.168.31.196"}}}
   - {"name":"加拿大_由快嘴科技提供：kkzui.com95","type":"vmess","server":"68.168.31.242","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"68.168.31.242"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com96","type":"vmess","server":"p.valkinin.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"p.valkinin.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com97","type":"vmess","server":"hkddisney.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"hkddisney.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com96_1","type":"vmess","server":"p.valkinin.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"p.valkinin.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com97_1","type":"vmess","server":"hkddisney.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"hkddisney.org"}}}
   - {"name":"加拿大_由快嘴科技提供：kkzui.com98","type":"vmess","server":"23.154.136.2","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"23.154.136.2"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com99","type":"vmess","server":"104.21.44.106","port":443,"cipher":"auto","uuid":"93ea486a-bada-42a4-ac38-d088b320fa1e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"xmivideo.cfd"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com100","type":"vmess","server":"b.besar.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.besar.homes"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com101","type":"vmess","server":"nurul.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"nurul.homes"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com102","type":"vmess","server":"hms08.gwdef.sbs","port":443,"cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"gwdef.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com103","type":"vmess","server":"b.pelang.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.pelang.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com104","type":"vmess","server":"104.21.61.246","port":443,"cipher":"auto","uuid":"f9ccede9-ca9c-4719-b105-e494742499e3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"kmz3.sassanidempire.com"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com105","type":"vmess","server":"es.fapeng.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"es.fapeng.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com106","type":"vmess","server":"d.seribus.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.seribus.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com107","type":"vmess","server":"b.dermaga.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.dermaga.homes"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com108","type":"vmess","server":"104.20.39.186","port":443,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ivideos.sbs/linkws","headers":{"host":"vmess.taxar71054.workers.dev"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com109","type":"vmess","server":"104.18.20.153","port":80,"cipher":"auto","uuid":"b598ec8e-ef47-4e71-8d2e-a99fffcd144c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"68690907783461163508239105253758.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com110","type":"vmess","server":"104.21.24.170","port":443,"cipher":"auto","uuid":"b321fd5d-e6ec-4293-a644-164e3885f52e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"adenc36v.xtooltech.cfd"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com111","type":"vmess","server":"104.21.18.90","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"fapeng.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com112","type":"vmess","server":"e.kampong.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"e.kampong.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com113","type":"vmess","server":"b.serkat.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.serkat.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com114","type":"vmess","server":"c.tampay.info","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"c.tampay.info"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com115","type":"vmess","server":"pulan.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"pulan.homes"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com116","type":"vmess","server":"d.masjide.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.masjide.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com117","type":"vmess","server":"104.21.32.238","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"hms02.fxiaomi.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com99_1","type":"vmess","server":"104.21.44.106","port":443,"cipher":"auto","uuid":"93ea486a-bada-42a4-ac38-d088b320fa1e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"xmivideo.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com100_1","type":"vmess","server":"b.besar.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.besar.homes"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com101_1","type":"vmess","server":"nurul.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"nurul.homes"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com102_1","type":"vmess","server":"hms08.gwdef.sbs","port":443,"cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"gwdef.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com103_1","type":"vmess","server":"b.pelang.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.pelang.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com104_1","type":"vmess","server":"104.21.61.246","port":443,"cipher":"auto","uuid":"f9ccede9-ca9c-4719-b105-e494742499e3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"kmz3.sassanidempire.com"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com105_1","type":"vmess","server":"es.fapeng.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"es.fapeng.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com106_1","type":"vmess","server":"d.seribus.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.seribus.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com107_1","type":"vmess","server":"b.dermaga.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.dermaga.homes"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com108_1","type":"vmess","server":"104.20.39.186","port":443,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ivideos.sbs/linkws","headers":{"host":"vmess.taxar71054.workers.dev"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com109_1","type":"vmess","server":"104.18.20.153","port":80,"cipher":"auto","uuid":"b598ec8e-ef47-4e71-8d2e-a99fffcd144c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"68690907783461163508239105253758.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com110_1","type":"vmess","server":"104.21.24.170","port":443,"cipher":"auto","uuid":"b321fd5d-e6ec-4293-a644-164e3885f52e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"adenc36v.xtooltech.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com111_1","type":"vmess","server":"104.21.18.90","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"fapeng.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com112_1","type":"vmess","server":"e.kampong.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"e.kampong.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com113_1","type":"vmess","server":"b.serkat.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.serkat.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com114_1","type":"vmess","server":"c.tampay.info","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"c.tampay.info"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com115_1","type":"vmess","server":"pulan.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"pulan.homes"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com116_1","type":"vmess","server":"d.masjide.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.masjide.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com117_1","type":"vmess","server":"104.21.32.238","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"hms02.fxiaomi.sbs"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com118","type":"vmess","server":"masjide.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"masjide.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com119","type":"vmess","server":"kampong.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"kampong.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com120","type":"vmess","server":"104.21.69.44","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"hms02.fxiaomi.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com121","type":"vmess","server":"104.21.46.121","port":443,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"ivideos.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com122","type":"vmess","server":"104.21.72.230","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"an.anaviriti.info"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com123","type":"vmess","server":"hms24.ivideos.sbs","port":443,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"ivideos.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com124","type":"vmess","server":"b.mubut.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.mubut.homes"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com125","type":"vmess","server":"pulau.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"pulau.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com126","type":"vmess","server":"104.21.4.6","port":443,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.cfd"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com127","type":"vmess","server":"denc36.xtooltech.cfd","port":443,"cipher":"auto","uuid":"b321fd5d-e6ec-4293-a644-164e3885f52e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"adenc36v.xtooltech.cfd"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com128","type":"vmess","server":"104.21.83.108","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"hms02.fxiaomi.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com129","type":"vmess","server":"104.21.26.129","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.usaha.homes"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com119_1","type":"vmess","server":"kampong.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"kampong.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com120_1","type":"vmess","server":"104.21.69.44","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"hms02.fxiaomi.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com121_1","type":"vmess","server":"104.21.46.121","port":443,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"ivideos.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com122_1","type":"vmess","server":"104.21.72.230","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"an.anaviriti.info"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com123_1","type":"vmess","server":"hms24.ivideos.sbs","port":443,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"ivideos.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com124_1","type":"vmess","server":"b.mubut.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.mubut.homes"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com125_1","type":"vmess","server":"pulau.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"pulau.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com126_1","type":"vmess","server":"104.21.4.6","port":443,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com127_1","type":"vmess","server":"denc36.xtooltech.cfd","port":443,"cipher":"auto","uuid":"b321fd5d-e6ec-4293-a644-164e3885f52e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"adenc36v.xtooltech.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com128_1","type":"vmess","server":"104.21.83.108","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"hms02.fxiaomi.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com129_1","type":"vmess","server":"104.21.26.129","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.usaha.homes"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com130","type":"vmess","server":"hms19.best-tizi.top","port":443,"cipher":"auto","uuid":"62aa5f80-0328-4004-a375-7f5a59df4022","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms19.best-tizi.top"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com131","type":"vmess","server":"104.21.48.160","port":443,"cipher":"auto","uuid":"e537f2f5-2a0c-4f59-92c9-832ca6433bf3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"irvideo.cfd"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com132","type":"vmess","server":"c.jamekk.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"c.jamekk.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com133","type":"vmess","server":"putihb.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"putihb.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com134","type":"vmess","server":"irhms03.dongfeng.cfd","port":443,"cipher":"auto","uuid":"fa5b55cd-cafc-4de0-a4c8-722e02a9f58e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms03.dongfeng.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com132_1","type":"vmess","server":"c.jamekk.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"c.jamekk.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com133_1","type":"vmess","server":"putihb.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"putihb.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com134_1","type":"vmess","server":"irhms03.dongfeng.cfd","port":443,"cipher":"auto","uuid":"fa5b55cd-cafc-4de0-a4c8-722e02a9f58e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms03.dongfeng.cfd"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com135","type":"vmess","server":"23.162.200.227","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"23.162.200.227"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com136","type":"vmess","server":"104.22.58.63","port":80,"cipher":"auto","uuid":"412f8f79-5ca0-4f4a-8a35-33d57f3150a5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"99806388192980142300309475767578.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com137","type":"vmess","server":"c.serkat.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"c.serkat.org"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com138","type":"vmess","server":"104.17.197.31","port":443,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ivideos.sbs/linkws","headers":{"host":"quiet-moon-132a.xetag42714.workers.dev"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com139","type":"vmess","server":"bs.masjidd.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"bs.masjidd.homes"}}}
-  - {"name":"巴西_由快嘴科技提供：kkzui.com140","type":"vmess","server":"188.114.97.3","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com139_1","type":"vmess","server":"bs.masjidd.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"bs.masjidd.homes"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com140_1","type":"vmess","server":"188.114.97.3","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com141","type":"vmess","server":"172.67.196.112","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com142","type":"vmess","server":"172.67.170.13","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com143","type":"vmess","server":"linde06.indiavideo.sbs","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
   - {"name":"巴西_由快嘴科技提供：kkzui.com144","type":"vmess","server":"188.114.99.205","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"巴西_由快嘴科技提供：kkzui.com145","type":"vmess","server":"188.114.99.183","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"巴西_由快嘴科技提供：kkzui.com146","type":"vmess","server":"188.114.97.6","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com145_1","type":"vmess","server":"188.114.99.183","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com146_1","type":"vmess","server":"188.114.97.6","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
   - {"name":"巴西_由快嘴科技提供：kkzui.com147","type":"vmess","server":"188.114.96.3","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
   - {"name":"巴西_由快嘴科技提供：kkzui.com148","type":"vmess","server":"188.114.97.7","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
   - {"name":"巴西_由快嘴科技提供：kkzui.com149","type":"vmess","server":"188.114.97.210","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
@@ -192,32 +192,32 @@ proxies:
   - {"name":"荷兰_由快嘴科技提供：kkzui.com151","type":"vmess","server":"95.179.128.114","port":80,"cipher":"auto","uuid":"a6292090-afe1-4640-97a7-4f1d1d877cf1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/Av8czorIlYicU6D349brWUw6a","headers":{"host":"95.179.128.114"}}}
   - {"name":"巴西_由快嘴科技提供：kkzui.com152","type":"vmess","server":"188.114.97.1","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
   - {"name":"巴西_由快嘴科技提供：kkzui.com153","type":"vmess","server":"188.114.99.134","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com154","type":"vmess","server":"38.91.107.36","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"38.91.107.36"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com154_1","type":"vmess","server":"38.91.107.36","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"38.91.107.36"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com155","type":"vmess","server":"172.67.170.11","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com156","type":"vmess","server":"172.67.161.77","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com157","type":"vmess","server":"104.21.51.208","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com158","type":"vmess","server":"162.159.128.248","port":80,"cipher":"auto","uuid":"211d8a34-9c48-4435-b4bf-343ae1cbda0e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"rn1.hostmjj.com"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com156_1","type":"vmess","server":"172.67.161.77","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com157_1","type":"vmess","server":"104.21.51.208","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com158_1","type":"vmess","server":"162.159.128.248","port":80,"cipher":"auto","uuid":"211d8a34-9c48-4435-b4bf-343ae1cbda0e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"rn1.hostmjj.com"}}}
   - {"name":"保加利亚_由快嘴科技提供：kkzui.com159","type":"vmess","server":"147.78.140.30","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/obdii.cfd/linkws","headers":{"host":"4868-poetry-4868.napora7003.workers.dev"}}}
   - {"name":"保加利亚_由快嘴科技提供：kkzui.com160","type":"vmess","server":"147.78.140.68","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/afrhms16v.bestxray.buzz/linkws","headers":{"host":"6c47-butterfly-6c47.yexoji3749.workers.dev"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com161","type":"vmess","server":"d.kampong.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.kampong.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com161_1","type":"vmess","server":"d.kampong.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.kampong.org"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com162","type":"vmess","server":"upload.ir","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"afrhms16v.bestxray.buzz"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com163","type":"vmess","server":"jpvbshohcgc.com","port":443,"cipher":"auto","uuid":"fa1897db-1925-4c86-a495-939a959af900","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/rbqqvws","headers":{"host":"jpvbshohcgc.com"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com164","type":"vmess","server":"104.21.15.36","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"巴西_由快嘴科技提供：kkzui.com165","type":"vmess","server":"188.114.96.2","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com165_1","type":"vmess","server":"188.114.96.2","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com166","type":"vmess","server":"d.darat.homes","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.darat.homes"}}}
   - {"name":"巴西_由快嘴科技提供：kkzui.com167","type":"vmess","server":"188.114.97.2","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
   - {"name":"巴西_由快嘴科技提供：kkzui.com168","type":"vmess","server":"188.114.96.1","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
   - {"name":"巴西_由快嘴科技提供：kkzui.com169","type":"vmess","server":"188.114.96.6","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"afrhms16v.bestxray.buzz"}}}
   - {"name":"荷兰_由快嘴科技提供：kkzui.com170","type":"vmess","server":"hdfy8d1.cpi1.eu.org","port":443,"cipher":"auto","uuid":"a6292090-afe1-4640-97a7-4f1d1d877cf1","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/Av8czorIlYicU6D349brWUw6a","headers":{"host":"hdfy8d1.cpi1.eu.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com171","type":"vmess","server":"172.67.219.26","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"ds.nurul.homes"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com172","type":"vmess","server":"p1.v2raybrasil.xyz","port":443,"cipher":"auto","uuid":"db0c0df4-be29-40ec-9637-da40f6a66778","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/xraybr","headers":{"host":"tls.redbullplus.xyz"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com173","type":"vmess","server":"c3.v2raybrasil.xyz","port":443,"cipher":"auto","uuid":"db0c0df4-be29-40ec-9637-da40f6a66778","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/xraybr","headers":{"host":"tls.redbullplus.xyz"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com174","type":"vmess","server":"c2.v2raybrasil.xyz","port":443,"cipher":"auto","uuid":"db0c0df4-be29-40ec-9637-da40f6a66778","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/xraybr","headers":{"host":"tls.redbullplus.xyz"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com175","type":"vmess","server":"172.67.73.174","port":80,"cipher":"auto","uuid":"eae38909-f11d-48ac-9706-ac9444962de6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"73012792103530616183052842717949.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com176","type":"vmess","server":"bs.yichueng.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"bs.yichueng.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com177","type":"vmess","server":"172.67.221.19","port":80,"cipher":"auto","uuid":"20017157-c258-4aba-8f66-efb5d0b92f6c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com178","type":"vmess","server":"172.67.163.197","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.serkat.org"}}}
-  - {"name":"美国_由快嘴科技提供：kkzui.com179","type":"vmess","server":"104.21.95.16","port":443,"cipher":"auto","uuid":"fa5b55cd-cafc-4de0-a4c8-722e02a9f58e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms03.dongfeng.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com171_1","type":"vmess","server":"172.67.219.26","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"ds.nurul.homes"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com172_1","type":"vmess","server":"p1.v2raybrasil.xyz","port":443,"cipher":"auto","uuid":"db0c0df4-be29-40ec-9637-da40f6a66778","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/xraybr","headers":{"host":"tls.redbullplus.xyz"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com173_1","type":"vmess","server":"c3.v2raybrasil.xyz","port":443,"cipher":"auto","uuid":"db0c0df4-be29-40ec-9637-da40f6a66778","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/xraybr","headers":{"host":"tls.redbullplus.xyz"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com174_1","type":"vmess","server":"c2.v2raybrasil.xyz","port":443,"cipher":"auto","uuid":"db0c0df4-be29-40ec-9637-da40f6a66778","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/xraybr","headers":{"host":"tls.redbullplus.xyz"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com175_1","type":"vmess","server":"172.67.73.174","port":80,"cipher":"auto","uuid":"eae38909-f11d-48ac-9706-ac9444962de6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"73012792103530616183052842717949.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com176_1","type":"vmess","server":"bs.yichueng.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"bs.yichueng.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com177_1","type":"vmess","server":"172.67.221.19","port":80,"cipher":"auto","uuid":"20017157-c258-4aba-8f66-efb5d0b92f6c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com178_1","type":"vmess","server":"172.67.163.197","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"b.serkat.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com179_1","type":"vmess","server":"104.21.95.16","port":443,"cipher":"auto","uuid":"fa5b55cd-cafc-4de0-a4c8-722e02a9f58e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms03.dongfeng.cfd"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com180","type":"vmess","server":"104.21.14.106","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"e.jembat.homes"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com181","type":"vmess","server":"new-configmy.clashroyale733232.wOrKerS.DEv","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/e.jembat.homes:443/linkvws","headers":{"host":"new-configmy.clashroyale733232.woRkeRs.DeV"}}}
   - {"name":"美国_由快嘴科技提供：kkzui.com182","type":"vmess","server":"162.159.153.2","port":443,"cipher":"auto","uuid":"93ea486a-bada-42a4-ac38-d088b320fa1e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"xmivideo.cfd"}}}
@@ -548,17 +548,161 @@ proxies:
   - {"name":"美国_由快嘴科技提供;kkzui.com172_2","type":"vmess","server":"upload.ir","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"afrhms16v.bestxray.buzz"}}}
   - {"name":"巴西_由快嘴科技提供;kkzui.com173","type":"vmess","server":"188.114.97.1","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
   - {"name":"美国_由快嘴科技提供;kkzui.com174_2","type":"vmess","server":"104.21.48.84","port":443,"cipher":"auto","uuid":"4804f14b-c1f8-452d-a6ec-eff1490aeac9","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/lRkGCkYS9X5GDNJYMWXN7kCm3lL","headers":{"host":"hdfy6c5.cpionline.co"}}}
+  - {"name":"比利时_由快嘴科技提供：kkzui.com29","type":"trojan","server":"n3.jp4589871.top","port":8443,"udp":true,"password":"d90e5504-a42b-44c1-8289-3543471bf55a","sni":"n3.jp4589871.top","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"中国_由快嘴科技提供：kkzui.com33","type":"vmess","server":"143.92.42.65","port":2902,"cipher":"auto","uuid":"640c1077-d10b-4225-a9fb-d3e9c3ce7a00","alterId":0,"tls":false,"skip-cert-verify":true,"network":"http"}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com34","type":"vmess","server":"181.215.6.181","port":80,"cipher":"auto","uuid":"af107203-1679-4d7e-cd40-2ece097a0613","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/80","headers":{"host":"181.215.6.181"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com35","type":"vmess","server":"158.51.121.36","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"158.51.121.36"}}}
+  - {"name":"荷兰_由快嘴科技提供：kkzui.com36","type":"vmess","server":"45.145.167.103","port":443,"cipher":"auto","uuid":"425c5e6e-30a0-4984-8a13-ee6f72053162","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"indiavideo.sbs"}}}
+  - {"name":"荷兰_由快嘴科技提供：kkzui.com37","type":"vmess","server":"indiavideo.sbs","port":443,"cipher":"auto","uuid":"425c5e6e-30a0-4984-8a13-ee6f72053162","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"indiavideo.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com38","type":"vmess","server":"38.99.82.203","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"38.99.82.203"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com39","type":"vmess","server":"38.75.136.73","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"38.75.136.73"}}}
+  - {"name":"比利时_由快嘴科技提供：kkzui.com40","type":"vmess","server":"57.128.184.119","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"57.128.184.119"}}}
+  - {"name":"保加利亚_由快嘴科技提供：kkzui.com41","type":"vmess","server":"147.78.140.4","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/obdii.cfd/linkws","headers":{"host":"82uple-bird-b087.pemed58443.workers.dev"}}}
+  - {"name":"保加利亚_由快嘴科技提供：kkzui.com42","type":"vmess","server":"147.78.140.197","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/obdii.cfd/linkws","headers":{"host":"xxxxx73cream-073cxxxxxxxx.cogoni7748.workers.dev"}}}
+  - {"name":"澳大利亚_由快嘴科技提供：kkzui.com43","type":"vmess","server":"43.153.103.203","port":443,"cipher":"auto","uuid":"3fd7b958-2161-46e1-b6fc-bd6bb2165312","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"shs.xiaoqi666.xyz"}}}
+  - {"name":"澳大利亚_由快嘴科技提供：kkzui.com44","type":"vmess","server":"43.153.80.208","port":443,"cipher":"auto","uuid":"3fd7b958-2161-46e1-b6fc-bd6bb2165312","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"shs.xiaoqi666.xyz"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com45","type":"vmess","server":"188.114.96.3","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"obdii.cfd"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com46","type":"vmess","server":"188.114.97.3","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com47","type":"vmess","server":"188.114.97.2","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"afrhms16v.bestxray.buzz"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com48","type":"vmess","server":"188.114.96.2","port":443,"cipher":"auto","uuid":"950db6aa-4926-4616-816e-ec0312dcb87b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com49","type":"vmess","server":"188.114.96.3","port":443,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.cfd"}}}
+  - {"name":"荷兰_由快嘴科技提供：kkzui.com50","type":"vmess","server":"95.179.128.114","port":80,"cipher":"auto","uuid":"a6292090-afe1-4640-97a7-4f1d1d877cf1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/Av8czorIlYicU6D349brWUw6a","headers":{"host":"hdfy8d1.cpi2hidd.eu.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com51_2","type":"vmess","server":"186.190.215.32","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"186.190.215.32"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com52","type":"vmess","server":"186.190.215.75","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"186.190.215.75"}}}
+  - {"name":"瑞典_由快嘴科技提供：kkzui.com53","type":"vmess","server":"185.146.173.158","port":443,"cipher":"auto","uuid":"950db6aa-4926-4616-816e-ec0312dcb87b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
+  - {"name":"瑞典_由快嘴科技提供：kkzui.com54","type":"vmess","server":"185.146.173.59","port":80,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.cfd/linkws","headers":{"host":"freevpn878.hamidimorteza680.workers.dev"}}}
+  - {"name":"瑞典_由快嘴科技提供：kkzui.com55","type":"vmess","server":"185.146.173.59","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"hms02.fxiaomi.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com56_2","type":"vmess","server":"172.67.131.17","port":443,"cipher":"auto","uuid":"62aa5f80-0328-4004-a375-7f5a59df4022","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms19.best-tizi.top"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com57_2","type":"vmess","server":"172.67.131.108","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"hms02.fxiaomi.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com58_2","type":"vmess","server":"be.kalavryta.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"be.kalavryta.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com59_2","type":"vmess","server":"an.kalavryta.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"an.kalavryta.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com60_2","type":"vmess","server":"be.anaviriti.info","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"be.anaviriti.info"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com61_2","type":"vmess","server":"zula.ir","port":443,"cipher":"auto","uuid":"f9ccede9-ca9c-4719-b105-e494742499e3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"kmz3.sassanidempire.com"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com62","type":"vmess","server":"Zula.ir","port":443,"cipher":"auto","uuid":"f9ccede9-ca9c-4719-b105-e494742499e3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"kmz3.sassanidempire.com"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com63","type":"vmess","server":"jahfkjha.cfd","port":443,"cipher":"auto","uuid":"950db6aa-4926-4616-816e-ec0312dcb87b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com64","type":"vmess","server":"172.67.207.26","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com65_2","type":"vmess","server":"108.165.152.71","port":443,"cipher":"auto","uuid":"3fd7b958-2161-46e1-b6fc-bd6bb2165312","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"shs.xiaoqi666.xyz"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com66","type":"vmess","server":"valkinin.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"valkinin.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com67_2","type":"vmess","server":"104.21.72.94","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"afrhms16v.bestxray.buzz"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com68","type":"vmess","server":"zula.ir","port":443,"cipher":"auto","uuid":"950db6aa-4926-4616-816e-ec0312dcb87b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com69_2","type":"vmess","server":"104.21.94.168","port":443,"cipher":"auto","uuid":"62aa5f80-0328-4004-a375-7f5a59df4022","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms19.best-tizi.top"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com70","type":"vmess","server":"104.21.7.112","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"v.valkinin.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com71","type":"vmess","server":"v.valkinin.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"v.valkinin.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com72_2","type":"vmess","server":"anaviriti.info","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"anaviriti.info"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com73_2","type":"vmess","server":"hungshing.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"hungshing.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com74_2","type":"vmess","server":"104.21.82.17","port":443,"cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"gwdef.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com75_2","type":"vmess","server":"104.21.9.21","port":443,"cipher":"auto","uuid":"f9ccede9-ca9c-4719-b105-e494742499e3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"kmz3.sassanidempire.com"}}}
+  - {"name":"哥斯达黎加_由快嘴科技提供：kkzui.com76","type":"vmess","server":"190.93.247.58","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"link","headers":{"host":"hms02.fxiaomi.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com77_2","type":"vmess","server":"api.jquery.com","port":443,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.cfd:443/linkws","headers":{"host":"cool-darkness-e663.mehdipost667.workers.dev"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com78_2","type":"vmess","server":"parsvds.ir","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com79_2","type":"vmess","server":"104.21.83.115","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"hms02.fxiaomi.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com80_2","type":"vmess","server":"p.valkinin.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"p.valkinin.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com81_2","type":"vmess","server":"hkddisney.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"hkddisney.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com82_2","type":"vmess","server":"104.21.18.227","port":443,"cipher":"auto","uuid":"950db6aa-4926-4616-816e-ec0312dcb87b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com83_2","type":"vmess","server":"104.21.28.62","port":443,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com84_2","type":"vmess","server":"hms23.fixedfloati.cfd","port":443,"cipher":"auto","uuid":"9072d339-3885-4fe1-b0bc-29fa7505410e","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkwsd","headers":{"host":"fixedfloati.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com85_2","type":"vmess","server":"162.159.152.2","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"obdii.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com86_2","type":"vmess","server":"104.21.32.238","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"obdii.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com87_2","type":"vmess","server":"104.21.77.29","port":443,"cipher":"auto","uuid":"8d90c129-4156-4d6c-9115-24df25f26a02","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"beyonddbc.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com88_2","type":"vmess","server":"d.ritchier.info","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.ritchier.info"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com89_2","type":"vmess","server":"fapeng.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"fapeng.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com90_2","type":"vmess","server":"ritchier.info","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"ritchier.info"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com91_2","type":"vmess","server":"162.159.192.200","port":443,"cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/gwdef.sbs:443/linkws","headers":{"host":"vcp3.dehel15354.woRKErS.Dev"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com92_2","type":"vmess","server":"e.ritchier.info","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"e.ritchier.info"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com93_2","type":"vmess","server":"104.16.60.8","port":80,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/obdii.cfd/linkws","headers":{"host":"4868-poetry-4868.napora7003.workers.dev"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com94","type":"vmess","server":"104.21.18.90","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"fapeng.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com95","type":"vmess","server":"104.21.69.44","port":443,"cipher":"auto","uuid":"950db6aa-4926-4616-816e-ec0312dcb87b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com96_2","type":"vmess","server":"104.16.61.8","port":80,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.cfd/linkws","headers":{"host":"freevpn878.hamidimorteza680.workers.dev"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com97_2","type":"vmess","server":"e.kampong.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"e.kampong.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com98","type":"vmess","server":"104.16.219.108","port":443,"cipher":"auto","uuid":"950db6aa-4926-4616-816e-ec0312dcb87b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com99_2","type":"vmess","server":"c.tampay.info","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"c.tampay.info"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com100_2","type":"vmess","server":"d.masjide.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.masjide.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com101_2","type":"vmess","server":"masjide.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"masjide.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com102_2","type":"vmess","server":"162.159.1.94","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linde06.indiavideo.sbs/linkws","headers":{"host":"green-morning-ce19.mehdipost667.workers.dev"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com103_2","type":"vmess","server":"104.21.69.44","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"hms02.fxiaomi.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com104_2","type":"vmess","server":"104.21.46.121","port":443,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"ivideos.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com105_2","type":"vmess","server":"104.21.72.230","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"an.anaviriti.info"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com106_2","type":"vmess","server":"hms24.ivideos.sbs","port":443,"cipher":"auto","uuid":"441da342-ce90-441e-bff9-d2ceb55e68ca","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"ivideos.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com107_2","type":"vmess","server":"104.21.77.251","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"e.seribus.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com108_2","type":"vmess","server":"es.pulau.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"es.pulau.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com109_2","type":"vmess","server":"pulau.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"pulau.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com110_2","type":"vmess","server":"glweidf.cfd","port":443,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com111_2","type":"vmess","server":"104.21.4.6","port":443,"cipher":"auto","uuid":"1052f24e-7b09-45eb-b0c5-d858eb124192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com112_2","type":"vmess","server":"104.21.94.64","port":443,"cipher":"auto","uuid":"39cec18f-a439-427c-9a4e-aeb6fcdf6f53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linja05.hwcar.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com113_2","type":"vmess","server":"104.21.15.212","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com114_2","type":"vmess","server":"104.21.83.108","port":443,"cipher":"auto","uuid":"6c168fcc-2231-4f3b-8c1e-f6391692df4a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"hms02.fxiaomi.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com115_2","type":"vmess","server":"hms19.best-tizi.top","port":443,"cipher":"auto","uuid":"62aa5f80-0328-4004-a375-7f5a59df4022","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"hms19.best-tizi.top"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com116_2","type":"vmess","server":"104.21.48.160","port":443,"cipher":"auto","uuid":"e537f2f5-2a0c-4f59-92c9-832ca6433bf3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"irvideo.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com117_2","type":"vmess","server":"obdii.cfd","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"obdii.cfd"}}}
+  - {"name":"法国_由快嘴科技提供：kkzui.com118","type":"vmess","server":"az05.beyondy.cfd","port":443,"cipher":"auto","uuid":"3f638f34-8dba-4186-bc43-2716a7ddd4be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"az05.beyondy.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com119_2","type":"vmess","server":"c.jamekk.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"c.jamekk.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com120_2","type":"vmess","server":"putihb.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"putihb.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com121_2","type":"vmess","server":"104.17.237.149","port":80,"cipher":"auto","uuid":"c169bbd5-db15-40db-ba8f-490ebbb76492","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"73012792103530616183052842717949.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com122_2","type":"vmess","server":"23.162.200.227","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"23.162.200.227"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com123_2","type":"vmess","server":"104.22.58.63","port":80,"cipher":"auto","uuid":"412f8f79-5ca0-4f4a-8a35-33d57f3150a5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"99806388192980142300309475767578.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com124_2","type":"vmess","server":"c.serkat.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"c.serkat.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com125_2","type":"vmess","server":"104.21.48.84","port":443,"cipher":"auto","uuid":"4804f14b-c1f8-452d-a6ec-eff1490aeac9","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/lRkGCkYS9X5GDNJYMWXN7kCm3lL","headers":{"host":"hdfy6c5.cpionline.co"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com126_2","type":"vmess","server":"laravel.com","port":443,"cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/gwdef.sbs:443/linkws","headers":{"host":"cool-darkness-e663.mehdipost667.workers.dev"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com127_2","type":"vmess","server":"workers.dev","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.sbs/linkws","headers":{"host":"fragrant-heart-c94b.fticrh.workers.dev"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com128_2","type":"vmess","server":"ddd.zcr07.uS.KG","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linde06.indiavideo.sbs:443/linkws","headers":{"host":"ddd.zcr07.uS.KG"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com129_2","type":"vmess","server":"cs.yichueng.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"cs.yichueng.org"}}}
+  - {"name":"澳大利亚_由快嘴科技提供：kkzui.com130","type":"vmess","server":"172.105.172.209","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"172.105.172.209"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com131","type":"vmess","server":"188.114.97.3","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com132_2","type":"vmess","server":"172.67.196.112","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com133_2","type":"vmess","server":"172.67.170.13","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com134_2","type":"vmess","server":"linde06.indiavideo.sbs","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com135","type":"vmess","server":"188.114.99.205","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com136","type":"vmess","server":"188.114.99.183","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"丹麦_由快嘴科技提供：kkzui.com137","type":"vmess","server":"go.alipay.ovh","port":80,"cipher":"auto","uuid":"a94171be-b387-4f02-a5ef-a1b4b7a26c04","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/aries?ed=2048","headers":{"host":"open.alipay.ovh"}}}
+  - {"name":"丹麦_由快嘴科技提供：kkzui.com138","type":"vmess","server":"195.85.59.95","port":80,"cipher":"auto","uuid":"a94171be-b387-4f02-a5ef-a1b4b7a26c04","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/aries?ed=2048","headers":{"host":"open.alipay.ovh"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com139_2","type":"vmess","server":"23.158.56.145","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"23.158.56.145"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com140_2","type":"vmess","server":"188.114.97.6","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com141","type":"vmess","server":"188.114.97.7","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com142","type":"vmess","server":"188.114.97.210","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com143","type":"vmess","server":"188.114.97.79","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"荷兰_由快嘴科技提供：kkzui.com144","type":"vmess","server":"95.179.128.114","port":80,"cipher":"auto","uuid":"a6292090-afe1-4640-97a7-4f1d1d877cf1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/Av8czorIlYicU6D349brWUw6a","headers":{"host":"95.179.128.114"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com145_2","type":"vmess","server":"188.114.97.1","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com146_2","type":"vmess","server":"188.114.99.134","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com147","type":"vmess","server":"172.67.179.199","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com148","type":"vmess","server":"38.91.107.36","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"38.91.107.36"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com149","type":"vmess","server":"c.hungshing.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"c.hungshing.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com150","type":"vmess","server":"172.67.170.11","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com151","type":"vmess","server":"172.67.161.77","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com152","type":"vmess","server":"104.21.1.32","port":443,"cipher":"auto","uuid":"48f837fa-12d0-498d-b5f6-94f9979736a4","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tk","headers":{"host":"3.clarity168.com"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com153","type":"vmess","server":"104.21.51.208","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com154_2","type":"vmess","server":"3.clarity168.com","port":443,"cipher":"auto","uuid":"48f837fa-12d0-498d-b5f6-94f9979736a4","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tk","headers":{"host":"3.clarity168.com"}}}
+  - {"name":"保加利亚_由快嘴科技提供：kkzui.com155","type":"vmess","server":"147.78.140.30","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/obdii.cfd/linkws","headers":{"host":"4868-poetry-4868.napora7003.workers.dev"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com156_2","type":"vmess","server":"d.kampong.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"d.kampong.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com157_2","type":"vmess","server":"173.245.58.5","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.sbs/linkws","headers":{"host":"worker-bitter-math-2af8.waxoha3621.workers.dev"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com158_2","type":"vmess","server":"bs.putihb.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"bs.putihb.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com159","type":"vmess","server":"upload.ir","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"afrhms16v.bestxray.buzz"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com160","type":"vmess","server":"104.17.88.212","port":443,"cipher":"auto","uuid":"76221bfb-e92f-4e80-81c5-6fe48f50ac0b","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/glweidf.sbs/linkws","headers":{"host":"worker-bitter-math-2af8.waxoha3621.workers.dev"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com161_2","type":"vmess","server":"104.21.15.36","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com162","type":"vmess","server":"188.114.96.2","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com163","type":"vmess","server":"188.114.96.6","port":443,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"afrhms16v.bestxray.buzz"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com164","type":"vmess","server":"188.114.96.1","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"巴西_由快嘴科技提供：kkzui.com165_2","type":"vmess","server":"188.114.97.2","port":443,"cipher":"auto","uuid":"edbb1059-1633-4271-b66e-ed4fba47a1bf","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
+  - {"name":"伊朗_由快嘴科技提供：kkzui.com166","type":"vmess","server":"2.189.59.2","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"obdii.cfd"}}}
+  - {"name":"伊朗_由快嘴科技提供：kkzui.com167","type":"vmess","server":"2.189.59.3","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"obdii.cfd"}}}
+  - {"name":"伊朗_由快嘴科技提供：kkzui.com168","type":"vmess","server":"2.189.59.6","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"obdii.cfd"}}}
+  - {"name":"伊朗_由快嘴科技提供：kkzui.com169","type":"vmess","server":"2.189.59.5","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"obdii.cfd"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com171_2","type":"vmess","server":"172.67.73.174","port":80,"cipher":"auto","uuid":"eae38909-f11d-48ac-9706-ac9444962de6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"73012792103530616183052842717949.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com172_2","type":"vmess","server":"172.67.221.19","port":80,"cipher":"auto","uuid":"20017157-c258-4aba-8f66-efb5d0b92f6c","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com173_2","type":"vmess","server":"172.64.155.209","port":80,"cipher":"auto","uuid":"ec885e29-85d5-4ff3-84ab-eb5902b740b0","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"50907082685942059876387799824779.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com174_2","type":"vmess","server":"bs.yichueng.org","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"bs.yichueng.org"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com175_2","type":"vmess","server":"jx.jixingnetwork.sbs","port":80,"cipher":"auto","uuid":"6bdcb5de-dc42-4908-b090-46c1b2243641","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"mg002.jixingwangluo.top"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com176_2","type":"vmess","server":"104.21.28.70","port":80,"cipher":"auto","uuid":"1e3d765b-ae6f-489b-8daa-6370fec7a5dc","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"50907082685942059876387799824779.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com177_2","type":"vmess","server":"104.21.28.70","port":80,"cipher":"auto","uuid":"cce02710-db84-4009-81ff-b3416dd1c998","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"39238319310964543920519489701900.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com178_2","type":"vmess","server":"104.22.58.63","port":80,"cipher":"auto","uuid":"fb1151f9-0d11-452a-aab2-c9f904a6ab30","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"73012792103530616183052842717949.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
+  - {"name":"美国_由快嘴科技提供：kkzui.com179_2","type":"vmess","server":"104.18.20.153","port":80,"cipher":"auto","uuid":"7e0eec71-4bf0-4841-a083-4201226d0616","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/V2LINE-TELEGRAM-CHANNEL-VMESS-WS","headers":{"host":"58892877706648357761980405045364.chrsjfklsdjfkljoierfdjklfjlkefeojsdlkfjeoifjsdlkfjweoifjlsdchrs.cyou"}}}
+  - {"name":"伊朗_由快嘴科技提供：kkzui.com180","type":"vmess","server":"2.189.59.4","port":443,"cipher":"auto","uuid":"05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"obdii.cfd"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
       - DIRECT
   - name: 🚀 手动切换
@@ -567,102 +711,102 @@ proxy-groups:
       - 美国_由快嘴科技提供：kkzui.com16
       - 中国_由快嘴科技提供：kkzui.com49
       - 巴西_由快嘴科技提供：kkzui.com50
-      - 美国_由快嘴科技提供：kkzui.com51
+      - 美国_由快嘴科技提供：kkzui.com51_1
       - 荷兰_由快嘴科技提供：kkzui.com52
       - 荷兰_由快嘴科技提供：kkzui.com53
       - 美国_由快嘴科技提供：kkzui.com54
       - 美国_由快嘴科技提供：kkzui.com55
-      - 美国_由快嘴科技提供：kkzui.com56
-      - 美国_由快嘴科技提供：kkzui.com57
-      - 美国_由快嘴科技提供：kkzui.com58
-      - 美国_由快嘴科技提供：kkzui.com59
-      - 美国_由快嘴科技提供：kkzui.com60
-      - 美国_由快嘴科技提供：kkzui.com61
+      - 美国_由快嘴科技提供：kkzui.com56_1
+      - 美国_由快嘴科技提供：kkzui.com57_1
+      - 美国_由快嘴科技提供：kkzui.com58_1
+      - 美国_由快嘴科技提供：kkzui.com59_1
+      - 美国_由快嘴科技提供：kkzui.com60_1
+      - 美国_由快嘴科技提供：kkzui.com61_1
       - 保加利亚_由快嘴科技提供：kkzui.com62
       - 巴西_由快嘴科技提供：kkzui.com63
       - 巴西_由快嘴科技提供：kkzui.com64
-      - 美国_由快嘴科技提供：kkzui.com65
+      - 美国_由快嘴科技提供：kkzui.com65_1
       - 未知_由快嘴科技提供：kkzui.com66
-      - 美国_由快嘴科技提供：kkzui.com67
+      - 美国_由快嘴科技提供：kkzui.com67_1
       - 未知_由快嘴科技提供：kkzui.com68
-      - 美国_由快嘴科技提供：kkzui.com69
+      - 美国_由快嘴科技提供：kkzui.com69_1
       - 英国_由快嘴科技提供：kkzui.com70
       - 中国_由快嘴科技提供：kkzui.com71
-      - 美国_由快嘴科技提供：kkzui.com72
-      - 美国_由快嘴科技提供：kkzui.com73
-      - 美国_由快嘴科技提供：kkzui.com74
-      - 美国_由快嘴科技提供：kkzui.com75
+      - 美国_由快嘴科技提供：kkzui.com72_1
+      - 美国_由快嘴科技提供：kkzui.com73_1
+      - 美国_由快嘴科技提供：kkzui.com74_1
+      - 美国_由快嘴科技提供：kkzui.com75_1
       - 美国_由快嘴科技提供：kkzui.com76
-      - 美国_由快嘴科技提供：kkzui.com77
-      - 美国_由快嘴科技提供：kkzui.com78
-      - 美国_由快嘴科技提供：kkzui.com79
-      - 美国_由快嘴科技提供：kkzui.com80
-      - 美国_由快嘴科技提供：kkzui.com81
-      - 美国_由快嘴科技提供：kkzui.com82
-      - 美国_由快嘴科技提供：kkzui.com83
-      - 美国_由快嘴科技提供：kkzui.com84
-      - 美国_由快嘴科技提供：kkzui.com85
-      - 美国_由快嘴科技提供：kkzui.com86
-      - 美国_由快嘴科技提供：kkzui.com87
-      - 美国_由快嘴科技提供：kkzui.com88
-      - 美国_由快嘴科技提供：kkzui.com89
-      - 美国_由快嘴科技提供：kkzui.com90
-      - 美国_由快嘴科技提供：kkzui.com91
-      - 美国_由快嘴科技提供：kkzui.com92
-      - 美国_由快嘴科技提供：kkzui.com93
+      - 美国_由快嘴科技提供：kkzui.com77_1
+      - 美国_由快嘴科技提供：kkzui.com78_1
+      - 美国_由快嘴科技提供：kkzui.com79_1
+      - 美国_由快嘴科技提供：kkzui.com80_1
+      - 美国_由快嘴科技提供：kkzui.com81_1
+      - 美国_由快嘴科技提供：kkzui.com82_1
+      - 美国_由快嘴科技提供：kkzui.com83_1
+      - 美国_由快嘴科技提供：kkzui.com84_1
+      - 美国_由快嘴科技提供：kkzui.com85_1
+      - 美国_由快嘴科技提供：kkzui.com86_1
+      - 美国_由快嘴科技提供：kkzui.com87_1
+      - 美国_由快嘴科技提供：kkzui.com88_1
+      - 美国_由快嘴科技提供：kkzui.com89_1
+      - 美国_由快嘴科技提供：kkzui.com90_1
+      - 美国_由快嘴科技提供：kkzui.com91_1
+      - 美国_由快嘴科技提供：kkzui.com92_1
+      - 美国_由快嘴科技提供：kkzui.com93_1
       - 加拿大_由快嘴科技提供：kkzui.com94
       - 加拿大_由快嘴科技提供：kkzui.com95
-      - 美国_由快嘴科技提供：kkzui.com96
-      - 美国_由快嘴科技提供：kkzui.com97
+      - 美国_由快嘴科技提供：kkzui.com96_1
+      - 美国_由快嘴科技提供：kkzui.com97_1
       - 加拿大_由快嘴科技提供：kkzui.com98
-      - 美国_由快嘴科技提供：kkzui.com99
-      - 美国_由快嘴科技提供：kkzui.com100
-      - 美国_由快嘴科技提供：kkzui.com101
-      - 美国_由快嘴科技提供：kkzui.com102
-      - 美国_由快嘴科技提供：kkzui.com103
-      - 美国_由快嘴科技提供：kkzui.com104
-      - 美国_由快嘴科技提供：kkzui.com105
-      - 美国_由快嘴科技提供：kkzui.com106
-      - 美国_由快嘴科技提供：kkzui.com107
-      - 美国_由快嘴科技提供：kkzui.com108
-      - 美国_由快嘴科技提供：kkzui.com109
-      - 美国_由快嘴科技提供：kkzui.com110
-      - 美国_由快嘴科技提供：kkzui.com111
-      - 美国_由快嘴科技提供：kkzui.com112
-      - 美国_由快嘴科技提供：kkzui.com113
-      - 美国_由快嘴科技提供：kkzui.com114
-      - 美国_由快嘴科技提供：kkzui.com115
-      - 美国_由快嘴科技提供：kkzui.com116
-      - 美国_由快嘴科技提供：kkzui.com117
+      - 美国_由快嘴科技提供：kkzui.com99_1
+      - 美国_由快嘴科技提供：kkzui.com100_1
+      - 美国_由快嘴科技提供：kkzui.com101_1
+      - 美国_由快嘴科技提供：kkzui.com102_1
+      - 美国_由快嘴科技提供：kkzui.com103_1
+      - 美国_由快嘴科技提供：kkzui.com104_1
+      - 美国_由快嘴科技提供：kkzui.com105_1
+      - 美国_由快嘴科技提供：kkzui.com106_1
+      - 美国_由快嘴科技提供：kkzui.com107_1
+      - 美国_由快嘴科技提供：kkzui.com108_1
+      - 美国_由快嘴科技提供：kkzui.com109_1
+      - 美国_由快嘴科技提供：kkzui.com110_1
+      - 美国_由快嘴科技提供：kkzui.com111_1
+      - 美国_由快嘴科技提供：kkzui.com112_1
+      - 美国_由快嘴科技提供：kkzui.com113_1
+      - 美国_由快嘴科技提供：kkzui.com114_1
+      - 美国_由快嘴科技提供：kkzui.com115_1
+      - 美国_由快嘴科技提供：kkzui.com116_1
+      - 美国_由快嘴科技提供：kkzui.com117_1
       - 美国_由快嘴科技提供：kkzui.com118
-      - 美国_由快嘴科技提供：kkzui.com119
-      - 美国_由快嘴科技提供：kkzui.com120
-      - 美国_由快嘴科技提供：kkzui.com121
-      - 美国_由快嘴科技提供：kkzui.com122
-      - 美国_由快嘴科技提供：kkzui.com123
-      - 美国_由快嘴科技提供：kkzui.com124
-      - 美国_由快嘴科技提供：kkzui.com125
-      - 美国_由快嘴科技提供：kkzui.com126
-      - 美国_由快嘴科技提供：kkzui.com127
-      - 美国_由快嘴科技提供：kkzui.com128
-      - 美国_由快嘴科技提供：kkzui.com129
+      - 美国_由快嘴科技提供：kkzui.com119_1
+      - 美国_由快嘴科技提供：kkzui.com120_1
+      - 美国_由快嘴科技提供：kkzui.com121_1
+      - 美国_由快嘴科技提供：kkzui.com122_1
+      - 美国_由快嘴科技提供：kkzui.com123_1
+      - 美国_由快嘴科技提供：kkzui.com124_1
+      - 美国_由快嘴科技提供：kkzui.com125_1
+      - 美国_由快嘴科技提供：kkzui.com126_1
+      - 美国_由快嘴科技提供：kkzui.com127_1
+      - 美国_由快嘴科技提供：kkzui.com128_1
+      - 美国_由快嘴科技提供：kkzui.com129_1
       - 美国_由快嘴科技提供：kkzui.com130
       - 美国_由快嘴科技提供：kkzui.com131
-      - 美国_由快嘴科技提供：kkzui.com132
-      - 美国_由快嘴科技提供：kkzui.com133
-      - 美国_由快嘴科技提供：kkzui.com134
+      - 美国_由快嘴科技提供：kkzui.com132_1
+      - 美国_由快嘴科技提供：kkzui.com133_1
+      - 美国_由快嘴科技提供：kkzui.com134_1
       - 美国_由快嘴科技提供：kkzui.com135
       - 美国_由快嘴科技提供：kkzui.com136
       - 美国_由快嘴科技提供：kkzui.com137
       - 美国_由快嘴科技提供：kkzui.com138
-      - 美国_由快嘴科技提供：kkzui.com139
-      - 巴西_由快嘴科技提供：kkzui.com140
+      - 美国_由快嘴科技提供：kkzui.com139_1
+      - 巴西_由快嘴科技提供：kkzui.com140_1
       - 美国_由快嘴科技提供：kkzui.com141
       - 美国_由快嘴科技提供：kkzui.com142
       - 美国_由快嘴科技提供：kkzui.com143
       - 巴西_由快嘴科技提供：kkzui.com144
-      - 巴西_由快嘴科技提供：kkzui.com145
-      - 巴西_由快嘴科技提供：kkzui.com146
+      - 巴西_由快嘴科技提供：kkzui.com145_1
+      - 巴西_由快嘴科技提供：kkzui.com146_1
       - 巴西_由快嘴科技提供：kkzui.com147
       - 巴西_由快嘴科技提供：kkzui.com148
       - 巴西_由快嘴科技提供：kkzui.com149
@@ -670,32 +814,32 @@ proxy-groups:
       - 荷兰_由快嘴科技提供：kkzui.com151
       - 巴西_由快嘴科技提供：kkzui.com152
       - 巴西_由快嘴科技提供：kkzui.com153
-      - 美国_由快嘴科技提供：kkzui.com154
+      - 美国_由快嘴科技提供：kkzui.com154_1
       - 美国_由快嘴科技提供：kkzui.com155
-      - 美国_由快嘴科技提供：kkzui.com156
-      - 美国_由快嘴科技提供：kkzui.com157
-      - 美国_由快嘴科技提供：kkzui.com158
+      - 美国_由快嘴科技提供：kkzui.com156_1
+      - 美国_由快嘴科技提供：kkzui.com157_1
+      - 美国_由快嘴科技提供：kkzui.com158_1
       - 保加利亚_由快嘴科技提供：kkzui.com159
       - 保加利亚_由快嘴科技提供：kkzui.com160
-      - 美国_由快嘴科技提供：kkzui.com161
+      - 美国_由快嘴科技提供：kkzui.com161_1
       - 美国_由快嘴科技提供：kkzui.com162
       - 美国_由快嘴科技提供：kkzui.com163
       - 美国_由快嘴科技提供：kkzui.com164
-      - 巴西_由快嘴科技提供：kkzui.com165
+      - 巴西_由快嘴科技提供：kkzui.com165_1
       - 美国_由快嘴科技提供：kkzui.com166
       - 巴西_由快嘴科技提供：kkzui.com167
       - 巴西_由快嘴科技提供：kkzui.com168
       - 巴西_由快嘴科技提供：kkzui.com169
       - 荷兰_由快嘴科技提供：kkzui.com170
-      - 美国_由快嘴科技提供：kkzui.com171
-      - 美国_由快嘴科技提供：kkzui.com172
-      - 美国_由快嘴科技提供：kkzui.com173
-      - 美国_由快嘴科技提供：kkzui.com174
-      - 美国_由快嘴科技提供：kkzui.com175
-      - 美国_由快嘴科技提供：kkzui.com176
-      - 美国_由快嘴科技提供：kkzui.com177
-      - 美国_由快嘴科技提供：kkzui.com178
-      - 美国_由快嘴科技提供：kkzui.com179
+      - 美国_由快嘴科技提供：kkzui.com171_1
+      - 美国_由快嘴科技提供：kkzui.com172_1
+      - 美国_由快嘴科技提供：kkzui.com173_1
+      - 美国_由快嘴科技提供：kkzui.com174_1
+      - 美国_由快嘴科技提供：kkzui.com175_1
+      - 美国_由快嘴科技提供：kkzui.com176_1
+      - 美国_由快嘴科技提供：kkzui.com177_1
+      - 美国_由快嘴科技提供：kkzui.com178_1
+      - 美国_由快嘴科技提供：kkzui.com179_1
       - 美国_由快嘴科技提供：kkzui.com180
       - 美国_由快嘴科技提供：kkzui.com181
       - 美国_由快嘴科技提供：kkzui.com182
@@ -1026,111 +1170,261 @@ proxy-groups:
       - 美国_由快嘴科技提供;kkzui.com172_2
       - 巴西_由快嘴科技提供;kkzui.com173
       - 美国_由快嘴科技提供;kkzui.com174_2
+      - 比利时_由快嘴科技提供：kkzui.com29
+      - 中国_由快嘴科技提供：kkzui.com33
+      - 巴西_由快嘴科技提供：kkzui.com34
+      - 美国_由快嘴科技提供：kkzui.com35
+      - 荷兰_由快嘴科技提供：kkzui.com36
+      - 荷兰_由快嘴科技提供：kkzui.com37
+      - 美国_由快嘴科技提供：kkzui.com38
+      - 美国_由快嘴科技提供：kkzui.com39
+      - 比利时_由快嘴科技提供：kkzui.com40
+      - 保加利亚_由快嘴科技提供：kkzui.com41
+      - 保加利亚_由快嘴科技提供：kkzui.com42
+      - 澳大利亚_由快嘴科技提供：kkzui.com43
+      - 澳大利亚_由快嘴科技提供：kkzui.com44
+      - 巴西_由快嘴科技提供：kkzui.com45
+      - 巴西_由快嘴科技提供：kkzui.com46
+      - 巴西_由快嘴科技提供：kkzui.com47
+      - 巴西_由快嘴科技提供：kkzui.com48
+      - 巴西_由快嘴科技提供：kkzui.com49
+      - 荷兰_由快嘴科技提供：kkzui.com50
+      - 美国_由快嘴科技提供：kkzui.com51_2
+      - 美国_由快嘴科技提供：kkzui.com52
+      - 瑞典_由快嘴科技提供：kkzui.com53
+      - 瑞典_由快嘴科技提供：kkzui.com54
+      - 瑞典_由快嘴科技提供：kkzui.com55
+      - 美国_由快嘴科技提供：kkzui.com56_2
+      - 美国_由快嘴科技提供：kkzui.com57_2
+      - 美国_由快嘴科技提供：kkzui.com58_2
+      - 美国_由快嘴科技提供：kkzui.com59_2
+      - 美国_由快嘴科技提供：kkzui.com60_2
+      - 美国_由快嘴科技提供：kkzui.com61_2
+      - 美国_由快嘴科技提供：kkzui.com62
+      - 美国_由快嘴科技提供：kkzui.com63
+      - 美国_由快嘴科技提供：kkzui.com64
+      - 美国_由快嘴科技提供：kkzui.com65_2
+      - 美国_由快嘴科技提供：kkzui.com66
+      - 美国_由快嘴科技提供：kkzui.com67_2
+      - 美国_由快嘴科技提供：kkzui.com68
+      - 美国_由快嘴科技提供：kkzui.com69_2
+      - 美国_由快嘴科技提供：kkzui.com70
+      - 美国_由快嘴科技提供：kkzui.com71
+      - 美国_由快嘴科技提供：kkzui.com72_2
+      - 美国_由快嘴科技提供：kkzui.com73_2
+      - 美国_由快嘴科技提供：kkzui.com74_2
+      - 美国_由快嘴科技提供：kkzui.com75_2
+      - 哥斯达黎加_由快嘴科技提供：kkzui.com76
+      - 美国_由快嘴科技提供：kkzui.com77_2
+      - 美国_由快嘴科技提供：kkzui.com78_2
+      - 美国_由快嘴科技提供：kkzui.com79_2
+      - 美国_由快嘴科技提供：kkzui.com80_2
+      - 美国_由快嘴科技提供：kkzui.com81_2
+      - 美国_由快嘴科技提供：kkzui.com82_2
+      - 美国_由快嘴科技提供：kkzui.com83_2
+      - 美国_由快嘴科技提供：kkzui.com84_2
+      - 美国_由快嘴科技提供：kkzui.com85_2
+      - 美国_由快嘴科技提供：kkzui.com86_2
+      - 美国_由快嘴科技提供：kkzui.com87_2
+      - 美国_由快嘴科技提供：kkzui.com88_2
+      - 美国_由快嘴科技提供：kkzui.com89_2
+      - 美国_由快嘴科技提供：kkzui.com90_2
+      - 美国_由快嘴科技提供：kkzui.com91_2
+      - 美国_由快嘴科技提供：kkzui.com92_2
+      - 美国_由快嘴科技提供：kkzui.com93_2
+      - 美国_由快嘴科技提供：kkzui.com94
+      - 美国_由快嘴科技提供：kkzui.com95
+      - 美国_由快嘴科技提供：kkzui.com96_2
+      - 美国_由快嘴科技提供：kkzui.com97_2
+      - 美国_由快嘴科技提供：kkzui.com98
+      - 美国_由快嘴科技提供：kkzui.com99_2
+      - 美国_由快嘴科技提供：kkzui.com100_2
+      - 美国_由快嘴科技提供：kkzui.com101_2
+      - 美国_由快嘴科技提供：kkzui.com102_2
+      - 美国_由快嘴科技提供：kkzui.com103_2
+      - 美国_由快嘴科技提供：kkzui.com104_2
+      - 美国_由快嘴科技提供：kkzui.com105_2
+      - 美国_由快嘴科技提供：kkzui.com106_2
+      - 美国_由快嘴科技提供：kkzui.com107_2
+      - 美国_由快嘴科技提供：kkzui.com108_2
+      - 美国_由快嘴科技提供：kkzui.com109_2
+      - 美国_由快嘴科技提供：kkzui.com110_2
+      - 美国_由快嘴科技提供：kkzui.com111_2
+      - 美国_由快嘴科技提供：kkzui.com112_2
+      - 美国_由快嘴科技提供：kkzui.com113_2
+      - 美国_由快嘴科技提供：kkzui.com114_2
+      - 美国_由快嘴科技提供：kkzui.com115_2
+      - 美国_由快嘴科技提供：kkzui.com116_2
+      - 美国_由快嘴科技提供：kkzui.com117_2
+      - 法国_由快嘴科技提供：kkzui.com118
+      - 美国_由快嘴科技提供：kkzui.com119_2
+      - 美国_由快嘴科技提供：kkzui.com120_2
+      - 美国_由快嘴科技提供：kkzui.com121_2
+      - 美国_由快嘴科技提供：kkzui.com122_2
+      - 美国_由快嘴科技提供：kkzui.com123_2
+      - 美国_由快嘴科技提供：kkzui.com124_2
+      - 美国_由快嘴科技提供：kkzui.com125_2
+      - 美国_由快嘴科技提供：kkzui.com126_2
+      - 美国_由快嘴科技提供：kkzui.com127_2
+      - 美国_由快嘴科技提供：kkzui.com128_2
+      - 美国_由快嘴科技提供：kkzui.com129_2
+      - 澳大利亚_由快嘴科技提供：kkzui.com130
+      - 巴西_由快嘴科技提供：kkzui.com131
+      - 美国_由快嘴科技提供：kkzui.com132_2
+      - 美国_由快嘴科技提供：kkzui.com133_2
+      - 美国_由快嘴科技提供：kkzui.com134_2
+      - 巴西_由快嘴科技提供：kkzui.com135
+      - 巴西_由快嘴科技提供：kkzui.com136
+      - 丹麦_由快嘴科技提供：kkzui.com137
+      - 丹麦_由快嘴科技提供：kkzui.com138
+      - 美国_由快嘴科技提供：kkzui.com139_2
+      - 巴西_由快嘴科技提供：kkzui.com140_2
+      - 巴西_由快嘴科技提供：kkzui.com141
+      - 巴西_由快嘴科技提供：kkzui.com142
+      - 巴西_由快嘴科技提供：kkzui.com143
+      - 荷兰_由快嘴科技提供：kkzui.com144
+      - 巴西_由快嘴科技提供：kkzui.com145_2
+      - 巴西_由快嘴科技提供：kkzui.com146_2
+      - 美国_由快嘴科技提供：kkzui.com147
+      - 美国_由快嘴科技提供：kkzui.com148
+      - 美国_由快嘴科技提供：kkzui.com149
+      - 美国_由快嘴科技提供：kkzui.com150
+      - 美国_由快嘴科技提供：kkzui.com151
+      - 美国_由快嘴科技提供：kkzui.com152
+      - 美国_由快嘴科技提供：kkzui.com153
+      - 美国_由快嘴科技提供：kkzui.com154_2
+      - 保加利亚_由快嘴科技提供：kkzui.com155
+      - 美国_由快嘴科技提供：kkzui.com156_2
+      - 美国_由快嘴科技提供：kkzui.com157_2
+      - 美国_由快嘴科技提供：kkzui.com158_2
+      - 美国_由快嘴科技提供：kkzui.com159
+      - 美国_由快嘴科技提供：kkzui.com160
+      - 美国_由快嘴科技提供：kkzui.com161_2
+      - 巴西_由快嘴科技提供：kkzui.com162
+      - 巴西_由快嘴科技提供：kkzui.com163
+      - 巴西_由快嘴科技提供：kkzui.com164
+      - 巴西_由快嘴科技提供：kkzui.com165_2
+      - 伊朗_由快嘴科技提供：kkzui.com166
+      - 伊朗_由快嘴科技提供：kkzui.com167
+      - 伊朗_由快嘴科技提供：kkzui.com168
+      - 伊朗_由快嘴科技提供：kkzui.com169
+      - 美国_由快嘴科技提供：kkzui.com171_2
+      - 美国_由快嘴科技提供：kkzui.com172_2
+      - 美国_由快嘴科技提供：kkzui.com173_2
+      - 美国_由快嘴科技提供：kkzui.com174_2
+      - 美国_由快嘴科技提供：kkzui.com175_2
+      - 美国_由快嘴科技提供：kkzui.com176_2
+      - 美国_由快嘴科技提供：kkzui.com177_2
+      - 美国_由快嘴科技提供：kkzui.com178_2
+      - 美国_由快嘴科技提供：kkzui.com179_2
+      - 伊朗_由快嘴科技提供：kkzui.com180
   - name: ♻️ 自动选择
     type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 150
+    retries: 2
+    failover: true
     proxies:
       - 美国_由快嘴科技提供：kkzui.com16
       - 中国_由快嘴科技提供：kkzui.com49
       - 巴西_由快嘴科技提供：kkzui.com50
-      - 美国_由快嘴科技提供：kkzui.com51
+      - 美国_由快嘴科技提供：kkzui.com51_1
       - 荷兰_由快嘴科技提供：kkzui.com52
       - 荷兰_由快嘴科技提供：kkzui.com53
       - 美国_由快嘴科技提供：kkzui.com54
       - 美国_由快嘴科技提供：kkzui.com55
-      - 美国_由快嘴科技提供：kkzui.com56
-      - 美国_由快嘴科技提供：kkzui.com57
-      - 美国_由快嘴科技提供：kkzui.com58
-      - 美国_由快嘴科技提供：kkzui.com59
-      - 美国_由快嘴科技提供：kkzui.com60
-      - 美国_由快嘴科技提供：kkzui.com61
+      - 美国_由快嘴科技提供：kkzui.com56_1
+      - 美国_由快嘴科技提供：kkzui.com57_1
+      - 美国_由快嘴科技提供：kkzui.com58_1
+      - 美国_由快嘴科技提供：kkzui.com59_1
+      - 美国_由快嘴科技提供：kkzui.com60_1
+      - 美国_由快嘴科技提供：kkzui.com61_1
       - 保加利亚_由快嘴科技提供：kkzui.com62
       - 巴西_由快嘴科技提供：kkzui.com63
       - 巴西_由快嘴科技提供：kkzui.com64
-      - 美国_由快嘴科技提供：kkzui.com65
+      - 美国_由快嘴科技提供：kkzui.com65_1
       - 未知_由快嘴科技提供：kkzui.com66
-      - 美国_由快嘴科技提供：kkzui.com67
+      - 美国_由快嘴科技提供：kkzui.com67_1
       - 未知_由快嘴科技提供：kkzui.com68
-      - 美国_由快嘴科技提供：kkzui.com69
+      - 美国_由快嘴科技提供：kkzui.com69_1
       - 英国_由快嘴科技提供：kkzui.com70
       - 中国_由快嘴科技提供：kkzui.com71
-      - 美国_由快嘴科技提供：kkzui.com72
-      - 美国_由快嘴科技提供：kkzui.com73
-      - 美国_由快嘴科技提供：kkzui.com74
-      - 美国_由快嘴科技提供：kkzui.com75
+      - 美国_由快嘴科技提供：kkzui.com72_1
+      - 美国_由快嘴科技提供：kkzui.com73_1
+      - 美国_由快嘴科技提供：kkzui.com74_1
+      - 美国_由快嘴科技提供：kkzui.com75_1
       - 美国_由快嘴科技提供：kkzui.com76
-      - 美国_由快嘴科技提供：kkzui.com77
-      - 美国_由快嘴科技提供：kkzui.com78
-      - 美国_由快嘴科技提供：kkzui.com79
-      - 美国_由快嘴科技提供：kkzui.com80
-      - 美国_由快嘴科技提供：kkzui.com81
-      - 美国_由快嘴科技提供：kkzui.com82
-      - 美国_由快嘴科技提供：kkzui.com83
-      - 美国_由快嘴科技提供：kkzui.com84
-      - 美国_由快嘴科技提供：kkzui.com85
-      - 美国_由快嘴科技提供：kkzui.com86
-      - 美国_由快嘴科技提供：kkzui.com87
-      - 美国_由快嘴科技提供：kkzui.com88
-      - 美国_由快嘴科技提供：kkzui.com89
-      - 美国_由快嘴科技提供：kkzui.com90
-      - 美国_由快嘴科技提供：kkzui.com91
-      - 美国_由快嘴科技提供：kkzui.com92
-      - 美国_由快嘴科技提供：kkzui.com93
+      - 美国_由快嘴科技提供：kkzui.com77_1
+      - 美国_由快嘴科技提供：kkzui.com78_1
+      - 美国_由快嘴科技提供：kkzui.com79_1
+      - 美国_由快嘴科技提供：kkzui.com80_1
+      - 美国_由快嘴科技提供：kkzui.com81_1
+      - 美国_由快嘴科技提供：kkzui.com82_1
+      - 美国_由快嘴科技提供：kkzui.com83_1
+      - 美国_由快嘴科技提供：kkzui.com84_1
+      - 美国_由快嘴科技提供：kkzui.com85_1
+      - 美国_由快嘴科技提供：kkzui.com86_1
+      - 美国_由快嘴科技提供：kkzui.com87_1
+      - 美国_由快嘴科技提供：kkzui.com88_1
+      - 美国_由快嘴科技提供：kkzui.com89_1
+      - 美国_由快嘴科技提供：kkzui.com90_1
+      - 美国_由快嘴科技提供：kkzui.com91_1
+      - 美国_由快嘴科技提供：kkzui.com92_1
+      - 美国_由快嘴科技提供：kkzui.com93_1
       - 加拿大_由快嘴科技提供：kkzui.com94
       - 加拿大_由快嘴科技提供：kkzui.com95
-      - 美国_由快嘴科技提供：kkzui.com96
-      - 美国_由快嘴科技提供：kkzui.com97
+      - 美国_由快嘴科技提供：kkzui.com96_1
+      - 美国_由快嘴科技提供：kkzui.com97_1
       - 加拿大_由快嘴科技提供：kkzui.com98
-      - 美国_由快嘴科技提供：kkzui.com99
-      - 美国_由快嘴科技提供：kkzui.com100
-      - 美国_由快嘴科技提供：kkzui.com101
-      - 美国_由快嘴科技提供：kkzui.com102
-      - 美国_由快嘴科技提供：kkzui.com103
-      - 美国_由快嘴科技提供：kkzui.com104
-      - 美国_由快嘴科技提供：kkzui.com105
-      - 美国_由快嘴科技提供：kkzui.com106
-      - 美国_由快嘴科技提供：kkzui.com107
-      - 美国_由快嘴科技提供：kkzui.com108
-      - 美国_由快嘴科技提供：kkzui.com109
-      - 美国_由快嘴科技提供：kkzui.com110
-      - 美国_由快嘴科技提供：kkzui.com111
-      - 美国_由快嘴科技提供：kkzui.com112
-      - 美国_由快嘴科技提供：kkzui.com113
-      - 美国_由快嘴科技提供：kkzui.com114
-      - 美国_由快嘴科技提供：kkzui.com115
-      - 美国_由快嘴科技提供：kkzui.com116
-      - 美国_由快嘴科技提供：kkzui.com117
+      - 美国_由快嘴科技提供：kkzui.com99_1
+      - 美国_由快嘴科技提供：kkzui.com100_1
+      - 美国_由快嘴科技提供：kkzui.com101_1
+      - 美国_由快嘴科技提供：kkzui.com102_1
+      - 美国_由快嘴科技提供：kkzui.com103_1
+      - 美国_由快嘴科技提供：kkzui.com104_1
+      - 美国_由快嘴科技提供：kkzui.com105_1
+      - 美国_由快嘴科技提供：kkzui.com106_1
+      - 美国_由快嘴科技提供：kkzui.com107_1
+      - 美国_由快嘴科技提供：kkzui.com108_1
+      - 美国_由快嘴科技提供：kkzui.com109_1
+      - 美国_由快嘴科技提供：kkzui.com110_1
+      - 美国_由快嘴科技提供：kkzui.com111_1
+      - 美国_由快嘴科技提供：kkzui.com112_1
+      - 美国_由快嘴科技提供：kkzui.com113_1
+      - 美国_由快嘴科技提供：kkzui.com114_1
+      - 美国_由快嘴科技提供：kkzui.com115_1
+      - 美国_由快嘴科技提供：kkzui.com116_1
+      - 美国_由快嘴科技提供：kkzui.com117_1
       - 美国_由快嘴科技提供：kkzui.com118
-      - 美国_由快嘴科技提供：kkzui.com119
-      - 美国_由快嘴科技提供：kkzui.com120
-      - 美国_由快嘴科技提供：kkzui.com121
-      - 美国_由快嘴科技提供：kkzui.com122
-      - 美国_由快嘴科技提供：kkzui.com123
-      - 美国_由快嘴科技提供：kkzui.com124
-      - 美国_由快嘴科技提供：kkzui.com125
-      - 美国_由快嘴科技提供：kkzui.com126
-      - 美国_由快嘴科技提供：kkzui.com127
-      - 美国_由快嘴科技提供：kkzui.com128
-      - 美国_由快嘴科技提供：kkzui.com129
+      - 美国_由快嘴科技提供：kkzui.com119_1
+      - 美国_由快嘴科技提供：kkzui.com120_1
+      - 美国_由快嘴科技提供：kkzui.com121_1
+      - 美国_由快嘴科技提供：kkzui.com122_1
+      - 美国_由快嘴科技提供：kkzui.com123_1
+      - 美国_由快嘴科技提供：kkzui.com124_1
+      - 美国_由快嘴科技提供：kkzui.com125_1
+      - 美国_由快嘴科技提供：kkzui.com126_1
+      - 美国_由快嘴科技提供：kkzui.com127_1
+      - 美国_由快嘴科技提供：kkzui.com128_1
+      - 美国_由快嘴科技提供：kkzui.com129_1
       - 美国_由快嘴科技提供：kkzui.com130
       - 美国_由快嘴科技提供：kkzui.com131
-      - 美国_由快嘴科技提供：kkzui.com132
-      - 美国_由快嘴科技提供：kkzui.com133
-      - 美国_由快嘴科技提供：kkzui.com134
+      - 美国_由快嘴科技提供：kkzui.com132_1
+      - 美国_由快嘴科技提供：kkzui.com133_1
+      - 美国_由快嘴科技提供：kkzui.com134_1
       - 美国_由快嘴科技提供：kkzui.com135
       - 美国_由快嘴科技提供：kkzui.com136
       - 美国_由快嘴科技提供：kkzui.com137
       - 美国_由快嘴科技提供：kkzui.com138
-      - 美国_由快嘴科技提供：kkzui.com139
-      - 巴西_由快嘴科技提供：kkzui.com140
+      - 美国_由快嘴科技提供：kkzui.com139_1
+      - 巴西_由快嘴科技提供：kkzui.com140_1
       - 美国_由快嘴科技提供：kkzui.com141
       - 美国_由快嘴科技提供：kkzui.com142
       - 美国_由快嘴科技提供：kkzui.com143
       - 巴西_由快嘴科技提供：kkzui.com144
-      - 巴西_由快嘴科技提供：kkzui.com145
-      - 巴西_由快嘴科技提供：kkzui.com146
+      - 巴西_由快嘴科技提供：kkzui.com145_1
+      - 巴西_由快嘴科技提供：kkzui.com146_1
       - 巴西_由快嘴科技提供：kkzui.com147
       - 巴西_由快嘴科技提供：kkzui.com148
       - 巴西_由快嘴科技提供：kkzui.com149
@@ -1138,32 +1432,32 @@ proxy-groups:
       - 荷兰_由快嘴科技提供：kkzui.com151
       - 巴西_由快嘴科技提供：kkzui.com152
       - 巴西_由快嘴科技提供：kkzui.com153
-      - 美国_由快嘴科技提供：kkzui.com154
+      - 美国_由快嘴科技提供：kkzui.com154_1
       - 美国_由快嘴科技提供：kkzui.com155
-      - 美国_由快嘴科技提供：kkzui.com156
-      - 美国_由快嘴科技提供：kkzui.com157
-      - 美国_由快嘴科技提供：kkzui.com158
+      - 美国_由快嘴科技提供：kkzui.com156_1
+      - 美国_由快嘴科技提供：kkzui.com157_1
+      - 美国_由快嘴科技提供：kkzui.com158_1
       - 保加利亚_由快嘴科技提供：kkzui.com159
       - 保加利亚_由快嘴科技提供：kkzui.com160
-      - 美国_由快嘴科技提供：kkzui.com161
+      - 美国_由快嘴科技提供：kkzui.com161_1
       - 美国_由快嘴科技提供：kkzui.com162
       - 美国_由快嘴科技提供：kkzui.com163
       - 美国_由快嘴科技提供：kkzui.com164
-      - 巴西_由快嘴科技提供：kkzui.com165
+      - 巴西_由快嘴科技提供：kkzui.com165_1
       - 美国_由快嘴科技提供：kkzui.com166
       - 巴西_由快嘴科技提供：kkzui.com167
       - 巴西_由快嘴科技提供：kkzui.com168
       - 巴西_由快嘴科技提供：kkzui.com169
       - 荷兰_由快嘴科技提供：kkzui.com170
-      - 美国_由快嘴科技提供：kkzui.com171
-      - 美国_由快嘴科技提供：kkzui.com172
-      - 美国_由快嘴科技提供：kkzui.com173
-      - 美国_由快嘴科技提供：kkzui.com174
-      - 美国_由快嘴科技提供：kkzui.com175
-      - 美国_由快嘴科技提供：kkzui.com176
-      - 美国_由快嘴科技提供：kkzui.com177
-      - 美国_由快嘴科技提供：kkzui.com178
-      - 美国_由快嘴科技提供：kkzui.com179
+      - 美国_由快嘴科技提供：kkzui.com171_1
+      - 美国_由快嘴科技提供：kkzui.com172_1
+      - 美国_由快嘴科技提供：kkzui.com173_1
+      - 美国_由快嘴科技提供：kkzui.com174_1
+      - 美国_由快嘴科技提供：kkzui.com175_1
+      - 美国_由快嘴科技提供：kkzui.com176_1
+      - 美国_由快嘴科技提供：kkzui.com177_1
+      - 美国_由快嘴科技提供：kkzui.com178_1
+      - 美国_由快嘴科技提供：kkzui.com179_1
       - 美国_由快嘴科技提供：kkzui.com180
       - 美国_由快嘴科技提供：kkzui.com181
       - 美国_由快嘴科技提供：kkzui.com182
@@ -1494,17 +1788,161 @@ proxy-groups:
       - 美国_由快嘴科技提供;kkzui.com172_2
       - 巴西_由快嘴科技提供;kkzui.com173
       - 美国_由快嘴科技提供;kkzui.com174_2
+      - 比利时_由快嘴科技提供：kkzui.com29
+      - 中国_由快嘴科技提供：kkzui.com33
+      - 巴西_由快嘴科技提供：kkzui.com34
+      - 美国_由快嘴科技提供：kkzui.com35
+      - 荷兰_由快嘴科技提供：kkzui.com36
+      - 荷兰_由快嘴科技提供：kkzui.com37
+      - 美国_由快嘴科技提供：kkzui.com38
+      - 美国_由快嘴科技提供：kkzui.com39
+      - 比利时_由快嘴科技提供：kkzui.com40
+      - 保加利亚_由快嘴科技提供：kkzui.com41
+      - 保加利亚_由快嘴科技提供：kkzui.com42
+      - 澳大利亚_由快嘴科技提供：kkzui.com43
+      - 澳大利亚_由快嘴科技提供：kkzui.com44
+      - 巴西_由快嘴科技提供：kkzui.com45
+      - 巴西_由快嘴科技提供：kkzui.com46
+      - 巴西_由快嘴科技提供：kkzui.com47
+      - 巴西_由快嘴科技提供：kkzui.com48
+      - 巴西_由快嘴科技提供：kkzui.com49
+      - 荷兰_由快嘴科技提供：kkzui.com50
+      - 美国_由快嘴科技提供：kkzui.com51_2
+      - 美国_由快嘴科技提供：kkzui.com52
+      - 瑞典_由快嘴科技提供：kkzui.com53
+      - 瑞典_由快嘴科技提供：kkzui.com54
+      - 瑞典_由快嘴科技提供：kkzui.com55
+      - 美国_由快嘴科技提供：kkzui.com56_2
+      - 美国_由快嘴科技提供：kkzui.com57_2
+      - 美国_由快嘴科技提供：kkzui.com58_2
+      - 美国_由快嘴科技提供：kkzui.com59_2
+      - 美国_由快嘴科技提供：kkzui.com60_2
+      - 美国_由快嘴科技提供：kkzui.com61_2
+      - 美国_由快嘴科技提供：kkzui.com62
+      - 美国_由快嘴科技提供：kkzui.com63
+      - 美国_由快嘴科技提供：kkzui.com64
+      - 美国_由快嘴科技提供：kkzui.com65_2
+      - 美国_由快嘴科技提供：kkzui.com66
+      - 美国_由快嘴科技提供：kkzui.com67_2
+      - 美国_由快嘴科技提供：kkzui.com68
+      - 美国_由快嘴科技提供：kkzui.com69_2
+      - 美国_由快嘴科技提供：kkzui.com70
+      - 美国_由快嘴科技提供：kkzui.com71
+      - 美国_由快嘴科技提供：kkzui.com72_2
+      - 美国_由快嘴科技提供：kkzui.com73_2
+      - 美国_由快嘴科技提供：kkzui.com74_2
+      - 美国_由快嘴科技提供：kkzui.com75_2
+      - 哥斯达黎加_由快嘴科技提供：kkzui.com76
+      - 美国_由快嘴科技提供：kkzui.com77_2
+      - 美国_由快嘴科技提供：kkzui.com78_2
+      - 美国_由快嘴科技提供：kkzui.com79_2
+      - 美国_由快嘴科技提供：kkzui.com80_2
+      - 美国_由快嘴科技提供：kkzui.com81_2
+      - 美国_由快嘴科技提供：kkzui.com82_2
+      - 美国_由快嘴科技提供：kkzui.com83_2
+      - 美国_由快嘴科技提供：kkzui.com84_2
+      - 美国_由快嘴科技提供：kkzui.com85_2
+      - 美国_由快嘴科技提供：kkzui.com86_2
+      - 美国_由快嘴科技提供：kkzui.com87_2
+      - 美国_由快嘴科技提供：kkzui.com88_2
+      - 美国_由快嘴科技提供：kkzui.com89_2
+      - 美国_由快嘴科技提供：kkzui.com90_2
+      - 美国_由快嘴科技提供：kkzui.com91_2
+      - 美国_由快嘴科技提供：kkzui.com92_2
+      - 美国_由快嘴科技提供：kkzui.com93_2
+      - 美国_由快嘴科技提供：kkzui.com94
+      - 美国_由快嘴科技提供：kkzui.com95
+      - 美国_由快嘴科技提供：kkzui.com96_2
+      - 美国_由快嘴科技提供：kkzui.com97_2
+      - 美国_由快嘴科技提供：kkzui.com98
+      - 美国_由快嘴科技提供：kkzui.com99_2
+      - 美国_由快嘴科技提供：kkzui.com100_2
+      - 美国_由快嘴科技提供：kkzui.com101_2
+      - 美国_由快嘴科技提供：kkzui.com102_2
+      - 美国_由快嘴科技提供：kkzui.com103_2
+      - 美国_由快嘴科技提供：kkzui.com104_2
+      - 美国_由快嘴科技提供：kkzui.com105_2
+      - 美国_由快嘴科技提供：kkzui.com106_2
+      - 美国_由快嘴科技提供：kkzui.com107_2
+      - 美国_由快嘴科技提供：kkzui.com108_2
+      - 美国_由快嘴科技提供：kkzui.com109_2
+      - 美国_由快嘴科技提供：kkzui.com110_2
+      - 美国_由快嘴科技提供：kkzui.com111_2
+      - 美国_由快嘴科技提供：kkzui.com112_2
+      - 美国_由快嘴科技提供：kkzui.com113_2
+      - 美国_由快嘴科技提供：kkzui.com114_2
+      - 美国_由快嘴科技提供：kkzui.com115_2
+      - 美国_由快嘴科技提供：kkzui.com116_2
+      - 美国_由快嘴科技提供：kkzui.com117_2
+      - 法国_由快嘴科技提供：kkzui.com118
+      - 美国_由快嘴科技提供：kkzui.com119_2
+      - 美国_由快嘴科技提供：kkzui.com120_2
+      - 美国_由快嘴科技提供：kkzui.com121_2
+      - 美国_由快嘴科技提供：kkzui.com122_2
+      - 美国_由快嘴科技提供：kkzui.com123_2
+      - 美国_由快嘴科技提供：kkzui.com124_2
+      - 美国_由快嘴科技提供：kkzui.com125_2
+      - 美国_由快嘴科技提供：kkzui.com126_2
+      - 美国_由快嘴科技提供：kkzui.com127_2
+      - 美国_由快嘴科技提供：kkzui.com128_2
+      - 美国_由快嘴科技提供：kkzui.com129_2
+      - 澳大利亚_由快嘴科技提供：kkzui.com130
+      - 巴西_由快嘴科技提供：kkzui.com131
+      - 美国_由快嘴科技提供：kkzui.com132_2
+      - 美国_由快嘴科技提供：kkzui.com133_2
+      - 美国_由快嘴科技提供：kkzui.com134_2
+      - 巴西_由快嘴科技提供：kkzui.com135
+      - 巴西_由快嘴科技提供：kkzui.com136
+      - 丹麦_由快嘴科技提供：kkzui.com137
+      - 丹麦_由快嘴科技提供：kkzui.com138
+      - 美国_由快嘴科技提供：kkzui.com139_2
+      - 巴西_由快嘴科技提供：kkzui.com140_2
+      - 巴西_由快嘴科技提供：kkzui.com141
+      - 巴西_由快嘴科技提供：kkzui.com142
+      - 巴西_由快嘴科技提供：kkzui.com143
+      - 荷兰_由快嘴科技提供：kkzui.com144
+      - 巴西_由快嘴科技提供：kkzui.com145_2
+      - 巴西_由快嘴科技提供：kkzui.com146_2
+      - 美国_由快嘴科技提供：kkzui.com147
+      - 美国_由快嘴科技提供：kkzui.com148
+      - 美国_由快嘴科技提供：kkzui.com149
+      - 美国_由快嘴科技提供：kkzui.com150
+      - 美国_由快嘴科技提供：kkzui.com151
+      - 美国_由快嘴科技提供：kkzui.com152
+      - 美国_由快嘴科技提供：kkzui.com153
+      - 美国_由快嘴科技提供：kkzui.com154_2
+      - 保加利亚_由快嘴科技提供：kkzui.com155
+      - 美国_由快嘴科技提供：kkzui.com156_2
+      - 美国_由快嘴科技提供：kkzui.com157_2
+      - 美国_由快嘴科技提供：kkzui.com158_2
+      - 美国_由快嘴科技提供：kkzui.com159
+      - 美国_由快嘴科技提供：kkzui.com160
+      - 美国_由快嘴科技提供：kkzui.com161_2
+      - 巴西_由快嘴科技提供：kkzui.com162
+      - 巴西_由快嘴科技提供：kkzui.com163
+      - 巴西_由快嘴科技提供：kkzui.com164
+      - 巴西_由快嘴科技提供：kkzui.com165_2
+      - 伊朗_由快嘴科技提供：kkzui.com166
+      - 伊朗_由快嘴科技提供：kkzui.com167
+      - 伊朗_由快嘴科技提供：kkzui.com168
+      - 伊朗_由快嘴科技提供：kkzui.com169
+      - 美国_由快嘴科技提供：kkzui.com171_2
+      - 美国_由快嘴科技提供：kkzui.com172_2
+      - 美国_由快嘴科技提供：kkzui.com173_2
+      - 美国_由快嘴科技提供：kkzui.com174_2
+      - 美国_由快嘴科技提供：kkzui.com175_2
+      - 美国_由快嘴科技提供：kkzui.com176_2
+      - 美国_由快嘴科技提供：kkzui.com177_2
+      - 美国_由快嘴科技提供：kkzui.com178_2
+      - 美国_由快嘴科技提供：kkzui.com179_2
+      - 伊朗_由快嘴科技提供：kkzui.com180
   - name: 📲 电报消息
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - 🇸🇬 狮城节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
       - DIRECT
   - name: 💬 OpenAi
@@ -1512,12 +1950,8 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - 🇸🇬 狮城节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
       - DIRECT
   - name: 📢 谷歌FCM
@@ -1526,11 +1960,7 @@ proxy-groups:
       - DIRECT
       - 🚀 节点选择
       - 🇺🇲 美国节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
   - name: 📢 谷歌🇨🇳Play下载
     type: select
@@ -1538,12 +1968,8 @@ proxy-groups:
       - 🚀 节点选择
       - DIRECT
       - ♻️ 自动选择
-      - 🇸🇬 狮城节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
   - name: 📢 谷歌🇨🇳Play服务
     type: select
@@ -1551,12 +1977,8 @@ proxy-groups:
       - 🚀 节点选择
       - DIRECT
       - ♻️ 自动选择
-      - 🇸🇬 狮城节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
   - name: 📢 谷歌🇨🇳
     type: select
@@ -1564,11 +1986,7 @@ proxy-groups:
       - DIRECT
       - 🚀 节点选择
       - 🇺🇲 美国节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
   - name: 📢 谷歌
     type: select
@@ -1576,44 +1994,30 @@ proxy-groups:
       - 🚀 节点选择
       - DIRECT
       - ♻️ 自动选择
-      - 🇸🇬 狮城节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
   - name: 📹 油管视频
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - 🇸🇬 狮城节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
       - DIRECT
   - name: 🎥 奈飞视频
     type: select
     proxies:
-      - 🎥 奈飞节点
       - 🚀 节点选择
       - ♻️ 自动选择
-      - 🇸🇬 狮城节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
       - DIRECT
   - name: 📺 巴哈姆特
     type: select
     proxies:
-      - 🇨🇳 台湾节点
       - 🚀 节点选择
       - 🚀 手动切换
       - DIRECT
@@ -1621,28 +2025,19 @@ proxy-groups:
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇨🇳 台湾节点
-      - 🇭🇰 香港节点
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
       - DIRECT
   - name: 🌏 国内媒体
     type: select
     proxies:
       - DIRECT
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🚀 手动切换
   - name: Ⓜ️ 微软Bing
@@ -1651,11 +2046,7 @@ proxy-groups:
       - DIRECT
       - 🚀 节点选择
       - 🇺🇲 美国节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
   - name: Ⓜ️ 微软云盘
     type: select
@@ -1663,11 +2054,7 @@ proxy-groups:
       - DIRECT
       - 🚀 节点选择
       - 🇺🇲 美国节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
   - name: Ⓜ️ 微软服务
     type: select
@@ -1675,11 +2062,7 @@ proxy-groups:
       - DIRECT
       - 🚀 节点选择
       - 🇺🇲 美国节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
   - name: 🍎 苹果服务
     type: select
@@ -1687,11 +2070,7 @@ proxy-groups:
       - DIRECT
       - 🚀 节点选择
       - 🇺🇲 美国节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
   - name: 🎮 游戏平台
     type: select
@@ -1699,11 +2078,7 @@ proxy-groups:
       - DIRECT
       - 🚀 节点选择
       - 🇺🇲 美国节点
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
   - name: 🎶 网易音乐
     type: select
@@ -1733,132 +2108,126 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - DIRECT
-      - 🇭🇰 香港节点
-      - 🇨🇳 台湾节点
-      - 🇸🇬 狮城节点
       - 🇯🇵 日本节点
       - 🇺🇲 美国节点
-      - 🇰🇷 韩国节点
       - 🚀 手动切换
-  - name: 🇭🇰 香港节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies: []
   - name: 🇯🇵 日本节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 50
+    tolerance: 150
+    retries: 2
+    failover: true
     proxies:
       - 日本_由快嘴科技提供;kkzui.com29
   - name: 🇺🇲 美国节点
     type: url-test
-    url: http://www.gstatic.com/generate_204
+    url: https://www.gstatic.com/generate_204
     interval: 300
     tolerance: 150
+    retries: 2
+    failover: true
     proxies:
       - 美国_由快嘴科技提供：kkzui.com16
-      - 美国_由快嘴科技提供：kkzui.com51
+      - 美国_由快嘴科技提供：kkzui.com51_1
       - 美国_由快嘴科技提供：kkzui.com54
       - 美国_由快嘴科技提供：kkzui.com55
-      - 美国_由快嘴科技提供：kkzui.com56
-      - 美国_由快嘴科技提供：kkzui.com57
-      - 美国_由快嘴科技提供：kkzui.com58
-      - 美国_由快嘴科技提供：kkzui.com59
-      - 美国_由快嘴科技提供：kkzui.com60
-      - 美国_由快嘴科技提供：kkzui.com61
-      - 美国_由快嘴科技提供：kkzui.com65
-      - 美国_由快嘴科技提供：kkzui.com67
-      - 美国_由快嘴科技提供：kkzui.com69
-      - 美国_由快嘴科技提供：kkzui.com72
-      - 美国_由快嘴科技提供：kkzui.com73
-      - 美国_由快嘴科技提供：kkzui.com74
-      - 美国_由快嘴科技提供：kkzui.com75
+      - 美国_由快嘴科技提供：kkzui.com56_1
+      - 美国_由快嘴科技提供：kkzui.com57_1
+      - 美国_由快嘴科技提供：kkzui.com58_1
+      - 美国_由快嘴科技提供：kkzui.com59_1
+      - 美国_由快嘴科技提供：kkzui.com60_1
+      - 美国_由快嘴科技提供：kkzui.com61_1
+      - 美国_由快嘴科技提供：kkzui.com65_1
+      - 美国_由快嘴科技提供：kkzui.com67_1
+      - 美国_由快嘴科技提供：kkzui.com69_1
+      - 美国_由快嘴科技提供：kkzui.com72_1
+      - 美国_由快嘴科技提供：kkzui.com73_1
+      - 美国_由快嘴科技提供：kkzui.com74_1
+      - 美国_由快嘴科技提供：kkzui.com75_1
       - 美国_由快嘴科技提供：kkzui.com76
-      - 美国_由快嘴科技提供：kkzui.com77
-      - 美国_由快嘴科技提供：kkzui.com78
-      - 美国_由快嘴科技提供：kkzui.com79
-      - 美国_由快嘴科技提供：kkzui.com80
-      - 美国_由快嘴科技提供：kkzui.com81
-      - 美国_由快嘴科技提供：kkzui.com82
-      - 美国_由快嘴科技提供：kkzui.com83
-      - 美国_由快嘴科技提供：kkzui.com84
-      - 美国_由快嘴科技提供：kkzui.com85
-      - 美国_由快嘴科技提供：kkzui.com86
-      - 美国_由快嘴科技提供：kkzui.com87
-      - 美国_由快嘴科技提供：kkzui.com88
-      - 美国_由快嘴科技提供：kkzui.com89
-      - 美国_由快嘴科技提供：kkzui.com90
-      - 美国_由快嘴科技提供：kkzui.com91
-      - 美国_由快嘴科技提供：kkzui.com92
-      - 美国_由快嘴科技提供：kkzui.com93
-      - 美国_由快嘴科技提供：kkzui.com96
-      - 美国_由快嘴科技提供：kkzui.com97
-      - 美国_由快嘴科技提供：kkzui.com99
-      - 美国_由快嘴科技提供：kkzui.com100
-      - 美国_由快嘴科技提供：kkzui.com101
-      - 美国_由快嘴科技提供：kkzui.com102
-      - 美国_由快嘴科技提供：kkzui.com103
-      - 美国_由快嘴科技提供：kkzui.com104
-      - 美国_由快嘴科技提供：kkzui.com105
-      - 美国_由快嘴科技提供：kkzui.com106
-      - 美国_由快嘴科技提供：kkzui.com107
-      - 美国_由快嘴科技提供：kkzui.com108
-      - 美国_由快嘴科技提供：kkzui.com109
-      - 美国_由快嘴科技提供：kkzui.com110
-      - 美国_由快嘴科技提供：kkzui.com111
-      - 美国_由快嘴科技提供：kkzui.com112
-      - 美国_由快嘴科技提供：kkzui.com113
-      - 美国_由快嘴科技提供：kkzui.com114
-      - 美国_由快嘴科技提供：kkzui.com115
-      - 美国_由快嘴科技提供：kkzui.com116
-      - 美国_由快嘴科技提供：kkzui.com117
+      - 美国_由快嘴科技提供：kkzui.com77_1
+      - 美国_由快嘴科技提供：kkzui.com78_1
+      - 美国_由快嘴科技提供：kkzui.com79_1
+      - 美国_由快嘴科技提供：kkzui.com80_1
+      - 美国_由快嘴科技提供：kkzui.com81_1
+      - 美国_由快嘴科技提供：kkzui.com82_1
+      - 美国_由快嘴科技提供：kkzui.com83_1
+      - 美国_由快嘴科技提供：kkzui.com84_1
+      - 美国_由快嘴科技提供：kkzui.com85_1
+      - 美国_由快嘴科技提供：kkzui.com86_1
+      - 美国_由快嘴科技提供：kkzui.com87_1
+      - 美国_由快嘴科技提供：kkzui.com88_1
+      - 美国_由快嘴科技提供：kkzui.com89_1
+      - 美国_由快嘴科技提供：kkzui.com90_1
+      - 美国_由快嘴科技提供：kkzui.com91_1
+      - 美国_由快嘴科技提供：kkzui.com92_1
+      - 美国_由快嘴科技提供：kkzui.com93_1
+      - 美国_由快嘴科技提供：kkzui.com96_1
+      - 美国_由快嘴科技提供：kkzui.com97_1
+      - 美国_由快嘴科技提供：kkzui.com99_1
+      - 美国_由快嘴科技提供：kkzui.com100_1
+      - 美国_由快嘴科技提供：kkzui.com101_1
+      - 美国_由快嘴科技提供：kkzui.com102_1
+      - 美国_由快嘴科技提供：kkzui.com103_1
+      - 美国_由快嘴科技提供：kkzui.com104_1
+      - 美国_由快嘴科技提供：kkzui.com105_1
+      - 美国_由快嘴科技提供：kkzui.com106_1
+      - 美国_由快嘴科技提供：kkzui.com107_1
+      - 美国_由快嘴科技提供：kkzui.com108_1
+      - 美国_由快嘴科技提供：kkzui.com109_1
+      - 美国_由快嘴科技提供：kkzui.com110_1
+      - 美国_由快嘴科技提供：kkzui.com111_1
+      - 美国_由快嘴科技提供：kkzui.com112_1
+      - 美国_由快嘴科技提供：kkzui.com113_1
+      - 美国_由快嘴科技提供：kkzui.com114_1
+      - 美国_由快嘴科技提供：kkzui.com115_1
+      - 美国_由快嘴科技提供：kkzui.com116_1
+      - 美国_由快嘴科技提供：kkzui.com117_1
       - 美国_由快嘴科技提供：kkzui.com118
-      - 美国_由快嘴科技提供：kkzui.com119
-      - 美国_由快嘴科技提供：kkzui.com120
-      - 美国_由快嘴科技提供：kkzui.com121
-      - 美国_由快嘴科技提供：kkzui.com122
-      - 美国_由快嘴科技提供：kkzui.com123
-      - 美国_由快嘴科技提供：kkzui.com124
-      - 美国_由快嘴科技提供：kkzui.com125
-      - 美国_由快嘴科技提供：kkzui.com126
-      - 美国_由快嘴科技提供：kkzui.com127
-      - 美国_由快嘴科技提供：kkzui.com128
-      - 美国_由快嘴科技提供：kkzui.com129
+      - 美国_由快嘴科技提供：kkzui.com119_1
+      - 美国_由快嘴科技提供：kkzui.com120_1
+      - 美国_由快嘴科技提供：kkzui.com121_1
+      - 美国_由快嘴科技提供：kkzui.com122_1
+      - 美国_由快嘴科技提供：kkzui.com123_1
+      - 美国_由快嘴科技提供：kkzui.com124_1
+      - 美国_由快嘴科技提供：kkzui.com125_1
+      - 美国_由快嘴科技提供：kkzui.com126_1
+      - 美国_由快嘴科技提供：kkzui.com127_1
+      - 美国_由快嘴科技提供：kkzui.com128_1
+      - 美国_由快嘴科技提供：kkzui.com129_1
       - 美国_由快嘴科技提供：kkzui.com130
       - 美国_由快嘴科技提供：kkzui.com131
-      - 美国_由快嘴科技提供：kkzui.com132
-      - 美国_由快嘴科技提供：kkzui.com133
-      - 美国_由快嘴科技提供：kkzui.com134
+      - 美国_由快嘴科技提供：kkzui.com132_1
+      - 美国_由快嘴科技提供：kkzui.com133_1
+      - 美国_由快嘴科技提供：kkzui.com134_1
       - 美国_由快嘴科技提供：kkzui.com135
       - 美国_由快嘴科技提供：kkzui.com136
       - 美国_由快嘴科技提供：kkzui.com137
       - 美国_由快嘴科技提供：kkzui.com138
-      - 美国_由快嘴科技提供：kkzui.com139
+      - 美国_由快嘴科技提供：kkzui.com139_1
       - 美国_由快嘴科技提供：kkzui.com141
       - 美国_由快嘴科技提供：kkzui.com142
       - 美国_由快嘴科技提供：kkzui.com143
-      - 美国_由快嘴科技提供：kkzui.com154
+      - 美国_由快嘴科技提供：kkzui.com154_1
       - 美国_由快嘴科技提供：kkzui.com155
-      - 美国_由快嘴科技提供：kkzui.com156
-      - 美国_由快嘴科技提供：kkzui.com157
-      - 美国_由快嘴科技提供：kkzui.com158
-      - 美国_由快嘴科技提供：kkzui.com161
+      - 美国_由快嘴科技提供：kkzui.com156_1
+      - 美国_由快嘴科技提供：kkzui.com157_1
+      - 美国_由快嘴科技提供：kkzui.com158_1
+      - 美国_由快嘴科技提供：kkzui.com161_1
       - 美国_由快嘴科技提供：kkzui.com162
       - 美国_由快嘴科技提供：kkzui.com163
       - 美国_由快嘴科技提供：kkzui.com164
       - 美国_由快嘴科技提供：kkzui.com166
-      - 美国_由快嘴科技提供：kkzui.com171
-      - 美国_由快嘴科技提供：kkzui.com172
-      - 美国_由快嘴科技提供：kkzui.com173
-      - 美国_由快嘴科技提供：kkzui.com174
-      - 美国_由快嘴科技提供：kkzui.com175
-      - 美国_由快嘴科技提供：kkzui.com176
-      - 美国_由快嘴科技提供：kkzui.com177
-      - 美国_由快嘴科技提供：kkzui.com178
-      - 美国_由快嘴科技提供：kkzui.com179
+      - 美国_由快嘴科技提供：kkzui.com171_1
+      - 美国_由快嘴科技提供：kkzui.com172_1
+      - 美国_由快嘴科技提供：kkzui.com173_1
+      - 美国_由快嘴科技提供：kkzui.com174_1
+      - 美国_由快嘴科技提供：kkzui.com175_1
+      - 美国_由快嘴科技提供：kkzui.com176_1
+      - 美国_由快嘴科技提供：kkzui.com177_1
+      - 美国_由快嘴科技提供：kkzui.com178_1
+      - 美国_由快嘴科技提供：kkzui.com179_1
       - 美国_由快嘴科技提供：kkzui.com180
       - 美国_由快嘴科技提供：kkzui.com181
       - 美国_由快嘴科技提供：kkzui.com182
@@ -2108,27 +2477,110 @@ proxy-groups:
       - 美国_由快嘴科技提供;kkzui.com171
       - 美国_由快嘴科技提供;kkzui.com172_2
       - 美国_由快嘴科技提供;kkzui.com174_2
-  - name: 🇨🇳 台湾节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies: []
-  - name: 🇸🇬 狮城节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies: []
-  - name: 🇰🇷 韩国节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies: []
-  - name: 🎥 奈飞节点
-    type: select
-    proxies: []
+      - 美国_由快嘴科技提供：kkzui.com35
+      - 美国_由快嘴科技提供：kkzui.com38
+      - 美国_由快嘴科技提供：kkzui.com39
+      - 美国_由快嘴科技提供：kkzui.com51_2
+      - 美国_由快嘴科技提供：kkzui.com52
+      - 美国_由快嘴科技提供：kkzui.com56_2
+      - 美国_由快嘴科技提供：kkzui.com57_2
+      - 美国_由快嘴科技提供：kkzui.com58_2
+      - 美国_由快嘴科技提供：kkzui.com59_2
+      - 美国_由快嘴科技提供：kkzui.com60_2
+      - 美国_由快嘴科技提供：kkzui.com61_2
+      - 美国_由快嘴科技提供：kkzui.com62
+      - 美国_由快嘴科技提供：kkzui.com63
+      - 美国_由快嘴科技提供：kkzui.com64
+      - 美国_由快嘴科技提供：kkzui.com65_2
+      - 美国_由快嘴科技提供：kkzui.com66
+      - 美国_由快嘴科技提供：kkzui.com67_2
+      - 美国_由快嘴科技提供：kkzui.com68
+      - 美国_由快嘴科技提供：kkzui.com69_2
+      - 美国_由快嘴科技提供：kkzui.com70
+      - 美国_由快嘴科技提供：kkzui.com71
+      - 美国_由快嘴科技提供：kkzui.com72_2
+      - 美国_由快嘴科技提供：kkzui.com73_2
+      - 美国_由快嘴科技提供：kkzui.com74_2
+      - 美国_由快嘴科技提供：kkzui.com75_2
+      - 美国_由快嘴科技提供：kkzui.com77_2
+      - 美国_由快嘴科技提供：kkzui.com78_2
+      - 美国_由快嘴科技提供：kkzui.com79_2
+      - 美国_由快嘴科技提供：kkzui.com80_2
+      - 美国_由快嘴科技提供：kkzui.com81_2
+      - 美国_由快嘴科技提供：kkzui.com82_2
+      - 美国_由快嘴科技提供：kkzui.com83_2
+      - 美国_由快嘴科技提供：kkzui.com84_2
+      - 美国_由快嘴科技提供：kkzui.com85_2
+      - 美国_由快嘴科技提供：kkzui.com86_2
+      - 美国_由快嘴科技提供：kkzui.com87_2
+      - 美国_由快嘴科技提供：kkzui.com88_2
+      - 美国_由快嘴科技提供：kkzui.com89_2
+      - 美国_由快嘴科技提供：kkzui.com90_2
+      - 美国_由快嘴科技提供：kkzui.com91_2
+      - 美国_由快嘴科技提供：kkzui.com92_2
+      - 美国_由快嘴科技提供：kkzui.com93_2
+      - 美国_由快嘴科技提供：kkzui.com94
+      - 美国_由快嘴科技提供：kkzui.com95
+      - 美国_由快嘴科技提供：kkzui.com96_2
+      - 美国_由快嘴科技提供：kkzui.com97_2
+      - 美国_由快嘴科技提供：kkzui.com98
+      - 美国_由快嘴科技提供：kkzui.com99_2
+      - 美国_由快嘴科技提供：kkzui.com100_2
+      - 美国_由快嘴科技提供：kkzui.com101_2
+      - 美国_由快嘴科技提供：kkzui.com102_2
+      - 美国_由快嘴科技提供：kkzui.com103_2
+      - 美国_由快嘴科技提供：kkzui.com104_2
+      - 美国_由快嘴科技提供：kkzui.com105_2
+      - 美国_由快嘴科技提供：kkzui.com106_2
+      - 美国_由快嘴科技提供：kkzui.com107_2
+      - 美国_由快嘴科技提供：kkzui.com108_2
+      - 美国_由快嘴科技提供：kkzui.com109_2
+      - 美国_由快嘴科技提供：kkzui.com110_2
+      - 美国_由快嘴科技提供：kkzui.com111_2
+      - 美国_由快嘴科技提供：kkzui.com112_2
+      - 美国_由快嘴科技提供：kkzui.com113_2
+      - 美国_由快嘴科技提供：kkzui.com114_2
+      - 美国_由快嘴科技提供：kkzui.com115_2
+      - 美国_由快嘴科技提供：kkzui.com116_2
+      - 美国_由快嘴科技提供：kkzui.com117_2
+      - 美国_由快嘴科技提供：kkzui.com119_2
+      - 美国_由快嘴科技提供：kkzui.com120_2
+      - 美国_由快嘴科技提供：kkzui.com121_2
+      - 美国_由快嘴科技提供：kkzui.com122_2
+      - 美国_由快嘴科技提供：kkzui.com123_2
+      - 美国_由快嘴科技提供：kkzui.com124_2
+      - 美国_由快嘴科技提供：kkzui.com125_2
+      - 美国_由快嘴科技提供：kkzui.com126_2
+      - 美国_由快嘴科技提供：kkzui.com127_2
+      - 美国_由快嘴科技提供：kkzui.com128_2
+      - 美国_由快嘴科技提供：kkzui.com129_2
+      - 美国_由快嘴科技提供：kkzui.com132_2
+      - 美国_由快嘴科技提供：kkzui.com133_2
+      - 美国_由快嘴科技提供：kkzui.com134_2
+      - 美国_由快嘴科技提供：kkzui.com139_2
+      - 美国_由快嘴科技提供：kkzui.com147
+      - 美国_由快嘴科技提供：kkzui.com148
+      - 美国_由快嘴科技提供：kkzui.com149
+      - 美国_由快嘴科技提供：kkzui.com150
+      - 美国_由快嘴科技提供：kkzui.com151
+      - 美国_由快嘴科技提供：kkzui.com152
+      - 美国_由快嘴科技提供：kkzui.com153
+      - 美国_由快嘴科技提供：kkzui.com154_2
+      - 美国_由快嘴科技提供：kkzui.com156_2
+      - 美国_由快嘴科技提供：kkzui.com157_2
+      - 美国_由快嘴科技提供：kkzui.com158_2
+      - 美国_由快嘴科技提供：kkzui.com159
+      - 美国_由快嘴科技提供：kkzui.com160
+      - 美国_由快嘴科技提供：kkzui.com161_2
+      - 美国_由快嘴科技提供：kkzui.com171_2
+      - 美国_由快嘴科技提供：kkzui.com172_2
+      - 美国_由快嘴科技提供：kkzui.com173_2
+      - 美国_由快嘴科技提供：kkzui.com174_2
+      - 美国_由快嘴科技提供：kkzui.com175_2
+      - 美国_由快嘴科技提供：kkzui.com176_2
+      - 美国_由快嘴科技提供：kkzui.com177_2
+      - 美国_由快嘴科技提供：kkzui.com178_2
+      - 美国_由快嘴科技提供：kkzui.com179_2
 
 rules:
 # 本地/局域网地址
@@ -4020,6 +4472,7 @@ rules:
 # Bing
 # From https://github.com/ACL4SSR/ACL4SSR/issues/121#issuecomment-1793673237
   - DOMAIN-SUFFIX,bing.com,Ⓜ️ 微软Bing
+  - DOMAIN-SUFFIX,copilot.cloud.microsoft,Ⓜ️ 微软Bing
   - DOMAIN-SUFFIX,copilot.microsoft.com,Ⓜ️ 微软Bing
 # OneDrive
 #DOMAIN-SUFFIX,aria.microsoft.com
@@ -4164,6 +4617,7 @@ rules:
   - DOMAIN-SUFFIX,telegram.org,📲 电报消息
   - DOMAIN-SUFFIX,telesco.pe,📲 电报消息
   - IP-CIDR,91.108.0.0/16,📲 电报消息,no-resolve
+  - IP-CIDR,95.161.64.0/20,📲 电报消息,no-resolve
   - IP-CIDR,109.239.140.0/24,📲 电报消息,no-resolve
   - IP-CIDR,149.154.160.0/20,📲 电报消息,no-resolve
   - IP-CIDR6,2001:67c:4e8::/48,📲 电报消息,no-resolve
