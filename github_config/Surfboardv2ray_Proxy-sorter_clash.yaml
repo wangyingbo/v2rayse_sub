@@ -5,69 +5,53 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: US_1_@Surfboardv2ray, server: valkinin.org, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: valkinin.org, network: ws, ws-opts: {path: linkvws, headers: {Host: valkinin.org}}}
-  - {name: US_2_@Surfboardv2ray, server: workers.dev, port: 443, type: vmess, uuid: 76221bfb-e92f-4e80-81c5-6fe48f50ac0b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: fragrant-heart-c94b.fticrh.workers.dev, network: ws, ws-opts: {path: /glweidf.sbs/linkws, headers: {Host: fragrant-heart-c94b.fticrh.workers.dev}}}
-  - {name: CA_4_@Surfboardv2ray, server: www.wban2012.com, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 1, cipher: auto, tls: true, skip-cert-verify: true, servername: yegodyoogohhoeeilan.thelastronin.cloudns.org, network: ws, ws-opts: {path: /linkvws/d.seribus.org, headers: {Host: yelan.thelastronin.cloudns.org}}}
+  - {name: CA_1_@Surfboardv2ray, server: vivo.com.br, port: 2086, type: vmess, uuid: c183636d-a174-47b9-ccf8-3442e6e1ec81, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /t.me/redbullvpnss, headers: {Host: v58.thur.store}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -90,9 +74,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
+      - CA_1_@Surfboardv2ray
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
