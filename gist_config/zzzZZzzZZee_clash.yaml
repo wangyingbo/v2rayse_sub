@@ -5,75 +5,631 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 75e504e1-a73d-4a05-8508-ef3e3711669e, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国 1, server: kr1.youxuan.wiki, port: 33155, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: zT4uJq2hZ0P0zM482xuCKl08qTmqRS6vGFYbZE3RQTw, short-id: "d01db211" }, servername: www.microsoft.com, client-fingerprint: edge, network: tcp, udp: true}
-  - {name: 🇹🇼 台湾 2, server: qrzv.youxuan.wiki, port: 2086, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: tw2.youxuan.wiki}}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 3f41f765-ac75-495f-ad80-1aa96bb9e6d7, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇭🇰 香港 2, server: hk2.youxuan.wiki, port: 8080, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ykBTZq-ZnVnRyHzfeZ0n2Tgbnjs6XutIHZDfKDPGDHc, short-id: "b6e0cf87" }, servername: zabbix.mikunet.work, client-fingerprint: qq, network: tcp, udp: true}
-  - {name: 🇺🇸 美国 7, server: qrzv.youxuan.wiki, port: 2095, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: false, network: ws, ws-opts: {path: /youxuan, headers: {Host: us7.7896543.xyz}}, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1E, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 38786e3d-22be-4593-8781-5c7f7a7fee99, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1D, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 790057b7-3096-4c73-a67a-5f0df434fadf, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇹🇼 台湾 1, server: tw.youxuan.wiki, port: 20530, type: vless, uuid: b7718f5f-4a8a-464e-a734-6859667272cd, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: _VV1HHy3iC9Q1GY0cu_oP9UffkvebWdRaVXWdPt3wls, short-id: "4777e889" }, servername: jellyfin.illya.tw, client-fingerprint: firefox, network: tcp, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: a2560c2a-a20e-4469-9c4f-4b948a77dba4, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
-  - {name: 🇰🇷 韩国-三网优化2-1F, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 9336eaf3-aa2f-4933-821c-bb50b9e20ae3, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇸🇬 新加坡1SS中转|3x, server: pro.sulink.one, port: 48883, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇸🇬 新加坡2SS中转, server: pro.sulink.one, port: 48882, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇭🇰 香港2SS中转, server: pro.sulink.one, port: 48876, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇹🇷 土耳其高速中转, server: gsgs.hy2.one, port: 63327, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇹🇼 台湾1, server: haa.dashuai.cyou, port: 45078, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇹🇼 台湾中转25x, server: s2.sulink.one, port: 13109, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 台灣03-直連-1B, server: vajgb9.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: YyW3SIQ8ZPzMlIr0GHupAhioBDlDtoc9BzTVwuAngDM, short-id: "8b6dc1a5" }, servername: www.lovelive-anime.jp, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 🇹🇼 台湾高速中转, server: gsgs.hy2.one, port: 53332, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇸🇬 新加坡03奈非, server: sg03v6.sulink.one, port: 22052, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇦 加拿大1-V6, server: ca01.hy-2.sbs, port: 62112, type: vless, uuid: c7da104a-270e-4fd8-a540-8d7478913feb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Bxazk8KcvAWYEAPtvbByO9QmkyLhG8sPWptYtjK9yCY, short-id: "7d9b6838" }, servername: www.python.org, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇯🇵 日本3SS中转25x, server: g3.hy2.one, port: 22063, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇺🇸 美国NO.1, server: haa.dashuai.cyou, port: 45052, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇭🇰 香港5高速中转5x, server: gsgs.hy2.one, port: 53345, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 台灣08-直連-1A, server: q47hch.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ESKPxcQGKiJvmt12EePzehRIqrHaxmj96f1ACC0gcw4, short-id: "1d1d4faf" }, servername: content.cdp.bethesda.net, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 台灣04-直連-1A, server: uidenq.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 6SI4EqSEK8Zv3eqPfcAbmXm4fbDWh0XzP9Ltu2tSTD0, short-id: "9ab88ed5" }, servername: www.lovelive-anime.jp, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 🇸🇬 新加坡-1, server: oracle-amd-singapore1.lanmaoyun.icu, port: 30001, type: hysteria2, password: 856898d1-190e-4b07-9803-dd1b849500ef, auth: 856898d1-190e-4b07-9803-dd1b849500ef, sni: main.nodes.lanmaoyun.icu, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 新加坡1高速中转3x, server: gsgs.hy2.one, port: 53342, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇺🇸 北美-US-圣何塞-2, server: oracle-amd-san-jose2.lanmaoyun.icu, port: 30001, type: hysteria2, password: 856898d1-190e-4b07-9803-dd1b849500ef, auth: 856898d1-190e-4b07-9803-dd1b849500ef, sni: san-jose2.nodes.lanmaoyun.icu, skip-cert-verify: true, udp: true}
+  - {name: 台灣04-直連-1B, server: uidenq.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 6SI4EqSEK8Zv3eqPfcAbmXm4fbDWh0XzP9Ltu2tSTD0, short-id: "9ab88ed5" }, servername: www.lovelive-anime.jp, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 台灣12-直連-1A, server: d3cswy.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: X-WigzycM82iJkbmYI02G6WEc7Emd7JiG-vRI3hwokc, short-id: "8467b1ea" }, servername: s0.awsstatic.com, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 台灣03-直連-1A, server: vajgb9.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: YyW3SIQ8ZPzMlIr0GHupAhioBDlDtoc9BzTVwuAngDM, short-id: "8b6dc1a5" }, servername: www.lovelive-anime.jp, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1C, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: e32d7ff2-4a4f-437e-85fe-d129082eca0c, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇨🇦 加拿大2, server: xdd.dashuai.cyou, port: 45065, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇹🇼 台湾-02-奈非, server: tw02v6.sulian.life, port: 30001, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 日本SS中转4, server: pro.sulink.one, port: 48886, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇹🇼 台湾02-3x-流媒体, server: cf.hy2.one, port: 80, type: vmess, uuid: c7da104a-270e-4fd8-a540-8d7478913feb, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /af323d, headers: {Host: tw02.hy2.one}}, udp: true}
+  - {name: 🇯🇵 日本SS中转3, server: pro.sulink.one, port: 48887, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇸🇬 新加坡02-V4-流媒体, server: cf.hy2.one, port: 2052, type: vmess, uuid: c7da104a-270e-4fd8-a540-8d7478913feb, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /0, headers: {Host: sg0002.hy-2.top}}, udp: true}
+  - {name: 🇭🇰 香港3中转25x, server: s3.sulink.one, port: 22068, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 台灣08-直連-1B, server: q47hch.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ESKPxcQGKiJvmt12EePzehRIqrHaxmj96f1ACC0gcw4, short-id: "1d1d4faf" }, servername: content.cdp.bethesda.net, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇸🇬 新加坡NO.1, server: haa.dashuai.cyou, port: 45054, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台灣05-直連-1B, server: ncfw93.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 7g-TJ7GdAf61skeA9syzKpMr_AmSnFcUJ7kkhwx3DEs, short-id: "2ea9dd26" }, servername: player.live-video.net, client-fingerprint: qq, network: tcp, udp: true}
+  - {name: 🇮🇳 印度1, server: haa.dashuai.cyou, port: 45074, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇹🇼 台湾-2流媒体|3x, server: tw02.sulian.life, port: 30002, type: vless, uuid: 855a62b5-a367-4d6e-8d27-73553391a6ae, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: nrKRUl1V-kWtkQLpKARG3GIVhmrvxeGLooWks_-h01E, short-id: "edaf1b0b" }, servername: www.python.org, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇹🇼 台湾SS中转25x, server: g2.hy2.one, port: 13108, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇭🇰 三网中转香港|5x, server: ahkt.sulink.one, port: 21064, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 直连不能用是地区问题-1B, server: forward-03.sudatech.store, port: 43500, type: trojan, password: dd394d3e-e8ba-4b4e-9b98-810b73547162, sni: vpn-4-6.sudatech.store, skip-cert-verify: true, udp: true}
+  - {name: 🇩🇪 德国 IEPL专线NO1, server: sh3.needss.top, port: 54787, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台灣12-直連-1B, server: d3cswy.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: X-WigzycM82iJkbmYI02G6WEc7Emd7JiG-vRI3hwokc, short-id: "8467b1ea" }, servername: s0.awsstatic.com, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇩🇪 欧洲-法兰克福-1, server: oracle-arm-frankfurt1.lanmaoyun.icu, port: 30001, type: hysteria2, password: 856898d1-190e-4b07-9803-dd1b849500ef, auth: 856898d1-190e-4b07-9803-dd1b849500ef, sni: frankfurt1.nodes.lanmaoyun.icu, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 新加坡NO.2, server: xdd.dashuai.cyou, port: 45055, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇪🇺 欧洲-伦敦-1, server: oracle-arm-london1.lanmaoyun.icu, port: 30001, type: hysteria2, password: 856898d1-190e-4b07-9803-dd1b849500ef, auth: 856898d1-190e-4b07-9803-dd1b849500ef, sni: london1.nodes.lanmaoyun.icu, skip-cert-verify: true, udp: true}
+  - {name: 台灣14-直連-1B, server: rnjszk.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: WWZtj7tsGYJmlzkf_wEZhmoky5SJSy0I03YzrP3yJ2A, short-id: "57f4f20c" }, servername: gamedownloads-rockstargames-com.akamaized.net, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 台灣07-直連-1A, server: y85uef.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: _gsfvatLgdy9stSQAwHqtkdFT5vRLLjjqlv1ssvZvXw, short-id: "64d00876" }, servername: object-bnolauncher-ct.bandainamco-ol.jp, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇭🇰 香港 IEPL专线NO3, server: i.needss.top, port: 65533, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇭🇰 香港4高速中转5x, server: gsgs.hy2.one, port: 53346, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 台灣06-直連-1B, server: xevxwr.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Ni75NROYuTpyu3gs8osXqWMHlMyEOC0GLVwipdmF3xA, short-id: "08484e84" }, servername: player.live-video.net, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 台灣10-直連-1B, server: 7uzr4v.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: YcCADTAK0vFG1esN8ca-I3NFnqk_nlaHNCEpFNsVtFg, short-id: "59bd221c" }, servername: download-installer.cdn.mozilla.net, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇮🇹 意大利 IEPL专线NO1, server: i.needss.top, port: 33322, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇹🇼 台湾2SS中转|3x, server: pro.sulink.one, port: 48884, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 台灣07-直連-1B, server: y85uef.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: _gsfvatLgdy9stSQAwHqtkdFT5vRLLjjqlv1ssvZvXw, short-id: "64d00876" }, servername: object-bnolauncher-ct.bandainamco-ol.jp, client-fingerprint: qq, network: tcp, udp: true}
+  - {name: 台灣01-直連-1B, server: 82pavp.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: tiShGy9uYh9oBbGvZPrqFseCseEAgWboWAoYsnkGWnM, short-id: "01c3fb99" }, servername: www.douyin.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 🇹🇼 台湾2-1A, server: xdd.dashuai.cyou, port: 45077, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇯🇵 日本2高速中转, server: gsgs.hy2.one, port: 53338, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 台灣13-直連-1A, server: pqdabn.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: zNaNwyaEjGqqD1RSFuJAoQA-e4OiTTUgJm3Bi6_BwXY, short-id: "14da529a" }, servername: www.douyin.com, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 🇺🇸 美国-2, server: us02.sulink.one, port: 13334, type: vless, uuid: 855a62b5-a367-4d6e-8d27-73553391a6ae, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: nrKRUl1V-kWtkQLpKARG3GIVhmrvxeGLooWks_-h01E, short-id: "edaf1b0b" }, servername: www.python.org, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇯🇵 日本04三网中转|5x, server: sl.sulink.one, port: 33152, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 台灣11-直連-1A, server: d2majj.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: R6t4HkriPZSw1MDzNHpBe0d-R6S9nlJI7XJVcEw-cHc, short-id: "47e3a139" }, servername: addons.mozilla.org, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 🇫🇷 法国 CM 隧道NO1, server: sh3.needss.top, port: 52108, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台灣11-直連-1B, server: d2majj.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: R6t4HkriPZSw1MDzNHpBe0d-R6S9nlJI7XJVcEw-cHc, short-id: "47e3a139" }, servername: addons.mozilla.org, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇸🇬 新加坡3高速中转3x, server: gsgs.hy2.one, port: 53340, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇭🇰 香港6高速中转, server: gsgs.hy2.one, port: 53344, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 台灣05-直連-1A, server: ncfw93.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 7g-TJ7GdAf61skeA9syzKpMr_AmSnFcUJ7kkhwx3DEs, short-id: "2ea9dd26" }, servername: player.live-video.net, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 日-本SS中转25x, server: g2.hy2.one, port: 13107, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 台灣06-直連-1A, server: xevxwr.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Ni75NROYuTpyu3gs8osXqWMHlMyEOC0GLVwipdmF3xA, short-id: "08484e84" }, servername: player.live-video.net, client-fingerprint: qq, network: tcp, udp: true}
+  - {name: 🇯🇵 日本2SS中转15x, server: g.hy2.one, port: 20546, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇮🇩 印尼 IEPL专线NO1, server: i.needss.top, port: 25129, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台灣13-直連-1B, server: pqdabn.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: zNaNwyaEjGqqD1RSFuJAoQA-e4OiTTUgJm3Bi6_BwXY, short-id: "14da529a" }, servername: www.douyin.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 🇸🇬 新加坡07奈非, server: sg07v6.sulink.one, port: 32052, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 日本SS中转1, server: pro.sulink.one, port: 48889, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇵🇱 波兰IPV6-01, server: bl01.sulink.one, port: 40148, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: bl01.sulink.one, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 日本-1, server: oracle-amd-tokyo1.lanmaoyun.icu, port: 30001, type: hysteria2, password: 856898d1-190e-4b07-9803-dd1b849500ef, auth: 856898d1-190e-4b07-9803-dd1b849500ef, sni: tokyo.nodes.lanmaoyun.icu, skip-cert-verify: true, udp: true}
+  - {name: 台灣02-直連-1B, server: uprica.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: AkIE4zN2055Onan1WBh8L4XRJUHfYQJhze8krWeSqXE, short-id: "dc2cad0c" }, servername: gamedownloads-rockstargames-com.akamaized.net, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇺🇸 美国1SS中转, server: pro.sulink.one, port: 48881, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
   - {name: 墨尔本, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 2bee3b79-84d5-4ad2-bd6e-6c58fd2c88c6, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 🇨🇦 加拿大, server: ccy.colacloud.free.hr, port: 2086, type: vless, uuid: 2bee3b79-84d5-4ad2-bd6e-6c58fd2c88c6, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: caaa.colacloud.free.hr}}, udp: true}
+  - {name: 🇯🇵 日本NO.2, server: xdd.dashuai.cyou, port: 45057, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇮🇳 印度2, server: xdd.dashuai.cyou, port: 45073, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇭🇰 香港HKT中转25x, server: hkt2.sulink.one, port: 53108, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇯🇵 日本1高速中转, server: gsgs.hy2.one, port: 53339, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇺🇸 美国5, server: yx.sulink.one, port: 80, type: vmess, uuid: 855a62b5-a367-4d6e-8d27-73553391a6ae, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: us5.sulink.one}}, udp: true}
+  - {name: 🇯🇵 日本SS中转25x, server: g2.hy2.one, port: 13106, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 台灣09-直連-1B, server: bbu7uh.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 6EXkZwfyumhyBokXV3k5ahmVfNg5y4-EtQD2KlR9bSU, short-id: "84e66e8d" }, servername: d1--ov-gotcha07.bilivideo.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 🇹🇼 台湾 IEPL专线NO1, server: i.needss.top, port: 20016, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇰🇷 韩国-2, server: oracle-arm-chuncheon2.lanmaoyun.icu, port: 30001, type: hysteria2, password: 856898d1-190e-4b07-9803-dd1b849500ef, auth: 856898d1-190e-4b07-9803-dd1b849500ef, sni: korea.nodes.lanmaoyun.icu, skip-cert-verify: true, udp: true}
+  - {name: 🇫🇷 法国IPV6-09, server: fr09.sulian.life, port: 40149, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: fr09.sulian.life, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 韩国3SS中转, server: pro.sulink.one, port: 48863, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇨🇦 加拿大1, server: haa.dashuai.cyou, port: 45064, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇭🇰 香港3SS中转, server: pro.sulink.one, port: 48875, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇹🇭 泰国ISP高速中转3x, server: gsgs.hy2.one, port: 63329, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1E, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 75e504e1-a73d-4a05-8508-ef3e3711669e, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇵🇹 葡萄牙 IEPL专线NO1, server: i.needss.top, port: 31001, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇸🇬 新加坡 IEPL专线NO3, server: i.needss.top, port: 44412, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 非洲 IEPL专线 NO1, server: i.needss.top, port: 44410, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇺🇸 美国3SS中转, server: pro.sulink.one, port: 48879, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇺🇸 美国NO.2, server: xdd.dashuai.cyou, port: 45053, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇰🇷 韩国高速中转3, server: gsgs.hy2.one, port: 63321, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇨🇦 加拿大 IEPL专线NO1, server: sz.needss.top, port: 20013, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇺🇸 美国高速中转4, server: gsgs.hy2.one, port: 63324, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇭🇰 香港01-奈非-中转, server: sl.sulink.one, port: 32052, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 韩国 IEPL专线NO1, server: i.needss.top, port: 20021, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇺🇸 美国2高速中转, server: gsgs.hy2.one, port: 53333, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇭🇰 香港NO.1, server: haa.dashuai.cyou, port: 45050, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇹🇼 台湾1SS中转|3x, server: pro.sulink.one, port: 48885, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 美國02-直連-1A, server: node-us-2.sudatech.store, port: 50002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Yn0atGB5uY5DZbhh2G1cOfeoNRDoRQ_v0pvyBZcx2w4, short-id: "6b6dbc62" }, servername: www.douyin.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 🇳🇱 荷兰 CM 隧道NO1, server: qd.needss.top, port: 20025, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台灣15-直連-1A, server: cjqtur.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: z4sth42R56sV2Pvuu7kqGAhgr62_2uMsGvg3QajxtD8, short-id: "c06b5ca5" }, servername: object-bnolauncher-ct.bandainamco-ol.jp, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇺🇸 美国02, server: us02.sulink.one, port: 10522, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 台灣09-直連-1A, server: bbu7uh.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 6EXkZwfyumhyBokXV3k5ahmVfNg5y4-EtQD2KlR9bSU, short-id: "84e66e8d" }, servername: d1--ov-gotcha07.bilivideo.com, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1D, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 38786e3d-22be-4593-8781-5c7f7a7fee99, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1A, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 9336eaf3-aa2f-4933-821c-bb50b9e20ae3, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇭🇰 香港直连2流媒体2x, server: hkzl2.sulink.one, port: 20521, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 台灣16-直連-1A, server: xcc3fp.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: TK7J2tkMQx0YueND0yfUEXMHpBR28Z9y6swYBRMzD00, short-id: "85b5bd96" }, servername: content.cdp.bethesda.net, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 🇯🇵 日本-2, server: oracle-amd-osaka1.lanmaoyun.icu, port: 30001, type: hysteria2, password: 856898d1-190e-4b07-9803-dd1b849500ef, auth: 856898d1-190e-4b07-9803-dd1b849500ef, sni: osaka.nodes.lanmaoyun.icu, skip-cert-verify: true, udp: true}
+  - {name: 台灣10-直連-1A, server: 7uzr4v.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: YcCADTAK0vFG1esN8ca-I3NFnqk_nlaHNCEpFNsVtFg, short-id: "59bd221c" }, servername: download-installer.cdn.mozilla.net, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 台灣15-直連-1B, server: cjqtur.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: z4sth42R56sV2Pvuu7kqGAhgr62_2uMsGvg3QajxtD8, short-id: "c06b5ca5" }, servername: object-bnolauncher-ct.bandainamco-ol.jp, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1B, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: a2560c2a-a20e-4469-9c4f-4b948a77dba4, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 台灣02-直連-1A, server: uprica.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: AkIE4zN2055Onan1WBh8L4XRJUHfYQJhze8krWeSqXE, short-id: "dc2cad0c" }, servername: gamedownloads-rockstargames-com.akamaized.net, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 直连不能用是地区问题-1A, server: forward-03.sudatech.store, port: 43500, type: trojan, password: 6d67bc90-5387-494d-9e19-b516acf3e78f, sni: vpn-4-6.sudatech.store, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 日本 IEPL专线NO3, server: i.needss.top, port: 52117, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇫🇷 法国IPV6-10, server: fr10.sulink.one, port: 41148, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: fr10.sulink.one, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 新加坡1SS移动直连, server: sg6.sulink.one, port: 12343, type: ss, cipher: chacha20-ietf-poly1305, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, udp: true}
+  - {name: 🇰🇷 韩国-1, server: oracle-arm-chuncheon1.lanmaoyun.icu, port: 30001, type: hysteria2, password: 856898d1-190e-4b07-9803-dd1b849500ef, auth: 856898d1-190e-4b07-9803-dd1b849500ef, sni: korea.nodes.lanmaoyun.icu, skip-cert-verify: true, udp: true}
+  - {name: 🇹🇼 台湾2-1B, server: tw02.hy-2.sbs, port: 50052, type: vless, uuid: c7da104a-270e-4fd8-a540-8d7478913feb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: X0trg79L3teC4E6tlpzK74e38xpzkYIKAO2bvcsY6ng, short-id: "07288de2" }, servername: www.python.org, client-fingerprint: qq, network: tcp, udp: true}
+  - {name: 🇫🇷 法国2, server: xdd.dashuai.cyou, port: 45071, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇭🇰 香港-流媒体2x, server: xglmt.hy-2.sbs, port: 55442, type: vless, uuid: c7da104a-270e-4fd8-a540-8d7478913feb, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: sS4V0lk9XYNJn6Ttu6Q7oxTjSoqTQ990_tzMi_y6kjI, short-id: "a735f58f" }, servername: www.python.org, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇭🇰 香港, server: xg.dashuai.cyou, port: 19901, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇻🇳 越南高速中转, server: gsgs.hy2.one, port: 63326, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇭🇰 香港2高速中转2x, server: gsgs.hy2.one, port: 53348, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 🇭🇰 香港-直连2流媒体2x, server: hkzl2.sulink.one, port: 33335, type: vless, uuid: 855a62b5-a367-4d6e-8d27-73553391a6ae, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: nrKRUl1V-kWtkQLpKARG3GIVhmrvxeGLooWks_-h01E, short-id: "edaf1b0b" }, servername: www.python.org, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇭🇰 香港2中转25x-三网入口, server: s2.sulink.one, port: 13105, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇯🇵 日本NO.1, server: haa.dashuai.cyou, port: 45056, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇰🇷 韩国-三网优化2-1F, server: kr-qingyun.dwyun.me, port: 44732, type: trojan, password: 790057b7-3096-4c73-a67a-5f0df434fadf, sni: kr-qingyun.dwyun.me, skip-cert-verify: false, udp: true}
+  - {name: 🇷🇺 俄罗斯 IEPL专线NO1, server: i.needss.top, port: 21111, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 美國02-直連-1B, server: node-us-2.sudatech.store, port: 50002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Yn0atGB5uY5DZbhh2G1cOfeoNRDoRQ_v0pvyBZcx2w4, short-id: "6b6dbc62" }, servername: www.douyin.com, client-fingerprint: qq, network: tcp, udp: true}
+  - {name: 🇫🇷 法国1, server: haa.dashuai.cyou, port: 45072, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇺🇸 美国 IEPL专线NO1, server: i.needss.top, port: 54770, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇭🇰 香港4SS中转5x, server: pro.sulink.one, port: 48874, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇺🇸 美国04, server: us04.sulink.one, port: 32052, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: us04.sulink.one, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 日本中转25x-三网入口, server: s.sulink.one, port: 20544, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:ODU1YTYyYjUtYTM2Ny00ZDZlLThkMjctNzM1NTMzOTE=, udp: true}
+  - {name: 🇰🇷 韩国-首尔, server: oracle-arm-seoul1.lanmaoyun.icu, port: 30001, type: hysteria2, password: 856898d1-190e-4b07-9803-dd1b849500ef, auth: 856898d1-190e-4b07-9803-dd1b849500ef, sni: korea.nodes.lanmaoyun.icu, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 美国05, server: us05.sulink.one, port: 42052, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: us05.sulink.one, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 日本7, server: jp07.sulink.one, port: 43333, type: vless, uuid: 855a62b5-a367-4d6e-8d27-73553391a6ae, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: g_p3pQHBq5ysWQ4tjNRX3kdtZzUmNsPZeLTuVD4t7Uk, short-id: "fc3c83a9" }, servername: www.python.org, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇦🇺 澳大利亚原生1, server: haa.dashuai.cyou, port: 45062, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇸🇬 新加坡2高速中转3x, server: gsgs.hy2.one, port: 53341, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 台灣16-直連-1B, server: xcc3fp.chinese-sm.com, port: 30002, type: vless, uuid: dd394d3e-e8ba-4b4e-9b98-810b73547162, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: TK7J2tkMQx0YueND0yfUEXMHpBR28Z9y6swYBRMzD00, short-id: "85b5bd96" }, servername: content.cdp.bethesda.net, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 🇭🇰 香港1高速中转2x, server: gsgs.hy2.one, port: 53349, type: ss, cipher: 2022-blake3-aes-256-gcm, password: OGYyMGNmOTA4MjJlMTE3NmFlNTMzZDdmZDVlZWQwYzE=:YzdkYTEwNGEtMjcwZS00ZmQ4LWE1NDAtOGQ3NDc4OTE=, udp: true}
+  - {name: 台灣01-直連-1A, server: 82pavp.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: tiShGy9uYh9oBbGvZPrqFseCseEAgWboWAoYsnkGWnM, short-id: "01c3fb99" }, servername: www.douyin.com, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇪🇸 西班牙IPV6, server: sp01.sulink.one, port: 20649, type: hysteria2, password: 855a62b5-a367-4d6e-8d27-73553391a6ae, auth: 855a62b5-a367-4d6e-8d27-73553391a6ae, sni: sp01.sulink.one, skip-cert-verify: true, udp: true}
+  - {name: 🇦🇷 阿根廷 IEPL专线NO1, server: i.needss.top, port: 20014, type: vmess, uuid: a9ff1311-adc0-49ea-861a-20d1e68d5003, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台灣14-直連-1A, server: rnjszk.chinese-sm.com, port: 30002, type: vless, uuid: 6d67bc90-5387-494d-9e19-b516acf3e78f, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: WWZtj7tsGYJmlzkf_wEZhmoky5SJSy0I03YzrP3yJ2A, short-id: "57f4f20c" }, servername: gamedownloads-rockstargames-com.akamaized.net, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇦🇺 澳大利亚原生2, server: xdd.dashuai.cyou, port: 45063, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇲🇴 澳门NO.2, server: xdd.dashuai.cyou, port: 45051, type: vmess, uuid: d74b581f-c5fc-4c59-a198-7024f2534eb9, alterId: 0, cipher: auto, tls: false, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国 1
-      - 🇹🇼 台湾 2
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇸🇬 新加坡2SS中转
+      - 🇭🇰 香港2SS中转
+      - 🇹🇷 土耳其高速中转
+      - 🇹🇼 台湾1
+      - 🇹🇼 台湾中转25x
+      - 台灣03-直連-1B
+      - 🇹🇼 台湾高速中转
+      - 🇸🇬 新加坡03奈非
+      - 🇨🇦 加拿大1-V6
+      - 🇯🇵 日本3SS中转25x
+      - 🇺🇸 美国NO.1
+      - 🇭🇰 香港5高速中转5x
+      - 台灣08-直連-1A
+      - 台灣04-直連-1A
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡1高速中转3x
+      - 🇺🇸 北美-US-圣何塞-2
+      - 台灣04-直連-1B
+      - 台灣12-直連-1A
+      - 台灣03-直連-1A
       - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 香港 2
-      - 🇺🇸 美国 7
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇹🇼 台湾 1
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇰🇷 韩国-三网优化2-1F
+      - 🇨🇦 加拿大2
+      - 🇹🇼 台湾-02-奈非
+      - 🇯🇵 日本SS中转4
+      - 🇹🇼 台湾02-3x-流媒体
+      - 🇯🇵 日本SS中转3
+      - 🇸🇬 新加坡02-V4-流媒体
+      - 🇭🇰 香港3中转25x
+      - 台灣08-直連-1B
+      - 🇸🇬 新加坡NO.1
+      - 台灣05-直連-1B
+      - 🇮🇳 印度1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇹🇼 台湾SS中转25x
+      - 🇭🇰 三网中转香港|5x
+      - 直连不能用是地区问题-1B
+      - 🇩🇪 德国 IEPL专线NO1
+      - 台灣12-直連-1B
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇸🇬 新加坡NO.2
+      - 🇪🇺 欧洲-伦敦-1
+      - 台灣14-直連-1B
+      - 台灣07-直連-1A
+      - 🇭🇰 香港 IEPL专线NO3
+      - 🇭🇰 香港4高速中转5x
+      - 台灣06-直連-1B
+      - 台灣10-直連-1B
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇹🇼 台湾2SS中转|3x
+      - 台灣07-直連-1B
+      - 台灣01-直連-1B
+      - 🇹🇼 台湾2-1A
+      - 🇯🇵 日本2高速中转
+      - 台灣13-直連-1A
+      - 🇺🇸 美国-2
+      - 🇯🇵 日本04三网中转|5x
+      - 台灣11-直連-1A
+      - 🇫🇷 法国 CM 隧道NO1
+      - 台灣11-直連-1B
+      - 🇸🇬 新加坡3高速中转3x
+      - 🇭🇰 香港6高速中转
+      - 台灣05-直連-1A
+      - 日-本SS中转25x
+      - 台灣06-直連-1A
+      - 🇯🇵 日本2SS中转15x
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 台灣13-直連-1B
+      - 🇸🇬 新加坡07奈非
+      - 🇯🇵 日本SS中转1
+      - 🇵🇱 波兰IPV6-01
+      - 🇯🇵 日本-1
+      - 台灣02-直連-1B
+      - 🇺🇸 美国1SS中转
       - 墨尔本
-      - 🇨🇦 加拿大
+      - 🇯🇵 日本NO.2
+      - 🇮🇳 印度2
+      - 🇭🇰 香港HKT中转25x
+      - 🇯🇵 日本1高速中转
+      - 🇺🇸 美国5
+      - 🇯🇵 日本SS中转25x
+      - 台灣09-直連-1B
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇰🇷 韩国-2
+      - 🇫🇷 法国IPV6-09
+      - 🇰🇷 韩国3SS中转
+      - 🇨🇦 加拿大1
+      - 🇭🇰 香港3SS中转
+      - 🇹🇭 泰国ISP高速中转3x
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 非洲 IEPL专线 NO1
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NO.2
+      - 🇰🇷 韩国高速中转3
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国高速中转4
+      - 🇭🇰 香港01-奈非-中转
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 🇺🇸 美国2高速中转
+      - 🇭🇰 香港NO.1
+      - 🇹🇼 台湾1SS中转|3x
+      - 美國02-直連-1A
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 台灣15-直連-1A
+      - 🇺🇸 美国02
+      - 台灣09-直連-1A
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇭🇰 香港直连2流媒体2x
+      - 台灣16-直連-1A
+      - 🇯🇵 日本-2
+      - 台灣10-直連-1A
+      - 台灣15-直連-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 台灣02-直連-1A
+      - 直连不能用是地区问题-1A
+      - 🇯🇵 日本 IEPL专线NO3
+      - 🇫🇷 法国IPV6-10
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾2-1B
+      - 🇫🇷 法国2
+      - 🇭🇰 香港-流媒体2x
+      - 🇭🇰 香港
+      - 🇻🇳 越南高速中转
+      - 🇭🇰 香港2高速中转2x
+      - 🇭🇰 香港-直连2流媒体2x
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇯🇵 日本NO.1
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 美國02-直連-1B
+      - 🇫🇷 法国1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇭🇰 香港4SS中转5x
+      - 🇺🇸 美国04
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇰🇷 韩国-首尔
+      - 🇺🇸 美国05
+      - 🇯🇵 日本7
+      - 🇦🇺 澳大利亚原生1
+      - 🇸🇬 新加坡2高速中转3x
+      - 台灣16-直連-1B
+      - 🇭🇰 香港1高速中转2x
+      - 台灣01-直連-1A
+      - 🇪🇸 西班牙IPV6
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 台灣14-直連-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇲🇴 澳门NO.2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国 1
-      - 🇹🇼 台湾 2
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇸🇬 新加坡2SS中转
+      - 🇭🇰 香港2SS中转
+      - 🇹🇷 土耳其高速中转
+      - 🇹🇼 台湾1
+      - 🇹🇼 台湾中转25x
+      - 台灣03-直連-1B
+      - 🇹🇼 台湾高速中转
+      - 🇸🇬 新加坡03奈非
+      - 🇨🇦 加拿大1-V6
+      - 🇯🇵 日本3SS中转25x
+      - 🇺🇸 美国NO.1
+      - 🇭🇰 香港5高速中转5x
+      - 台灣08-直連-1A
+      - 台灣04-直連-1A
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡1高速中转3x
+      - 🇺🇸 北美-US-圣何塞-2
+      - 台灣04-直連-1B
+      - 台灣12-直連-1A
+      - 台灣03-直連-1A
       - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 香港 2
-      - 🇺🇸 美国 7
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇹🇼 台湾 1
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇰🇷 韩国-三网优化2-1F
+      - 🇨🇦 加拿大2
+      - 🇹🇼 台湾-02-奈非
+      - 🇯🇵 日本SS中转4
+      - 🇹🇼 台湾02-3x-流媒体
+      - 🇯🇵 日本SS中转3
+      - 🇸🇬 新加坡02-V4-流媒体
+      - 🇭🇰 香港3中转25x
+      - 台灣08-直連-1B
+      - 🇸🇬 新加坡NO.1
+      - 台灣05-直連-1B
+      - 🇮🇳 印度1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇹🇼 台湾SS中转25x
+      - 🇭🇰 三网中转香港|5x
+      - 直连不能用是地区问题-1B
+      - 🇩🇪 德国 IEPL专线NO1
+      - 台灣12-直連-1B
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇸🇬 新加坡NO.2
+      - 🇪🇺 欧洲-伦敦-1
+      - 台灣14-直連-1B
+      - 台灣07-直連-1A
+      - 🇭🇰 香港 IEPL专线NO3
+      - 🇭🇰 香港4高速中转5x
+      - 台灣06-直連-1B
+      - 台灣10-直連-1B
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇹🇼 台湾2SS中转|3x
+      - 台灣07-直連-1B
+      - 台灣01-直連-1B
+      - 🇹🇼 台湾2-1A
+      - 🇯🇵 日本2高速中转
+      - 台灣13-直連-1A
+      - 🇺🇸 美国-2
+      - 🇯🇵 日本04三网中转|5x
+      - 台灣11-直連-1A
+      - 🇫🇷 法国 CM 隧道NO1
+      - 台灣11-直連-1B
+      - 🇸🇬 新加坡3高速中转3x
+      - 🇭🇰 香港6高速中转
+      - 台灣05-直連-1A
+      - 日-本SS中转25x
+      - 台灣06-直連-1A
+      - 🇯🇵 日本2SS中转15x
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 台灣13-直連-1B
+      - 🇸🇬 新加坡07奈非
+      - 🇯🇵 日本SS中转1
+      - 🇵🇱 波兰IPV6-01
+      - 🇯🇵 日本-1
+      - 台灣02-直連-1B
+      - 🇺🇸 美国1SS中转
       - 墨尔本
-      - 🇨🇦 加拿大
+      - 🇯🇵 日本NO.2
+      - 🇮🇳 印度2
+      - 🇭🇰 香港HKT中转25x
+      - 🇯🇵 日本1高速中转
+      - 🇺🇸 美国5
+      - 🇯🇵 日本SS中转25x
+      - 台灣09-直連-1B
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇰🇷 韩国-2
+      - 🇫🇷 法国IPV6-09
+      - 🇰🇷 韩国3SS中转
+      - 🇨🇦 加拿大1
+      - 🇭🇰 香港3SS中转
+      - 🇹🇭 泰国ISP高速中转3x
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 非洲 IEPL专线 NO1
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NO.2
+      - 🇰🇷 韩国高速中转3
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国高速中转4
+      - 🇭🇰 香港01-奈非-中转
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 🇺🇸 美国2高速中转
+      - 🇭🇰 香港NO.1
+      - 🇹🇼 台湾1SS中转|3x
+      - 美國02-直連-1A
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 台灣15-直連-1A
+      - 🇺🇸 美国02
+      - 台灣09-直連-1A
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇭🇰 香港直连2流媒体2x
+      - 台灣16-直連-1A
+      - 🇯🇵 日本-2
+      - 台灣10-直連-1A
+      - 台灣15-直連-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 台灣02-直連-1A
+      - 直连不能用是地区问题-1A
+      - 🇯🇵 日本 IEPL专线NO3
+      - 🇫🇷 法国IPV6-10
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾2-1B
+      - 🇫🇷 法国2
+      - 🇭🇰 香港-流媒体2x
+      - 🇭🇰 香港
+      - 🇻🇳 越南高速中转
+      - 🇭🇰 香港2高速中转2x
+      - 🇭🇰 香港-直连2流媒体2x
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇯🇵 日本NO.1
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 美國02-直連-1B
+      - 🇫🇷 法国1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇭🇰 香港4SS中转5x
+      - 🇺🇸 美国04
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇰🇷 韩国-首尔
+      - 🇺🇸 美国05
+      - 🇯🇵 日本7
+      - 🇦🇺 澳大利亚原生1
+      - 🇸🇬 新加坡2高速中转3x
+      - 台灣16-直連-1B
+      - 🇭🇰 香港1高速中转2x
+      - 台灣01-直連-1A
+      - 🇪🇸 西班牙IPV6
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 台灣14-直連-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇲🇴 澳门NO.2
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国 1
-      - 🇹🇼 台湾 2
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇸🇬 新加坡2SS中转
+      - 🇭🇰 香港2SS中转
+      - 🇹🇷 土耳其高速中转
+      - 🇹🇼 台湾1
+      - 🇹🇼 台湾中转25x
+      - 台灣03-直連-1B
+      - 🇹🇼 台湾高速中转
+      - 🇸🇬 新加坡03奈非
+      - 🇨🇦 加拿大1-V6
+      - 🇯🇵 日本3SS中转25x
+      - 🇺🇸 美国NO.1
+      - 🇭🇰 香港5高速中转5x
+      - 台灣08-直連-1A
+      - 台灣04-直連-1A
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡1高速中转3x
+      - 🇺🇸 北美-US-圣何塞-2
+      - 台灣04-直連-1B
+      - 台灣12-直連-1A
+      - 台灣03-直連-1A
       - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 香港 2
-      - 🇺🇸 美国 7
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇹🇼 台湾 1
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇰🇷 韩国-三网优化2-1F
+      - 🇨🇦 加拿大2
+      - 🇹🇼 台湾-02-奈非
+      - 🇯🇵 日本SS中转4
+      - 🇹🇼 台湾02-3x-流媒体
+      - 🇯🇵 日本SS中转3
+      - 🇸🇬 新加坡02-V4-流媒体
+      - 🇭🇰 香港3中转25x
+      - 台灣08-直連-1B
+      - 🇸🇬 新加坡NO.1
+      - 台灣05-直連-1B
+      - 🇮🇳 印度1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇹🇼 台湾SS中转25x
+      - 🇭🇰 三网中转香港|5x
+      - 直连不能用是地区问题-1B
+      - 🇩🇪 德国 IEPL专线NO1
+      - 台灣12-直連-1B
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇸🇬 新加坡NO.2
+      - 🇪🇺 欧洲-伦敦-1
+      - 台灣14-直連-1B
+      - 台灣07-直連-1A
+      - 🇭🇰 香港 IEPL专线NO3
+      - 🇭🇰 香港4高速中转5x
+      - 台灣06-直連-1B
+      - 台灣10-直連-1B
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇹🇼 台湾2SS中转|3x
+      - 台灣07-直連-1B
+      - 台灣01-直連-1B
+      - 🇹🇼 台湾2-1A
+      - 🇯🇵 日本2高速中转
+      - 台灣13-直連-1A
+      - 🇺🇸 美国-2
+      - 🇯🇵 日本04三网中转|5x
+      - 台灣11-直連-1A
+      - 🇫🇷 法国 CM 隧道NO1
+      - 台灣11-直連-1B
+      - 🇸🇬 新加坡3高速中转3x
+      - 🇭🇰 香港6高速中转
+      - 台灣05-直連-1A
+      - 日-本SS中转25x
+      - 台灣06-直連-1A
+      - 🇯🇵 日本2SS中转15x
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 台灣13-直連-1B
+      - 🇸🇬 新加坡07奈非
+      - 🇯🇵 日本SS中转1
+      - 🇵🇱 波兰IPV6-01
+      - 🇯🇵 日本-1
+      - 台灣02-直連-1B
+      - 🇺🇸 美国1SS中转
       - 墨尔本
-      - 🇨🇦 加拿大
+      - 🇯🇵 日本NO.2
+      - 🇮🇳 印度2
+      - 🇭🇰 香港HKT中转25x
+      - 🇯🇵 日本1高速中转
+      - 🇺🇸 美国5
+      - 🇯🇵 日本SS中转25x
+      - 台灣09-直連-1B
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇰🇷 韩国-2
+      - 🇫🇷 法国IPV6-09
+      - 🇰🇷 韩国3SS中转
+      - 🇨🇦 加拿大1
+      - 🇭🇰 香港3SS中转
+      - 🇹🇭 泰国ISP高速中转3x
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 非洲 IEPL专线 NO1
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NO.2
+      - 🇰🇷 韩国高速中转3
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国高速中转4
+      - 🇭🇰 香港01-奈非-中转
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 🇺🇸 美国2高速中转
+      - 🇭🇰 香港NO.1
+      - 🇹🇼 台湾1SS中转|3x
+      - 美國02-直連-1A
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 台灣15-直連-1A
+      - 🇺🇸 美国02
+      - 台灣09-直連-1A
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇭🇰 香港直连2流媒体2x
+      - 台灣16-直連-1A
+      - 🇯🇵 日本-2
+      - 台灣10-直連-1A
+      - 台灣15-直連-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 台灣02-直連-1A
+      - 直连不能用是地区问题-1A
+      - 🇯🇵 日本 IEPL专线NO3
+      - 🇫🇷 法国IPV6-10
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾2-1B
+      - 🇫🇷 法国2
+      - 🇭🇰 香港-流媒体2x
+      - 🇭🇰 香港
+      - 🇻🇳 越南高速中转
+      - 🇭🇰 香港2高速中转2x
+      - 🇭🇰 香港-直连2流媒体2x
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇯🇵 日本NO.1
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 美國02-直連-1B
+      - 🇫🇷 法国1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇭🇰 香港4SS中转5x
+      - 🇺🇸 美国04
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇰🇷 韩国-首尔
+      - 🇺🇸 美国05
+      - 🇯🇵 日本7
+      - 🇦🇺 澳大利亚原生1
+      - 🇸🇬 新加坡2高速中转3x
+      - 台灣16-直連-1B
+      - 🇭🇰 香港1高速中转2x
+      - 台灣01-直連-1A
+      - 🇪🇸 西班牙IPV6
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 台灣14-直連-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇲🇴 澳门NO.2
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -92,82 +648,698 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国 1
-      - 🇹🇼 台湾 2
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇸🇬 新加坡2SS中转
+      - 🇭🇰 香港2SS中转
+      - 🇹🇷 土耳其高速中转
+      - 🇹🇼 台湾1
+      - 🇹🇼 台湾中转25x
+      - 台灣03-直連-1B
+      - 🇹🇼 台湾高速中转
+      - 🇸🇬 新加坡03奈非
+      - 🇨🇦 加拿大1-V6
+      - 🇯🇵 日本3SS中转25x
+      - 🇺🇸 美国NO.1
+      - 🇭🇰 香港5高速中转5x
+      - 台灣08-直連-1A
+      - 台灣04-直連-1A
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡1高速中转3x
+      - 🇺🇸 北美-US-圣何塞-2
+      - 台灣04-直連-1B
+      - 台灣12-直連-1A
+      - 台灣03-直連-1A
       - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 香港 2
-      - 🇺🇸 美国 7
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇹🇼 台湾 1
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇰🇷 韩国-三网优化2-1F
+      - 🇨🇦 加拿大2
+      - 🇹🇼 台湾-02-奈非
+      - 🇯🇵 日本SS中转4
+      - 🇹🇼 台湾02-3x-流媒体
+      - 🇯🇵 日本SS中转3
+      - 🇸🇬 新加坡02-V4-流媒体
+      - 🇭🇰 香港3中转25x
+      - 台灣08-直連-1B
+      - 🇸🇬 新加坡NO.1
+      - 台灣05-直連-1B
+      - 🇮🇳 印度1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇹🇼 台湾SS中转25x
+      - 🇭🇰 三网中转香港|5x
+      - 直连不能用是地区问题-1B
+      - 🇩🇪 德国 IEPL专线NO1
+      - 台灣12-直連-1B
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇸🇬 新加坡NO.2
+      - 🇪🇺 欧洲-伦敦-1
+      - 台灣14-直連-1B
+      - 台灣07-直連-1A
+      - 🇭🇰 香港 IEPL专线NO3
+      - 🇭🇰 香港4高速中转5x
+      - 台灣06-直連-1B
+      - 台灣10-直連-1B
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇹🇼 台湾2SS中转|3x
+      - 台灣07-直連-1B
+      - 台灣01-直連-1B
+      - 🇹🇼 台湾2-1A
+      - 🇯🇵 日本2高速中转
+      - 台灣13-直連-1A
+      - 🇺🇸 美国-2
+      - 🇯🇵 日本04三网中转|5x
+      - 台灣11-直連-1A
+      - 🇫🇷 法国 CM 隧道NO1
+      - 台灣11-直連-1B
+      - 🇸🇬 新加坡3高速中转3x
+      - 🇭🇰 香港6高速中转
+      - 台灣05-直連-1A
+      - 日-本SS中转25x
+      - 台灣06-直連-1A
+      - 🇯🇵 日本2SS中转15x
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 台灣13-直連-1B
+      - 🇸🇬 新加坡07奈非
+      - 🇯🇵 日本SS中转1
+      - 🇵🇱 波兰IPV6-01
+      - 🇯🇵 日本-1
+      - 台灣02-直連-1B
+      - 🇺🇸 美国1SS中转
       - 墨尔本
-      - 🇨🇦 加拿大
+      - 🇯🇵 日本NO.2
+      - 🇮🇳 印度2
+      - 🇭🇰 香港HKT中转25x
+      - 🇯🇵 日本1高速中转
+      - 🇺🇸 美国5
+      - 🇯🇵 日本SS中转25x
+      - 台灣09-直連-1B
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇰🇷 韩国-2
+      - 🇫🇷 法国IPV6-09
+      - 🇰🇷 韩国3SS中转
+      - 🇨🇦 加拿大1
+      - 🇭🇰 香港3SS中转
+      - 🇹🇭 泰国ISP高速中转3x
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 非洲 IEPL专线 NO1
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NO.2
+      - 🇰🇷 韩国高速中转3
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国高速中转4
+      - 🇭🇰 香港01-奈非-中转
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 🇺🇸 美国2高速中转
+      - 🇭🇰 香港NO.1
+      - 🇹🇼 台湾1SS中转|3x
+      - 美國02-直連-1A
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 台灣15-直連-1A
+      - 🇺🇸 美国02
+      - 台灣09-直連-1A
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇭🇰 香港直连2流媒体2x
+      - 台灣16-直連-1A
+      - 🇯🇵 日本-2
+      - 台灣10-直連-1A
+      - 台灣15-直連-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 台灣02-直連-1A
+      - 直连不能用是地区问题-1A
+      - 🇯🇵 日本 IEPL专线NO3
+      - 🇫🇷 法国IPV6-10
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾2-1B
+      - 🇫🇷 法国2
+      - 🇭🇰 香港-流媒体2x
+      - 🇭🇰 香港
+      - 🇻🇳 越南高速中转
+      - 🇭🇰 香港2高速中转2x
+      - 🇭🇰 香港-直连2流媒体2x
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇯🇵 日本NO.1
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 美國02-直連-1B
+      - 🇫🇷 法国1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇭🇰 香港4SS中转5x
+      - 🇺🇸 美国04
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇰🇷 韩国-首尔
+      - 🇺🇸 美国05
+      - 🇯🇵 日本7
+      - 🇦🇺 澳大利亚原生1
+      - 🇸🇬 新加坡2高速中转3x
+      - 台灣16-直連-1B
+      - 🇭🇰 香港1高速中转2x
+      - 台灣01-直連-1A
+      - 🇪🇸 西班牙IPV6
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 台灣14-直連-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇲🇴 澳门NO.2
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇹🇼 台湾 2
-      - 🇭🇰 香港 2
-      - 🇹🇼 台湾 1
+      - 🇭🇰 香港2SS中转
+      - 🇹🇼 台湾1
+      - 🇹🇼 台湾中转25x
+      - 台灣03-直連-1B
+      - 🇹🇼 台湾高速中转
+      - 🇭🇰 香港5高速中转5x
+      - 台灣08-直連-1A
+      - 台灣04-直連-1A
+      - 台灣04-直連-1B
+      - 台灣12-直連-1A
+      - 台灣03-直連-1A
+      - 🇹🇼 台湾-02-奈非
+      - 🇹🇼 台湾02-3x-流媒体
+      - 🇭🇰 香港3中转25x
+      - 台灣08-直連-1B
+      - 台灣05-直連-1B
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇹🇼 台湾SS中转25x
+      - 🇭🇰 三网中转香港|5x
+      - 台灣12-直連-1B
+      - 台灣14-直連-1B
+      - 台灣07-直連-1A
+      - 🇭🇰 香港 IEPL专线NO3
+      - 🇭🇰 香港4高速中转5x
+      - 台灣06-直連-1B
+      - 台灣10-直連-1B
+      - 🇹🇼 台湾2SS中转|3x
+      - 台灣07-直連-1B
+      - 台灣01-直連-1B
+      - 🇹🇼 台湾2-1A
+      - 台灣13-直連-1A
+      - 台灣11-直連-1A
+      - 台灣11-直連-1B
+      - 🇭🇰 香港6高速中转
+      - 台灣05-直連-1A
+      - 台灣06-直連-1A
+      - 台灣13-直連-1B
+      - 台灣02-直連-1B
+      - 🇭🇰 香港HKT中转25x
+      - 台灣09-直連-1B
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇭🇰 香港3SS中转
+      - 🇭🇰 香港01-奈非-中转
+      - 🇭🇰 香港NO.1
+      - 🇹🇼 台湾1SS中转|3x
+      - 台灣15-直連-1A
+      - 台灣09-直連-1A
+      - 🇭🇰 香港直连2流媒体2x
+      - 台灣16-直連-1A
+      - 台灣10-直連-1A
+      - 台灣15-直連-1B
+      - 台灣02-直連-1A
+      - 🇹🇼 台湾2-1B
+      - 🇭🇰 香港-流媒体2x
+      - 🇭🇰 香港
+      - 🇭🇰 香港2高速中转2x
+      - 🇭🇰 香港-直连2流媒体2x
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇭🇰 香港4SS中转5x
+      - 台灣16-直連-1B
+      - 🇭🇰 香港1高速中转2x
+      - 台灣01-直連-1A
+      - 台灣14-直連-1A
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国 1
-      - 🇹🇼 台湾 2
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇸🇬 新加坡2SS中转
+      - 🇭🇰 香港2SS中转
+      - 🇹🇷 土耳其高速中转
+      - 🇹🇼 台湾1
+      - 🇹🇼 台湾中转25x
+      - 台灣03-直連-1B
+      - 🇹🇼 台湾高速中转
+      - 🇸🇬 新加坡03奈非
+      - 🇨🇦 加拿大1-V6
+      - 🇯🇵 日本3SS中转25x
+      - 🇺🇸 美国NO.1
+      - 🇭🇰 香港5高速中转5x
+      - 台灣08-直連-1A
+      - 台灣04-直連-1A
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡1高速中转3x
+      - 🇺🇸 北美-US-圣何塞-2
+      - 台灣04-直連-1B
+      - 台灣12-直連-1A
+      - 台灣03-直連-1A
       - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 香港 2
-      - 🇺🇸 美国 7
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇹🇼 台湾 1
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇰🇷 韩国-三网优化2-1F
+      - 🇨🇦 加拿大2
+      - 🇹🇼 台湾-02-奈非
+      - 🇯🇵 日本SS中转4
+      - 🇹🇼 台湾02-3x-流媒体
+      - 🇯🇵 日本SS中转3
+      - 🇸🇬 新加坡02-V4-流媒体
+      - 🇭🇰 香港3中转25x
+      - 台灣08-直連-1B
+      - 🇸🇬 新加坡NO.1
+      - 台灣05-直連-1B
+      - 🇮🇳 印度1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇹🇼 台湾SS中转25x
+      - 🇭🇰 三网中转香港|5x
+      - 直连不能用是地区问题-1B
+      - 🇩🇪 德国 IEPL专线NO1
+      - 台灣12-直連-1B
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇸🇬 新加坡NO.2
+      - 🇪🇺 欧洲-伦敦-1
+      - 台灣14-直連-1B
+      - 台灣07-直連-1A
+      - 🇭🇰 香港 IEPL专线NO3
+      - 🇭🇰 香港4高速中转5x
+      - 台灣06-直連-1B
+      - 台灣10-直連-1B
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇹🇼 台湾2SS中转|3x
+      - 台灣07-直連-1B
+      - 台灣01-直連-1B
+      - 🇹🇼 台湾2-1A
+      - 🇯🇵 日本2高速中转
+      - 台灣13-直連-1A
+      - 🇺🇸 美国-2
+      - 🇯🇵 日本04三网中转|5x
+      - 台灣11-直連-1A
+      - 🇫🇷 法国 CM 隧道NO1
+      - 台灣11-直連-1B
+      - 🇸🇬 新加坡3高速中转3x
+      - 🇭🇰 香港6高速中转
+      - 台灣05-直連-1A
+      - 日-本SS中转25x
+      - 台灣06-直連-1A
+      - 🇯🇵 日本2SS中转15x
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 台灣13-直連-1B
+      - 🇸🇬 新加坡07奈非
+      - 🇯🇵 日本SS中转1
+      - 🇵🇱 波兰IPV6-01
+      - 🇯🇵 日本-1
+      - 台灣02-直連-1B
+      - 🇺🇸 美国1SS中转
       - 墨尔本
-      - 🇨🇦 加拿大
+      - 🇯🇵 日本NO.2
+      - 🇮🇳 印度2
+      - 🇭🇰 香港HKT中转25x
+      - 🇯🇵 日本1高速中转
+      - 🇺🇸 美国5
+      - 🇯🇵 日本SS中转25x
+      - 台灣09-直連-1B
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇰🇷 韩国-2
+      - 🇫🇷 法国IPV6-09
+      - 🇰🇷 韩国3SS中转
+      - 🇨🇦 加拿大1
+      - 🇭🇰 香港3SS中转
+      - 🇹🇭 泰国ISP高速中转3x
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 非洲 IEPL专线 NO1
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NO.2
+      - 🇰🇷 韩国高速中转3
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国高速中转4
+      - 🇭🇰 香港01-奈非-中转
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 🇺🇸 美国2高速中转
+      - 🇭🇰 香港NO.1
+      - 🇹🇼 台湾1SS中转|3x
+      - 美國02-直連-1A
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 台灣15-直連-1A
+      - 🇺🇸 美国02
+      - 台灣09-直連-1A
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇭🇰 香港直连2流媒体2x
+      - 台灣16-直連-1A
+      - 🇯🇵 日本-2
+      - 台灣10-直連-1A
+      - 台灣15-直連-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 台灣02-直連-1A
+      - 直连不能用是地区问题-1A
+      - 🇯🇵 日本 IEPL专线NO3
+      - 🇫🇷 法国IPV6-10
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾2-1B
+      - 🇫🇷 法国2
+      - 🇭🇰 香港-流媒体2x
+      - 🇭🇰 香港
+      - 🇻🇳 越南高速中转
+      - 🇭🇰 香港2高速中转2x
+      - 🇭🇰 香港-直连2流媒体2x
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇯🇵 日本NO.1
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 美國02-直連-1B
+      - 🇫🇷 法国1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇭🇰 香港4SS中转5x
+      - 🇺🇸 美国04
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇰🇷 韩国-首尔
+      - 🇺🇸 美国05
+      - 🇯🇵 日本7
+      - 🇦🇺 澳大利亚原生1
+      - 🇸🇬 新加坡2高速中转3x
+      - 台灣16-直連-1B
+      - 🇭🇰 香港1高速中转2x
+      - 台灣01-直連-1A
+      - 🇪🇸 西班牙IPV6
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 台灣14-直連-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇲🇴 澳门NO.2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国 1
-      - 🇹🇼 台湾 2
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇸🇬 新加坡2SS中转
+      - 🇭🇰 香港2SS中转
+      - 🇹🇷 土耳其高速中转
+      - 🇹🇼 台湾1
+      - 🇹🇼 台湾中转25x
+      - 台灣03-直連-1B
+      - 🇹🇼 台湾高速中转
+      - 🇸🇬 新加坡03奈非
+      - 🇨🇦 加拿大1-V6
+      - 🇯🇵 日本3SS中转25x
+      - 🇺🇸 美国NO.1
+      - 🇭🇰 香港5高速中转5x
+      - 台灣08-直連-1A
+      - 台灣04-直連-1A
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡1高速中转3x
+      - 🇺🇸 北美-US-圣何塞-2
+      - 台灣04-直連-1B
+      - 台灣12-直連-1A
+      - 台灣03-直連-1A
       - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 香港 2
-      - 🇺🇸 美国 7
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇹🇼 台湾 1
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇰🇷 韩国-三网优化2-1F
+      - 🇨🇦 加拿大2
+      - 🇹🇼 台湾-02-奈非
+      - 🇯🇵 日本SS中转4
+      - 🇹🇼 台湾02-3x-流媒体
+      - 🇯🇵 日本SS中转3
+      - 🇸🇬 新加坡02-V4-流媒体
+      - 🇭🇰 香港3中转25x
+      - 台灣08-直連-1B
+      - 🇸🇬 新加坡NO.1
+      - 台灣05-直連-1B
+      - 🇮🇳 印度1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇹🇼 台湾SS中转25x
+      - 🇭🇰 三网中转香港|5x
+      - 直连不能用是地区问题-1B
+      - 🇩🇪 德国 IEPL专线NO1
+      - 台灣12-直連-1B
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇸🇬 新加坡NO.2
+      - 🇪🇺 欧洲-伦敦-1
+      - 台灣14-直連-1B
+      - 台灣07-直連-1A
+      - 🇭🇰 香港 IEPL专线NO3
+      - 🇭🇰 香港4高速中转5x
+      - 台灣06-直連-1B
+      - 台灣10-直連-1B
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇹🇼 台湾2SS中转|3x
+      - 台灣07-直連-1B
+      - 台灣01-直連-1B
+      - 🇹🇼 台湾2-1A
+      - 🇯🇵 日本2高速中转
+      - 台灣13-直連-1A
+      - 🇺🇸 美国-2
+      - 🇯🇵 日本04三网中转|5x
+      - 台灣11-直連-1A
+      - 🇫🇷 法国 CM 隧道NO1
+      - 台灣11-直連-1B
+      - 🇸🇬 新加坡3高速中转3x
+      - 🇭🇰 香港6高速中转
+      - 台灣05-直連-1A
+      - 日-本SS中转25x
+      - 台灣06-直連-1A
+      - 🇯🇵 日本2SS中转15x
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 台灣13-直連-1B
+      - 🇸🇬 新加坡07奈非
+      - 🇯🇵 日本SS中转1
+      - 🇵🇱 波兰IPV6-01
+      - 🇯🇵 日本-1
+      - 台灣02-直連-1B
+      - 🇺🇸 美国1SS中转
       - 墨尔本
-      - 🇨🇦 加拿大
+      - 🇯🇵 日本NO.2
+      - 🇮🇳 印度2
+      - 🇭🇰 香港HKT中转25x
+      - 🇯🇵 日本1高速中转
+      - 🇺🇸 美国5
+      - 🇯🇵 日本SS中转25x
+      - 台灣09-直連-1B
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇰🇷 韩国-2
+      - 🇫🇷 法国IPV6-09
+      - 🇰🇷 韩国3SS中转
+      - 🇨🇦 加拿大1
+      - 🇭🇰 香港3SS中转
+      - 🇹🇭 泰国ISP高速中转3x
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 非洲 IEPL专线 NO1
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NO.2
+      - 🇰🇷 韩国高速中转3
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国高速中转4
+      - 🇭🇰 香港01-奈非-中转
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 🇺🇸 美国2高速中转
+      - 🇭🇰 香港NO.1
+      - 🇹🇼 台湾1SS中转|3x
+      - 美國02-直連-1A
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 台灣15-直連-1A
+      - 🇺🇸 美国02
+      - 台灣09-直連-1A
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇭🇰 香港直连2流媒体2x
+      - 台灣16-直連-1A
+      - 🇯🇵 日本-2
+      - 台灣10-直連-1A
+      - 台灣15-直連-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 台灣02-直連-1A
+      - 直连不能用是地区问题-1A
+      - 🇯🇵 日本 IEPL专线NO3
+      - 🇫🇷 法国IPV6-10
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾2-1B
+      - 🇫🇷 法国2
+      - 🇭🇰 香港-流媒体2x
+      - 🇭🇰 香港
+      - 🇻🇳 越南高速中转
+      - 🇭🇰 香港2高速中转2x
+      - 🇭🇰 香港-直连2流媒体2x
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇯🇵 日本NO.1
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 美國02-直連-1B
+      - 🇫🇷 法国1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇭🇰 香港4SS中转5x
+      - 🇺🇸 美国04
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇰🇷 韩国-首尔
+      - 🇺🇸 美国05
+      - 🇯🇵 日本7
+      - 🇦🇺 澳大利亚原生1
+      - 🇸🇬 新加坡2高速中转3x
+      - 台灣16-直連-1B
+      - 🇭🇰 香港1高速中转2x
+      - 台灣01-直連-1A
+      - 🇪🇸 西班牙IPV6
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 台灣14-直連-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇲🇴 澳门NO.2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国 1
-      - 🇹🇼 台湾 2
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇸🇬 新加坡2SS中转
+      - 🇭🇰 香港2SS中转
+      - 🇹🇷 土耳其高速中转
+      - 🇹🇼 台湾1
+      - 🇹🇼 台湾中转25x
+      - 台灣03-直連-1B
+      - 🇹🇼 台湾高速中转
+      - 🇸🇬 新加坡03奈非
+      - 🇨🇦 加拿大1-V6
+      - 🇯🇵 日本3SS中转25x
+      - 🇺🇸 美国NO.1
+      - 🇭🇰 香港5高速中转5x
+      - 台灣08-直連-1A
+      - 台灣04-直連-1A
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡1高速中转3x
+      - 🇺🇸 北美-US-圣何塞-2
+      - 台灣04-直連-1B
+      - 台灣12-直連-1A
+      - 台灣03-直連-1A
       - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 香港 2
-      - 🇺🇸 美国 7
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇹🇼 台湾 1
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇰🇷 韩国-三网优化2-1F
+      - 🇨🇦 加拿大2
+      - 🇹🇼 台湾-02-奈非
+      - 🇯🇵 日本SS中转4
+      - 🇹🇼 台湾02-3x-流媒体
+      - 🇯🇵 日本SS中转3
+      - 🇸🇬 新加坡02-V4-流媒体
+      - 🇭🇰 香港3中转25x
+      - 台灣08-直連-1B
+      - 🇸🇬 新加坡NO.1
+      - 台灣05-直連-1B
+      - 🇮🇳 印度1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇹🇼 台湾SS中转25x
+      - 🇭🇰 三网中转香港|5x
+      - 直连不能用是地区问题-1B
+      - 🇩🇪 德国 IEPL专线NO1
+      - 台灣12-直連-1B
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇸🇬 新加坡NO.2
+      - 🇪🇺 欧洲-伦敦-1
+      - 台灣14-直連-1B
+      - 台灣07-直連-1A
+      - 🇭🇰 香港 IEPL专线NO3
+      - 🇭🇰 香港4高速中转5x
+      - 台灣06-直連-1B
+      - 台灣10-直連-1B
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇹🇼 台湾2SS中转|3x
+      - 台灣07-直連-1B
+      - 台灣01-直連-1B
+      - 🇹🇼 台湾2-1A
+      - 🇯🇵 日本2高速中转
+      - 台灣13-直連-1A
+      - 🇺🇸 美国-2
+      - 🇯🇵 日本04三网中转|5x
+      - 台灣11-直連-1A
+      - 🇫🇷 法国 CM 隧道NO1
+      - 台灣11-直連-1B
+      - 🇸🇬 新加坡3高速中转3x
+      - 🇭🇰 香港6高速中转
+      - 台灣05-直連-1A
+      - 日-本SS中转25x
+      - 台灣06-直連-1A
+      - 🇯🇵 日本2SS中转15x
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 台灣13-直連-1B
+      - 🇸🇬 新加坡07奈非
+      - 🇯🇵 日本SS中转1
+      - 🇵🇱 波兰IPV6-01
+      - 🇯🇵 日本-1
+      - 台灣02-直連-1B
+      - 🇺🇸 美国1SS中转
       - 墨尔本
-      - 🇨🇦 加拿大
+      - 🇯🇵 日本NO.2
+      - 🇮🇳 印度2
+      - 🇭🇰 香港HKT中转25x
+      - 🇯🇵 日本1高速中转
+      - 🇺🇸 美国5
+      - 🇯🇵 日本SS中转25x
+      - 台灣09-直連-1B
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇰🇷 韩国-2
+      - 🇫🇷 法国IPV6-09
+      - 🇰🇷 韩国3SS中转
+      - 🇨🇦 加拿大1
+      - 🇭🇰 香港3SS中转
+      - 🇹🇭 泰国ISP高速中转3x
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 非洲 IEPL专线 NO1
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NO.2
+      - 🇰🇷 韩国高速中转3
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国高速中转4
+      - 🇭🇰 香港01-奈非-中转
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 🇺🇸 美国2高速中转
+      - 🇭🇰 香港NO.1
+      - 🇹🇼 台湾1SS中转|3x
+      - 美國02-直連-1A
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 台灣15-直連-1A
+      - 🇺🇸 美国02
+      - 台灣09-直連-1A
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇭🇰 香港直连2流媒体2x
+      - 台灣16-直連-1A
+      - 🇯🇵 日本-2
+      - 台灣10-直連-1A
+      - 台灣15-直連-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 台灣02-直連-1A
+      - 直连不能用是地区问题-1A
+      - 🇯🇵 日本 IEPL专线NO3
+      - 🇫🇷 法国IPV6-10
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾2-1B
+      - 🇫🇷 法国2
+      - 🇭🇰 香港-流媒体2x
+      - 🇭🇰 香港
+      - 🇻🇳 越南高速中转
+      - 🇭🇰 香港2高速中转2x
+      - 🇭🇰 香港-直连2流媒体2x
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇯🇵 日本NO.1
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 美國02-直連-1B
+      - 🇫🇷 法国1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇭🇰 香港4SS中转5x
+      - 🇺🇸 美国04
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇰🇷 韩国-首尔
+      - 🇺🇸 美国05
+      - 🇯🇵 日本7
+      - 🇦🇺 澳大利亚原生1
+      - 🇸🇬 新加坡2高速中转3x
+      - 台灣16-直連-1B
+      - 🇭🇰 香港1高速中转2x
+      - 台灣01-直連-1A
+      - 🇪🇸 西班牙IPV6
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 台灣14-直連-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇲🇴 澳门NO.2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -183,19 +1355,158 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇰🇷 韩国-三网优化2-1A
-      - 🇰🇷 韩国 1
-      - 🇹🇼 台湾 2
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇸🇬 新加坡2SS中转
+      - 🇭🇰 香港2SS中转
+      - 🇹🇷 土耳其高速中转
+      - 🇹🇼 台湾1
+      - 🇹🇼 台湾中转25x
+      - 台灣03-直連-1B
+      - 🇹🇼 台湾高速中转
+      - 🇸🇬 新加坡03奈非
+      - 🇨🇦 加拿大1-V6
+      - 🇯🇵 日本3SS中转25x
+      - 🇺🇸 美国NO.1
+      - 🇭🇰 香港5高速中转5x
+      - 台灣08-直連-1A
+      - 台灣04-直連-1A
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡1高速中转3x
+      - 🇺🇸 北美-US-圣何塞-2
+      - 台灣04-直連-1B
+      - 台灣12-直連-1A
+      - 台灣03-直連-1A
       - 🇰🇷 韩国-三网优化2-1C
-      - 🇭🇰 香港 2
-      - 🇺🇸 美国 7
-      - 🇰🇷 韩国-三网优化2-1E
-      - 🇰🇷 韩国-三网优化2-1D
-      - 🇹🇼 台湾 1
-      - 🇰🇷 韩国-三网优化2-1B
-      - 🇰🇷 韩国-三网优化2-1F
+      - 🇨🇦 加拿大2
+      - 🇹🇼 台湾-02-奈非
+      - 🇯🇵 日本SS中转4
+      - 🇹🇼 台湾02-3x-流媒体
+      - 🇯🇵 日本SS中转3
+      - 🇸🇬 新加坡02-V4-流媒体
+      - 🇭🇰 香港3中转25x
+      - 台灣08-直連-1B
+      - 🇸🇬 新加坡NO.1
+      - 台灣05-直連-1B
+      - 🇮🇳 印度1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇹🇼 台湾SS中转25x
+      - 🇭🇰 三网中转香港|5x
+      - 直连不能用是地区问题-1B
+      - 🇩🇪 德国 IEPL专线NO1
+      - 台灣12-直連-1B
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇸🇬 新加坡NO.2
+      - 🇪🇺 欧洲-伦敦-1
+      - 台灣14-直連-1B
+      - 台灣07-直連-1A
+      - 🇭🇰 香港 IEPL专线NO3
+      - 🇭🇰 香港4高速中转5x
+      - 台灣06-直連-1B
+      - 台灣10-直連-1B
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇹🇼 台湾2SS中转|3x
+      - 台灣07-直連-1B
+      - 台灣01-直連-1B
+      - 🇹🇼 台湾2-1A
+      - 🇯🇵 日本2高速中转
+      - 台灣13-直連-1A
+      - 🇺🇸 美国-2
+      - 🇯🇵 日本04三网中转|5x
+      - 台灣11-直連-1A
+      - 🇫🇷 法国 CM 隧道NO1
+      - 台灣11-直連-1B
+      - 🇸🇬 新加坡3高速中转3x
+      - 🇭🇰 香港6高速中转
+      - 台灣05-直連-1A
+      - 日-本SS中转25x
+      - 台灣06-直連-1A
+      - 🇯🇵 日本2SS中转15x
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 台灣13-直連-1B
+      - 🇸🇬 新加坡07奈非
+      - 🇯🇵 日本SS中转1
+      - 🇵🇱 波兰IPV6-01
+      - 🇯🇵 日本-1
+      - 台灣02-直連-1B
+      - 🇺🇸 美国1SS中转
       - 墨尔本
-      - 🇨🇦 加拿大
+      - 🇯🇵 日本NO.2
+      - 🇮🇳 印度2
+      - 🇭🇰 香港HKT中转25x
+      - 🇯🇵 日本1高速中转
+      - 🇺🇸 美国5
+      - 🇯🇵 日本SS中转25x
+      - 台灣09-直連-1B
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇰🇷 韩国-2
+      - 🇫🇷 法国IPV6-09
+      - 🇰🇷 韩国3SS中转
+      - 🇨🇦 加拿大1
+      - 🇭🇰 香港3SS中转
+      - 🇹🇭 泰国ISP高速中转3x
+      - 🇰🇷 韩国-三网优化2-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 非洲 IEPL专线 NO1
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NO.2
+      - 🇰🇷 韩国高速中转3
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国高速中转4
+      - 🇭🇰 香港01-奈非-中转
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 🇺🇸 美国2高速中转
+      - 🇭🇰 香港NO.1
+      - 🇹🇼 台湾1SS中转|3x
+      - 美國02-直連-1A
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 台灣15-直連-1A
+      - 🇺🇸 美国02
+      - 台灣09-直連-1A
+      - 🇰🇷 韩国-三网优化2-1D
+      - 🇰🇷 韩国-三网优化2-1A
+      - 🇭🇰 香港直连2流媒体2x
+      - 台灣16-直連-1A
+      - 🇯🇵 日本-2
+      - 台灣10-直連-1A
+      - 台灣15-直連-1B
+      - 🇰🇷 韩国-三网优化2-1B
+      - 台灣02-直連-1A
+      - 直连不能用是地区问题-1A
+      - 🇯🇵 日本 IEPL专线NO3
+      - 🇫🇷 法国IPV6-10
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾2-1B
+      - 🇫🇷 法国2
+      - 🇭🇰 香港-流媒体2x
+      - 🇭🇰 香港
+      - 🇻🇳 越南高速中转
+      - 🇭🇰 香港2高速中转2x
+      - 🇭🇰 香港-直连2流媒体2x
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇯🇵 日本NO.1
+      - 🇰🇷 韩国-三网优化2-1F
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 美國02-直連-1B
+      - 🇫🇷 法国1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇭🇰 香港4SS中转5x
+      - 🇺🇸 美国04
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇰🇷 韩国-首尔
+      - 🇺🇸 美国05
+      - 🇯🇵 日本7
+      - 🇦🇺 澳大利亚原生1
+      - 🇸🇬 新加坡2高速中转3x
+      - 台灣16-直連-1B
+      - 🇭🇰 香港1高速中转2x
+      - 台灣01-直連-1A
+      - 🇪🇸 西班牙IPV6
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 台灣14-直連-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇲🇴 澳门NO.2
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
