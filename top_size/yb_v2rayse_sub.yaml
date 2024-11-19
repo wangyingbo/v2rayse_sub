@@ -7,12 +7,12 @@
 # 节点类型：vmess, trojan
 ####################################
 mixed-port: 7890
-allow-lan: false
-log-level: silent
-external-controller: 127.0.0.1:9090
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
 dns:
   enabled: true
-  listen: 127.0.0.1:1053
+  listen: 0.0.0.0:1053
   ipv6: true
   default-nameserver:
     - 223.5.5.5
@@ -80,7 +80,7 @@ dns:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
   fallback-filter:
-    geoip: true
+    geoip: false
     ipcidr:
       - 240.0.0.0/4
       - 0.0.0.0/32
@@ -1140,6 +1140,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
       - 🇺🇲 美国节点
       - 🇯🇵 日本节点
@@ -4318,6 +4319,12 @@ proxy-groups:
       - 美国_由快嘴科技提供：kkzui.com95_2
       - 美国_由快嘴科技提供：kkzui.com123_2_2
       - 美国_由快嘴科技提供：kkzui.com176_2
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
   - name: 🇯🇵 日本节点
     type: url-test
     url: http://www.gstatic.com/generate_204
