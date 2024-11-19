@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-11-18 20:12:08
+# 创建时间：2024-11-19 20:00:13
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1049
 # 节点类型：vmess, trojan
@@ -1143,11 +1143,7 @@ proxy-groups:
       - 🇸🇬 狮城节点
       - 🇺🇲 美国节点
       - 🇯🇵 日本节点
-      - 🚀 手动切换
       - DIRECT
-  - name: 🚀 手动切换
-    type: select
-    proxies:
       - 澳大利亚_由快嘴科技提供：kkzui.com43
       - 巴西_由快嘴科技提供：kkzui.com142
       - 比利时_由快嘴科技提供;kkzui.com24
@@ -2199,9 +2195,11 @@ proxy-groups:
       - 美国_由快嘴科技提供：kkzui.com176_2
   - name: ♻️ 自动选择
     type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 5
+    retries: 3
+    failover: true
     proxies:
       - 澳大利亚_由快嘴科技提供：kkzui.com43
       - 巴西_由快嘴科技提供：kkzui.com142
@@ -3252,6 +3250,15 @@ proxy-groups:
       - 美国_由快嘴科技提供：kkzui.com95_2
       - 美国_由快嘴科技提供：kkzui.com123_2_2
       - 美国_由快嘴科技提供：kkzui.com176_2
+  - name: 💬 OpenAi
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 狮城节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - DIRECT
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -4319,26 +4326,23 @@ proxy-groups:
       - 美国_由快嘴科技提供：kkzui.com123_2_2
       - 美国_由快嘴科技提供：kkzui.com176_2
   - name: 🇯🇵 日本节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 600
     proxies:
       - 日本_由快嘴科技提供;kkzui.com29
   - name: 🇸🇬 狮城节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 600
     proxies:
       - 49_由快嘴科技提供：kkzui.com新加坡
       - 154_由快嘴科技提供：kkzui.com新加坡
       - 新加坡_由快嘴科技提供：kkzui.com90
   - name: 🇺🇲 美国节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 600
     proxies:
       - 美国_由快嘴科技提供：kkzui.com151_2
       - 美国_由快嘴科技提供：kkzui.com20_2
