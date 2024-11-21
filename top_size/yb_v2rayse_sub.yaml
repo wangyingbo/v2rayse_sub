@@ -1,10 +1,10 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-11-20 13:56:52
+# 创建时间：2024-11-20 14:23:04
 # 使用模版：ACL4SSR_Online_Mini_Ai.ini
-# 节点数量：16
-# 节点类型：vmess, trojan
+# 节点数量：23
+# 节点类型：trojan, vmess
 ####################################
 mixed-port: 7890
 allow-lan: false
@@ -86,15 +86,16 @@ dns:
       - 0.0.0.0/32
 
 proxies:
+  - {"name":"未知","type":"trojan","server":"customer-94-131-115-71.stark-industries.solutions","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇷🇺_RU_俄罗斯->🇺🇸_US_美国","type":"trojan","server":"185.231.206.12","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","sni":"customer-185-231-206-12.stark-industries.solutions","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇨🇳_CN_中国->🇺🇸_US_美国","type":"vmess","server":"183.236.51.23","port":52112,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇦_UA_乌克兰->🇬🇧_GB_英国","type":"trojan","server":"95.164.85.39","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","sni":"customer-95-164-85-39.stark-industries.solutions","skip-cert-verify":true,"network":"tcp"}
   - {"name":"未知_1_1","type":"trojan","server":"customer-94-131-115-71.stark-industries.solutions","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸_US_美国->🇬🇧_GB_英国","type":"trojan","server":"94.131.115.71","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","sni":"customer-94-131-115-71.stark-industries.solutions","skip-cert-verify":true,"network":"tcp"}
   - {"name":"未知_2_1","type":"trojan","server":"customer-95-164-85-39.stark-industries.solutions","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"未知_3","type":"trojan","server":"customer-95-164-38-151.stark-industries.solutions","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"未知_3_1","type":"trojan","server":"customer-95-164-38-151.stark-industries.solutions","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇦_UA_乌克兰->🇷🇺_RU_俄罗斯","type":"trojan","server":"95.164.38.151","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","sni":"customer-95-164-38-151.stark-industries.solutions","skip-cert-verify":true,"network":"tcp"}
   - {"name":"未知_1_2","type":"trojan","server":"customer-185-231-206-12.stark-industries.solutions","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇷🇺_RU_俄罗斯->🇺🇸_US_美国","type":"trojan","server":"185.231.206.12","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","sni":"customer-185-231-206-12.stark-industries.solutions","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇮🇷_IR_伊朗->🇫🇷_FR_法国","type":"vmess","server":"2.182.174.21","port":9090,"cipher":"auto","uuid":"fddf88ed-8c70-42ad-c12e-5f40841e6f00","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇲🇩_MD_摩尔多瓦","type":"trojan","server":"45.67.229.222","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","sni":"customer-45-67-229-222.stark-industries.solutions","skip-cert-verify":true,"network":"tcp"}
   - {"name":"未知_2_2","type":"trojan","server":"customer-94-131-115-71.stark-industries.solutions","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","skip-cert-verify":true,"network":"tcp"}
@@ -102,21 +103,28 @@ proxies:
   - {"name":"🇺🇸_US_美国->🇬🇧_GB_英国_1","type":"trojan","server":"94.131.115.71","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","sni":"customer-94-131-115-71.stark-industries.solutions","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸_US_美国_5","type":"trojan","server":"104.19.252.45","port":443,"udp":true,"password":"WOeXShhJpL","sni":"06jzus.zdzdzd.xyz","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/juzigongyi","headers":{"host":"06jzus.zdzdzd.xyz"}}}
   - {"name":"🇺🇸_US_美国->🇬🇧_GB_英国_2","type":"trojan","server":"16.170.88.44","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇩🇪_DE_德国_1","type":"trojan","server":"3.120.106.178","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"未知_1","type":"trojan","server":"customer-94-131-115-71.stark-industries.solutions","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇺🇸_US_美国_9","type":"trojan","server":"16.170.88.44","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"🇬🇧_GB_英国","type":"trojan","server":"51.44.140.229","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.ukhttp/1.1","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"未知_2","type":"trojan","server":"customer-45-67-229-222.stark-industries.solutions","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"未知_3_2","type":"trojan","server":"customer-95-164-85-39.stark-industries.solutions","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","skip-cert-verify":true,"network":"tcp"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 未知
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇦_UA_乌克兰->🇬🇧_GB_英国
       - 未知_1_1
       - 🇺🇸_US_美国->🇬🇧_GB_英国
       - 未知_2_1
-      - 未知_3
+      - 未知_3_1
       - 🇺🇦_UA_乌克兰->🇷🇺_RU_俄罗斯
       - 未知_1_2
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
       - 🇮🇷_IR_伊朗->🇫🇷_FR_法国
       - 🇲🇩_MD_摩尔多瓦
       - 未知_2_2
@@ -124,6 +132,12 @@ proxy-groups:
       - 🇺🇸_US_美国->🇬🇧_GB_英国_1
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国->🇬🇧_GB_英国_2
+      - 🇩🇪_DE_德国_1
+      - 未知_1
+      - 🇺🇸_US_美国_9
+      - 🇬🇧_GB_英国
+      - 未知_2
+      - 未知_3_2
   - name: ♻️ 自动选择
     type: url-test
     url: https://www.gstatic.com/generate_204
@@ -132,15 +146,16 @@ proxy-groups:
     retries: 2
     failover: true
     proxies:
+      - 未知
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇦_UA_乌克兰->🇬🇧_GB_英国
       - 未知_1_1
       - 🇺🇸_US_美国->🇬🇧_GB_英国
       - 未知_2_1
-      - 未知_3
+      - 未知_3_1
       - 🇺🇦_UA_乌克兰->🇷🇺_RU_俄罗斯
       - 未知_1_2
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
       - 🇮🇷_IR_伊朗->🇫🇷_FR_法国
       - 🇲🇩_MD_摩尔多瓦
       - 未知_2_2
@@ -148,21 +163,28 @@ proxy-groups:
       - 🇺🇸_US_美国->🇬🇧_GB_英国_1
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国->🇬🇧_GB_英国_2
+      - 🇩🇪_DE_德国_1
+      - 未知_1
+      - 🇺🇸_US_美国_9
+      - 🇬🇧_GB_英国
+      - 未知_2
+      - 未知_3_2
   - name: 💬 OpenAi
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 未知
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇦_UA_乌克兰->🇬🇧_GB_英国
       - 未知_1_1
       - 🇺🇸_US_美国->🇬🇧_GB_英国
       - 未知_2_1
-      - 未知_3
+      - 未知_3_1
       - 🇺🇦_UA_乌克兰->🇷🇺_RU_俄罗斯
       - 未知_1_2
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
       - 🇮🇷_IR_伊朗->🇫🇷_FR_法国
       - 🇲🇩_MD_摩尔多瓦
       - 未知_2_2
@@ -170,6 +192,12 @@ proxy-groups:
       - 🇺🇸_US_美国->🇬🇧_GB_英国_1
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国->🇬🇧_GB_英国_2
+      - 🇩🇪_DE_德国_1
+      - 未知_1
+      - 🇺🇸_US_美国_9
+      - 🇬🇧_GB_英国
+      - 未知_2
+      - 未知_3_2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -187,15 +215,16 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 未知
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
       - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇦_UA_乌克兰->🇬🇧_GB_英国
       - 未知_1_1
       - 🇺🇸_US_美国->🇬🇧_GB_英国
       - 未知_2_1
-      - 未知_3
+      - 未知_3_1
       - 🇺🇦_UA_乌克兰->🇷🇺_RU_俄罗斯
       - 未知_1_2
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
       - 🇮🇷_IR_伊朗->🇫🇷_FR_法国
       - 🇲🇩_MD_摩尔多瓦
       - 未知_2_2
@@ -203,6 +232,12 @@ proxy-groups:
       - 🇺🇸_US_美国->🇬🇧_GB_英国_1
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国->🇬🇧_GB_英国_2
+      - 🇩🇪_DE_德国_1
+      - 未知_1
+      - 🇺🇸_US_美国_9
+      - 🇬🇧_GB_英国
+      - 未知_2
+      - 未知_3_2
 
 rules:
 # 本地/局域网地址
