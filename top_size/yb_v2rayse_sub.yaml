@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-11-20 14:23:04
-# 使用模版：ACL4SSR_Online_Mini_Ai.ini
-# 节点数量：23
+# 创建时间：2024-11-20 16:59:25
+# 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
+# 节点数量：22
 # 节点类型：trojan, vmess
 ####################################
 mixed-port: 7890
@@ -88,7 +88,6 @@ dns:
 proxies:
   - {"name":"未知","type":"trojan","server":"customer-94-131-115-71.stark-industries.solutions","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇷🇺_RU_俄罗斯->🇺🇸_US_美国","type":"trojan","server":"185.231.206.12","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","sni":"customer-185-231-206-12.stark-industries.solutions","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇨🇳_CN_中国->🇺🇸_US_美国","type":"vmess","server":"183.236.51.23","port":52112,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇦_UA_乌克兰->🇬🇧_GB_英国","type":"trojan","server":"95.164.85.39","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","sni":"customer-95-164-85-39.stark-industries.solutions","skip-cert-verify":true,"network":"tcp"}
   - {"name":"未知_1_1","type":"trojan","server":"customer-94-131-115-71.stark-industries.solutions","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","skip-cert-verify":true,"network":"tcp"}
   - {"name":"🇺🇸_US_美国->🇬🇧_GB_英国","type":"trojan","server":"94.131.115.71","port":443,"udp":true,"password":"c5691b8f-d833-41e4-9295-769f3edb4cd2","sni":"customer-94-131-115-71.stark-industries.solutions","skip-cert-verify":true,"network":"tcp"}
@@ -114,10 +113,17 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇸🇬 狮城节点
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
+      - 🚀 手动切换
       - DIRECT
+  - name: 🚀 手动切换
+    type: select
+    proxies:
       - 未知
       - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇦_UA_乌克兰->🇬🇧_GB_英国
       - 未知_1_1
       - 🇺🇸_US_美国->🇬🇧_GB_英国
@@ -142,42 +148,12 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 1
-    retries: 2
+    tolerance: 3000
+    retries: 3
     failover: true
     proxies:
       - 未知
       - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇺🇦_UA_乌克兰->🇬🇧_GB_英国
-      - 未知_1_1
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
-      - 未知_2_1
-      - 未知_3_1
-      - 🇺🇦_UA_乌克兰->🇷🇺_RU_俄罗斯
-      - 未知_1_2
-      - 🇮🇷_IR_伊朗->🇫🇷_FR_法国
-      - 🇲🇩_MD_摩尔多瓦
-      - 未知_2_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
-      - 🇺🇸_US_美国->🇬🇧_GB_英国_1
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国->🇬🇧_GB_英国_2
-      - 🇩🇪_DE_德国_1
-      - 未知_1
-      - 🇺🇸_US_美国_9
-      - 🇬🇧_GB_英国
-      - 未知_2
-      - 未知_3_2
-  - name: 💬 OpenAi
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - ♻️ 自动选择
-      - 未知
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇦_UA_乌克兰->🇬🇧_GB_英国
       - 未知_1_1
       - 🇺🇸_US_美国->🇬🇧_GB_英国
@@ -217,7 +193,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 未知
       - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇦_UA_乌克兰->🇬🇧_GB_英国
       - 未知_1_1
       - 🇺🇸_US_美国->🇬🇧_GB_英国
@@ -238,6 +213,21 @@ proxy-groups:
       - 🇬🇧_GB_英国
       - 未知_2
       - 未知_3_2
+  - name: 🇺🇲 美国节点
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 3000
+    retries: 3
+    failover: true
+    proxies:
+      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇬🇧_GB_英国->🇺🇸_US_美国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国_1
+      - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇬🇧_GB_英国_2
+      - 🇺🇸_US_美国_9
 
 rules:
 # 本地/局域网地址
@@ -2039,24 +2029,6 @@ rules:
   - DOMAIN-SUFFIX,steamchina.com,🎯 全球直连
   - DOMAIN-SUFFIX,steamcontent.com,🎯 全球直连
   - DOMAIN-SUFFIX,steamusercontent.com,🎯 全球直连
-# 内容：OpenAi
-# 数量：16条
-  - DOMAIN-KEYWORD,openai,💬 OpenAi
-  - DOMAIN-SUFFIX,auth0.com,💬 OpenAi
-  - DOMAIN-SUFFIX,challenges.cloudflare.com,💬 OpenAi
-  - DOMAIN-SUFFIX,chatgpt.com,💬 OpenAi
-  - DOMAIN-SUFFIX,client-api.arkoselabs.com,💬 OpenAi
-  - DOMAIN-SUFFIX,events.statsigapi.net,💬 OpenAi
-  - DOMAIN-SUFFIX,featuregates.org,💬 OpenAi
-  - DOMAIN-SUFFIX,identrust.com,💬 OpenAi
-  - DOMAIN-SUFFIX,intercom.io,💬 OpenAi
-  - DOMAIN-SUFFIX,intercomcdn.com,💬 OpenAi
-  - DOMAIN-SUFFIX,oaistatic.com,💬 OpenAi
-  - DOMAIN-SUFFIX,oaiusercontent.com,💬 OpenAi
-  - DOMAIN-SUFFIX,openai.com,💬 OpenAi
-  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,💬 OpenAi
-  - DOMAIN-SUFFIX,sentry.io,💬 OpenAi
-  - DOMAIN-SUFFIX,stripe.com,💬 OpenAi
 # 长风网站，自动注入
   - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
   - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
