@@ -5,291 +5,1163 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇭🇰 中国-香港-001-1B, server: 212.192.12.97, port: 3732, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A, server: 195.133.52.63, port: 80, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇦 加拿大-多伦多-001-1B, server: 166.88.130.48, port: 9406, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇬🇧 英国-伦敦-HY-001-1A, server: 5.39.254.34, port: 5277, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: ZTg1ZWVjNjAxZmRlNGI5MA==, udp: true}
-  - {name: 🇯🇵 日本NEW01, server: fr-new01.daluquan.top, port: 8880, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: fr-new01.daluquan.top}}, udp: true}
-  - {name: 🇬🇧 英国-伦敦-001-1B, server: 5.39.254.34, port: 3732, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇬🇧 英国-伦敦-HY-001-1C, server: 5.39.254.34, port: 5277, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: ZTg1ZWVjNjAxZmRlNGI5MA==, udp: true}
-  - {name: 🇺🇸 美国 01 电信推荐, server: phx-plus-1ddns.faforex.eu.org, port: 18443, type: vless, uuid: 07f61183-725c-4d8e-b7f4-772668573e85, tls: true, reality-opts: {public-key: 8233FxCRw1a_aCJ8d1HwHBMD_fABUNNW7rsrFe3vK0s, short-id: "e6658462" }, servername: www.tesla.com, client-fingerprint: ios, network: tcp, udp: true}
-  - {name: 🇺🇸 美国-拉斯维加斯-001-1A, server: 209.141.61.187, port: 3348, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇭🇰 中国-香港-002-1A, server: 45.144.174.75, port: 8080, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B, server: 195.133.52.63, port: 80, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, udp: true}
-  - {name: 🇷🇺 俄罗斯, server: 45.140.169.231, port: 8080, type: hysteria2, password: 07f61183-725c-4d8e-b7f4-772668573e85, auth: 07f61183-725c-4d8e-b7f4-772668573e85, sni: www.bing.com, up: 50, down: 50, skip-cert-verify: true, udp: true}
-  - {name: 🇷🇺 俄罗斯-莫斯科-HY-001-1B, server: 46.17.44.62, port: 80, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: MGJiYThkMjgwNDE1Y2FkMg==, udp: true}
-  - {name: 🇭🇰 中国-香港-002-1C, server: 45.144.174.75, port: 8080, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇭🇰 中国-香港-HY-001-1A, server: 212.192.12.97, port: 80, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
-  - {name: 🇨🇭 瑞士-苏黎世-HY-001-1A, server: 194.87.18.224, port: 80, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, udp: true}
-  - {name: 🇷🇺 俄罗斯-莫斯科-HY-001-1C, server: 46.17.44.62, port: 80, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: MGJiYThkMjgwNDE1Y2FkMg==, udp: true}
-  - {name: 🇧🇷 巴西NEW03优选, server: go.daluquan.top, port: 8880, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: go.daluquan.top}}, udp: true}
-  - {name: 🇸🇬 新加坡-HY-001-1B, server: 103.136.68.253, port: 80, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: OWU2MmNkZDU3YjUwMTZkNQ==, udp: true}
-  - {name: 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A, server: nmehw.kovmk.website, port: 1521, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: false, udp: true}
-  - {name: 🇷🇺 俄罗斯-莫斯科-001-1B, server: 176.32.35.194, port: 9406, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇭🇰 中国-香港-HY-002-1B, server: 45.144.174.75, port: 3348, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
-  - {name: 🇭🇰 中国-香港-001-1C, server: 212.192.12.97, port: 3732, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇺🇸 美国-拉斯维加斯-HY-001-1C, server: 209.141.61.187, port: 3732, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: ZTQxNWU5ZjUxY2Y5Y2U2Yw==, udp: true}
-  - {name: 🇸🇬 新加坡-001-1A, server: 103.136.68.253, port: 3732, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇦🇺 墨尔本, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 2d21cd7a-e242-4c86-965a-e7081e083bdc, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
-  - {name: 🇺🇸 美国-拉斯维加斯-001-1C, server: 209.141.61.187, port: 3348, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇯🇵 日本, server: 23.26.34.209, port: 8080, type: hysteria2, password: 07f61183-725c-4d8e-b7f4-772668573e85, auth: 07f61183-725c-4d8e-b7f4-772668573e85, sni: www.bing.com, up: 50, down: 50, skip-cert-verify: true, udp: true}
-  - {name: 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C, server: nmehw.kovmk.website, port: 1521, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: false, udp: true}
-  - {name: 🇷🇺 俄罗斯-莫斯科-HY-002-1C, server: 176.32.35.194, port: 6323, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: NDY2MDRjODQ5MjhkM2ZkNw==, udp: true}
-  - {name: 🇭🇰 中国-香港-001-1A, server: 212.192.12.97, port: 3732, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇸🇬 新加坡-001-1B, server: 103.136.68.253, port: 3732, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇫🇷 法国 01 联通推荐, server: frankfurt.faforex.eu.org, port: 18443, type: vless, uuid: 07f61183-725c-4d8e-b7f4-772668573e85, tls: true, reality-opts: {public-key: bRUCz8KaceEKnBFT5V7czJj1t0OAu_nbKnMyVfyeK1I, short-id: "e6658462" }, servername: www.tesla.com, client-fingerprint: firefox, network: tcp, udp: true}
-  - {name: 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C, server: 195.133.52.63, port: 80, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, udp: true}
-  - {name: 🇷🇺 俄罗斯-莫斯科-HY-001-1A, server: 46.17.44.62, port: 80, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: MGJiYThkMjgwNDE1Y2FkMg==, udp: true}
-  - {name: 🇭🇰 中国-香港-HY-002-1A, server: 45.144.174.75, port: 3348, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
-  - {name: 🇷🇺 俄罗斯-莫斯科-HY-002-1B, server: 176.32.35.194, port: 6323, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: NDY2MDRjODQ5MjhkM2ZkNw==, udp: true}
-  - {name: 🇭🇰 中国-香港-002-1B, server: 45.144.174.75, port: 8080, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇨🇭 瑞士-苏黎世-HY-001-1B, server: 194.87.18.224, port: 80, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 英国-伦敦-001-1A, server: 5.39.254.34, port: 3732, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇷🇺 俄罗斯-莫斯科-001-1C, server: 176.32.35.194, port: 9406, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇸🇬 新加坡NEW01, server: de-new01.daluquan.top, port: 8080, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: de-new01.daluquan.top}}, udp: true}
-  - {name: 🇬🇧 英国-伦敦-HY-001-1B, server: 5.39.254.34, port: 5277, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: ZTg1ZWVjNjAxZmRlNGI5MA==, udp: true}
-  - {name: 🇷🇺 俄罗斯-莫斯科-001-1A, server: 176.32.35.194, port: 9406, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇸🇬 新加坡-HY-001-1A, server: 103.136.68.253, port: 80, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: OWU2MmNkZDU3YjUwMTZkNQ==, udp: true}
-  - {name: 🇬🇧 英国-伦敦-001-1C, server: 5.39.254.34, port: 3732, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇺🇸 美国NEW01, server: us-new01.daluquan.top, port: 8880, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: us-new01.daluquan.top}}, udp: true}
-  - {name: 🇸🇬 新加坡-001-1C, server: 103.136.68.253, port: 3732, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇺🇸 美国-拉斯维加斯-HY-001-1A, server: 209.141.61.187, port: 3732, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: ZTQxNWU5ZjUxY2Y5Y2U2Yw==, udp: true}
-  - {name: 🇨🇦 加拿大-多伦多-HY-001-1B, server: 166.88.130.48, port: 3307, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇭 瑞士-苏黎世-HY-001-1C, server: 194.87.18.224, port: 80, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 韩国NEW01, server: uk-new01.daluquan.top, port: 8880, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: uk-new01.daluquan.top}}, udp: true}
-  - {name: 🇺🇸 美国-拉斯维加斯-001-1B, server: 209.141.61.187, port: 3348, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇭🇰 香港, server: 141.11.217.113, port: 8080, type: hysteria2, password: 07f61183-725c-4d8e-b7f4-772668573e85, auth: 07f61183-725c-4d8e-b7f4-772668573e85, sni: www.bing.com, up: 50, down: 50, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 新加坡-HY-001-1C, server: 103.136.68.253, port: 80, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: OWU2MmNkZDU3YjUwMTZkNQ==, udp: true}
-  - {name: 🇨🇦 加拿大-多伦多-001-1A, server: 166.88.130.48, port: 9406, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇨🇦 加拿大-多伦多-001-1C, server: 166.88.130.48, port: 9406, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇸🇬 新加坡NEW01优选, server: go.daluquan.top, port: 8080, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: de-new01.daluquan.top}}, udp: true}
-  - {name: 🇭🇰 中国-香港-HY-001-1B, server: 212.192.12.97, port: 80, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
+  - {name: 🇯🇵 日本中转 04, server: gstdnb.myfczy169.top, port: 38649, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 台灣02-直連, server: uprica.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: AkIE4zN2055Onan1WBh8L4XRJUHfYQJhze8krWeSqXE, short-id: "dc2cad0c" }, servername: gamedownloads-rockstargames-com.akamaized.net, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇭🇰 中国-香港-HY-002-1B, server: 45.144.174.75, port: 3348, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
+  - {name: 🇦🇺 澳大利亚原生1, server: haa.dashuai.cyou, port: 45062, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇨🇭 瑞士-苏黎世-HY-001-1F, server: 194.87.18.224, port: 80, type: hysteria2, password: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, auth: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, up: 50, down: 50, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港-1C, server: 141.11.217.113, port: 8080, type: hysteria2, password: 1b7fc4ab-f41d-4e7f-8cd4-2bcbfc139230, auth: 1b7fc4ab-f41d-4e7f-8cd4-2bcbfc139230, sni: www.bing.com, up: 50, down: 50, skip-cert-verify: true, udp: true}
+  - {name: 🇹🇼 台湾直连, server: tw.biu001.xyz, port: 12233, type: vmess, uuid: f938e920-6f71-4dda-93e7-891c7f97f780, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: tw.biu001.xyz}}, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯-HY-001-1A, server: 209.141.61.187, port: 3732, type: hysteria2, password: b4224280-cc53-4b8a-90cc-221fe74c9e31, auth: b4224280-cc53-4b8a-90cc-221fe74c9e31, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: ZTQxNWU5ZjUxY2Y5Y2U2Yw==, udp: true}
+  - {name: 🇺🇸 美国5, server: yx.sulink.one, port: 80, type: vmess, uuid: 108ae2c6-664a-43f9-89e2-a2eba5d61987, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: us5.sulink.one}}, udp: true}
+  - {name: 🇭🇰 中国-香港-HY-002-1E, server: 45.144.174.75, port: 3348, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
+  - {name: 🇯🇵 日本-2, server: oracle-amd-osaka1.lanmaoyun.icu, port: 30001, type: hysteria2, password: fcfd6856-eb70-4071-bab2-f63f222dc198, auth: fcfd6856-eb70-4071-bab2-f63f222dc198, sni: osaka.nodes.lanmaoyun.icu, up: 100, down: 1000, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 新加坡-001-1A, server: 103.136.68.253, port: 3732, type: vless, uuid: b4224280-cc53-4b8a-90cc-221fe74c9e31, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 美國02-直連, server: node-us-2.sudatech.store, port: 50002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Yn0atGB5uY5DZbhh2G1cOfeoNRDoRQ_v0pvyBZcx2w4, short-id: "6b6dbc62" }, servername: www.douyin.com, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 🇭🇰 香港-直连2流媒体2x, server: hkzl2.sulink.one, port: 33335, type: vless, uuid: 108ae2c6-664a-43f9-89e2-a2eba5d61987, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: nrKRUl1V-kWtkQLpKARG3GIVhmrvxeGLooWks_-h01E, short-id: "edaf1b0b" }, servername: www.python.org, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 台灣01-直連, server: 82pavp.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: tiShGy9uYh9oBbGvZPrqFseCseEAgWboWAoYsnkGWnM, short-id: "01c3fb99" }, servername: www.douyin.com, client-fingerprint: firefox, network: tcp, udp: true}
   - {name: 🇭🇰 中国-香港-HY-001-1C, server: 212.192.12.97, port: 80, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
-  - {name: 🇷🇺 俄罗斯-莫斯科-HY-002-1A, server: 176.32.35.194, port: 6323, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: NDY2MDRjODQ5MjhkM2ZkNw==, udp: true}
-  - {name: 🇨🇦 加拿大-多伦多-HY-001-1A, server: 166.88.130.48, port: 3307, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇦 加拿大-多伦多-HY-001-1C, server: 166.88.130.48, port: 3307, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 中国-香港-HY-002-1C, server: 45.144.174.75, port: 3348, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
-  - {name: 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B, server: nmehw.kovmk.website, port: 1521, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: false, udp: true}
-  - {name: 🇺🇸 美国-拉斯维加斯-HY-001-1B, server: 209.141.61.187, port: 3732, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: ZTQxNWU5ZjUxY2Y5Y2U2Yw==, udp: true}
+  - {name: 🇰🇷 韩国-2, server: oracle-arm-chuncheon2.lanmaoyun.icu, port: 30001, type: hysteria2, password: fcfd6856-eb70-4071-bab2-f63f222dc198, auth: fcfd6856-eb70-4071-bab2-f63f222dc198, sni: korea.nodes.lanmaoyun.icu, up: 100, down: 1000, skip-cert-verify: true, udp: true}
+  - {name: 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A, server: 195.133.52.63, port: 80, type: hysteria2, password: b4224280-cc53-4b8a-90cc-221fe74c9e31, auth: b4224280-cc53-4b8a-90cc-221fe74c9e31, up: 50, down: 50, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 中国-香港-004-1D, server: 212.192.13.51, port: 7328, type: vless, uuid: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇸🇬 新加坡-HY-001-1E, server: 103.136.68.253, port: 80, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: OWU2MmNkZDU3YjUwMTZkNQ==, udp: true}
+  - {name: 🇸🇬 新加坡中转 03, server: gstdnb.myfczy169.top, port: 11599, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇺🇸 美国-2, server: us02.sulink.one, port: 13334, type: vless, uuid: 108ae2c6-664a-43f9-89e2-a2eba5d61987, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: nrKRUl1V-kWtkQLpKARG3GIVhmrvxeGLooWks_-h01E, short-id: "edaf1b0b" }, servername: www.python.org, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-HY-001-1C, server: 46.17.44.62, port: 80, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: MGJiYThkMjgwNDE1Y2FkMg==, udp: true}
+  - {name: 🇬🇧 英国 IEPL专线NO1, server: sh3.needss.top, port: 54774, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇸🇬 新加坡-HY-001-1A, server: 103.136.68.253, port: 80, type: hysteria2, password: b4224280-cc53-4b8a-90cc-221fe74c9e31, auth: b4224280-cc53-4b8a-90cc-221fe74c9e31, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: OWU2MmNkZDU3YjUwMTZkNQ==, udp: true}
+  - {name: 🇺🇸 美国-纽约-001-1C, server: 207.90.237.199, port: 80, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯-001-1F, server: 209.141.61.187, port: 3348, type: vless, uuid: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, tls: false, network: ws, ws-opts: {path: /}, udp: true}
   - {name: 🇧🇷 巴西NEW03, server: us-new03.daluquan.top, port: 8880, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: us-new03.daluquan.top}}, udp: true}
+  - {name: 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C, server: nmehw.kovmk.website, port: 1521, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: false, udp: true}
+  - {name: 🇦🇺 墨尔本-1A, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: d1643154-19e4-4b56-8059-4df9c6c6b25e, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 🇷🇺 俄罗斯-1A, server: 45.140.169.231, port: 8080, type: hysteria2, password: 07f61183-725c-4d8e-b7f4-772668573e85, auth: 07f61183-725c-4d8e-b7f4-772668573e85, sni: www.bing.com, up: 50, down: 50, skip-cert-verify: true, udp: true}
+  - {name: 🇩🇪 欧洲-法兰克福-1, server: oracle-arm-frankfurt1.lanmaoyun.icu, port: 30001, type: hysteria2, password: fcfd6856-eb70-4071-bab2-f63f222dc198, auth: fcfd6856-eb70-4071-bab2-f63f222dc198, sni: frankfurt1.nodes.lanmaoyun.icu, up: 100, down: 1000, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇭 瑞士-苏黎世-HY-001-1A, server: 194.87.18.224, port: 80, type: hysteria2, password: b4224280-cc53-4b8a-90cc-221fe74c9e31, auth: b4224280-cc53-4b8a-90cc-221fe74c9e31, up: 50, down: 50, skip-cert-verify: true, udp: true}
+  - {name: 台灣03-直連, server: vajgb9.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: YyW3SIQ8ZPzMlIr0GHupAhioBDlDtoc9BzTVwuAngDM, short-id: "8b6dc1a5" }, servername: www.lovelive-anime.jp, client-fingerprint: qq, network: tcp, udp: true}
+  - {name: 🇹🇼 台湾中转25x, server: s2.sulink.one, port: 13109, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯-HY-001-1F, server: 209.141.61.187, port: 3732, type: hysteria2, password: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, auth: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: ZTQxNWU5ZjUxY2Y5Y2U2Yw==, udp: true}
+  - {name: 台灣11-直連, server: d2majj.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: R6t4HkriPZSw1MDzNHpBe0d-R6S9nlJI7XJVcEw-cHc, short-id: "47e3a139" }, servername: addons.mozilla.org, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 台灣13-直連, server: pqdabn.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: zNaNwyaEjGqqD1RSFuJAoQA-e4OiTTUgJm3Bi6_BwXY, short-id: "14da529a" }, servername: www.douyin.com, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 🇯🇵 日本-1B, server: 23.26.34.209, port: 8080, type: hysteria2, password: 1b7fc4ab-f41d-4e7f-8cd4-2bcbfc139230, auth: 1b7fc4ab-f41d-4e7f-8cd4-2bcbfc139230, sni: www.bing.com, up: 50, down: 50, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 美国 01 电信推荐-1B, server: phx-plus-1ddns.faforex.eu.org, port: 18443, type: vless, uuid: 1b7fc4ab-f41d-4e7f-8cd4-2bcbfc139230, tls: true, reality-opts: {public-key: 8233FxCRw1a_aCJ8d1HwHBMD_fABUNNW7rsrFe3vK0s, short-id: "e6658462" }, servername: www.tesla.com, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯-001-1A, server: 209.141.61.187, port: 3348, type: vless, uuid: b4224280-cc53-4b8a-90cc-221fe74c9e31, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇸🇬 新加坡-001-1F, server: 103.136.68.253, port: 3732, type: vless, uuid: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇭🇰 香港2直连, server: hk2.biu001.xyz, port: 12345, type: vmess, uuid: f938e920-6f71-4dda-93e7-891c7f97f780, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: hk2.biu001.xyz}}, udp: true}
+  - {name: 🇭🇰 中国-香港-HY-002-1C, server: 45.144.174.75, port: 3348, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
+  - {name: 台灣04-直連, server: uidenq.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 6SI4EqSEK8Zv3eqPfcAbmXm4fbDWh0XzP9Ltu2tSTD0, short-id: "9ab88ed5" }, servername: www.lovelive-anime.jp, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇰🇿 哈萨克斯坦中转, server: gstdnb.myfczy169.top, port: 21081, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇸🇬 新加坡 IEPL专线NO1, server: i.needss.top, port: 20015, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇳🇱 荷兰 CM 隧道NO1, server: qd.needss.top, port: 20025, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇮🇩 印尼 IEPL专线NO1, server: i.needss.top, port: 25129, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-001-1E, server: 176.32.35.194, port: 9406, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇭🇰 中国-香港-001-1E, server: 212.192.12.97, port: 6478, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇯🇵 日本中转 01, server: gstdnb.myfczy169.top, port: 13706, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇭🇰 香港直连2流媒体2x, server: hkzl2.sulink.one, port: 20521, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港中转 04, server: gstdnb.myfczy169.top, port: 11618, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇯🇵 日本NO.2, server: xdd.dashuai.cyou, port: 45057, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇹🇼 台湾2, server: xdd.dashuai.cyou, port: 45077, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯-HY-001-1B, server: 209.141.61.187, port: 3732, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: ZTQxNWU5ZjUxY2Y5Y2U2Yw==, udp: true}
+  - {name: 🇭🇰 中国-香港-002-1D, server: 45.144.174.75, port: 8080, type: vless, uuid: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇭🇰 香港中转 05, server: gstdnb.myfczy169.top, port: 20901, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇸🇬 新加坡NO.2, server: xdd.dashuai.cyou, port: 45055, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇸🇬 新加坡03奈非-5x, server: sg03v6.sulink.one, port: 22052, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 🇬🇧 英国-伦敦-001-1F, server: 5.39.254.34, port: 3732, type: vless, uuid: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇭🇰 三网中转香港|5x, server: ahkt.sulink.one, port: 21064, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 中国-香港-HY-001-1E, server: 212.192.12.97, port: 80, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-HY-002-1F, server: 176.32.35.194, port: 6323, type: hysteria2, password: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, auth: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: NDY2MDRjODQ5MjhkM2ZkNw==, udp: true}
+  - {name: 🇬🇧 英国-伦敦-HY-001-1C, server: 5.39.254.34, port: 5277, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: ZTg1ZWVjNjAxZmRlNGI5MA==, udp: true}
+  - {name: 🇯🇵 日本中转25x-三网入口, server: s.sulink.one, port: 20544, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇷🇺 俄罗斯电信CN2三网优化 SULINK01, server: ru01.sulink.one, port: 20020, type: vless, uuid: 108ae2c6-664a-43f9-89e2-a2eba5d61987, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: CzGyneM9OrxOFCFgORatZb0G3Fd_VptKwHATM7k-wDM, short-id: "1c476feb" }, servername: www.python.org, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇸🇬 新加坡NO.1, server: haa.dashuai.cyou, port: 45054, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇰🇷 韩国 IEPL专线NO1, server: i.needss.top, port: 20021, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台灣05-直連, server: ncfw93.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 7g-TJ7GdAf61skeA9syzKpMr_AmSnFcUJ7kkhwx3DEs, short-id: "2ea9dd26" }, servername: player.live-video.net, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 🇷🇺 俄罗斯-圣彼得堡-HY-001-1F, server: nmehw.kovmk.website, port: 1521, type: hysteria2, password: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, auth: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, up: 50, down: 50, skip-cert-verify: false, udp: true}
+  - {name: 🇭🇰 中国-香港-HY-002-1D, server: 45.144.174.75, port: 3348, type: hysteria2, password: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, auth: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
+  - {name: 🇷🇺 俄罗斯直连, server: ru.biu001.xyz, port: 45678, type: vmess, uuid: f938e920-6f71-4dda-93e7-891c7f97f780, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: ru.biu001.xyz}}, udp: true}
+  - {name: 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A, server: nmehw.kovmk.website, port: 1521, type: hysteria2, password: b4224280-cc53-4b8a-90cc-221fe74c9e31, auth: b4224280-cc53-4b8a-90cc-221fe74c9e31, up: 50, down: 50, skip-cert-verify: false, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-HY-001-1D, server: 46.17.44.62, port: 80, type: hysteria2, password: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, auth: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: MGJiYThkMjgwNDE1Y2FkMg==, udp: true}
+  - {name: 🇸🇬 新加坡 IEPL专线NO3, server: i.needss.top, port: 44412, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇸🇬 新加坡-001-1E, server: 103.136.68.253, port: 3732, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇺🇸 美国-纽约-001-1D, server: 207.90.237.199, port: 80, type: vless, uuid: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-HY-001-1A, server: 46.17.44.62, port: 80, type: hysteria2, password: b4224280-cc53-4b8a-90cc-221fe74c9e31, auth: b4224280-cc53-4b8a-90cc-221fe74c9e31, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: MGJiYThkMjgwNDE1Y2FkMg==, udp: true}
+  - {name: 🇦🇺 澳大利亚原生2, server: xdd.dashuai.cyou, port: 45063, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇸🇬 新加坡NEW01优选, server: go.daluquan.top, port: 8080, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: de-new01.daluquan.top}}, udp: true}
+  - {name: 🇫🇷 法国 CM 隧道NO1, server: sh3.needss.top, port: 52108, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇭🇰 香港01-奈非-中转, server: sl.sulink.one, port: 32052, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 美国直连, server: us.biu001.xyz, port: 45678, type: vmess, uuid: f938e920-6f71-4dda-93e7-891c7f97f780, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: us.biu001.xyz}}, udp: true}
+  - {name: 🇵🇱 波兰IPV6-01, server: bl01.sulink.one, port: 40148, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: bl01.sulink.one, skip-cert-verify: true, udp: true}
+  - {name: 🇹🇼 台湾2SS中转|3x, server: pro.sulink.one, port: 48884, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇭🇰 中国-香港-002-1F, server: 45.144.174.75, port: 8080, type: vless, uuid: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇯🇵 日本SS中转4, server: pro.sulink.one, port: 48886, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇺🇸 美国中转 02, server: gstdnb.myfczy169.top, port: 15070, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇭🇰 中国-香港-HY-001-1A, server: 212.192.12.97, port: 80, type: hysteria2, password: b4224280-cc53-4b8a-90cc-221fe74c9e31, auth: b4224280-cc53-4b8a-90cc-221fe74c9e31, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
+  - {name: 🇮🇹 意大利 IEPL专线NO1, server: i.needss.top, port: 33322, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇭🇰 中国-香港-003-1D, server: 212.192.13.179, port: 4035, type: vless, uuid: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇪🇸 西班牙IPV6, server: sp01.sulink.one, port: 20649, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: sp01.sulink.one, skip-cert-verify: true, udp: true}
+  - {name: 🇮🇳 印度1, server: haa.dashuai.cyou, port: 45074, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-HY-002-1E, server: 176.32.35.194, port: 6323, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: NDY2MDRjODQ5MjhkM2ZkNw==, udp: true}
+  - {name: 🇰🇷 韩国-首尔, server: oracle-arm-seoul1.lanmaoyun.icu, port: 30001, type: hysteria2, password: fcfd6856-eb70-4071-bab2-f63f222dc198, auth: fcfd6856-eb70-4071-bab2-f63f222dc198, sni: korea.nodes.lanmaoyun.icu, up: 100, down: 1000, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇦 加拿大-多伦多-001-1D, server: 141.195.112.119, port: 9406, type: vless, uuid: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇯🇵 日本7, server: jp07.sulink.one, port: 43333, type: vless, uuid: 108ae2c6-664a-43f9-89e2-a2eba5d61987, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: g_p3pQHBq5ysWQ4tjNRX3kdtZzUmNsPZeLTuVD4t7Uk, short-id: "fc3c83a9" }, servername: www.python.org, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇨🇦 加拿大-多伦多-001-1A, server: 141.195.112.119, port: 9406, type: vless, uuid: b4224280-cc53-4b8a-90cc-221fe74c9e31, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇭🇰 香港4SS中转5x, server: pro.sulink.one, port: 48874, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇭🇰 中国-香港-003-1B, server: 212.192.13.179, port: 4035, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯-001-1E, server: 209.141.61.187, port: 3348, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇭🇰 香港2中转25x-三网入口, server: s2.sulink.one, port: 13105, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇹🇼 台湾 IEPL专线NO1, server: i.needss.top, port: 52103, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇷🇺 俄罗斯-新西伯利亚-HY-001-1D, server: 195.133.52.63, port: 80, type: hysteria2, password: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, auth: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, up: 50, down: 50, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 新加坡1SS移动直连, server: sg6.sulink.one, port: 12343, type: ss, cipher: chacha20-ietf-poly1305, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-HY-002-1A, server: 176.32.35.194, port: 6323, type: hysteria2, password: b4224280-cc53-4b8a-90cc-221fe74c9e31, auth: b4224280-cc53-4b8a-90cc-221fe74c9e31, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: NDY2MDRjODQ5MjhkM2ZkNw==, udp: true}
+  - {name: 🇻🇳 越南中转, server: gstdnb.myfczy169.top, port: 21070, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇭🇰 中国-香港-001-1C, server: 212.192.12.97, port: 6478, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇲🇾 马来西亚直连, server: mys.biu001.xyz, port: 45678, type: vmess, uuid: f938e920-6f71-4dda-93e7-891c7f97f780, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: mys.biu001.xyz}}, udp: true}
+  - {name: 🇭🇰 中国-香港-004-1F, server: 212.192.13.51, port: 7328, type: vless, uuid: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇫🇷 法国 01 联通推荐-1A, server: frankfurt.faforex.eu.org, port: 18443, type: vless, uuid: 07f61183-725c-4d8e-b7f4-772668573e85, tls: true, reality-opts: {public-key: bRUCz8KaceEKnBFT5V7czJj1t0OAu_nbKnMyVfyeK1I, short-id: "e6658462" }, servername: www.tesla.com, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇦🇷 阿根廷 IEPL专线NO1, server: i.needss.top, port: 20014, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-001-1A, server: 176.32.35.194, port: 9406, type: vless, uuid: b4224280-cc53-4b8a-90cc-221fe74c9e31, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇺🇸 美国05, server: us05.sulink.one, port: 42052, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: us05.sulink.one, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇦 加拿大-多伦多-001-1E, server: 141.195.112.119, port: 9406, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇭🇰 中国-香港-003-1E, server: 212.192.13.179, port: 4035, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇸🇪 瑞典中转, server: gstdnb.myfczy169.top, port: 22539, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇬🇧 英国-伦敦-001-1C, server: 5.39.254.34, port: 3732, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇸🇬 新加坡07奈非-5x, server: sg07v6.sulink.one, port: 32052, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 🇷🇺 俄罗斯-新西伯利亚-HY-001-1E, server: 195.133.52.63, port: 80, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇭 瑞士-苏黎世-HY-001-1B, server: 194.87.18.224, port: 80, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港HKT中转25x, server: hkt2.sulink.one, port: 53108, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇭🇰 中国-香港-003-1C, server: 212.192.13.179, port: 4035, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇺🇸 美国-纽约-001-1A, server: 207.90.237.199, port: 80, type: vless, uuid: b4224280-cc53-4b8a-90cc-221fe74c9e31, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇨🇦 加拿大-多伦多-001-1F, server: 141.195.112.119, port: 9406, type: vless, uuid: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇯🇵 日本中转 02, server: gstdnb.myfczy169.top, port: 57661, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: TG SUPERBIU888, server: hk.biu001.xyz, port: 13322, type: vmess, uuid: f938e920-6f71-4dda-93e7-891c7f97f780, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: hk.biu001.xyz}}, udp: true}
+  - {name: 🇰🇷 韩国3SS中转, server: pro.sulink.one, port: 48863, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 下方为备用节点, server: 666.com, port: 777, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇯🇵 日本SS中转1, server: pro.sulink.one, port: 48889, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-HY-001-1E, server: 46.17.44.62, port: 80, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: MGJiYThkMjgwNDE1Y2FkMg==, udp: true}
+  - {name: 🇵🇹 葡萄牙 IEPL专线NO1, server: i.needss.top, port: 31001, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇭🇰 中国-香港-001-1F, server: 212.192.12.97, port: 6478, type: vless, uuid: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 台灣09-直連, server: bbu7uh.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: 6EXkZwfyumhyBokXV3k5ahmVfNg5y4-EtQD2KlR9bSU, short-id: "84e66e8d" }, servername: d1--ov-gotcha07.bilivideo.com, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-001-1F, server: 176.32.35.194, port: 9406, type: vless, uuid: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇸🇬 新加坡-001-1B, server: 103.136.68.253, port: 3732, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇸🇬 新加坡 01 移动推荐-1A, server: sgv2test.566678.xyz, port: 18443, type: vless, uuid: 07f61183-725c-4d8e-b7f4-772668573e85, tls: true, reality-opts: {public-key: dTE8QcX1B_9HRG5Uae47q0HtjhVvePvfPMxvfLyVUUA, short-id: "32ff656d" }, servername: www.tesla.com, client-fingerprint: edge, network: tcp, udp: true}
+  - {name: 🇩🇪 德国中转, server: gstdnb.myfczy169.top, port: 21099, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-HY-002-1C, server: 176.32.35.194, port: 6323, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: NDY2MDRjODQ5MjhkM2ZkNw==, udp: true}
+  - {name: 🇭🇰 中国-香港-004-1E, server: 212.192.13.51, port: 7328, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇰🇷 韩国-1, server: oracle-arm-chuncheon1.lanmaoyun.icu, port: 30001, type: hysteria2, password: fcfd6856-eb70-4071-bab2-f63f222dc198, auth: fcfd6856-eb70-4071-bab2-f63f222dc198, sni: korea.nodes.lanmaoyun.icu, up: 100, down: 1000, skip-cert-verify: true, udp: true}
+  - {name: 🇹🇼 台湾-2流媒体|3x, server: tw02.sulian.life, port: 30002, type: vless, uuid: 108ae2c6-664a-43f9-89e2-a2eba5d61987, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: nrKRUl1V-kWtkQLpKARG3GIVhmrvxeGLooWks_-h01E, short-id: "edaf1b0b" }, servername: www.python.org, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇸🇬 新加坡-001-1D, server: 103.136.68.253, port: 3732, type: vless, uuid: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇹🇼 台湾 IEPL专线NO3, server: i.needss.top, port: 20016, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-001-1D, server: 176.32.35.194, port: 9406, type: vless, uuid: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯-001-1C, server: 209.141.61.187, port: 3348, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 台灣14-直連, server: rnjszk.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: WWZtj7tsGYJmlzkf_wEZhmoky5SJSy0I03YzrP3yJ2A, short-id: "57f4f20c" }, servername: gamedownloads-rockstargames-com.akamaized.net, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 🇺🇸 美国3SS中转, server: pro.sulink.one, port: 48879, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇺🇸 美国NEW01, server: us-new01.daluquan.top, port: 8880, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: us-new01.daluquan.top}}, udp: true}
+  - {name: 🇯🇵 日本SS中转3, server: pro.sulink.one, port: 48887, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇹🇼 台湾中转 04, server: gstdnb.myfczy169.top, port: 25149, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇸🇬 新加坡直连, server: sg.biu001.xyz, port: 12233, type: vmess, uuid: f938e920-6f71-4dda-93e7-891c7f97f780, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: sg.biu001.xyz}}, udp: true}
+  - {name: 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B, server: nmehw.kovmk.website, port: 1521, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: false, udp: true}
+  - {name: 🇭🇰 香港3中转25x, server: s3.sulink.one, port: 22068, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇭🇰 中国-香港-HY-001-1D, server: 212.192.12.97, port: 80, type: hysteria2, password: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, auth: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
+  - {name: 🇬🇧 英国中转 03, server: gstdnb.myfczy169.top, port: 13708, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇭🇰 香港3SS中转, server: pro.sulink.one, port: 48875, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇭🇰 中国-香港-004-1A, server: 212.192.13.51, port: 7328, type: vless, uuid: b4224280-cc53-4b8a-90cc-221fe74c9e31, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇺🇸 美国NO.1, server: haa.dashuai.cyou, port: 45052, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇸🇬 新加坡-001-1C, server: 103.136.68.253, port: 3732, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇬🇧 英国-伦敦-HY-001-1D, server: 5.39.254.34, port: 5277, type: hysteria2, password: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, auth: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: ZTg1ZWVjNjAxZmRlNGI5MA==, udp: true}
+  - {name: 🇭🇰 中国-香港-003-1F, server: 212.192.13.179, port: 4035, type: vless, uuid: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇮🇳 印度2, server: xdd.dashuai.cyou, port: 45073, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇫🇷 法国1, server: haa.dashuai.cyou, port: 45072, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇫🇷 法国2, server: xdd.dashuai.cyou, port: 45071, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇫🇷 法国 01 联通推荐-1B, server: frankfurt.faforex.eu.org, port: 18443, type: vless, uuid: 1b7fc4ab-f41d-4e7f-8cd4-2bcbfc139230, tls: true, reality-opts: {public-key: bRUCz8KaceEKnBFT5V7czJj1t0OAu_nbKnMyVfyeK1I, short-id: "e6658462" }, servername: www.tesla.com, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 🇸🇬 新加坡中转 02, server: gstdnb.myfczy169.top, port: 44776, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇰🇷 韩国NEW01, server: uk-new01.daluquan.top, port: 8880, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: uk-new01.daluquan.top}}, udp: true}
+  - {name: 🇷🇺 俄罗斯-1B, server: 45.140.169.231, port: 8080, type: hysteria2, password: 1b7fc4ab-f41d-4e7f-8cd4-2bcbfc139230, auth: 1b7fc4ab-f41d-4e7f-8cd4-2bcbfc139230, sni: www.bing.com, up: 50, down: 50, skip-cert-verify: true, udp: true}
+  - {name: 🇹🇼 台湾1, server: haa.dashuai.cyou, port: 45078, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇺🇸 美国 IEPL专线NO1, server: i.needss.top, port: 54770, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇹🇼 台湾中转 01, server: gstdnb.myfczy169.top, port: 27110, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇬🇧 英国-伦敦-001-1B, server: 5.39.254.34, port: 3732, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇺🇸 美国NO.2, server: xdd.dashuai.cyou, port: 45053, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇸🇬 新加坡-HY-001-1B, server: 103.136.68.253, port: 80, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: OWU2MmNkZDU3YjUwMTZkNQ==, udp: true}
+  - {name: 🇭🇰 香港-1A, server: 141.11.217.113, port: 8080, type: hysteria2, password: 07f61183-725c-4d8e-b7f4-772668573e85, auth: 07f61183-725c-4d8e-b7f4-772668573e85, sni: www.bing.com, up: 50, down: 50, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 中国-香港-002-1C, server: 45.144.174.75, port: 8080, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇸🇬 新加坡1SS中转|3x, server: pro.sulink.one, port: 48883, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇺🇸 美国04, server: us04.sulink.one, port: 32052, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: us04.sulink.one, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 中国-香港-HY-001-1F, server: 212.192.12.97, port: 80, type: hysteria2, password: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, auth: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-HY-002-1B, server: 176.32.35.194, port: 6323, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: NDY2MDRjODQ5MjhkM2ZkNw==, udp: true}
+  - {name: 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C, server: 195.133.52.63, port: 80, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, udp: true}
+  - {name: 台灣10-直連, server: 7uzr4v.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: YcCADTAK0vFG1esN8ca-I3NFnqk_nlaHNCEpFNsVtFg, short-id: "59bd221c" }, servername: download-installer.cdn.mozilla.net, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 🇭🇰 中国-香港-001-1B, server: 212.192.12.97, port: 6478, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-HY-002-1D, server: 176.32.35.194, port: 6323, type: hysteria2, password: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, auth: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: NDY2MDRjODQ5MjhkM2ZkNw==, udp: true}
+  - {name: 🇹🇼 台湾中转 03, server: gstdnb.myfczy169.top, port: 14232, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇷🇺 俄罗斯-圣彼得堡-HY-001-1E, server: nmehw.kovmk.website, port: 1521, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: false, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-HY-001-1B, server: 46.17.44.62, port: 80, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: MGJiYThkMjgwNDE1Y2FkMg==, udp: true}
+  - {name: 🇭🇰 中国-香港-001-1A, server: 212.192.12.97, port: 6478, type: vless, uuid: b4224280-cc53-4b8a-90cc-221fe74c9e31, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇯🇵 日本中转 03, server: gstdnb.myfczy169.top, port: 38225, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇬🇧 英国中转 01, server: gstdnb.myfczy169.top, port: 29172, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯-001-1B, server: 209.141.61.187, port: 3348, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇬🇧 英国中转 02, server: gstdnb.myfczy169.top, port: 34013, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇺🇸 美国中转 01, server: gstdnb.myfczy169.top, port: 26858, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇷🇺 俄罗斯-新西伯利亚-HY-001-1F, server: 195.133.52.63, port: 80, type: hysteria2, password: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, auth: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, up: 50, down: 50, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇭 瑞士-苏黎世-HY-001-1D, server: 194.87.18.224, port: 80, type: hysteria2, password: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, auth: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, up: 50, down: 50, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 中国-香港-002-1A, server: 45.144.174.75, port: 8080, type: vless, uuid: b4224280-cc53-4b8a-90cc-221fe74c9e31, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇹🇼 台湾1SS中转|3x, server: pro.sulink.one, port: 48885, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇬🇧 英国-伦敦-HY-001-1E, server: 5.39.254.34, port: 5277, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: ZTg1ZWVjNjAxZmRlNGI5MA==, udp: true}
+  - {name: 🇯🇵 日本NO.1, server: haa.dashuai.cyou, port: 45056, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 非洲 IEPL专线 NO1, server: i.needss.top, port: 44410, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇸🇬 新加坡-HY-001-1D, server: 103.136.68.253, port: 80, type: hysteria2, password: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, auth: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: OWU2MmNkZDU3YjUwMTZkNQ==, udp: true}
+  - {name: 台灣15-直連, server: cjqtur.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: z4sth42R56sV2Pvuu7kqGAhgr62_2uMsGvg3QajxtD8, short-id: "c06b5ca5" }, servername: object-bnolauncher-ct.bandainamco-ol.jp, client-fingerprint: qq, network: tcp, udp: true}
+  - {name: 🇺🇸 美国 01 电信推荐-1A, server: phx-plus-1ddns.faforex.eu.org, port: 18443, type: vless, uuid: 07f61183-725c-4d8e-b7f4-772668573e85, tls: true, reality-opts: {public-key: 8233FxCRw1a_aCJ8d1HwHBMD_fABUNNW7rsrFe3vK0s, short-id: "e6658462" }, servername: www.tesla.com, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇭🇰 香港中转 01, server: gstdnb.myfczy169.top, port: 43641, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇯🇵 日本直连, server: jp.biu001.xyz, port: 13322, type: vmess, uuid: f938e920-6f71-4dda-93e7-891c7f97f780, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: jp.biu001.xyz}}, udp: true}
+  - {name: 🇨🇦 加拿大 IEPL专线NO1, server: sz.needss.top, port: 20013, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇺🇸 美国-纽约-001-1B, server: 207.90.237.199, port: 80, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇦🇪 阿联酋中转, server: gstdnb.myfczy169.top, port: 21059, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇬🇧 英国-伦敦-HY-001-1B, server: 5.39.254.34, port: 5277, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: ZTg1ZWVjNjAxZmRlNGI5MA==, udp: true}
+  - {name: 🇭🇰 香港中转 02, server: gstdnb.myfczy169.top, port: 36858, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯-HY-001-1D, server: 209.141.61.187, port: 3732, type: hysteria2, password: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, auth: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: ZTQxNWU5ZjUxY2Y5Y2U2Yw==, udp: true}
+  - {name: 🇭🇰 香港中转 03, server: gstdnb.myfczy169.top, port: 14407, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇪🇺 欧洲-伦敦-1, server: oracle-arm-london1.lanmaoyun.icu, port: 30001, type: hysteria2, password: fcfd6856-eb70-4071-bab2-f63f222dc198, auth: fcfd6856-eb70-4071-bab2-f63f222dc198, sni: london1.nodes.lanmaoyun.icu, up: 100, down: 1000, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 中国-香港-004-1C, server: 212.192.13.51, port: 7328, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 美國03-直連-0.1x, server: node-us-blue.sudatech.store, port: 50002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: MCJ0lPY0S4GnX8sZBc5IzmrdPj89g7P3t5_TJcEl5WM, short-id: "96216e41" }, servername: www.douyin.com, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇨🇦 加拿大1, server: haa.dashuai.cyou, port: 45064, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台灣12-直連, server: d3cswy.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: X-WigzycM82iJkbmYI02G6WEc7Emd7JiG-vRI3hwokc, short-id: "8467b1ea" }, servername: s0.awsstatic.com, client-fingerprint: qq, network: tcp, udp: true}
+  - {name: 🇭🇰 中国-香港-HY-001-1B, server: 212.192.12.97, port: 80, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
+  - {name: 🇸🇬 新加坡2SS中转, server: pro.sulink.one, port: 48882, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇫🇷 法国IPV6-10, server: fr10.sulink.one, port: 41148, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: fr10.sulink.one, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇭 瑞士-苏黎世-HY-001-1E, server: 194.87.18.224, port: 80, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, udp: true}
+  - {name: 🇬🇧 英国-伦敦-HY-001-1A, server: 5.39.254.34, port: 5277, type: hysteria2, password: b4224280-cc53-4b8a-90cc-221fe74c9e31, auth: b4224280-cc53-4b8a-90cc-221fe74c9e31, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: ZTg1ZWVjNjAxZmRlNGI5MA==, udp: true}
+  - {name: 🇯🇵 日本-1A, server: 23.26.34.209, port: 8080, type: hysteria2, password: 07f61183-725c-4d8e-b7f4-772668573e85, auth: 07f61183-725c-4d8e-b7f4-772668573e85, sni: www.bing.com, up: 50, down: 50, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 新加坡中转 01, server: gstdnb.myfczy169.top, port: 21667, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B, server: 195.133.52.63, port: 80, type: hysteria2, password: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, auth: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, up: 100, down: 100, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 新加坡-1, server: oracle-amd-singapore1.lanmaoyun.icu, port: 30001, type: hysteria2, password: fcfd6856-eb70-4071-bab2-f63f222dc198, auth: fcfd6856-eb70-4071-bab2-f63f222dc198, sni: main.nodes.lanmaoyun.icu, up: 100, down: 1000, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 新加坡-HY-001-1C, server: 103.136.68.253, port: 80, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: OWU2MmNkZDU3YjUwMTZkNQ==, udp: true}
+  - {name: 🇭🇰 中国-香港-004-1B, server: 212.192.13.51, port: 7328, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇬🇧 英国-伦敦-HY-001-1F, server: 5.39.254.34, port: 5277, type: hysteria2, password: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, auth: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: ZTg1ZWVjNjAxZmRlNGI5MA==, udp: true}
+  - {name: 🇮🇳 印度中转, server: gstdnb.myfczy169.top, port: 21060, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇧🇷 巴西NEW03优选, server: go.daluquan.top, port: 8880, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: go.daluquan.top}}, udp: true}
+  - {name: 🇨🇦 加拿大-多伦多-001-1B, server: 141.195.112.119, port: 9406, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇲🇾 马来西亚中转, server: gstdnb.myfczy169.top, port: 20119, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇹🇷 土耳其中转, server: gstdnb.myfczy169.top, port: 21040, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 台灣08-直連, server: q47hch.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: ESKPxcQGKiJvmt12EePzehRIqrHaxmj96f1ACC0gcw4, short-id: "1d1d4faf" }, servername: content.cdp.bethesda.net, client-fingerprint: ios, network: tcp, udp: true}
+  - {name: 🇩🇪 德国 IEPL专线NO1, server: sh3.needss.top, port: 54787, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇯🇵 日本 IEPL专线NO3, server: i.needss.top, port: 52117, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 台灣16-直連, server: xcc3fp.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: TK7J2tkMQx0YueND0yfUEXMHpBR28Z9y6swYBRMzD00, short-id: "85b5bd96" }, servername: content.cdp.bethesda.net, client-fingerprint: safari, network: tcp, udp: true}
+  - {name: 🇬🇧 英国-伦敦-001-1D, server: 5.39.254.34, port: 3732, type: vless, uuid: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇭🇰 中国-香港-001-1D, server: 212.192.12.97, port: 6478, type: vless, uuid: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇯🇵 日本-1, server: oracle-amd-tokyo1.lanmaoyun.icu, port: 30001, type: hysteria2, password: fcfd6856-eb70-4071-bab2-f63f222dc198, auth: fcfd6856-eb70-4071-bab2-f63f222dc198, sni: tokyo.nodes.lanmaoyun.icu, up: 100, down: 1000, skip-cert-verify: true, udp: true}
+  - {name: 台灣07-直連, server: y85uef.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: _gsfvatLgdy9stSQAwHqtkdFT5vRLLjjqlv1ssvZvXw, short-id: "64d00876" }, servername: object-bnolauncher-ct.bandainamco-ol.jp, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇺🇸 美国-纽约-001-1E, server: 207.90.237.199, port: 80, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇦🇺 墨尔本-1B, server: ccy.colacloud.free.hr, port: 2095, type: vless, uuid: 2d21cd7a-e242-4c86-965a-e7081e083bdc, tls: false, network: ws, ws-opts: {path: /xxxzzz, headers: {Host: aurt.colacloud.free.hr}}, udp: true}
+  - {name: 台灣06-直連, server: xevxwr.chinese-sm.com, port: 30002, type: vless, uuid: 9550af56-e152-4725-ae62-f72ca23a92e4, tls: true, flow: xtls-rprx-vision, reality-opts: {public-key: Ni75NROYuTpyu3gs8osXqWMHlMyEOC0GLVwipdmF3xA, short-id: "08484e84" }, servername: player.live-video.net, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 🇫🇷 法国IPV6-09, server: fr09.sulian.life, port: 40149, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: fr09.sulian.life, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 北美-US-圣何塞-2, server: oracle-amd-san-jose2.lanmaoyun.icu, port: 30001, type: hysteria2, password: fcfd6856-eb70-4071-bab2-f63f222dc198, auth: fcfd6856-eb70-4071-bab2-f63f222dc198, sni: san-jose2.nodes.lanmaoyun.icu, up: 100, down: 1000, skip-cert-verify: true, udp: true}
+  - {name: 🇬🇧 英国-伦敦-001-1E, server: 5.39.254.34, port: 3732, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇭🇰 香港2SS中转, server: pro.sulink.one, port: 48876, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇭🇰 中国-香港-003-1A, server: 212.192.13.179, port: 4035, type: vless, uuid: b4224280-cc53-4b8a-90cc-221fe74c9e31, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇯🇵 日本NEW01, server: fr-new01.daluquan.top, port: 8880, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: fr-new01.daluquan.top}}, udp: true}
+  - {name: 🇯🇵 日本中转 05, server: gstdnb.myfczy169.top, port: 21743, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇭🇰 中国-香港-HY-002-1A, server: 45.144.174.75, port: 3348, type: hysteria2, password: b4224280-cc53-4b8a-90cc-221fe74c9e31, auth: b4224280-cc53-4b8a-90cc-221fe74c9e31, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
+  - {name: 🇹🇼 台湾-02-奈非-3x, server: tw02v6.sulian.life, port: 30001, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 新加坡NEW01, server: de-new01.daluquan.top, port: 8080, type: vmess, uuid: 44054d84-ef37-471c-8f03-8ef4411b8bd0, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: de-new01.daluquan.top}}, udp: true}
+  - {name: 🇬🇧 英国-伦敦-001-1A, server: 5.39.254.34, port: 3732, type: vless, uuid: b4224280-cc53-4b8a-90cc-221fe74c9e31, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇷🇺 俄罗斯 IEPL专线NO1, server: i.needss.top, port: 21111, type: vmess, uuid: bf470fd8-55cb-4d12-abec-1ee03d52f0aa, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇺🇸 美国1SS中转, server: pro.sulink.one, port: 48881, type: ss, cipher: 2022-blake3-aes-256-gcm, password: ZGFkYzNhN2Q2OWNhMDc4Yjc0MTVmOTFiODVlMDc4ODM=:MTA4YWUyYzYtNjY0YS00M2Y5LTg5ZTItYTJlYmE1ZDY=, udp: true}
+  - {name: 🇺🇸 美国中转 03, server: gstdnb.myfczy169.top, port: 23631, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-001-1C, server: 176.32.35.194, port: 9406, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇲🇴 澳门NO.2, server: xdd.dashuai.cyou, port: 45051, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯-HY-001-1C, server: 209.141.61.187, port: 3732, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: ZTQxNWU5ZjUxY2Y5Y2U2Yw==, udp: true}
+  - {name: 🇺🇸 美国-纽约-001-1F, server: 207.90.237.199, port: 80, type: vless, uuid: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇷🇺 俄罗斯-圣彼得堡-HY-001-1D, server: nmehw.kovmk.website, port: 1521, type: hysteria2, password: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, auth: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, up: 50, down: 50, skip-cert-verify: false, udp: true}
+  - {name: 🇨🇦 加拿大2, server: xdd.dashuai.cyou, port: 45065, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇨🇭 瑞士-苏黎世-HY-001-1C, server: 194.87.18.224, port: 80, type: hysteria2, password: 0376c252-364d-420f-9db9-c6ca21ae2692, auth: 0376c252-364d-420f-9db9-c6ca21ae2692, up: 100, down: 100, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 中国-香港-002-1B, server: 45.144.174.75, port: 8080, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇹🇼 台湾中转 05, server: gstdnb.myfczy169.top, port: 35846, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇭🇰 香港-1B, server: xg.dashuai.cyou, port: 19901, type: vmess, uuid: b181b016-165c-4f74-9bce-d80d3f088b4a, alterId: 0, cipher: auto, tls: false, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯-HY-001-1E, server: 209.141.61.187, port: 3732, type: hysteria2, password: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, auth: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, up: 100, down: 100, skip-cert-verify: true, obfs: salamander, obfs-password: ZTQxNWU5ZjUxY2Y5Y2U2Yw==, udp: true}
+  - {name: 🇺🇸 美国02, server: us02.sulink.one, port: 10522, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 中国-香港-HY-002-1F, server: 45.144.174.75, port: 3348, type: hysteria2, password: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, auth: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: Y2JhZTU3ZjE4ZTI0MzRmMQ==, udp: true}
+  - {name: 🇸🇬 新加坡 01 移动推荐-1B, server: sgv2test.566678.xyz, port: 18443, type: vless, uuid: 1b7fc4ab-f41d-4e7f-8cd4-2bcbfc139230, tls: true, reality-opts: {public-key: dTE8QcX1B_9HRG5Uae47q0HtjhVvePvfPMxvfLyVUUA, short-id: "32ff656d" }, servername: www.tesla.com, client-fingerprint: firefox, network: tcp, udp: true}
+  - {name: 🇻🇳 越南直连, server: vn.biu001.xyz, port: 12233, type: vmess, uuid: f938e920-6f71-4dda-93e7-891c7f97f780, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: vn.biu001.xyz}}, udp: true}
+  - {name: 🇯🇵 日本04三网中转|5x, server: sl.sulink.one, port: 33152, type: hysteria2, password: 108ae2c6-664a-43f9-89e2-a2eba5d61987, auth: 108ae2c6-664a-43f9-89e2-a2eba5d61987, sni: www.bing.com, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 中国-香港-002-1E, server: 45.144.174.75, port: 8080, type: vless, uuid: 0c86bbdd-d42a-4b44-8ede-1fffa24166b3, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇨🇦 加拿大-多伦多-001-1C, server: 141.195.112.119, port: 9406, type: vless, uuid: 0376c252-364d-420f-9db9-c6ca21ae2692, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇸🇬 新加坡-HY-001-1F, server: 103.136.68.253, port: 80, type: hysteria2, password: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, auth: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: OWU2MmNkZDU3YjUwMTZkNQ==, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-001-1B, server: 176.32.35.194, port: 9406, type: vless, uuid: e6ce2d81-c666-454b-bfd8-7f7503dd2a7a, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇹🇼 台湾中转 02, server: gstdnb.myfczy169.top, port: 17010, type: ss, cipher: chacha20-ietf-poly1305, password: 3b0d6c60-4c67-47f2-997e-bd84c6cc1423, udp: true}
+  - {name: 🇺🇸 美国-拉斯维加斯-001-1D, server: 209.141.61.187, port: 3348, type: vless, uuid: 315518fe-947a-4a13-bcf9-eb1b361a6bd2, tls: false, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇷🇺 俄罗斯-莫斯科-HY-001-1F, server: 46.17.44.62, port: 80, type: hysteria2, password: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, auth: 1fd09e32-cc3f-4dd4-b419-285c5017f00b, up: 50, down: 50, skip-cert-verify: true, obfs: salamander, obfs-password: MGJiYThkMjgwNDE1Y2FkMg==, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇭🇰 中国-香港-001-1B
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1A
-      - 🇯🇵 日本NEW01
-      - 🇬🇧 英国-伦敦-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1C
-      - 🇺🇸 美国 01 电信推荐
-      - 🇺🇸 美国-拉斯维加斯-001-1A
-      - 🇭🇰 中国-香港-002-1A
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
-      - 🇷🇺 俄罗斯
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
-      - 🇭🇰 中国-香港-002-1C
-      - 🇭🇰 中国-香港-HY-001-1A
-      - 🇨🇭 瑞士-苏黎世-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
-      - 🇧🇷 巴西NEW03优选
-      - 🇸🇬 新加坡-HY-001-1B
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇯🇵 日本中转 04
+      - 台灣02-直連
       - 🇭🇰 中国-香港-HY-002-1B
-      - 🇭🇰 中国-香港-001-1C
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
-      - 🇸🇬 新加坡-001-1A
-      - 🇦🇺 墨尔本
-      - 🇺🇸 美国-拉斯维加斯-001-1C
-      - 🇯🇵 日本
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
-      - 🇭🇰 中国-香港-001-1A
-      - 🇸🇬 新加坡-001-1B
-      - 🇫🇷 法国 01 联通推荐
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
-      - 🇭🇰 中国-香港-HY-002-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
-      - 🇭🇰 中国-香港-002-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1B
-      - 🇬🇧 英国-伦敦-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1C
-      - 🇸🇬 新加坡NEW01
-      - 🇬🇧 英国-伦敦-HY-001-1B
-      - 🇷🇺 俄罗斯-莫斯科-001-1A
-      - 🇸🇬 新加坡-HY-001-1A
-      - 🇬🇧 英国-伦敦-001-1C
-      - 🇺🇸 美国NEW01
-      - 🇸🇬 新加坡-001-1C
+      - 🇦🇺 澳大利亚原生1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1F
+      - 🇭🇰 香港-1C
+      - 🇹🇼 台湾直连
       - 🇺🇸 美国-拉斯维加斯-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1C
-      - 🇰🇷 韩国NEW01
-      - 🇺🇸 美国-拉斯维加斯-001-1B
-      - 🇭🇰 香港
-      - 🇸🇬 新加坡-HY-001-1C
-      - 🇨🇦 加拿大-多伦多-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1C
-      - 🇸🇬 新加坡NEW01优选
-      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇺🇸 美国5
+      - 🇭🇰 中国-香港-HY-002-1E
+      - 🇯🇵 日本-2
+      - 🇸🇬 新加坡-001-1A
+      - 美國02-直連
+      - 🇭🇰 香港-直连2流媒体2x
+      - 台灣01-直連
       - 🇭🇰 中国-香港-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1C
-      - 🇭🇰 中国-香港-HY-002-1C
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇰🇷 韩国-2
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
+      - 🇭🇰 中国-香港-004-1D
+      - 🇸🇬 新加坡-HY-001-1E
+      - 🇸🇬 新加坡中转 03
+      - 🇺🇸 美国-2
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
+      - 🇬🇧 英国 IEPL专线NO1
+      - 🇸🇬 新加坡-HY-001-1A
+      - 🇺🇸 美国-纽约-001-1C
+      - 🇺🇸 美国-拉斯维加斯-001-1F
       - 🇧🇷 巴西NEW03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
+      - 🇦🇺 墨尔本-1A
+      - 🇷🇺 俄罗斯-1A
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1A
+      - 台灣03-直連
+      - 🇹🇼 台湾中转25x
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1F
+      - 台灣11-直連
+      - 台灣13-直連
+      - 🇯🇵 日本-1B
+      - 🇺🇸 美国 01 电信推荐-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1A
+      - 🇸🇬 新加坡-001-1F
+      - 🇭🇰 香港2直连
+      - 🇭🇰 中国-香港-HY-002-1C
+      - 台灣04-直連
+      - 🇰🇿 哈萨克斯坦中转
+      - 🇸🇬 新加坡 IEPL专线NO1
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1E
+      - 🇭🇰 中国-香港-001-1E
+      - 🇯🇵 日本中转 01
+      - 🇭🇰 香港直连2流媒体2x
+      - 🇭🇰 香港中转 04
+      - 🇯🇵 日本NO.2
+      - 🇹🇼 台湾2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇭🇰 中国-香港-002-1D
+      - 🇭🇰 香港中转 05
+      - 🇸🇬 新加坡NO.2
+      - 🇸🇬 新加坡03奈非-5x
+      - 🇬🇧 英国-伦敦-001-1F
+      - 🇭🇰 三网中转香港|5x
+      - 🇭🇰 中国-香港-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1F
+      - 🇬🇧 英国-伦敦-HY-001-1C
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇷🇺 俄罗斯电信CN2三网优化 SULINK01
+      - 🇸🇬 新加坡NO.1
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 台灣05-直連
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1F
+      - 🇭🇰 中国-香港-HY-002-1D
+      - 🇷🇺 俄罗斯直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1D
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 🇸🇬 新加坡-001-1E
+      - 🇺🇸 美国-纽约-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇸🇬 新加坡NEW01优选
+      - 🇫🇷 法国 CM 隧道NO1
+      - 🇭🇰 香港01-奈非-中转
+      - 🇺🇸 美国直连
+      - 🇵🇱 波兰IPV6-01
+      - 🇹🇼 台湾2SS中转|3x
+      - 🇭🇰 中国-香港-002-1F
+      - 🇯🇵 日本SS中转4
+      - 🇺🇸 美国中转 02
+      - 🇭🇰 中国-香港-HY-001-1A
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇭🇰 中国-香港-003-1D
+      - 🇪🇸 西班牙IPV6
+      - 🇮🇳 印度1
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1E
+      - 🇰🇷 韩国-首尔
+      - 🇨🇦 加拿大-多伦多-001-1D
+      - 🇯🇵 日本7
+      - 🇨🇦 加拿大-多伦多-001-1A
+      - 🇭🇰 香港4SS中转5x
+      - 🇭🇰 中国-香港-003-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1E
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1D
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
+      - 🇻🇳 越南中转
+      - 🇭🇰 中国-香港-001-1C
+      - 🇲🇾 马来西亚直连
+      - 🇭🇰 中国-香港-004-1F
+      - 🇫🇷 法国 01 联通推荐-1A
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1A
+      - 🇺🇸 美国05
+      - 🇨🇦 加拿大-多伦多-001-1E
+      - 🇭🇰 中国-香港-003-1E
+      - 🇸🇪 瑞典中转
+      - 🇬🇧 英国-伦敦-001-1C
+      - 🇸🇬 新加坡07奈非-5x
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1E
+      - 🇨🇭 瑞士-苏黎世-HY-001-1B
+      - 🇭🇰 香港HKT中转25x
+      - 🇭🇰 中国-香港-003-1C
+      - 🇺🇸 美国-纽约-001-1A
+      - 🇨🇦 加拿大-多伦多-001-1F
+      - 🇯🇵 日本中转 02
+      - TG SUPERBIU888
+      - 🇰🇷 韩国3SS中转
+      - 下方为备用节点
+      - 🇯🇵 日本SS中转1
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇭🇰 中国-香港-001-1F
+      - 台灣09-直連
+      - 🇷🇺 俄罗斯-莫斯科-001-1F
+      - 🇸🇬 新加坡-001-1B
+      - 🇸🇬 新加坡 01 移动推荐-1A
+      - 🇩🇪 德国中转
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
+      - 🇭🇰 中国-香港-004-1E
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇸🇬 新加坡-001-1D
+      - 🇹🇼 台湾 IEPL专线NO3
+      - 🇷🇺 俄罗斯-莫斯科-001-1D
+      - 🇺🇸 美国-拉斯维加斯-001-1C
+      - 台灣14-直連
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NEW01
+      - 🇯🇵 日本SS中转3
+      - 🇹🇼 台湾中转 04
+      - 🇸🇬 新加坡直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
+      - 🇭🇰 香港3中转25x
+      - 🇭🇰 中国-香港-HY-001-1D
+      - 🇬🇧 英国中转 03
+      - 🇭🇰 香港3SS中转
+      - 🇭🇰 中国-香港-004-1A
+      - 🇺🇸 美国NO.1
+      - 🇸🇬 新加坡-001-1C
+      - 🇬🇧 英国-伦敦-HY-001-1D
+      - 🇭🇰 中国-香港-003-1F
+      - 🇮🇳 印度2
+      - 🇫🇷 法国1
+      - 🇫🇷 法国2
+      - 🇫🇷 法国 01 联通推荐-1B
+      - 🇸🇬 新加坡中转 02
+      - 🇰🇷 韩国NEW01
+      - 🇷🇺 俄罗斯-1B
+      - 🇹🇼 台湾1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇹🇼 台湾中转 01
+      - 🇬🇧 英国-伦敦-001-1B
+      - 🇺🇸 美国NO.2
+      - 🇸🇬 新加坡-HY-001-1B
+      - 🇭🇰 香港-1A
+      - 🇭🇰 中国-香港-002-1C
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇺🇸 美国04
+      - 🇭🇰 中国-香港-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
+      - 台灣10-直連
+      - 🇭🇰 中国-香港-001-1B
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1D
+      - 🇹🇼 台湾中转 03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
+      - 🇭🇰 中国-香港-001-1A
+      - 🇯🇵 日本中转 03
+      - 🇬🇧 英国中转 01
+      - 🇺🇸 美国-拉斯维加斯-001-1B
+      - 🇬🇧 英国中转 02
+      - 🇺🇸 美国中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1F
+      - 🇨🇭 瑞士-苏黎世-HY-001-1D
+      - 🇭🇰 中国-香港-002-1A
+      - 🇹🇼 台湾1SS中转|3x
+      - 🇬🇧 英国-伦敦-HY-001-1E
+      - 🇯🇵 日本NO.1
+      - 非洲 IEPL专线 NO1
+      - 🇸🇬 新加坡-HY-001-1D
+      - 台灣15-直連
+      - 🇺🇸 美国 01 电信推荐-1A
+      - 🇭🇰 香港中转 01
+      - 🇯🇵 日本直连
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国-纽约-001-1B
+      - 🇦🇪 阿联酋中转
+      - 🇬🇧 英国-伦敦-HY-001-1B
+      - 🇭🇰 香港中转 02
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1D
+      - 🇭🇰 香港中转 03
+      - 🇪🇺 欧洲-伦敦-1
+      - 🇭🇰 中国-香港-004-1C
+      - 美國03-直連-0.1x
+      - 🇨🇦 加拿大1
+      - 台灣12-直連
+      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇸🇬 新加坡2SS中转
+      - 🇫🇷 法国IPV6-10
+      - 🇨🇭 瑞士-苏黎世-HY-001-1E
+      - 🇬🇧 英国-伦敦-HY-001-1A
+      - 🇯🇵 日本-1A
+      - 🇸🇬 新加坡中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡-HY-001-1C
+      - 🇭🇰 中国-香港-004-1B
+      - 🇬🇧 英国-伦敦-HY-001-1F
+      - 🇮🇳 印度中转
+      - 🇧🇷 巴西NEW03优选
+      - 🇨🇦 加拿大-多伦多-001-1B
+      - 🇲🇾 马来西亚中转
+      - 🇹🇷 土耳其中转
+      - 台灣08-直連
+      - 🇩🇪 德国 IEPL专线NO1
+      - 🇯🇵 日本 IEPL专线NO3
+      - 台灣16-直連
+      - 🇬🇧 英国-伦敦-001-1D
+      - 🇭🇰 中国-香港-001-1D
+      - 🇯🇵 日本-1
+      - 台灣07-直連
+      - 🇺🇸 美国-纽约-001-1E
+      - 🇦🇺 墨尔本-1B
+      - 台灣06-直連
+      - 🇫🇷 法国IPV6-09
+      - 🇺🇸 北美-US-圣何塞-2
+      - 🇬🇧 英国-伦敦-001-1E
+      - 🇭🇰 香港2SS中转
+      - 🇭🇰 中国-香港-003-1A
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本中转 05
+      - 🇭🇰 中国-香港-HY-002-1A
+      - 🇹🇼 台湾-02-奈非-3x
+      - 🇸🇬 新加坡NEW01
+      - 🇬🇧 英国-伦敦-001-1A
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 🇺🇸 美国1SS中转
+      - 🇺🇸 美国中转 03
+      - 🇷🇺 俄罗斯-莫斯科-001-1C
+      - 🇲🇴 澳门NO.2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
+      - 🇺🇸 美国-纽约-001-1F
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1D
+      - 🇨🇦 加拿大2
+      - 🇨🇭 瑞士-苏黎世-HY-001-1C
+      - 🇭🇰 中国-香港-002-1B
+      - 🇹🇼 台湾中转 05
+      - 🇭🇰 香港-1B
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1E
+      - 🇺🇸 美国02
+      - 🇭🇰 中国-香港-HY-002-1F
+      - 🇸🇬 新加坡 01 移动推荐-1B
+      - 🇻🇳 越南直连
+      - 🇯🇵 日本04三网中转|5x
+      - 🇭🇰 中国-香港-002-1E
+      - 🇨🇦 加拿大-多伦多-001-1C
+      - 🇸🇬 新加坡-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇹🇼 台湾中转 02
+      - 🇺🇸 美国-拉斯维加斯-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1F
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇭🇰 中国-香港-001-1B
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1A
-      - 🇯🇵 日本NEW01
-      - 🇬🇧 英国-伦敦-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1C
-      - 🇺🇸 美国 01 电信推荐
-      - 🇺🇸 美国-拉斯维加斯-001-1A
-      - 🇭🇰 中国-香港-002-1A
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
-      - 🇷🇺 俄罗斯
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
-      - 🇭🇰 中国-香港-002-1C
-      - 🇭🇰 中国-香港-HY-001-1A
-      - 🇨🇭 瑞士-苏黎世-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
-      - 🇧🇷 巴西NEW03优选
-      - 🇸🇬 新加坡-HY-001-1B
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇯🇵 日本中转 04
+      - 台灣02-直連
       - 🇭🇰 中国-香港-HY-002-1B
-      - 🇭🇰 中国-香港-001-1C
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
-      - 🇸🇬 新加坡-001-1A
-      - 🇦🇺 墨尔本
-      - 🇺🇸 美国-拉斯维加斯-001-1C
-      - 🇯🇵 日本
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
-      - 🇭🇰 中国-香港-001-1A
-      - 🇸🇬 新加坡-001-1B
-      - 🇫🇷 法国 01 联通推荐
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
-      - 🇭🇰 中国-香港-HY-002-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
-      - 🇭🇰 中国-香港-002-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1B
-      - 🇬🇧 英国-伦敦-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1C
-      - 🇸🇬 新加坡NEW01
-      - 🇬🇧 英国-伦敦-HY-001-1B
-      - 🇷🇺 俄罗斯-莫斯科-001-1A
-      - 🇸🇬 新加坡-HY-001-1A
-      - 🇬🇧 英国-伦敦-001-1C
-      - 🇺🇸 美国NEW01
-      - 🇸🇬 新加坡-001-1C
+      - 🇦🇺 澳大利亚原生1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1F
+      - 🇭🇰 香港-1C
+      - 🇹🇼 台湾直连
       - 🇺🇸 美国-拉斯维加斯-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1C
-      - 🇰🇷 韩国NEW01
-      - 🇺🇸 美国-拉斯维加斯-001-1B
-      - 🇭🇰 香港
-      - 🇸🇬 新加坡-HY-001-1C
-      - 🇨🇦 加拿大-多伦多-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1C
-      - 🇸🇬 新加坡NEW01优选
-      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇺🇸 美国5
+      - 🇭🇰 中国-香港-HY-002-1E
+      - 🇯🇵 日本-2
+      - 🇸🇬 新加坡-001-1A
+      - 美國02-直連
+      - 🇭🇰 香港-直连2流媒体2x
+      - 台灣01-直連
       - 🇭🇰 中国-香港-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1C
-      - 🇭🇰 中国-香港-HY-002-1C
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇰🇷 韩国-2
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
+      - 🇭🇰 中国-香港-004-1D
+      - 🇸🇬 新加坡-HY-001-1E
+      - 🇸🇬 新加坡中转 03
+      - 🇺🇸 美国-2
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
+      - 🇬🇧 英国 IEPL专线NO1
+      - 🇸🇬 新加坡-HY-001-1A
+      - 🇺🇸 美国-纽约-001-1C
+      - 🇺🇸 美国-拉斯维加斯-001-1F
       - 🇧🇷 巴西NEW03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
+      - 🇦🇺 墨尔本-1A
+      - 🇷🇺 俄罗斯-1A
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1A
+      - 台灣03-直連
+      - 🇹🇼 台湾中转25x
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1F
+      - 台灣11-直連
+      - 台灣13-直連
+      - 🇯🇵 日本-1B
+      - 🇺🇸 美国 01 电信推荐-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1A
+      - 🇸🇬 新加坡-001-1F
+      - 🇭🇰 香港2直连
+      - 🇭🇰 中国-香港-HY-002-1C
+      - 台灣04-直連
+      - 🇰🇿 哈萨克斯坦中转
+      - 🇸🇬 新加坡 IEPL专线NO1
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1E
+      - 🇭🇰 中国-香港-001-1E
+      - 🇯🇵 日本中转 01
+      - 🇭🇰 香港直连2流媒体2x
+      - 🇭🇰 香港中转 04
+      - 🇯🇵 日本NO.2
+      - 🇹🇼 台湾2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇭🇰 中国-香港-002-1D
+      - 🇭🇰 香港中转 05
+      - 🇸🇬 新加坡NO.2
+      - 🇸🇬 新加坡03奈非-5x
+      - 🇬🇧 英国-伦敦-001-1F
+      - 🇭🇰 三网中转香港|5x
+      - 🇭🇰 中国-香港-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1F
+      - 🇬🇧 英国-伦敦-HY-001-1C
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇷🇺 俄罗斯电信CN2三网优化 SULINK01
+      - 🇸🇬 新加坡NO.1
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 台灣05-直連
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1F
+      - 🇭🇰 中国-香港-HY-002-1D
+      - 🇷🇺 俄罗斯直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1D
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 🇸🇬 新加坡-001-1E
+      - 🇺🇸 美国-纽约-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇸🇬 新加坡NEW01优选
+      - 🇫🇷 法国 CM 隧道NO1
+      - 🇭🇰 香港01-奈非-中转
+      - 🇺🇸 美国直连
+      - 🇵🇱 波兰IPV6-01
+      - 🇹🇼 台湾2SS中转|3x
+      - 🇭🇰 中国-香港-002-1F
+      - 🇯🇵 日本SS中转4
+      - 🇺🇸 美国中转 02
+      - 🇭🇰 中国-香港-HY-001-1A
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇭🇰 中国-香港-003-1D
+      - 🇪🇸 西班牙IPV6
+      - 🇮🇳 印度1
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1E
+      - 🇰🇷 韩国-首尔
+      - 🇨🇦 加拿大-多伦多-001-1D
+      - 🇯🇵 日本7
+      - 🇨🇦 加拿大-多伦多-001-1A
+      - 🇭🇰 香港4SS中转5x
+      - 🇭🇰 中国-香港-003-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1E
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1D
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
+      - 🇻🇳 越南中转
+      - 🇭🇰 中国-香港-001-1C
+      - 🇲🇾 马来西亚直连
+      - 🇭🇰 中国-香港-004-1F
+      - 🇫🇷 法国 01 联通推荐-1A
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1A
+      - 🇺🇸 美国05
+      - 🇨🇦 加拿大-多伦多-001-1E
+      - 🇭🇰 中国-香港-003-1E
+      - 🇸🇪 瑞典中转
+      - 🇬🇧 英国-伦敦-001-1C
+      - 🇸🇬 新加坡07奈非-5x
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1E
+      - 🇨🇭 瑞士-苏黎世-HY-001-1B
+      - 🇭🇰 香港HKT中转25x
+      - 🇭🇰 中国-香港-003-1C
+      - 🇺🇸 美国-纽约-001-1A
+      - 🇨🇦 加拿大-多伦多-001-1F
+      - 🇯🇵 日本中转 02
+      - TG SUPERBIU888
+      - 🇰🇷 韩国3SS中转
+      - 下方为备用节点
+      - 🇯🇵 日本SS中转1
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇭🇰 中国-香港-001-1F
+      - 台灣09-直連
+      - 🇷🇺 俄罗斯-莫斯科-001-1F
+      - 🇸🇬 新加坡-001-1B
+      - 🇸🇬 新加坡 01 移动推荐-1A
+      - 🇩🇪 德国中转
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
+      - 🇭🇰 中国-香港-004-1E
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇸🇬 新加坡-001-1D
+      - 🇹🇼 台湾 IEPL专线NO3
+      - 🇷🇺 俄罗斯-莫斯科-001-1D
+      - 🇺🇸 美国-拉斯维加斯-001-1C
+      - 台灣14-直連
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NEW01
+      - 🇯🇵 日本SS中转3
+      - 🇹🇼 台湾中转 04
+      - 🇸🇬 新加坡直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
+      - 🇭🇰 香港3中转25x
+      - 🇭🇰 中国-香港-HY-001-1D
+      - 🇬🇧 英国中转 03
+      - 🇭🇰 香港3SS中转
+      - 🇭🇰 中国-香港-004-1A
+      - 🇺🇸 美国NO.1
+      - 🇸🇬 新加坡-001-1C
+      - 🇬🇧 英国-伦敦-HY-001-1D
+      - 🇭🇰 中国-香港-003-1F
+      - 🇮🇳 印度2
+      - 🇫🇷 法国1
+      - 🇫🇷 法国2
+      - 🇫🇷 法国 01 联通推荐-1B
+      - 🇸🇬 新加坡中转 02
+      - 🇰🇷 韩国NEW01
+      - 🇷🇺 俄罗斯-1B
+      - 🇹🇼 台湾1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇹🇼 台湾中转 01
+      - 🇬🇧 英国-伦敦-001-1B
+      - 🇺🇸 美国NO.2
+      - 🇸🇬 新加坡-HY-001-1B
+      - 🇭🇰 香港-1A
+      - 🇭🇰 中国-香港-002-1C
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇺🇸 美国04
+      - 🇭🇰 中国-香港-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
+      - 台灣10-直連
+      - 🇭🇰 中国-香港-001-1B
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1D
+      - 🇹🇼 台湾中转 03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
+      - 🇭🇰 中国-香港-001-1A
+      - 🇯🇵 日本中转 03
+      - 🇬🇧 英国中转 01
+      - 🇺🇸 美国-拉斯维加斯-001-1B
+      - 🇬🇧 英国中转 02
+      - 🇺🇸 美国中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1F
+      - 🇨🇭 瑞士-苏黎世-HY-001-1D
+      - 🇭🇰 中国-香港-002-1A
+      - 🇹🇼 台湾1SS中转|3x
+      - 🇬🇧 英国-伦敦-HY-001-1E
+      - 🇯🇵 日本NO.1
+      - 非洲 IEPL专线 NO1
+      - 🇸🇬 新加坡-HY-001-1D
+      - 台灣15-直連
+      - 🇺🇸 美国 01 电信推荐-1A
+      - 🇭🇰 香港中转 01
+      - 🇯🇵 日本直连
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国-纽约-001-1B
+      - 🇦🇪 阿联酋中转
+      - 🇬🇧 英国-伦敦-HY-001-1B
+      - 🇭🇰 香港中转 02
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1D
+      - 🇭🇰 香港中转 03
+      - 🇪🇺 欧洲-伦敦-1
+      - 🇭🇰 中国-香港-004-1C
+      - 美國03-直連-0.1x
+      - 🇨🇦 加拿大1
+      - 台灣12-直連
+      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇸🇬 新加坡2SS中转
+      - 🇫🇷 法国IPV6-10
+      - 🇨🇭 瑞士-苏黎世-HY-001-1E
+      - 🇬🇧 英国-伦敦-HY-001-1A
+      - 🇯🇵 日本-1A
+      - 🇸🇬 新加坡中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡-HY-001-1C
+      - 🇭🇰 中国-香港-004-1B
+      - 🇬🇧 英国-伦敦-HY-001-1F
+      - 🇮🇳 印度中转
+      - 🇧🇷 巴西NEW03优选
+      - 🇨🇦 加拿大-多伦多-001-1B
+      - 🇲🇾 马来西亚中转
+      - 🇹🇷 土耳其中转
+      - 台灣08-直連
+      - 🇩🇪 德国 IEPL专线NO1
+      - 🇯🇵 日本 IEPL专线NO3
+      - 台灣16-直連
+      - 🇬🇧 英国-伦敦-001-1D
+      - 🇭🇰 中国-香港-001-1D
+      - 🇯🇵 日本-1
+      - 台灣07-直連
+      - 🇺🇸 美国-纽约-001-1E
+      - 🇦🇺 墨尔本-1B
+      - 台灣06-直連
+      - 🇫🇷 法国IPV6-09
+      - 🇺🇸 北美-US-圣何塞-2
+      - 🇬🇧 英国-伦敦-001-1E
+      - 🇭🇰 香港2SS中转
+      - 🇭🇰 中国-香港-003-1A
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本中转 05
+      - 🇭🇰 中国-香港-HY-002-1A
+      - 🇹🇼 台湾-02-奈非-3x
+      - 🇸🇬 新加坡NEW01
+      - 🇬🇧 英国-伦敦-001-1A
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 🇺🇸 美国1SS中转
+      - 🇺🇸 美国中转 03
+      - 🇷🇺 俄罗斯-莫斯科-001-1C
+      - 🇲🇴 澳门NO.2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
+      - 🇺🇸 美国-纽约-001-1F
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1D
+      - 🇨🇦 加拿大2
+      - 🇨🇭 瑞士-苏黎世-HY-001-1C
+      - 🇭🇰 中国-香港-002-1B
+      - 🇹🇼 台湾中转 05
+      - 🇭🇰 香港-1B
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1E
+      - 🇺🇸 美国02
+      - 🇭🇰 中国-香港-HY-002-1F
+      - 🇸🇬 新加坡 01 移动推荐-1B
+      - 🇻🇳 越南直连
+      - 🇯🇵 日本04三网中转|5x
+      - 🇭🇰 中国-香港-002-1E
+      - 🇨🇦 加拿大-多伦多-001-1C
+      - 🇸🇬 新加坡-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇹🇼 台湾中转 02
+      - 🇺🇸 美国-拉斯维加斯-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1F
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇭🇰 中国-香港-001-1B
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1A
-      - 🇯🇵 日本NEW01
-      - 🇬🇧 英国-伦敦-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1C
-      - 🇺🇸 美国 01 电信推荐
-      - 🇺🇸 美国-拉斯维加斯-001-1A
-      - 🇭🇰 中国-香港-002-1A
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
-      - 🇷🇺 俄罗斯
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
-      - 🇭🇰 中国-香港-002-1C
-      - 🇭🇰 中国-香港-HY-001-1A
-      - 🇨🇭 瑞士-苏黎世-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
-      - 🇧🇷 巴西NEW03优选
-      - 🇸🇬 新加坡-HY-001-1B
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇯🇵 日本中转 04
+      - 台灣02-直連
       - 🇭🇰 中国-香港-HY-002-1B
-      - 🇭🇰 中国-香港-001-1C
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
-      - 🇸🇬 新加坡-001-1A
-      - 🇦🇺 墨尔本
-      - 🇺🇸 美国-拉斯维加斯-001-1C
-      - 🇯🇵 日本
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
-      - 🇭🇰 中国-香港-001-1A
-      - 🇸🇬 新加坡-001-1B
-      - 🇫🇷 法国 01 联通推荐
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
-      - 🇭🇰 中国-香港-HY-002-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
-      - 🇭🇰 中国-香港-002-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1B
-      - 🇬🇧 英国-伦敦-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1C
-      - 🇸🇬 新加坡NEW01
-      - 🇬🇧 英国-伦敦-HY-001-1B
-      - 🇷🇺 俄罗斯-莫斯科-001-1A
-      - 🇸🇬 新加坡-HY-001-1A
-      - 🇬🇧 英国-伦敦-001-1C
-      - 🇺🇸 美国NEW01
-      - 🇸🇬 新加坡-001-1C
+      - 🇦🇺 澳大利亚原生1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1F
+      - 🇭🇰 香港-1C
+      - 🇹🇼 台湾直连
       - 🇺🇸 美国-拉斯维加斯-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1C
-      - 🇰🇷 韩国NEW01
-      - 🇺🇸 美国-拉斯维加斯-001-1B
-      - 🇭🇰 香港
-      - 🇸🇬 新加坡-HY-001-1C
-      - 🇨🇦 加拿大-多伦多-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1C
-      - 🇸🇬 新加坡NEW01优选
-      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇺🇸 美国5
+      - 🇭🇰 中国-香港-HY-002-1E
+      - 🇯🇵 日本-2
+      - 🇸🇬 新加坡-001-1A
+      - 美國02-直連
+      - 🇭🇰 香港-直连2流媒体2x
+      - 台灣01-直連
       - 🇭🇰 中国-香港-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1C
-      - 🇭🇰 中国-香港-HY-002-1C
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇰🇷 韩国-2
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
+      - 🇭🇰 中国-香港-004-1D
+      - 🇸🇬 新加坡-HY-001-1E
+      - 🇸🇬 新加坡中转 03
+      - 🇺🇸 美国-2
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
+      - 🇬🇧 英国 IEPL专线NO1
+      - 🇸🇬 新加坡-HY-001-1A
+      - 🇺🇸 美国-纽约-001-1C
+      - 🇺🇸 美国-拉斯维加斯-001-1F
       - 🇧🇷 巴西NEW03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
+      - 🇦🇺 墨尔本-1A
+      - 🇷🇺 俄罗斯-1A
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1A
+      - 台灣03-直連
+      - 🇹🇼 台湾中转25x
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1F
+      - 台灣11-直連
+      - 台灣13-直連
+      - 🇯🇵 日本-1B
+      - 🇺🇸 美国 01 电信推荐-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1A
+      - 🇸🇬 新加坡-001-1F
+      - 🇭🇰 香港2直连
+      - 🇭🇰 中国-香港-HY-002-1C
+      - 台灣04-直連
+      - 🇰🇿 哈萨克斯坦中转
+      - 🇸🇬 新加坡 IEPL专线NO1
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1E
+      - 🇭🇰 中国-香港-001-1E
+      - 🇯🇵 日本中转 01
+      - 🇭🇰 香港直连2流媒体2x
+      - 🇭🇰 香港中转 04
+      - 🇯🇵 日本NO.2
+      - 🇹🇼 台湾2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇭🇰 中国-香港-002-1D
+      - 🇭🇰 香港中转 05
+      - 🇸🇬 新加坡NO.2
+      - 🇸🇬 新加坡03奈非-5x
+      - 🇬🇧 英国-伦敦-001-1F
+      - 🇭🇰 三网中转香港|5x
+      - 🇭🇰 中国-香港-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1F
+      - 🇬🇧 英国-伦敦-HY-001-1C
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇷🇺 俄罗斯电信CN2三网优化 SULINK01
+      - 🇸🇬 新加坡NO.1
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 台灣05-直連
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1F
+      - 🇭🇰 中国-香港-HY-002-1D
+      - 🇷🇺 俄罗斯直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1D
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 🇸🇬 新加坡-001-1E
+      - 🇺🇸 美国-纽约-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇸🇬 新加坡NEW01优选
+      - 🇫🇷 法国 CM 隧道NO1
+      - 🇭🇰 香港01-奈非-中转
+      - 🇺🇸 美国直连
+      - 🇵🇱 波兰IPV6-01
+      - 🇹🇼 台湾2SS中转|3x
+      - 🇭🇰 中国-香港-002-1F
+      - 🇯🇵 日本SS中转4
+      - 🇺🇸 美国中转 02
+      - 🇭🇰 中国-香港-HY-001-1A
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇭🇰 中国-香港-003-1D
+      - 🇪🇸 西班牙IPV6
+      - 🇮🇳 印度1
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1E
+      - 🇰🇷 韩国-首尔
+      - 🇨🇦 加拿大-多伦多-001-1D
+      - 🇯🇵 日本7
+      - 🇨🇦 加拿大-多伦多-001-1A
+      - 🇭🇰 香港4SS中转5x
+      - 🇭🇰 中国-香港-003-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1E
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1D
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
+      - 🇻🇳 越南中转
+      - 🇭🇰 中国-香港-001-1C
+      - 🇲🇾 马来西亚直连
+      - 🇭🇰 中国-香港-004-1F
+      - 🇫🇷 法国 01 联通推荐-1A
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1A
+      - 🇺🇸 美国05
+      - 🇨🇦 加拿大-多伦多-001-1E
+      - 🇭🇰 中国-香港-003-1E
+      - 🇸🇪 瑞典中转
+      - 🇬🇧 英国-伦敦-001-1C
+      - 🇸🇬 新加坡07奈非-5x
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1E
+      - 🇨🇭 瑞士-苏黎世-HY-001-1B
+      - 🇭🇰 香港HKT中转25x
+      - 🇭🇰 中国-香港-003-1C
+      - 🇺🇸 美国-纽约-001-1A
+      - 🇨🇦 加拿大-多伦多-001-1F
+      - 🇯🇵 日本中转 02
+      - TG SUPERBIU888
+      - 🇰🇷 韩国3SS中转
+      - 下方为备用节点
+      - 🇯🇵 日本SS中转1
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇭🇰 中国-香港-001-1F
+      - 台灣09-直連
+      - 🇷🇺 俄罗斯-莫斯科-001-1F
+      - 🇸🇬 新加坡-001-1B
+      - 🇸🇬 新加坡 01 移动推荐-1A
+      - 🇩🇪 德国中转
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
+      - 🇭🇰 中国-香港-004-1E
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇸🇬 新加坡-001-1D
+      - 🇹🇼 台湾 IEPL专线NO3
+      - 🇷🇺 俄罗斯-莫斯科-001-1D
+      - 🇺🇸 美国-拉斯维加斯-001-1C
+      - 台灣14-直連
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NEW01
+      - 🇯🇵 日本SS中转3
+      - 🇹🇼 台湾中转 04
+      - 🇸🇬 新加坡直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
+      - 🇭🇰 香港3中转25x
+      - 🇭🇰 中国-香港-HY-001-1D
+      - 🇬🇧 英国中转 03
+      - 🇭🇰 香港3SS中转
+      - 🇭🇰 中国-香港-004-1A
+      - 🇺🇸 美国NO.1
+      - 🇸🇬 新加坡-001-1C
+      - 🇬🇧 英国-伦敦-HY-001-1D
+      - 🇭🇰 中国-香港-003-1F
+      - 🇮🇳 印度2
+      - 🇫🇷 法国1
+      - 🇫🇷 法国2
+      - 🇫🇷 法国 01 联通推荐-1B
+      - 🇸🇬 新加坡中转 02
+      - 🇰🇷 韩国NEW01
+      - 🇷🇺 俄罗斯-1B
+      - 🇹🇼 台湾1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇹🇼 台湾中转 01
+      - 🇬🇧 英国-伦敦-001-1B
+      - 🇺🇸 美国NO.2
+      - 🇸🇬 新加坡-HY-001-1B
+      - 🇭🇰 香港-1A
+      - 🇭🇰 中国-香港-002-1C
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇺🇸 美国04
+      - 🇭🇰 中国-香港-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
+      - 台灣10-直連
+      - 🇭🇰 中国-香港-001-1B
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1D
+      - 🇹🇼 台湾中转 03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
+      - 🇭🇰 中国-香港-001-1A
+      - 🇯🇵 日本中转 03
+      - 🇬🇧 英国中转 01
+      - 🇺🇸 美国-拉斯维加斯-001-1B
+      - 🇬🇧 英国中转 02
+      - 🇺🇸 美国中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1F
+      - 🇨🇭 瑞士-苏黎世-HY-001-1D
+      - 🇭🇰 中国-香港-002-1A
+      - 🇹🇼 台湾1SS中转|3x
+      - 🇬🇧 英国-伦敦-HY-001-1E
+      - 🇯🇵 日本NO.1
+      - 非洲 IEPL专线 NO1
+      - 🇸🇬 新加坡-HY-001-1D
+      - 台灣15-直連
+      - 🇺🇸 美国 01 电信推荐-1A
+      - 🇭🇰 香港中转 01
+      - 🇯🇵 日本直连
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国-纽约-001-1B
+      - 🇦🇪 阿联酋中转
+      - 🇬🇧 英国-伦敦-HY-001-1B
+      - 🇭🇰 香港中转 02
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1D
+      - 🇭🇰 香港中转 03
+      - 🇪🇺 欧洲-伦敦-1
+      - 🇭🇰 中国-香港-004-1C
+      - 美國03-直連-0.1x
+      - 🇨🇦 加拿大1
+      - 台灣12-直連
+      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇸🇬 新加坡2SS中转
+      - 🇫🇷 法国IPV6-10
+      - 🇨🇭 瑞士-苏黎世-HY-001-1E
+      - 🇬🇧 英国-伦敦-HY-001-1A
+      - 🇯🇵 日本-1A
+      - 🇸🇬 新加坡中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡-HY-001-1C
+      - 🇭🇰 中国-香港-004-1B
+      - 🇬🇧 英国-伦敦-HY-001-1F
+      - 🇮🇳 印度中转
+      - 🇧🇷 巴西NEW03优选
+      - 🇨🇦 加拿大-多伦多-001-1B
+      - 🇲🇾 马来西亚中转
+      - 🇹🇷 土耳其中转
+      - 台灣08-直連
+      - 🇩🇪 德国 IEPL专线NO1
+      - 🇯🇵 日本 IEPL专线NO3
+      - 台灣16-直連
+      - 🇬🇧 英国-伦敦-001-1D
+      - 🇭🇰 中国-香港-001-1D
+      - 🇯🇵 日本-1
+      - 台灣07-直連
+      - 🇺🇸 美国-纽约-001-1E
+      - 🇦🇺 墨尔本-1B
+      - 台灣06-直連
+      - 🇫🇷 法国IPV6-09
+      - 🇺🇸 北美-US-圣何塞-2
+      - 🇬🇧 英国-伦敦-001-1E
+      - 🇭🇰 香港2SS中转
+      - 🇭🇰 中国-香港-003-1A
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本中转 05
+      - 🇭🇰 中国-香港-HY-002-1A
+      - 🇹🇼 台湾-02-奈非-3x
+      - 🇸🇬 新加坡NEW01
+      - 🇬🇧 英国-伦敦-001-1A
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 🇺🇸 美国1SS中转
+      - 🇺🇸 美国中转 03
+      - 🇷🇺 俄罗斯-莫斯科-001-1C
+      - 🇲🇴 澳门NO.2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
+      - 🇺🇸 美国-纽约-001-1F
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1D
+      - 🇨🇦 加拿大2
+      - 🇨🇭 瑞士-苏黎世-HY-001-1C
+      - 🇭🇰 中国-香港-002-1B
+      - 🇹🇼 台湾中转 05
+      - 🇭🇰 香港-1B
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1E
+      - 🇺🇸 美国02
+      - 🇭🇰 中国-香港-HY-002-1F
+      - 🇸🇬 新加坡 01 移动推荐-1B
+      - 🇻🇳 越南直连
+      - 🇯🇵 日本04三网中转|5x
+      - 🇭🇰 中国-香港-002-1E
+      - 🇨🇦 加拿大-多伦多-001-1C
+      - 🇸🇬 新加坡-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇹🇼 台湾中转 02
+      - 🇺🇸 美国-拉斯维加斯-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1F
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -308,308 +1180,1253 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇭🇰 中国-香港-001-1B
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1A
-      - 🇯🇵 日本NEW01
-      - 🇬🇧 英国-伦敦-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1C
-      - 🇺🇸 美国 01 电信推荐
-      - 🇺🇸 美国-拉斯维加斯-001-1A
-      - 🇭🇰 中国-香港-002-1A
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
-      - 🇷🇺 俄罗斯
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
-      - 🇭🇰 中国-香港-002-1C
-      - 🇭🇰 中国-香港-HY-001-1A
-      - 🇨🇭 瑞士-苏黎世-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
-      - 🇧🇷 巴西NEW03优选
-      - 🇸🇬 新加坡-HY-001-1B
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇯🇵 日本中转 04
+      - 台灣02-直連
       - 🇭🇰 中国-香港-HY-002-1B
-      - 🇭🇰 中国-香港-001-1C
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
-      - 🇸🇬 新加坡-001-1A
-      - 🇦🇺 墨尔本
-      - 🇺🇸 美国-拉斯维加斯-001-1C
-      - 🇯🇵 日本
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
-      - 🇭🇰 中国-香港-001-1A
-      - 🇸🇬 新加坡-001-1B
-      - 🇫🇷 法国 01 联通推荐
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
-      - 🇭🇰 中国-香港-HY-002-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
-      - 🇭🇰 中国-香港-002-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1B
-      - 🇬🇧 英国-伦敦-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1C
-      - 🇸🇬 新加坡NEW01
-      - 🇬🇧 英国-伦敦-HY-001-1B
-      - 🇷🇺 俄罗斯-莫斯科-001-1A
-      - 🇸🇬 新加坡-HY-001-1A
-      - 🇬🇧 英国-伦敦-001-1C
-      - 🇺🇸 美国NEW01
-      - 🇸🇬 新加坡-001-1C
+      - 🇦🇺 澳大利亚原生1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1F
+      - 🇭🇰 香港-1C
+      - 🇹🇼 台湾直连
       - 🇺🇸 美国-拉斯维加斯-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1C
-      - 🇰🇷 韩国NEW01
-      - 🇺🇸 美国-拉斯维加斯-001-1B
-      - 🇭🇰 香港
-      - 🇸🇬 新加坡-HY-001-1C
-      - 🇨🇦 加拿大-多伦多-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1C
-      - 🇸🇬 新加坡NEW01优选
-      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇺🇸 美国5
+      - 🇭🇰 中国-香港-HY-002-1E
+      - 🇯🇵 日本-2
+      - 🇸🇬 新加坡-001-1A
+      - 美國02-直連
+      - 🇭🇰 香港-直连2流媒体2x
+      - 台灣01-直連
       - 🇭🇰 中国-香港-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1C
-      - 🇭🇰 中国-香港-HY-002-1C
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇰🇷 韩国-2
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
+      - 🇭🇰 中国-香港-004-1D
+      - 🇸🇬 新加坡-HY-001-1E
+      - 🇸🇬 新加坡中转 03
+      - 🇺🇸 美国-2
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
+      - 🇬🇧 英国 IEPL专线NO1
+      - 🇸🇬 新加坡-HY-001-1A
+      - 🇺🇸 美国-纽约-001-1C
+      - 🇺🇸 美国-拉斯维加斯-001-1F
       - 🇧🇷 巴西NEW03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
+      - 🇦🇺 墨尔本-1A
+      - 🇷🇺 俄罗斯-1A
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1A
+      - 台灣03-直連
+      - 🇹🇼 台湾中转25x
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1F
+      - 台灣11-直連
+      - 台灣13-直連
+      - 🇯🇵 日本-1B
+      - 🇺🇸 美国 01 电信推荐-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1A
+      - 🇸🇬 新加坡-001-1F
+      - 🇭🇰 香港2直连
+      - 🇭🇰 中国-香港-HY-002-1C
+      - 台灣04-直連
+      - 🇰🇿 哈萨克斯坦中转
+      - 🇸🇬 新加坡 IEPL专线NO1
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1E
+      - 🇭🇰 中国-香港-001-1E
+      - 🇯🇵 日本中转 01
+      - 🇭🇰 香港直连2流媒体2x
+      - 🇭🇰 香港中转 04
+      - 🇯🇵 日本NO.2
+      - 🇹🇼 台湾2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇭🇰 中国-香港-002-1D
+      - 🇭🇰 香港中转 05
+      - 🇸🇬 新加坡NO.2
+      - 🇸🇬 新加坡03奈非-5x
+      - 🇬🇧 英国-伦敦-001-1F
+      - 🇭🇰 三网中转香港|5x
+      - 🇭🇰 中国-香港-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1F
+      - 🇬🇧 英国-伦敦-HY-001-1C
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇷🇺 俄罗斯电信CN2三网优化 SULINK01
+      - 🇸🇬 新加坡NO.1
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 台灣05-直連
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1F
+      - 🇭🇰 中国-香港-HY-002-1D
+      - 🇷🇺 俄罗斯直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1D
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 🇸🇬 新加坡-001-1E
+      - 🇺🇸 美国-纽约-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇸🇬 新加坡NEW01优选
+      - 🇫🇷 法国 CM 隧道NO1
+      - 🇭🇰 香港01-奈非-中转
+      - 🇺🇸 美国直连
+      - 🇵🇱 波兰IPV6-01
+      - 🇹🇼 台湾2SS中转|3x
+      - 🇭🇰 中国-香港-002-1F
+      - 🇯🇵 日本SS中转4
+      - 🇺🇸 美国中转 02
+      - 🇭🇰 中国-香港-HY-001-1A
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇭🇰 中国-香港-003-1D
+      - 🇪🇸 西班牙IPV6
+      - 🇮🇳 印度1
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1E
+      - 🇰🇷 韩国-首尔
+      - 🇨🇦 加拿大-多伦多-001-1D
+      - 🇯🇵 日本7
+      - 🇨🇦 加拿大-多伦多-001-1A
+      - 🇭🇰 香港4SS中转5x
+      - 🇭🇰 中国-香港-003-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1E
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1D
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
+      - 🇻🇳 越南中转
+      - 🇭🇰 中国-香港-001-1C
+      - 🇲🇾 马来西亚直连
+      - 🇭🇰 中国-香港-004-1F
+      - 🇫🇷 法国 01 联通推荐-1A
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1A
+      - 🇺🇸 美国05
+      - 🇨🇦 加拿大-多伦多-001-1E
+      - 🇭🇰 中国-香港-003-1E
+      - 🇸🇪 瑞典中转
+      - 🇬🇧 英国-伦敦-001-1C
+      - 🇸🇬 新加坡07奈非-5x
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1E
+      - 🇨🇭 瑞士-苏黎世-HY-001-1B
+      - 🇭🇰 香港HKT中转25x
+      - 🇭🇰 中国-香港-003-1C
+      - 🇺🇸 美国-纽约-001-1A
+      - 🇨🇦 加拿大-多伦多-001-1F
+      - 🇯🇵 日本中转 02
+      - TG SUPERBIU888
+      - 🇰🇷 韩国3SS中转
+      - 下方为备用节点
+      - 🇯🇵 日本SS中转1
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇭🇰 中国-香港-001-1F
+      - 台灣09-直連
+      - 🇷🇺 俄罗斯-莫斯科-001-1F
+      - 🇸🇬 新加坡-001-1B
+      - 🇸🇬 新加坡 01 移动推荐-1A
+      - 🇩🇪 德国中转
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
+      - 🇭🇰 中国-香港-004-1E
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇸🇬 新加坡-001-1D
+      - 🇹🇼 台湾 IEPL专线NO3
+      - 🇷🇺 俄罗斯-莫斯科-001-1D
+      - 🇺🇸 美国-拉斯维加斯-001-1C
+      - 台灣14-直連
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NEW01
+      - 🇯🇵 日本SS中转3
+      - 🇹🇼 台湾中转 04
+      - 🇸🇬 新加坡直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
+      - 🇭🇰 香港3中转25x
+      - 🇭🇰 中国-香港-HY-001-1D
+      - 🇬🇧 英国中转 03
+      - 🇭🇰 香港3SS中转
+      - 🇭🇰 中国-香港-004-1A
+      - 🇺🇸 美国NO.1
+      - 🇸🇬 新加坡-001-1C
+      - 🇬🇧 英国-伦敦-HY-001-1D
+      - 🇭🇰 中国-香港-003-1F
+      - 🇮🇳 印度2
+      - 🇫🇷 法国1
+      - 🇫🇷 法国2
+      - 🇫🇷 法国 01 联通推荐-1B
+      - 🇸🇬 新加坡中转 02
+      - 🇰🇷 韩国NEW01
+      - 🇷🇺 俄罗斯-1B
+      - 🇹🇼 台湾1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇹🇼 台湾中转 01
+      - 🇬🇧 英国-伦敦-001-1B
+      - 🇺🇸 美国NO.2
+      - 🇸🇬 新加坡-HY-001-1B
+      - 🇭🇰 香港-1A
+      - 🇭🇰 中国-香港-002-1C
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇺🇸 美国04
+      - 🇭🇰 中国-香港-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
+      - 台灣10-直連
+      - 🇭🇰 中国-香港-001-1B
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1D
+      - 🇹🇼 台湾中转 03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
+      - 🇭🇰 中国-香港-001-1A
+      - 🇯🇵 日本中转 03
+      - 🇬🇧 英国中转 01
+      - 🇺🇸 美国-拉斯维加斯-001-1B
+      - 🇬🇧 英国中转 02
+      - 🇺🇸 美国中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1F
+      - 🇨🇭 瑞士-苏黎世-HY-001-1D
+      - 🇭🇰 中国-香港-002-1A
+      - 🇹🇼 台湾1SS中转|3x
+      - 🇬🇧 英国-伦敦-HY-001-1E
+      - 🇯🇵 日本NO.1
+      - 非洲 IEPL专线 NO1
+      - 🇸🇬 新加坡-HY-001-1D
+      - 台灣15-直連
+      - 🇺🇸 美国 01 电信推荐-1A
+      - 🇭🇰 香港中转 01
+      - 🇯🇵 日本直连
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国-纽约-001-1B
+      - 🇦🇪 阿联酋中转
+      - 🇬🇧 英国-伦敦-HY-001-1B
+      - 🇭🇰 香港中转 02
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1D
+      - 🇭🇰 香港中转 03
+      - 🇪🇺 欧洲-伦敦-1
+      - 🇭🇰 中国-香港-004-1C
+      - 美國03-直連-0.1x
+      - 🇨🇦 加拿大1
+      - 台灣12-直連
+      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇸🇬 新加坡2SS中转
+      - 🇫🇷 法国IPV6-10
+      - 🇨🇭 瑞士-苏黎世-HY-001-1E
+      - 🇬🇧 英国-伦敦-HY-001-1A
+      - 🇯🇵 日本-1A
+      - 🇸🇬 新加坡中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡-HY-001-1C
+      - 🇭🇰 中国-香港-004-1B
+      - 🇬🇧 英国-伦敦-HY-001-1F
+      - 🇮🇳 印度中转
+      - 🇧🇷 巴西NEW03优选
+      - 🇨🇦 加拿大-多伦多-001-1B
+      - 🇲🇾 马来西亚中转
+      - 🇹🇷 土耳其中转
+      - 台灣08-直連
+      - 🇩🇪 德国 IEPL专线NO1
+      - 🇯🇵 日本 IEPL专线NO3
+      - 台灣16-直連
+      - 🇬🇧 英国-伦敦-001-1D
+      - 🇭🇰 中国-香港-001-1D
+      - 🇯🇵 日本-1
+      - 台灣07-直連
+      - 🇺🇸 美国-纽约-001-1E
+      - 🇦🇺 墨尔本-1B
+      - 台灣06-直連
+      - 🇫🇷 法国IPV6-09
+      - 🇺🇸 北美-US-圣何塞-2
+      - 🇬🇧 英国-伦敦-001-1E
+      - 🇭🇰 香港2SS中转
+      - 🇭🇰 中国-香港-003-1A
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本中转 05
+      - 🇭🇰 中国-香港-HY-002-1A
+      - 🇹🇼 台湾-02-奈非-3x
+      - 🇸🇬 新加坡NEW01
+      - 🇬🇧 英国-伦敦-001-1A
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 🇺🇸 美国1SS中转
+      - 🇺🇸 美国中转 03
+      - 🇷🇺 俄罗斯-莫斯科-001-1C
+      - 🇲🇴 澳门NO.2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
+      - 🇺🇸 美国-纽约-001-1F
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1D
+      - 🇨🇦 加拿大2
+      - 🇨🇭 瑞士-苏黎世-HY-001-1C
+      - 🇭🇰 中国-香港-002-1B
+      - 🇹🇼 台湾中转 05
+      - 🇭🇰 香港-1B
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1E
+      - 🇺🇸 美国02
+      - 🇭🇰 中国-香港-HY-002-1F
+      - 🇸🇬 新加坡 01 移动推荐-1B
+      - 🇻🇳 越南直连
+      - 🇯🇵 日本04三网中转|5x
+      - 🇭🇰 中国-香港-002-1E
+      - 🇨🇦 加拿大-多伦多-001-1C
+      - 🇸🇬 新加坡-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇹🇼 台湾中转 02
+      - 🇺🇸 美国-拉斯维加斯-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1F
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇭🇰 中国-香港-001-1B
-      - 🇭🇰 中国-香港-002-1A
-      - 🇭🇰 中国-香港-002-1C
-      - 🇭🇰 中国-香港-HY-001-1A
+      - 台灣02-直連
       - 🇭🇰 中国-香港-HY-002-1B
-      - 🇭🇰 中国-香港-001-1C
-      - 🇭🇰 中国-香港-001-1A
-      - 🇭🇰 中国-香港-HY-002-1A
-      - 🇭🇰 中国-香港-002-1B
-      - 🇭🇰 香港
-      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇭🇰 香港-1C
+      - 🇹🇼 台湾直连
+      - 🇭🇰 中国-香港-HY-002-1E
+      - 🇭🇰 香港-直连2流媒体2x
+      - 台灣01-直連
       - 🇭🇰 中国-香港-HY-001-1C
+      - 🇭🇰 中国-香港-004-1D
+      - 台灣03-直連
+      - 🇹🇼 台湾中转25x
+      - 台灣11-直連
+      - 台灣13-直連
+      - 🇭🇰 香港2直连
       - 🇭🇰 中国-香港-HY-002-1C
+      - 台灣04-直連
+      - 🇭🇰 中国-香港-001-1E
+      - 🇭🇰 香港直连2流媒体2x
+      - 🇭🇰 香港中转 04
+      - 🇹🇼 台湾2
+      - 🇭🇰 中国-香港-002-1D
+      - 🇭🇰 香港中转 05
+      - 🇭🇰 三网中转香港|5x
+      - 🇭🇰 中国-香港-HY-001-1E
+      - 台灣05-直連
+      - 🇭🇰 中国-香港-HY-002-1D
+      - 🇭🇰 香港01-奈非-中转
+      - 🇹🇼 台湾2SS中转|3x
+      - 🇭🇰 中国-香港-002-1F
+      - 🇭🇰 中国-香港-HY-001-1A
+      - 🇭🇰 中国-香港-003-1D
+      - 🇭🇰 香港4SS中转5x
+      - 🇭🇰 中国-香港-003-1B
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇭🇰 中国-香港-001-1C
+      - 🇭🇰 中国-香港-004-1F
+      - 🇭🇰 中国-香港-003-1E
+      - 🇭🇰 香港HKT中转25x
+      - 🇭🇰 中国-香港-003-1C
+      - 🇭🇰 中国-香港-001-1F
+      - 台灣09-直連
+      - 🇭🇰 中国-香港-004-1E
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇹🇼 台湾 IEPL专线NO3
+      - 台灣14-直連
+      - 🇹🇼 台湾中转 04
+      - 🇭🇰 香港3中转25x
+      - 🇭🇰 中国-香港-HY-001-1D
+      - 🇭🇰 香港3SS中转
+      - 🇭🇰 中国-香港-004-1A
+      - 🇭🇰 中国-香港-003-1F
+      - 🇹🇼 台湾1
+      - 🇹🇼 台湾中转 01
+      - 🇭🇰 香港-1A
+      - 🇭🇰 中国-香港-002-1C
+      - 🇭🇰 中国-香港-HY-001-1F
+      - 台灣10-直連
+      - 🇭🇰 中国-香港-001-1B
+      - 🇹🇼 台湾中转 03
+      - 🇭🇰 中国-香港-001-1A
+      - 🇭🇰 中国-香港-002-1A
+      - 🇹🇼 台湾1SS中转|3x
+      - 台灣15-直連
+      - 🇭🇰 香港中转 01
+      - 🇭🇰 香港中转 02
+      - 🇭🇰 香港中转 03
+      - 🇭🇰 中国-香港-004-1C
+      - 台灣12-直連
+      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇭🇰 中国-香港-004-1B
+      - 台灣08-直連
+      - 台灣16-直連
+      - 🇭🇰 中国-香港-001-1D
+      - 台灣07-直連
+      - 台灣06-直連
+      - 🇭🇰 香港2SS中转
+      - 🇭🇰 中国-香港-003-1A
+      - 🇭🇰 中国-香港-HY-002-1A
+      - 🇹🇼 台湾-02-奈非-3x
+      - 🇭🇰 中国-香港-002-1B
+      - 🇹🇼 台湾中转 05
+      - 🇭🇰 香港-1B
+      - 🇭🇰 中国-香港-HY-002-1F
+      - 🇭🇰 中国-香港-002-1E
+      - 🇹🇼 台湾中转 02
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇭🇰 中国-香港-001-1B
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1A
-      - 🇯🇵 日本NEW01
-      - 🇬🇧 英国-伦敦-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1C
-      - 🇺🇸 美国 01 电信推荐
-      - 🇺🇸 美国-拉斯维加斯-001-1A
-      - 🇭🇰 中国-香港-002-1A
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
-      - 🇷🇺 俄罗斯
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
-      - 🇭🇰 中国-香港-002-1C
-      - 🇭🇰 中国-香港-HY-001-1A
-      - 🇨🇭 瑞士-苏黎世-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
-      - 🇧🇷 巴西NEW03优选
-      - 🇸🇬 新加坡-HY-001-1B
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇯🇵 日本中转 04
+      - 台灣02-直連
       - 🇭🇰 中国-香港-HY-002-1B
-      - 🇭🇰 中国-香港-001-1C
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
-      - 🇸🇬 新加坡-001-1A
-      - 🇦🇺 墨尔本
-      - 🇺🇸 美国-拉斯维加斯-001-1C
-      - 🇯🇵 日本
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
-      - 🇭🇰 中国-香港-001-1A
-      - 🇸🇬 新加坡-001-1B
-      - 🇫🇷 法国 01 联通推荐
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
-      - 🇭🇰 中国-香港-HY-002-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
-      - 🇭🇰 中国-香港-002-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1B
-      - 🇬🇧 英国-伦敦-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1C
-      - 🇸🇬 新加坡NEW01
-      - 🇬🇧 英国-伦敦-HY-001-1B
-      - 🇷🇺 俄罗斯-莫斯科-001-1A
-      - 🇸🇬 新加坡-HY-001-1A
-      - 🇬🇧 英国-伦敦-001-1C
-      - 🇺🇸 美国NEW01
-      - 🇸🇬 新加坡-001-1C
+      - 🇦🇺 澳大利亚原生1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1F
+      - 🇭🇰 香港-1C
+      - 🇹🇼 台湾直连
       - 🇺🇸 美国-拉斯维加斯-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1C
-      - 🇰🇷 韩国NEW01
-      - 🇺🇸 美国-拉斯维加斯-001-1B
-      - 🇭🇰 香港
-      - 🇸🇬 新加坡-HY-001-1C
-      - 🇨🇦 加拿大-多伦多-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1C
-      - 🇸🇬 新加坡NEW01优选
-      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇺🇸 美国5
+      - 🇭🇰 中国-香港-HY-002-1E
+      - 🇯🇵 日本-2
+      - 🇸🇬 新加坡-001-1A
+      - 美國02-直連
+      - 🇭🇰 香港-直连2流媒体2x
+      - 台灣01-直連
       - 🇭🇰 中国-香港-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1C
-      - 🇭🇰 中国-香港-HY-002-1C
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇰🇷 韩国-2
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
+      - 🇭🇰 中国-香港-004-1D
+      - 🇸🇬 新加坡-HY-001-1E
+      - 🇸🇬 新加坡中转 03
+      - 🇺🇸 美国-2
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
+      - 🇬🇧 英国 IEPL专线NO1
+      - 🇸🇬 新加坡-HY-001-1A
+      - 🇺🇸 美国-纽约-001-1C
+      - 🇺🇸 美国-拉斯维加斯-001-1F
       - 🇧🇷 巴西NEW03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
+      - 🇦🇺 墨尔本-1A
+      - 🇷🇺 俄罗斯-1A
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1A
+      - 台灣03-直連
+      - 🇹🇼 台湾中转25x
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1F
+      - 台灣11-直連
+      - 台灣13-直連
+      - 🇯🇵 日本-1B
+      - 🇺🇸 美国 01 电信推荐-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1A
+      - 🇸🇬 新加坡-001-1F
+      - 🇭🇰 香港2直连
+      - 🇭🇰 中国-香港-HY-002-1C
+      - 台灣04-直連
+      - 🇰🇿 哈萨克斯坦中转
+      - 🇸🇬 新加坡 IEPL专线NO1
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1E
+      - 🇭🇰 中国-香港-001-1E
+      - 🇯🇵 日本中转 01
+      - 🇭🇰 香港直连2流媒体2x
+      - 🇭🇰 香港中转 04
+      - 🇯🇵 日本NO.2
+      - 🇹🇼 台湾2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇭🇰 中国-香港-002-1D
+      - 🇭🇰 香港中转 05
+      - 🇸🇬 新加坡NO.2
+      - 🇸🇬 新加坡03奈非-5x
+      - 🇬🇧 英国-伦敦-001-1F
+      - 🇭🇰 三网中转香港|5x
+      - 🇭🇰 中国-香港-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1F
+      - 🇬🇧 英国-伦敦-HY-001-1C
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇷🇺 俄罗斯电信CN2三网优化 SULINK01
+      - 🇸🇬 新加坡NO.1
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 台灣05-直連
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1F
+      - 🇭🇰 中国-香港-HY-002-1D
+      - 🇷🇺 俄罗斯直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1D
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 🇸🇬 新加坡-001-1E
+      - 🇺🇸 美国-纽约-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇸🇬 新加坡NEW01优选
+      - 🇫🇷 法国 CM 隧道NO1
+      - 🇭🇰 香港01-奈非-中转
+      - 🇺🇸 美国直连
+      - 🇵🇱 波兰IPV6-01
+      - 🇹🇼 台湾2SS中转|3x
+      - 🇭🇰 中国-香港-002-1F
+      - 🇯🇵 日本SS中转4
+      - 🇺🇸 美国中转 02
+      - 🇭🇰 中国-香港-HY-001-1A
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇭🇰 中国-香港-003-1D
+      - 🇪🇸 西班牙IPV6
+      - 🇮🇳 印度1
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1E
+      - 🇰🇷 韩国-首尔
+      - 🇨🇦 加拿大-多伦多-001-1D
+      - 🇯🇵 日本7
+      - 🇨🇦 加拿大-多伦多-001-1A
+      - 🇭🇰 香港4SS中转5x
+      - 🇭🇰 中国-香港-003-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1E
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1D
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
+      - 🇻🇳 越南中转
+      - 🇭🇰 中国-香港-001-1C
+      - 🇲🇾 马来西亚直连
+      - 🇭🇰 中国-香港-004-1F
+      - 🇫🇷 法国 01 联通推荐-1A
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1A
+      - 🇺🇸 美国05
+      - 🇨🇦 加拿大-多伦多-001-1E
+      - 🇭🇰 中国-香港-003-1E
+      - 🇸🇪 瑞典中转
+      - 🇬🇧 英国-伦敦-001-1C
+      - 🇸🇬 新加坡07奈非-5x
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1E
+      - 🇨🇭 瑞士-苏黎世-HY-001-1B
+      - 🇭🇰 香港HKT中转25x
+      - 🇭🇰 中国-香港-003-1C
+      - 🇺🇸 美国-纽约-001-1A
+      - 🇨🇦 加拿大-多伦多-001-1F
+      - 🇯🇵 日本中转 02
+      - TG SUPERBIU888
+      - 🇰🇷 韩国3SS中转
+      - 下方为备用节点
+      - 🇯🇵 日本SS中转1
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇭🇰 中国-香港-001-1F
+      - 台灣09-直連
+      - 🇷🇺 俄罗斯-莫斯科-001-1F
+      - 🇸🇬 新加坡-001-1B
+      - 🇸🇬 新加坡 01 移动推荐-1A
+      - 🇩🇪 德国中转
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
+      - 🇭🇰 中国-香港-004-1E
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇸🇬 新加坡-001-1D
+      - 🇹🇼 台湾 IEPL专线NO3
+      - 🇷🇺 俄罗斯-莫斯科-001-1D
+      - 🇺🇸 美国-拉斯维加斯-001-1C
+      - 台灣14-直連
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NEW01
+      - 🇯🇵 日本SS中转3
+      - 🇹🇼 台湾中转 04
+      - 🇸🇬 新加坡直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
+      - 🇭🇰 香港3中转25x
+      - 🇭🇰 中国-香港-HY-001-1D
+      - 🇬🇧 英国中转 03
+      - 🇭🇰 香港3SS中转
+      - 🇭🇰 中国-香港-004-1A
+      - 🇺🇸 美国NO.1
+      - 🇸🇬 新加坡-001-1C
+      - 🇬🇧 英国-伦敦-HY-001-1D
+      - 🇭🇰 中国-香港-003-1F
+      - 🇮🇳 印度2
+      - 🇫🇷 法国1
+      - 🇫🇷 法国2
+      - 🇫🇷 法国 01 联通推荐-1B
+      - 🇸🇬 新加坡中转 02
+      - 🇰🇷 韩国NEW01
+      - 🇷🇺 俄罗斯-1B
+      - 🇹🇼 台湾1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇹🇼 台湾中转 01
+      - 🇬🇧 英国-伦敦-001-1B
+      - 🇺🇸 美国NO.2
+      - 🇸🇬 新加坡-HY-001-1B
+      - 🇭🇰 香港-1A
+      - 🇭🇰 中国-香港-002-1C
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇺🇸 美国04
+      - 🇭🇰 中国-香港-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
+      - 台灣10-直連
+      - 🇭🇰 中国-香港-001-1B
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1D
+      - 🇹🇼 台湾中转 03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
+      - 🇭🇰 中国-香港-001-1A
+      - 🇯🇵 日本中转 03
+      - 🇬🇧 英国中转 01
+      - 🇺🇸 美国-拉斯维加斯-001-1B
+      - 🇬🇧 英国中转 02
+      - 🇺🇸 美国中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1F
+      - 🇨🇭 瑞士-苏黎世-HY-001-1D
+      - 🇭🇰 中国-香港-002-1A
+      - 🇹🇼 台湾1SS中转|3x
+      - 🇬🇧 英国-伦敦-HY-001-1E
+      - 🇯🇵 日本NO.1
+      - 非洲 IEPL专线 NO1
+      - 🇸🇬 新加坡-HY-001-1D
+      - 台灣15-直連
+      - 🇺🇸 美国 01 电信推荐-1A
+      - 🇭🇰 香港中转 01
+      - 🇯🇵 日本直连
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国-纽约-001-1B
+      - 🇦🇪 阿联酋中转
+      - 🇬🇧 英国-伦敦-HY-001-1B
+      - 🇭🇰 香港中转 02
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1D
+      - 🇭🇰 香港中转 03
+      - 🇪🇺 欧洲-伦敦-1
+      - 🇭🇰 中国-香港-004-1C
+      - 美國03-直連-0.1x
+      - 🇨🇦 加拿大1
+      - 台灣12-直連
+      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇸🇬 新加坡2SS中转
+      - 🇫🇷 法国IPV6-10
+      - 🇨🇭 瑞士-苏黎世-HY-001-1E
+      - 🇬🇧 英国-伦敦-HY-001-1A
+      - 🇯🇵 日本-1A
+      - 🇸🇬 新加坡中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡-HY-001-1C
+      - 🇭🇰 中国-香港-004-1B
+      - 🇬🇧 英国-伦敦-HY-001-1F
+      - 🇮🇳 印度中转
+      - 🇧🇷 巴西NEW03优选
+      - 🇨🇦 加拿大-多伦多-001-1B
+      - 🇲🇾 马来西亚中转
+      - 🇹🇷 土耳其中转
+      - 台灣08-直連
+      - 🇩🇪 德国 IEPL专线NO1
+      - 🇯🇵 日本 IEPL专线NO3
+      - 台灣16-直連
+      - 🇬🇧 英国-伦敦-001-1D
+      - 🇭🇰 中国-香港-001-1D
+      - 🇯🇵 日本-1
+      - 台灣07-直連
+      - 🇺🇸 美国-纽约-001-1E
+      - 🇦🇺 墨尔本-1B
+      - 台灣06-直連
+      - 🇫🇷 法国IPV6-09
+      - 🇺🇸 北美-US-圣何塞-2
+      - 🇬🇧 英国-伦敦-001-1E
+      - 🇭🇰 香港2SS中转
+      - 🇭🇰 中国-香港-003-1A
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本中转 05
+      - 🇭🇰 中国-香港-HY-002-1A
+      - 🇹🇼 台湾-02-奈非-3x
+      - 🇸🇬 新加坡NEW01
+      - 🇬🇧 英国-伦敦-001-1A
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 🇺🇸 美国1SS中转
+      - 🇺🇸 美国中转 03
+      - 🇷🇺 俄罗斯-莫斯科-001-1C
+      - 🇲🇴 澳门NO.2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
+      - 🇺🇸 美国-纽约-001-1F
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1D
+      - 🇨🇦 加拿大2
+      - 🇨🇭 瑞士-苏黎世-HY-001-1C
+      - 🇭🇰 中国-香港-002-1B
+      - 🇹🇼 台湾中转 05
+      - 🇭🇰 香港-1B
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1E
+      - 🇺🇸 美国02
+      - 🇭🇰 中国-香港-HY-002-1F
+      - 🇸🇬 新加坡 01 移动推荐-1B
+      - 🇻🇳 越南直连
+      - 🇯🇵 日本04三网中转|5x
+      - 🇭🇰 中国-香港-002-1E
+      - 🇨🇦 加拿大-多伦多-001-1C
+      - 🇸🇬 新加坡-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇹🇼 台湾中转 02
+      - 🇺🇸 美国-拉斯维加斯-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1F
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇭🇰 中国-香港-001-1B
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1A
-      - 🇯🇵 日本NEW01
-      - 🇬🇧 英国-伦敦-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1C
-      - 🇺🇸 美国 01 电信推荐
-      - 🇺🇸 美国-拉斯维加斯-001-1A
-      - 🇭🇰 中国-香港-002-1A
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
-      - 🇷🇺 俄罗斯
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
-      - 🇭🇰 中国-香港-002-1C
-      - 🇭🇰 中国-香港-HY-001-1A
-      - 🇨🇭 瑞士-苏黎世-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
-      - 🇧🇷 巴西NEW03优选
-      - 🇸🇬 新加坡-HY-001-1B
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇯🇵 日本中转 04
+      - 台灣02-直連
       - 🇭🇰 中国-香港-HY-002-1B
-      - 🇭🇰 中国-香港-001-1C
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
-      - 🇸🇬 新加坡-001-1A
-      - 🇦🇺 墨尔本
-      - 🇺🇸 美国-拉斯维加斯-001-1C
-      - 🇯🇵 日本
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
-      - 🇭🇰 中国-香港-001-1A
-      - 🇸🇬 新加坡-001-1B
-      - 🇫🇷 法国 01 联通推荐
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
-      - 🇭🇰 中国-香港-HY-002-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
-      - 🇭🇰 中国-香港-002-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1B
-      - 🇬🇧 英国-伦敦-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1C
-      - 🇸🇬 新加坡NEW01
-      - 🇬🇧 英国-伦敦-HY-001-1B
-      - 🇷🇺 俄罗斯-莫斯科-001-1A
-      - 🇸🇬 新加坡-HY-001-1A
-      - 🇬🇧 英国-伦敦-001-1C
-      - 🇺🇸 美国NEW01
-      - 🇸🇬 新加坡-001-1C
+      - 🇦🇺 澳大利亚原生1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1F
+      - 🇭🇰 香港-1C
+      - 🇹🇼 台湾直连
       - 🇺🇸 美国-拉斯维加斯-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1C
-      - 🇰🇷 韩国NEW01
-      - 🇺🇸 美国-拉斯维加斯-001-1B
-      - 🇭🇰 香港
-      - 🇸🇬 新加坡-HY-001-1C
-      - 🇨🇦 加拿大-多伦多-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1C
-      - 🇸🇬 新加坡NEW01优选
-      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇺🇸 美国5
+      - 🇭🇰 中国-香港-HY-002-1E
+      - 🇯🇵 日本-2
+      - 🇸🇬 新加坡-001-1A
+      - 美國02-直連
+      - 🇭🇰 香港-直连2流媒体2x
+      - 台灣01-直連
       - 🇭🇰 中国-香港-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1C
-      - 🇭🇰 中国-香港-HY-002-1C
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇰🇷 韩国-2
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
+      - 🇭🇰 中国-香港-004-1D
+      - 🇸🇬 新加坡-HY-001-1E
+      - 🇸🇬 新加坡中转 03
+      - 🇺🇸 美国-2
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
+      - 🇬🇧 英国 IEPL专线NO1
+      - 🇸🇬 新加坡-HY-001-1A
+      - 🇺🇸 美国-纽约-001-1C
+      - 🇺🇸 美国-拉斯维加斯-001-1F
       - 🇧🇷 巴西NEW03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
+      - 🇦🇺 墨尔本-1A
+      - 🇷🇺 俄罗斯-1A
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1A
+      - 台灣03-直連
+      - 🇹🇼 台湾中转25x
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1F
+      - 台灣11-直連
+      - 台灣13-直連
+      - 🇯🇵 日本-1B
+      - 🇺🇸 美国 01 电信推荐-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1A
+      - 🇸🇬 新加坡-001-1F
+      - 🇭🇰 香港2直连
+      - 🇭🇰 中国-香港-HY-002-1C
+      - 台灣04-直連
+      - 🇰🇿 哈萨克斯坦中转
+      - 🇸🇬 新加坡 IEPL专线NO1
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1E
+      - 🇭🇰 中国-香港-001-1E
+      - 🇯🇵 日本中转 01
+      - 🇭🇰 香港直连2流媒体2x
+      - 🇭🇰 香港中转 04
+      - 🇯🇵 日本NO.2
+      - 🇹🇼 台湾2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇭🇰 中国-香港-002-1D
+      - 🇭🇰 香港中转 05
+      - 🇸🇬 新加坡NO.2
+      - 🇸🇬 新加坡03奈非-5x
+      - 🇬🇧 英国-伦敦-001-1F
+      - 🇭🇰 三网中转香港|5x
+      - 🇭🇰 中国-香港-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1F
+      - 🇬🇧 英国-伦敦-HY-001-1C
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇷🇺 俄罗斯电信CN2三网优化 SULINK01
+      - 🇸🇬 新加坡NO.1
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 台灣05-直連
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1F
+      - 🇭🇰 中国-香港-HY-002-1D
+      - 🇷🇺 俄罗斯直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1D
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 🇸🇬 新加坡-001-1E
+      - 🇺🇸 美国-纽约-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇸🇬 新加坡NEW01优选
+      - 🇫🇷 法国 CM 隧道NO1
+      - 🇭🇰 香港01-奈非-中转
+      - 🇺🇸 美国直连
+      - 🇵🇱 波兰IPV6-01
+      - 🇹🇼 台湾2SS中转|3x
+      - 🇭🇰 中国-香港-002-1F
+      - 🇯🇵 日本SS中转4
+      - 🇺🇸 美国中转 02
+      - 🇭🇰 中国-香港-HY-001-1A
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇭🇰 中国-香港-003-1D
+      - 🇪🇸 西班牙IPV6
+      - 🇮🇳 印度1
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1E
+      - 🇰🇷 韩国-首尔
+      - 🇨🇦 加拿大-多伦多-001-1D
+      - 🇯🇵 日本7
+      - 🇨🇦 加拿大-多伦多-001-1A
+      - 🇭🇰 香港4SS中转5x
+      - 🇭🇰 中国-香港-003-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1E
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1D
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
+      - 🇻🇳 越南中转
+      - 🇭🇰 中国-香港-001-1C
+      - 🇲🇾 马来西亚直连
+      - 🇭🇰 中国-香港-004-1F
+      - 🇫🇷 法国 01 联通推荐-1A
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1A
+      - 🇺🇸 美国05
+      - 🇨🇦 加拿大-多伦多-001-1E
+      - 🇭🇰 中国-香港-003-1E
+      - 🇸🇪 瑞典中转
+      - 🇬🇧 英国-伦敦-001-1C
+      - 🇸🇬 新加坡07奈非-5x
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1E
+      - 🇨🇭 瑞士-苏黎世-HY-001-1B
+      - 🇭🇰 香港HKT中转25x
+      - 🇭🇰 中国-香港-003-1C
+      - 🇺🇸 美国-纽约-001-1A
+      - 🇨🇦 加拿大-多伦多-001-1F
+      - 🇯🇵 日本中转 02
+      - TG SUPERBIU888
+      - 🇰🇷 韩国3SS中转
+      - 下方为备用节点
+      - 🇯🇵 日本SS中转1
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇭🇰 中国-香港-001-1F
+      - 台灣09-直連
+      - 🇷🇺 俄罗斯-莫斯科-001-1F
+      - 🇸🇬 新加坡-001-1B
+      - 🇸🇬 新加坡 01 移动推荐-1A
+      - 🇩🇪 德国中转
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
+      - 🇭🇰 中国-香港-004-1E
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇸🇬 新加坡-001-1D
+      - 🇹🇼 台湾 IEPL专线NO3
+      - 🇷🇺 俄罗斯-莫斯科-001-1D
+      - 🇺🇸 美国-拉斯维加斯-001-1C
+      - 台灣14-直連
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NEW01
+      - 🇯🇵 日本SS中转3
+      - 🇹🇼 台湾中转 04
+      - 🇸🇬 新加坡直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
+      - 🇭🇰 香港3中转25x
+      - 🇭🇰 中国-香港-HY-001-1D
+      - 🇬🇧 英国中转 03
+      - 🇭🇰 香港3SS中转
+      - 🇭🇰 中国-香港-004-1A
+      - 🇺🇸 美国NO.1
+      - 🇸🇬 新加坡-001-1C
+      - 🇬🇧 英国-伦敦-HY-001-1D
+      - 🇭🇰 中国-香港-003-1F
+      - 🇮🇳 印度2
+      - 🇫🇷 法国1
+      - 🇫🇷 法国2
+      - 🇫🇷 法国 01 联通推荐-1B
+      - 🇸🇬 新加坡中转 02
+      - 🇰🇷 韩国NEW01
+      - 🇷🇺 俄罗斯-1B
+      - 🇹🇼 台湾1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇹🇼 台湾中转 01
+      - 🇬🇧 英国-伦敦-001-1B
+      - 🇺🇸 美国NO.2
+      - 🇸🇬 新加坡-HY-001-1B
+      - 🇭🇰 香港-1A
+      - 🇭🇰 中国-香港-002-1C
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇺🇸 美国04
+      - 🇭🇰 中国-香港-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
+      - 台灣10-直連
+      - 🇭🇰 中国-香港-001-1B
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1D
+      - 🇹🇼 台湾中转 03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
+      - 🇭🇰 中国-香港-001-1A
+      - 🇯🇵 日本中转 03
+      - 🇬🇧 英国中转 01
+      - 🇺🇸 美国-拉斯维加斯-001-1B
+      - 🇬🇧 英国中转 02
+      - 🇺🇸 美国中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1F
+      - 🇨🇭 瑞士-苏黎世-HY-001-1D
+      - 🇭🇰 中国-香港-002-1A
+      - 🇹🇼 台湾1SS中转|3x
+      - 🇬🇧 英国-伦敦-HY-001-1E
+      - 🇯🇵 日本NO.1
+      - 非洲 IEPL专线 NO1
+      - 🇸🇬 新加坡-HY-001-1D
+      - 台灣15-直連
+      - 🇺🇸 美国 01 电信推荐-1A
+      - 🇭🇰 香港中转 01
+      - 🇯🇵 日本直连
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国-纽约-001-1B
+      - 🇦🇪 阿联酋中转
+      - 🇬🇧 英国-伦敦-HY-001-1B
+      - 🇭🇰 香港中转 02
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1D
+      - 🇭🇰 香港中转 03
+      - 🇪🇺 欧洲-伦敦-1
+      - 🇭🇰 中国-香港-004-1C
+      - 美國03-直連-0.1x
+      - 🇨🇦 加拿大1
+      - 台灣12-直連
+      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇸🇬 新加坡2SS中转
+      - 🇫🇷 法国IPV6-10
+      - 🇨🇭 瑞士-苏黎世-HY-001-1E
+      - 🇬🇧 英国-伦敦-HY-001-1A
+      - 🇯🇵 日本-1A
+      - 🇸🇬 新加坡中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡-HY-001-1C
+      - 🇭🇰 中国-香港-004-1B
+      - 🇬🇧 英国-伦敦-HY-001-1F
+      - 🇮🇳 印度中转
+      - 🇧🇷 巴西NEW03优选
+      - 🇨🇦 加拿大-多伦多-001-1B
+      - 🇲🇾 马来西亚中转
+      - 🇹🇷 土耳其中转
+      - 台灣08-直連
+      - 🇩🇪 德国 IEPL专线NO1
+      - 🇯🇵 日本 IEPL专线NO3
+      - 台灣16-直連
+      - 🇬🇧 英国-伦敦-001-1D
+      - 🇭🇰 中国-香港-001-1D
+      - 🇯🇵 日本-1
+      - 台灣07-直連
+      - 🇺🇸 美国-纽约-001-1E
+      - 🇦🇺 墨尔本-1B
+      - 台灣06-直連
+      - 🇫🇷 法国IPV6-09
+      - 🇺🇸 北美-US-圣何塞-2
+      - 🇬🇧 英国-伦敦-001-1E
+      - 🇭🇰 香港2SS中转
+      - 🇭🇰 中国-香港-003-1A
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本中转 05
+      - 🇭🇰 中国-香港-HY-002-1A
+      - 🇹🇼 台湾-02-奈非-3x
+      - 🇸🇬 新加坡NEW01
+      - 🇬🇧 英国-伦敦-001-1A
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 🇺🇸 美国1SS中转
+      - 🇺🇸 美国中转 03
+      - 🇷🇺 俄罗斯-莫斯科-001-1C
+      - 🇲🇴 澳门NO.2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
+      - 🇺🇸 美国-纽约-001-1F
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1D
+      - 🇨🇦 加拿大2
+      - 🇨🇭 瑞士-苏黎世-HY-001-1C
+      - 🇭🇰 中国-香港-002-1B
+      - 🇹🇼 台湾中转 05
+      - 🇭🇰 香港-1B
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1E
+      - 🇺🇸 美国02
+      - 🇭🇰 中国-香港-HY-002-1F
+      - 🇸🇬 新加坡 01 移动推荐-1B
+      - 🇻🇳 越南直连
+      - 🇯🇵 日本04三网中转|5x
+      - 🇭🇰 中国-香港-002-1E
+      - 🇨🇦 加拿大-多伦多-001-1C
+      - 🇸🇬 新加坡-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇹🇼 台湾中转 02
+      - 🇺🇸 美国-拉斯维加斯-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1F
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇭🇰 中国-香港-001-1B
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1A
-      - 🇯🇵 日本NEW01
-      - 🇬🇧 英国-伦敦-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1C
-      - 🇺🇸 美国 01 电信推荐
-      - 🇺🇸 美国-拉斯维加斯-001-1A
-      - 🇭🇰 中国-香港-002-1A
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
-      - 🇷🇺 俄罗斯
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
-      - 🇭🇰 中国-香港-002-1C
-      - 🇭🇰 中国-香港-HY-001-1A
-      - 🇨🇭 瑞士-苏黎世-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
-      - 🇧🇷 巴西NEW03优选
-      - 🇸🇬 新加坡-HY-001-1B
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇯🇵 日本中转 04
+      - 台灣02-直連
       - 🇭🇰 中国-香港-HY-002-1B
-      - 🇭🇰 中国-香港-001-1C
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
-      - 🇸🇬 新加坡-001-1A
-      - 🇦🇺 墨尔本
-      - 🇺🇸 美国-拉斯维加斯-001-1C
-      - 🇯🇵 日本
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
-      - 🇭🇰 中国-香港-001-1A
-      - 🇸🇬 新加坡-001-1B
-      - 🇫🇷 法国 01 联通推荐
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
-      - 🇭🇰 中国-香港-HY-002-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
-      - 🇭🇰 中国-香港-002-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1B
-      - 🇬🇧 英国-伦敦-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1C
-      - 🇸🇬 新加坡NEW01
-      - 🇬🇧 英国-伦敦-HY-001-1B
-      - 🇷🇺 俄罗斯-莫斯科-001-1A
-      - 🇸🇬 新加坡-HY-001-1A
-      - 🇬🇧 英国-伦敦-001-1C
-      - 🇺🇸 美国NEW01
-      - 🇸🇬 新加坡-001-1C
+      - 🇦🇺 澳大利亚原生1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1F
+      - 🇭🇰 香港-1C
+      - 🇹🇼 台湾直连
       - 🇺🇸 美国-拉斯维加斯-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1C
-      - 🇰🇷 韩国NEW01
-      - 🇺🇸 美国-拉斯维加斯-001-1B
-      - 🇭🇰 香港
-      - 🇸🇬 新加坡-HY-001-1C
-      - 🇨🇦 加拿大-多伦多-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1C
-      - 🇸🇬 新加坡NEW01优选
-      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇺🇸 美国5
+      - 🇭🇰 中国-香港-HY-002-1E
+      - 🇯🇵 日本-2
+      - 🇸🇬 新加坡-001-1A
+      - 美國02-直連
+      - 🇭🇰 香港-直连2流媒体2x
+      - 台灣01-直連
       - 🇭🇰 中国-香港-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1C
-      - 🇭🇰 中国-香港-HY-002-1C
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇰🇷 韩国-2
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
+      - 🇭🇰 中国-香港-004-1D
+      - 🇸🇬 新加坡-HY-001-1E
+      - 🇸🇬 新加坡中转 03
+      - 🇺🇸 美国-2
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
+      - 🇬🇧 英国 IEPL专线NO1
+      - 🇸🇬 新加坡-HY-001-1A
+      - 🇺🇸 美国-纽约-001-1C
+      - 🇺🇸 美国-拉斯维加斯-001-1F
       - 🇧🇷 巴西NEW03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
+      - 🇦🇺 墨尔本-1A
+      - 🇷🇺 俄罗斯-1A
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1A
+      - 台灣03-直連
+      - 🇹🇼 台湾中转25x
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1F
+      - 台灣11-直連
+      - 台灣13-直連
+      - 🇯🇵 日本-1B
+      - 🇺🇸 美国 01 电信推荐-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1A
+      - 🇸🇬 新加坡-001-1F
+      - 🇭🇰 香港2直连
+      - 🇭🇰 中国-香港-HY-002-1C
+      - 台灣04-直連
+      - 🇰🇿 哈萨克斯坦中转
+      - 🇸🇬 新加坡 IEPL专线NO1
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1E
+      - 🇭🇰 中国-香港-001-1E
+      - 🇯🇵 日本中转 01
+      - 🇭🇰 香港直连2流媒体2x
+      - 🇭🇰 香港中转 04
+      - 🇯🇵 日本NO.2
+      - 🇹🇼 台湾2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇭🇰 中国-香港-002-1D
+      - 🇭🇰 香港中转 05
+      - 🇸🇬 新加坡NO.2
+      - 🇸🇬 新加坡03奈非-5x
+      - 🇬🇧 英国-伦敦-001-1F
+      - 🇭🇰 三网中转香港|5x
+      - 🇭🇰 中国-香港-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1F
+      - 🇬🇧 英国-伦敦-HY-001-1C
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇷🇺 俄罗斯电信CN2三网优化 SULINK01
+      - 🇸🇬 新加坡NO.1
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 台灣05-直連
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1F
+      - 🇭🇰 中国-香港-HY-002-1D
+      - 🇷🇺 俄罗斯直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1D
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 🇸🇬 新加坡-001-1E
+      - 🇺🇸 美国-纽约-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇸🇬 新加坡NEW01优选
+      - 🇫🇷 法国 CM 隧道NO1
+      - 🇭🇰 香港01-奈非-中转
+      - 🇺🇸 美国直连
+      - 🇵🇱 波兰IPV6-01
+      - 🇹🇼 台湾2SS中转|3x
+      - 🇭🇰 中国-香港-002-1F
+      - 🇯🇵 日本SS中转4
+      - 🇺🇸 美国中转 02
+      - 🇭🇰 中国-香港-HY-001-1A
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇭🇰 中国-香港-003-1D
+      - 🇪🇸 西班牙IPV6
+      - 🇮🇳 印度1
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1E
+      - 🇰🇷 韩国-首尔
+      - 🇨🇦 加拿大-多伦多-001-1D
+      - 🇯🇵 日本7
+      - 🇨🇦 加拿大-多伦多-001-1A
+      - 🇭🇰 香港4SS中转5x
+      - 🇭🇰 中国-香港-003-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1E
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1D
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
+      - 🇻🇳 越南中转
+      - 🇭🇰 中国-香港-001-1C
+      - 🇲🇾 马来西亚直连
+      - 🇭🇰 中国-香港-004-1F
+      - 🇫🇷 法国 01 联通推荐-1A
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1A
+      - 🇺🇸 美国05
+      - 🇨🇦 加拿大-多伦多-001-1E
+      - 🇭🇰 中国-香港-003-1E
+      - 🇸🇪 瑞典中转
+      - 🇬🇧 英国-伦敦-001-1C
+      - 🇸🇬 新加坡07奈非-5x
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1E
+      - 🇨🇭 瑞士-苏黎世-HY-001-1B
+      - 🇭🇰 香港HKT中转25x
+      - 🇭🇰 中国-香港-003-1C
+      - 🇺🇸 美国-纽约-001-1A
+      - 🇨🇦 加拿大-多伦多-001-1F
+      - 🇯🇵 日本中转 02
+      - TG SUPERBIU888
+      - 🇰🇷 韩国3SS中转
+      - 下方为备用节点
+      - 🇯🇵 日本SS中转1
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇭🇰 中国-香港-001-1F
+      - 台灣09-直連
+      - 🇷🇺 俄罗斯-莫斯科-001-1F
+      - 🇸🇬 新加坡-001-1B
+      - 🇸🇬 新加坡 01 移动推荐-1A
+      - 🇩🇪 德国中转
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
+      - 🇭🇰 中国-香港-004-1E
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇸🇬 新加坡-001-1D
+      - 🇹🇼 台湾 IEPL专线NO3
+      - 🇷🇺 俄罗斯-莫斯科-001-1D
+      - 🇺🇸 美国-拉斯维加斯-001-1C
+      - 台灣14-直連
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NEW01
+      - 🇯🇵 日本SS中转3
+      - 🇹🇼 台湾中转 04
+      - 🇸🇬 新加坡直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
+      - 🇭🇰 香港3中转25x
+      - 🇭🇰 中国-香港-HY-001-1D
+      - 🇬🇧 英国中转 03
+      - 🇭🇰 香港3SS中转
+      - 🇭🇰 中国-香港-004-1A
+      - 🇺🇸 美国NO.1
+      - 🇸🇬 新加坡-001-1C
+      - 🇬🇧 英国-伦敦-HY-001-1D
+      - 🇭🇰 中国-香港-003-1F
+      - 🇮🇳 印度2
+      - 🇫🇷 法国1
+      - 🇫🇷 法国2
+      - 🇫🇷 法国 01 联通推荐-1B
+      - 🇸🇬 新加坡中转 02
+      - 🇰🇷 韩国NEW01
+      - 🇷🇺 俄罗斯-1B
+      - 🇹🇼 台湾1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇹🇼 台湾中转 01
+      - 🇬🇧 英国-伦敦-001-1B
+      - 🇺🇸 美国NO.2
+      - 🇸🇬 新加坡-HY-001-1B
+      - 🇭🇰 香港-1A
+      - 🇭🇰 中国-香港-002-1C
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇺🇸 美国04
+      - 🇭🇰 中国-香港-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
+      - 台灣10-直連
+      - 🇭🇰 中国-香港-001-1B
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1D
+      - 🇹🇼 台湾中转 03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
+      - 🇭🇰 中国-香港-001-1A
+      - 🇯🇵 日本中转 03
+      - 🇬🇧 英国中转 01
+      - 🇺🇸 美国-拉斯维加斯-001-1B
+      - 🇬🇧 英国中转 02
+      - 🇺🇸 美国中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1F
+      - 🇨🇭 瑞士-苏黎世-HY-001-1D
+      - 🇭🇰 中国-香港-002-1A
+      - 🇹🇼 台湾1SS中转|3x
+      - 🇬🇧 英国-伦敦-HY-001-1E
+      - 🇯🇵 日本NO.1
+      - 非洲 IEPL专线 NO1
+      - 🇸🇬 新加坡-HY-001-1D
+      - 台灣15-直連
+      - 🇺🇸 美国 01 电信推荐-1A
+      - 🇭🇰 香港中转 01
+      - 🇯🇵 日本直连
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国-纽约-001-1B
+      - 🇦🇪 阿联酋中转
+      - 🇬🇧 英国-伦敦-HY-001-1B
+      - 🇭🇰 香港中转 02
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1D
+      - 🇭🇰 香港中转 03
+      - 🇪🇺 欧洲-伦敦-1
+      - 🇭🇰 中国-香港-004-1C
+      - 美國03-直連-0.1x
+      - 🇨🇦 加拿大1
+      - 台灣12-直連
+      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇸🇬 新加坡2SS中转
+      - 🇫🇷 法国IPV6-10
+      - 🇨🇭 瑞士-苏黎世-HY-001-1E
+      - 🇬🇧 英国-伦敦-HY-001-1A
+      - 🇯🇵 日本-1A
+      - 🇸🇬 新加坡中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡-HY-001-1C
+      - 🇭🇰 中国-香港-004-1B
+      - 🇬🇧 英国-伦敦-HY-001-1F
+      - 🇮🇳 印度中转
+      - 🇧🇷 巴西NEW03优选
+      - 🇨🇦 加拿大-多伦多-001-1B
+      - 🇲🇾 马来西亚中转
+      - 🇹🇷 土耳其中转
+      - 台灣08-直連
+      - 🇩🇪 德国 IEPL专线NO1
+      - 🇯🇵 日本 IEPL专线NO3
+      - 台灣16-直連
+      - 🇬🇧 英国-伦敦-001-1D
+      - 🇭🇰 中国-香港-001-1D
+      - 🇯🇵 日本-1
+      - 台灣07-直連
+      - 🇺🇸 美国-纽约-001-1E
+      - 🇦🇺 墨尔本-1B
+      - 台灣06-直連
+      - 🇫🇷 法国IPV6-09
+      - 🇺🇸 北美-US-圣何塞-2
+      - 🇬🇧 英国-伦敦-001-1E
+      - 🇭🇰 香港2SS中转
+      - 🇭🇰 中国-香港-003-1A
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本中转 05
+      - 🇭🇰 中国-香港-HY-002-1A
+      - 🇹🇼 台湾-02-奈非-3x
+      - 🇸🇬 新加坡NEW01
+      - 🇬🇧 英国-伦敦-001-1A
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 🇺🇸 美国1SS中转
+      - 🇺🇸 美国中转 03
+      - 🇷🇺 俄罗斯-莫斯科-001-1C
+      - 🇲🇴 澳门NO.2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
+      - 🇺🇸 美国-纽约-001-1F
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1D
+      - 🇨🇦 加拿大2
+      - 🇨🇭 瑞士-苏黎世-HY-001-1C
+      - 🇭🇰 中国-香港-002-1B
+      - 🇹🇼 台湾中转 05
+      - 🇭🇰 香港-1B
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1E
+      - 🇺🇸 美国02
+      - 🇭🇰 中国-香港-HY-002-1F
+      - 🇸🇬 新加坡 01 移动推荐-1B
+      - 🇻🇳 越南直连
+      - 🇯🇵 日本04三网中转|5x
+      - 🇭🇰 中国-香港-002-1E
+      - 🇨🇦 加拿大-多伦多-001-1C
+      - 🇸🇬 新加坡-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇹🇼 台湾中转 02
+      - 🇺🇸 美国-拉斯维加斯-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1F
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -625,73 +2442,291 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇭🇰 中国-香港-001-1B
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1A
-      - 🇯🇵 日本NEW01
-      - 🇬🇧 英国-伦敦-001-1B
-      - 🇬🇧 英国-伦敦-HY-001-1C
-      - 🇺🇸 美国 01 电信推荐
-      - 🇺🇸 美国-拉斯维加斯-001-1A
-      - 🇭🇰 中国-香港-002-1A
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
-      - 🇷🇺 俄罗斯
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
-      - 🇭🇰 中国-香港-002-1C
-      - 🇭🇰 中国-香港-HY-001-1A
-      - 🇨🇭 瑞士-苏黎世-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
-      - 🇧🇷 巴西NEW03优选
-      - 🇸🇬 新加坡-HY-001-1B
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇯🇵 日本中转 04
+      - 台灣02-直連
       - 🇭🇰 中国-香港-HY-002-1B
-      - 🇭🇰 中国-香港-001-1C
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
-      - 🇸🇬 新加坡-001-1A
-      - 🇦🇺 墨尔本
-      - 🇺🇸 美国-拉斯维加斯-001-1C
-      - 🇯🇵 日本
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
-      - 🇭🇰 中国-香港-001-1A
-      - 🇸🇬 新加坡-001-1B
-      - 🇫🇷 法国 01 联通推荐
-      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
-      - 🇭🇰 中国-香港-HY-002-1A
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
-      - 🇭🇰 中国-香港-002-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1B
-      - 🇬🇧 英国-伦敦-001-1A
-      - 🇷🇺 俄罗斯-莫斯科-001-1C
-      - 🇸🇬 新加坡NEW01
-      - 🇬🇧 英国-伦敦-HY-001-1B
-      - 🇷🇺 俄罗斯-莫斯科-001-1A
-      - 🇸🇬 新加坡-HY-001-1A
-      - 🇬🇧 英国-伦敦-001-1C
-      - 🇺🇸 美国NEW01
-      - 🇸🇬 新加坡-001-1C
+      - 🇦🇺 澳大利亚原生1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1F
+      - 🇭🇰 香港-1C
+      - 🇹🇼 台湾直连
       - 🇺🇸 美国-拉斯维加斯-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1B
-      - 🇨🇭 瑞士-苏黎世-HY-001-1C
-      - 🇰🇷 韩国NEW01
-      - 🇺🇸 美国-拉斯维加斯-001-1B
-      - 🇭🇰 香港
-      - 🇸🇬 新加坡-HY-001-1C
-      - 🇨🇦 加拿大-多伦多-001-1A
-      - 🇨🇦 加拿大-多伦多-001-1C
-      - 🇸🇬 新加坡NEW01优选
-      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇺🇸 美国5
+      - 🇭🇰 中国-香港-HY-002-1E
+      - 🇯🇵 日本-2
+      - 🇸🇬 新加坡-001-1A
+      - 美國02-直連
+      - 🇭🇰 香港-直连2流媒体2x
+      - 台灣01-直連
       - 🇭🇰 中国-香港-HY-001-1C
-      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1A
-      - 🇨🇦 加拿大-多伦多-HY-001-1C
-      - 🇭🇰 中国-香港-HY-002-1C
-      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
-      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇰🇷 韩国-2
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1A
+      - 🇭🇰 中国-香港-004-1D
+      - 🇸🇬 新加坡-HY-001-1E
+      - 🇸🇬 新加坡中转 03
+      - 🇺🇸 美国-2
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1C
+      - 🇬🇧 英国 IEPL专线NO1
+      - 🇸🇬 新加坡-HY-001-1A
+      - 🇺🇸 美国-纽约-001-1C
+      - 🇺🇸 美国-拉斯维加斯-001-1F
       - 🇧🇷 巴西NEW03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1C
+      - 🇦🇺 墨尔本-1A
+      - 🇷🇺 俄罗斯-1A
+      - 🇩🇪 欧洲-法兰克福-1
+      - 🇨🇭 瑞士-苏黎世-HY-001-1A
+      - 台灣03-直連
+      - 🇹🇼 台湾中转25x
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1F
+      - 台灣11-直連
+      - 台灣13-直連
+      - 🇯🇵 日本-1B
+      - 🇺🇸 美国 01 电信推荐-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1A
+      - 🇸🇬 新加坡-001-1F
+      - 🇭🇰 香港2直连
+      - 🇭🇰 中国-香港-HY-002-1C
+      - 台灣04-直連
+      - 🇰🇿 哈萨克斯坦中转
+      - 🇸🇬 新加坡 IEPL专线NO1
+      - 🇳🇱 荷兰 CM 隧道NO1
+      - 🇮🇩 印尼 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1E
+      - 🇭🇰 中国-香港-001-1E
+      - 🇯🇵 日本中转 01
+      - 🇭🇰 香港直连2流媒体2x
+      - 🇭🇰 香港中转 04
+      - 🇯🇵 日本NO.2
+      - 🇹🇼 台湾2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1B
+      - 🇭🇰 中国-香港-002-1D
+      - 🇭🇰 香港中转 05
+      - 🇸🇬 新加坡NO.2
+      - 🇸🇬 新加坡03奈非-5x
+      - 🇬🇧 英国-伦敦-001-1F
+      - 🇭🇰 三网中转香港|5x
+      - 🇭🇰 中国-香港-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1F
+      - 🇬🇧 英国-伦敦-HY-001-1C
+      - 🇯🇵 日本中转25x-三网入口
+      - 🇷🇺 俄罗斯电信CN2三网优化 SULINK01
+      - 🇸🇬 新加坡NO.1
+      - 🇰🇷 韩国 IEPL专线NO1
+      - 台灣05-直連
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1F
+      - 🇭🇰 中国-香港-HY-002-1D
+      - 🇷🇺 俄罗斯直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1A
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1D
+      - 🇸🇬 新加坡 IEPL专线NO3
+      - 🇸🇬 新加坡-001-1E
+      - 🇺🇸 美国-纽约-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1A
+      - 🇦🇺 澳大利亚原生2
+      - 🇸🇬 新加坡NEW01优选
+      - 🇫🇷 法国 CM 隧道NO1
+      - 🇭🇰 香港01-奈非-中转
+      - 🇺🇸 美国直连
+      - 🇵🇱 波兰IPV6-01
+      - 🇹🇼 台湾2SS中转|3x
+      - 🇭🇰 中国-香港-002-1F
+      - 🇯🇵 日本SS中转4
+      - 🇺🇸 美国中转 02
+      - 🇭🇰 中国-香港-HY-001-1A
+      - 🇮🇹 意大利 IEPL专线NO1
+      - 🇭🇰 中国-香港-003-1D
+      - 🇪🇸 西班牙IPV6
+      - 🇮🇳 印度1
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1E
+      - 🇰🇷 韩国-首尔
+      - 🇨🇦 加拿大-多伦多-001-1D
+      - 🇯🇵 日本7
+      - 🇨🇦 加拿大-多伦多-001-1A
+      - 🇭🇰 香港4SS中转5x
+      - 🇭🇰 中国-香港-003-1B
+      - 🇺🇸 美国-拉斯维加斯-001-1E
+      - 🇭🇰 香港2中转25x-三网入口
+      - 🇹🇼 台湾 IEPL专线NO1
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1D
+      - 🇸🇬 新加坡1SS移动直连
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1A
+      - 🇻🇳 越南中转
+      - 🇭🇰 中国-香港-001-1C
+      - 🇲🇾 马来西亚直连
+      - 🇭🇰 中国-香港-004-1F
+      - 🇫🇷 法国 01 联通推荐-1A
+      - 🇦🇷 阿根廷 IEPL专线NO1
+      - 🇷🇺 俄罗斯-莫斯科-001-1A
+      - 🇺🇸 美国05
+      - 🇨🇦 加拿大-多伦多-001-1E
+      - 🇭🇰 中国-香港-003-1E
+      - 🇸🇪 瑞典中转
+      - 🇬🇧 英国-伦敦-001-1C
+      - 🇸🇬 新加坡07奈非-5x
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1E
+      - 🇨🇭 瑞士-苏黎世-HY-001-1B
+      - 🇭🇰 香港HKT中转25x
+      - 🇭🇰 中国-香港-003-1C
+      - 🇺🇸 美国-纽约-001-1A
+      - 🇨🇦 加拿大-多伦多-001-1F
+      - 🇯🇵 日本中转 02
+      - TG SUPERBIU888
+      - 🇰🇷 韩国3SS中转
+      - 下方为备用节点
+      - 🇯🇵 日本SS中转1
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1E
+      - 🇵🇹 葡萄牙 IEPL专线NO1
+      - 🇭🇰 中国-香港-001-1F
+      - 台灣09-直連
+      - 🇷🇺 俄罗斯-莫斯科-001-1F
+      - 🇸🇬 新加坡-001-1B
+      - 🇸🇬 新加坡 01 移动推荐-1A
+      - 🇩🇪 德国中转
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1C
+      - 🇭🇰 中国-香港-004-1E
+      - 🇰🇷 韩国-1
+      - 🇹🇼 台湾-2流媒体|3x
+      - 🇸🇬 新加坡-001-1D
+      - 🇹🇼 台湾 IEPL专线NO3
+      - 🇷🇺 俄罗斯-莫斯科-001-1D
+      - 🇺🇸 美国-拉斯维加斯-001-1C
+      - 台灣14-直連
+      - 🇺🇸 美国3SS中转
+      - 🇺🇸 美国NEW01
+      - 🇯🇵 日本SS中转3
+      - 🇹🇼 台湾中转 04
+      - 🇸🇬 新加坡直连
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1B
+      - 🇭🇰 香港3中转25x
+      - 🇭🇰 中国-香港-HY-001-1D
+      - 🇬🇧 英国中转 03
+      - 🇭🇰 香港3SS中转
+      - 🇭🇰 中国-香港-004-1A
+      - 🇺🇸 美国NO.1
+      - 🇸🇬 新加坡-001-1C
+      - 🇬🇧 英国-伦敦-HY-001-1D
+      - 🇭🇰 中国-香港-003-1F
+      - 🇮🇳 印度2
+      - 🇫🇷 法国1
+      - 🇫🇷 法国2
+      - 🇫🇷 法国 01 联通推荐-1B
+      - 🇸🇬 新加坡中转 02
+      - 🇰🇷 韩国NEW01
+      - 🇷🇺 俄罗斯-1B
+      - 🇹🇼 台湾1
+      - 🇺🇸 美国 IEPL专线NO1
+      - 🇹🇼 台湾中转 01
+      - 🇬🇧 英国-伦敦-001-1B
+      - 🇺🇸 美国NO.2
+      - 🇸🇬 新加坡-HY-001-1B
+      - 🇭🇰 香港-1A
+      - 🇭🇰 中国-香港-002-1C
+      - 🇸🇬 新加坡1SS中转|3x
+      - 🇺🇸 美国04
+      - 🇭🇰 中国-香港-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1B
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1C
+      - 台灣10-直連
+      - 🇭🇰 中国-香港-001-1B
+      - 🇷🇺 俄罗斯-莫斯科-HY-002-1D
+      - 🇹🇼 台湾中转 03
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1E
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1B
+      - 🇭🇰 中国-香港-001-1A
+      - 🇯🇵 日本中转 03
+      - 🇬🇧 英国中转 01
+      - 🇺🇸 美国-拉斯维加斯-001-1B
+      - 🇬🇧 英国中转 02
+      - 🇺🇸 美国中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1F
+      - 🇨🇭 瑞士-苏黎世-HY-001-1D
+      - 🇭🇰 中国-香港-002-1A
+      - 🇹🇼 台湾1SS中转|3x
+      - 🇬🇧 英国-伦敦-HY-001-1E
+      - 🇯🇵 日本NO.1
+      - 非洲 IEPL专线 NO1
+      - 🇸🇬 新加坡-HY-001-1D
+      - 台灣15-直連
+      - 🇺🇸 美国 01 电信推荐-1A
+      - 🇭🇰 香港中转 01
+      - 🇯🇵 日本直连
+      - 🇨🇦 加拿大 IEPL专线NO1
+      - 🇺🇸 美国-纽约-001-1B
+      - 🇦🇪 阿联酋中转
+      - 🇬🇧 英国-伦敦-HY-001-1B
+      - 🇭🇰 香港中转 02
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1D
+      - 🇭🇰 香港中转 03
+      - 🇪🇺 欧洲-伦敦-1
+      - 🇭🇰 中国-香港-004-1C
+      - 美國03-直連-0.1x
+      - 🇨🇦 加拿大1
+      - 台灣12-直連
+      - 🇭🇰 中国-香港-HY-001-1B
+      - 🇸🇬 新加坡2SS中转
+      - 🇫🇷 法国IPV6-10
+      - 🇨🇭 瑞士-苏黎世-HY-001-1E
+      - 🇬🇧 英国-伦敦-HY-001-1A
+      - 🇯🇵 日本-1A
+      - 🇸🇬 新加坡中转 01
+      - 🇷🇺 俄罗斯-新西伯利亚-HY-001-1B
+      - 🇸🇬 新加坡-1
+      - 🇸🇬 新加坡-HY-001-1C
+      - 🇭🇰 中国-香港-004-1B
+      - 🇬🇧 英国-伦敦-HY-001-1F
+      - 🇮🇳 印度中转
+      - 🇧🇷 巴西NEW03优选
+      - 🇨🇦 加拿大-多伦多-001-1B
+      - 🇲🇾 马来西亚中转
+      - 🇹🇷 土耳其中转
+      - 台灣08-直連
+      - 🇩🇪 德国 IEPL专线NO1
+      - 🇯🇵 日本 IEPL专线NO3
+      - 台灣16-直連
+      - 🇬🇧 英国-伦敦-001-1D
+      - 🇭🇰 中国-香港-001-1D
+      - 🇯🇵 日本-1
+      - 台灣07-直連
+      - 🇺🇸 美国-纽约-001-1E
+      - 🇦🇺 墨尔本-1B
+      - 台灣06-直連
+      - 🇫🇷 法国IPV6-09
+      - 🇺🇸 北美-US-圣何塞-2
+      - 🇬🇧 英国-伦敦-001-1E
+      - 🇭🇰 香港2SS中转
+      - 🇭🇰 中国-香港-003-1A
+      - 🇯🇵 日本NEW01
+      - 🇯🇵 日本中转 05
+      - 🇭🇰 中国-香港-HY-002-1A
+      - 🇹🇼 台湾-02-奈非-3x
+      - 🇸🇬 新加坡NEW01
+      - 🇬🇧 英国-伦敦-001-1A
+      - 🇷🇺 俄罗斯 IEPL专线NO1
+      - 🇺🇸 美国1SS中转
+      - 🇺🇸 美国中转 03
+      - 🇷🇺 俄罗斯-莫斯科-001-1C
+      - 🇲🇴 澳门NO.2
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1C
+      - 🇺🇸 美国-纽约-001-1F
+      - 🇷🇺 俄罗斯-圣彼得堡-HY-001-1D
+      - 🇨🇦 加拿大2
+      - 🇨🇭 瑞士-苏黎世-HY-001-1C
+      - 🇭🇰 中国-香港-002-1B
+      - 🇹🇼 台湾中转 05
+      - 🇭🇰 香港-1B
+      - 🇺🇸 美国-拉斯维加斯-HY-001-1E
+      - 🇺🇸 美国02
+      - 🇭🇰 中国-香港-HY-002-1F
+      - 🇸🇬 新加坡 01 移动推荐-1B
+      - 🇻🇳 越南直连
+      - 🇯🇵 日本04三网中转|5x
+      - 🇭🇰 中国-香港-002-1E
+      - 🇨🇦 加拿大-多伦多-001-1C
+      - 🇸🇬 新加坡-HY-001-1F
+      - 🇷🇺 俄罗斯-莫斯科-001-1B
+      - 🇹🇼 台湾中转 02
+      - 🇺🇸 美国-拉斯维加斯-001-1D
+      - 🇷🇺 俄罗斯-莫斯科-HY-001-1F
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
