@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-11-25 14:59:57
+# 创建时间：2024-11-27 19:10:59
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1106
 # 节点类型：vmess, trojan
@@ -13,7 +13,7 @@ external-controller: 127.0.0.1:9090
 dns:
   enabled: true
   listen: 127.0.0.1:1053
-  ipv6: false
+  ipv6: true
   default-nameserver:
     - 223.5.5.5
     - 114.114.114.114
@@ -4550,13 +4550,9 @@ proxy-groups:
       - 美国_由快嘴科技提供：kkzui.com153_2
       - 美国_由快嘴科技提供：kkzui.com154_2_2
   - name: 🇯🇵 日本节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 600
-    retries: 8
-    timeout: 5
-    max-failed-times: 7
-    failover: true
+    interval: 480
     proxies:
       - 日本_由快嘴科技提供：kkzui.com117
       - 日本_由快嘴科技提供;kkzui.com29
@@ -4564,13 +4560,9 @@ proxy-groups:
       - 日本_由快嘴科技提供：kkzui.com85
       - 日本由快嘴科技提供：kkzui.com103
   - name: 🇸🇬 狮城节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 600
-    retries: 8
-    timeout: 5
-    max-failed-times: 7
-    failover: true
+    interval: 480
     proxies:
       - 新加坡_由快嘴科技提供：kkzui.com123
       - 新加坡_由快嘴科技提供：kkzui.com124
@@ -4578,13 +4570,9 @@ proxy-groups:
       - 新加坡_由快嘴科技提供：kkzui.com96
       - 新加坡由快嘴科技提供：kkzui.com109
   - name: 🇺🇲 美国节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 600
-    retries: 8
-    timeout: 5
-    max-failed-times: 7
-    failover: true
+    interval: 480
     proxies:
       - 美国_由快嘴科技提供：kkzui.com26_2
       - 美国_由快嘴科技提供：kkzui.com28_2
