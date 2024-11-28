@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-11-27 19:32:47
+# 创建时间：2024-11-28 00:16:35
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1057
 # 节点类型：vmess, trojan
@@ -13,7 +13,7 @@ external-controller: 127.0.0.1:9090
 dns:
   enabled: true
   listen: 127.0.0.1:1053
-  ipv6: true
+  ipv6: false
   default-nameserver:
     - 223.5.5.5
     - 114.114.114.114
@@ -2220,7 +2220,7 @@ proxy-groups:
     interval: 600
     retries: 8
     timeout: 5
-    max-failed-times: 7
+    max-failed-times: 5
     failover: true
     proxies:
       - 中转节点-38.1MB/s_1_1
@@ -4355,9 +4355,13 @@ proxy-groups:
       - 美国-745.8KB/s_1056_1056
       - 中转节点-35.5MB/s_1057_1057
   - name: 🇭🇰 香港节点
-    type: fallback
+    type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 480
+    interval: 600
+    retries: 8
+    timeout: 5
+    max-failed-times: 5
+    failover: true
     proxies:
       - 香港-1.16MB/s_10_10
       - 香港-62.1MB/s_25_25
@@ -4374,9 +4378,13 @@ proxy-groups:
       - 香港-1.16MB/s_1006_1006
       - 香港-62.1MB/s_1016_1016
   - name: 🇯🇵 日本节点
-    type: fallback
+    type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 480
+    interval: 600
+    retries: 8
+    timeout: 5
+    max-failed-times: 5
+    failover: true
     proxies:
       - 日本-360.9KB/s_85_85
       - 日本-54.5MB/s_90_90
@@ -4451,9 +4459,13 @@ proxy-groups:
       - 日本-360.9KB/s_1048_1048
       - 日本-54.5MB/s_1052_1052
   - name: 🇸🇬 狮城节点
-    type: fallback
+    type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 480
+    interval: 600
+    retries: 8
+    timeout: 5
+    max-failed-times: 5
+    failover: true
     proxies:
       - 新加坡-4.10MB/s_84_84
       - 新加坡-335.0KB/s_1_615_615
@@ -4462,9 +4474,13 @@ proxy-groups:
       - 新加坡-333.9KB/s_1_626_626
       - 新加坡-333.9KB/s_2_630_630
   - name: 🇺🇲 美国节点
-    type: fallback
+    type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 480
+    interval: 600
+    retries: 8
+    timeout: 5
+    max-failed-times: 5
+    failover: true
     proxies:
       - 美国-1.8MB/s_4_4
       - 美国-4.72MB/s_8_8

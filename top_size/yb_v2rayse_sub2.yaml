@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-11-27 18:52:38
+# 创建时间：2024-11-28 14:20:27
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1106
 # 节点类型：vmess, trojan
@@ -13,7 +13,7 @@ external-controller: 127.0.0.1:9090
 dns:
   enabled: true
   listen: 127.0.0.1:1053
-  ipv6: true
+  ipv6: false
   default-nameserver:
     - 223.5.5.5
     - 114.114.114.114
@@ -2311,14 +2311,11 @@ proxy-groups:
       - 巴西_由快嘴科技提供：kkzui.com104
       - 美国_由快嘴科技提供：kkzui.com153_2
       - 美国_由快嘴科技提供：kkzui.com154_2_2
-  - name: ♻️ 自动选择
-    type: url-test
+  - name: 🔯 故障转移
+    type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
-    retries: 8
-    timeout: 5
-    max-failed-times: 7
-    failover: true
+    fallback-policy: priority
     proxies:
       - 美国_由快嘴科技提供：kkzui.com26_2
       - 澳大利亚_由快嘴科技提供：kkzui.com43
@@ -4553,6 +4550,7 @@ proxy-groups:
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
+    fallback-policy: priority
     proxies:
       - 日本_由快嘴科技提供：kkzui.com117
       - 日本_由快嘴科技提供;kkzui.com29
@@ -4563,6 +4561,7 @@ proxy-groups:
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
+    fallback-policy: priority
     proxies:
       - 新加坡_由快嘴科技提供：kkzui.com123
       - 新加坡_由快嘴科技提供：kkzui.com124
@@ -4573,6 +4572,7 @@ proxy-groups:
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
+    fallback-policy: priority
     proxies:
       - 美国_由快嘴科技提供：kkzui.com26_2
       - 美国_由快嘴科技提供：kkzui.com28_2
