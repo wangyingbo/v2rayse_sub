@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：03-12-2024 19:49:15
+# 创建时间：04-12-2024 18:02:46
 # 使用模版：V2RaySE 默认模版
-# 节点数量：7
+# 节点数量：9
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -85,88 +85,102 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"15|CR_speednode_0019","type":"trojan","server":"190.93.246.95","port":443,"udp":true,"password":"bpb-trojan","sni":"zeming13.us.kg","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tr","headers":{"host":"zeming13.us.kg"}}}
-  - {"name":"15|CR_speednode_0021","type":"trojan","server":"190.93.247.232","port":443,"udp":true,"password":"bpb-trojan","sni":"zeming13.us.kg","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tr","headers":{"host":"zeming13.us.kg"}}}
-  - {"name":"15|CR_speednode_0020","type":"trojan","server":"190.93.246.80","port":443,"udp":true,"password":"bpb-trojan","sni":"zeming13.us.kg","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/tr","headers":{"host":"zeming13.us.kg"}}}
-  - {"name":"🇨🇿CZ_38 |73.97Mb","type":"vmess","server":"79.127.229.54","port":18000,"cipher":"auto","uuid":"fa1897db-1925-4c86-a495-939a959af900","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp"}
-  - {"name":"🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882","type":"ss","server":"69.50.95.191","port":8882,"password":"kDWvXYZoTBcGkC4","cipher":"aes-256-gcm"}
-  - {"name":"🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389","type":"ss","server":"23.134.94.168","port":3389}
-  - {"name":"🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679","type":"ss","server":"69.50.95.191","port":6679,"password":"TEzjfAYq2IjtuoS","cipher":"aes-256-gcm"}
+  - {"name":"Relay_🇩🇪DE-🇫🇷FR_37 |27.80Mb","type":"vmess","server":"hms08.gwdef.sbs","port":443,"udp":true,"cipher":"auto","uuid":"bc864078-dcf3-4bf4-8dbf-ca9f200b56be","alterId":0,"tls":true,"skip-cert-verify":true,"servername":"","network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"gwdef.sbs"}},"version":2}
+  - {"name":"🇨🇿CZ_38 |73.97Mb","type":"vmess","server":"79.127.229.54","port":18000,"udp":true,"cipher":"auto","uuid":"fa1897db-1925-4c86-a495-939a959af900","alterId":0,"tls":false,"skip-cert-verify":true,"servername":"","network":"tcp","version":2}
+  - {"name":"🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882","type":"ss","server":"69.50.95.191","port":8882,"udp":true,"password":"kDWvXYZoTBcGkC4","cipher":"aes-256-gcm"}
+  - {"name":"🔒 SS-TCP-NA 🇭🇺 HU-91.219.237.102:990","type":"ss","server":"91.219.237.102","port":990,"udp":true,"password":"f8f7aCzcPKbsF8p3","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389","type":"ss","server":"23.134.94.168","port":3389,"udp":true,"password":"Y6R9pAtvxxzmGC","cipher":"aes-256-gcm"}
+  - {"name":"🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679","type":"ss","server":"69.50.95.191","port":6679,"udp":true,"password":"TEzjfAYq2IjtuoS","cipher":"aes-256-gcm"}
+  - {"name":"15|CR_speednode_0019","type":"trojan","server":"190.93.246.95","port":443,"udp":true,"password":"bpb-trojan","sni":"zeming13.us.kg","skip-cert-verify":false,"network":"ws","ws-opts":{"path":"/tr?ed=2560","headers":{"host":"zeming13.us.kg"}}}
+  - {"name":"15|CR_speednode_0021","type":"trojan","server":"190.93.247.232","port":443,"udp":true,"password":"bpb-trojan","sni":"zeming13.us.kg","skip-cert-verify":false,"network":"ws","ws-opts":{"path":"/tr?ed=2560","headers":{"host":"zeming13.us.kg"}}}
+  - {"name":"15|CR_speednode_0020","type":"trojan","server":"190.93.246.80","port":443,"udp":true,"password":"bpb-trojan","sni":"zeming13.us.kg","skip-cert-verify":false,"network":"ws","ws-opts":{"path":"/tr?ed=2560","headers":{"host":"zeming13.us.kg"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - Relay_🇩🇪DE-🇫🇷FR_37 |27.80Mb
+      - 🇨🇿CZ_38 |73.97Mb
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
+      - 🔒 SS-TCP-NA 🇭🇺 HU-91.219.237.102:990
+      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
       - 15|CR_speednode_0019
       - 15|CR_speednode_0021
       - 15|CR_speednode_0020
-      - 🇨🇿CZ_38 |73.97Mb
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
-      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - Relay_🇩🇪DE-🇫🇷FR_37 |27.80Mb
+      - 🇨🇿CZ_38 |73.97Mb
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
+      - 🔒 SS-TCP-NA 🇭🇺 HU-91.219.237.102:990
+      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
       - 15|CR_speednode_0019
       - 15|CR_speednode_0021
       - 15|CR_speednode_0020
-      - 🇨🇿CZ_38 |73.97Mb
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
-      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - Relay_🇩🇪DE-🇫🇷FR_37 |27.80Mb
+      - 🇨🇿CZ_38 |73.97Mb
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
+      - 🔒 SS-TCP-NA 🇭🇺 HU-91.219.237.102:990
+      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
       - 15|CR_speednode_0019
       - 15|CR_speednode_0021
       - 15|CR_speednode_0020
-      - 🇨🇿CZ_38 |73.97Mb
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
-      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - Relay_🇩🇪DE-🇫🇷FR_37 |27.80Mb
+      - 🇨🇿CZ_38 |73.97Mb
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
+      - 🔒 SS-TCP-NA 🇭🇺 HU-91.219.237.102:990
+      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
       - 15|CR_speednode_0019
       - 15|CR_speednode_0021
       - 15|CR_speednode_0020
-      - 🇨🇿CZ_38 |73.97Mb
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
-      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - Relay_🇩🇪DE-🇫🇷FR_37 |27.80Mb
+      - 🇨🇿CZ_38 |73.97Mb
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
+      - 🔒 SS-TCP-NA 🇭🇺 HU-91.219.237.102:990
+      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
       - 15|CR_speednode_0019
       - 15|CR_speednode_0021
       - 15|CR_speednode_0020
-      - 🇨🇿CZ_38 |73.97Mb
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
-      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - Relay_🇩🇪DE-🇫🇷FR_37 |27.80Mb
+      - 🇨🇿CZ_38 |73.97Mb
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
+      - 🔒 SS-TCP-NA 🇭🇺 HU-91.219.237.102:990
+      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
       - 15|CR_speednode_0019
       - 15|CR_speednode_0021
       - 15|CR_speednode_0020
-      - 🇨🇿CZ_38 |73.97Mb
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
-      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -189,13 +203,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - Relay_🇩🇪DE-🇫🇷FR_37 |27.80Mb
+      - 🇨🇿CZ_38 |73.97Mb
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
+      - 🔒 SS-TCP-NA 🇭🇺 HU-91.219.237.102:990
+      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
+      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
       - 15|CR_speednode_0019
       - 15|CR_speednode_0021
       - 15|CR_speednode_0020
-      - 🇨🇿CZ_38 |73.97Mb
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:8882
-      - 🔒 SS-TCP-NA 🇺🇸 US-23.134.94.168:3389
-      - 🔒 SS-TCP-NA 🇺🇸 US-69.50.95.191:6679
 
 rules:
 # 本地/局域网地址
