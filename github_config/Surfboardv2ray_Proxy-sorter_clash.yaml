@@ -5,69 +5,85 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: US_1_@Surfboardv2ray, server: 162.251.62.115, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: US_2_@Surfboardv2ray, server: 198.2.218.108, port: 41400, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: US_3_@Surfboardv2ray, server: 38.99.82.128, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: RU_1_@Surfboardv2ray, server: 45.8.158.32, port: 13528, type: vmess, uuid: 398ce84e-4849-4e5f-9b1a-a56fbe233b81, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
+  - {name: GB_2_@Surfboardv2ray, server: 5.39.254.196, port: 23118, type: vmess, uuid: 398ce84e-4849-4e5f-9b1a-a56fbe233b81, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
+  - {name: CA_3_@Surfboardv2ray, server: 104.26.0.138, port: 8880, type: vmess, uuid: 90f8f4dc-8092-4355-9047-05f506f5e9ab, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /github.com/Alvin9999, headers: {Host: m1.106778.xyz}}}
+  - {name: IR_4_@Surfboardv2ray, server: 2.189.59.3, port: 443, type: vmess, uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: obdii.cfd, network: ws, ws-opts: {path: /linkws, headers: {Host: obdii.cfd}}}
+  - {name: US_5_@Surfboardv2ray, server: 38.75.137.27, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
+      - GB_2_@Surfboardv2ray
+      - CA_3_@Surfboardv2ray
+      - IR_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
+      - GB_2_@Surfboardv2ray
+      - CA_3_@Surfboardv2ray
+      - IR_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
+      - GB_2_@Surfboardv2ray
+      - CA_3_@Surfboardv2ray
+      - IR_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
+      - GB_2_@Surfboardv2ray
+      - CA_3_@Surfboardv2ray
+      - IR_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
+      - GB_2_@Surfboardv2ray
+      - CA_3_@Surfboardv2ray
+      - IR_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
+      - GB_2_@Surfboardv2ray
+      - CA_3_@Surfboardv2ray
+      - IR_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
+      - GB_2_@Surfboardv2ray
+      - CA_3_@Surfboardv2ray
+      - IR_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -90,9 +106,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - US_1_@Surfboardv2ray
-      - US_2_@Surfboardv2ray
-      - US_3_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
+      - GB_2_@Surfboardv2ray
+      - CA_3_@Surfboardv2ray
+      - IR_4_@Surfboardv2ray
+      - US_5_@Surfboardv2ray
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
