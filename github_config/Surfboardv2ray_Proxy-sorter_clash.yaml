@@ -5,117 +5,101 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: MX_1_@Surfboardv2ray, server: 79.127.229.54, port: 18000, type: vmess, uuid: fa1897db-1925-4c86-a495-939a959af900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: RU_1_@Surfboardv2ray, server: 45.8.158.32, port: 13530, type: vmess, uuid: 398ce84e-4849-4e5f-9b1a-a56fbe233b81, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}}
   - {name: MX_2_@Surfboardv2ray, server: 79.127.229.54, port: 18000, type: vmess, uuid: fa1897db-1925-4c86-a495-939a959af900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: CA_3_@Surfboardv2ray, server: 104.21.48.70, port: 443, type: vmess, uuid: dfbbc8de-8a4f-407d-8069-6de38d83c4e1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: "", network: grpc, grpc-opts: {grpc-service-name: WgCmp8p80KDzo64uHE}}
-  - {name: CA_4_@Surfboardv2ray, server: 172.67.68.87, port: 8443, type: vmess, uuid: a617b227-028b-420f-928f-e8c9ca551346, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: recordemailprevent.tickespace.ir, network: ws, ws-opts: {path: "/ordemailpr?@TEHRANARGO-@TEHRANARGO?ed=2560", headers: {Host: recordemailprevent.tickespace.ir}}}
-  - {name: CH_5_@Surfboardv2ray, server: 23.166.88.183, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: DE_6_@Surfboardv2ray, server: cpanel.erade33.ir, port: 100, type: vmess, uuid: 31cd48bf-4a1c-4c5f-a456-f79bec74f3a1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: DE_7_@Surfboardv2ray, server: cpanel.erade33.ir, port: 100, type: vmess, uuid: 560036ae-008e-4cf7-9d9c-4345988f7483, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: DE_8_@Surfboardv2ray, server: cpanel.erade33.ir, port: 100, type: vmess, uuid: 692858f1-94b4-460c-8ed6-d2091025cbb8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
-  - {name: DE_9_@Surfboardv2ray, server: socks5tobefree.ydns.eu, port: 33026, type: vmess, uuid: 96627876-63f5-4ca7-9b41-a52fee0ca476, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: socks5tobefree.ydns.eu, network: ws, ws-opts: {path: /dangerzone, headers: {Host: socks5tobefree.ydns.eu}}}
+  - {name: MX_3_@Surfboardv2ray, server: 79.127.229.54, port: 18000, type: vmess, uuid: fa1897db-1925-4c86-a495-939a959af900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: US_4_@Surfboardv2ray, server: 38.99.82.128, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true}
+  - {name: CA_6_@Surfboardv2ray, server: ca.569520.xyz, port: 10001, type: vmess, uuid: c7716936-798d-4237-b101-2d914e6d543a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: ca.569520.xyz, network: ws, ws-opts: {path: /cctv13/4k.m3u8, headers: {Host: ca.569520.xyz}}}
+  - {name: TR_7_@Surfboardv2ray, server: mahdi0000.varzesh3.ru, port: 33984, type: vmess, uuid: 3b5626a9-b3aa-40eb-bdd0-a498f1c22045, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: grpc, servername: mahdi0000.varzesh3.ru, grpc-opts: {grpc-service-name: /}}
+  - {name: DE_8_@Surfboardv2ray, server: socks5tobefree.ydns.eu, port: 33026, type: vmess, uuid: 96627876-63f5-4ca7-9b41-a52fee0ca476, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: socks5tobefree.ydns.eu, network: ws, ws-opts: {path: /dangerzone, headers: {Host: socks5tobefree.ydns.eu}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - MX_1_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
       - MX_2_@Surfboardv2ray
-      - CA_3_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
-      - CH_5_@Surfboardv2ray
-      - DE_6_@Surfboardv2ray
-      - DE_7_@Surfboardv2ray
+      - MX_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - CA_6_@Surfboardv2ray
+      - TR_7_@Surfboardv2ray
       - DE_8_@Surfboardv2ray
-      - DE_9_@Surfboardv2ray
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - MX_1_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
       - MX_2_@Surfboardv2ray
-      - CA_3_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
-      - CH_5_@Surfboardv2ray
-      - DE_6_@Surfboardv2ray
-      - DE_7_@Surfboardv2ray
+      - MX_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - CA_6_@Surfboardv2ray
+      - TR_7_@Surfboardv2ray
       - DE_8_@Surfboardv2ray
-      - DE_9_@Surfboardv2ray
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - MX_1_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
       - MX_2_@Surfboardv2ray
-      - CA_3_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
-      - CH_5_@Surfboardv2ray
-      - DE_6_@Surfboardv2ray
-      - DE_7_@Surfboardv2ray
+      - MX_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - CA_6_@Surfboardv2ray
+      - TR_7_@Surfboardv2ray
       - DE_8_@Surfboardv2ray
-      - DE_9_@Surfboardv2ray
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - MX_1_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
       - MX_2_@Surfboardv2ray
-      - CA_3_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
-      - CH_5_@Surfboardv2ray
-      - DE_6_@Surfboardv2ray
-      - DE_7_@Surfboardv2ray
+      - MX_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - CA_6_@Surfboardv2ray
+      - TR_7_@Surfboardv2ray
       - DE_8_@Surfboardv2ray
-      - DE_9_@Surfboardv2ray
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - MX_1_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
       - MX_2_@Surfboardv2ray
-      - CA_3_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
-      - CH_5_@Surfboardv2ray
-      - DE_6_@Surfboardv2ray
-      - DE_7_@Surfboardv2ray
+      - MX_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - CA_6_@Surfboardv2ray
+      - TR_7_@Surfboardv2ray
       - DE_8_@Surfboardv2ray
-      - DE_9_@Surfboardv2ray
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - MX_1_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
       - MX_2_@Surfboardv2ray
-      - CA_3_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
-      - CH_5_@Surfboardv2ray
-      - DE_6_@Surfboardv2ray
-      - DE_7_@Surfboardv2ray
+      - MX_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - CA_6_@Surfboardv2ray
+      - TR_7_@Surfboardv2ray
       - DE_8_@Surfboardv2ray
-      - DE_9_@Surfboardv2ray
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - MX_1_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
       - MX_2_@Surfboardv2ray
-      - CA_3_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
-      - CH_5_@Surfboardv2ray
-      - DE_6_@Surfboardv2ray
-      - DE_7_@Surfboardv2ray
+      - MX_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - CA_6_@Surfboardv2ray
+      - TR_7_@Surfboardv2ray
       - DE_8_@Surfboardv2ray
-      - DE_9_@Surfboardv2ray
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -138,15 +122,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - MX_1_@Surfboardv2ray
+      - RU_1_@Surfboardv2ray
       - MX_2_@Surfboardv2ray
-      - CA_3_@Surfboardv2ray
-      - CA_4_@Surfboardv2ray
-      - CH_5_@Surfboardv2ray
-      - DE_6_@Surfboardv2ray
-      - DE_7_@Surfboardv2ray
+      - MX_3_@Surfboardv2ray
+      - US_4_@Surfboardv2ray
+      - CA_6_@Surfboardv2ray
+      - TR_7_@Surfboardv2ray
       - DE_8_@Surfboardv2ray
-      - DE_9_@Surfboardv2ray
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
