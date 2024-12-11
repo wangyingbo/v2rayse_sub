@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-10 23:34:19
+# 创建时间：2024-12-11 11:00:32
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1106
 # 节点类型：vmess, trojan
@@ -2311,7 +2311,7 @@ proxy-groups:
       - 美国_由快嘴科技提供：kkzui.com153_2
       - 美国_由快嘴科技提供：kkzui.com154_2_2
   - name: 🔯 故障转移
-    type: fallback
+    interval: 300
     proxies:
       - 美国_由快嘴科技提供：kkzui.com26_2
       - 澳大利亚_由快嘴科技提供：kkzui.com43
@@ -3419,8 +3419,8 @@ proxy-groups:
       - 巴西_由快嘴科技提供：kkzui.com104
       - 美国_由快嘴科技提供：kkzui.com153_2
       - 美国_由快嘴科技提供：kkzui.com154_2_2
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 300
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -4545,29 +4545,27 @@ proxy-groups:
       - 美国_由快嘴科技提供：kkzui.com153_2
       - 美国_由快嘴科技提供：kkzui.com154_2_2
   - name: 🇯🇵 日本节点
-    type: fallback
+    interval: 600
     proxies:
       - 日本_由快嘴科技提供：kkzui.com117
       - 日本_由快嘴科技提供;kkzui.com29
       - 日本_由快嘴科技提供：kkzui.com191
       - 日本_由快嘴科技提供：kkzui.com85
       - 日本由快嘴科技提供：kkzui.com103
-    url: https://www.gstatic.com/generate_204
-    interval: 600
-
-  - name: 🇸🇬 狮城节点
     type: fallback
+    url: https://www.gstatic.com/generate_204
+  - name: 🇸🇬 狮城节点
+    interval: 600
     proxies:
       - 新加坡_由快嘴科技提供：kkzui.com123
       - 新加坡_由快嘴科技提供：kkzui.com124
       - 新加坡_由快嘴科技提供：kkzui.com95
       - 新加坡_由快嘴科技提供：kkzui.com96
       - 新加坡由快嘴科技提供：kkzui.com109
-    url: https://www.gstatic.com/generate_204
-    interval: 600
-
-  - name: 🇺🇲 美国节点
     type: fallback
+    url: https://www.gstatic.com/generate_204
+  - name: 🇺🇲 美国节点
+    interval: 600
     proxies:
       - 美国_由快嘴科技提供：kkzui.com26_2
       - 美国_由快嘴科技提供：kkzui.com28_2
@@ -5361,8 +5359,8 @@ proxy-groups:
       - 美国_由快嘴科技提供：kkzui.com179_2
       - 美国_由快嘴科技提供：kkzui.com153_2
       - 美国_由快嘴科技提供：kkzui.com154_2_2
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 600
 
 rules:
 # 本地/局域网地址
