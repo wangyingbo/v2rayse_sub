@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-11 16:57:26
+# 创建时间：2024-12-12 21:48:28
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1214
 # 节点类型：trojan, vmess
@@ -1303,7 +1303,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 🔯 故障转移
+      - ♻️ 自动选择
       - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
       - 🇺🇲 美国节点
@@ -2528,6 +2528,8 @@ proxy-groups:
       - 🇸🇬 www.85la.com 新加坡 38_2
       - 🇸🇬 www.85la.com 新加坡 37_2
   - interval: 360
+    tolerance: 50
+    disable-udp: true
     name: ♻️ 自动选择
     proxies:
       - "🇺🇸 www.85la.com 美国 01\r"
@@ -3744,14 +3746,14 @@ proxy-groups:
       - 🇸🇬 www.85la.com 新加坡 39_2
       - 🇸🇬 www.85la.com 新加坡 38_2
       - 🇸🇬 www.85la.com 新加坡 37_2
-    type: fallback
+    type: url-test
     url: https://www.gstatic.com/generate_204
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - 🔯 故障转移
+      - ♻️ 自动选择
   - name: 🛑 全球拦截
     type: select
     proxies:
@@ -3762,7 +3764,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🔯 故障转移
+      - ♻️ 自动选择
       - "🇺🇸 www.85la.com 美国 01\r"
       - 🇺🇸 www.85la.com 美国 03
       - 🇺🇸 www.85la.com 美国 04_1
@@ -4978,6 +4980,8 @@ proxy-groups:
       - 🇸🇬 www.85la.com 新加坡 38_2
       - 🇸🇬 www.85la.com 新加坡 37_2
   - interval: 360
+    tolerance: 50
+    disable-udp: true
     name: 🇭🇰 香港节点
     proxies:
       - 🇭🇰 www.85la.com 香港 01_1
@@ -4993,9 +4997,11 @@ proxy-groups:
       - 🇭🇰 www.85la.com 香港 11
       - 🇭🇰 www.85la.com 香港 12
       - 🇭🇰 www.85la.com 香港 01_2
-    type: fallback
+    type: url-test
     url: https://www.gstatic.com/generate_204
   - interval: 360
+    tolerance: 50
+    disable-udp: true
     name: 🇯🇵 日本节点
     proxies:
       - "🇯🇵 www.85la.com 日本 01\r"
@@ -5014,9 +5020,11 @@ proxy-groups:
       - 🇯🇵 www.85la.com 日本 03_2
       - 🇯🇵 www.85la.com 日本 05_2
       - 🇯🇵 www.85la.com 日本 07
-    type: fallback
+    type: url-test
     url: https://www.gstatic.com/generate_204
   - interval: 360
+    tolerance: 50
+    disable-udp: true
     name: 🇸🇬 狮城节点
     proxies:
       - 🇸🇬 www.85la.com 新加坡 01_1
@@ -5077,9 +5085,11 @@ proxy-groups:
       - 🇸🇬 www.85la.com 新加坡 39_2
       - 🇸🇬 www.85la.com 新加坡 38_2
       - 🇸🇬 www.85la.com 新加坡 37_2
-    type: fallback
+    type: url-test
     url: https://www.gstatic.com/generate_204
   - interval: 360
+    tolerance: 50
+    disable-udp: true
     name: 🇺🇲 美国节点
     proxies:
       - "🇺🇸 www.85la.com 美国 01\r"
@@ -5772,7 +5782,7 @@ proxy-groups:
       - 🇺🇸 www.85la.com 美国 152_2
       - 🇺🇸 www.85la.com 美国 161_2
       - 🇦🇲 www.85la.com 亚美尼亚 01
-    type: fallback
+    type: url-test
     url: https://www.gstatic.com/generate_204
 
 rules:
