@@ -1,19 +1,19 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-13 23:34:57
+# 创建时间：2024-12-14 17:12:00
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1106
 # 节点类型：vmess, trojan
 ####################################
 mixed-port: 7890
-allow-lan: false
-log-level: silent
-external-controller: 127.0.0.1:9090
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
 dns:
   enabled: true
-  listen: 127.0.0.1:1053
-  ipv6: false
+  listen: 0.0.0.0:1053
+  ipv6: true
   default-nameserver:
     - 223.5.5.5
     - 114.114.114.114
@@ -80,9 +80,10 @@ dns:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
   fallback-filter:
-    geoip: true
+    geoip: false
     ipcidr:
       - 240.0.0.0/4
+      - 0.0.0.0/32
 
 proxies:
   - {"name":"美国_由快嘴科技提供：kkzui.com26_2","type":"vmess","server":"38.99.82.203","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"38.99.82.203"}}}
@@ -2313,8 +2314,8 @@ proxy-groups:
       - 美国_由快嘴科技提供：kkzui.com154_2_2
   - name: ♻️ 自动选择
     type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 360
+    url: http://www.gstatic.com/generate_204
+    interval: 300
     tolerance: 50
     proxies:
       - 美国_由快嘴科技提供：kkzui.com26_2
@@ -4546,10 +4547,17 @@ proxy-groups:
       - 巴西_由快嘴科技提供：kkzui.com104
       - 美国_由快嘴科技提供：kkzui.com153_2
       - 美国_由快嘴科技提供：kkzui.com154_2_2
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
   - name: 🇯🇵 日本节点
-    type: fallback
-    url: https://www.gstatic.com/generate_204
-    interval: 360
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
     proxies:
       - 日本_由快嘴科技提供：kkzui.com117
       - 日本_由快嘴科技提供;kkzui.com29
@@ -4557,9 +4565,10 @@ proxy-groups:
       - 日本_由快嘴科技提供：kkzui.com85
       - 日本由快嘴科技提供：kkzui.com103
   - name: 🇸🇬 狮城节点
-    type: fallback
-    url: https://www.gstatic.com/generate_204
-    interval: 360
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
     proxies:
       - 新加坡_由快嘴科技提供：kkzui.com123
       - 新加坡_由快嘴科技提供：kkzui.com124
@@ -4567,9 +4576,10 @@ proxy-groups:
       - 新加坡_由快嘴科技提供：kkzui.com96
       - 新加坡由快嘴科技提供：kkzui.com109
   - name: 🇺🇲 美国节点
-    type: fallback
-    url: https://www.gstatic.com/generate_204
-    interval: 360
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
     proxies:
       - 美国_由快嘴科技提供：kkzui.com26_2
       - 美国_由快嘴科技提供：kkzui.com28_2
@@ -7186,7 +7196,7 @@ rules:
   - IP-CIDR6,2001:b28:f23d::/48,🚀 节点选择,no-resolve
   - IP-CIDR6,2001:b28:f23f::/48,🚀 节点选择,no-resolve
 # 内容：国外媒体列表
-# 更新：2024-08-27 13:51:18
+# 更新：2024-12-14 11:14:53
 # 数量：367条
 # ABC
 # AbemaTV
