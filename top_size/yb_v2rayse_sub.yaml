@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-13 16:36:19
+# 创建时间：2024-12-13 22:58:55
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：965
 # 节点类型：vmess, trojan
@@ -79,14 +79,6 @@ dns:
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-    - https://dns.quad9.net/dns-query
-    - https://doh.dns.sb/dns-query
-    - https://cloudflare-dns.com/dns-query
-  fallback:
-    - 9.9.9.9
-    - 185.222.222.222
-    - https://dns.quad9.net/dns-query
-    - https://doh.dns.sb/dns-query
   fallback-filter:
     geoip: true
     ipcidr:
@@ -2037,10 +2029,11 @@ proxy-groups:
       - 🏁RELAY-195.85.59.158-1124
       - 🏁RELAY-185.176.26.131-1125
       - 🏁RELAY-192.65.217.254-1126
-  - interval: 360
-    name: ♻️ 自动选择
+  - name: ♻️ 自动选择
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 360
     tolerance: 50
-    disable-udp: true
     proxies:
       - 🇹🇷TR-202.78.162.5-0001
       - 🇹🇷TR-202.78.162.5-0002
@@ -3007,8 +3000,6 @@ proxy-groups:
       - 🏁RELAY-195.85.59.158-1124
       - 🏁RELAY-185.176.26.131-1125
       - 🏁RELAY-192.65.217.254-1126
-    type: url-test
-    url: https://www.gstatic.com/generate_204
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -3991,10 +3982,10 @@ proxy-groups:
       - 🏁RELAY-195.85.59.158-1124
       - 🏁RELAY-185.176.26.131-1125
       - 🏁RELAY-192.65.217.254-1126
-  - interval: 360
-    name: 🇭🇰 香港节点
-    tolerance: 50
-    disable-udp: true
+  - name: 🇭🇰 香港节点
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 360
     proxies:
       - 🇭🇰HK-18.162.43.30-0262
       - 🇭🇰HK-218.190.230.207-0282
@@ -4012,29 +4003,23 @@ proxy-groups:
       - 🇭🇰HK-16.163.104.216-0885
       - 🇭🇰HK-18.162.188.231-0886
       - 🇭🇰HK-18.163.48.140-0887
-    type: url-test
+  - name: 🇯🇵 日本节点
+    type: fallback
     url: https://www.gstatic.com/generate_204
-  - interval: 360
-    name: 🇯🇵 日本节点
-    tolerance: 50
-    disable-udp: true
+    interval: 360
     proxies:
       - 🇯🇵JP-52.68.127.96-0857
       - 🇯🇵JP-52.194.36.95-0863
-    type: url-test
+  - name: 🇸🇬 狮城节点
+    type: fallback
     url: https://www.gstatic.com/generate_204
-  - interval: 360
-    name: 🇸🇬 狮城节点
-    tolerance: 50
-    disable-udp: true
+    interval: 360
     proxies:
       - 🇸🇬SG-68.183.228.104-0997
-    type: url-test
+  - name: 🇺🇲 美国节点
+    type: fallback
     url: https://www.gstatic.com/generate_204
-  - interval: 360
-    name: 🇺🇲 美国节点
-    tolerance: 50
-    disable-udp: true
+    interval: 360
     proxies:
       - 🇺🇸US-66.241.124.229-0033
       - 🇺🇸US-142.202.48.220-0726
@@ -4044,8 +4029,6 @@ proxy-groups:
       - 🇺🇸US-142.202.48.220-1048
       - 🇺🇸US-142.202.48.220-1059
       - 🇺🇸US-142.202.48.220-1066
-    type: url-test
-    url: https://www.gstatic.com/generate_204
 
 rules:
 # 本地/局域网地址
