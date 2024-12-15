@@ -5,445 +5,157 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 公益机场 xqc.best, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: e5184069-1377-45c4-97c2-dc40b971c861, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇭🇰 HK | 香港 LB, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: e5184069-1377-45c4-97c2-dc40b971c861, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: "/stream?ed=2048", headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇯🇵 JP | 日本 LB, server: jpcft01.xqc.best, port: 443, type: vmess, uuid: e5184069-1377-45c4-97c2-dc40b971c861, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d17ttua58dfmz.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d17ttua58dfmz.cloudfront.net}}}
-  - {name: 🇸🇬 SG | 新加坡 LB, server: sgcft01.xqc.best, port: 443, type: vmess, uuid: e5184069-1377-45c4-97c2-dc40b971c861, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d16henb377mok4.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d16henb377mok4.cloudfront.net}}}
-  - {name: "🏳️‍🌈 [trojan]剩余流量：5 GB", server: forward-03.sudatech.store, port: 43500, type: trojan, password: b10cb57e-b788-4722-91ab-8a93e8e3315f, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
-  - {name: "[trojan]套餐到期：2024-12-13", server: forward-03.sudatech.store, port: 43500, type: trojan, password: b10cb57e-b788-4722-91ab-8a93e8e3315f, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
-  - {name: "[trojan]试用未开放外国节点+中转", server: forward-03.sudatech.store, port: 43500, type: trojan, password: b10cb57e-b788-4722-91ab-8a93e8e3315f, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
-  - {name: "🇸🇬 [trojan]更新版本2.3", server: forward-03.sudatech.store, port: 43500, type: trojan, password: b10cb57e-b788-4722-91ab-8a93e8e3315f, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
-  - {name: "[trojan]直连不能用是地区问题", server: forward-03.sudatech.store, port: 43500, type: trojan, password: b10cb57e-b788-4722-91ab-8a93e8e3315f, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
-  - {name: 公益机场 xqc.best 2, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: ab55693d-9a9d-4aa3-b3f6-37606ea91131, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇭🇰 HK | 香港 LB 2, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: ab55693d-9a9d-4aa3-b3f6-37606ea91131, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: "/stream?ed=2048", headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇯🇵 JP | 日本 LB 2, server: jpcft01.xqc.best, port: 443, type: vmess, uuid: ab55693d-9a9d-4aa3-b3f6-37606ea91131, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d17ttua58dfmz.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d17ttua58dfmz.cloudfront.net}}}
-  - {name: 🇸🇬 SG | 新加坡 LB 2, server: sgcft01.xqc.best, port: 443, type: vmess, uuid: ab55693d-9a9d-4aa3-b3f6-37606ea91131, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d16henb377mok4.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d16henb377mok4.cloudfront.net}}}
-  - {name: 公益机场 xqc.best 3, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: bdfa9f3a-0c6b-4564-822c-7a50acebb99a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇭🇰 HK | 香港 LB 3, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: bdfa9f3a-0c6b-4564-822c-7a50acebb99a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: "/stream?ed=2048", headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇯🇵 JP | 日本 LB 3, server: jpcft01.xqc.best, port: 443, type: vmess, uuid: bdfa9f3a-0c6b-4564-822c-7a50acebb99a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d17ttua58dfmz.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d17ttua58dfmz.cloudfront.net}}}
-  - {name: 🇸🇬 SG | 新加坡 LB 3, server: sgcft01.xqc.best, port: 443, type: vmess, uuid: bdfa9f3a-0c6b-4564-822c-7a50acebb99a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d16henb377mok4.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d16henb377mok4.cloudfront.net}}}
-  - {name: 公益机场 xqc.best 4, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: fa607180-7654-4e39-ac34-c19271195dd1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇭🇰 HK | 香港 LB 4, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: fa607180-7654-4e39-ac34-c19271195dd1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: "/stream?ed=2048", headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇯🇵 JP | 日本 LB 4, server: jpcft01.xqc.best, port: 443, type: vmess, uuid: fa607180-7654-4e39-ac34-c19271195dd1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d17ttua58dfmz.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d17ttua58dfmz.cloudfront.net}}}
-  - {name: 🇸🇬 SG | 新加坡 LB 4, server: sgcft01.xqc.best, port: 443, type: vmess, uuid: fa607180-7654-4e39-ac34-c19271195dd1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d16henb377mok4.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d16henb377mok4.cloudfront.net}}}
-  - {name: 公益机场 xqc.best 5, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 0ea49ad0-9288-42c9-9299-db7ae7817d76, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇭🇰 HK | 香港 LB 5, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 0ea49ad0-9288-42c9-9299-db7ae7817d76, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: "/stream?ed=2048", headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇯🇵 JP | 日本 LB 5, server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 0ea49ad0-9288-42c9-9299-db7ae7817d76, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d17ttua58dfmz.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d17ttua58dfmz.cloudfront.net}}}
-  - {name: 🇸🇬 SG | 新加坡 LB 5, server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 0ea49ad0-9288-42c9-9299-db7ae7817d76, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d16henb377mok4.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d16henb377mok4.cloudfront.net}}}
-  - {name: 公益机场 xqc.best 6, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 892ee772-48de-4be4-b79d-fc0c4f1500e6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇭🇰 HK | 香港 LB 6, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 892ee772-48de-4be4-b79d-fc0c4f1500e6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: "/stream?ed=2048", headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇯🇵 JP | 日本 LB 6, server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 892ee772-48de-4be4-b79d-fc0c4f1500e6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d17ttua58dfmz.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d17ttua58dfmz.cloudfront.net}}}
-  - {name: 🇸🇬 SG | 新加坡 LB 6, server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 892ee772-48de-4be4-b79d-fc0c4f1500e6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d16henb377mok4.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d16henb377mok4.cloudfront.net}}}
-  - {name: 公益机场 xqc.best 7, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 4ceebd37-b6f5-4472-9ae7-1e53cbc9c834, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇭🇰 HK | 香港 LB 7, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 4ceebd37-b6f5-4472-9ae7-1e53cbc9c834, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: "/stream?ed=2048", headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇯🇵 JP | 日本 LB 7, server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 4ceebd37-b6f5-4472-9ae7-1e53cbc9c834, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d17ttua58dfmz.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d17ttua58dfmz.cloudfront.net}}}
-  - {name: 🇸🇬 SG | 新加坡 LB 7, server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 4ceebd37-b6f5-4472-9ae7-1e53cbc9c834, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d16henb377mok4.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d16henb377mok4.cloudfront.net}}}
-  - {name: 公益机场 xqc.best 8, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: de0dd72e-11bb-4495-91c0-3608e5ebb97f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇭🇰 HK | 香港 LB 8, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: de0dd72e-11bb-4495-91c0-3608e5ebb97f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: "/stream?ed=2048", headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇯🇵 JP | 日本 LB 8, server: jpcft01.xqc.best, port: 443, type: vmess, uuid: de0dd72e-11bb-4495-91c0-3608e5ebb97f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d17ttua58dfmz.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d17ttua58dfmz.cloudfront.net}}}
-  - {name: 🇸🇬 SG | 新加坡 LB 8, server: sgcft01.xqc.best, port: 443, type: vmess, uuid: de0dd72e-11bb-4495-91c0-3608e5ebb97f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d16henb377mok4.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d16henb377mok4.cloudfront.net}}}
-  - {name: 公益机场 xqc.best 9, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: c46b8749-bf80-43ec-bae0-2816321386ef, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇭🇰 HK | 香港 LB 9, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: c46b8749-bf80-43ec-bae0-2816321386ef, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: "/stream?ed=2048", headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇯🇵 JP | 日本 LB 9, server: jpcft01.xqc.best, port: 443, type: vmess, uuid: c46b8749-bf80-43ec-bae0-2816321386ef, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d17ttua58dfmz.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d17ttua58dfmz.cloudfront.net}}}
-  - {name: 🇸🇬 SG | 新加坡 LB 9, server: sgcft01.xqc.best, port: 443, type: vmess, uuid: c46b8749-bf80-43ec-bae0-2816321386ef, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d16henb377mok4.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d16henb377mok4.cloudfront.net}}}
-  - {name: "🏳️‍🌈 [trojan]剩余流量：5 GB 2", server: forward-03.sudatech.store, port: 43500, type: trojan, password: 2df56006-619b-48a3-9772-0285261758ab, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
-  - {name: "[trojan]套餐到期：2024-12-13 2", server: forward-03.sudatech.store, port: 43500, type: trojan, password: 2df56006-619b-48a3-9772-0285261758ab, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
-  - {name: "[trojan]试用未开放外国节点+中转 2", server: forward-03.sudatech.store, port: 43500, type: trojan, password: 2df56006-619b-48a3-9772-0285261758ab, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
-  - {name: "🇸🇬 [trojan]更新版本2.3 2", server: forward-03.sudatech.store, port: 43500, type: trojan, password: 2df56006-619b-48a3-9772-0285261758ab, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
-  - {name: "[trojan]直连不能用是地区问题 2", server: forward-03.sudatech.store, port: 43500, type: trojan, password: 2df56006-619b-48a3-9772-0285261758ab, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
-  - {name: 公益机场 xqc.best 10, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 00b6bad3-68bf-4367-91a2-dd423e3cd1b6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇭🇰 HK | 香港 LB 10, server: hkcft01.xqc.best, port: 443, type: vmess, uuid: 00b6bad3-68bf-4367-91a2-dd423e3cd1b6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d1th2ch215a6xr.cloudfront.net, network: ws, ws-opts: {path: "/stream?ed=2048", headers: {Host: d1th2ch215a6xr.cloudfront.net}}}
-  - {name: 🇯🇵 JP | 日本 LB 10, server: jpcft01.xqc.best, port: 443, type: vmess, uuid: 00b6bad3-68bf-4367-91a2-dd423e3cd1b6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d17ttua58dfmz.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d17ttua58dfmz.cloudfront.net}}}
-  - {name: 🇸🇬 SG | 新加坡 LB 10, server: sgcft01.xqc.best, port: 443, type: vmess, uuid: 00b6bad3-68bf-4367-91a2-dd423e3cd1b6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: d16henb377mok4.cloudfront.net, network: ws, ws-opts: {path: /stream, headers: {Host: d16henb377mok4.cloudfront.net}}}
+  - {name: "🏳️‍🌈 [ss]剩余流量：1024 MB", server: jehw72eh.iwbh.cn, port: 49709, type: ss, cipher: aes-256-gcm, password: fa3963e7-c5f9-49f5-9d5f-fe9a69f2109b}
+  - {name: "[ss]套餐到期：长期有效", server: jehw72eh.iwbh.cn, port: 49709, type: ss, cipher: aes-256-gcm, password: fa3963e7-c5f9-49f5-9d5f-fe9a69f2109b}
+  - {name: "🇭🇰 [ss]公益路线-HK", server: jehw72eh.iwbh.cn, port: 49709, type: ss, cipher: aes-256-gcm, password: fa3963e7-c5f9-49f5-9d5f-fe9a69f2109b}
+  - {name: "🏳️‍🌈 [trojan]剩余流量：5 GB", server: forward-03.sudatech.store, port: 43500, type: trojan, password: 9efe2b2b-32ff-4ae6-bef6-91de46ac4215, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
+  - {name: "[trojan]套餐到期：2024-12-16", server: forward-03.sudatech.store, port: 43500, type: trojan, password: 9efe2b2b-32ff-4ae6-bef6-91de46ac4215, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
+  - {name: "[trojan]试用未开放外国节点+中转", server: forward-03.sudatech.store, port: 43500, type: trojan, password: 9efe2b2b-32ff-4ae6-bef6-91de46ac4215, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
+  - {name: "🇸🇬 [trojan]更新版本2.4", server: forward-03.sudatech.store, port: 43500, type: trojan, password: 9efe2b2b-32ff-4ae6-bef6-91de46ac4215, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
+  - {name: "[trojan]直连不能用是地区问题", server: forward-03.sudatech.store, port: 43500, type: trojan, password: 9efe2b2b-32ff-4ae6-bef6-91de46ac4215, sni: vpn-4-6.sudatech.store, skip-cert-verify: true}
+  - {name: "🏳️‍🌈 [ss]剩余流量：1024 MB 2", server: jehw72eh.iwbh.cn, port: 49709, type: ss, cipher: aes-256-gcm, password: 972feea6-dd5e-4e59-8338-88a4da034d61}
+  - {name: "[ss]套餐到期：长期有效 2", server: jehw72eh.iwbh.cn, port: 49709, type: ss, cipher: aes-256-gcm, password: 972feea6-dd5e-4e59-8338-88a4da034d61}
+  - {name: "🇭🇰 [ss]公益路线-HK 2", server: jehw72eh.iwbh.cn, port: 49709, type: ss, cipher: aes-256-gcm, password: 972feea6-dd5e-4e59-8338-88a4da034d61}
+  - {name: "🏳️‍🌈 [ss]剩余流量：1024 MB 3", server: jehw72eh.iwbh.cn, port: 49709, type: ss, cipher: aes-256-gcm, password: c4a0109a-78ef-4906-8c17-703b9aa02f3d}
+  - {name: "[ss]套餐到期：长期有效 3", server: jehw72eh.iwbh.cn, port: 49709, type: ss, cipher: aes-256-gcm, password: c4a0109a-78ef-4906-8c17-703b9aa02f3d}
+  - {name: "🇭🇰 [ss]公益路线-HK 3", server: jehw72eh.iwbh.cn, port: 49709, type: ss, cipher: aes-256-gcm, password: c4a0109a-78ef-4906-8c17-703b9aa02f3d}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 公益机场 xqc.best
-      - 🇭🇰 HK | 香港 LB
-      - 🇯🇵 JP | 日本 LB
-      - 🇸🇬 SG | 新加坡 LB
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB
+      - "[ss]套餐到期：长期有效"
+      - 🇭🇰 [ss]公益路线-HK
       - 🏳️‍🌈 [trojan]剩余流量：5 GB
-      - "[trojan]套餐到期：2024-12-13"
+      - "[trojan]套餐到期：2024-12-16"
       - "[trojan]试用未开放外国节点+中转"
-      - 🇸🇬 [trojan]更新版本2.3
+      - 🇸🇬 [trojan]更新版本2.4
       - "[trojan]直连不能用是地区问题"
-      - 公益机场 xqc.best 2
-      - 🇭🇰 HK | 香港 LB 2
-      - 🇯🇵 JP | 日本 LB 2
-      - 🇸🇬 SG | 新加坡 LB 2
-      - 公益机场 xqc.best 3
-      - 🇭🇰 HK | 香港 LB 3
-      - 🇯🇵 JP | 日本 LB 3
-      - 🇸🇬 SG | 新加坡 LB 3
-      - 公益机场 xqc.best 4
-      - 🇭🇰 HK | 香港 LB 4
-      - 🇯🇵 JP | 日本 LB 4
-      - 🇸🇬 SG | 新加坡 LB 4
-      - 公益机场 xqc.best 5
-      - 🇭🇰 HK | 香港 LB 5
-      - 🇯🇵 JP | 日本 LB 5
-      - 🇸🇬 SG | 新加坡 LB 5
-      - 公益机场 xqc.best 6
-      - 🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 SG | 新加坡 LB 6
-      - 公益机场 xqc.best 7
-      - 🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 SG | 新加坡 LB 7
-      - 公益机场 xqc.best 8
-      - 🇭🇰 HK | 香港 LB 8
-      - 🇯🇵 JP | 日本 LB 8
-      - 🇸🇬 SG | 新加坡 LB 8
-      - 公益机场 xqc.best 9
-      - 🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 SG | 新加坡 LB 9
-      - 🏳️‍🌈 [trojan]剩余流量：5 GB 2
-      - "[trojan]套餐到期：2024-12-13 2"
-      - "[trojan]试用未开放外国节点+中转 2"
-      - 🇸🇬 [trojan]更新版本2.3 2
-      - "[trojan]直连不能用是地区问题 2"
-      - 公益机场 xqc.best 10
-      - 🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 SG | 新加坡 LB 10
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 2
+      - "[ss]套餐到期：长期有效 2"
+      - 🇭🇰 [ss]公益路线-HK 2
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 3
+      - "[ss]套餐到期：长期有效 3"
+      - 🇭🇰 [ss]公益路线-HK 3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 公益机场 xqc.best
-      - 🇭🇰 HK | 香港 LB
-      - 🇯🇵 JP | 日本 LB
-      - 🇸🇬 SG | 新加坡 LB
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB
+      - "[ss]套餐到期：长期有效"
+      - 🇭🇰 [ss]公益路线-HK
       - 🏳️‍🌈 [trojan]剩余流量：5 GB
-      - "[trojan]套餐到期：2024-12-13"
+      - "[trojan]套餐到期：2024-12-16"
       - "[trojan]试用未开放外国节点+中转"
-      - 🇸🇬 [trojan]更新版本2.3
+      - 🇸🇬 [trojan]更新版本2.4
       - "[trojan]直连不能用是地区问题"
-      - 公益机场 xqc.best 2
-      - 🇭🇰 HK | 香港 LB 2
-      - 🇯🇵 JP | 日本 LB 2
-      - 🇸🇬 SG | 新加坡 LB 2
-      - 公益机场 xqc.best 3
-      - 🇭🇰 HK | 香港 LB 3
-      - 🇯🇵 JP | 日本 LB 3
-      - 🇸🇬 SG | 新加坡 LB 3
-      - 公益机场 xqc.best 4
-      - 🇭🇰 HK | 香港 LB 4
-      - 🇯🇵 JP | 日本 LB 4
-      - 🇸🇬 SG | 新加坡 LB 4
-      - 公益机场 xqc.best 5
-      - 🇭🇰 HK | 香港 LB 5
-      - 🇯🇵 JP | 日本 LB 5
-      - 🇸🇬 SG | 新加坡 LB 5
-      - 公益机场 xqc.best 6
-      - 🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 SG | 新加坡 LB 6
-      - 公益机场 xqc.best 7
-      - 🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 SG | 新加坡 LB 7
-      - 公益机场 xqc.best 8
-      - 🇭🇰 HK | 香港 LB 8
-      - 🇯🇵 JP | 日本 LB 8
-      - 🇸🇬 SG | 新加坡 LB 8
-      - 公益机场 xqc.best 9
-      - 🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 SG | 新加坡 LB 9
-      - 🏳️‍🌈 [trojan]剩余流量：5 GB 2
-      - "[trojan]套餐到期：2024-12-13 2"
-      - "[trojan]试用未开放外国节点+中转 2"
-      - 🇸🇬 [trojan]更新版本2.3 2
-      - "[trojan]直连不能用是地区问题 2"
-      - 公益机场 xqc.best 10
-      - 🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 SG | 新加坡 LB 10
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 2
+      - "[ss]套餐到期：长期有效 2"
+      - 🇭🇰 [ss]公益路线-HK 2
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 3
+      - "[ss]套餐到期：长期有效 3"
+      - 🇭🇰 [ss]公益路线-HK 3
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 公益机场 xqc.best
-      - 🇭🇰 HK | 香港 LB
-      - 🇯🇵 JP | 日本 LB
-      - 🇸🇬 SG | 新加坡 LB
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB
+      - "[ss]套餐到期：长期有效"
+      - 🇭🇰 [ss]公益路线-HK
       - 🏳️‍🌈 [trojan]剩余流量：5 GB
-      - "[trojan]套餐到期：2024-12-13"
+      - "[trojan]套餐到期：2024-12-16"
       - "[trojan]试用未开放外国节点+中转"
-      - 🇸🇬 [trojan]更新版本2.3
+      - 🇸🇬 [trojan]更新版本2.4
       - "[trojan]直连不能用是地区问题"
-      - 公益机场 xqc.best 2
-      - 🇭🇰 HK | 香港 LB 2
-      - 🇯🇵 JP | 日本 LB 2
-      - 🇸🇬 SG | 新加坡 LB 2
-      - 公益机场 xqc.best 3
-      - 🇭🇰 HK | 香港 LB 3
-      - 🇯🇵 JP | 日本 LB 3
-      - 🇸🇬 SG | 新加坡 LB 3
-      - 公益机场 xqc.best 4
-      - 🇭🇰 HK | 香港 LB 4
-      - 🇯🇵 JP | 日本 LB 4
-      - 🇸🇬 SG | 新加坡 LB 4
-      - 公益机场 xqc.best 5
-      - 🇭🇰 HK | 香港 LB 5
-      - 🇯🇵 JP | 日本 LB 5
-      - 🇸🇬 SG | 新加坡 LB 5
-      - 公益机场 xqc.best 6
-      - 🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 SG | 新加坡 LB 6
-      - 公益机场 xqc.best 7
-      - 🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 SG | 新加坡 LB 7
-      - 公益机场 xqc.best 8
-      - 🇭🇰 HK | 香港 LB 8
-      - 🇯🇵 JP | 日本 LB 8
-      - 🇸🇬 SG | 新加坡 LB 8
-      - 公益机场 xqc.best 9
-      - 🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 SG | 新加坡 LB 9
-      - 🏳️‍🌈 [trojan]剩余流量：5 GB 2
-      - "[trojan]套餐到期：2024-12-13 2"
-      - "[trojan]试用未开放外国节点+中转 2"
-      - 🇸🇬 [trojan]更新版本2.3 2
-      - "[trojan]直连不能用是地区问题 2"
-      - 公益机场 xqc.best 10
-      - 🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 SG | 新加坡 LB 10
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 2
+      - "[ss]套餐到期：长期有效 2"
+      - 🇭🇰 [ss]公益路线-HK 2
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 3
+      - "[ss]套餐到期：长期有效 3"
+      - 🇭🇰 [ss]公益路线-HK 3
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 公益机场 xqc.best
-      - 🇭🇰 HK | 香港 LB
-      - 🇯🇵 JP | 日本 LB
-      - 🇸🇬 SG | 新加坡 LB
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB
+      - "[ss]套餐到期：长期有效"
+      - 🇭🇰 [ss]公益路线-HK
       - 🏳️‍🌈 [trojan]剩余流量：5 GB
-      - "[trojan]套餐到期：2024-12-13"
+      - "[trojan]套餐到期：2024-12-16"
       - "[trojan]试用未开放外国节点+中转"
-      - 🇸🇬 [trojan]更新版本2.3
+      - 🇸🇬 [trojan]更新版本2.4
       - "[trojan]直连不能用是地区问题"
-      - 公益机场 xqc.best 2
-      - 🇭🇰 HK | 香港 LB 2
-      - 🇯🇵 JP | 日本 LB 2
-      - 🇸🇬 SG | 新加坡 LB 2
-      - 公益机场 xqc.best 3
-      - 🇭🇰 HK | 香港 LB 3
-      - 🇯🇵 JP | 日本 LB 3
-      - 🇸🇬 SG | 新加坡 LB 3
-      - 公益机场 xqc.best 4
-      - 🇭🇰 HK | 香港 LB 4
-      - 🇯🇵 JP | 日本 LB 4
-      - 🇸🇬 SG | 新加坡 LB 4
-      - 公益机场 xqc.best 5
-      - 🇭🇰 HK | 香港 LB 5
-      - 🇯🇵 JP | 日本 LB 5
-      - 🇸🇬 SG | 新加坡 LB 5
-      - 公益机场 xqc.best 6
-      - 🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 SG | 新加坡 LB 6
-      - 公益机场 xqc.best 7
-      - 🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 SG | 新加坡 LB 7
-      - 公益机场 xqc.best 8
-      - 🇭🇰 HK | 香港 LB 8
-      - 🇯🇵 JP | 日本 LB 8
-      - 🇸🇬 SG | 新加坡 LB 8
-      - 公益机场 xqc.best 9
-      - 🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 SG | 新加坡 LB 9
-      - 🏳️‍🌈 [trojan]剩余流量：5 GB 2
-      - "[trojan]套餐到期：2024-12-13 2"
-      - "[trojan]试用未开放外国节点+中转 2"
-      - 🇸🇬 [trojan]更新版本2.3 2
-      - "[trojan]直连不能用是地区问题 2"
-      - 公益机场 xqc.best 10
-      - 🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 SG | 新加坡 LB 10
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 2
+      - "[ss]套餐到期：长期有效 2"
+      - 🇭🇰 [ss]公益路线-HK 2
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 3
+      - "[ss]套餐到期：长期有效 3"
+      - 🇭🇰 [ss]公益路线-HK 3
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 公益机场 xqc.best
-      - 🇭🇰 HK | 香港 LB
-      - 🇯🇵 JP | 日本 LB
-      - 🇸🇬 SG | 新加坡 LB
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB
+      - "[ss]套餐到期：长期有效"
+      - 🇭🇰 [ss]公益路线-HK
       - 🏳️‍🌈 [trojan]剩余流量：5 GB
-      - "[trojan]套餐到期：2024-12-13"
+      - "[trojan]套餐到期：2024-12-16"
       - "[trojan]试用未开放外国节点+中转"
-      - 🇸🇬 [trojan]更新版本2.3
+      - 🇸🇬 [trojan]更新版本2.4
       - "[trojan]直连不能用是地区问题"
-      - 公益机场 xqc.best 2
-      - 🇭🇰 HK | 香港 LB 2
-      - 🇯🇵 JP | 日本 LB 2
-      - 🇸🇬 SG | 新加坡 LB 2
-      - 公益机场 xqc.best 3
-      - 🇭🇰 HK | 香港 LB 3
-      - 🇯🇵 JP | 日本 LB 3
-      - 🇸🇬 SG | 新加坡 LB 3
-      - 公益机场 xqc.best 4
-      - 🇭🇰 HK | 香港 LB 4
-      - 🇯🇵 JP | 日本 LB 4
-      - 🇸🇬 SG | 新加坡 LB 4
-      - 公益机场 xqc.best 5
-      - 🇭🇰 HK | 香港 LB 5
-      - 🇯🇵 JP | 日本 LB 5
-      - 🇸🇬 SG | 新加坡 LB 5
-      - 公益机场 xqc.best 6
-      - 🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 SG | 新加坡 LB 6
-      - 公益机场 xqc.best 7
-      - 🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 SG | 新加坡 LB 7
-      - 公益机场 xqc.best 8
-      - 🇭🇰 HK | 香港 LB 8
-      - 🇯🇵 JP | 日本 LB 8
-      - 🇸🇬 SG | 新加坡 LB 8
-      - 公益机场 xqc.best 9
-      - 🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 SG | 新加坡 LB 9
-      - 🏳️‍🌈 [trojan]剩余流量：5 GB 2
-      - "[trojan]套餐到期：2024-12-13 2"
-      - "[trojan]试用未开放外国节点+中转 2"
-      - 🇸🇬 [trojan]更新版本2.3 2
-      - "[trojan]直连不能用是地区问题 2"
-      - 公益机场 xqc.best 10
-      - 🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 SG | 新加坡 LB 10
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 2
+      - "[ss]套餐到期：长期有效 2"
+      - 🇭🇰 [ss]公益路线-HK 2
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 3
+      - "[ss]套餐到期：长期有效 3"
+      - 🇭🇰 [ss]公益路线-HK 3
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 公益机场 xqc.best
-      - 🇭🇰 HK | 香港 LB
-      - 🇯🇵 JP | 日本 LB
-      - 🇸🇬 SG | 新加坡 LB
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB
+      - "[ss]套餐到期：长期有效"
+      - 🇭🇰 [ss]公益路线-HK
       - 🏳️‍🌈 [trojan]剩余流量：5 GB
-      - "[trojan]套餐到期：2024-12-13"
+      - "[trojan]套餐到期：2024-12-16"
       - "[trojan]试用未开放外国节点+中转"
-      - 🇸🇬 [trojan]更新版本2.3
+      - 🇸🇬 [trojan]更新版本2.4
       - "[trojan]直连不能用是地区问题"
-      - 公益机场 xqc.best 2
-      - 🇭🇰 HK | 香港 LB 2
-      - 🇯🇵 JP | 日本 LB 2
-      - 🇸🇬 SG | 新加坡 LB 2
-      - 公益机场 xqc.best 3
-      - 🇭🇰 HK | 香港 LB 3
-      - 🇯🇵 JP | 日本 LB 3
-      - 🇸🇬 SG | 新加坡 LB 3
-      - 公益机场 xqc.best 4
-      - 🇭🇰 HK | 香港 LB 4
-      - 🇯🇵 JP | 日本 LB 4
-      - 🇸🇬 SG | 新加坡 LB 4
-      - 公益机场 xqc.best 5
-      - 🇭🇰 HK | 香港 LB 5
-      - 🇯🇵 JP | 日本 LB 5
-      - 🇸🇬 SG | 新加坡 LB 5
-      - 公益机场 xqc.best 6
-      - 🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 SG | 新加坡 LB 6
-      - 公益机场 xqc.best 7
-      - 🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 SG | 新加坡 LB 7
-      - 公益机场 xqc.best 8
-      - 🇭🇰 HK | 香港 LB 8
-      - 🇯🇵 JP | 日本 LB 8
-      - 🇸🇬 SG | 新加坡 LB 8
-      - 公益机场 xqc.best 9
-      - 🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 SG | 新加坡 LB 9
-      - 🏳️‍🌈 [trojan]剩余流量：5 GB 2
-      - "[trojan]套餐到期：2024-12-13 2"
-      - "[trojan]试用未开放外国节点+中转 2"
-      - 🇸🇬 [trojan]更新版本2.3 2
-      - "[trojan]直连不能用是地区问题 2"
-      - 公益机场 xqc.best 10
-      - 🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 SG | 新加坡 LB 10
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 2
+      - "[ss]套餐到期：长期有效 2"
+      - 🇭🇰 [ss]公益路线-HK 2
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 3
+      - "[ss]套餐到期：长期有效 3"
+      - 🇭🇰 [ss]公益路线-HK 3
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 公益机场 xqc.best
-      - 🇭🇰 HK | 香港 LB
-      - 🇯🇵 JP | 日本 LB
-      - 🇸🇬 SG | 新加坡 LB
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB
+      - "[ss]套餐到期：长期有效"
+      - 🇭🇰 [ss]公益路线-HK
       - 🏳️‍🌈 [trojan]剩余流量：5 GB
-      - "[trojan]套餐到期：2024-12-13"
+      - "[trojan]套餐到期：2024-12-16"
       - "[trojan]试用未开放外国节点+中转"
-      - 🇸🇬 [trojan]更新版本2.3
+      - 🇸🇬 [trojan]更新版本2.4
       - "[trojan]直连不能用是地区问题"
-      - 公益机场 xqc.best 2
-      - 🇭🇰 HK | 香港 LB 2
-      - 🇯🇵 JP | 日本 LB 2
-      - 🇸🇬 SG | 新加坡 LB 2
-      - 公益机场 xqc.best 3
-      - 🇭🇰 HK | 香港 LB 3
-      - 🇯🇵 JP | 日本 LB 3
-      - 🇸🇬 SG | 新加坡 LB 3
-      - 公益机场 xqc.best 4
-      - 🇭🇰 HK | 香港 LB 4
-      - 🇯🇵 JP | 日本 LB 4
-      - 🇸🇬 SG | 新加坡 LB 4
-      - 公益机场 xqc.best 5
-      - 🇭🇰 HK | 香港 LB 5
-      - 🇯🇵 JP | 日本 LB 5
-      - 🇸🇬 SG | 新加坡 LB 5
-      - 公益机场 xqc.best 6
-      - 🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 SG | 新加坡 LB 6
-      - 公益机场 xqc.best 7
-      - 🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 SG | 新加坡 LB 7
-      - 公益机场 xqc.best 8
-      - 🇭🇰 HK | 香港 LB 8
-      - 🇯🇵 JP | 日本 LB 8
-      - 🇸🇬 SG | 新加坡 LB 8
-      - 公益机场 xqc.best 9
-      - 🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 SG | 新加坡 LB 9
-      - 🏳️‍🌈 [trojan]剩余流量：5 GB 2
-      - "[trojan]套餐到期：2024-12-13 2"
-      - "[trojan]试用未开放外国节点+中转 2"
-      - 🇸🇬 [trojan]更新版本2.3 2
-      - "[trojan]直连不能用是地区问题 2"
-      - 公益机场 xqc.best 10
-      - 🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 SG | 新加坡 LB 10
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 2
+      - "[ss]套餐到期：长期有效 2"
+      - 🇭🇰 [ss]公益路线-HK 2
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 3
+      - "[ss]套餐到期：长期有效 3"
+      - 🇭🇰 [ss]公益路线-HK 3
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -466,56 +178,20 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 公益机场 xqc.best
-      - 🇭🇰 HK | 香港 LB
-      - 🇯🇵 JP | 日本 LB
-      - 🇸🇬 SG | 新加坡 LB
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB
+      - "[ss]套餐到期：长期有效"
+      - 🇭🇰 [ss]公益路线-HK
       - 🏳️‍🌈 [trojan]剩余流量：5 GB
-      - "[trojan]套餐到期：2024-12-13"
+      - "[trojan]套餐到期：2024-12-16"
       - "[trojan]试用未开放外国节点+中转"
-      - 🇸🇬 [trojan]更新版本2.3
+      - 🇸🇬 [trojan]更新版本2.4
       - "[trojan]直连不能用是地区问题"
-      - 公益机场 xqc.best 2
-      - 🇭🇰 HK | 香港 LB 2
-      - 🇯🇵 JP | 日本 LB 2
-      - 🇸🇬 SG | 新加坡 LB 2
-      - 公益机场 xqc.best 3
-      - 🇭🇰 HK | 香港 LB 3
-      - 🇯🇵 JP | 日本 LB 3
-      - 🇸🇬 SG | 新加坡 LB 3
-      - 公益机场 xqc.best 4
-      - 🇭🇰 HK | 香港 LB 4
-      - 🇯🇵 JP | 日本 LB 4
-      - 🇸🇬 SG | 新加坡 LB 4
-      - 公益机场 xqc.best 5
-      - 🇭🇰 HK | 香港 LB 5
-      - 🇯🇵 JP | 日本 LB 5
-      - 🇸🇬 SG | 新加坡 LB 5
-      - 公益机场 xqc.best 6
-      - 🇭🇰 HK | 香港 LB 6
-      - 🇯🇵 JP | 日本 LB 6
-      - 🇸🇬 SG | 新加坡 LB 6
-      - 公益机场 xqc.best 7
-      - 🇭🇰 HK | 香港 LB 7
-      - 🇯🇵 JP | 日本 LB 7
-      - 🇸🇬 SG | 新加坡 LB 7
-      - 公益机场 xqc.best 8
-      - 🇭🇰 HK | 香港 LB 8
-      - 🇯🇵 JP | 日本 LB 8
-      - 🇸🇬 SG | 新加坡 LB 8
-      - 公益机场 xqc.best 9
-      - 🇭🇰 HK | 香港 LB 9
-      - 🇯🇵 JP | 日本 LB 9
-      - 🇸🇬 SG | 新加坡 LB 9
-      - 🏳️‍🌈 [trojan]剩余流量：5 GB 2
-      - "[trojan]套餐到期：2024-12-13 2"
-      - "[trojan]试用未开放外国节点+中转 2"
-      - 🇸🇬 [trojan]更新版本2.3 2
-      - "[trojan]直连不能用是地区问题 2"
-      - 公益机场 xqc.best 10
-      - 🇭🇰 HK | 香港 LB 10
-      - 🇯🇵 JP | 日本 LB 10
-      - 🇸🇬 SG | 新加坡 LB 10
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 2
+      - "[ss]套餐到期：长期有效 2"
+      - 🇭🇰 [ss]公益路线-HK 2
+      - 🏳️‍🌈 [ss]剩余流量：1024 MB 3
+      - "[ss]套餐到期：长期有效 3"
+      - 🇭🇰 [ss]公益路线-HK 3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
