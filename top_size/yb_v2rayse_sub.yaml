@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-14 20:28:54
+# 创建时间：2024-12-14 15:31:01
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：965
 # 节点类型：vmess, trojan
@@ -15,8 +15,8 @@ dns:
   listen: 127.0.0.1:1053
   ipv6: false
   default-nameserver:
-    - 8.8.8.8
     - 1.0.0.1
+    - 223.5.5.5
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -77,18 +77,12 @@ dns:
     - stun.*.*.*
     - '*.mcdn.bilivideo.cn'
   nameserver:
-    - https://dns.google/dns-query
+    - https://dns.alidns.com/dns-query
     - https://cloudflare-dns.com/dns-query
-  fallback: 
-    - tls://185.222.222.222
-    - tls://9.9.9.9
   fallback-filter:
     geoip: true
     ipcidr:
       - 240.0.0.0/4
-  bootstrap:
-    - 1.0.0.1
-    - 8.8.8.8
 
 proxies:
   - {"name":"🇹🇷TR-202.78.162.5-0001","type":"vmess","server":"202.78.162.5","port":443,"cipher":"auto","uuid":"2ff97c6d-8557-42a4-b43f-19c77c5959ea","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws"}
@@ -4011,7 +4005,7 @@ proxy-groups:
       - 🇭🇰HK-18.163.48.140-0887
   - name: 🇯🇵 日本节点
     type: fallback
-    url: https://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204
     interval: 360
     proxies:
       - 🇯🇵JP-52.68.127.96-0857
