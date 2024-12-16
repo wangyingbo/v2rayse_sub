@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-15 17:49:21
+# 创建时间：2024-12-16 21:22:45
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1106
 # 节点类型：vmess, trojan
@@ -9,14 +9,14 @@
 mixed-port: 7890
 allow-lan: false
 log-level: silent
-external-controller: 127.0.0.1:9090
+external-controller: 0.0.0.0:9090
 dns:
   enabled: true
-  listen: 127.0.0.1:1053
+  listen: 0.0.0.0:1053
   ipv6: false
   default-nameserver:
-    - 9.9.9.9
-    - 185.222.222.222
+    - 223.5.5.5
+    - 1.0.0.1
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -77,14 +77,13 @@ dns:
     - stun.*.*.*
     - '*.mcdn.bilivideo.cn'
   nameserver:
-    - https://doh.dns.sb/dns-query
-    - https://dns.quad9.net/dns-query
-    - tls://185.222.222.222
-    - tls://9.9.9.9
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.alidns.com/dns-query
   fallback-filter:
     geoip: true
     ipcidr:
       - 240.0.0.0/4
+      - 0.0.0.0/32
 
 proxies:
   - {"name":"美国_由快嘴科技提供：kkzui.com26_2","type":"vmess","server":"38.99.82.203","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"38.99.82.203"}}}
