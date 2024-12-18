@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-17 16:15:33
+# 创建时间：2024-12-17 16:39:58
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1057
 # 节点类型：vmess, trojan
@@ -15,11 +15,11 @@ dns:
   listen: 127.0.0.1:1053
   ipv6: false
   servers:
-    - 9.9.9.9             # Quad9
-    - 185.222.222.222     # DNS.SB
+    - https://dns.quad9.net/dns-query
+    - https://doh.dns.sb/dns-query
   fallback:
-    - https://1.1.1.1/dns-query       # Cloudflare加密DNS
-    - https://dns.google/dns-query     # Google加密DNS
+    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -4464,7 +4464,7 @@ proxy-groups:
   - name: 🇺🇲 美国节点
     type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 420
+    interval: 428
     tolerance: 50
     proxies:
       - 美国-1.8MB/s_4_4
