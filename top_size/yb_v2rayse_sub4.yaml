@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-18 20:02:34
+# 创建时间：2024-12-19 15:36:38
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1057
 # 节点类型：vmess, trojan
@@ -22,16 +22,16 @@ dns:
     - "+.market.xiaomi.com"
   
   nameserver:
-    - 'https://1.1.1.1/dns-query'
-    - 'https://8.8.8.8/dns-query'
+    - 'https://84.200.69.80/dns-query'
+    - 'https://185.228.168.168/dns-query'
     - 'https://9.9.9.9/dns-query'
 
   proxy-server-nameserver:
     - 'https://dns.nextdns.io'
   
   bootstrap:
-    - 'https://1.1.1.1/dns-query'
-    - 'https://8.8.8.8/dns-query'
+    - 'https://84.200.69.80/dns-query'
+    - 'https://185.228.168.168/dns-query'
 
   fallback:
     - 'https://dns.nextdns.io'
@@ -44,8 +44,8 @@ dns:
       - 'https://223.5.5.5/dns-query'
       - 'https://120.53.53.53/dns-query'
     "rule-set:geolocation-!cn":
-      - 'https://1.1.1.1/dns-query'
-      - 'https://8.8.8.8/dns-query'
+      - 'https://84.200.69.80/dns-query'
+      - 'https://185.228.168.168/dns-query'
 
 proxies:
   - {"name":"中转节点-38.1MB/s_1_1","type":"vmess","server":"183.240.253.26","port":30565,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
@@ -2180,7 +2180,8 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
+    tolerance: 20
+    timeout: 3
     proxies:
       - 中转节点-38.1MB/s_1_1
       - 中转节点-95.5MB/s_2_2
@@ -4317,7 +4318,8 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
+    tolerance: 20
+    timeout: 3
     proxies:
       - 香港-1.16MB/s_10_10
       - 香港-62.1MB/s_25_25
@@ -4337,7 +4339,8 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
+    tolerance: 20
+    timeout: 3
     proxies:
       - 日本-360.9KB/s_85_85
       - 日本-54.5MB/s_90_90
@@ -4415,7 +4418,8 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
+    tolerance: 20
+    timeout: 3
     proxies:
       - 新加坡-4.10MB/s_84_84
       - 新加坡-335.0KB/s_1_615_615
@@ -4427,7 +4431,8 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
+    tolerance: 20
+    timeout: 3
     proxies:
       - 美国-1.8MB/s_4_4
       - 美国-4.72MB/s_8_8

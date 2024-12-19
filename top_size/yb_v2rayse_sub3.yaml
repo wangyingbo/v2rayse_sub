@@ -1,35 +1,19 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-18 08:04:28
+# 创建时间：2024-12-19 18:18:22
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1057
 # 节点类型：vmess, trojan
 ####################################
 mixed-port: 7890
-allow-lan: true
+allow-lan: false
 log-level: silent
 external-controller: 0.0.0.0:9090
 dns:
-  enable: true
-  listen: 127.0.0.1:1053
+  enabled: true
+  listen: 127.0.0.1:53
   ipv6: false
-  servers:
-    - https://dns.quad9.net/dns-query
-    - https://doh.dns.sb/dns-query
-  fallback:
-    - https://1.1.1.1/dns-query
-    - https://dns.google/dns-query
-  bootstrap:
-    - https://doh.dns.sb/dns-query
-    - https://dns.quad9.net/dns-query
-    - https://dns.google/dns-query
-    - https://1.1.1.1/dns-query 
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -89,6 +73,81 @@ dns:
     - stun.*.*
     - stun.*.*.*
     - '*.mcdn.bilivideo.cn'
+    - +.lan
+    - +.local
+    - +.home
+    - +.office
+    - +.internal
+    - +.localdomain
+    - +.market.xiaomi.com
+    - +.xiaomi.com
+    - +.miui.com
+    - +.huawei.com
+    - +.hisilicon.com
+    - +.qq.com
+    - +.wechat.com
+    - +.tencent.com
+    - +.gtimg.com
+    - +.taobao.com
+    - +.tmall.com
+    - +.alipay.com
+    - +.alicdn.com
+    - +.aliyun.com
+    - +.jd.com
+    - +.jdcdn.com
+    - +.baidu.com
+    - +.sogou.com
+    - +.360.cn
+    - +.haosou.com
+    - +.bilibili.com
+    - +.iqiyi.com
+    - +.youku.com
+    - +.tudou.com
+    - +.letv.com
+    - +.mgtv.com
+    - +.sina.com.cn
+    - +.163.com
+    - +.sohu.com
+    - +.ifeng.com
+    - +.zhihu.com
+    - +.mi.com
+    - +.miwifi.com
+    - +.yeelight.com
+    - +.xiaomi.net
+    - +.hicloud.com
+    - +.tplink.com
+    - +.tplinkwifi.net
+    - +.unionpay.com
+    - +.cmbchina.com
+    - +.chinapay.com
+    - +.icbc.com.cn
+    - +.abc.com.cn
+    - +.ccb.com
+    - +.edu.cn
+    - +.gov.cn
+    - +.time.nist.gov
+    - +.pool.ntp.org 
+  nameserver:
+    - 'https://84.200.69.80/dns-query'
+    - 'https://185.228.168.168/dns-query'
+    - 'https://9.9.9.9/dns-query'
+  proxy-server-nameserver:
+    - 'https://dns.nextdns.io'
+  bootstrap:
+    - 'https://84.200.69.80/dns-query'
+    - 'https://185.228.168.168/dns-query'
+  fallback:
+    - 'https://dns.nextdns.io'
+    - 'https://dns.quad9.net/dns-query'
+  nameserver-policy:
+    "rule-set:cn_domain,private_domain":
+      - 'https://doh.pub/dns-query'
+      - 'https://dns.alidns.com/dns-query'
+      - 'https://223.5.5.5/dns-query'
+      - 'https://120.53.53.53/dns-query'
+    "rule-set:geolocation-!cn":
+      - 'https://84.200.69.80/dns-query'
+      - 'https://185.228.168.168/dns-query'
 
 proxies:
   - {"name":"中转节点-38.1MB/s_1_1","type":"vmess","server":"183.240.253.26","port":30565,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
@@ -2223,7 +2282,8 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
+    tolerance: 20
+    timeout: 3
     proxies:
       - 中转节点-38.1MB/s_1_1
       - 中转节点-95.5MB/s_2_2
@@ -4360,7 +4420,8 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
+    tolerance: 20
+    timeout: 3
     proxies:
       - 香港-1.16MB/s_10_10
       - 香港-62.1MB/s_25_25
@@ -4380,7 +4441,8 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
+    tolerance: 20
+    timeout: 3
     proxies:
       - 日本-360.9KB/s_85_85
       - 日本-54.5MB/s_90_90
@@ -4458,7 +4520,8 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
+    tolerance: 20
+    timeout: 3
     proxies:
       - 新加坡-4.10MB/s_84_84
       - 新加坡-335.0KB/s_1_615_615
@@ -4470,7 +4533,8 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
+    tolerance: 20
+    timeout: 3
     proxies:
       - 美国-1.8MB/s_4_4
       - 美国-4.72MB/s_8_8

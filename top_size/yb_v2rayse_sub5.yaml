@@ -1,44 +1,51 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-18 19:21:10
+# 创建时间：2024-12-19 11:53:13
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1057
 # 节点类型：vmess, trojan
 ####################################
 mixed-port: 7890
-allow-lan: true
-log-level: info
-external-controller: 0.0.0.0:9090
-dns:
+allow-lan: false
+log-level: silent
+extedns:
   enable: true
-  ipv6: true
-  listen: 0.0.0.0:1053
-  use-hosts: true
-  use-system-hosts: true
-  respect-rules: true
+  ipv6: false
+  listen: '127.0.0.1:53'
   enhanced-mode: fake-ip
   fake-ip-range: '198.18.0.1/16'
   fake-ip-filter:
-    - "*"
     - "+.lan"
     - "+.local"
     - "+.market.xiaomi.com"
+  
   nameserver:
-    - "https://1.1.1.1/dns-query"
-    - "https://8.8.8.8/dns-query"
+    - 'https://1.1.1.1/dns-query'
+    - 'https://8.8.8.8/dns-query'
+    - 'https://9.9.9.9/dns-query'
+
   proxy-server-nameserver:
-    - "https://120.53.53.53/dns-query"
-    - "https://223.5.5.5/dns-query"
+    - 'https://dns.nextdns.io'
+  
+  bootstrap:
+    - 'https://1.1.1.1/dns-query'
+    - 'https://8.8.8.8/dns-query'
+
+  fallback:
+    - 'https://dns.nextdns.io'
+    - 'https://dns.quad9.net/dns-query'
+  
   nameserver-policy:
     "rule-set:cn_domain,private_domain":
-      - "https://doh.pub/dns-query"
-      - "https://dns.alidns.com/dns-query"
-      - "https://120.53.53.53/dns-query"
-      - "https://223.5.5.5/dns-query"
+      - 'https://doh.pub/dns-query'
+      - 'https://dns.alidns.com/dns-query'
+      - 'https://223.5.5.5/dns-query'
+      - 'https://120.53.53.53/dns-query'
     "rule-set:geolocation-!cn":
-      - "https://dns.cloudflare.com/dns-query"
-      - "https://dns.google/dns-query"
+      - 'https://1.1.1.1/dns-query'
+      - 'https://8.8.8.8/dns-query'
+rnal-controller: 0.0.0.0:9090
 
 proxies:
   - {"name":"中转节点-38.1MB/s_1_1","type":"vmess","server":"183.240.253.26","port":30565,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
@@ -2173,7 +2180,8 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
+    tolerance: 20
+    timeout: 3
     proxies:
       - 中转节点-38.1MB/s_1_1
       - 中转节点-95.5MB/s_2_2
@@ -4309,8 +4317,9 @@ proxy-groups:
   - name: 🇭🇰 香港节点
     type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 50
+    interval: 300
+    tolerance: 20
+    timeout: 3
     proxies:
       - 香港-1.16MB/s_10_10
       - 香港-62.1MB/s_25_25
@@ -4329,8 +4338,9 @@ proxy-groups:
   - name: 🇯🇵 日本节点
     type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 50
+    interval: 300
+    tolerance: 20
+    timeout: 3
     proxies:
       - 日本-360.9KB/s_85_85
       - 日本-54.5MB/s_90_90
@@ -4407,8 +4417,9 @@ proxy-groups:
   - name: 🇸🇬 狮城节点
     type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 50
+    interval: 300
+    tolerance: 20
+    timeout: 3
     proxies:
       - 新加坡-4.10MB/s_84_84
       - 新加坡-335.0KB/s_1_615_615
@@ -4419,8 +4430,9 @@ proxy-groups:
   - name: 🇺🇲 美国节点
     type: url-test
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 50
+    interval: 300
+    tolerance: 20
+    timeout: 3
     proxies:
       - 美国-1.8MB/s_4_4
       - 美国-4.72MB/s_8_8
