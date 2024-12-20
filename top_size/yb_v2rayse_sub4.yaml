@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-19 15:36:38
+# 创建时间：2024-12-20 19:58:32
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1057
 # 节点类型：vmess, trojan
@@ -13,39 +13,45 @@ external-controller: 0.0.0.0:9090
 dns:
   enable: true
   ipv6: false
-  listen: '127.0.0.1:53'
+  listen: 127.0.0.1:1053
+  use-hosts: true
+  use-system-hosts: false
+  respect-rules: true
   enhanced-mode: fake-ip
   fake-ip-range: '198.18.0.1/16'
   fake-ip-filter:
-    - "+.lan"
-    - "+.local"
-    - "+.market.xiaomi.com"
-  
+    - '*.lan'
+    - '*.local'
+    - '*.market.xiaomi.com'
   nameserver:
-    - 'https://84.200.69.80/dns-query'
-    - 'https://185.228.168.168/dns-query'
-    - 'https://9.9.9.9/dns-query'
-
+    - tls://1.1.1.1         # Cloudflare DNS over TLS
+    - tls://8.8.8.8         # Google DNS over TLS
+    - https://doh.pub/dns-query # DNS over HTTPS
   proxy-server-nameserver:
-    - 'https://dns.nextdns.io'
-  
-  bootstrap:
-    - 'https://84.200.69.80/dns-query'
-    - 'https://185.228.168.168/dns-query'
-
+    - tls://1.1.1.1
+    - tls://8.8.8.8
   fallback:
-    - 'https://dns.nextdns.io'
-    - 'https://dns.quad9.net/dns-query'
-  
+    - tls://119.29.29.29    # 国内某些 DNS
+    - tls://180.76.76.76    # 百度 DNS
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    geosite:
+      - gfw
+    ipcidr:
+      - 240.0.0.0/4
+    domain:
+      - '+.google.com'
+      - '+.youtube.com'
   nameserver-policy:
-    "rule-set:cn_domain,private_domain":
-      - 'https://doh.pub/dns-query'
-      - 'https://dns.alidns.com/dns-query'
-      - 'https://223.5.5.5/dns-query'
-      - 'https://120.53.53.53/dns-query'
-    "rule-set:geolocation-!cn":
-      - 'https://84.200.69.80/dns-query'
-      - 'https://185.228.168.168/dns-query'
+    "rule-set:cn_domain":
+      - tls://119.29.29.29  # 针对 CN 域名的 DNS
+    "rule-set:geolocation-!cn": # 非中国地区域名的 DNS
+      - tls://1.1.1.1
+      - tls://8.8.8.8 
+    "rule-set:all": # 默认所有其他请求使用的 DNS
+      - tls://1.1.1.1
+      - tls://8.8.8.8
 
 proxies:
   - {"name":"中转节点-38.1MB/s_1_1","type":"vmess","server":"183.240.253.26","port":30565,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
@@ -1109,7 +1115,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - ♻️ 自动选择
+      - 🔯 故障转移
       - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
       - 🇺🇲 美国节点
@@ -2176,12 +2182,10 @@ proxy-groups:
       - 荷兰-194.2KB/s_1055_1055
       - 美国-745.8KB/s_1056_1056
       - 中转节点-35.5MB/s_1057_1057
-  - name: ♻️ 自动选择
-    type: url-test
+  - name: 🔯 故障转移
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 20
-    timeout: 3
+    interval: 360
     proxies:
       - 中转节点-38.1MB/s_1_1
       - 中转节点-95.5MB/s_2_2
@@ -3245,7 +3249,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - ♻️ 自动选择
+      - 🔯 故障转移
   - name: 🛑 全球拦截
     type: select
     proxies:
@@ -3256,7 +3260,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ♻️ 自动选择
+      - 🔯 故障转移
       - 中转节点-38.1MB/s_1_1
       - 中转节点-95.5MB/s_2_2
       - 中转节点-30.7MB/s_3_3
@@ -4315,11 +4319,9 @@ proxy-groups:
       - 美国-745.8KB/s_1056_1056
       - 中转节点-35.5MB/s_1057_1057
   - name: 🇭🇰 香港节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 20
-    timeout: 3
+    interval: 360
     proxies:
       - 香港-1.16MB/s_10_10
       - 香港-62.1MB/s_25_25
@@ -4336,11 +4338,9 @@ proxy-groups:
       - 香港-1.16MB/s_1006_1006
       - 香港-62.1MB/s_1016_1016
   - name: 🇯🇵 日本节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 20
-    timeout: 3
+    interval: 360
     proxies:
       - 日本-360.9KB/s_85_85
       - 日本-54.5MB/s_90_90
@@ -4415,11 +4415,9 @@ proxy-groups:
       - 日本-360.9KB/s_1048_1048
       - 日本-54.5MB/s_1052_1052
   - name: 🇸🇬 狮城节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 20
-    timeout: 3
+    interval: 360
     proxies:
       - 新加坡-4.10MB/s_84_84
       - 新加坡-335.0KB/s_1_615_615
@@ -4428,11 +4426,9 @@ proxy-groups:
       - 新加坡-333.9KB/s_1_626_626
       - 新加坡-333.9KB/s_2_630_630
   - name: 🇺🇲 美国节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 20
-    timeout: 3
+    interval: 360
     proxies:
       - 美国-1.8MB/s_4_4
       - 美国-4.72MB/s_8_8
@@ -7360,6 +7356,12 @@ rules:
   - DOMAIN-SUFFIX,ocnttv.com,🚀 节点选择
   - DOMAIN-SUFFIX,vikacg.com,🚀 节点选择
   - DOMAIN-SUFFIX,picjs.xyz,🚀 节点选择
+  - DOMAIN-SUFFIX,local,DIRECT # 本地请求直接
+  - DOMAIN-SUFFIX,cloudflare-dns.com,PROXY # 指定使用代理
+  - DOMAIN-SUFFIX,google.com,PROXY # 直接走代理
+  - DOMAIN-SUFFIX,youtube.com,PROXY # 直接走代理
+  - GEOIP,CN,DIRECT # 国内流量直连
+  - MATCH,PROXY # 其他请求走代理
 # 直连列表
 # MyList
 # CN域名直连(中国|公司|网络)
