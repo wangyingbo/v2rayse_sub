@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-20 12:04:36
+# 创建时间：2024-12-20 16:04:26
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1057
 # 节点类型：vmess, trojan
@@ -9,39 +9,27 @@
 mixed-port: 7890
 allow-lan: false
 log-level: silent
-external-controller: 127.0.0.1:9090
+external-controller: 0.0.0.0:9090
 dns:
   enable: true
-  prefer-h3: false
-  use-hosts: true
-  use-system-hosts: false  # 禁用系统级 Hosts 文件
-  respect-rules: true  # 启用规则优先
-  listen: 127.0.0.1:1053  # 仅限本机访问
   ipv6: false
-  default-nameserver:
-    - 223.5.5.5
+  listen: 127.0.0.1:1053
+  use-hosts: true
+  use-system-hosts: false
+  respect-rules: true
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter-mode: blacklist
+  fake-ip-range: '198.18.0.1/16'
   fake-ip-filter:
     - '*.lan'
     - '*.local'
-  nameserver-policy:
-    '+.arpa': '10.0.0.1'
-    'rule-set:cn':
-      - https://doh.pub/dns-query
-      - https://dns.alidns.com/dns-query
+    - '*.market.xiaomi.com'
   nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-  fallback:
-    - tls://8.8.4.4
     - tls://1.1.1.1
-  proxy-server-nameserver:
+    - tls://8.8.8.8
     - https://doh.pub/dns-query
-  direct-nameserver:
-    - system
-  direct-nameserver-follow-policy: false
+  proxy-server-nameserver:
+    - tls://1.1.1.1
+    - tls://8.8.8.8
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -51,8 +39,13 @@ dns:
       - 240.0.0.0/4
     domain:
       - '+.google.com'
-      - '+.facebook.com'
       - '+.youtube.com'
+  nameserver-policy:
+    "rule-set:cn_domain":
+      - tls://119.29.29.29
+    "rule-set:geolocation-!cn":
+      - tls://1.1.1.1
+      - tls://8.8.8.8
 
 proxies:
   - {"name":"中转节点-38.1MB/s_1_1","type":"vmess","server":"183.240.253.26","port":30565,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
@@ -1116,7 +1109,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - ♻️ 自动选择
+      - 🔯 故障转移
       - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
       - 🇺🇲 美国节点
@@ -2183,11 +2176,10 @@ proxy-groups:
       - 荷兰-194.2KB/s_1055_1055
       - 美国-745.8KB/s_1056_1056
       - 中转节点-35.5MB/s_1057_1057
-  - name: ♻️ 自动选择
-    type: url-test
+  - name: 🔯 故障转移
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 50
+    interval: 360
     proxies:
       - 中转节点-38.1MB/s_1_1
       - 中转节点-95.5MB/s_2_2
@@ -3251,7 +3243,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - ♻️ 自动选择
+      - 🔯 故障转移
   - name: 🛑 全球拦截
     type: select
     proxies:
@@ -3262,7 +3254,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ♻️ 自动选择
+      - 🔯 故障转移
       - 中转节点-38.1MB/s_1_1
       - 中转节点-95.5MB/s_2_2
       - 中转节点-30.7MB/s_3_3
@@ -4321,10 +4313,9 @@ proxy-groups:
       - 美国-745.8KB/s_1056_1056
       - 中转节点-35.5MB/s_1057_1057
   - name: 🇭🇰 香港节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 428
-    tolerance: 50
+    interval: 360
     proxies:
       - 香港-1.16MB/s_10_10
       - 香港-62.1MB/s_25_25
@@ -4341,10 +4332,9 @@ proxy-groups:
       - 香港-1.16MB/s_1006_1006
       - 香港-62.1MB/s_1016_1016
   - name: 🇯🇵 日本节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 50
+    interval: 360
     proxies:
       - 日本-360.9KB/s_85_85
       - 日本-54.5MB/s_90_90
@@ -4419,10 +4409,9 @@ proxy-groups:
       - 日本-360.9KB/s_1048_1048
       - 日本-54.5MB/s_1052_1052
   - name: 🇸🇬 狮城节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 50
+    interval: 360
     proxies:
       - 新加坡-4.10MB/s_84_84
       - 新加坡-335.0KB/s_1_615_615
@@ -4431,10 +4420,9 @@ proxy-groups:
       - 新加坡-333.9KB/s_1_626_626
       - 新加坡-333.9KB/s_2_630_630
   - name: 🇺🇲 美国节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 420
-    tolerance: 50
+    interval: 360
     proxies:
       - 美国-1.8MB/s_4_4
       - 美国-4.72MB/s_8_8
