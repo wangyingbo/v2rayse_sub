@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-12-20 19:58:32
+# 创建时间：2024-12-21 17:38:57
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1057
 # 节点类型：vmess, trojan
@@ -9,7 +9,7 @@
 mixed-port: 7890
 allow-lan: false
 log-level: silent
-external-controller: 0.0.0.0:9090
+external-controller: 127.0.0.1:9090
 dns:
   enable: true
   ipv6: false
@@ -24,15 +24,13 @@ dns:
     - '*.local'
     - '*.market.xiaomi.com'
   nameserver:
-    - tls://1.1.1.1         # Cloudflare DNS over TLS
-    - tls://8.8.8.8         # Google DNS over TLS
-    - https://doh.pub/dns-query # DNS over HTTPS
+    - tls://1.1.1.1
+    - tls://8.8.8.8
+    - https://doh.pub/dns-query
+    - tls://dns.riseup.net
   proxy-server-nameserver:
     - tls://1.1.1.1
     - tls://8.8.8.8
-  fallback:
-    - tls://119.29.29.29    # 国内某些 DNS
-    - tls://180.76.76.76    # 百度 DNS
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -43,13 +41,14 @@ dns:
     domain:
       - '+.google.com'
       - '+.youtube.com'
+      - '+.example.com'
   nameserver-policy:
     "rule-set:cn_domain":
-      - tls://119.29.29.29  # 针对 CN 域名的 DNS
-    "rule-set:geolocation-!cn": # 非中国地区域名的 DNS
+      - tls://119.29.29.29
+    "rule-set:geolocation-!cn":
       - tls://1.1.1.1
-      - tls://8.8.8.8 
-    "rule-set:all": # 默认所有其他请求使用的 DNS
+      - tls://8.8.8.8
+    "rule-set:all":
       - tls://1.1.1.1
       - tls://8.8.8.8
 
@@ -4654,12 +4653,6 @@ proxy-groups:
       - 美国-745.8KB/s_1056_1056
 
 rules:
-  - DOMAIN-SUFFIX,local,DIRECT # 本地请求直接
-  - DOMAIN-SUFFIX,cloudflare-dns.com,PROXY # 指定使用代理
-  - DOMAIN-SUFFIX,google.com,PROXY # 直接走代理
-  - DOMAIN-SUFFIX,youtube.com,PROXY # 直接走代理
-  - GEOIP,CN,DIRECT # 国内流量直连
-  - MATCH,PROXY # 其他请求走代理
 # 本地/局域网地址
 # 参考：https://en.wikipedia.org/wiki/Reserved_IP_addresses
 # ACL4SSR标志 如没有，代表不是用ACL4SSR规则
