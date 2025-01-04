@@ -1,47 +1,89 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-01-03 13:08:08
+# 创建时间：2025-01-03 13:06:54
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
-# 节点数量：912
+# 节点数量：928
 # 节点类型：trojan, vmess
 ####################################
 mixed-port: 7890
-allow-lan: false
-log-level: silent
-external-controller: 127.0.0.1:9090
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
 dns:
-  enable: true
-  ipv6: false
-  listen: 127.0.0.1:1053
-  use-hosts: true
-  use-system-hosts: false
-  respect-rules: true
+  enabled: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
   enhanced-mode: fake-ip
-  fake-ip-range: '198.19.0.1/24'
+  fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - '*.lan'
-    - '*.local'
-    - '*.market.xiaomi.com'
-    - '*.example.com'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - swscan.apple.com
+    - mesu.apple.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - +.music.163.com
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - +.y.qq.com
+    - +.music.tc.qq.com
+    - aqqmusic.tc.qq.com
+    - +.stream.qqmusic.qq.com
+    - '*.xiami.com'
+    - +.music.migu.cn
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - +.xboxlive.com
+    - localhost.ptlogin2.qq.com
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '*.mcdn.bilivideo.cn'
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
-  proxy-server-nameserver:
-    - https://1.1.1.1/dns-query
-  cache-size: 4096
-  dns-timeout:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-      - gfw
-  nameserver-policy:
-    "rule-set:cn_domain":
-      - tls://119.29.29.29
-    "rule-set:geolocation-!cn":
-      - https://1.1.1.1/dns-query
-      - https://8.8.8.8/dns-query
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
 
 proxies:
   - {"name":"🇺🇸+www.85la.com+美国+01","type":"trojan","server":"104.219.41.229","port":443,"udp":true,"password":"Julius","sni":"miami.juliusnet.com","skip-cert-verify":true,"network":"tcp"}
@@ -865,7 +907,7 @@ proxies:
   - {"name":"未知国家-170.1KB/s","type":"vmess","server":"162.159.45.194","port":2086,"cipher":"auto","uuid":"7d92ffc9-02e1-4087-8a46-cc4d76560917","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
   - {"name":"未知国家-341.8KB/s","type":"vmess","server":"104.18.114.181","port":2086,"cipher":"auto","uuid":"7d92ffc9-02e1-4087-8a46-cc4d76560917","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
   - {"name":"美国-768.7KB/s","type":"vmess","server":"172.64.166.33","port":2095,"cipher":"auto","uuid":"18d96190-c10f-448f-a82a-2d36df5c3cde","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
-  - {"name":"美国-2.27MB/s","type":"vmess","server":"142.0.134.241","port":45017,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国-2.27MB/s_1","type":"vmess","server":"142.0.134.241","port":45017,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"法国-20.4MB/s","type":"vmess","server":"57.129.25.20","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
   - {"name":"罗马尼亚-844.6KB/s_2","type":"vmess","server":"45.85.119.170","port":2082,"cipher":"auto","uuid":"5f3f09ad-89cb-4e94-a7ad-aa8239913555","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
   - {"name":"俄罗斯联邦-885.2KB/s_2","type":"vmess","server":"45.8.211.242","port":2082,"cipher":"auto","uuid":"5f3f09ad-89cb-4e94-a7ad-aa8239913555","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
@@ -956,6 +998,22 @@ proxies:
   - {"name":"未知国家-5.41MB/s_2","type":"vmess","server":"104.16.61.8","port":8880,"cipher":"auto","uuid":"f584de15-2034-4170-a723-f48c2bae5e0f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
   - {"name":"美国-1.87MB/s_2","type":"vmess","server":"198.2.218.108","port":41400,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
   - {"name":"伊朗-1.29MB/s_2","type":"vmess","server":"185.29.223.164","port":32718,"cipher":"auto","uuid":"c398fa1f-fac5-4d76-9452-f0aee44cbc66","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"印度-13.8MB/s","type":"vmess","server":"3.111.155.29","port":443,"cipher":"auto","uuid":"60c0bbfa-c54f-49a9-81ba-779b0206a9fd","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ylks","headers":{"host":"nl.zhuk.us.kg"}}}
+  - {"name":"德国-2.15MB/s","type":"vmess","server":"frankfurt03.zgjok.com","port":443,"cipher":"auto","uuid":"4f7c2243-a38a-4672-983b-f1378aee0a7f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"frankfurt03.zgjok.com"}}}
+  - {"name":"美国-2.27MB/s_2","type":"vmess","server":"gs09.guoshi1520.com","port":443,"cipher":"auto","uuid":"681e76bc-c19e-4614-ca47-95ba2253a5a3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/681e76bc","headers":{"host":"gs09.guoshi1520.com"}}}
+  - {"name":"美国-2.46MB/s","type":"vmess","server":"mlq001.facai2024.com","port":443,"cipher":"auto","uuid":"d86de5d5-1114-4685-999a-75fca2b6f964","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/d86de5d5","headers":{"host":"mlq001.facai2024.com"}}}
+  - {"name":"美国-21.5MB/s","type":"vmess","server":"mlq001.facai2024.com","port":443,"cipher":"auto","uuid":"d86de5d5-1114-4685-999a-75fca2b6f964","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/d86de5d5","headers":{"host":"mlq001.facai2024.com"}}}
+  - {"name":"法国-37.7MB/s","type":"vmess","server":"146.59.55.50","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
+  - {"name":"英国-3.46MB/s_1","type":"vmess","server":"149.7.16.188","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
+  - {"name":"英国-3.46MB/s_2","type":"vmess","server":"149.7.16.188","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
+  - {"name":"德国-2.21MB/s","type":"vmess","server":"frankfurt03.zgjok.com","port":443,"cipher":"auto","uuid":"4f7c2243-a38a-4672-983b-f1378aee0a7f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"frankfurt03.zgjok.com"}}}
+  - {"name":"瑞典-4.06MB/s","type":"trojan","server":"13.50.254.223","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"英国-23.2MB/s","type":"vmess","server":"149.7.16.188","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
+  - {"name":"荷兰-2.16MB/s","type":"vmess","server":"45.131.7.95","port":8080,"cipher":"auto","uuid":"2a4fa40f-97f4-4ea9-b959-b148c4197d15","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"luodi.davesuen.store"}}}
+  - {"name":"英国-40.2MB/s","type":"vmess","server":"149.7.16.188","port":443,"cipher":"auto","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
+  - {"name":"卢森堡-3.68MB/s","type":"trojan","server":"discrete-moccasin.boa152.lol","port":443,"udp":true,"password":"3723507166611775488","sni":"discrete-moccasin.boa152.lol","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"捷克-4.19MB/s","type":"trojan","server":"social-bream.boa152.lol","port":443,"udp":true,"password":"3723507166611775488","sni":"social-bream.boa152.lol","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"中转节点-8.59MB/s","type":"vmess","server":"yes.mojcn.com","port":16618,"cipher":"auto","uuid":"5586eb05-1e5c-4b27-a276-86311547b95e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"ffd09e29d76243d0d6b0b7e5cb077bb0.mobgslb.tbcache.com"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1791,7 +1849,7 @@ proxy-groups:
       - 未知国家-170.1KB/s
       - 未知国家-341.8KB/s
       - 美国-768.7KB/s
-      - 美国-2.27MB/s
+      - 美国-2.27MB/s_1
       - 法国-20.4MB/s
       - 罗马尼亚-844.6KB/s_2
       - 俄罗斯联邦-885.2KB/s_2
@@ -1882,12 +1940,27 @@ proxy-groups:
       - 未知国家-5.41MB/s_2
       - 美国-1.87MB/s_2
       - 伊朗-1.29MB/s_2
+      - 印度-13.8MB/s
+      - 德国-2.15MB/s
+      - 美国-2.27MB/s_2
+      - 美国-2.46MB/s
+      - 美国-21.5MB/s
+      - 法国-37.7MB/s
+      - 英国-3.46MB/s_1
+      - 英国-3.46MB/s_2
+      - 德国-2.21MB/s
+      - 瑞典-4.06MB/s
+      - 英国-23.2MB/s
+      - 荷兰-2.16MB/s
+      - 英国-40.2MB/s
+      - 卢森堡-3.68MB/s
+      - 捷克-4.19MB/s
+      - 中转节点-8.59MB/s
   - name: ♻️ 自动选择
     type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 360
-    tolerance: 100
-    disable-udp: true
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
     proxies:
       - 🇺🇸+www.85la.com+美国+01
       - 🇺🇸+www.85la.com+美国+02_1
@@ -2710,7 +2783,7 @@ proxy-groups:
       - 未知国家-170.1KB/s
       - 未知国家-341.8KB/s
       - 美国-768.7KB/s
-      - 美国-2.27MB/s
+      - 美国-2.27MB/s_1
       - 法国-20.4MB/s
       - 罗马尼亚-844.6KB/s_2
       - 俄罗斯联邦-885.2KB/s_2
@@ -2801,6 +2874,22 @@ proxy-groups:
       - 未知国家-5.41MB/s_2
       - 美国-1.87MB/s_2
       - 伊朗-1.29MB/s_2
+      - 印度-13.8MB/s
+      - 德国-2.15MB/s
+      - 美国-2.27MB/s_2
+      - 美国-2.46MB/s
+      - 美国-21.5MB/s
+      - 法国-37.7MB/s
+      - 英国-3.46MB/s_1
+      - 英国-3.46MB/s_2
+      - 德国-2.21MB/s
+      - 瑞典-4.06MB/s
+      - 英国-23.2MB/s
+      - 荷兰-2.16MB/s
+      - 英国-40.2MB/s
+      - 卢森堡-3.68MB/s
+      - 捷克-4.19MB/s
+      - 中转节点-8.59MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -3639,7 +3728,7 @@ proxy-groups:
       - 未知国家-170.1KB/s
       - 未知国家-341.8KB/s
       - 美国-768.7KB/s
-      - 美国-2.27MB/s
+      - 美国-2.27MB/s_1
       - 法国-20.4MB/s
       - 罗马尼亚-844.6KB/s_2
       - 俄罗斯联邦-885.2KB/s_2
@@ -3730,12 +3819,27 @@ proxy-groups:
       - 未知国家-5.41MB/s_2
       - 美国-1.87MB/s_2
       - 伊朗-1.29MB/s_2
+      - 印度-13.8MB/s
+      - 德国-2.15MB/s
+      - 美国-2.27MB/s_2
+      - 美国-2.46MB/s
+      - 美国-21.5MB/s
+      - 法国-37.7MB/s
+      - 英国-3.46MB/s_1
+      - 英国-3.46MB/s_2
+      - 德国-2.21MB/s
+      - 瑞典-4.06MB/s
+      - 英国-23.2MB/s
+      - 荷兰-2.16MB/s
+      - 英国-40.2MB/s
+      - 卢森堡-3.68MB/s
+      - 捷克-4.19MB/s
+      - 中转节点-8.59MB/s
   - name: 🇭🇰 香港节点
     type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 360
-    tolerance: 100
-    disable-udp: true
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
     proxies:
       - 🇭🇰+www.85la.com+香港+01
       - 🇭🇰 www.85la.com 香港 55
@@ -3759,10 +3863,9 @@ proxy-groups:
       - 香港-6.28MB/s_2
   - name: 🇯🇵 日本节点
     type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 360
-    tolerance: 100
-    disable-udp: true
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
     proxies:
       - 🇯🇵+www.85la.com+日本+01_1
       - 🇯🇵+www.85la.com+日本+02
@@ -3821,10 +3924,9 @@ proxy-groups:
       - 🇯🇵+www.85la.com+日本+87
   - name: 🇸🇬 狮城节点
     type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 360
-    tolerance: 100
-    disable-udp: true
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
     proxies:
       - 🇸🇬+www.85la.com+新加坡+01
       - 🇸🇬+www.85la.com+新加坡+02_1
@@ -3894,10 +3996,9 @@ proxy-groups:
       - 新加坡-268.3KB/s
   - name: 🇺🇲 美国节点
     type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 360
-    tolerance: 100
-    disable-udp: true
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
     proxies:
       - 🇺🇸+www.85la.com+美国+01
       - 🇺🇸+www.85la.com+美国+02_1
@@ -4154,7 +4255,7 @@ proxy-groups:
       - 美国-37.6MB/s
       - 美国-319.3KB/s
       - 美国-768.7KB/s
-      - 美国-2.27MB/s
+      - 美国-2.27MB/s_1
       - 美国-1.54MB/s_2
       - 美国-4.87MB/s_2
       - 美国-4.74MB/s
@@ -4165,6 +4266,9 @@ proxy-groups:
       - 美国-8.5MB/s_2
       - 美国-3.96MB/s
       - 美国-1.87MB/s_2
+      - 美国-2.27MB/s_2
+      - 美国-2.46MB/s
+      - 美国-21.5MB/s
 
 rules:
 # 本地/局域网地址
