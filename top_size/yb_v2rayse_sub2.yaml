@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-01-04 18:55:56
+# 创建时间：2025-01-05 10:56:53
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1017
 # 节点类型：trojan, vmess
@@ -23,14 +23,13 @@ dns:
     - '*.lan'
     - '*.local'
     - '*.market.xiaomi.com'
-    - '*.example.com'
   nameserver:
     - https://1.1.1.1/dns-query
     - https://8.8.8.8/dns-query
   proxy-server-nameserver:
     - https://1.1.1.1/dns-query
   cache-size: 4096
-  dns-timeout:
+  dns-timeout: 5
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -7306,6 +7305,10 @@ rules:
   - DOMAIN-SUFFIX,ocnttv.com,🚀 节点选择
   - DOMAIN-SUFFIX,vikacg.com,🚀 节点选择
   - DOMAIN-SUFFIX,picjs.xyz,🚀 节点选择
+  - IP-CIDR,8.8.8.8/32,Proxy
+  - IP-CIDR,1.1.1.1/32,Proxy
+  - DOMAIN-SUFFIX,.dns.google,Proxy
+  - DOMAIN-SUFFIX,.cloudflare-dns.com,Proxy
 # 直连列表
 # MyList
 # CN域名直连(中国|公司|网络)
