@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-01-05 15:14:03
+# 创建时间：2025-01-05 23:06:41
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：1017
 # 节点类型：trojan, vmess
@@ -20,8 +20,8 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: '198.19.0.1/24'
   fake-ip-filter:
-    - '*.lan' 
-    - '*.local' 
+    - '*.lan'
+    - '*.local'
     - '*.market.xiaomi.com'
     - '*.example.com'
   nameserver:
@@ -29,8 +29,8 @@ dns:
     - https://8.8.8.8/dns-query
   proxy-server-nameserver:
     - https://1.1.1.1/dns-query
-  cache-size: 8192
-  dns-timeout: 5
+  cache-size: 4096
+  dns-timeout:
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -42,13 +42,6 @@ dns:
     "rule-set:geolocation-!cn":
       - https://1.1.1.1/dns-query
       - https://8.8.8.8/dns-query
-    "rule-set:example.com":
-      - https://8.8.8.8/dns-query
-  geolocation:
-    - country: "CN"
-      nameserver: "https://119.29.29.29/dns-query"
-    - country: "US"
-      nameserver: "https://1.1.1.1/dns-query"
 
 proxies:
   - {"name":"🇺🇸+www.85la.com+美国+01","type":"trojan","server":"104.219.41.229","port":443,"udp":true,"password":"Julius","sni":"miami.juliusnet.com","skip-cert-verify":true,"network":"tcp"}
@@ -2103,7 +2096,7 @@ proxy-groups:
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
+    tolerance: 100
     disable-udp: true
     proxies:
       - 🇺🇸+www.85la.com+美国+01
@@ -4158,10 +4151,9 @@ proxy-groups:
       - 法国-51.6MB/s
       - 英国-16.1MB/s
   - name: 🇭🇰 香港节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 428
-    tolerance: 50
+    interval: 420
     disable-udp: true
     proxies:
       - 🇭🇰+www.85la.com+香港+01
@@ -4189,10 +4181,9 @@ proxy-groups:
       - 香港-6.28MB/s
       - 香港-341.5KB/s
   - name: 🇯🇵 日本节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
     disable-udp: true
     proxies:
       - 🇯🇵+www.85la.com+日本+01_1
@@ -4251,10 +4242,9 @@ proxy-groups:
       - 🇯🇵+www.85la.com+日本+86
       - 🇯🇵+www.85la.com+日本+87
   - name: 🇸🇬 狮城节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
     disable-udp: true
     proxies:
       - 🇸🇬+www.85la.com+新加坡+01
@@ -4325,10 +4315,9 @@ proxy-groups:
       - 新加坡-268.3KB/s_1
       - 新加坡-268.3KB/s_2
   - name: 🇺🇲 美国节点
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 420
-    tolerance: 50
     disable-udp: true
     proxies:
       - 🇺🇸+www.85la.com+美国+01
