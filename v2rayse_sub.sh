@@ -129,7 +129,7 @@ cp ${top_folder_path}/${sub_file_name} $__ybpwd__/${top_folder_name}/${sub_file_
 echo "\n"
 
 # 清理临时目录
-# rm -rf "$temp_dir"
+rm -rf "$temp_dir"
 
 # 回到工作目录
 cd $__ybpwd__
