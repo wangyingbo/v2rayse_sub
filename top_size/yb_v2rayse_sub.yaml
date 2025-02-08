@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-02-07 20:12:17
+# 创建时间：2025-02-08 13:51:42
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：233
 # 节点类型：ss, trojan
@@ -553,6 +553,8 @@ proxy-groups:
       - 中转节点-202.2KB/s
   - interval: 300
     name: ♻ 自动选择
+    timeout: 1500
+    max-failed-times: 1
     proxies: &id001
       - 以色列-87.4MB/s
       - 中转节点-14.6MB/s
@@ -794,7 +796,7 @@ proxy-groups:
     proxies: *id001
     tolerance: 20
     timeout: 1500
-    max-failed-times: 2
+    max-failed-times: 1
     type: url-test
     url: https://www.gstatic.com/generate_204
   - name: 🎯 全球直连
@@ -1054,7 +1056,7 @@ proxy-groups:
     interval: 300
     tolerance: 20
     timeout: 1500
-    max-failed-times: 2
+    max-failed-times: 1
     proxies:
       - 香港-2.94MB/s
       - 香港-2.07MB/s
@@ -1069,7 +1071,7 @@ proxy-groups:
     interval: 300
     tolerance: 20
     timeout: 1500
-    max-failed-times: 2
+    max-failed-times: 1
     proxies:
       - 日本-83.0MB/s
       - 日本-13.6MB/s
@@ -1087,7 +1089,7 @@ proxy-groups:
     interval: 300
     tolerance: 20
     timeout: 1500
-    max-failed-times: 2
+    max-failed-times: 1
     proxies:
       - 新加坡-165.7KB/s
       - 新加坡-337.4KB/s
@@ -1109,11 +1111,9 @@ proxy-groups:
       - 新加坡-14.4MB/s
   - name: 🇺🇲 美国节点
     type: url-test
-    url: https://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 20
-    timeout: 1500
-    max-failed-times: 2
+    tolerance: 50
     proxies:
       - 美国-3.41MB/s
       - 美国-1.14MB/s
