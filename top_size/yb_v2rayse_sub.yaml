@@ -7,83 +7,41 @@
 # 节点类型：trojan, ss, vmess
 ####################################
 mixed-port: 7890
-allow-lan: true
-log-level: info
-external-controller: 0.0.0.0:9090
+allow-lan: false
+log-level: silent
+external-controller: 127.0.0.1:9090
 dns:
-  enabled: true
-  listen: 0.0.0.0:1053
-  ipv6: true
-  default-nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
+  enable: true
+  ipv6: false
+  listen: 127.0.0.1:1053
+  use-hosts: true
+  use-system-hosts: false
+  respect-rules: true
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
+  fake-ip-range: '198.19.0.1/24'
   fake-ip-filter:
     - '*.lan'
-    - '*.linksys.com'
-    - '*.linksyssmartwifi.com'
-    - swscan.apple.com
-    - mesu.apple.com
-    - '*.msftconnecttest.com'
-    - '*.msftncsi.com'
-    - time.*.com
-    - time.*.gov
-    - time.*.edu.cn
-    - time.*.apple.com
-    - time1.*.com
-    - time2.*.com
-    - time3.*.com
-    - time4.*.com
-    - time5.*.com
-    - time6.*.com
-    - time7.*.com
-    - ntp.*.com
-    - ntp.*.com
-    - ntp1.*.com
-    - ntp2.*.com
-    - ntp3.*.com
-    - ntp4.*.com
-    - ntp5.*.com
-    - ntp6.*.com
-    - ntp7.*.com
-    - '*.time.edu.cn'
-    - '*.ntp.org.cn'
-    - +.pool.ntp.org
-    - time1.cloud.tencent.com
-    - +.music.163.com
-    - '*.126.net'
-    - musicapi.taihe.com
-    - music.taihe.com
-    - songsearch.kugou.com
-    - trackercdn.kugou.com
-    - '*.kuwo.cn'
-    - api-jooxtt.sanook.com
-    - api.joox.com
-    - joox.com
-    - +.y.qq.com
-    - +.music.tc.qq.com
-    - aqqmusic.tc.qq.com
-    - +.stream.qqmusic.qq.com
-    - '*.xiami.com'
-    - +.music.migu.cn
-    - +.srv.nintendo.net
-    - +.stun.playstation.net
-    - xbox.*.microsoft.com
-    - +.xboxlive.com
-    - localhost.ptlogin2.qq.com
-    - proxy.golang.org
-    - stun.*.*
-    - stun.*.*.*
-    - '*.mcdn.bilivideo.cn'
+    - '*.local'
+    - '*.market.xiaomi.com'
+    - '*.example.com'
   nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+  proxy-server-nameserver:
+    - https://1.1.1.1/dns-query
+  cache-size: 4096
+  dns-timeout:
   fallback-filter:
-    geoip: false
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
+    geoip: true
+    geoip-code: CN
+    geosite:
+      - gfw
+  nameserver-policy:
+    "rule-set:cn_domain":
+      - tls://119.29.29.29
+    "rule-set:geolocation-!cn":
+      - https://1.1.1.1/dns-query
+      - https://8.8.8.8/dns-query
 
 proxies:
   - {"name":"v2cross.com_1","type":"trojan","server":"naiu-other.05vr9nyqg5.download","port":13035,"udp":true,"password":"65f14831-5c67-483f-9e85-f3aa73f21187","sni":"cloudflare.node-ssl.cdn-alibaba.com","skip-cert-verify":true,"network":"tcp"}
@@ -190,6 +148,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
+      - 🔰 延迟最低
       - DIRECT
       - v2cross.com_1
       - v2cross.com_2
@@ -290,12 +249,9 @@ proxy-groups:
       - v2cross.com_97
       - v2cross.com_98
       - v2cross.com_99
-  - name: ♻️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
+  - interval: 300
+    name: ♻️ 自动选择
+    proxies: &id001
       - v2cross.com_1
       - v2cross.com_2
       - v2cross.com_3
@@ -395,12 +351,24 @@ proxy-groups:
       - v2cross.com_97
       - v2cross.com_98
       - v2cross.com_99
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    timeout: 2000
+  - interval: 300
+    name: 🔰 延迟最低
+    proxies: *id001
+    tolerance: 20
+    timeout: 1500
+    max-failed-times: 2
+    type: url-test
+    url: https://www.gstatic.com/generate_204
   - name: 💬 OpenAi
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🔰 延迟最低
       - v2cross.com_1
       - v2cross.com_2
       - v2cross.com_3
@@ -517,6 +485,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🔰 延迟最低
       - v2cross.com_1
       - v2cross.com_2
       - v2cross.com_3
