@@ -46,6 +46,7 @@ rm -rf gist_aggregator; cp -r $source_folder/gist_aggregator gist_aggregator
 rm -rf convert_base64; cp -r $source_folder/convert_base64 convert_base64
 rm -rf v2rayclashnodes; cp -r $source_folder/v2rayclashnodes v2rayclashnodes
 rm -rf myconfig; cp -r $source_folder/myconfig myconfig
+rm -rf clashv2ray-hub_clashfree_sub; cp -r $source_folder/clashv2ray-hub_clashfree_sub clashv2ray-hub_clashfree_sub
 
 echo "\n"
 ./after_push.sh copy_to_gitlab_log.txt
