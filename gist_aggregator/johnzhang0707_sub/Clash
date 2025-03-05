@@ -5,118 +5,62 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: xueyejiasu.com发布地址不迷路, server: hk.kfsldflk.xyz, port: 1200, type: ss, cipher: aes-256-gcm, password: fb41a753-a455-40da-9ef1-2830a469bb7d}
-  - {name: 🇨🇳 台湾 1, server: gy.666666222.shop, port: 20032, type: ss, cipher: chacha20-ietf-poly1305, password: fb41a753-a455-40da-9ef1-2830a469bb7d}
-  - {name: 🇨🇳 台湾01, server: gy.666666222.shop, port: 47564, type: ss, cipher: chacha20-ietf-poly1305, password: fb41a753-a455-40da-9ef1-2830a469bb7d}
-  - {name: 🇭🇰 香港01, server: gy.666666222.shop, port: 34338, type: ss, cipher: chacha20-ietf-poly1305, password: fb41a753-a455-40da-9ef1-2830a469bb7d}
-  - {name: 🇭🇰 香港02, server: gy.666666222.shop, port: 20035, type: ss, cipher: chacha20-ietf-poly1305, password: fb41a753-a455-40da-9ef1-2830a469bb7d}
-  - {name: 🇭🇰 香港03, server: gy.666666222.shop, port: 20052, type: ss, cipher: chacha20-ietf-poly1305, password: fb41a753-a455-40da-9ef1-2830a469bb7d}
-  - {name: 🇯🇵 日本01, server: gy.666666222.shop, port: 20002, type: ss, cipher: chacha20-ietf-poly1305, password: fb41a753-a455-40da-9ef1-2830a469bb7d}
-  - {name: 🇯🇵 日本02, server: gy.666666222.shop, port: 20004, type: ss, cipher: chacha20-ietf-poly1305, password: fb41a753-a455-40da-9ef1-2830a469bb7d}
-  - {name: 🇯🇵 日本03, server: gy.666666222.shop, port: 20006, type: ss, cipher: chacha20-ietf-poly1305, password: fb41a753-a455-40da-9ef1-2830a469bb7d}
-  - {name: 🇯🇵 日本04, server: gy.666666222.shop, port: 20008, type: ss, cipher: chacha20-ietf-poly1305, password: fb41a753-a455-40da-9ef1-2830a469bb7d}
-  - {name: 🇺🇸 美国 纽约01, server: gy.666666222.shop, port: 20013, type: ss, cipher: chacha20-ietf-poly1305, password: fb41a753-a455-40da-9ef1-2830a469bb7d}
-  - {name: 🇺🇸 美国 纽约2, server: gy.666666222.shop, port: 20016, type: ss, cipher: chacha20-ietf-poly1305, password: fb41a753-a455-40da-9ef1-2830a469bb7d}
-  - {name: 🏳️‍🌈 剩余流量：100 GB, server: 1-osaka-p.aboutanime.eu.org, port: 23451, type: vmess, uuid: 74c2f01d-09d9-44e5-98f1-543473647cfa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 1-osaka-p.aboutanime.eu.org}}}
-  - {name: 套餐到期：2025-04-05, server: 1-osaka-p.aboutanime.eu.org, port: 23451, type: vmess, uuid: 74c2f01d-09d9-44e5-98f1-543473647cfa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 1-osaka-p.aboutanime.eu.org}}}
-  - {name: 🇯🇵 日本, server: 1-osaka-p.aboutanime.eu.org, port: 23451, type: vmess, uuid: 74c2f01d-09d9-44e5-98f1-543473647cfa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 1-osaka-p.aboutanime.eu.org}}}
-  - {name: 🇸🇬 新加坡西部（新加坡）, server: westsg2-ddns.oraclenat.cc, port: 23452, type: vmess, uuid: 74c2f01d-09d9-44e5-98f1-543473647cfa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: westsg2-ddns.oraclenat.cc}}}
-  - {name: 🇺🇸 美国, server: shhh001.oraclenat.cc, port: 23451, type: vmess, uuid: 74c2f01d-09d9-44e5-98f1-543473647cfa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shhh001.oraclenat.cc}}}
-  - {name: 🇰🇷 韩国中部（首尔）, server: visa.com, port: 443, type: vmess, uuid: 74c2f01d-09d9-44e5-98f1-543473647cfa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: hanguo.daluquan.top, network: ws, ws-opts: {path: /, headers: {Host: hanguo.daluquan.top}}}
-  - {name: 🇯🇵 日本 2, server: visa.com, port: 443, type: vmess, uuid: 74c2f01d-09d9-44e5-98f1-543473647cfa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: xini.daluquan.top, network: ws, ws-opts: {path: /, headers: {Host: xini.daluquan.top}}}
-  - {name: 🇸🇬 新加坡西部（新加坡） 2, server: visa.com, port: 443, type: vmess, uuid: 74c2f01d-09d9-44e5-98f1-543473647cfa, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: xjp.daluquan.top, network: ws, ws-opts: {path: /, headers: {Host: xjp.daluquan.top}}}
-  - {name: 官网https://www.kuaidog008.top, server: ca-01.daluquan.top, port: 8080, type: vmess, uuid: 74c2f01d-09d9-44e5-98f1-543473647cfa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: ca-01.daluquan.top}}}
-  - {name: 🇩🇪 德国法兰克福, server: frankfurt.faforex.eu.org, port: 23451, type: vmess, uuid: 74c2f01d-09d9-44e5-98f1-543473647cfa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: us-new03.daluquan.top}}}
-  - {name: 🇩🇪 德国, server: visa.com, port: 443, type: vmess, uuid: 74c2f01d-09d9-44e5-98f1-543473647cfa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: go.daluquan.top}}}
-  - {name: 🏳️‍🌈 剩余流量：100 GB 2, server: 1-osaka-p.aboutanime.eu.org, port: 23451, type: vmess, uuid: 2f14a9b7-011b-43cd-bd1a-7f23a2328b1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 1-osaka-p.aboutanime.eu.org}}}
-  - {name: 套餐到期：2025-04-05 2, server: 1-osaka-p.aboutanime.eu.org, port: 23451, type: vmess, uuid: 2f14a9b7-011b-43cd-bd1a-7f23a2328b1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 1-osaka-p.aboutanime.eu.org}}}
-  - {name: 🇯🇵 日本 3, server: 1-osaka-p.aboutanime.eu.org, port: 23451, type: vmess, uuid: 2f14a9b7-011b-43cd-bd1a-7f23a2328b1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 1-osaka-p.aboutanime.eu.org}}}
-  - {name: 🇸🇬 新加坡西部（新加坡） 3, server: westsg2-ddns.oraclenat.cc, port: 23452, type: vmess, uuid: 2f14a9b7-011b-43cd-bd1a-7f23a2328b1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: westsg2-ddns.oraclenat.cc}}}
-  - {name: 🇺🇸 美国 2, server: shhh001.oraclenat.cc, port: 23451, type: vmess, uuid: 2f14a9b7-011b-43cd-bd1a-7f23a2328b1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: shhh001.oraclenat.cc}}}
-  - {name: 🇰🇷 韩国中部（首尔） 2, server: visa.com, port: 443, type: vmess, uuid: 2f14a9b7-011b-43cd-bd1a-7f23a2328b1c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: hanguo.daluquan.top, network: ws, ws-opts: {path: /, headers: {Host: hanguo.daluquan.top}}}
-  - {name: 🇯🇵 日本 4, server: visa.com, port: 443, type: vmess, uuid: 2f14a9b7-011b-43cd-bd1a-7f23a2328b1c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: xini.daluquan.top, network: ws, ws-opts: {path: /, headers: {Host: xini.daluquan.top}}}
-  - {name: 🇸🇬 新加坡西部（新加坡） 4, server: visa.com, port: 443, type: vmess, uuid: 2f14a9b7-011b-43cd-bd1a-7f23a2328b1c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: xjp.daluquan.top, network: ws, ws-opts: {path: /, headers: {Host: xjp.daluquan.top}}}
-  - {name: 官网https://www.kuaidog008.top 2, server: ca-01.daluquan.top, port: 8080, type: vmess, uuid: 2f14a9b7-011b-43cd-bd1a-7f23a2328b1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: ca-01.daluquan.top}}}
-  - {name: 🇩🇪 德国法兰克福 2, server: frankfurt.faforex.eu.org, port: 23451, type: vmess, uuid: 2f14a9b7-011b-43cd-bd1a-7f23a2328b1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/itdog?ed=2560", headers: {Host: us-new03.daluquan.top}}}
-  - {name: 🇩🇪 德国 2, server: visa.com, port: 443, type: vmess, uuid: 2f14a9b7-011b-43cd-bd1a-7f23a2328b1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: go.daluquan.top}}}
-  - {name: 🇸🇬 建议有事没事都更新订阅, server: cainiao999.top, port: 6666, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇭🇰 香港中转✈01, server: chiyu.myfczy169.top, port: 54016, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇭🇰 香港中转✈02, server: chiyu.myfczy169.top, port: 19946, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇭🇰 香港中转✈03, server: chiyu.myfczy169.top, port: 54804, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇭🇰 香港中转✈04, server: chiyu2.myfczy169.top, port: 50815, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇭🇰 香港中转✈05, server: chiyu2.myfczy169.top, port: 19055, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇯🇵 日本中转✈01, server: chiyu.myfczy169.top, port: 41473, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇯🇵 日本中转✈02, server: chiyu.myfczy169.top, port: 25578, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇯🇵 日本中转✈03, server: chiyu.myfczy169.top, port: 49821, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇯🇵 日本中转✈04, server: chiyu2.myfczy169.top, port: 39886, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇯🇵 日本中转✈05, server: chiyu2.myfczy169.top, port: 16542, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇨🇳 台湾中转✈01, server: chiyu.myfczy169.top, port: 50555, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇨🇳 台湾中转✈02, server: chiyu.myfczy169.top, port: 25710, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇨🇳 台湾中转✈03, server: chiyu.myfczy169.top, port: 41512, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇨🇳 台湾中转✈04, server: chiyu2.myfczy169.top, port: 40780, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇨🇳 台湾中转✈05, server: chiyu2.myfczy169.top, port: 47695, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇸🇬 新加坡中转✈01, server: chiyu.myfczy169.top, port: 26867, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇸🇬 新加坡中转✈02, server: chiyu.myfczy169.top, port: 13127, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇸🇬 新加坡中转✈03, server: chiyu.myfczy169.top, port: 37958, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇸🇬 新加坡中转✈04, server: chiyu2.myfczy169.top, port: 47639, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇸🇬 新加坡中转✈05, server: chiyu2.myfczy169.top, port: 57141, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇺🇸 美国中转✈01, server: chiyu.myfczy169.top, port: 13489, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇺🇸 美国中转✈02, server: chiyu.myfczy169.top, port: 19161, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇺🇸 美国中转✈03, server: chiyu.myfczy169.top, port: 50563, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇬🇧 英国中转✈01, server: chiyu.myfczy169.top, port: 26480, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇬🇧 英国中转✈02, server: chiyu.myfczy169.top, port: 19115, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇬🇧 英国中转✈03, server: chiyu.myfczy169.top, port: 57329, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇹🇭 泰国中转✈01, server: chiyu.myfczy169.top, port: 20289, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇻🇳 越南中转✈01, server: chiyu.myfczy169.top, port: 21071, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇮🇳 印度中转✈01, server: chiyu.myfczy169.top, port: 21061, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇲🇾 马来西亚中转✈01, server: chiyu.myfczy169.top, port: 20119, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇦🇪 阿联酋中转✈01, server: chiyu.myfczy169.top, port: 21059, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇹🇷 土耳其中转✈01, server: chiyu.myfczy169.top, port: 21048, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 哈撒哈斯坦中转✈01, server: chiyu.myfczy169.top, port: 21081, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇸🇪 瑞典中转✈01, server: chiyu.myfczy169.top, port: 22539, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇧🇷 巴西中转✈01, server: chiyu.myfczy169.top, port: 20936, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: 🇩🇪 德国中转✈01, server: chiyu.myfczy169.top, port: 21091, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
-  - {name: ♡⃝♡⃝♡⃝♡⃝♡⃝ ◡̈下方为备用节点, server: cainiao999.top, port: 8888, type: ss, cipher: chacha20-ietf-poly1305, password: d7676fa5-14b6-4242-ae07-d18a81414507}
+  - {name: 🇸🇬 建议有事没事都更新订阅, server: cainiao999.top, port: 6666, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇭🇰 香港中转✈01, server: chiyu.myfczy169.top, port: 54016, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇭🇰 香港中转✈02, server: chiyu.myfczy169.top, port: 19946, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇭🇰 香港中转✈03, server: chiyu.myfczy169.top, port: 54804, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇭🇰 香港中转✈04, server: chiyu2.myfczy169.top, port: 50815, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇭🇰 香港中转✈05, server: chiyu2.myfczy169.top, port: 19055, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇯🇵 日本中转✈01, server: chiyu.myfczy169.top, port: 41473, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇯🇵 日本中转✈02, server: chiyu.myfczy169.top, port: 25578, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇯🇵 日本中转✈03, server: chiyu.myfczy169.top, port: 49821, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇯🇵 日本中转✈04, server: chiyu2.myfczy169.top, port: 39886, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇯🇵 日本中转✈05, server: chiyu2.myfczy169.top, port: 16542, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇨🇳 台湾中转✈01, server: chiyu.myfczy169.top, port: 50555, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇨🇳 台湾中转✈02, server: chiyu.myfczy169.top, port: 25710, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇨🇳 台湾中转✈03, server: chiyu.myfczy169.top, port: 41512, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇨🇳 台湾中转✈04, server: chiyu2.myfczy169.top, port: 40780, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇨🇳 台湾中转✈05, server: chiyu2.myfczy169.top, port: 47695, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇸🇬 新加坡中转✈01, server: chiyu.myfczy169.top, port: 26867, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇸🇬 新加坡中转✈02, server: chiyu.myfczy169.top, port: 13127, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇸🇬 新加坡中转✈03, server: chiyu.myfczy169.top, port: 37958, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇸🇬 新加坡中转✈04, server: chiyu2.myfczy169.top, port: 47639, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇸🇬 新加坡中转✈05, server: chiyu2.myfczy169.top, port: 57141, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇺🇸 美国中转✈01, server: chiyu.myfczy169.top, port: 13489, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇺🇸 美国中转✈02, server: chiyu.myfczy169.top, port: 19161, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇺🇸 美国中转✈03, server: chiyu.myfczy169.top, port: 50563, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇬🇧 英国中转✈01, server: chiyu.myfczy169.top, port: 26480, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇬🇧 英国中转✈02, server: chiyu.myfczy169.top, port: 19115, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇬🇧 英国中转✈03, server: chiyu.myfczy169.top, port: 57329, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇹🇭 泰国中转✈01, server: chiyu.myfczy169.top, port: 20289, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇻🇳 越南中转✈01, server: chiyu.myfczy169.top, port: 21071, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇮🇳 印度中转✈01, server: chiyu.myfczy169.top, port: 21061, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇲🇾 马来西亚中转✈01, server: chiyu.myfczy169.top, port: 20119, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇦🇪 阿联酋中转✈01, server: chiyu.myfczy169.top, port: 21059, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇹🇷 土耳其中转✈01, server: chiyu.myfczy169.top, port: 21048, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 哈撒哈斯坦中转✈01, server: chiyu.myfczy169.top, port: 21081, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇸🇪 瑞典中转✈01, server: chiyu.myfczy169.top, port: 22539, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇧🇷 巴西中转✈01, server: chiyu.myfczy169.top, port: 20936, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: 🇩🇪 德国中转✈01, server: chiyu.myfczy169.top, port: 21091, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: ♡⃝♡⃝♡⃝♡⃝♡⃝ ◡̈下方为备用节点, server: cainiao999.top, port: 8888, type: ss, cipher: chacha20-ietf-poly1305, password: 02df361a-8873-4555-98fe-83f3e6bce11d}
+  - {name: xueyejiasu.com发布地址不迷路, server: hk.kfsldflk.xyz, port: 1200, type: ss, cipher: aes-256-gcm, password: 04c6ee0e-6072-4585-9b69-6777bfea2dc3}
+  - {name: 🇨🇳 台湾 1, server: gy.666666222.shop, port: 20032, type: ss, cipher: chacha20-ietf-poly1305, password: 04c6ee0e-6072-4585-9b69-6777bfea2dc3}
+  - {name: 🇨🇳 台湾01, server: gy.666666222.shop, port: 47564, type: ss, cipher: chacha20-ietf-poly1305, password: 04c6ee0e-6072-4585-9b69-6777bfea2dc3}
+  - {name: 🇭🇰 香港01, server: gy.666666222.shop, port: 34338, type: ss, cipher: chacha20-ietf-poly1305, password: 04c6ee0e-6072-4585-9b69-6777bfea2dc3}
+  - {name: 🇭🇰 香港02, server: gy.666666222.shop, port: 20035, type: ss, cipher: chacha20-ietf-poly1305, password: 04c6ee0e-6072-4585-9b69-6777bfea2dc3}
+  - {name: 🇭🇰 香港03, server: gy.666666222.shop, port: 20052, type: ss, cipher: chacha20-ietf-poly1305, password: 04c6ee0e-6072-4585-9b69-6777bfea2dc3}
+  - {name: 🇯🇵 日本01, server: gy.666666222.shop, port: 20002, type: ss, cipher: chacha20-ietf-poly1305, password: 04c6ee0e-6072-4585-9b69-6777bfea2dc3}
+  - {name: 🇯🇵 日本02, server: gy.666666222.shop, port: 20004, type: ss, cipher: chacha20-ietf-poly1305, password: 04c6ee0e-6072-4585-9b69-6777bfea2dc3}
+  - {name: 🇯🇵 日本03, server: gy.666666222.shop, port: 20006, type: ss, cipher: chacha20-ietf-poly1305, password: 04c6ee0e-6072-4585-9b69-6777bfea2dc3}
+  - {name: 🇯🇵 日本04, server: gy.666666222.shop, port: 20008, type: ss, cipher: chacha20-ietf-poly1305, password: 04c6ee0e-6072-4585-9b69-6777bfea2dc3}
+  - {name: 🇺🇸 美国 纽约01, server: gy.666666222.shop, port: 20013, type: ss, cipher: chacha20-ietf-poly1305, password: 04c6ee0e-6072-4585-9b69-6777bfea2dc3}
+  - {name: 🇺🇸 美国 纽约2, server: gy.666666222.shop, port: 20016, type: ss, cipher: chacha20-ietf-poly1305, password: 04c6ee0e-6072-4585-9b69-6777bfea2dc3}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - xueyejiasu.com发布地址不迷路
-      - 🇨🇳 台湾 1
-      - 🇨🇳 台湾01
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇭🇰 香港03
-      - 🇯🇵 日本01
-      - 🇯🇵 日本02
-      - 🇯🇵 日本03
-      - 🇯🇵 日本04
-      - 🇺🇸 美国 纽约01
-      - 🇺🇸 美国 纽约2
-      - 🏳️‍🌈 剩余流量：100 GB
-      - 套餐到期：2025-04-05
-      - 🇯🇵 日本
-      - 🇸🇬 新加坡西部（新加坡）
-      - 🇺🇸 美国
-      - 🇰🇷 韩国中部（首尔）
-      - 🇯🇵 日本 2
-      - 🇸🇬 新加坡西部（新加坡） 2
-      - 官网https://www.kuaidog008.top
-      - 🇩🇪 德国法兰克福
-      - 🇩🇪 德国
-      - 🏳️‍🌈 剩余流量：100 GB 2
-      - 套餐到期：2025-04-05 2
-      - 🇯🇵 日本 3
-      - 🇸🇬 新加坡西部（新加坡） 3
-      - 🇺🇸 美国 2
-      - 🇰🇷 韩国中部（首尔） 2
-      - 🇯🇵 日本 4
-      - 🇸🇬 新加坡西部（新加坡） 4
-      - 官网https://www.kuaidog008.top 2
-      - 🇩🇪 德国法兰克福 2
-      - 🇩🇪 德国 2
       - 🇸🇬 建议有事没事都更新订阅
       - 🇭🇰 香港中转✈01
       - 🇭🇰 香港中转✈02
@@ -155,46 +99,24 @@ proxy-groups:
       - 🇧🇷 巴西中转✈01
       - 🇩🇪 德国中转✈01
       - ♡⃝♡⃝♡⃝♡⃝♡⃝ ◡̈下方为备用节点
+      - xueyejiasu.com发布地址不迷路
+      - 🇨🇳 台湾 1
+      - 🇨🇳 台湾01
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇺🇸 美国 纽约01
+      - 🇺🇸 美国 纽约2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - xueyejiasu.com发布地址不迷路
-      - 🇨🇳 台湾 1
-      - 🇨🇳 台湾01
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇭🇰 香港03
-      - 🇯🇵 日本01
-      - 🇯🇵 日本02
-      - 🇯🇵 日本03
-      - 🇯🇵 日本04
-      - 🇺🇸 美国 纽约01
-      - 🇺🇸 美国 纽约2
-      - 🏳️‍🌈 剩余流量：100 GB
-      - 套餐到期：2025-04-05
-      - 🇯🇵 日本
-      - 🇸🇬 新加坡西部（新加坡）
-      - 🇺🇸 美国
-      - 🇰🇷 韩国中部（首尔）
-      - 🇯🇵 日本 2
-      - 🇸🇬 新加坡西部（新加坡） 2
-      - 官网https://www.kuaidog008.top
-      - 🇩🇪 德国法兰克福
-      - 🇩🇪 德国
-      - 🏳️‍🌈 剩余流量：100 GB 2
-      - 套餐到期：2025-04-05 2
-      - 🇯🇵 日本 3
-      - 🇸🇬 新加坡西部（新加坡） 3
-      - 🇺🇸 美国 2
-      - 🇰🇷 韩国中部（首尔） 2
-      - 🇯🇵 日本 4
-      - 🇸🇬 新加坡西部（新加坡） 4
-      - 官网https://www.kuaidog008.top 2
-      - 🇩🇪 德国法兰克福 2
-      - 🇩🇪 德国 2
       - 🇸🇬 建议有事没事都更新订阅
       - 🇭🇰 香港中转✈01
       - 🇭🇰 香港中转✈02
@@ -233,46 +155,24 @@ proxy-groups:
       - 🇧🇷 巴西中转✈01
       - 🇩🇪 德国中转✈01
       - ♡⃝♡⃝♡⃝♡⃝♡⃝ ◡̈下方为备用节点
+      - xueyejiasu.com发布地址不迷路
+      - 🇨🇳 台湾 1
+      - 🇨🇳 台湾01
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇺🇸 美国 纽约01
+      - 🇺🇸 美国 纽约2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - xueyejiasu.com发布地址不迷路
-      - 🇨🇳 台湾 1
-      - 🇨🇳 台湾01
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇭🇰 香港03
-      - 🇯🇵 日本01
-      - 🇯🇵 日本02
-      - 🇯🇵 日本03
-      - 🇯🇵 日本04
-      - 🇺🇸 美国 纽约01
-      - 🇺🇸 美国 纽约2
-      - 🏳️‍🌈 剩余流量：100 GB
-      - 套餐到期：2025-04-05
-      - 🇯🇵 日本
-      - 🇸🇬 新加坡西部（新加坡）
-      - 🇺🇸 美国
-      - 🇰🇷 韩国中部（首尔）
-      - 🇯🇵 日本 2
-      - 🇸🇬 新加坡西部（新加坡） 2
-      - 官网https://www.kuaidog008.top
-      - 🇩🇪 德国法兰克福
-      - 🇩🇪 德国
-      - 🏳️‍🌈 剩余流量：100 GB 2
-      - 套餐到期：2025-04-05 2
-      - 🇯🇵 日本 3
-      - 🇸🇬 新加坡西部（新加坡） 3
-      - 🇺🇸 美国 2
-      - 🇰🇷 韩国中部（首尔） 2
-      - 🇯🇵 日本 4
-      - 🇸🇬 新加坡西部（新加坡） 4
-      - 官网https://www.kuaidog008.top 2
-      - 🇩🇪 德国法兰克福 2
-      - 🇩🇪 德国 2
       - 🇸🇬 建议有事没事都更新订阅
       - 🇭🇰 香港中转✈01
       - 🇭🇰 香港中转✈02
@@ -311,45 +211,23 @@ proxy-groups:
       - 🇧🇷 巴西中转✈01
       - 🇩🇪 德国中转✈01
       - ♡⃝♡⃝♡⃝♡⃝♡⃝ ◡̈下方为备用节点
+      - xueyejiasu.com发布地址不迷路
+      - 🇨🇳 台湾 1
+      - 🇨🇳 台湾01
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇺🇸 美国 纽约01
+      - 🇺🇸 美国 纽约2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - xueyejiasu.com发布地址不迷路
-      - 🇨🇳 台湾 1
-      - 🇨🇳 台湾01
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇭🇰 香港03
-      - 🇯🇵 日本01
-      - 🇯🇵 日本02
-      - 🇯🇵 日本03
-      - 🇯🇵 日本04
-      - 🇺🇸 美国 纽约01
-      - 🇺🇸 美国 纽约2
-      - 🏳️‍🌈 剩余流量：100 GB
-      - 套餐到期：2025-04-05
-      - 🇯🇵 日本
-      - 🇸🇬 新加坡西部（新加坡）
-      - 🇺🇸 美国
-      - 🇰🇷 韩国中部（首尔）
-      - 🇯🇵 日本 2
-      - 🇸🇬 新加坡西部（新加坡） 2
-      - 官网https://www.kuaidog008.top
-      - 🇩🇪 德国法兰克福
-      - 🇩🇪 德国
-      - 🏳️‍🌈 剩余流量：100 GB 2
-      - 套餐到期：2025-04-05 2
-      - 🇯🇵 日本 3
-      - 🇸🇬 新加坡西部（新加坡） 3
-      - 🇺🇸 美国 2
-      - 🇰🇷 韩国中部（首尔） 2
-      - 🇯🇵 日本 4
-      - 🇸🇬 新加坡西部（新加坡） 4
-      - 官网https://www.kuaidog008.top 2
-      - 🇩🇪 德国法兰克福 2
-      - 🇩🇪 德国 2
       - 🇸🇬 建议有事没事都更新订阅
       - 🇭🇰 香港中转✈01
       - 🇭🇰 香港中转✈02
@@ -388,45 +266,23 @@ proxy-groups:
       - 🇧🇷 巴西中转✈01
       - 🇩🇪 德国中转✈01
       - ♡⃝♡⃝♡⃝♡⃝♡⃝ ◡̈下方为备用节点
+      - xueyejiasu.com发布地址不迷路
+      - 🇨🇳 台湾 1
+      - 🇨🇳 台湾01
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇺🇸 美国 纽约01
+      - 🇺🇸 美国 纽约2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - xueyejiasu.com发布地址不迷路
-      - 🇨🇳 台湾 1
-      - 🇨🇳 台湾01
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇭🇰 香港03
-      - 🇯🇵 日本01
-      - 🇯🇵 日本02
-      - 🇯🇵 日本03
-      - 🇯🇵 日本04
-      - 🇺🇸 美国 纽约01
-      - 🇺🇸 美国 纽约2
-      - 🏳️‍🌈 剩余流量：100 GB
-      - 套餐到期：2025-04-05
-      - 🇯🇵 日本
-      - 🇸🇬 新加坡西部（新加坡）
-      - 🇺🇸 美国
-      - 🇰🇷 韩国中部（首尔）
-      - 🇯🇵 日本 2
-      - 🇸🇬 新加坡西部（新加坡） 2
-      - 官网https://www.kuaidog008.top
-      - 🇩🇪 德国法兰克福
-      - 🇩🇪 德国
-      - 🏳️‍🌈 剩余流量：100 GB 2
-      - 套餐到期：2025-04-05 2
-      - 🇯🇵 日本 3
-      - 🇸🇬 新加坡西部（新加坡） 3
-      - 🇺🇸 美国 2
-      - 🇰🇷 韩国中部（首尔） 2
-      - 🇯🇵 日本 4
-      - 🇸🇬 新加坡西部（新加坡） 4
-      - 官网https://www.kuaidog008.top 2
-      - 🇩🇪 德国法兰克福 2
-      - 🇩🇪 德国 2
       - 🇸🇬 建议有事没事都更新订阅
       - 🇭🇰 香港中转✈01
       - 🇭🇰 香港中转✈02
@@ -465,45 +321,23 @@ proxy-groups:
       - 🇧🇷 巴西中转✈01
       - 🇩🇪 德国中转✈01
       - ♡⃝♡⃝♡⃝♡⃝♡⃝ ◡̈下方为备用节点
+      - xueyejiasu.com发布地址不迷路
+      - 🇨🇳 台湾 1
+      - 🇨🇳 台湾01
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇺🇸 美国 纽约01
+      - 🇺🇸 美国 纽约2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - xueyejiasu.com发布地址不迷路
-      - 🇨🇳 台湾 1
-      - 🇨🇳 台湾01
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇭🇰 香港03
-      - 🇯🇵 日本01
-      - 🇯🇵 日本02
-      - 🇯🇵 日本03
-      - 🇯🇵 日本04
-      - 🇺🇸 美国 纽约01
-      - 🇺🇸 美国 纽约2
-      - 🏳️‍🌈 剩余流量：100 GB
-      - 套餐到期：2025-04-05
-      - 🇯🇵 日本
-      - 🇸🇬 新加坡西部（新加坡）
-      - 🇺🇸 美国
-      - 🇰🇷 韩国中部（首尔）
-      - 🇯🇵 日本 2
-      - 🇸🇬 新加坡西部（新加坡） 2
-      - 官网https://www.kuaidog008.top
-      - 🇩🇪 德国法兰克福
-      - 🇩🇪 德国
-      - 🏳️‍🌈 剩余流量：100 GB 2
-      - 套餐到期：2025-04-05 2
-      - 🇯🇵 日本 3
-      - 🇸🇬 新加坡西部（新加坡） 3
-      - 🇺🇸 美国 2
-      - 🇰🇷 韩国中部（首尔） 2
-      - 🇯🇵 日本 4
-      - 🇸🇬 新加坡西部（新加坡） 4
-      - 官网https://www.kuaidog008.top 2
-      - 🇩🇪 德国法兰克福 2
-      - 🇩🇪 德国 2
       - 🇸🇬 建议有事没事都更新订阅
       - 🇭🇰 香港中转✈01
       - 🇭🇰 香港中转✈02
@@ -542,46 +376,24 @@ proxy-groups:
       - 🇧🇷 巴西中转✈01
       - 🇩🇪 德国中转✈01
       - ♡⃝♡⃝♡⃝♡⃝♡⃝ ◡̈下方为备用节点
+      - xueyejiasu.com发布地址不迷路
+      - 🇨🇳 台湾 1
+      - 🇨🇳 台湾01
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇺🇸 美国 纽约01
+      - 🇺🇸 美国 纽约2
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - xueyejiasu.com发布地址不迷路
-      - 🇨🇳 台湾 1
-      - 🇨🇳 台湾01
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇭🇰 香港03
-      - 🇯🇵 日本01
-      - 🇯🇵 日本02
-      - 🇯🇵 日本03
-      - 🇯🇵 日本04
-      - 🇺🇸 美国 纽约01
-      - 🇺🇸 美国 纽约2
-      - 🏳️‍🌈 剩余流量：100 GB
-      - 套餐到期：2025-04-05
-      - 🇯🇵 日本
-      - 🇸🇬 新加坡西部（新加坡）
-      - 🇺🇸 美国
-      - 🇰🇷 韩国中部（首尔）
-      - 🇯🇵 日本 2
-      - 🇸🇬 新加坡西部（新加坡） 2
-      - 官网https://www.kuaidog008.top
-      - 🇩🇪 德国法兰克福
-      - 🇩🇪 德国
-      - 🏳️‍🌈 剩余流量：100 GB 2
-      - 套餐到期：2025-04-05 2
-      - 🇯🇵 日本 3
-      - 🇸🇬 新加坡西部（新加坡） 3
-      - 🇺🇸 美国 2
-      - 🇰🇷 韩国中部（首尔） 2
-      - 🇯🇵 日本 4
-      - 🇸🇬 新加坡西部（新加坡） 4
-      - 官网https://www.kuaidog008.top 2
-      - 🇩🇪 德国法兰克福 2
-      - 🇩🇪 德国 2
       - 🇸🇬 建议有事没事都更新订阅
       - 🇭🇰 香港中转✈01
       - 🇭🇰 香港中转✈02
@@ -620,6 +432,18 @@ proxy-groups:
       - 🇧🇷 巴西中转✈01
       - 🇩🇪 德国中转✈01
       - ♡⃝♡⃝♡⃝♡⃝♡⃝ ◡̈下方为备用节点
+      - xueyejiasu.com发布地址不迷路
+      - 🇨🇳 台湾 1
+      - 🇨🇳 台湾01
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇺🇸 美国 纽约01
+      - 🇺🇸 美国 纽约2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -642,40 +466,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - xueyejiasu.com发布地址不迷路
-      - 🇨🇳 台湾 1
-      - 🇨🇳 台湾01
-      - 🇭🇰 香港01
-      - 🇭🇰 香港02
-      - 🇭🇰 香港03
-      - 🇯🇵 日本01
-      - 🇯🇵 日本02
-      - 🇯🇵 日本03
-      - 🇯🇵 日本04
-      - 🇺🇸 美国 纽约01
-      - 🇺🇸 美国 纽约2
-      - 🏳️‍🌈 剩余流量：100 GB
-      - 套餐到期：2025-04-05
-      - 🇯🇵 日本
-      - 🇸🇬 新加坡西部（新加坡）
-      - 🇺🇸 美国
-      - 🇰🇷 韩国中部（首尔）
-      - 🇯🇵 日本 2
-      - 🇸🇬 新加坡西部（新加坡） 2
-      - 官网https://www.kuaidog008.top
-      - 🇩🇪 德国法兰克福
-      - 🇩🇪 德国
-      - 🏳️‍🌈 剩余流量：100 GB 2
-      - 套餐到期：2025-04-05 2
-      - 🇯🇵 日本 3
-      - 🇸🇬 新加坡西部（新加坡） 3
-      - 🇺🇸 美国 2
-      - 🇰🇷 韩国中部（首尔） 2
-      - 🇯🇵 日本 4
-      - 🇸🇬 新加坡西部（新加坡） 4
-      - 官网https://www.kuaidog008.top 2
-      - 🇩🇪 德国法兰克福 2
-      - 🇩🇪 德国 2
       - 🇸🇬 建议有事没事都更新订阅
       - 🇭🇰 香港中转✈01
       - 🇭🇰 香港中转✈02
@@ -714,6 +504,18 @@ proxy-groups:
       - 🇧🇷 巴西中转✈01
       - 🇩🇪 德国中转✈01
       - ♡⃝♡⃝♡⃝♡⃝♡⃝ ◡̈下方为备用节点
+      - xueyejiasu.com发布地址不迷路
+      - 🇨🇳 台湾 1
+      - 🇨🇳 台湾01
+      - 🇭🇰 香港01
+      - 🇭🇰 香港02
+      - 🇭🇰 香港03
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇺🇸 美国 纽约01
+      - 🇺🇸 美国 纽约2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
