@@ -102,9 +102,11 @@ downloadsub() {
     echo "Current $1 taday download url: $today_url"
     echo "Current $1 last avaliable download url: $last_url"
 
-    check_url_validity $today_url
+    check_url_result=$(check_url_validity $today_url)
+    echo "校验结果：${check_url_result}"
+
     # 获取返回值并判断
-    if [ $? -eq 200 ]; then
+    if [ $check_url_result -eq 200 ]; then
         final_url=$today_url
     else
         final_url=$last_url
