@@ -16,6 +16,8 @@
 today=$(date +"%Y%m%d")
 # 获取上次的日期
 last_day=$today
+# 获取昨天的日期
+yesterday=$today
 current_date=$(date +%Y%m%d)
 current_time=$(date +"Today is %A, %B %d, %Y %H:%M:%S")
 year=$(date +"%Y")
@@ -38,11 +40,14 @@ echo "\n"
 if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "运行在 macOS 上 (Running on macOS) "
     echo "\n"
+    yesterday=$(date -v-1d +"%Y%m%d")
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     echo "运行在 Linux 上 (Running on Linux) "
     echo "\n"
+    yesterday=$(date -d "yesterday" +"%Y%m%d")
 else
     echo "未知的操作系统: $OSTYPE (Unknown OS) "
+    yesterday=$(date -d "yesterday" +"%Y%m%d")
     echo "\n"
 fi
 
@@ -87,7 +92,7 @@ check_url_validity() {
 downloadsub() {
     echo "\n"
     echo "====================="
-    today_url="https://a.nodeshare.xyz/uploads/${year}/${month}/${today}.$2"
+    today_url="https://a.nodeshare.xyz/uploads/${year}/${month}/${yesterday}.$2"
     last_url="https://a.nodeshare.xyz/uploads/${last_year}/${last_month}/${ybdate}.$2"
     final_url=$today_url
 
