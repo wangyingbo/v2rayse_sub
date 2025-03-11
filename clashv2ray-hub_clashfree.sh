@@ -1,5 +1,8 @@
 #!/bin/zsh
-# 仓库链接：https://github.com/clashv2ray-hub/clashfree
+# 仓库链接
+# https://github.com/clashv2ray-hub/clashfree
+# 网站地址
+# https://nodeshare.xyz/category/freenode/
 # clash订阅链接
 # https://a.nodeshare.xyz/uploads/2025/2/20250224.yaml
 # v2ray订阅链接:
