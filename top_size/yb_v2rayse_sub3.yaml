@@ -1,50 +1,89 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-03-09 23:02:19
+# 创建时间：2025-03-12 21:46:06
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：274
 # 节点类型：ss, vmess, trojan
 ####################################
 mixed-port: 7890
-allow-lan: false
-log-level: silent
-external-controller: 127.0.0.1:9090
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
 dns:
-  enable: true
-  ipv6: false
-  listen: 127.0.0.1:1053
-  use-hosts: true
-  use-system-hosts: false
-  respect-rules: true
+  enabled: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
   enhanced-mode: fake-ip
-  fake-ip-range: '198.19.0.1/24'
+  fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - '*.lan'
-    - '*.local'
-    - '*.market.xiaomi.com'
-    - '*.example.com'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - swscan.apple.com
+    - mesu.apple.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - +.music.163.com
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - +.y.qq.com
+    - +.music.tc.qq.com
+    - aqqmusic.tc.qq.com
+    - +.stream.qqmusic.qq.com
+    - '*.xiami.com'
+    - +.music.migu.cn
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - +.xboxlive.com
+    - localhost.ptlogin2.qq.com
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '*.mcdn.bilivideo.cn'
   nameserver:
-    - tls://1.1.1.1
-    - tls://8.8.8.8
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
-  proxy-server-nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
-  cache-size: 8192
-  dns-timeout: 5s
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-      - gfw
-  nameserver-policy:
-    "rule-set:cn_domain":
-      - tls://119.29.29.29
-    "rule-set:geolocation-!cn":
-      - https://1.1.1.1/dns-query
-      - https://8.8.8.8/dns-query
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
 
 proxies:
   - {"name":"浙江省台州市+台州世通网络_1","type":"ss","server":"hk.fastsoonlink.com","port":40000,"password":"3FB23A19-9424-40C7-9139-3540228283FA","cipher":"chacha20-ietf-poly1305"}
@@ -327,11 +366,8 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🔰 延迟最低
-      - 🇭🇰 香港节点
-      - 🇸🇬 狮城节点
-      - 🇺🇲 美国节点
-      - 🇯🇵 日本节点
       - 🚀 手动切换
+      - 🗺️ 选择地区
       - DIRECT
   - name: 🚀 手动切换
     type: select
@@ -1190,13 +1226,14 @@ proxy-groups:
       - 美国-5.79MB/s
       - 法国-15.0MB/s
       - 美国-2.65MB/s
+  - name: 🗺️ 选择地区
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇺🇸 美国节点
+    type: select
   - name: 🇭🇰 香港节点
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    timeout: 1000
-    max-failed-times: 1
     proxies:
       - 香港 阿里云
       - 香港-6.86MB/s
@@ -1212,23 +1249,13 @@ proxy-groups:
       - 香港-266.9KB/s
       - 香港-55.8MB/s
       - 香港-18.8MB/s
+    type: select
   - name: 🇯🇵 日本节点
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    timeout: 1000
-    max-failed-times: 1
     proxies:
       - 日本-8.43MB/s
       - 日本-3.47MB/s
+    type: select
   - name: 🇸🇬 狮城节点
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    timeout: 1000
-    max-failed-times: 1
     proxies:
       - 新加坡-1.30MB/s
       - 新加坡-128.6KB/s
@@ -1237,13 +1264,8 @@ proxy-groups:
       - 新加坡-18.1MB/s
       - 新加坡-3.1MB/s
       - 新加坡-5.5MB/s
+    type: select
   - name: 🇺🇲 美国节点
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    timeout: 1000
-    max-failed-times: 1
     proxies:
       - 美国 CloudFlare节点_1
       - 美国 CloudFlare节点_2
@@ -1350,6 +1372,7 @@ proxy-groups:
       - 美国-709.3KB/s
       - 美国-5.79MB/s
       - 美国-2.65MB/s
+    type: select
 
 rules:
 # 本地/局域网地址
