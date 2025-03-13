@@ -1,89 +1,50 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-03-12 22:59:04
+# 创建时间：2025-03-12 20:28:08
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：274
 # 节点类型：ss, vmess, trojan
 ####################################
 mixed-port: 7890
-allow-lan: true
-log-level: info
-external-controller: 0.0.0.0:9090
+allow-lan: false
+log-level: silent
+external-controller: 127.0.0.1:9090
 dns:
-  enabled: true
-  listen: 0.0.0.0:1053
-  ipv6: true
-  default-nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
+  enable: true
+  ipv6: false
+  listen: 127.0.0.1:1053
+  use-hosts: true
+  use-system-hosts: false
+  respect-rules: true
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
+  fake-ip-range: '198.19.0.1/24'
   fake-ip-filter:
     - '*.lan'
-    - '*.linksys.com'
-    - '*.linksyssmartwifi.com'
-    - swscan.apple.com
-    - mesu.apple.com
-    - '*.msftconnecttest.com'
-    - '*.msftncsi.com'
-    - time.*.com
-    - time.*.gov
-    - time.*.edu.cn
-    - time.*.apple.com
-    - time1.*.com
-    - time2.*.com
-    - time3.*.com
-    - time4.*.com
-    - time5.*.com
-    - time6.*.com
-    - time7.*.com
-    - ntp.*.com
-    - ntp.*.com
-    - ntp1.*.com
-    - ntp2.*.com
-    - ntp3.*.com
-    - ntp4.*.com
-    - ntp5.*.com
-    - ntp6.*.com
-    - ntp7.*.com
-    - '*.time.edu.cn'
-    - '*.ntp.org.cn'
-    - +.pool.ntp.org
-    - time1.cloud.tencent.com
-    - +.music.163.com
-    - '*.126.net'
-    - musicapi.taihe.com
-    - music.taihe.com
-    - songsearch.kugou.com
-    - trackercdn.kugou.com
-    - '*.kuwo.cn'
-    - api-jooxtt.sanook.com
-    - api.joox.com
-    - joox.com
-    - +.y.qq.com
-    - +.music.tc.qq.com
-    - aqqmusic.tc.qq.com
-    - +.stream.qqmusic.qq.com
-    - '*.xiami.com'
-    - +.music.migu.cn
-    - +.srv.nintendo.net
-    - +.stun.playstation.net
-    - xbox.*.microsoft.com
-    - +.xboxlive.com
-    - localhost.ptlogin2.qq.com
-    - proxy.golang.org
-    - stun.*.*
-    - stun.*.*.*
-    - '*.mcdn.bilivideo.cn'
+    - '*.local'
+    - '*.market.xiaomi.com'
+    - '*.example.com'
   nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
+    - tls://1.1.1.1
+    - tls://8.8.8.8
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+  proxy-server-nameserver:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+  cache-size: 8192
+  dns-timeout: 5s
   fallback-filter:
-    geoip: false
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
+    geoip: true
+    geoip-code: CN
+    geosite:
+      - gfw
+  nameserver-policy:
+    "rule-set:cn_domain":
+      - tls://119.29.29.29
+    "rule-set:geolocation-!cn":
+      - https://1.1.1.1/dns-query
+      - https://8.8.8.8/dns-query
 
 proxies:
   - {"name":"浙江省台州市+台州世通网络_1","type":"ss","server":"hk.fastsoonlink.com","port":40000,"password":"3FB23A19-9424-40C7-9139-3540228283FA","cipher":"chacha20-ietf-poly1305"}
@@ -365,15 +326,13 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🇭🇰 香港节点
-      - 🇸🇬 狮城节点
-      - 🇺🇲 美国节点
-      - 🇯🇵 日本节点
-      - 🚀 手动切换
+      - 🔰 延迟最低
+      - ✅ 手动选择
+      - 🗺️ 选择地区
       - DIRECT
-  - name: 🚀 手动切换
-    type: select
-    proxies:
+  - interval: 300
+    name: ♻️ 自动选择
+    proxies: &id001
       - 浙江省台州市+台州世通网络_1
       - 广东省东莞市+电信IDC业务段_1
       - 广东省东莞市+电信IDC业务段_2
@@ -648,286 +607,20 @@ proxy-groups:
       - 美国-5.79MB/s
       - 法国-15.0MB/s
       - 美国-2.65MB/s
-  - name: ♻️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
+    timeout: 1000
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+  - interval: 300
+    name: 🔰 延迟最低
+    proxies: *id001
     tolerance: 50
-    proxies:
-      - 浙江省台州市+台州世通网络_1
-      - 广东省东莞市+电信IDC业务段_1
-      - 广东省东莞市+电信IDC业务段_2
-      - 罗马尼亚+V2CROSS.COM
-      - 广东省东莞市+电信IDC业务段_3
-      - 乌克兰+V2CROSS.COM_1
-      - 广东省东莞市+电信IDC业务段_4
-      - 安徽省滁州市+电信_1
-      - 广东省东莞市+电信IDC业务段_5
-      - 乌克兰+V2CROSS.COM_2
-      - 浙江省台州市+台州世通网络_2
-      - 广东省东莞市+电信IDC业务段_6
-      - 安徽省滁州市+电信_2
-      - 广东省东莞市+电信IDC业务段_7
-      - 广东省东莞市+电信IDC业务段_8
-      - 广东省东莞市+电信IDC业务段_9
-      - 广东省东莞市+电信IDC业务段_10
-      - 广东省东莞市+电信IDC业务段_11
-      - 俄罗斯+V2CROSS.COM_1
-      - 南非豪登省约翰内斯堡+Cloudinnovation数据中心
-      - 俄罗斯+V2CROSS.COM_2
-      - 波兰+V2CROSS.COM
-      - 美国 CloudFlare节点_1
-      - 美国 CloudFlare节点_2
-      - 美国 CloudFlare节点_3
-      - 美国 V2CROSS.COM_1
-      - 美国 CloudFlare节点_4
-      - 美国 Fastly全球Anycast节点_1
-      - 美国 Fastly全球Anycast节点_2
-      - 美国 CloudFlare节点_5
-      - 俄罗斯 V2CROSS.COM
-      - 瑞典 V2CROSS.COM
-      - 美国 Fastly全球Anycast节点_3
-      - 广东省湛江市 移动_1
-      - 美国 CloudFlare节点_6
-      - 美国 CloudFlare节点_7
-      - 未知国家-1.63MB/s
-      - 广东省湛江市 移动_2
-      - 美国 教育网_1
-      - 美国 CloudFlare节点_9
-      - 美国 CloudFlare节点_10
-      - 美国 CloudFlare节点_11
-      - 美国 CloudFlare节点_12
-      - 美国 CloudFlare节点_13
-      - 美国 CloudFlare节点_14
-      - 印度 V2CROSS.COM_1
-      - 美国 CloudFlare节点_15
-      - 美国 Alabanza
-      - 美国 CloudFlare节点_16
-      - 香港 阿里云
-      - 广东省湛江市 移动_3
-      - 美国 V2CROSS.COM_2
-      - 美国 CloudFlare节点_17
-      - 美国 爱荷华州得梅因Microsoft数据中心
-      - 未知国家-650.4KB/s
-      - 广东省广州市 移动
-      - 美国 CloudFlare节点_19
-      - 美国 CloudFlare节点_20
-      - 美国 教育网_2
-      - 美国 CloudFlare节点_21
-      - 广东省湛江市 移动_4
-      - 美国 CloudFlare节点_22
-      - 美国 CloudFlare节点_23
-      - 美国 CloudFlare节点_24
-      - 立陶宛 V2CROSS.COM
-      - 美国 CloudFlare节点_25
-      - 斯洛文尼亚 V2CROSS.COM
-      - 美国-891.0KB/s
-      - 美国 CloudFlare节点_26
-      - 美国 Fastly全球Anycast节点_4
-      - 美国+Xerox
-      - 美国+Amazon数据中心
-      - 爱尔兰+都柏林Amazon数据中心
-      - 韩国+KT电信_1
-      - 美国+CloudFlare节点_1
-      - 美国+CloudFlare节点_2
-      - 德国+黑森州法兰克福AMazon数据中心
-      - 中转节点-2.29MB/s
-      - 俄罗斯+V2CROSS.COM_3
-      - 爱尔兰都柏林+亚马逊云
-      - 韩国+KT电信_2
-      - 爱尔兰+V2CROSS.COM
-      - 美国+CloudFlare节点_3
-      - 美国+CloudFlare节点_4
-      - 美国+CloudFlare节点_5
-      - 美国+CloudFlare节点_6
-      - 美国+CloudFlare节点_7
-      - 中转节点-188.0KB/s
-      - 荷兰-41.2MB/s
-      - 香港-6.86MB/s
-      - 中转节点-366.2KB/s
-      - 中转节点-14.7MB/s
-      - 英国-56.1MB/s
-      - 越南-1.71MB/s_2
-      - 德国-3.45MB/s_2
-      - 南非-246.7KB/s_2
-      - 墨西哥-25.5MB/s_2
-      - 中转节点-49.3MB/s
-      - 美国-791.8KB/s
-      - 中转节点-34.8MB/s
-      - 台湾-10.7MB/s
-      - 英国-3.26MB/s
-      - 中转节点-5.29MB/s
-      - 中转节点-63.1MB/s
-      - 罗马尼亚-237.0KB/s
-      - 新加坡-1.30MB/s
-      - 台湾-10.8MB/s
-      - 罗马尼亚-34.4MB/s
-      - 伊朗-2.88MB/s
-      - 加拿大-813.3KB/s
-      - 未知国家-42.1MB/s
-      - 斯洛文尼亚-644.2KB/s
-      - 中转节点-46.6MB/s
-      - 英国-285.7KB/s
-      - 美国-2.56MB/s
-      - 美国-842.7KB/s
-      - 荷兰-52.5MB/s
-      - 中转节点-72.4MB/s
-      - 荷兰-914.1KB/s
-      - 法国-1.93MB/s
-      - 英国-176.2KB/s
-      - 英国-208.6KB/s
-      - 美国-3.01MB/s
-      - 土耳其-93.9MB/s
-      - 立陶宛-96.0MB/s
-      - 英国-1.65MB/s
-      - 西班牙-407.4KB/s
-      - 美国-237.7KB/s
-      - 美国-244.8KB/s
-      - 香港-4.09MB/s
-      - 美国-212.9KB/s
-      - 香港-9.82MB/s
-      - 韩国-29.9MB/s
-      - 美国-24.5MB/s
-      - 新加坡-128.6KB/s
-      - 美国-1.17MB/s
-      - 美国-55.2MB/s
-      - 俄罗斯联邦-574.6KB/s
-      - 美国-3.08MB/s
-      - 美国-3.92MB/s
-      - 美国-842.5KB/s
-      - 美国-845.4KB/s
-      - 美国-836.7KB/s
-      - 美国-848.0KB/s
-      - 美国-839.2KB/s
-      - 美国-826.8KB/s
-      - 美国-838.9KB/s
-      - 美国-834.1KB/s
-      - 美国-840.3KB/s
-      - 美国-847.9KB/s
-      - 美国-840.1KB/s
-      - 美国-841.8KB/s
-      - 美国-842.9KB/s
-      - 美国-824.7KB/s
-      - 美国-3.79MB/s
-      - 美国-588.7KB/s
-      - 英国-48.2MB/s
-      - 乌克兰-37.3MB/s
-      - 美国-759.3KB/s
-      - 美国-807.9KB/s
-      - 中转节点-462.1KB/s
-      - 英国-3.41MB/s
-      - 美国-823.6KB/s
-      - 美国-3.80MB/s
-      - 荷兰-2.16MB/s
-      - 美国-257.8KB/s
-      - 美国-331.8KB/s
-      - 美国-151.0KB/s
-      - 立陶宛-41.0MB/s
-      - 中转节点-32.1MB/s
-      - 荷兰-58.0MB/s
-      - 中转节点-279.1KB/s
-      - 美国-37.7MB/s
-      - 中转节点-85.6MB/s
-      - 中转节点-19.5MB/s
-      - 中转节点-14.54MB/s
-      - 荷兰-432.0KB/s
-      - 乌克兰-53.1MB/s
-      - 英国-90.7MB/s
-      - 卢森堡-37.2MB/s
-      - 韩国-83.4MB/s
-      - 未知国家-3.53MB/s
-      - 韩国-2.80MB/s
-      - 中转节点-106.9KB/s
-      - 日本-8.43MB/s
-      - 香港-26.0MB/s
-      - 香港-2.19MB/s
-      - 美国-3.78MB/s
-      - 立陶宛-228.4KB/s
-      - 未知国家-121.4KB/s
-      - 中转节点-20.9MB/s
-      - 匈牙利-86.3MB/s
-      - 加拿大-1.58MB/s
-      - 未知国家-3.23MB/s
-      - 新加坡-14.6MB/s
-      - 土耳其-74.9MB/s
-      - 土耳其-58.1MB/s
-      - 香港-16.9MB/s
-      - 未知国家-15.9MB/s
-      - 未知国家-225.3KB/s
-      - 香港-1.41MB/s
-      - 美国-108.7KB/s
-      - 中转节点-10.1MB/s_2
-      - 香港-49.35MB/s
-      - 中转节点-16.7MB/s
-      - 美国-13.4MB/s
-      - 未知国家-47.3MB/s
-      - 香港-16.3MB/s
-      - 未知国家-121.9KB/s
-      - 美国-2.46MB/s
-      - 德国-4.03MB/s
-      - 立陶宛-76.8MB/s
-      - 中转节点-40.70MB/s
-      - 香港-16.1MB/s
-      - 法国-124.0KB/s
-      - 香港-266.9KB/s
-      - 俄罗斯联邦-396.7KB/s
-      - 俄罗斯联邦-1.35MB/s
-      - 爱尔兰-3.36MB/s
-      - 英国-127.2KB/s
-      - 美国-25.1MB/s
-      - 英国-149.1KB/s
-      - 中转节点-34.5MB/s
-      - 哥伦比亚-31.1MB/s
-      - 未知国家-27.3MB/s
-      - 韩国-3.87MB/s
-      - 中转节点-42.7MB/s
-      - 中转节点-2.97MB/s
-      - 日本-3.47MB/s
-      - 保加利亚-207.2KB/s
-      - 中转节点-1.28MB/s
-      - 中转节点-134.9KB/s
-      - 俄罗斯联邦-13.1MB/s
-      - 俄罗斯联邦-10.4MB/s
-      - 香港-55.8MB/s
-      - 美国-28.8MB/s
-      - 美国-3.16MB/s
-      - 立陶宛-257.2KB/s
-      - 乌克兰-25.2MB/s
-      - 中转节点-135.2KB/s
-      - 新加坡-17.5MB/s
-      - 中转节点-121.2KB/s
-      - 美国-4.12MB/s
-      - 中转节点-239.5KB/s
-      - 美国-21.8MB/s
-      - 新加坡-18.1MB/s
-      - 美国-807.2KB/s
-      - 美国-828.7KB/s
-      - 香港-18.8MB/s
-      - 美国-17.5MB/s
-      - 美国-21.6MB/s
-      - 未知国家-575.4KB/s
-      - 美国-672.7KB/s
-      - 美国-695.6KB/s
-      - 美国-421.5KB/s
-      - 未知国家-296.6KB/s
-      - 美国-369.6KB/s
-      - 未知国家-675.2KB/s
-      - 美国-378.7KB/s
-      - 瑞典-757.7KB/s
-      - 爱尔兰-60.7MB/s
-      - 美国-379.1KB/s
-      - 立陶宛-73.9MB/s
-      - 新加坡-3.1MB/s
-      - 新加坡-5.5MB/s
-      - 斯洛文尼亚-421.9KB/s
-      - 美国-305.9KB/s
-      - 美国-18.6MB/s
-      - 美国-16.3MB/s
-      - 未知国家-5.49MB/s
-      - 美国-709.3KB/s
-      - 美国-5.79MB/s
-      - 法国-15.0MB/s
-      - 美国-2.65MB/s
+    timeout: 1000
+    max-failed-times: 1
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+  - name: ✅ 手动选择
+    proxies: *id001
+    type: select
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -945,6 +638,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🔰 延迟最低
       - 浙江省台州市+台州世通网络_1
       - 广东省东莞市+电信IDC业务段_1
       - 广东省东莞市+电信IDC业务段_2
@@ -1219,11 +913,15 @@ proxy-groups:
       - 美国-5.79MB/s
       - 法国-15.0MB/s
       - 美国-2.65MB/s
+  - name: 🗺️ 选择地区
+    type: select
+    proxies:
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇸🇬 新加坡
+      - 🇺🇸 美国
+
   - name: 🇭🇰 香港节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
     proxies:
       - 香港 阿里云
       - 香港-6.86MB/s
@@ -1240,18 +938,10 @@ proxy-groups:
       - 香港-55.8MB/s
       - 香港-18.8MB/s
   - name: 🇯🇵 日本节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
     proxies:
       - 日本-8.43MB/s
       - 日本-3.47MB/s
   - name: 🇸🇬 狮城节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
     proxies:
       - 新加坡-1.30MB/s
       - 新加坡-128.6KB/s
@@ -1261,10 +951,6 @@ proxy-groups:
       - 新加坡-3.1MB/s
       - 新加坡-5.5MB/s
   - name: 🇺🇲 美国节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
     proxies:
       - 美国 CloudFlare节点_1
       - 美国 CloudFlare节点_2
