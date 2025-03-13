@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-03-12 22:59:04
+# 创建时间：2025-03-13 01:09:34
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：274
 # 节点类型：ss, vmess, trojan
@@ -648,12 +648,9 @@ proxy-groups:
       - 美国-5.79MB/s
       - 法国-15.0MB/s
       - 美国-2.65MB/s
-  - name: ♻️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
+  - interval: 300
+    name: ♻️ 自动选择
+    proxies: &id001
       - 浙江省台州市+台州世通网络_1
       - 广东省东莞市+电信IDC业务段_1
       - 广东省东莞市+电信IDC业务段_2
@@ -928,6 +925,17 @@ proxy-groups:
       - 美国-5.79MB/s
       - 法国-15.0MB/s
       - 美国-2.65MB/s
+    timeout: 1000
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+  - interval: 300
+    name: 🔰 延迟最低
+    proxies: *id001
+    tolerance: 50
+    timeout: 1000
+    max-failed-times: 1
+    type: url-test
+    url: https://www.gstatic.com/generate_204
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -945,6 +953,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🔰 延迟最低
       - 浙江省台州市+台州世通网络_1
       - 广东省东莞市+电信IDC业务段_1
       - 广东省东莞市+电信IDC业务段_2
@@ -1239,14 +1248,15 @@ proxy-groups:
       - 香港-266.9KB/s
       - 香港-55.8MB/s
       - 香港-18.8MB/s
-  - name: 🇯🇵 日本节点
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
+  - interval: 300
+    name: 🇯🇵 日本节点
+    proxies: *id001
+    filter: "日本"
     tolerance: 50
-    proxies:
-      - 日本-8.43MB/s
-      - 日本-3.47MB/s
+    timeout: 1000
+    max-failed-times: 1
+    type: url-test
+    url: https://www.gstatic.com/generate_204
   - name: 🇸🇬 狮城节点
     type: url-test
     url: http://www.gstatic.com/generate_204

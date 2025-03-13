@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-03-12 21:46:06
+# 创建时间：2025-03-13 15:58:48
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：274
 # 节点类型：ss, vmess, trojan
@@ -366,8 +366,8 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🔰 延迟最低
-      - 🚀 手动切换
       - 🗺️ 选择地区
+      - 🚀 手动切换
       - DIRECT
   - name: 🚀 手动切换
     type: select
@@ -1230,11 +1230,16 @@ proxy-groups:
     type: select
     proxies:
       - 🇭🇰 香港节点
-      - 🇯🇵 日本节点
       - 🇸🇬 狮城节点
-      - 🇺🇸 美国节点
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
   - name: 🇭🇰 香港节点
-    type: select
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    timeout: 1000
+    max-failed-times: 1
     proxies:
       - 香港 阿里云
       - 香港-6.86MB/s
@@ -1251,12 +1256,22 @@ proxy-groups:
       - 香港-55.8MB/s
       - 香港-18.8MB/s
   - name: 🇯🇵 日本节点
-    type: select
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    timeout: 1000
+    max-failed-times: 1
     proxies:
       - 日本-8.43MB/s
       - 日本-3.47MB/s
   - name: 🇸🇬 狮城节点
-    type: select
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    timeout: 1000
+    max-failed-times: 1
     proxies:
       - 新加坡-1.30MB/s
       - 新加坡-128.6KB/s
@@ -1266,7 +1281,12 @@ proxy-groups:
       - 新加坡-3.1MB/s
       - 新加坡-5.5MB/s
   - name: 🇺🇲 美国节点
-    type: select
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    timeout: 1000
+    max-failed-times: 1
     proxies:
       - 美国 CloudFlare节点_1
       - 美国 CloudFlare节点_2
