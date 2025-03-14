@@ -1,50 +1,89 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-03-13 00:21:19
+# 创建时间：2025-03-13 15:29:05
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：274
 # 节点类型：ss, vmess, trojan
 ####################################
 mixed-port: 7890
-allow-lan: false
-log-level: silent
-external-controller: 127.0.0.1:9090
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
 dns:
-  enable: true
-  ipv6: false
-  listen: 127.0.0.1:1053
-  use-hosts: true
-  use-system-hosts: false
-  respect-rules: true
+  enabled: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
   enhanced-mode: fake-ip
-  fake-ip-range: '198.19.0.1/24'
+  fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - '*.lan'
-    - '*.local'
-    - '*.market.xiaomi.com'
-    - '*.example.com'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - swscan.apple.com
+    - mesu.apple.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - +.music.163.com
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - +.y.qq.com
+    - +.music.tc.qq.com
+    - aqqmusic.tc.qq.com
+    - +.stream.qqmusic.qq.com
+    - '*.xiami.com'
+    - +.music.migu.cn
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - +.xboxlive.com
+    - localhost.ptlogin2.qq.com
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '*.mcdn.bilivideo.cn'
   nameserver:
-    - tls://1.1.1.1
-    - tls://8.8.8.8
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
-  proxy-server-nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
-  cache-size: 8192
-  dns-timeout: 5s
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-      - gfw
-  nameserver-policy:
-    "rule-set:cn_domain":
-      - tls://119.29.29.29
-    "rule-set:geolocation-!cn":
-      - https://1.1.1.1/dns-query
-      - https://8.8.8.8/dns-query
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
 
 proxies:
   - {"name":"浙江省台州市+台州世通网络_1","type":"ss","server":"hk.fastsoonlink.com","port":40000,"password":"3FB23A19-9424-40C7-9139-3540228283FA","cipher":"chacha20-ietf-poly1305"}
@@ -329,7 +368,7 @@ proxy-groups:
       - 🔰 延迟最低
       - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
-      - 🇺🇸 美国节点
+      - 🇺🇲 美国节点
       - 🇯🇵 日本节点
       - 🚀 手动切换
       - DIRECT
@@ -887,15 +926,6 @@ proxy-groups:
       - 美国-5.79MB/s
       - 法国-15.0MB/s
       - 美国-2.65MB/s
-    timeout: 1000
-    type: fallback
-    url: https://www.gstatic.com/generate_204
-  - interval: 300
-    name: 🔰 延迟最低
-    proxies: *id001
-    tolerance: 50
-    timeout: 1000
-    max-failed-times: 1
     type: url-test
     url: https://www.gstatic.com/generate_204
   - name: 🎯 全球直连
@@ -1192,40 +1222,142 @@ proxy-groups:
       - 美国-2.65MB/s
   - interval: 300
     name: 🇭🇰 香港节点
-    proxies:
-    filter: "香港"
-    tolerance: 50
+    roxies: *id001
     timeout: 1000
-    max-failed-times: 1
-    type: url-test
+    type: fallback
     url: https://www.gstatic.com/generate_204
-  - interval: 300
-    name: 🇯🇵 日本节点
-    proxies:
-    filter: "日本"
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
     tolerance: 50
-    timeout: 1000
-    max-failed-times: 1
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-  - interval: 300
-    name: 🇸🇬 狮城节点
     proxies:
-    filter: "新加坡"
-    tolerance: 50
-    timeout: 1000
-    max-failed-times: 1
+      - 日本-8.43MB/s
+      - 日本-3.47MB/s
+  - name: 🇸🇬 狮城节点
     type: url-test
-    url: https://www.gstatic.com/generate_204
-  - interval: 300
-    name: 🇺🇸 美国节点
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
     proxies:
-    filter: "美国"
-    tolerance: 50
-    timeout: 1000
-    max-failed-times: 1
+      - 新加坡-1.30MB/s
+      - 新加坡-128.6KB/s
+      - 新加坡-14.6MB/s
+      - 新加坡-17.5MB/s
+      - 新加坡-18.1MB/s
+      - 新加坡-3.1MB/s
+      - 新加坡-5.5MB/s
+  - name: 🇺🇲 美国节点
     type: url-test
-    url: https://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 美国 CloudFlare节点_1
+      - 美国 CloudFlare节点_2
+      - 美国 CloudFlare节点_3
+      - 美国 V2CROSS.COM_1
+      - 美国 CloudFlare节点_4
+      - 美国 Fastly全球Anycast节点_1
+      - 美国 Fastly全球Anycast节点_2
+      - 美国 CloudFlare节点_5
+      - 美国 Fastly全球Anycast节点_3
+      - 美国 CloudFlare节点_6
+      - 美国 CloudFlare节点_7
+      - 美国 教育网_1
+      - 美国 CloudFlare节点_9
+      - 美国 CloudFlare节点_10
+      - 美国 CloudFlare节点_11
+      - 美国 CloudFlare节点_12
+      - 美国 CloudFlare节点_13
+      - 美国 CloudFlare节点_14
+      - 美国 CloudFlare节点_15
+      - 美国 Alabanza
+      - 美国 CloudFlare节点_16
+      - 美国 V2CROSS.COM_2
+      - 美国 CloudFlare节点_17
+      - 美国 爱荷华州得梅因Microsoft数据中心
+      - 美国 CloudFlare节点_19
+      - 美国 CloudFlare节点_20
+      - 美国 教育网_2
+      - 美国 CloudFlare节点_21
+      - 美国 CloudFlare节点_22
+      - 美国 CloudFlare节点_23
+      - 美国 CloudFlare节点_24
+      - 美国 CloudFlare节点_25
+      - 美国-891.0KB/s
+      - 美国 CloudFlare节点_26
+      - 美国 Fastly全球Anycast节点_4
+      - 美国+Xerox
+      - 美国+Amazon数据中心
+      - 美国+CloudFlare节点_1
+      - 美国+CloudFlare节点_2
+      - 美国+CloudFlare节点_3
+      - 美国+CloudFlare节点_4
+      - 美国+CloudFlare节点_5
+      - 美国+CloudFlare节点_6
+      - 美国+CloudFlare节点_7
+      - 美国-791.8KB/s
+      - 美国-2.56MB/s
+      - 美国-842.7KB/s
+      - 美国-3.01MB/s
+      - 美国-237.7KB/s
+      - 美国-244.8KB/s
+      - 美国-212.9KB/s
+      - 美国-24.5MB/s
+      - 美国-1.17MB/s
+      - 美国-55.2MB/s
+      - 美国-3.08MB/s
+      - 美国-3.92MB/s
+      - 美国-842.5KB/s
+      - 美国-845.4KB/s
+      - 美国-836.7KB/s
+      - 美国-848.0KB/s
+      - 美国-839.2KB/s
+      - 美国-826.8KB/s
+      - 美国-838.9KB/s
+      - 美国-834.1KB/s
+      - 美国-840.3KB/s
+      - 美国-847.9KB/s
+      - 美国-840.1KB/s
+      - 美国-841.8KB/s
+      - 美国-842.9KB/s
+      - 美国-824.7KB/s
+      - 美国-3.79MB/s
+      - 美国-588.7KB/s
+      - 美国-759.3KB/s
+      - 美国-807.9KB/s
+      - 美国-823.6KB/s
+      - 美国-3.80MB/s
+      - 美国-257.8KB/s
+      - 美国-331.8KB/s
+      - 美国-151.0KB/s
+      - 美国-37.7MB/s
+      - 美国-3.78MB/s
+      - 美国-108.7KB/s
+      - 美国-13.4MB/s
+      - 美国-2.46MB/s
+      - 美国-25.1MB/s
+      - 美国-28.8MB/s
+      - 美国-3.16MB/s
+      - 美国-4.12MB/s
+      - 美国-21.8MB/s
+      - 美国-807.2KB/s
+      - 美国-828.7KB/s
+      - 美国-17.5MB/s
+      - 美国-21.6MB/s
+      - 美国-672.7KB/s
+      - 美国-695.6KB/s
+      - 美国-421.5KB/s
+      - 美国-369.6KB/s
+      - 美国-378.7KB/s
+      - 美国-379.1KB/s
+      - 美国-305.9KB/s
+      - 美国-18.6MB/s
+      - 美国-16.3MB/s
+      - 美国-709.3KB/s
+      - 美国-5.79MB/s
+      - 美国-2.65MB/s
 
 rules:
 # 本地/局域网地址
