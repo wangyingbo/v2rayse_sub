@@ -44,16 +44,16 @@ dns:
 ###开始建立锚点
 
 # 自动选择
-fly: &fly {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4]}
+fly: &fly {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2]}
 
 # 手动切换
 all: &all {type: select, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4]}
 
 # 解锁 AI
-ai: &ai {type: url-test, url: "http://www.google.com/generate_204", interval: 120, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4], filter: "(?!.*(hong kong|hk|香港|香|港|hk😈))(?i)(us|unitedstates|united states|usa|jp|sg|zgo|tw|sjc|中转 US|中转 TW|中转 JP|GPT|解锁|台湾|日本|新加坡|美国)"}
+ai: &ai {type: url-test, url: "http://www.google.com/generate_204", interval: 120, tolerance: 50, lazy: true, use: [订阅 5, 订阅 6], filter: "(?!.*(hong kong|hk|香港|香|港|hk😈))"}
 
 # 备用应急
-backup: &backup {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 4]}
+backup: &backup {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 3, 订阅 4]}
 
 # 订阅更新和延迟测试相关
 p: &p {type: http, interval: 21600, health-check: {enable: true, url: "http://www.google.com/generate_204", interval: 1800, filter: "(?i)^(?!unavailable).*$"}}
@@ -70,14 +70,21 @@ proxy-providers:  # Meta支持机场通用订阅
     <<: *p
     url: "https://bestsub.bestrui.ggff.net/share/bestsub/cdcefaa4-1f0d-462e-ba76-627b344989f2/bestsub.yaml"
     
-  订阅 3: # 项目地址：https://github.com/Ruk1ng001/freeSub https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml
+  订阅 3: # 备用节点
     <<: *p
-    url: ""
+    url: "https://sub.ndllz.me/backup"
     
-  订阅 4: # 
+  订阅 4: # 备用节点
     <<: *p
     url: "https://sub.ndllz.me/serv00"
     
+  订阅 5: # 解锁节点
+    <<: *p
+    url: "https://gist.githubusercontent.com/freeorgworld/128c0e7260148f61f8708c9566aed5ab/raw/all.yaml"
+    
+  订阅 6: # 解锁节点
+    <<: *p
+    url: "https://bestsub.bestrui.ggff.net/share/bestsub/cdcefaa4-1f0d-462e-ba76-627b344989f2/openai.yaml"
     
 
 proxy-groups:
