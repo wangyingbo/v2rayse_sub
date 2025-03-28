@@ -1,8 +1,8 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-03-27 15:55:37
-# 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
+# 创建时间：2025-03-28 02:50:17
+# 使用模版：ACL4SSR_Mini.ini
 # 节点数量：482
 # 节点类型：trojan, vmess, ss
 ####################################
@@ -552,7 +552,7 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🗺️ 选择地区
+      - 🔮 负载均衡
       - DIRECT
       - 爱尔兰-130.4KB/s
       - 美国-23.7MB/s
@@ -1036,14 +1036,9 @@ proxy-groups:
       - 加拿大-2.01MB/s
       - 新加坡-4.47MB/s
       - 中转节点-10.62MB/s
-  - name: ♻️ 自动选择
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    timeout: 1500
-    max-failed-times: 1
-    proxies:
+  - interval: 300
+    name: ♻️ 自动选择
+    proxies: &id001
       - 爱尔兰-130.4KB/s
       - 美国-23.7MB/s
       - 美国-141.5KB/s
@@ -1526,6 +1521,18 @@ proxy-groups:
       - 加拿大-2.01MB/s
       - 新加坡-4.47MB/s
       - 中转节点-10.62MB/s
+    timeout: 1500
+    max-failed-times: 1
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+  - interval: 300
+    name:  🔮 负载均衡
+    proxies: *id001
+    tolerance: 50
+    timeout: 1500
+    max-failed-times: 1
+    type: load-balance
+    url: https://www.gstatic.com/generate_204
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1543,6 +1550,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🔮 负载均衡
       - 爱尔兰-130.4KB/s
       - 美国-23.7MB/s
       - 美国-141.5KB/s
@@ -2025,232 +2033,6 @@ proxy-groups:
       - 加拿大-2.01MB/s
       - 新加坡-4.47MB/s
       - 中转节点-10.62MB/s
-  - name: 🗺️ 选择地区
-    type: select
-    proxies:
-      - 🇭🇰 香港节点
-      - 🇸🇬 狮城节点
-      - 🇺🇲 美国节点
-      - 🇯🇵 日本节点
-  - name: 🇭🇰 香港节点
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    timeout: 1500
-    max-failed-times: 1
-    proxies:
-      - 香港-79.3MB/s
-      - 香港-20.8MB/s
-      - 香港-3.1MB/s
-      - 香港-72.7MB/s_2
-      - 香港-9.9MB/s_2
-      - 香港-44.3MB/s
-      - 香港-2.73MB/s_2
-      - 香港-16.4MB/s_2
-      - 香港-948.1KB/s
-      - 香港-17.32MB/s
-      - 香港-1.68MB/s
-  - name: 🇯🇵 日本节点
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    timeout: 1500
-    max-failed-times: 1
-    proxies:
-      - 日本-455.4KB/s
-      - 日本-16.5MB/s_2
-      - 日本-13.73MB/s_2
-      - 日本-356.7KB/s_2
-      - 日本-13.54MB/s_2
-      - 日本-490.7KB/s_2
-      - 日本-132.5KB/s
-      - 日本-130.4KB/s_2
-      - 日本-221.4KB/s_2
-  - name: 🇸🇬 狮城节点
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    timeout: 1500
-    max-failed-times: 1
-    proxies:
-      - 新加坡-304.1KB/s
-      - 新加坡-58.9MB/s_2
-      - 新加坡-305.3KB/s_2
-      - 新加坡-170.1KB/s_2
-      - 新加坡-15.88MB/s_2
-      - 新加坡-262.2KB/s_2
-      - 新加坡-925.5KB/s_2
-      - 新加坡-3.32MB/s_2
-      - 新加坡-15.77MB/s
-      - 新加坡-136.8KB/s
-      - 新加坡-2.26MB/s
-      - 新加坡-1.46MB/s
-      - 新加坡-252.2KB/s
-      - 新加坡-881.9KB/s
-      - 新加坡-1.53MB/s
-      - 新加坡-3.83MB/s
-      - 新加坡-4.47MB/s
-  - name: 🇺🇲 美国节点
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    timeout: 1500
-    max-failed-times: 1
-    proxies:
-      - 美国-23.7MB/s
-      - 美国-141.5KB/s
-      - 美国-3.38MB/s
-      - 美国-3.26MB/s
-      - 美国-7.1MB/s_2
-      - 美国-1.11MB/s
-      - 美国-111.0KB/s
-      - 美国-2.51MB/s_2
-      - 美国-31.6MB/s
-      - 美国-14.9MB/s
-      - 美国-505.9KB/s
-      - 美国-53.08MB/s
-      - 美国-31.2MB/s_2
-      - 美国-6.3MB/s_2
-      - 美国-9.2MB/s
-      - 美国-2.06MB/s
-      - 美国-3.55MB/s
-      - 美国-1.90MB/s
-      - 美国-139.5KB/s
-      - 美国-1.57MB/s
-      - 美国-46.9MB/s
-      - 美国-22.5MB/s
-      - 美国-2.14MB/s
-      - 美国-85.2MB/s
-      - 美国-18.4MB/s_2
-      - 美国-39.8MB/s_1
-      - 美国-2.22MB/s_2
-      - 美国-4.00MB/s_2
-      - 美国-44.5MB/s_2
-      - 美国-35.1MB/s_2
-      - 美国-2.96MB/s_2
-      - 美国-78.3MB/s_2
-      - 美国-4.61MB/s_2
-      - 美国-5.36MB/s_2
-      - 美国-3.03MB/s_2
-      - 美国-2.77MB/s_2
-      - 美国-5.27MB/s_2
-      - 美国-5.09MB/s_2
-      - 美国-3.89MB/s_2
-      - 美国-2.42MB/s_2
-      - 美国-1.16MB/s_2
-      - 美国-5.19MB/s_2
-      - 美国-326.8KB/s_2
-      - 美国-325.9KB/s_2
-      - 美国-230.5KB/s_2
-      - 美国-60.0MB/s_2
-      - 美国-85.9MB/s_2
-      - 美国-7.9MB/s_2
-      - 美国-8.1MB/s_2_2
-      - 美国-2.71MB/s_2_2
-      - 美国-6.4MB/s_2
-      - 美国-4.27MB/s_2
-      - 美国-257.3KB/s_2
-      - 美国-167.7KB/s
-      - 美国-801.9KB/s
-      - 美国-467.2KB/s
-      - 美国-850.5KB/s_1
-      - 美国-494.6KB/s
-      - 美国-620.4KB/s_2
-      - 美国-2.89MB/s_2
-      - 美国-4.44MB/s
-      - 美国-828.0KB/s
-      - 美国-839.0KB/s_2
-      - 美国-166.3KB/s_2
-      - 美国-787.5KB/s
-      - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国_16
-      - 🇺🇸_US_美国_18
-      - 美国-642.3KB/s
-      - 美国-1.80MB/s_1
-      - 美国-868.9KB/s
-      - 美国-832.4KB/s
-      - 美国-749.8KB/s
-      - 美国-2.19MB/s_2
-      - 美国-2.49MB/s
-      - 美国-457.3KB/s
-      - 美国-756.8KB/s
-      - 美国-706.8KB/s
-      - 美国-714.2KB/s
-      - 美国-766.6KB/s
-      - 美国-700.0KB/s
-      - 美国-837.6KB/s
-      - 美国-656.6KB/s_1
-      - 美国-725.9KB/s
-      - 美国-616.8KB/s
-      - 美国-801.7KB/s
-      - 美国-784.7KB/s_2
-      - 美国-800.2KB/s_2
-      - 美国-757.8KB/s_2
-      - 美国-780.7KB/s_2
-      - 美国-851.9KB/s_2
-      - 美国-870.0KB/s_2
-      - 美国-644.4KB/s_2
-      - 美国-356.8KB/s_2
-      - 美国-383.3KB/s_2
-      - 美国-770.0KB/s_2
-      - 美国-736.4KB/s_2
-      - 美国-804.7KB/s_2
-      - 美国-785.9KB/s
-      - 美国-850.5KB/s_2
-      - 美国-855.9KB/s
-      - 美国-858.5KB/s
-      - 美国-1.32MB/s
-      - 美国-3.37MB/s
-      - 美国-3.63MB/s
-      - 美国-4.15MB/s
-      - 美国-3.33MB/s
-      - 美国-1.91MB/s_2
-      - 美国-3.54MB/s
-      - 美国-4.08MB/s_2
-      - 美国-4.55MB/s
-      - 美国-787.1KB/s
-      - 美国-324.8KB/s
-      - 美国-848.9KB/s
-      - 美国-1.77MB/s
-      - 美国-678.2KB/s
-      - 美国-395.0KB/s
-      - 美国-497.1KB/s
-      - 美国-791.4KB/s
-      - 美国-819.6KB/s
-      - 美国-876.0KB/s
-      - 美国-874.7KB/s
-      - 美国-871.0KB/s_1
-      - 美国-873.3KB/s
-      - 美国-873.2KB/s
-      - 美国-874.8KB/s
-      - 美国-872.9KB/s
-      - 美国-876.3KB/s
-      - 美国-3.58MB/s_1
-      - 美国-656.6KB/s_2
-      - 美国-3.58MB/s_2
-      - 美国-447.6KB/s
-      - 美国-617.0KB/s
-      - 美国-337.7KB/s
-      - 美国-852.2KB/s
-      - 美国-862.9KB/s_2
-      - 美国-774.3KB/s
-      - 美国-871.0KB/s_2
-      - 美国-869.4KB/s
-      - 美国-870.8KB/s_2
-      - 美国-820.5KB/s
-      - 美国-873.1KB/s_2
-      - 美国-843.8KB/s_2
-      - 美国-811.5KB/s_2
-      - 美国-197.0KB/s_2
-      - 美国-3.70MB/s
-      - 美国-2.95MB/s
-      - 美国-3.29MB/s
-      - 美国-773.6KB/s
-      - 美国-803.5KB/s
 
 rules:
 # 本地/局域网地址
@@ -2293,37 +2075,6 @@ rules:
   - DOMAIN-SUFFIX,zte.home,🎯 全球直连
   - DOMAIN-SUFFIX,tplogin.cn,🎯 全球直连
   - DOMAIN-SUFFIX,wifi.cmcc,🎯 全球直连
-# Unbreak 白名单 不应该被广告链接的网站
-# Epicgames
-# Getui
-# Google
-# Mozilla
-# Origin
-# Tencent
-# Strava
-# Umeng
-# Miui 小米
-# General
-# Hypixel Network
-# Koodo Mobile
-  - DOMAIN-SUFFIX,ol.epicgames.com,🎯 全球直连
-  - DOMAIN-SUFFIX,dizhensubao.getui.com,🎯 全球直连
-  - DOMAIN,dl.google.com,🎯 全球直连
-  - DOMAIN-SUFFIX,googletraveladservices.com,🎯 全球直连
-  - DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net,🎯 全球直连
-  - DOMAIN,origin-a.akamaihd.net,🎯 全球直连
-  - DOMAIN,fairplay.l.qq.com,🎯 全球直连
-  - DOMAIN,livew.l.qq.com,🎯 全球直连
-  - DOMAIN,vd.l.qq.com,🎯 全球直连
-  - DOMAIN,errlog.umeng.com,🎯 全球直连
-  - DOMAIN,msg.umeng.com,🎯 全球直连
-  - DOMAIN,msg.umengcloud.com,🎯 全球直连
-  - DOMAIN,tracking.miui.com,🎯 全球直连
-  - DOMAIN,app.adjust.com,🎯 全球直连
-  - DOMAIN,bdtj.tagtic.cn,🎯 全球直连
-  - DOMAIN,rewards.hypixel.net,🎯 全球直连
-  - DOMAIN-SUFFIX,koodomobile.com,🎯 全球直连
-  - DOMAIN-SUFFIX,koodomobile.ca,🎯 全球直连
 # 本碎片只包含常见广告关键字、广告联盟。无副作用，放心使用
 # 广告关键词
 # 广告联盟-国内****************
@@ -4074,7 +3825,7 @@ rules:
   - IP-CIDR6,2001:b28:f23d::/48,🚀 节点选择,no-resolve
   - IP-CIDR6,2001:b28:f23f::/48,🚀 节点选择,no-resolve
 # 内容：国外媒体列表
-# 更新：2024-12-14 11:14:53
+# 更新：2025-03-27 22:20:21
 # 数量：367条
 # ABC
 # AbemaTV
@@ -5613,6 +5364,8 @@ rules:
   - DOMAIN-SUFFIX,zhipin.com,🎯 全球直连
   - DOMAIN-SUFFIX,zhongsou.com,🎯 全球直连
   - DOMAIN-SUFFIX,zhuihd.com,🎯 全球直连
+  - DOMAIN-SUFFIX,cmbchina.com,🎯 全球直连
+  - DOMAIN-SUFFIX,95516.com,🎯 全球直连
 # 中国云服务商ip端
 # 阿里
 # 腾讯 qq
