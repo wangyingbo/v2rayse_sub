@@ -44,13 +44,13 @@ dns:
 ###开始建立锚点
 
 # 自动选择
-fly: &fly {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2]}
+fly: &fly {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 1, 订阅 2, 订阅 7]}
 
 # 手动切换
-all: &all {type: select, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4]}
+all: &all {type: select, use: [订阅 1, 订阅 2, 订阅 3, 订阅 4, 订阅 7]}
 
 # 解锁 AI
-ai: &ai {type: url-test, url: "http://www.google.com/generate_204", interval: 120, tolerance: 50, lazy: true, use: [订阅 5, 订阅 6], filter: "(?!.*(hong kong|hk|香港|香|港|hk😈))"}
+ai: &ai {type: url-test, url: "http://www.google.com/generate_204", interval: 120, tolerance: 50, lazy: true, use: [订阅 5, 订阅 6, 订阅 7], filter: "(?!.*(hong kong|hk|香港|香|港|香港 01))"}
 
 # 备用应急
 backup: &backup {type: url-test, url: "http://www.google.com/generate_204", interval: 300, tolerance: 50, lazy: true, use: [订阅 3, 订阅 4]}
@@ -85,6 +85,10 @@ proxy-providers:  # Meta支持机场通用订阅
   订阅 6: # 解锁节点
     <<: *p
     url: "https://bestsub.bestrui.ggff.net/share/bestsub/cdcefaa4-1f0d-462e-ba76-627b344989f2/openai.yaml"
+    
+  订阅 7: # 家宽节点
+    <<: *p
+    url: "http://ystce.com/vb/clash_ys.php"
     
 
 proxy-groups:
