@@ -1,840 +1,400 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-04-20 04:23:12
+# 创建时间：2025-04-20 17:15:50
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
-# 节点数量：253
+# 节点数量：97
 # 节点类型：vmess, trojan
 ####################################
 mixed-port: 7890
-allow-lan: false
-log-level: silent
-external-controller: 127.0.0.1:9090
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
 dns:
-  enable: true
-  cache-algorithm: arc
-  prefer-h3: false
-  use-hosts: false
-  use-system-hosts: false
-  respect-rules: true
-  listen: 127.0.0.1:1053
-  ipv6: false
+  enabled: true
+  listen: 0.0.0.0:1053
+  ipv6: true
   default-nameserver:
-    - https://cloudflare-dns.com/dns-query
+    - 223.5.5.5
+    - 114.114.114.114
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - '*.lan'
-  nameserver-policy:
-    '+.arpa':
-      - https://cloudflare-dns.com/dns-query 
-    'rule-set:cn':
-      - https://doh.alidns.com/dns-query
-      - https://1.12.222.222/dns-query
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - swscan.apple.com
+    - mesu.apple.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - +.music.163.com
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - +.y.qq.com
+    - +.music.tc.qq.com
+    - aqqmusic.tc.qq.com
+    - +.stream.qqmusic.qq.com
+    - '*.xiami.com'
+    - +.music.migu.cn
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - +.xboxlive.com
+    - localhost.ptlogin2.qq.com
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '*.mcdn.bilivideo.cn'
   nameserver:
-    - https://dns.google/dns-query
-  fallback:
-    - https://cloudflare-dns.com/dns-query
-  proxy-server-nameserver:
-    - https://mozilla.cloudflare-dns.com/dns-query
-    - https://dns.adguard.com/dns-query
-  direct-nameserver:
-    - https://doh.alidns.com/dns-query
-  direct-nameserver-follow-policy: true
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-      - gfw
-    domain:
-      - '.google.com'
-      - '.facebook.com'
-      - 'googleusercontent.com'
-      - 'youtube.com'
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
 
 proxies:
-  - {"name":"🇨🇦 加拿大 www.85la.com 283","type":"vmess","server":"51.79.102.253","port":80,"cipher":"auto","uuid":"58fe1542-5290-40ad-815a-77707a81afe5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/IOebhLMhl1CTbFHbL95myfRX2","headers":{"host":"google.com"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_4","type":"vmess","server":"141.101.121.109","port":2053,"cipher":"auto","uuid":"141.101.121.109:2053?type=ws&encryption=auto&host=1744007578.speed.zjgza.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.zjgza.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_4","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.zjgza.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_19","type":"vmess","server":"141.101.120.64","port":2053,"cipher":"auto","uuid":"141.101.120.64:2053?type=ws&encryption=auto&host=1744007578.speed.zjgza.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.zjgza.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_19","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.zjgza.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_14","type":"vmess","server":"141.101.121.233","port":2053,"cipher":"auto","uuid":"141.101.121.233:2053?type=ws&encryption=auto&host=1744007578.speed.zjgza.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.zjgza.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_14","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.zjgza.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_25","type":"vmess","server":"104.18.118.195","port":8443,"cipher":"auto","uuid":"104.18.118.195:8443?type=ws&encryption=auto&host=1743919978.speed.zjgza.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.zjgza.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_25","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.zjgza.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_39","type":"vmess","server":"141.101.120.41","port":2053,"cipher":"auto","uuid":"141.101.120.41:2053?type=ws&encryption=auto&host=1744007578.speed.zjgza.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.zjgza.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_39","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.zjgza.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_33","type":"vmess","server":"15.235.50.172","port":443,"cipher":"auto","uuid":"15.235.50.172:443?type=ws&encryption=auto&path=%2Flinkvws&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_33","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
-  - {"name":"🇺🇸 www.85la.com 美国_44","type":"vmess","server":"134.195.198.147","port":443,"cipher":"auto","uuid":"134.195.198.147:443?type=ws&encryption=auto&host=inna.cfd&path=%2Flinkvws&security=tls&sni=inna.cfd#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_44","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"inna.cfd"}}}
-  - {"name":"🇧🇪 www.85la.com 比利时_1","type":"vmess","server":"kapelleng.com","port":443,"cipher":"auto","uuid":"kapelleng.com:443?type=ws&encryption=auto&host=kapelleng.com&path=%2Flinkvws&security=tls&sni=kapelleng.com#%F0%9F%87%A7%F0%9F%87%AA%20www.85la.com%20%E6%AF%94%E5%88%A9%E6%97%B6_1","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"kapelleng.com"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_46","type":"vmess","server":"23.162.200.227","port":443,"cipher":"auto","uuid":"23.162.200.227:443?type=ws&encryption=auto&path=%2Flinkvws&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_46","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
-  - {"name":"🇺🇸 www.85la.com 美国_50","type":"vmess","server":"15.235.83.227","port":443,"cipher":"auto","uuid":"15.235.83.227:443?type=ws&encryption=auto&path=%2Flinkvws&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_50","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
-  - {"name":"🇺🇸 www.85la.com 美国_51","type":"trojan","server":"138.197.5.103","port":443,"udp":true,"password":"xxoo","sni":"marzfun.ir","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_53","type":"vmess","server":"38.99.82.193","port":443,"cipher":"auto","uuid":"38.99.82.193:443?type=ws&encryption=auto&host=tilebani.com&path=%2Flinkvws&security=tls&sni=tilebani.com#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_53","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"tilebani.com"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_296","type":"vmess","server":"cloudgetservice.mcloudservice.site","port":443,"cipher":"auto","uuid":"cloudgetservice.mcloudservice.site:443?type=ws&encryption=auto&path=%2Flinvkws&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_296","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linvkws"}}
-  - {"name":"🇮🇱 www.85la.com 以色列","type":"vmess","server":"91.194.11.162","port":58891,"cipher":"auto","uuid":"91.194.11.162:58891?type=tcp&encryption=auto#%F0%9F%87%AE%F0%9F%87%B1%20www.85la.com%20%E4%BB%A5%E8%89%B2%E5%88%97","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_104","type":"trojan","server":"89.187.181.172","port":43118,"udp":true,"password":"ypDt8RkT7J","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_67","type":"vmess","server":"15.235.83.228","port":443,"cipher":"auto","uuid":"15.235.83.228:443?type=ws&encryption=auto&path=%2Flinkvws&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_67","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
-  - {"name":"🇺🇸 www.85la.com 美国_71","type":"vmess","server":"1744007541.tencentapp.cn","port":8443,"cipher":"auto","uuid":"1744007541.tencentapp.cn:8443?type=ws&encryption=auto&host=1744007578.speed.adl.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.adl.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_71","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.adl.cccp.freefly.pp.ua"}}}
-  - {"name":"🇨🇿 www.85la.com 捷克_1","type":"vmess","server":"185.189.32.179","port":22702,"cipher":"auto","uuid":"185.189.32.179:22702?type=tcp&encryption=auto#%F0%9F%87%A8%F0%9F%87%BF%20www.85la.com%20%E6%8D%B7%E5%85%8B_1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇨🇿 www.85la.com 捷克_2","type":"vmess","server":"185.189.32.179","port":48737,"cipher":"auto","uuid":"185.189.32.179:48737?type=tcp&encryption=auto#%F0%9F%87%A8%F0%9F%87%BF%20www.85la.com%20%E6%8D%B7%E5%85%8B_2","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_78","type":"vmess","server":"172.66.168.209","port":443,"cipher":"auto","uuid":"172.66.168.209:443?type=ws&encryption=auto&host=MAxnETViP-ca2.mAxNETCloudsERVIcE.coM&path=%2Flinkws&security=tls&sni=MAxnETViP-ca2.mAxNETCloudsERVIcE.coM#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_78","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"MAxnETViP-ca2.mAxNETCloudsERVIcE.coM"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_106","type":"vmess","server":"104.18.119.222","port":2096,"cipher":"auto","uuid":"104.18.119.222:2096?type=ws&encryption=auto&host=1743256978.speed.adl.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743256978.speed.adl.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_106","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743256978.speed.adl.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_91","type":"trojan","server":"v12.nmcf.me","port":443,"udp":true,"password":"a06a4165-5276-40ea-b1f0-76f5672de25a","sni":"v12.nmcf.me","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_92","type":"vmess","server":"e9adbfcf-sux8g0-sw51rj-hkb8.se.plebai.net","port":12083,"cipher":"auto","uuid":"e9adbfcf-sux8g0-sw51rj-hkb8.se.plebai.net:12083?type=ws&encryption=auto&host=broadcastlv.chat.bilibili.com&path=%2F#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_92","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"broadcastlv.chat.bilibili.com"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_120","type":"vmess","server":"fgh9jkr5.890617.xyz","port":443,"cipher":"auto","uuid":"fgh9jkr5.890617.xyz:443?type=ws&encryption=auto&host=fgh9jkr5.890617.xyz&path=%2Fq2hGWwflPDbymaoOj85lz42MdhsCLV&security=tls&sni=fgh9jkr5.890617.xyz#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_120","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/q2hGWwflPDbymaoOj85lz42MdhsCLV","headers":{"host":"fgh9jkr5.890617.xyz"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_139","type":"vmess","server":"141.101.120.232","port":2096,"cipher":"auto","uuid":"141.101.120.232:2096?type=ws&encryption=auto&path=%2F&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_139","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸 www.85la.com 美国_134","type":"trojan","server":"89.187.181.179","port":43118,"udp":true,"password":"ypDt8RkT7J","sni":"89.187.181.179","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_109","type":"vmess","server":"sanjose01.890614.filegear-sg.me","port":443,"cipher":"auto","uuid":"sanjose01.890614.filegear-sg.me:443?type=ws&encryption=auto&host=sanjose01.890614.filegear-sg.me&path=%2FYfB29GXf4cThJQeJb&security=tls&sni=sanjose01.890614.filegear-sg.me#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_109","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/YfB29GXf4cThJQeJb","headers":{"host":"sanjose01.890614.filegear-sg.me"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_116","type":"vmess","server":"141.101.121.234","port":8443,"cipher":"auto","uuid":"141.101.121.234:8443?type=ws&encryption=auto&host=1744007578.speed.adl.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.adl.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_116","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.adl.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_124","type":"vmess","server":"141.101.120.64","port":8443,"cipher":"auto","uuid":"141.101.120.64:8443?type=ws&encryption=auto&host=1744007578.speed.adl.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.adl.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_124","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.adl.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_126","type":"vmess","server":"141.101.121.95","port":2096,"cipher":"auto","uuid":"141.101.121.95:2096?type=ws&encryption=auto&host=1743919978.speed.adl.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.adl.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_126","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.adl.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_140","type":"vmess","server":"tyu9g5.890617.xyz","port":443,"cipher":"auto","uuid":"tyu9g5.890617.xyz:443?type=ws&encryption=auto&host=tYu9G5.890617.Xyz&path=%2Fq2hGWwflPDbymaoOj85lz42MdhsCLV&security=tls&sni=tYu9G5.890617.Xyz#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_140","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/q2hGWwflPDbymaoOj85lz42MdhsCLV","headers":{"host":"tYu9G5.890617.Xyz"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_136","type":"vmess","server":"15.204.237.31","port":443,"cipher":"auto","uuid":"15.204.237.31:443?type=ws&encryption=auto&path=%2Flinkvws&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_136","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
-  - {"name":"🇺🇸 www.85la.com 美国_131","type":"vmess","server":"15.204.248.92","port":30562,"cipher":"auto","uuid":"15.204.248.92:30562?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_131","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_137","type":"vmess","server":"141.101.120.238","port":8443,"cipher":"auto","uuid":"141.101.120.238:8443?type=ws&encryption=auto&host=1744007578.speed.adl.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.adl.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_137","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.adl.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_138","type":"vmess","server":"141.101.121.215","port":8443,"cipher":"auto","uuid":"141.101.121.215:8443?type=ws&encryption=auto&host=1744007578.speed.adl.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.adl.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_138","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.adl.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_170","type":"vmess","server":"usa-sanjose-one.890614.filegear-sg.me","port":443,"cipher":"auto","uuid":"usa-sanjose-one.890614.filegear-sg.me:443?type=ws&encryption=auto&host=usa-sanjose-one.890614.filegear-sg.me&path=%2FYfB29GXf4cThJQeJb&security=tls&sni=usa-sanjose-one.890614.filegear-sg.me#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_170","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/YfB29GXf4cThJQeJb","headers":{"host":"usa-sanjose-one.890614.filegear-sg.me"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_150","type":"vmess","server":"15.204.87.224","port":443,"cipher":"auto","uuid":"15.204.87.224:443?type=ws&encryption=auto&host=UsA-Vp-224.MEtIkAPpS.cOm&path=%2Flinkvws&security=tls&sni=UsA-Vp-224.MEtIkAPpS.cOm#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_150","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"UsA-Vp-224.MEtIkAPpS.cOm"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_161","type":"vmess","server":"1743919941.tencentapp.cn","port":2096,"cipher":"auto","uuid":"1743919941.tencentapp.cn:2096?type=ws&encryption=auto&path=%2F&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_161","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸 www.85la.com 美国_162","type":"vmess","server":"sanjose05.852224.ggff.net","port":443,"cipher":"auto","uuid":"sanjose05.852224.ggff.net:443?type=ws&encryption=auto&path=%2FYfB29GXf4cThJQeJb&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_162","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/YfB29GXf4cThJQeJb"}}
-  - {"name":"🇺🇸 www.85la.com 美国_156","type":"vmess","server":"sanjose06.852224.ggff.net","port":443,"cipher":"auto","uuid":"sanjose06.852224.ggff.net:443?type=ws&encryption=auto&host=sanjose06.852224.ggff.net&path=%2FYfB29GXf4cThJQeJb&security=tls&sni=sanjose06.852224.ggff.net#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_156","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/YfB29GXf4cThJQeJb","headers":{"host":"sanjose06.852224.ggff.net"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_164","type":"vmess","server":"141.101.120.195","port":2096,"cipher":"auto","uuid":"141.101.120.195:2096?type=ws&encryption=auto&host=1743919978.speed.adl.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.adl.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_164","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.adl.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_165","type":"vmess","server":"2.58.87.221","port":12269,"cipher":"auto","uuid":"2.58.87.221:12269?type=ws&encryption=auto&path=%2F#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_165","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸 www.85la.com 美国_202","type":"vmess","server":"172.67.138.140","port":443,"cipher":"auto","uuid":"172.67.138.140:443?type=ws&encryption=auto&host=jahfkjha.cfd&path=%2Flinkws&security=tls&sni=jahfkjha.cfd#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_202","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
-  - {"name":"🇳🇱 www.85la.com 荷兰_3","type":"vmess","server":"160.153.1.100","port":443,"cipher":"auto","uuid":"160.153.1.100:443?type=ws&encryption=auto&host=jahfkjha.cfd&path=%2Flinkws&security=tls&sni=jahfkjha.cfd#%F0%9F%87%B3%F0%9F%87%B1%20www.85la.com%20%E8%8D%B7%E5%85%B0_3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_169","type":"vmess","server":"141.101.120.190","port":8443,"cipher":"auto","uuid":"141.101.120.190:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_169","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_171","type":"vmess","server":"ora2.aihi.uk","port":8088,"cipher":"auto","uuid":"ora2.aihi.uk:8088?type=ws&encryption=auto&host=ora2.aihi.uk&path=%2Fray&security=tls&sni=ora2.aihi.uk#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_171","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ray","headers":{"host":"ora2.aihi.uk"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_197","type":"vmess","server":"192.9.148.64","port":8088,"cipher":"auto","uuid":"192.9.148.64:8088?type=ws&encryption=auto&path=%2Fray&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_197","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ray"}}
-  - {"name":"🇺🇸 www.85la.com 美国_173","type":"vmess","server":"1743919941.tencentapp.cn","port":8443,"cipher":"auto","uuid":"1743919941.tencentapp.cn:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_173","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_174","type":"vmess","server":"zula.ir","port":443,"cipher":"auto","uuid":"zula.ir:443?type=ws&encryption=auto&host=jahfkjha.cfd&path=%2Flinkws&security=tls&sni=jahfkjha.cfd#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_174","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_184","type":"vmess","server":"s1.db-link02.top","port":80,"cipher":"auto","uuid":"s1.db-link02.top:80?type=ws&encryption=auto&host=100-49-141-209.s1.db-link02.top&path=%2Fdabai.in104.17.169.115#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_184","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in104.17.169.115","headers":{"host":"100-49-141-209.s1.db-link02.top"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_216","type":"vmess","server":"s1.db-link02.top","port":2086,"cipher":"auto","uuid":"s1.db-link02.top:2086?type=ws&encryption=auto&host=100-223-71-166.s1.db-link02.top&path=%2Fdabai.in172.64.9.208#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_216","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in172.64.9.208","headers":{"host":"100-223-71-166.s1.db-link02.top"}}}
-  - {"name":"🇧🇷 www.85la.com 巴西_1","type":"vmess","server":"188.114.96.2","port":443,"cipher":"auto","uuid":"188.114.96.2:443?type=ws&encryption=auto&host=jahfkjha.cfd&path=%2Flinkws&security=tls&sni=jahfkjha.cfd#%F0%9F%87%A7%F0%9F%87%B7%20www.85la.com%20%E5%B7%B4%E8%A5%BF_1","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_182","type":"vmess","server":"172.67.204.84","port":443,"cipher":"auto","uuid":"172.67.204.84:443?type=ws&encryption=auto&host=jahfkjha.cfd&path=%2Flinkws&security=tls&sni=jahfkjha.cfd#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_182","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_179","type":"vmess","server":"1744007541.tencentapp.cn","port":2053,"cipher":"auto","uuid":"1744007541.tencentapp.cn:2053?type=ws&encryption=auto&host=1744007578.speed.zjgza.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.zjgza.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_179","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.zjgza.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_238","type":"vmess","server":"s1.db-link02.top","port":2082,"cipher":"auto","uuid":"s1.db-link02.top:2082?type=ws&encryption=auto&host=100-113-212-3.s1.db-link02.top&path=%2Fdabai.in172.67.79.231#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_238","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in172.67.79.231","headers":{"host":"100-113-212-3.s1.db-link02.top"}}}
-  - {"name":"🇧🇷 www.85la.com 巴西_6","type":"vmess","server":"188.114.96.3","port":443,"cipher":"auto","uuid":"188.114.96.3:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%A7%F0%9F%87%B7%20www.85la.com%20%E5%B7%B4%E8%A5%BF_6","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_183","type":"vmess","server":"172.233.160.249","port":443,"cipher":"auto","uuid":"172.233.160.249:443?type=ws&encryption=auto&path=%2Flinkws&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_183","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws"}}
-  - {"name":"🇺🇸 www.85la.com 美国_186","type":"vmess","server":"141.101.120.249","port":8443,"cipher":"auto","uuid":"141.101.120.249:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_186","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_503","type":"vmess","server":"phx-plus-1ddns.faforex.eu.org","port":23451,"cipher":"auto","uuid":"phx-plus-1ddns.faforex.eu.org:23451?type=ws&encryption=auto&host=phx-plus-1ddns.faforex.eu.org&path=%2F#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_503","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"phx-plus-1ddns.faforex.eu.org"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_189","type":"vmess","server":"154.83.2.90","port":443,"cipher":"auto","uuid":"154.83.2.90:443?type=ws&encryption=auto&host=jahfkjha.cfd&path=%2Flinkws&security=tls&sni=jahfkjha.cfd#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_189","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
-  - {"name":"🇨🇿 www.85la.com 捷克_3","type":"vmess","server":"79.127.229.54","port":18000,"cipher":"auto","uuid":"79.127.229.54:18000?type=tcp&encryption=auto#%F0%9F%87%A8%F0%9F%87%BF%20www.85la.com%20%E6%8D%B7%E5%85%8B_3","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_226","type":"vmess","server":"104.16.155.10","port":2052,"cipher":"auto","uuid":"104.16.155.10:2052?type=ws&encryption=auto&host=100-102-247-92.s1.db-link02.top&path=%2Fdabai.in104.25.175.137#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_226","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in104.25.175.137","headers":{"host":"100-102-247-92.s1.db-link02.top"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_192","type":"vmess","server":"141.101.120.235","port":8443,"cipher":"auto","uuid":"141.101.120.235:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_192","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_193","type":"vmess","server":"141.101.121.34","port":8443,"cipher":"auto","uuid":"141.101.121.34:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_193","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_194","type":"vmess","server":"141.101.121.177","port":8443,"cipher":"auto","uuid":"141.101.121.177:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_194","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_211","type":"vmess","server":"104.19.48.236","port":2082,"cipher":"auto","uuid":"104.19.48.236:2082?type=ws&encryption=auto&host=100-6-81-226.s1.db-link02.top&path=%2Fdabai.in104.20.8.162#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_211","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in104.20.8.162","headers":{"host":"100-6-81-226.s1.db-link02.top"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_196","type":"vmess","server":"ora.aihi.uk","port":8088,"cipher":"auto","uuid":"ora.aihi.uk:8088?type=ws&encryption=auto&host=ora.aihi.uk&path=%2Fray&security=tls&sni=ora.aihi.uk#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_196","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ray","headers":{"host":"ora.aihi.uk"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_198","type":"vmess","server":"104.21.18.227","port":443,"cipher":"auto","uuid":"104.21.18.227:443?type=ws&encryption=auto&host=jahfkjha.cfd&path=%2Flinkws&security=tls&sni=jahfkjha.cfd#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_198","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_205","type":"vmess","server":"198.41.209.70","port":8880,"cipher":"auto","uuid":"198.41.209.70:8880?type=ws&encryption=auto&host=100-103-58-39.s1.db-link02.top&path=%2Fdabai.in104.25.249.215#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_205","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in104.25.249.215","headers":{"host":"100-103-58-39.s1.db-link02.top"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_200","type":"vmess","server":"2.58.87.221","port":46628,"cipher":"auto","uuid":"2.58.87.221:46628?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_200","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_201","type":"vmess","server":"2.58.87.221","port":14555,"cipher":"auto","uuid":"2.58.87.221:14555?type=ws&encryption=auto&host=2.58.87.221&path=%2F&security=tls&sni=2.58.87.221#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_201","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"2.58.87.221"}}}
-  - {"name":"🇧🇷 www.85la.com 巴西_4","type":"vmess","server":"188.114.96.6","port":443,"cipher":"auto","uuid":"188.114.96.6:443?type=ws&encryption=auto&path=%2Flinkws&security=tls#%F0%9F%87%A7%F0%9F%87%B7%20www.85la.com%20%E5%B7%B4%E8%A5%BF_4","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws"}}
-  - {"name":"🇺🇸 www.85la.com 美国_219","type":"vmess","server":"104.16.155.10","port":8880,"cipher":"auto","uuid":"104.16.155.10:8880?type=ws&encryption=auto&host=100-103-58-39.s1.db-link02.top&path=%2Fdabai.in104.25.249.215#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_219","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in104.25.249.215","headers":{"host":"100-103-58-39.s1.db-link02.top"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_204","type":"vmess","server":"104.21.23.210","port":2053,"cipher":"auto","uuid":"104.21.23.210:2053?type=ws&encryption=auto&host=rak1-d.932.pp.ua&path=%2Frak1-d.932.pp.ua&security=tls&sni=rak1-d.932.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_204","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/rak1-d.932.pp.ua","headers":{"host":"rak1-d.932.pp.ua"}}}
-  - {"name":"🇸🇪 www.85la.com 瑞典_2","type":"vmess","server":"185.146.173.95","port":443,"cipher":"auto","uuid":"185.146.173.95:443?type=ws&encryption=auto&host=jahfkjha.cfd&path=%2Flinkws&security=tls&sni=jahfkjha.cfd#%F0%9F%87%B8%F0%9F%87%AA%20www.85la.com%20%E7%91%9E%E5%85%B8_2","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_206","type":"vmess","server":"141.101.121.202","port":8443,"cipher":"auto","uuid":"141.101.121.202:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_206","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_207","type":"vmess","server":"c01.linkerror.cc","port":443,"cipher":"auto","uuid":"c01.linkerror.cc:443?type=ws&encryption=auto&host=c01.linkerror.cc&path=%2Fc01&security=tls&sni=c01.linkerror.cc#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_207","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/c01","headers":{"host":"c01.linkerror.cc"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_208","type":"vmess","server":"141.101.121.254","port":8443,"cipher":"auto","uuid":"141.101.121.254:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_208","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_209","type":"vmess","server":"64.181.241.241","port":8088,"cipher":"auto","uuid":"64.181.241.241:8088?type=ws&encryption=auto&path=%2Fray&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_209","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/ray"}}
-  - {"name":"🇺🇸 www.85la.com 美国_210","type":"vmess","server":"104.21.69.44","port":443,"cipher":"auto","uuid":"104.21.69.44:443?type=ws&encryption=auto&host=jahfkjha.cfd&path=%2Flinkws&security=tls&sni=jahfkjha.cfd#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_210","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_212","type":"vmess","server":"d3fgkhtpi57foq.cloudfront.net","port":443,"cipher":"auto","uuid":"d3fgkhtpi57foq.cloudfront.net:443?type=ws&encryption=auto&host=d3fgkhtpi57foq.cloudfront.net&path=%2Fc02&security=tls&sni=d3fgkhtpi57foq.cloudfront.net#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_212","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/c02","headers":{"host":"d3fgkhtpi57foq.cloudfront.net"}}}
-  - {"name":"🇦🇺 www.85la.com 澳大利亚_2","type":"trojan","server":"43.162.118.156","port":443,"udp":true,"password":"oIwjHDXpKePvYIg8","sni":"myvps.cfd","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_508","type":"vmess","server":"104.18.149.75","port":443,"cipher":"auto","uuid":"104.18.149.75:443?type=ws&encryption=auto&host=hk.insbot.filegear-sg.me&path=%2Faa&security=tls&sni=hk.insbot.filegear-sg.me#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_508","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/aa","headers":{"host":"hk.insbot.filegear-sg.me"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_214","type":"vmess","server":"172.67.183.220","port":443,"cipher":"auto","uuid":"172.67.183.220:443?type=ws&encryption=auto&host=jahfkjha.cfd&path=%2Flinkws&security=tls&sni=jahfkjha.cfd#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_214","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"jahfkjha.cfd"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_215","type":"vmess","server":"141.101.120.145","port":8443,"cipher":"auto","uuid":"141.101.120.145:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_215","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_217","type":"vmess","server":"104.18.149.76","port":443,"cipher":"auto","uuid":"104.18.149.76:443?type=ws&encryption=auto&host=us.kkp.me.eu.org&path=%2Faa&security=tls&sni=us.kkp.me.eu.org#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_217","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/aa","headers":{"host":"us.kkp.me.eu.org"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_218","type":"vmess","server":"d13tculhnb5yd1.cloudfront.net","port":443,"cipher":"auto","uuid":"d13tculhnb5yd1.cloudfront.net:443?type=ws&encryption=auto&host=d13tculhnb5yd1.cloudfront.net&path=%2Fc03&security=tls&sni=d13tculhnb5yd1.cloudfront.net#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_218","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/c03","headers":{"host":"d13tculhnb5yd1.cloudfront.net"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_220","type":"vmess","server":"141.101.121.214","port":8443,"cipher":"auto","uuid":"141.101.121.214:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_220","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_247","type":"vmess","server":"test1.xiaoshihoukepangle.sbs","port":1082,"cipher":"auto","uuid":"test1.xiaoshihoukepangle.sbs:1082?type=ws&encryption=auto&host=www.bing.com&path=%2FxiaoshihoukepangleVmess&security=tls&sni=www.bing.com#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_247","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/xiaoshihoukepangleVmess","headers":{"host":"www.bing.com"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_244","type":"trojan","server":"test2.xiaoshihoukepangle.sbs","port":1083,"udp":true,"password":"789445ab-12c9-4e80-9b47-957116e5643e","sni":"test2.xiaoshihoukepangle.sbs","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇬🇧 www.85la.com 英国_2","type":"trojan","server":"www.ak-hk.top","port":10210,"udp":true,"password":"b19c4375-d847-4c40-9824-4767c88b5f38","sni":"www.ak-hk.top","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_229","type":"trojan","server":"yourjobnavigator.online","port":443,"udp":true,"password":"2cba4104747d49d18319e5ade1b93ab5","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇯🇵 www.85la.com 日本_12","type":"vmess","server":"156.238.18.68","port":8443,"cipher":"auto","uuid":"156.238.18.68:8443?type=ws&encryption=auto&host=uswuxian.pai50288.uk&path=%2F%3Fmaps.app.goo.gl%2FK3hM5xrwZV7bQVBa7%3Fed%3D2560&security=tls&sni=uswuxian.pai50288.uk#%F0%9F%87%AF%F0%9F%87%B5%20www.85la.com%20%E6%97%A5%E6%9C%AC_12","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?maps.app.goo.gl/K3hM5xrwZV7bQVBa7?ed=2560","headers":{"host":"uswuxian.pai50288.uk"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_235","type":"vmess","server":"mas2-d.445.pp.ua","port":2096,"cipher":"auto","uuid":"mas2-d.445.pp.ua:2096?type=ws&encryption=auto&host=mas2-s.445.pp.ua&path=%2Fmas2-s.445.pp.ua&security=tls&sni=mas2-s.445.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_235","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/mas2-s.445.pp.ua","headers":{"host":"mas2-s.445.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_239","type":"trojan","server":"161.35.34.48","port":443,"udp":true,"password":"2cba4104747d49d18319e5ade1b93ab5","sni":"yourjobnavigator.online","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_245","type":"vmess","server":"45.12.145.111","port":46290,"cipher":"auto","uuid":"45.12.145.111:46290?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_245","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇬🇧 www.85la.com 英国_9","type":"trojan","server":"51.68.13.106","port":1935,"udp":true,"password":"FiSo7J6vfS","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_252","type":"vmess","server":"104.21.48.1","port":2083,"cipher":"auto","uuid":"104.21.48.1:2083?type=ws&encryption=auto&host=mas2-s.445.pp.ua&path=%2Fmas2-s.445.pp.ua&security=tls&sni=mas2-s.445.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_252","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/mas2-s.445.pp.ua","headers":{"host":"mas2-s.445.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_254","type":"vmess","server":"5.253.41.147","port":27750,"cipher":"auto","uuid":"5.253.41.147:27750?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_254","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇧🇪 www.85la.com 比利时_4","type":"vmess","server":"57.128.184.127","port":443,"cipher":"auto","uuid":"57.128.184.127:443?type=ws&encryption=auto&path=%2Flinkvws&security=tls#%F0%9F%87%A7%F0%9F%87%AA%20www.85la.com%20%E6%AF%94%E5%88%A9%E6%97%B6_4","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
-  - {"name":"🇺🇸 www.85la.com 美国_255","type":"vmess","server":"23.158.56.241","port":443,"cipher":"auto","uuid":"23.158.56.241:443?type=ws&encryption=auto&host=wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc&path=%2Flinkvws&security=tls&sni=wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_255","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc"}}}
-  - {"name":"🇩🇪 www.85la.com 德国_2","type":"vmess","server":"139.162.178.95","port":443,"cipher":"auto","uuid":"139.162.178.95:443?type=ws&encryption=auto&path=%2Flinkwsd&security=tls#%F0%9F%87%A9%F0%9F%87%AA%20www.85la.com%20%E5%BE%B7%E5%9B%BD_2","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkwsd"}}
-  - {"name":"🇬🇧 www.85la.com 英国_6","type":"trojan","server":"smooth-imp.shiner427.skin","port":443,"udp":true,"password":"74260698218909400","sni":"smooth-imp.shiner427.skin","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_261","type":"vmess","server":"20.78.127.141","port":550,"cipher":"auto","uuid":"20.78.127.141:550?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_261","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇫🇷 www.85la.com 法国_1","type":"vmess","server":"51.77.20.131","port":22324,"cipher":"auto","uuid":"51.77.20.131:22324?type=tcp&encryption=auto#%F0%9F%87%AB%F0%9F%87%B7%20www.85la.com%20%E6%B3%95%E5%9B%BD_1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_266","type":"vmess","server":"141.101.120.27","port":8443,"cipher":"auto","uuid":"141.101.120.27:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_266","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_271","type":"vmess","server":"141.101.120.12","port":8443,"cipher":"auto","uuid":"141.101.120.12:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_271","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇬🇧 www.85la.com 英国_7","type":"trojan","server":"51.15.86.181","port":1935,"udp":true,"password":"eG92F3gh09","sni":"x1ams-scaleway.devefun.net","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇩🇪 www.85la.com 德国_3","type":"vmess","server":"hms23.fixedfloati.cfd","port":443,"cipher":"auto","uuid":"hms23.fixedfloati.cfd:443?type=ws&encryption=auto&host=fixedfloati.cfd&path=%2Flinkwsd&security=tls&sni=fixedfloati.cfd#%F0%9F%87%A9%F0%9F%87%AA%20www.85la.com%20%E5%BE%B7%E5%9B%BD_3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkwsd","headers":{"host":"fixedfloati.cfd"}}}
-  - {"name":"🇧🇪 www.85la.com 比利时_5","type":"vmess","server":"57.129.24.142","port":443,"cipher":"auto","uuid":"57.129.24.142:443?type=ws&encryption=auto&host=harriscity.com&path=%2Flinkvws&security=tls&sni=harriscity.com#%F0%9F%87%A7%F0%9F%87%AA%20www.85la.com%20%E6%AF%94%E5%88%A9%E6%97%B6_5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"harriscity.com"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_274","type":"vmess","server":"141.101.121.113","port":8443,"cipher":"auto","uuid":"141.101.121.113:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_274","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇧🇪 www.85la.com 比利时_6","type":"vmess","server":"57.129.24.125","port":443,"cipher":"auto","uuid":"57.129.24.125:443?type=ws&encryption=auto&host=wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc&path=%2Flinkvws&security=tls&sni=wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc#%F0%9F%87%A7%F0%9F%87%AA%20www.85la.com%20%E6%AF%94%E5%88%A9%E6%97%B6_6","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_307","type":"vmess","server":"biatoo.v2rayng-021.workers.dev","port":443,"cipher":"auto","uuid":"biatoo.v2rayng-021.workers.dev:443?type=ws&encryption=auto&host=glweidf.sbs&path=%2Flinkws&security=tls&sni=glweidf.sbs#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_307","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_281","type":"vmess","server":"172.67.153.156","port":8443,"cipher":"auto","uuid":"172.67.153.156:8443?type=ws&encryption=auto&host=uswuxian.pai50288.uk&path=%2F&security=tls&sni=uswuxian.pai50288.uk#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_281","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"uswuxian.pai50288.uk"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_329","type":"vmess","server":"parsvds.ir","port":443,"cipher":"auto","uuid":"parsvds.ir:443?type=ws&encryption=auto&path=%2Flinkws&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_329","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws"}}
-  - {"name":"🇧🇪 www.85la.com 比利时_7","type":"vmess","server":"57.129.24.124","port":443,"cipher":"auto","uuid":"57.129.24.124:443?type=ws&encryption=auto&host=aveiror.com&path=%2Flinkvws&security=tls&sni=aveiror.com#%F0%9F%87%A7%F0%9F%87%AA%20www.85la.com%20%E6%AF%94%E5%88%A9%E6%97%B6_7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"aveiror.com"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_285","type":"vmess","server":"172.67.170.103","port":443,"cipher":"auto","uuid":"172.67.170.103:443?type=ws&encryption=auto&host=glweidf.sbs&path=%2Flinkws&security=tls&sni=glweidf.sbs#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_285","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_286","type":"vmess","server":"23.158.56.184","port":22324,"cipher":"auto","uuid":"23.158.56.184:22324?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_286","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_289","type":"vmess","server":"67.220.66.194","port":443,"cipher":"auto","uuid":"67.220.66.194:443?type=ws&encryption=auto&host=67.220.66.194&path=linkvws&security=tls&sni=67.220.66.194#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_289","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"linkvws","headers":{"host":"67.220.66.194"}}}
-  - {"name":"🇧🇪 www.85la.com 比利时_8","type":"vmess","server":"57.129.28.69","port":443,"cipher":"auto","uuid":"57.129.28.69:443?type=ws&encryption=auto&host=baradiha.com&path=%2Flinkvws&security=tls&sni=baradiha.com#%F0%9F%87%A7%F0%9F%87%AA%20www.85la.com%20%E6%AF%94%E5%88%A9%E6%97%B6_8","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws","headers":{"host":"baradiha.com"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_322","type":"vmess","server":"54.37.75.62","port":443,"cipher":"auto","uuid":"54.37.75.62:443?type=ws&encryption=auto&path=%2Flinkvws&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_322","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
-  - {"name":"🇺🇸 www.85la.com 美国_292","type":"vmess","server":"141.101.120.5","port":8443,"cipher":"auto","uuid":"141.101.120.5:8443?type=ws&encryption=auto&host=1743919978.speed.laxha.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.laxha.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_292","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.laxha.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_337","type":"vmess","server":"172.67.170.13","port":443,"cipher":"auto","uuid":"172.67.170.13:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_337","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_316","type":"vmess","server":"172.67.156.210","port":443,"cipher":"auto","uuid":"172.67.156.210:443?type=ws&encryption=auto&host=glweidf.sbs&path=%2Flinkws&security=tls&sni=glweidf.sbs#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_316","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_309","type":"vmess","server":"172.67.207.26","port":443,"cipher":"auto","uuid":"172.67.207.26:443?type=ws&encryption=auto&host=glweidf.sbs&path=%2Flinkws&security=tls&sni=glweidf.sbs#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_309","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_300","type":"vmess","server":"23.166.88.183","port":22324,"cipher":"auto","uuid":"23.166.88.183:22324?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_300","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_333","type":"vmess","server":"1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top","port":443,"cipher":"auto","uuid":"1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top:443?type=ws&encryption=auto&path=%2Fazumase.ren&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_333","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/azumase.ren"}}
-  - {"name":"🇺🇸 www.85la.com 美国_411","type":"vmess","server":"172.67.200.13","port":443,"cipher":"auto","uuid":"172.67.200.13:443?type=ws&encryption=auto&path=%2Fazumase.ren&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_411","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/azumase.ren"}}
-  - {"name":"🇧🇪 www.85la.com 比利时_9","type":"vmess","server":"57.129.24.141","port":443,"cipher":"auto","uuid":"57.129.24.141:443?type=ws&encryption=auto&path=%2Flinkvws&security=tls#%F0%9F%87%A7%F0%9F%87%AA%20www.85la.com%20%E6%AF%94%E5%88%A9%E6%97%B6_9","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
-  - {"name":"🇺🇸 www.85la.com 美国_308","type":"vmess","server":"172.67.138.69","port":443,"cipher":"auto","uuid":"172.67.138.69:443?type=ws&encryption=auto&host=glweidf.sbs&path=%2Flinkws&security=tls&sni=glweidf.sbs#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_308","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_310","type":"vmess","server":"104.21.94.168","port":443,"cipher":"auto","uuid":"104.21.94.168:443?type=ws&encryption=auto&host=glweidf.sbs&path=%2Flinkws&security=tls&sni=glweidf.sbs#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_310","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
-  - {"name":"🇺🇦 www.85la.com 乌克兰_5","type":"vmess","server":"95.164.38.6","port":21938,"cipher":"auto","uuid":"95.164.38.6:21938?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%A6%20www.85la.com%20%E4%B9%8C%E5%85%8B%E5%85%B0_5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_311","type":"vmess","server":"172.67.161.77","port":443,"cipher":"auto","uuid":"172.67.161.77:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_311","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🇵🇹 www.85la.com 葡萄牙","type":"vmess","server":"37.221.125.159","port":33940,"cipher":"auto","uuid":"37.221.125.159:33940?type=tcp&encryption=auto#%F0%9F%87%B5%F0%9F%87%B9%20www.85la.com%20%E8%91%A1%E8%90%84%E7%89%99","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇬🇧 www.85la.com 英国_13","type":"trojan","server":"85.234.83.133","port":443,"udp":true,"password":"74260698218909400","sni":"smooth-imp.shiner427.skin","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_312","type":"vmess","server":"5.180.30.85","port":18598,"cipher":"auto","uuid":"5.180.30.85:18598?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_312","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_380","type":"vmess","server":"104.21.3.219","port":8443,"cipher":"auto","uuid":"104.21.3.219:8443?type=ws&encryption=auto&host=uswuxian.pai50288.uk&path=%2F&security=tls&sni=uswuxian.pai50288.uk#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_380","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"uswuxian.pai50288.uk"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_314","type":"vmess","server":"141.101.121.186","port":2096,"cipher":"auto","uuid":"141.101.121.186:2096?type=ws&encryption=auto&host=1743919978.speed.adl.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.adl.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_314","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.adl.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_315","type":"vmess","server":"45.12.138.47","port":22839,"cipher":"auto","uuid":"45.12.138.47:22839?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_315","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_318","type":"vmess","server":"15.204.86.120","port":35696,"cipher":"auto","uuid":"15.204.86.120:35696?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_318","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🏳️ www.85la.com 未知_1","type":"vmess","server":"104.21.15.212","port":443,"cipher":"auto","uuid":"104.21.15.212:443?type=ws&encryption=auto&host=glweidf.sbs&path=%2Flinkws&security=tls&sni=glweidf.sbs#%F0%9F%8F%B3%EF%B8%8F%20www.85la.com%20%E6%9C%AA%E7%9F%A5_1","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"glweidf.sbs"}}}
-  - {"name":"🇧🇷 www.85la.com 巴西_8","type":"vmess","server":"188.114.97.1","port":443,"cipher":"auto","uuid":"188.114.97.1:443?type=ws&encryption=auto&path=%2Flinkws&security=tls#%F0%9F%87%A7%F0%9F%87%B7%20www.85la.com%20%E5%B7%B4%E8%A5%BF_8","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws"}}
-  - {"name":"🇺🇸 www.85la.com 美国_326","type":"vmess","server":"104.21.21.192","port":443,"cipher":"auto","uuid":"104.21.21.192:443?type=ws&encryption=auto&host=1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top&path=%2Fazumase.ren&security=tls&sni=1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_326","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/azumase.ren","headers":{"host":"1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top"}}}
-  - {"name":"🇧🇷 www.85la.com 巴西_7","type":"vmess","server":"188.114.97.3","port":443,"cipher":"auto","uuid":"188.114.97.3:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%A7%F0%9F%87%B7%20www.85la.com%20%E5%B7%B4%E8%A5%BF_7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_334","type":"vmess","server":"172.67.179.199","port":443,"cipher":"auto","uuid":"172.67.179.199:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_334","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_336","type":"vmess","server":"2.56.125.101","port":38088,"cipher":"auto","uuid":"2.56.125.101:38088?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_336","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇨🇳 www.85la.com 中国_4","type":"trojan","server":"v3.nmcf.me","port":443,"udp":true,"password":"f2ebda77-3dff-4244-8828-18771ee5ad30","sni":"v3.nmcf.me","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_342","type":"vmess","server":"uswuxian.pai50288.uk","port":8443,"cipher":"auto","uuid":"uswuxian.pai50288.uk:8443?type=ws&encryption=auto&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_342","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws"}
-  - {"name":"🇺🇸 www.85la.com 美国_341","type":"vmess","server":"186.190.215.193","port":22324,"cipher":"auto","uuid":"186.190.215.193:22324?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_341","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇧🇷 www.85la.com 巴西_9","type":"vmess","server":"188.114.97.79","port":443,"cipher":"auto","uuid":"188.114.97.79:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%A7%F0%9F%87%B7%20www.85la.com%20%E5%B7%B4%E8%A5%BF_9","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_344","type":"vmess","server":"172.67.196.112","port":443,"cipher":"auto","uuid":"172.67.196.112:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_344","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_490","type":"vmess","server":"1-osaka-p.aboutanime.eu.org","port":23451,"cipher":"auto","uuid":"1-osaka-p.aboutanime.eu.org:23451?type=ws&encryption=auto&host=1-osaka-p.aboutanime.eu.org&path=%2F#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_490","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1-osaka-p.aboutanime.eu.org"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_348","type":"vmess","server":"186.190.215.93","port":22324,"cipher":"auto","uuid":"186.190.215.93:22324?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_348","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇫🇷 www.85la.com 法国_2","type":"trojan","server":"x1es-ovh.devefun.net","port":1935,"udp":true,"password":"utF6JLQd2x","sni":"x1es-ovh.devefun.net","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇮🇳 www.85la.com 印度_1","type":"trojan","server":"202.78.163.116","port":443,"udp":true,"password":"74260698218909400","sni":"patient-crawdad.shiner427.skin","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇮🇳 www.85la.com 印度_2","type":"trojan","server":"202.78.163.140","port":443,"udp":true,"password":"74260698218909400","sni":"supreme-penguin.shiner427.skin","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇧🇷 www.85la.com 巴西_10","type":"vmess","server":"188.114.97.7","port":443,"cipher":"auto","uuid":"188.114.97.7:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%A7%F0%9F%87%B7%20www.85la.com%20%E5%B7%B4%E8%A5%BF_10","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🏳️ www.85la.com 未知_2","type":"vmess","server":"89.18.58.63","port":180,"cipher":"auto","uuid":"89.18.58.63:180?type=tcp&encryption=auto#%F0%9F%8F%B3%EF%B8%8F%20www.85la.com%20%E6%9C%AA%E7%9F%A5_2","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_352","type":"vmess","server":"172.67.204.19","port":443,"cipher":"auto","uuid":"172.67.204.19:443?type=ws&encryption=auto&host=1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top&path=%2Fazumase.ren&security=tls&sni=1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_352","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/azumase.ren","headers":{"host":"1a2d514b-37cf-499f-8d08-d017a92ab5bb.asoul-ava.top"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_353","type":"vmess","server":"15.204.249.0","port":48160,"cipher":"auto","uuid":"15.204.249.0:48160?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_353","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_355","type":"vmess","server":"104.21.15.36","port":443,"cipher":"auto","uuid":"104.21.15.36:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_355","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🏳️ www.85la.com 未知_3","type":"vmess","server":"89.18.58.71","port":180,"cipher":"auto","uuid":"89.18.58.71:180?type=tcp&encryption=auto#%F0%9F%8F%B3%EF%B8%8F%20www.85la.com%20%E6%9C%AA%E7%9F%A5_3","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇬🇧 www.85la.com 英国_16","type":"vmess","server":"158.180.228.226","port":443,"cipher":"auto","uuid":"158.180.228.226:443?type=ws&encryption=auto&host=beyonddsz.cfd&path=%2Flinkws&security=tls&sni=beyonddsz.cfd#%F0%9F%87%AC%F0%9F%87%A7%20www.85la.com%20%E8%8B%B1%E5%9B%BD_16","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"beyonddsz.cfd"}}}
-  - {"name":"🇧🇷 www.85la.com 巴西_11","type":"vmess","server":"188.114.97.210","port":443,"cipher":"auto","uuid":"188.114.97.210:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%A7%F0%9F%87%B7%20www.85la.com%20%E5%B7%B4%E8%A5%BF_11","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_410","type":"vmess","server":"104.21.48.160","port":443,"cipher":"auto","uuid":"104.21.48.160:443?type=ws&encryption=auto&host=irvideo.cfd&path=%2Flinkws&security=tls&sni=irvideo.cfd#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_410","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"irvideo.cfd"}}}
-  - {"name":"🇮🇳 www.85la.com 印度_3","type":"trojan","server":"supreme-penguin.shiner427.skin","port":443,"udp":true,"password":"74260698218909400","sni":"supreme-penguin.shiner427.skin","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇧🇷 www.85la.com 巴西_12","type":"vmess","server":"188.114.99.183","port":443,"cipher":"auto","uuid":"188.114.99.183:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%A7%F0%9F%87%B7%20www.85la.com%20%E5%B7%B4%E8%A5%BF_12","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_359","type":"vmess","server":"cname.proxystore11.news","port":443,"cipher":"auto","uuid":"cname.proxystore11.news:443?type=ws&encryption=auto&path=%2FPjgO08tnfHPy9fx8&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_359","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/PjgO08tnfHPy9fx8"}}
-  - {"name":"🏳️ www.85la.com 未知_4","type":"vmess","server":"89.18.58.206","port":180,"cipher":"auto","uuid":"89.18.58.206:180?type=tcp&encryption=auto#%F0%9F%8F%B3%EF%B8%8F%20www.85la.com%20%E6%9C%AA%E7%9F%A5_4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇯🇵 www.85la.com 日本_4","type":"vmess","server":"[2603","port":0,"cipher":"auto","uuid":"[2603:c023:f:8000:e61:f5f8:ac0f:a617]:58199?type=tcp&encryption=auto#%F0%9F%87%AF%F0%9F%87%B5%20www.85la.com%20%E6%97%A5%E6%9C%AC_4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇫🇷 www.85la.com 法国_3","type":"vmess","server":"146.59.55.50","port":443,"cipher":"auto","uuid":"146.59.55.50:443?type=ws&encryption=auto&path=%2Flinkvws&security=tls#%F0%9F%87%AB%F0%9F%87%B7%20www.85la.com%20%E6%B3%95%E5%9B%BD_3","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkvws"}}
-  - {"name":"🏳️ www.85la.com 未知_5","type":"vmess","server":"89.18.56.249","port":180,"cipher":"auto","uuid":"89.18.56.249:180?type=tcp&encryption=auto#%F0%9F%8F%B3%EF%B8%8F%20www.85la.com%20%E6%9C%AA%E7%9F%A5_5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇧🇷 www.85la.com 巴西_13","type":"vmess","server":"188.114.96.5","port":443,"cipher":"auto","uuid":"188.114.96.5:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%A7%F0%9F%87%B7%20www.85la.com%20%E5%B7%B4%E8%A5%BF_13","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_365","type":"vmess","server":"169.150.208.39","port":18000,"cipher":"auto","uuid":"169.150.208.39:18000?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_365","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_367","type":"vmess","server":"45.82.252.99","port":50326,"cipher":"auto","uuid":"45.82.252.99:50326?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_367","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇳🇱 www.85la.com 荷兰_8","type":"vmess","server":"linde06.indiavideo.sbs","port":443,"cipher":"auto","uuid":"linde06.indiavideo.sbs:443?type=ws&encryption=auto&host=linde06.indiavideo.sbs&path=%2Flinkws&security=tls&sni=linde06.indiavideo.sbs#%F0%9F%87%B3%F0%9F%87%B1%20www.85la.com%20%E8%8D%B7%E5%85%B0_8","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"linde06.indiavideo.sbs"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_368","type":"vmess","server":"169.150.208.83","port":18000,"cipher":"auto","uuid":"169.150.208.83:18000?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_368","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_370","type":"vmess","server":"149.50.216.6","port":18000,"cipher":"auto","uuid":"149.50.216.6:18000?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_370","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_373","type":"vmess","server":"169.150.208.37","port":18000,"cipher":"auto","uuid":"169.150.208.37:18000?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_373","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇬🇧 www.85la.com 英国_17","type":"vmess","server":"46.250.253.234","port":28872,"cipher":"auto","uuid":"46.250.253.234:28872?type=tcp&encryption=auto#%F0%9F%87%AC%F0%9F%87%A7%20www.85la.com%20%E8%8B%B1%E5%9B%BD_17","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_374","type":"vmess","server":"169.150.208.38","port":18000,"cipher":"auto","uuid":"169.150.208.38:18000?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_374","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_399","type":"vmess","server":"172.67.154.84","port":443,"cipher":"auto","uuid":"172.67.154.84:443?type=ws&encryption=auto&host=irvideo.cfd&path=%2Flinkws&security=tls&sni=irvideo.cfd#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_399","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"irvideo.cfd"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_382","type":"vmess","server":"2.56.126.103","port":33579,"cipher":"auto","uuid":"2.56.126.103:33579?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_382","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_390","type":"vmess","server":"169.150.208.54","port":18000,"cipher":"auto","uuid":"169.150.208.54:18000?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_390","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_393","type":"vmess","server":"45.12.133.43","port":28444,"cipher":"auto","uuid":"45.12.133.43:28444?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_393","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_459","type":"vmess","server":"1s.890689.xyz","port":80,"cipher":"auto","uuid":"1s.890689.xyz:80?type=ws&encryption=auto&host=1S.890689.XyZ&path=%2FlsUVr8VBxF4ylXngZ#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_459","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/lsUVr8VBxF4ylXngZ","headers":{"host":"1S.890689.XyZ"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_403","type":"vmess","server":"35.78.182.68","port":4000,"cipher":"auto","uuid":"35.78.182.68:4000?type=ws&encryption=auto&host=baidu.com&path=%2F123123123#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_403","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/123123123","headers":{"host":"baidu.com"}}}
-  - {"name":"🇬🇧 www.85la.com 英国_18","type":"trojan","server":"194.164.57.9","port":1935,"udp":true,"password":"I46LpSIM1f","sni":"x4ger-ionos.devefun.net","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_457","type":"vmess","server":"141.101.121.181","port":2083,"cipher":"auto","uuid":"141.101.121.181:2083?type=ws&encryption=auto&path=%2F&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_457","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸 www.85la.com 美国_428","type":"vmess","server":"141.101.120.164","port":2053,"cipher":"auto","uuid":"141.101.120.164:2053?type=ws&encryption=auto&host=1743919978.speed.sccapv.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.sccapv.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_428","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.sccapv.cccp.freefly.pp.ua"}}}
-  - {"name":"🇬🇧 www.85la.com 英国_54","type":"vmess","server":"frankfurt.faforex.eu.org","port":23451,"cipher":"auto","uuid":"frankfurt.faforex.eu.org:23451?type=ws&encryption=auto&host=us-new03.daluquan.top&path=%2Fitdog%3Fed%3D2560#%F0%9F%87%AC%F0%9F%87%A7%20www.85la.com%20%E8%8B%B1%E5%9B%BD_54","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/itdog?ed=2560","headers":{"host":"us-new03.daluquan.top"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_408","type":"vmess","server":"141.101.120.107","port":2083,"cipher":"auto","uuid":"141.101.120.107:2083?type=ws&encryption=auto&host=1744007578.speed.ruanewa.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.ruanewa.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_408","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.ruanewa.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_471","type":"vmess","server":"0f810b.86be-447a-eaf1.cfd","port":80,"cipher":"auto","uuid":"0f810b.86be-447a-eaf1.cfd:80?type=ws&encryption=auto&host=hk01s.86be-447a-eaf1.cfd&path=%2F#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_471","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"hk01s.86be-447a-eaf1.cfd"}}}
-  - {"name":"🇩🇪 www.85la.com 德国_10","type":"vmess","server":"193.122.58.158","port":443,"cipher":"auto","uuid":"193.122.58.158:443?type=ws&encryption=auto&host=irvideo.cfd&path=%2Flinkws&security=tls&sni=irvideo.cfd#%F0%9F%87%A9%F0%9F%87%AA%20www.85la.com%20%E5%BE%B7%E5%9B%BD_10","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"irvideo.cfd"}}}
-  - {"name":"🇮🇳 www.85la.com 印度_4","type":"trojan","server":"patient-crawdad.shiner427.skin","port":443,"udp":true,"password":"74260698218909400","sni":"patient-crawdad.shiner427.skin","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇩🇪 www.85la.com 德国_11","type":"vmess","server":"62.146.233.79","port":44127,"cipher":"auto","uuid":"62.146.233.79:44127?type=tcp&encryption=auto#%F0%9F%87%A9%F0%9F%87%AA%20www.85la.com%20%E5%BE%B7%E5%9B%BD_11","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_426","type":"vmess","server":"1744007541.tencentapp.cn","port":2083,"cipher":"auto","uuid":"1744007541.tencentapp.cn:2083?type=ws&encryption=auto&host=1744007578.speed.ruanewa.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.ruanewa.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_426","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.ruanewa.cccp.freefly.pp.ua"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_427","type":"vmess","server":"141.101.121.37","port":2083,"cipher":"auto","uuid":"141.101.121.37:2083?type=ws&encryption=auto&host=1744007578.speed.ruanewa.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.ruanewa.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_427","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.ruanewa.cccp.freefly.pp.ua"}}}
-  - {"name":"🇫🇷 www.85la.com 法国_6","type":"vmess","server":"irvideo.cfd","port":443,"cipher":"auto","uuid":"irvideo.cfd:443?type=ws&encryption=auto&host=irvideo.cfd&path=%2Flinkws&security=tls&sni=irvideo.cfd#%F0%9F%87%AB%F0%9F%87%B7%20www.85la.com%20%E6%B3%95%E5%9B%BD_6","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"irvideo.cfd"}}}
-  - {"name":"🇩🇪 www.85la.com 德国_12","type":"vmess","server":"194.233.72.228","port":27575,"cipher":"auto","uuid":"194.233.72.228:27575?type=tcp&encryption=auto#%F0%9F%87%A9%F0%9F%87%AA%20www.85la.com%20%E5%BE%B7%E5%9B%BD_12","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇳🇴 www.85la.com 挪威_1","type":"vmess","server":"84.247.146.161","port":39530,"cipher":"auto","uuid":"84.247.146.161:39530?type=tcp&encryption=auto#%F0%9F%87%B3%F0%9F%87%B4%20www.85la.com%20%E6%8C%AA%E5%A8%81_1","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇳🇴 www.85la.com 挪威_2","type":"vmess","server":"84.247.149.77","port":47211,"cipher":"auto","uuid":"84.247.149.77:47211?type=tcp&encryption=auto#%F0%9F%87%B3%F0%9F%87%B4%20www.85la.com%20%E6%8C%AA%E5%A8%81_2","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_434","type":"vmess","server":"1743919941.tencentapp.cn","port":2053,"cipher":"auto","uuid":"1743919941.tencentapp.cn:2053?type=ws&encryption=auto&host=1743919978.speed.sccapv.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1743919978.speed.sccapv.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_434","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1743919978.speed.sccapv.cccp.freefly.pp.ua"}}}
-  - {"name":"🇩🇪 www.85la.com 德国_13","type":"vmess","server":"62.146.232.153","port":53144,"cipher":"auto","uuid":"62.146.232.153:53144?type=tcp&encryption=auto#%F0%9F%87%A9%F0%9F%87%AA%20www.85la.com%20%E5%BE%B7%E5%9B%BD_13","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇳🇱 www.85la.com 荷兰_12","type":"vmess","server":"3h-poland1.09vpn.com","port":80,"cipher":"auto","uuid":"3h-poland1.09vpn.com:80?type=ws&encryption=auto&host=3h-poland1.09vpn.com&path=%2Fvmess%2F#%F0%9F%87%B3%F0%9F%87%B1%20www.85la.com%20%E8%8D%B7%E5%85%B0_12","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess/","headers":{"host":"3h-poland1.09vpn.com"}}}
-  - {"name":"🇩🇪 www.85la.com 德国_14","type":"vmess","server":"62.146.233.53","port":50678,"cipher":"auto","uuid":"62.146.233.53:50678?type=tcp&encryption=auto#%F0%9F%87%A9%F0%9F%87%AA%20www.85la.com%20%E5%BE%B7%E5%9B%BD_14","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_446","type":"vmess","server":"154.26.129.247","port":57143,"cipher":"auto","uuid":"154.26.129.247:57143?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_446","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_450","type":"trojan","server":"automq-0413-1-proxy.automq-sg.com","port":443,"udp":true,"password":"dQUWbcwECl","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_451","type":"trojan","server":"automq-0413-0-proxy.automq-sg.com","port":443,"udp":true,"password":"dQUWbcwECl","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇫🇷 www.85la.com 法国_7","type":"vmess","server":"163.5.159.231","port":443,"cipher":"auto","uuid":"163.5.159.231:443?type=ws&encryption=auto&host=irvideo.cfd&path=%2Flinkws&security=tls&sni=irvideo.cfd#%F0%9F%87%AB%F0%9F%87%B7%20www.85la.com%20%E6%B3%95%E5%9B%BD_7","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"irvideo.cfd"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_453","type":"vmess","server":"51.81.203.57","port":28860,"cipher":"auto","uuid":"51.81.203.57:28860?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_453","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇦🇺 www.85la.com 澳大利亚_4","type":"trojan","server":"43.161.255.183","port":443,"udp":true,"password":"oIwjHDXpKePvYIg8","sni":"myvps.lol","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_460","type":"vmess","server":"141.101.121.124","port":2083,"cipher":"auto","uuid":"141.101.121.124:2083?type=ws&encryption=auto&host=1744007578.speed.ruanewa.cccp.freefly.pp.ua&path=%2F&security=tls&sni=1744007578.speed.ruanewa.cccp.freefly.pp.ua#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_460","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.ruanewa.cccp.freefly.pp.ua"}}}
-  - {"name":"🇩🇪 www.85la.com 德国_15","type":"vmess","server":"62.146.233.66","port":15828,"cipher":"auto","uuid":"62.146.233.66:15828?type=tcp&encryption=auto#%F0%9F%87%A9%F0%9F%87%AA%20www.85la.com%20%E5%BE%B7%E5%9B%BD_15","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇩🇪 www.85la.com 德国_16","type":"vmess","server":"62.146.233.159","port":43763,"cipher":"auto","uuid":"62.146.233.159:43763?type=tcp&encryption=auto#%F0%9F%87%A9%F0%9F%87%AA%20www.85la.com%20%E5%BE%B7%E5%9B%BD_16","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇦🇺 www.85la.com 澳大利亚_5","type":"trojan","server":"myvps.lol","port":443,"udp":true,"password":"oIwjHDXpKePvYIg8","sni":"myvps.lol","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_461","type":"vmess","server":"154.26.153.173","port":28686,"cipher":"auto","uuid":"154.26.153.173:28686?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_461","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇬🇧 www.85la.com 英国_30","type":"vmess","server":"46.250.234.32","port":45317,"cipher":"auto","uuid":"46.250.234.32:45317?type=tcp&encryption=auto#%F0%9F%87%AC%F0%9F%87%A7%20www.85la.com%20%E8%8B%B1%E5%9B%BD_30","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇳🇴 www.85la.com 挪威_3","type":"vmess","server":"84.247.148.192","port":44396,"cipher":"auto","uuid":"84.247.148.192:44396?type=tcp&encryption=auto#%F0%9F%87%B3%F0%9F%87%B4%20www.85la.com%20%E6%8C%AA%E5%A8%81_3","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_462","type":"vmess","server":"104.21.21.226","port":80,"cipher":"auto","uuid":"104.21.21.226:80?type=ws&encryption=auto&host=1c.890689.xyz&path=%2FlsUVr8VBxF4ylXngZ#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_462","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/lsUVr8VBxF4ylXngZ","headers":{"host":"1c.890689.xyz"}}}
-  - {"name":"🇩🇪 www.85la.com 德国_17","type":"trojan","server":"165.22.74.230","port":443,"udp":true,"password":"4732adfa16c6450bbef87264e41332db","sni":"nextstepcareer.online","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇩🇪 www.85la.com 德国_19","type":"trojan","server":"nextstepcareer.online","port":443,"udp":true,"password":"4732adfa16c6450bbef87264e41332db","sni":"nextstepcareer.online","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇳🇱 www.85la.com 荷兰_14","type":"vmess","server":"45.137.155.45","port":17646,"cipher":"auto","uuid":"45.137.155.45:17646?type=tcp&encryption=auto#%F0%9F%87%B3%F0%9F%87%B1%20www.85la.com%20%E8%8D%B7%E5%85%B0_14","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_464","type":"vmess","server":"154.26.153.161","port":21759,"cipher":"auto","uuid":"154.26.153.161:21759?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_464","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇨🇭 www.85la.com 瑞士_8","type":"trojan","server":"250407.jichang.my","port":34865,"udp":true,"password":"1ebeff0a-6b43-4585-9fab-97859991f1f7","sni":"zurich.678789.xyz","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇨🇿 www.85la.com 捷克_4","type":"vmess","server":"109.123.232.74","port":59032,"cipher":"auto","uuid":"109.123.232.74:59032?type=tcp&encryption=auto#%F0%9F%87%A8%F0%9F%87%BF%20www.85la.com%20%E6%8D%B7%E5%85%8B_4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_467","type":"trojan","server":"38.180.249.177","port":8443,"udp":true,"password":"installshield","sni":"38.180.249.177","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇷🇺 www.85la.com 俄罗斯_4","type":"vmess","server":"195.58.49.84","port":22013,"cipher":"auto","uuid":"195.58.49.84:22013?type=ws&encryption=auto&path=%2F#%F0%9F%87%B7%F0%9F%87%BA%20www.85la.com%20%E4%BF%84%E7%BD%97%E6%96%AF_4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇮🇳 www.85la.com 印度_5","type":"vmess","server":"103.106.229.54","port":50266,"cipher":"auto","uuid":"103.106.229.54:50266?type=tcp&encryption=auto#%F0%9F%87%AE%F0%9F%87%B3%20www.85la.com%20%E5%8D%B0%E5%BA%A6_5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇬🇧 www.85la.com 英国_33","type":"trojan","server":"www.hk-jd.top","port":10240,"udp":true,"password":"b19c4375-d847-4c40-9824-4767c88b5f38","sni":"www.hk-jd.top","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_509","type":"vmess","server":"www.visa.com.tw","port":443,"cipher":"auto","uuid":"www.visa.com.tw:443?type=ws&encryption=auto&path=%2Faa&security=tls#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_509","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/aa"}}
-  - {"name":"🇺🇦 www.85la.com 乌克兰_7","type":"vmess","server":"pq-brazil1.09vpn.com","port":80,"cipher":"auto","uuid":"pq-brazil1.09vpn.com:80?type=ws&encryption=auto&host=pq-brazil1.09vpn.com&path=%2Fvmess%2F#%F0%9F%87%BA%F0%9F%87%A6%20www.85la.com%20%E4%B9%8C%E5%85%8B%E5%85%B0_7","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess/","headers":{"host":"pq-brazil1.09vpn.com"}}}
-  - {"name":"🇸🇬 www.85la.com 新加坡_4","type":"trojan","server":"139.59.119.143","port":443,"udp":true,"password":"0ab6c98dae3b48e8b9c4a776b6c9c19a","sni":"connectwithemployers.online","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇩🇪 www.85la.com 德国_20","type":"vmess","server":"62.146.232.156","port":33281,"cipher":"auto","uuid":"62.146.232.156:33281?type=tcp&encryption=auto#%F0%9F%87%A9%F0%9F%87%AA%20www.85la.com%20%E5%BE%B7%E5%9B%BD_20","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇩🇪 www.85la.com 德国_21","type":"vmess","server":"94.136.184.155","port":39253,"cipher":"auto","uuid":"94.136.184.155:39253?type=tcp&encryption=auto#%F0%9F%87%A9%F0%9F%87%AA%20www.85la.com%20%E5%BE%B7%E5%9B%BD_21","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇦 www.85la.com 乌克兰_9","type":"vmess","server":"95.164.4.88","port":80,"cipher":"auto","uuid":"95.164.4.88:80?type=ws&encryption=auto&host=pq-brazil1.09vpn.com&path=%2Fvmess%2F#%F0%9F%87%BA%F0%9F%87%A6%20www.85la.com%20%E4%B9%8C%E5%85%8B%E5%85%B0_9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess/","headers":{"host":"pq-brazil1.09vpn.com"}}}
-  - {"name":"🇸🇬 www.85la.com 新加坡_6","type":"trojan","server":"connectwithemployers.online","port":443,"udp":true,"password":"0ab6c98dae3b48e8b9c4a776b6c9c19a","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇦 www.85la.com 乌克兰_10","type":"vmess","server":"95.164.4.140","port":52937,"cipher":"auto","uuid":"95.164.4.140:52937?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%A6%20www.85la.com%20%E4%B9%8C%E5%85%8B%E5%85%B0_10","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇬🇧 www.85la.com 英国_49","type":"trojan","server":"www.jucer001.click","port":10870,"udp":true,"password":"b19c4375-d847-4c40-9824-4767c88b5f38","sni":"www.jucer001.click","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇨🇳 www.85la.com 中国_11","type":"vmess","server":"mos2.040219.xyz","port":20001,"cipher":"auto","uuid":"mos2.040219.xyz:20001?type=ws&encryption=auto&host=mos2.040219.xyz&path=%2F#%F0%9F%87%A8%F0%9F%87%B3%20www.85la.com%20%E4%B8%AD%E5%9B%BD_11","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"mos2.040219.xyz"}}}
-  - {"name":"🇰🇷 www.85la.com 韩国_4","type":"vmess","server":"121.149.228.125","port":12342,"cipher":"auto","uuid":"121.149.228.125:12342?type=ws&encryption=auto&path=%2Flzjjj&security=tls#%F0%9F%87%B0%F0%9F%87%B7%20www.85la.com%20%E9%9F%A9%E5%9B%BD_4","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/lzjjj"}}
-  - {"name":"🇳🇱 www.85la.com 荷兰_18","type":"vmess","server":"45.147.201.231","port":23071,"cipher":"auto","uuid":"45.147.201.231:23071?type=ws&encryption=auto&path=%2F#%F0%9F%87%B3%F0%9F%87%B1%20www.85la.com%20%E8%8D%B7%E5%85%B0_18","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸 www.85la.com 美国_507","type":"vmess","server":"104.17.137.127","port":443,"cipher":"auto","uuid":"104.17.137.127:443?type=ws&encryption=auto&host=hk.niskakowski.ggff.net&path=%2Faa&security=tls&sni=hk.niskakowski.ggff.net#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_507","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/aa","headers":{"host":"hk.niskakowski.ggff.net"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_510","type":"vmess","server":"45.82.246.173","port":26521,"cipher":"auto","uuid":"45.82.246.173:26521?type=tcp&encryption=auto#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_510","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"🇺🇸 www.85la.com 美国_511","type":"vmess","server":"152.67.251.232","port":443,"cipher":"auto","uuid":"152.67.251.232:443?type=ws&encryption=auto&host=irvideo.cfd&path=%2Flinkws&security=tls&sni=irvideo.cfd#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_511","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/linkws","headers":{"host":"irvideo.cfd"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_513","type":"vmess","server":"172.67.136.233","port":443,"cipher":"auto","uuid":"172.67.136.233:443?type=ws&encryption=auto&host=az05.beyondy.cfd&path=%2Flink&security=tls&sni=az05.beyondy.cfd#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_513","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"az05.beyondy.cfd"}}}
-  - {"name":"🇫🇷 www.85la.com 法国_9","type":"vmess","server":"az05.beyondy.cfd","port":443,"cipher":"auto","uuid":"az05.beyondy.cfd:443?type=ws&encryption=auto&host=az05.beyondy.cfd&path=%2Flink&security=tls&sni=az05.beyondy.cfd#%F0%9F%87%AB%F0%9F%87%B7%20www.85la.com%20%E6%B3%95%E5%9B%BD_9","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"az05.beyondy.cfd"}}}
-  - {"name":"🇫🇷 www.85la.com 法国_10","type":"vmess","server":"146.19.168.161","port":443,"cipher":"auto","uuid":"146.19.168.161:443?type=ws&encryption=auto&host=az05.beyondy.cfd&path=%2Flink&security=tls&sni=az05.beyondy.cfd#%F0%9F%87%AB%F0%9F%87%B7%20www.85la.com%20%E6%B3%95%E5%9B%BD_10","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"az05.beyondy.cfd"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_514","type":"vmess","server":"s2.db-link02.top","port":2082,"cipher":"auto","uuid":"s2.db-link02.top:2082?type=ws&encryption=auto&host=100-4-20-123.s2.db-link02.top&path=%2Fdabai.in104.21.83.57#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_514","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in104.21.83.57","headers":{"host":"100-4-20-123.s2.db-link02.top"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_515","type":"vmess","server":"104.17.221.248","port":2052,"cipher":"auto","uuid":"104.17.221.248:2052?type=ws&encryption=auto&host=100-34-100-44.s2.db-link02.top&path=%2Fdabai.in172.64.6.224#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_515","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in172.64.6.224","headers":{"host":"100-34-100-44.s2.db-link02.top"}}}
-  - {"name":"🇺🇸 www.85la.com 美国_516","type":"vmess","server":"us7-04.890624.xyz","port":443,"cipher":"auto","uuid":"us7-04.890624.xyz:443?type=ws&encryption=auto&host=Us7-04.890624.xyZ&path=%2Fbua2hMcbA8wMzbGFtV&security=tls&sni=Us7-04.890624.xyZ#%F0%9F%87%BA%F0%9F%87%B8%20www.85la.com%20%E7%BE%8E%E5%9B%BD_516","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/bua2hMcbA8wMzbGFtV","headers":{"host":"Us7-04.890624.xyZ"}}}
-  - {"name":"🇪🇸 www.85la.com 西班牙_4","type":"vmess","server":"212.192.12.154","port":23013,"cipher":"auto","uuid":"212.192.12.154:23013?type=ws&encryption=auto&path=%2F#%F0%9F%87%AA%F0%9F%87%B8%20www.85la.com%20%E8%A5%BF%E7%8F%AD%E7%89%99_4","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"美国 CloudFlare节点_1","type":"vmess","server":"manager.onetwothree123.ir","port":8443,"cipher":"auto","uuid":"33eb7be0-d74c-46e5-ac10-6124517cc667","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/🆔@M3HDIO1","headers":{"host":"manager.onetwothree123.ir"}}}
+  - {"name":"美国 CloudFlare节点 (1)_1","type":"vmess","server":"dingzhiyx1.sgjc.xyz","port":8080,"cipher":"auto","uuid":"2e235b81-70ad-45c0-959c-7591fa078836","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/?ed=2048","headers":{"host":"dingzhiadly.sgjc.xyz"}}}
+  - {"name":"美国 CloudFlare节点 (2)_1","type":"vmess","server":"172.67.136.233","port":443,"cipher":"auto","uuid":"3f638f34-8dba-4186-bc43-2716a7ddd4be","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/link","headers":{"host":"az05.beyondy.cfd"}}}
+  - {"name":"香港 Amazon数据中心","type":"vmess","server":"kahk.kia-ai.com","port":10805,"cipher":"auto","uuid":"bd464fb5-b542-4694-b5f4-d45dd7f6b3f9","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"kahk.kia-ai.com"}}}
+  - {"name":"克罗地亚 V2CROSS.COM","type":"vmess","server":"89.18.58.63","port":180,"cipher":"auto","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省广州市 移动 (1)","type":"vmess","server":"183.236.51.38","port":41291,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省湛江市 移动","type":"vmess","server":"120.198.71.214","port":42375,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省 联通","type":"vmess","server":"ba91e0a1-sutj40-t1k53r-1jm8i.cu.plebai.net","port":5228,"cipher":"auto","uuid":"a6ddfc37-05eb-11ed-af40-f23c91cfbbc9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省广州市 移动 (2)","type":"vmess","server":"183.236.51.38","port":41902,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省广州市 移动 (3)","type":"vmess","server":"183.236.51.38","port":59554,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省 联通 (1)","type":"vmess","server":"2e93912d-sutj40-sutgau-1r62f.cu.plebai.net","port":5229,"cipher":"auto","uuid":"154b0bf8-f9a7-11ee-a218-f23c91cfbbc9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"俄罗斯 莫斯科JustHost","type":"vmess","server":"45.147.201.231","port":23077,"cipher":"auto","uuid":"f90b800d-2b37-424e-afc8-4ecb2a64b64f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"俄罗斯 V2CROSS.COM","type":"vmess","server":"195.58.49.84","port":22019,"cipher":"auto","uuid":"8392a60c-32fa-44f4-85d1-05b8c63dbde3","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"广东省湛江市 移动 (2)","type":"vmess","server":"120.198.71.216","port":42259,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省 联通 (2)","type":"vmess","server":"74f77c00-sutj40-t5qufl-8n27.cu.plebai.net","port":5229,"cipher":"auto","uuid":"5dc6fa05-a601-aba6-7761-ecde22d2b0fc","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"俄罗斯 Rubtsovsk Branch of Altai State University","type":"vmess","server":"212.192.12.154","port":23019,"cipher":"auto","uuid":"e3049875-1be3-4233-9c9b-a9490612fbb5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"广东省湛江市 移动 (3)","type":"vmess","server":"120.198.71.216","port":35001,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省 联通 (3)","type":"vmess","server":"7bd0fd61-suz340-tau0mq-1i41w.cu.plebai.net","port":5228,"cipher":"auto","uuid":"d13637bd-0e24-11ed-9d0b-f23c91cfbbc9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 CloudFlare节点 (3)_1","type":"vmess","server":"us01.sh-cloudflare.sbs","port":8443,"cipher":"auto","uuid":"4df4efc0-a1fe-40b1-a169-482cfb10258c","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"us01.sh-cloudflare.sbs"}}}
+  - {"name":"美国 CloudFlare节点 (4)","type":"vmess","server":"104.21.96.1","port":8443,"cipher":"auto","uuid":"914584ee-3515-46ac-a09d-4677a2e9dc9a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"us01.sh-cloudflare.sbs"}}}
+  - {"name":"广东省湛江市 移动 (4)","type":"vmess","server":"120.198.71.219","port":44015,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省广州市 移动 (4)","type":"vmess","server":"183.236.51.38","port":43121,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"克罗地亚 V2CROSS.COM (1)","type":"vmess","server":"89.18.58.104","port":180,"cipher":"auto","uuid":"d13fc2f5-3e05-4795-81eb-44143a09e552","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"俄罗斯 V2CROSS.COM (1)","type":"vmess","server":"de.ajiaxi.cyou","port":8877,"cipher":"auto","uuid":"a351da43-5eb8-4dc3-a926-7947484c94a6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省 联通 (4)","type":"vmess","server":"a0bc30e2-sux8g0-sv74ec-1t7c2.cu.plebai.net","port":5228,"cipher":"auto","uuid":"a087871c-d185-11ef-bdb9-f23c91cfbbc9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"挪威 V2CROSS.COM","type":"vmess","server":"84.247.148.192","port":44396,"cipher":"auto","uuid":"3ca35e0a-e430-43fe-9c12-2e2eea70f873","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 CloudFlare节点 (5)","type":"vmess","server":"104.17.147.22","port":80,"cipher":"auto","uuid":"3f638f34-8dba-4186-bc43-2716a7ddd4be","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/az05.beyondy.cfd:443/link","headers":{"host":"telegram----cassiusvpn----3.kale-e08.workers.dev"}}}
+  - {"name":"美国 CloudFlare节点 (6)","type":"vmess","server":"104.21.80.1","port":2096,"cipher":"auto","uuid":"b3928f8d-ea81-4d75-bcec-4016a072adff","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"de01.sh-cloudflare.sbs"}}}
+  - {"name":"美国 CloudFlare节点 (7)","type":"vmess","server":"de01.sh-cloudflare.sbs","port":2096,"cipher":"auto","uuid":"75a0885f-0ca5-42a4-8651-391cf8193154","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"de01.sh-cloudflare.sbs"}}}
+  - {"name":"香港 腾讯云","type":"vmess","server":"43.154.34.74","port":1935,"cipher":"auto","uuid":"2e5bfd4a-0852-4df4-b9e7-9b6f207113b4","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/vmess-argo","headers":{"host":"djdjjrjjrhk.lzj520hxw.dpdns.org"}}}
+  - {"name":"广东省 联通 (5)","type":"vmess","server":"2042c623-suz340-sw30na-2vfx.cu.plebai.net","port":5228,"cipher":"auto","uuid":"7d74be30-1102-11ec-a0fc-f23c913c8d2b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 CloudFlare节点 (8)","type":"vmess","server":"104.21.80.1","port":8443,"cipher":"auto","uuid":"914584ee-3515-46ac-a09d-4677a2e9dc9a","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"us01.sh-cloudflare.sbs"}}}
+  - {"name":"广东省 联通 (6)","type":"vmess","server":"0ecc8d37-sux8g0-swbudg-1mzwj.cu.plebai.net","port":5229,"cipher":"auto","uuid":"a203d80e-10fe-11ef-88a6-f23c9164ca5d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 CloudFlare节点 (9)","type":"vmess","server":"141.101.120.171","port":8443,"cipher":"auto","uuid":"381cb6d1-6ad4-4909-8494-b8d786cf78ce","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"1744007578.speed.adl.cccp.freefly.pp.ua"}}}
+  - {"name":"广东省广州市 移动 (5)","type":"vmess","server":"120.232.153.41","port":46597,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 CloudFlare节点 (10)","type":"vmess","server":"104.16.155.10","port":2052,"cipher":"auto","uuid":"4b36625c-b9d9-3ea6-aed5-86d62c70e16d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in172.67.2.142","headers":{"host":"100-151-164-47.s1.db-link01.top"}}}
+  - {"name":"俄罗斯 V2CROSS.COM (2)","type":"vmess","server":"94.159.106.248","port":8877,"cipher":"auto","uuid":"654285e6-23fb-4073-b8de-eba90f562fe6","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省广州市 移动 (6)","type":"vmess","server":"120.232.153.40","port":57852,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省 联通 (7)","type":"vmess","server":"8f34e685-suz340-svvaj9-fa3p.cu.plebai.net","port":5229,"cipher":"auto","uuid":"905fcd78-866c-81e1-3cb8-1beb59d661ab","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省 联通 (8)","type":"vmess","server":"7daa6f3a-sux8g0-tavf3m-18imv.cu.plebai.net","port":5228,"cipher":"auto","uuid":"9a846cd4-7a86-11ed-a8bf-f23c91cfbbc9","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"吉林省 移动(全省通用) (1)","type":"vmess","server":"v40.heduian.link","port":30840,"cipher":"auto","uuid":"cbb3f877-d1fb-344c-87a9-d153bffd5484","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/index","headers":{"host":"api100-core-quic-lf.amemv.com"}}}
+  - {"name":"广东省广州市 移动 (7)","type":"vmess","server":"120.232.153.40","port":59082,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省广州市 移动 (8)","type":"vmess","server":"183.236.51.38","port":42524,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省湛江市 移动 (5)","type":"vmess","server":"120.198.71.219","port":42355,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 CloudFlare节点 (11)","type":"vmess","server":"104.16.155.10","port":2082,"cipher":"auto","uuid":"4b36625c-b9d9-3ea6-aed5-86d62c70e16d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in104.20.8.162","headers":{"host":"100-6-81-226.s1.db-link02.top"}}}
+  - {"name":"广东省 联通 (9)","type":"vmess","server":"f5f98477-sutj40-tdcdb7-1k27l.cu.plebai.net","port":5229,"cipher":"auto","uuid":"ba4b1f2e-c985-11ed-9c0c-f23c913c8d2b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省 联通 (10)","type":"vmess","server":"3b6ec92e-sux8g0-swffb5-1s6xm.cu.plebai.net","port":5228,"cipher":"auto","uuid":"2b634c80-fd7e-11ef-9f25-f23c9164ca5d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省 移动","type":"vmess","server":"6aceadab-sv0xs0-sv1gez-1tk5u.cm.plebai.net","port":15229,"cipher":"auto","uuid":"e3217bc2-061f-11f0-90e2-f23c913c8d2b","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省 移动 (1)","type":"vmess","server":"2130c4e3-surog0-szxfsm-v3c2.cm.plebai.net","port":15229,"cipher":"auto","uuid":"5f091cbe-fb34-11ea-9777-f23c9164ca5d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"亚太地区 V2CROSS.COM","type":"vmess","server":"v7.nmcf.me","port":8000,"cipher":"auto","uuid":"dffce9e6-68af-4df8-a7cd-4026db09bd88","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/nmkj","headers":{"host":"www.bing.com"}}}
+  - {"name":"广东省广州市 移动 (9)","type":"vmess","server":"183.236.51.38","port":34652,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"香港 Clayer Limited数据中心","type":"vmess","server":"cnhka.kia-ai.com","port":10807,"cipher":"auto","uuid":"bd464fb5-b542-4694-b5f4-d45dd7f6b3f9","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"cnhka.kia-ai.com"}}}
+  - {"name":"美国 CloudFlare节点 (12)","type":"vmess","server":"s1.db-link01.top","port":2052,"cipher":"auto","uuid":"4b36625c-b9d9-3ea6-aed5-86d62c70e16d","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/dabai.in172.67.2.142","headers":{"host":"100-151-164-47.s1.db-link01.top"}}}
+  - {"name":"美国 CloudFlare节点 (13)","type":"vmess","server":"hk2.lrzdx.uk","port":443,"cipher":"auto","uuid":"db69d5bc-d36c-4903-f471-74b98c5cefe5","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/register"}}
+  - {"name":"美国 V2CROSS.COM_1","type":"vmess","server":"v18.nmcf.me","port":8000,"cipher":"auto","uuid":"ba549d51-467d-4a48-a2ca-8933243ffb60","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/nmkj","headers":{"host":"www.bing.com"}}}
+  - {"name":"俄罗斯 莫斯科JustHost (1)","type":"vmess","server":"45.147.201.231","port":20015,"cipher":"auto","uuid":"e3049875-1be3-4233-9c9b-a9490612fbb5","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"美国 CloudFlare节点 (14)","type":"vmess","server":"104.21.112.1","port":2096,"cipher":"auto","uuid":"75a0885f-0ca5-42a4-8651-391cf8193154","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"de01.sh-cloudflare.sbs"}}}
+  - {"name":"广东省广州市 移动 (10)","type":"vmess","server":"120.232.153.41","port":44491,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 CloudFlare节点 (15)","type":"vmess","server":"104.21.96.1","port":2096,"cipher":"auto","uuid":"75a0885f-0ca5-42a4-8651-391cf8193154","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"de01.sh-cloudflare.sbs"}}}
+  - {"name":"广东省湛江市 移动 (6)","type":"vmess","server":"120.198.71.219","port":51095,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省湛江市 移动 (7)","type":"vmess","server":"120.198.71.216","port":50082,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"香港 V2CROSS.COM","type":"vmess","server":"kajpa.kia-ai.com","port":10805,"cipher":"auto","uuid":"bd464fb5-b542-4694-b5f4-d45dd7f6b3f9","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"kajpa.kia-ai.com"}}}
+  - {"name":"美国 CloudFlare节点 (16)","type":"vmess","server":"104.21.64.1","port":2096,"cipher":"auto","uuid":"b3928f8d-ea81-4d75-bcec-4016a072adff","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"de01.sh-cloudflare.sbs"}}}
+  - {"name":"广东省广州市 移动 (11)","type":"vmess","server":"120.232.153.63","port":37805,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"印度 V2CROSS.COM","type":"vmess","server":"202.78.162.5","port":443,"cipher":"auto","uuid":"2ff97c6d-8557-42a4-b43f-19c77c5959ea","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"irsoft.sytes.net"}}}
+  - {"name":"印度 V2CROSS.COM (1)","type":"vmess","server":"202.78.162.5","port":443,"cipher":"auto","uuid":"118287d2-e968-42e1-80d0-12fa2f5d38d6","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"sahand.serveminecraft.net"}}}
+  - {"name":"美国 CloudFlare节点 (17)","type":"vmess","server":"104.21.82.183","port":8880,"cipher":"auto","uuid":"5a7021e0-26b4-45d6-b175-fe551601ca97","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"server26.beheshtbaneh.com"}}}
+  - {"name":"印度 V2CROSS.COM (2)","type":"vmess","server":"202.78.162.5","port":443,"cipher":"auto","uuid":"716eded6-2201-4dbd-9d63-1638c9e8e677","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/@forwardv2ray","headers":{"host":"pendar.onthewifi.com"}}}
+  - {"name":"美国 Fastly全球Anycast节点","type":"vmess","server":"gov.uk","port":443,"cipher":"auto","uuid":"77848824-93b7-4b89-ffd0-e91afff406ce","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/77848824","headers":{"host":"zheshiscp.com"}}}
+  - {"name":"美国 CloudFlare节点_2","type":"trojan","server":"104.21.23.162","port":443,"udp":true,"password":"0212fab5-e93c-4904-b7a8-187fd535f354","sni":"3sdxcvbn.131.pp.ua","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"美国 CloudFlare节点 (1)_2","type":"trojan","server":"104.21.23.115","port":443,"udp":true,"password":"5453ae26-250d-4e79-b4ec-016baf806865","sni":"1cc.852224.ggff.net","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM_2","type":"trojan","server":"45.146.232.171","port":46668,"udp":true,"password":"4d3546b9-f55a-4ec4-af91-36408636d06b","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (1)","type":"trojan","server":"45.146.232.171","port":42881,"udp":true,"password":"4a8cb218-0b68-4967-8a0c-b0440bc5cb81","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省广州市 电信","type":"trojan","server":"sla.cn.964e995b760.gogodns.xin","port":27408,"udp":true,"password":"6f4221ca-e019-4652-a3cc-0995dba60dc5","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (2)","type":"trojan","server":"45.146.232.171","port":46926,"udp":true,"password":"7043f742-ca4b-417b-ade0-0416392e72be","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (3)","type":"trojan","server":"45.146.232.171","port":43383,"udp":true,"password":"dec77d0d-607f-45f7-95b0-9434131de295","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省广州市 电信 (1)","type":"trojan","server":"sla.cn.964e995b760.gogodns.xin","port":42881,"udp":true,"password":"4a8cb218-0b68-4967-8a0c-b0440bc5cb81","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (4)","type":"trojan","server":"45.146.232.173","port":46926,"udp":true,"password":"7043f742-ca4b-417b-ade0-0416392e72be","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 CloudFlare节点 (2)_2","type":"trojan","server":"172.67.210.210","port":443,"udp":true,"password":"5453ae26-250d-4e79-b4ec-016baf806865","sni":"1cc.852224.ggff.net","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (5)","type":"trojan","server":"45.146.232.173","port":27408,"udp":true,"password":"6f4221ca-e019-4652-a3cc-0995dba60dc5","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"爱尔兰 V2CROSS.COM","type":"trojan","server":"63.35.71.42","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省广州市 电信 (2)","type":"trojan","server":"sla.cn.964e995b760.gogodns.xin","port":46926,"udp":true,"password":"7043f742-ca4b-417b-ade0-0416392e72be","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 CloudFlare节点 (3)_2","type":"trojan","server":"172.67.212.82","port":443,"udp":true,"password":"15b24b56-d667-4fa8-b548-f3dc942fb461","sni":"2wwwwer.131.pp.ua","skip-cert-verify":false,"network":"tcp"}
+  - {"name":"广东省广州市 电信 (3)","type":"trojan","server":"sla.cn.964e995b760.gogodns.xin","port":43592,"udp":true,"password":"51a668c6-d1bb-4e7e-aca3-125349f779fd","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省广州市 电信 (4)","type":"trojan","server":"sla.cn.964e995b760.gogodns.xin","port":34017,"udp":true,"password":"30af7a3d-9b95-4130-bc92-6c425e0ecf1c","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (6)","type":"trojan","server":"45.146.232.171","port":27408,"udp":true,"password":"6f4221ca-e019-4652-a3cc-0995dba60dc5","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (7)","type":"trojan","server":"45.146.232.173","port":46668,"udp":true,"password":"4d3546b9-f55a-4ec4-af91-36408636d06b","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (8)","type":"trojan","server":"45.146.232.173","port":42881,"udp":true,"password":"4a8cb218-0b68-4967-8a0c-b0440bc5cb81","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (9)","type":"trojan","server":"45.146.232.173","port":43592,"udp":true,"password":"51a668c6-d1bb-4e7e-aca3-125349f779fd","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (10)","type":"trojan","server":"45.146.232.173","port":43383,"udp":true,"password":"dec77d0d-607f-45f7-95b0-9434131de295","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (11)","type":"trojan","server":"45.146.232.173","port":27202,"udp":true,"password":"64f346fb-617e-49df-a9dc-b962a1c0d136","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (12)","type":"trojan","server":"45.146.232.171","port":43592,"udp":true,"password":"51a668c6-d1bb-4e7e-aca3-125349f779fd","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省广州市 电信 (5)","type":"trojan","server":"sla.cn.964e995b760.gogodns.xin","port":46668,"udp":true,"password":"4d3546b9-f55a-4ec4-af91-36408636d06b","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 V2CROSS.COM (13)","type":"trojan","server":"45.146.232.171","port":27202,"udp":true,"password":"64f346fb-617e-49df-a9dc-b962a1c0d136","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"美国 Amazon数据中心","type":"trojan","server":"13.38.159.168","port":22222,"udp":true,"password":"telegram-id-privatevpns","sni":"trojan.burgerip.co.uk","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省深圳市 移动","type":"trojan","server":"vt-bana2-cn-11.ghpgwqswodgzv.com","port":40021,"udp":true,"password":"a38c9e28-9960-4e31-9f18-ed2495a756aa","sni":"vt-bana2-cn-11.ghpgwqswodgzv.com","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"广东省广州市 电信 (6)","type":"trojan","server":"sla.cn.964e995b760.gogodns.xin","port":43383,"udp":true,"password":"dec77d0d-607f-45f7-95b0-9434131de295","sni":"q08m.vgraxiw73s.hasyaf.cn","skip-cert-verify":true,"network":"tcp"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🇸🇬 狮城节点
+      - 🇭🇰 香港节点
       - 🇺🇲 美国节点
-      - 🇯🇵 日本节点
       - 🚀 手动切换
       - DIRECT
   - name: 🚀 手动切换
     type: select
     proxies:
-      - 🇨🇦 加拿大 www.85la.com 283
-      - 🇺🇸 www.85la.com 美国_4
-      - 🇺🇸 www.85la.com 美国_19
-      - 🇺🇸 www.85la.com 美国_14
-      - 🇺🇸 www.85la.com 美国_25
-      - 🇺🇸 www.85la.com 美国_39
-      - 🇺🇸 www.85la.com 美国_33
-      - 🇺🇸 www.85la.com 美国_44
-      - 🇧🇪 www.85la.com 比利时_1
-      - 🇺🇸 www.85la.com 美国_46
-      - 🇺🇸 www.85la.com 美国_50
-      - 🇺🇸 www.85la.com 美国_51
-      - 🇺🇸 www.85la.com 美国_53
-      - 🇺🇸 www.85la.com 美国_296
-      - 🇮🇱 www.85la.com 以色列
-      - 🇺🇸 www.85la.com 美国_104
-      - 🇺🇸 www.85la.com 美国_67
-      - 🇺🇸 www.85la.com 美国_71
-      - 🇨🇿 www.85la.com 捷克_1
-      - 🇨🇿 www.85la.com 捷克_2
-      - 🇺🇸 www.85la.com 美国_78
-      - 🇺🇸 www.85la.com 美国_106
-      - 🇺🇸 www.85la.com 美国_91
-      - 🇺🇸 www.85la.com 美国_92
-      - 🇺🇸 www.85la.com 美国_120
-      - 🇺🇸 www.85la.com 美国_139
-      - 🇺🇸 www.85la.com 美国_134
-      - 🇺🇸 www.85la.com 美国_109
-      - 🇺🇸 www.85la.com 美国_116
-      - 🇺🇸 www.85la.com 美国_124
-      - 🇺🇸 www.85la.com 美国_126
-      - 🇺🇸 www.85la.com 美国_140
-      - 🇺🇸 www.85la.com 美国_136
-      - 🇺🇸 www.85la.com 美国_131
-      - 🇺🇸 www.85la.com 美国_137
-      - 🇺🇸 www.85la.com 美国_138
-      - 🇺🇸 www.85la.com 美国_170
-      - 🇺🇸 www.85la.com 美国_150
-      - 🇺🇸 www.85la.com 美国_161
-      - 🇺🇸 www.85la.com 美国_162
-      - 🇺🇸 www.85la.com 美国_156
-      - 🇺🇸 www.85la.com 美国_164
-      - 🇺🇸 www.85la.com 美国_165
-      - 🇺🇸 www.85la.com 美国_202
-      - 🇳🇱 www.85la.com 荷兰_3
-      - 🇺🇸 www.85la.com 美国_169
-      - 🇺🇸 www.85la.com 美国_171
-      - 🇺🇸 www.85la.com 美国_197
-      - 🇺🇸 www.85la.com 美国_173
-      - 🇺🇸 www.85la.com 美国_174
-      - 🇺🇸 www.85la.com 美国_184
-      - 🇺🇸 www.85la.com 美国_216
-      - 🇧🇷 www.85la.com 巴西_1
-      - 🇺🇸 www.85la.com 美国_182
-      - 🇺🇸 www.85la.com 美国_179
-      - 🇺🇸 www.85la.com 美国_238
-      - 🇧🇷 www.85la.com 巴西_6
-      - 🇺🇸 www.85la.com 美国_183
-      - 🇺🇸 www.85la.com 美国_186
-      - 🇺🇸 www.85la.com 美国_503
-      - 🇺🇸 www.85la.com 美国_189
-      - 🇨🇿 www.85la.com 捷克_3
-      - 🇺🇸 www.85la.com 美国_226
-      - 🇺🇸 www.85la.com 美国_192
-      - 🇺🇸 www.85la.com 美国_193
-      - 🇺🇸 www.85la.com 美国_194
-      - 🇺🇸 www.85la.com 美国_211
-      - 🇺🇸 www.85la.com 美国_196
-      - 🇺🇸 www.85la.com 美国_198
-      - 🇺🇸 www.85la.com 美国_205
-      - 🇺🇸 www.85la.com 美国_200
-      - 🇺🇸 www.85la.com 美国_201
-      - 🇧🇷 www.85la.com 巴西_4
-      - 🇺🇸 www.85la.com 美国_219
-      - 🇺🇸 www.85la.com 美国_204
-      - 🇸🇪 www.85la.com 瑞典_2
-      - 🇺🇸 www.85la.com 美国_206
-      - 🇺🇸 www.85la.com 美国_207
-      - 🇺🇸 www.85la.com 美国_208
-      - 🇺🇸 www.85la.com 美国_209
-      - 🇺🇸 www.85la.com 美国_210
-      - 🇺🇸 www.85la.com 美国_212
-      - 🇦🇺 www.85la.com 澳大利亚_2
-      - 🇺🇸 www.85la.com 美国_508
-      - 🇺🇸 www.85la.com 美国_214
-      - 🇺🇸 www.85la.com 美国_215
-      - 🇺🇸 www.85la.com 美国_217
-      - 🇺🇸 www.85la.com 美国_218
-      - 🇺🇸 www.85la.com 美国_220
-      - 🇺🇸 www.85la.com 美国_247
-      - 🇺🇸 www.85la.com 美国_244
-      - 🇬🇧 www.85la.com 英国_2
-      - 🇺🇸 www.85la.com 美国_229
-      - 🇯🇵 www.85la.com 日本_12
-      - 🇺🇸 www.85la.com 美国_235
-      - 🇺🇸 www.85la.com 美国_239
-      - 🇺🇸 www.85la.com 美国_245
-      - 🇬🇧 www.85la.com 英国_9
-      - 🇺🇸 www.85la.com 美国_252
-      - 🇺🇸 www.85la.com 美国_254
-      - 🇧🇪 www.85la.com 比利时_4
-      - 🇺🇸 www.85la.com 美国_255
-      - 🇩🇪 www.85la.com 德国_2
-      - 🇬🇧 www.85la.com 英国_6
-      - 🇺🇸 www.85la.com 美国_261
-      - 🇫🇷 www.85la.com 法国_1
-      - 🇺🇸 www.85la.com 美国_266
-      - 🇺🇸 www.85la.com 美国_271
-      - 🇬🇧 www.85la.com 英国_7
-      - 🇩🇪 www.85la.com 德国_3
-      - 🇧🇪 www.85la.com 比利时_5
-      - 🇺🇸 www.85la.com 美国_274
-      - 🇧🇪 www.85la.com 比利时_6
-      - 🇺🇸 www.85la.com 美国_307
-      - 🇺🇸 www.85la.com 美国_281
-      - 🇺🇸 www.85la.com 美国_329
-      - 🇧🇪 www.85la.com 比利时_7
-      - 🇺🇸 www.85la.com 美国_285
-      - 🇺🇸 www.85la.com 美国_286
-      - 🇺🇸 www.85la.com 美国_289
-      - 🇧🇪 www.85la.com 比利时_8
-      - 🇺🇸 www.85la.com 美国_322
-      - 🇺🇸 www.85la.com 美国_292
-      - 🇺🇸 www.85la.com 美国_337
-      - 🇺🇸 www.85la.com 美国_316
-      - 🇺🇸 www.85la.com 美国_309
-      - 🇺🇸 www.85la.com 美国_300
-      - 🇺🇸 www.85la.com 美国_333
-      - 🇺🇸 www.85la.com 美国_411
-      - 🇧🇪 www.85la.com 比利时_9
-      - 🇺🇸 www.85la.com 美国_308
-      - 🇺🇸 www.85la.com 美国_310
-      - 🇺🇦 www.85la.com 乌克兰_5
-      - 🇺🇸 www.85la.com 美国_311
-      - 🇵🇹 www.85la.com 葡萄牙
-      - 🇬🇧 www.85la.com 英国_13
-      - 🇺🇸 www.85la.com 美国_312
-      - 🇺🇸 www.85la.com 美国_380
-      - 🇺🇸 www.85la.com 美国_314
-      - 🇺🇸 www.85la.com 美国_315
-      - 🇺🇸 www.85la.com 美国_318
-      - 🏳️ www.85la.com 未知_1
-      - 🇧🇷 www.85la.com 巴西_8
-      - 🇺🇸 www.85la.com 美国_326
-      - 🇧🇷 www.85la.com 巴西_7
-      - 🇺🇸 www.85la.com 美国_334
-      - 🇺🇸 www.85la.com 美国_336
-      - 🇨🇳 www.85la.com 中国_4
-      - 🇺🇸 www.85la.com 美国_342
-      - 🇺🇸 www.85la.com 美国_341
-      - 🇧🇷 www.85la.com 巴西_9
-      - 🇺🇸 www.85la.com 美国_344
-      - 🇺🇸 www.85la.com 美国_490
-      - 🇺🇸 www.85la.com 美国_348
-      - 🇫🇷 www.85la.com 法国_2
-      - 🇮🇳 www.85la.com 印度_1
-      - 🇮🇳 www.85la.com 印度_2
-      - 🇧🇷 www.85la.com 巴西_10
-      - 🏳️ www.85la.com 未知_2
-      - 🇺🇸 www.85la.com 美国_352
-      - 🇺🇸 www.85la.com 美国_353
-      - 🇺🇸 www.85la.com 美国_355
-      - 🏳️ www.85la.com 未知_3
-      - 🇬🇧 www.85la.com 英国_16
-      - 🇧🇷 www.85la.com 巴西_11
-      - 🇺🇸 www.85la.com 美国_410
-      - 🇮🇳 www.85la.com 印度_3
-      - 🇧🇷 www.85la.com 巴西_12
-      - 🇺🇸 www.85la.com 美国_359
-      - 🏳️ www.85la.com 未知_4
-      - 🇯🇵 www.85la.com 日本_4
-      - 🇫🇷 www.85la.com 法国_3
-      - 🏳️ www.85la.com 未知_5
-      - 🇧🇷 www.85la.com 巴西_13
-      - 🇺🇸 www.85la.com 美国_365
-      - 🇺🇸 www.85la.com 美国_367
-      - 🇳🇱 www.85la.com 荷兰_8
-      - 🇺🇸 www.85la.com 美国_368
-      - 🇺🇸 www.85la.com 美国_370
-      - 🇺🇸 www.85la.com 美国_373
-      - 🇬🇧 www.85la.com 英国_17
-      - 🇺🇸 www.85la.com 美国_374
-      - 🇺🇸 www.85la.com 美国_399
-      - 🇺🇸 www.85la.com 美国_382
-      - 🇺🇸 www.85la.com 美国_390
-      - 🇺🇸 www.85la.com 美国_393
-      - 🇺🇸 www.85la.com 美国_459
-      - 🇺🇸 www.85la.com 美国_403
-      - 🇬🇧 www.85la.com 英国_18
-      - 🇺🇸 www.85la.com 美国_457
-      - 🇺🇸 www.85la.com 美国_428
-      - 🇬🇧 www.85la.com 英国_54
-      - 🇺🇸 www.85la.com 美国_408
-      - 🇺🇸 www.85la.com 美国_471
-      - 🇩🇪 www.85la.com 德国_10
-      - 🇮🇳 www.85la.com 印度_4
-      - 🇩🇪 www.85la.com 德国_11
-      - 🇺🇸 www.85la.com 美国_426
-      - 🇺🇸 www.85la.com 美国_427
-      - 🇫🇷 www.85la.com 法国_6
-      - 🇩🇪 www.85la.com 德国_12
-      - 🇳🇴 www.85la.com 挪威_1
-      - 🇳🇴 www.85la.com 挪威_2
-      - 🇺🇸 www.85la.com 美国_434
-      - 🇩🇪 www.85la.com 德国_13
-      - 🇳🇱 www.85la.com 荷兰_12
-      - 🇩🇪 www.85la.com 德国_14
-      - 🇺🇸 www.85la.com 美国_446
-      - 🇺🇸 www.85la.com 美国_450
-      - 🇺🇸 www.85la.com 美国_451
-      - 🇫🇷 www.85la.com 法国_7
-      - 🇺🇸 www.85la.com 美国_453
-      - 🇦🇺 www.85la.com 澳大利亚_4
-      - 🇺🇸 www.85la.com 美国_460
-      - 🇩🇪 www.85la.com 德国_15
-      - 🇩🇪 www.85la.com 德国_16
-      - 🇦🇺 www.85la.com 澳大利亚_5
-      - 🇺🇸 www.85la.com 美国_461
-      - 🇬🇧 www.85la.com 英国_30
-      - 🇳🇴 www.85la.com 挪威_3
-      - 🇺🇸 www.85la.com 美国_462
-      - 🇩🇪 www.85la.com 德国_17
-      - 🇩🇪 www.85la.com 德国_19
-      - 🇳🇱 www.85la.com 荷兰_14
-      - 🇺🇸 www.85la.com 美国_464
-      - 🇨🇭 www.85la.com 瑞士_8
-      - 🇨🇿 www.85la.com 捷克_4
-      - 🇺🇸 www.85la.com 美国_467
-      - 🇷🇺 www.85la.com 俄罗斯_4
-      - 🇮🇳 www.85la.com 印度_5
-      - 🇬🇧 www.85la.com 英国_33
-      - 🇺🇸 www.85la.com 美国_509
-      - 🇺🇦 www.85la.com 乌克兰_7
-      - 🇸🇬 www.85la.com 新加坡_4
-      - 🇩🇪 www.85la.com 德国_20
-      - 🇩🇪 www.85la.com 德国_21
-      - 🇺🇦 www.85la.com 乌克兰_9
-      - 🇸🇬 www.85la.com 新加坡_6
-      - 🇺🇦 www.85la.com 乌克兰_10
-      - 🇬🇧 www.85la.com 英国_49
-      - 🇨🇳 www.85la.com 中国_11
-      - 🇰🇷 www.85la.com 韩国_4
-      - 🇳🇱 www.85la.com 荷兰_18
-      - 🇺🇸 www.85la.com 美国_507
-      - 🇺🇸 www.85la.com 美国_510
-      - 🇺🇸 www.85la.com 美国_511
-      - 🇺🇸 www.85la.com 美国_513
-      - 🇫🇷 www.85la.com 法国_9
-      - 🇫🇷 www.85la.com 法国_10
-      - 🇺🇸 www.85la.com 美国_514
-      - 🇺🇸 www.85la.com 美国_515
-      - 🇺🇸 www.85la.com 美国_516
-      - 🇪🇸 www.85la.com 西班牙_4
+      - 美国 CloudFlare节点_1
+      - 美国 CloudFlare节点 (1)_1
+      - 美国 CloudFlare节点 (2)_1
+      - 香港 Amazon数据中心
+      - 克罗地亚 V2CROSS.COM
+      - 广东省广州市 移动 (1)
+      - 广东省湛江市 移动
+      - 广东省 联通
+      - 广东省广州市 移动 (2)
+      - 广东省广州市 移动 (3)
+      - 广东省 联通 (1)
+      - 俄罗斯 莫斯科JustHost
+      - 俄罗斯 V2CROSS.COM
+      - 广东省湛江市 移动 (2)
+      - 广东省 联通 (2)
+      - 俄罗斯 Rubtsovsk Branch of Altai State University
+      - 广东省湛江市 移动 (3)
+      - 广东省 联通 (3)
+      - 美国 CloudFlare节点 (3)_1
+      - 美国 CloudFlare节点 (4)
+      - 广东省湛江市 移动 (4)
+      - 广东省广州市 移动 (4)
+      - 克罗地亚 V2CROSS.COM (1)
+      - 俄罗斯 V2CROSS.COM (1)
+      - 广东省 联通 (4)
+      - 挪威 V2CROSS.COM
+      - 美国 CloudFlare节点 (5)
+      - 美国 CloudFlare节点 (6)
+      - 美国 CloudFlare节点 (7)
+      - 香港 腾讯云
+      - 广东省 联通 (5)
+      - 美国 CloudFlare节点 (8)
+      - 广东省 联通 (6)
+      - 美国 CloudFlare节点 (9)
+      - 广东省广州市 移动 (5)
+      - 美国 CloudFlare节点 (10)
+      - 俄罗斯 V2CROSS.COM (2)
+      - 广东省广州市 移动 (6)
+      - 广东省 联通 (7)
+      - 广东省 联通 (8)
+      - 吉林省 移动(全省通用) (1)
+      - 广东省广州市 移动 (7)
+      - 广东省广州市 移动 (8)
+      - 广东省湛江市 移动 (5)
+      - 美国 CloudFlare节点 (11)
+      - 广东省 联通 (9)
+      - 广东省 联通 (10)
+      - 广东省 移动
+      - 广东省 移动 (1)
+      - 亚太地区 V2CROSS.COM
+      - 广东省广州市 移动 (9)
+      - 香港 Clayer Limited数据中心
+      - 美国 CloudFlare节点 (12)
+      - 美国 CloudFlare节点 (13)
+      - 美国 V2CROSS.COM_1
+      - 俄罗斯 莫斯科JustHost (1)
+      - 美国 CloudFlare节点 (14)
+      - 广东省广州市 移动 (10)
+      - 美国 CloudFlare节点 (15)
+      - 广东省湛江市 移动 (6)
+      - 广东省湛江市 移动 (7)
+      - 香港 V2CROSS.COM
+      - 美国 CloudFlare节点 (16)
+      - 广东省广州市 移动 (11)
+      - 印度 V2CROSS.COM
+      - 印度 V2CROSS.COM (1)
+      - 美国 CloudFlare节点 (17)
+      - 印度 V2CROSS.COM (2)
+      - 美国 Fastly全球Anycast节点
+      - 美国 CloudFlare节点_2
+      - 美国 CloudFlare节点 (1)_2
+      - 美国 V2CROSS.COM_2
+      - 美国 V2CROSS.COM (1)
+      - 广东省广州市 电信
+      - 美国 V2CROSS.COM (2)
+      - 美国 V2CROSS.COM (3)
+      - 广东省广州市 电信 (1)
+      - 美国 V2CROSS.COM (4)
+      - 美国 CloudFlare节点 (2)_2
+      - 美国 V2CROSS.COM (5)
+      - 爱尔兰 V2CROSS.COM
+      - 广东省广州市 电信 (2)
+      - 美国 CloudFlare节点 (3)_2
+      - 广东省广州市 电信 (3)
+      - 广东省广州市 电信 (4)
+      - 美国 V2CROSS.COM (6)
+      - 美国 V2CROSS.COM (7)
+      - 美国 V2CROSS.COM (8)
+      - 美国 V2CROSS.COM (9)
+      - 美国 V2CROSS.COM (10)
+      - 美国 V2CROSS.COM (11)
+      - 美国 V2CROSS.COM (12)
+      - 广东省广州市 电信 (5)
+      - 美国 V2CROSS.COM (13)
+      - 美国 Amazon数据中心
+      - 广东省深圳市 移动
+      - 广东省广州市 电信 (6)
   - name: ♻️ 自动选择
     type: url-test
-    url: https://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    lazy: true
-    timeout: 7000
-    max-failed-times: 7
     proxies:
-      - 🇨🇦 加拿大 www.85la.com 283
-      - 🇺🇸 www.85la.com 美国_4
-      - 🇺🇸 www.85la.com 美国_19
-      - 🇺🇸 www.85la.com 美国_14
-      - 🇺🇸 www.85la.com 美国_25
-      - 🇺🇸 www.85la.com 美国_39
-      - 🇺🇸 www.85la.com 美国_33
-      - 🇺🇸 www.85la.com 美国_44
-      - 🇧🇪 www.85la.com 比利时_1
-      - 🇺🇸 www.85la.com 美国_46
-      - 🇺🇸 www.85la.com 美国_50
-      - 🇺🇸 www.85la.com 美国_51
-      - 🇺🇸 www.85la.com 美国_53
-      - 🇺🇸 www.85la.com 美国_296
-      - 🇮🇱 www.85la.com 以色列
-      - 🇺🇸 www.85la.com 美国_104
-      - 🇺🇸 www.85la.com 美国_67
-      - 🇺🇸 www.85la.com 美国_71
-      - 🇨🇿 www.85la.com 捷克_1
-      - 🇨🇿 www.85la.com 捷克_2
-      - 🇺🇸 www.85la.com 美国_78
-      - 🇺🇸 www.85la.com 美国_106
-      - 🇺🇸 www.85la.com 美国_91
-      - 🇺🇸 www.85la.com 美国_92
-      - 🇺🇸 www.85la.com 美国_120
-      - 🇺🇸 www.85la.com 美国_139
-      - 🇺🇸 www.85la.com 美国_134
-      - 🇺🇸 www.85la.com 美国_109
-      - 🇺🇸 www.85la.com 美国_116
-      - 🇺🇸 www.85la.com 美国_124
-      - 🇺🇸 www.85la.com 美国_126
-      - 🇺🇸 www.85la.com 美国_140
-      - 🇺🇸 www.85la.com 美国_136
-      - 🇺🇸 www.85la.com 美国_131
-      - 🇺🇸 www.85la.com 美国_137
-      - 🇺🇸 www.85la.com 美国_138
-      - 🇺🇸 www.85la.com 美国_170
-      - 🇺🇸 www.85la.com 美国_150
-      - 🇺🇸 www.85la.com 美国_161
-      - 🇺🇸 www.85la.com 美国_162
-      - 🇺🇸 www.85la.com 美国_156
-      - 🇺🇸 www.85la.com 美国_164
-      - 🇺🇸 www.85la.com 美国_165
-      - 🇺🇸 www.85la.com 美国_202
-      - 🇳🇱 www.85la.com 荷兰_3
-      - 🇺🇸 www.85la.com 美国_169
-      - 🇺🇸 www.85la.com 美国_171
-      - 🇺🇸 www.85la.com 美国_197
-      - 🇺🇸 www.85la.com 美国_173
-      - 🇺🇸 www.85la.com 美国_174
-      - 🇺🇸 www.85la.com 美国_184
-      - 🇺🇸 www.85la.com 美国_216
-      - 🇧🇷 www.85la.com 巴西_1
-      - 🇺🇸 www.85la.com 美国_182
-      - 🇺🇸 www.85la.com 美国_179
-      - 🇺🇸 www.85la.com 美国_238
-      - 🇧🇷 www.85la.com 巴西_6
-      - 🇺🇸 www.85la.com 美国_183
-      - 🇺🇸 www.85la.com 美国_186
-      - 🇺🇸 www.85la.com 美国_503
-      - 🇺🇸 www.85la.com 美国_189
-      - 🇨🇿 www.85la.com 捷克_3
-      - 🇺🇸 www.85la.com 美国_226
-      - 🇺🇸 www.85la.com 美国_192
-      - 🇺🇸 www.85la.com 美国_193
-      - 🇺🇸 www.85la.com 美国_194
-      - 🇺🇸 www.85la.com 美国_211
-      - 🇺🇸 www.85la.com 美国_196
-      - 🇺🇸 www.85la.com 美国_198
-      - 🇺🇸 www.85la.com 美国_205
-      - 🇺🇸 www.85la.com 美国_200
-      - 🇺🇸 www.85la.com 美国_201
-      - 🇧🇷 www.85la.com 巴西_4
-      - 🇺🇸 www.85la.com 美国_219
-      - 🇺🇸 www.85la.com 美国_204
-      - 🇸🇪 www.85la.com 瑞典_2
-      - 🇺🇸 www.85la.com 美国_206
-      - 🇺🇸 www.85la.com 美国_207
-      - 🇺🇸 www.85la.com 美国_208
-      - 🇺🇸 www.85la.com 美国_209
-      - 🇺🇸 www.85la.com 美国_210
-      - 🇺🇸 www.85la.com 美国_212
-      - 🇦🇺 www.85la.com 澳大利亚_2
-      - 🇺🇸 www.85la.com 美国_508
-      - 🇺🇸 www.85la.com 美国_214
-      - 🇺🇸 www.85la.com 美国_215
-      - 🇺🇸 www.85la.com 美国_217
-      - 🇺🇸 www.85la.com 美国_218
-      - 🇺🇸 www.85la.com 美国_220
-      - 🇺🇸 www.85la.com 美国_247
-      - 🇺🇸 www.85la.com 美国_244
-      - 🇬🇧 www.85la.com 英国_2
-      - 🇺🇸 www.85la.com 美国_229
-      - 🇯🇵 www.85la.com 日本_12
-      - 🇺🇸 www.85la.com 美国_235
-      - 🇺🇸 www.85la.com 美国_239
-      - 🇺🇸 www.85la.com 美国_245
-      - 🇬🇧 www.85la.com 英国_9
-      - 🇺🇸 www.85la.com 美国_252
-      - 🇺🇸 www.85la.com 美国_254
-      - 🇧🇪 www.85la.com 比利时_4
-      - 🇺🇸 www.85la.com 美国_255
-      - 🇩🇪 www.85la.com 德国_2
-      - 🇬🇧 www.85la.com 英国_6
-      - 🇺🇸 www.85la.com 美国_261
-      - 🇫🇷 www.85la.com 法国_1
-      - 🇺🇸 www.85la.com 美国_266
-      - 🇺🇸 www.85la.com 美国_271
-      - 🇬🇧 www.85la.com 英国_7
-      - 🇩🇪 www.85la.com 德国_3
-      - 🇧🇪 www.85la.com 比利时_5
-      - 🇺🇸 www.85la.com 美国_274
-      - 🇧🇪 www.85la.com 比利时_6
-      - 🇺🇸 www.85la.com 美国_307
-      - 🇺🇸 www.85la.com 美国_281
-      - 🇺🇸 www.85la.com 美国_329
-      - 🇧🇪 www.85la.com 比利时_7
-      - 🇺🇸 www.85la.com 美国_285
-      - 🇺🇸 www.85la.com 美国_286
-      - 🇺🇸 www.85la.com 美国_289
-      - 🇧🇪 www.85la.com 比利时_8
-      - 🇺🇸 www.85la.com 美国_322
-      - 🇺🇸 www.85la.com 美国_292
-      - 🇺🇸 www.85la.com 美国_337
-      - 🇺🇸 www.85la.com 美国_316
-      - 🇺🇸 www.85la.com 美国_309
-      - 🇺🇸 www.85la.com 美国_300
-      - 🇺🇸 www.85la.com 美国_333
-      - 🇺🇸 www.85la.com 美国_411
-      - 🇧🇪 www.85la.com 比利时_9
-      - 🇺🇸 www.85la.com 美国_308
-      - 🇺🇸 www.85la.com 美国_310
-      - 🇺🇦 www.85la.com 乌克兰_5
-      - 🇺🇸 www.85la.com 美国_311
-      - 🇵🇹 www.85la.com 葡萄牙
-      - 🇬🇧 www.85la.com 英国_13
-      - 🇺🇸 www.85la.com 美国_312
-      - 🇺🇸 www.85la.com 美国_380
-      - 🇺🇸 www.85la.com 美国_314
-      - 🇺🇸 www.85la.com 美国_315
-      - 🇺🇸 www.85la.com 美国_318
-      - 🏳️ www.85la.com 未知_1
-      - 🇧🇷 www.85la.com 巴西_8
-      - 🇺🇸 www.85la.com 美国_326
-      - 🇧🇷 www.85la.com 巴西_7
-      - 🇺🇸 www.85la.com 美国_334
-      - 🇺🇸 www.85la.com 美国_336
-      - 🇨🇳 www.85la.com 中国_4
-      - 🇺🇸 www.85la.com 美国_342
-      - 🇺🇸 www.85la.com 美国_341
-      - 🇧🇷 www.85la.com 巴西_9
-      - 🇺🇸 www.85la.com 美国_344
-      - 🇺🇸 www.85la.com 美国_490
-      - 🇺🇸 www.85la.com 美国_348
-      - 🇫🇷 www.85la.com 法国_2
-      - 🇮🇳 www.85la.com 印度_1
-      - 🇮🇳 www.85la.com 印度_2
-      - 🇧🇷 www.85la.com 巴西_10
-      - 🏳️ www.85la.com 未知_2
-      - 🇺🇸 www.85la.com 美国_352
-      - 🇺🇸 www.85la.com 美国_353
-      - 🇺🇸 www.85la.com 美国_355
-      - 🏳️ www.85la.com 未知_3
-      - 🇬🇧 www.85la.com 英国_16
-      - 🇧🇷 www.85la.com 巴西_11
-      - 🇺🇸 www.85la.com 美国_410
-      - 🇮🇳 www.85la.com 印度_3
-      - 🇧🇷 www.85la.com 巴西_12
-      - 🇺🇸 www.85la.com 美国_359
-      - 🏳️ www.85la.com 未知_4
-      - 🇯🇵 www.85la.com 日本_4
-      - 🇫🇷 www.85la.com 法国_3
-      - 🏳️ www.85la.com 未知_5
-      - 🇧🇷 www.85la.com 巴西_13
-      - 🇺🇸 www.85la.com 美国_365
-      - 🇺🇸 www.85la.com 美国_367
-      - 🇳🇱 www.85la.com 荷兰_8
-      - 🇺🇸 www.85la.com 美国_368
-      - 🇺🇸 www.85la.com 美国_370
-      - 🇺🇸 www.85la.com 美国_373
-      - 🇬🇧 www.85la.com 英国_17
-      - 🇺🇸 www.85la.com 美国_374
-      - 🇺🇸 www.85la.com 美国_399
-      - 🇺🇸 www.85la.com 美国_382
-      - 🇺🇸 www.85la.com 美国_390
-      - 🇺🇸 www.85la.com 美国_393
-      - 🇺🇸 www.85la.com 美国_459
-      - 🇺🇸 www.85la.com 美国_403
-      - 🇬🇧 www.85la.com 英国_18
-      - 🇺🇸 www.85la.com 美国_457
-      - 🇺🇸 www.85la.com 美国_428
-      - 🇬🇧 www.85la.com 英国_54
-      - 🇺🇸 www.85la.com 美国_408
-      - 🇺🇸 www.85la.com 美国_471
-      - 🇩🇪 www.85la.com 德国_10
-      - 🇮🇳 www.85la.com 印度_4
-      - 🇩🇪 www.85la.com 德国_11
-      - 🇺🇸 www.85la.com 美国_426
-      - 🇺🇸 www.85la.com 美国_427
-      - 🇫🇷 www.85la.com 法国_6
-      - 🇩🇪 www.85la.com 德国_12
-      - 🇳🇴 www.85la.com 挪威_1
-      - 🇳🇴 www.85la.com 挪威_2
-      - 🇺🇸 www.85la.com 美国_434
-      - 🇩🇪 www.85la.com 德国_13
-      - 🇳🇱 www.85la.com 荷兰_12
-      - 🇩🇪 www.85la.com 德国_14
-      - 🇺🇸 www.85la.com 美国_446
-      - 🇺🇸 www.85la.com 美国_450
-      - 🇺🇸 www.85la.com 美国_451
-      - 🇫🇷 www.85la.com 法国_7
-      - 🇺🇸 www.85la.com 美国_453
-      - 🇦🇺 www.85la.com 澳大利亚_4
-      - 🇺🇸 www.85la.com 美国_460
-      - 🇩🇪 www.85la.com 德国_15
-      - 🇩🇪 www.85la.com 德国_16
-      - 🇦🇺 www.85la.com 澳大利亚_5
-      - 🇺🇸 www.85la.com 美国_461
-      - 🇬🇧 www.85la.com 英国_30
-      - 🇳🇴 www.85la.com 挪威_3
-      - 🇺🇸 www.85la.com 美国_462
-      - 🇩🇪 www.85la.com 德国_17
-      - 🇩🇪 www.85la.com 德国_19
-      - 🇳🇱 www.85la.com 荷兰_14
-      - 🇺🇸 www.85la.com 美国_464
-      - 🇨🇭 www.85la.com 瑞士_8
-      - 🇨🇿 www.85la.com 捷克_4
-      - 🇺🇸 www.85la.com 美国_467
-      - 🇷🇺 www.85la.com 俄罗斯_4
-      - 🇮🇳 www.85la.com 印度_5
-      - 🇬🇧 www.85la.com 英国_33
-      - 🇺🇸 www.85la.com 美国_509
-      - 🇺🇦 www.85la.com 乌克兰_7
-      - 🇸🇬 www.85la.com 新加坡_4
-      - 🇩🇪 www.85la.com 德国_20
-      - 🇩🇪 www.85la.com 德国_21
-      - 🇺🇦 www.85la.com 乌克兰_9
-      - 🇸🇬 www.85la.com 新加坡_6
-      - 🇺🇦 www.85la.com 乌克兰_10
-      - 🇬🇧 www.85la.com 英国_49
-      - 🇨🇳 www.85la.com 中国_11
-      - 🇰🇷 www.85la.com 韩国_4
-      - 🇳🇱 www.85la.com 荷兰_18
-      - 🇺🇸 www.85la.com 美国_507
-      - 🇺🇸 www.85la.com 美国_510
-      - 🇺🇸 www.85la.com 美国_511
-      - 🇺🇸 www.85la.com 美国_513
-      - 🇫🇷 www.85la.com 法国_9
-      - 🇫🇷 www.85la.com 法国_10
-      - 🇺🇸 www.85la.com 美国_514
-      - 🇺🇸 www.85la.com 美国_515
-      - 🇺🇸 www.85la.com 美国_516
-      - 🇪🇸 www.85la.com 西班牙_4
+      - 美国 CloudFlare节点_1
+      - 美国 CloudFlare节点 (1)_1
+      - 美国 CloudFlare节点 (2)_1
+      - 香港 Amazon数据中心
+      - 克罗地亚 V2CROSS.COM
+      - 广东省广州市 移动 (1)
+      - 广东省湛江市 移动
+      - 广东省 联通
+      - 广东省广州市 移动 (2)
+      - 广东省广州市 移动 (3)
+      - 广东省 联通 (1)
+      - 俄罗斯 莫斯科JustHost
+      - 俄罗斯 V2CROSS.COM
+      - 广东省湛江市 移动 (2)
+      - 广东省 联通 (2)
+      - 俄罗斯 Rubtsovsk Branch of Altai State University
+      - 广东省湛江市 移动 (3)
+      - 广东省 联通 (3)
+      - 美国 CloudFlare节点 (3)_1
+      - 美国 CloudFlare节点 (4)
+      - 广东省湛江市 移动 (4)
+      - 广东省广州市 移动 (4)
+      - 克罗地亚 V2CROSS.COM (1)
+      - 俄罗斯 V2CROSS.COM (1)
+      - 广东省 联通 (4)
+      - 挪威 V2CROSS.COM
+      - 美国 CloudFlare节点 (5)
+      - 美国 CloudFlare节点 (6)
+      - 美国 CloudFlare节点 (7)
+      - 香港 腾讯云
+      - 广东省 联通 (5)
+      - 美国 CloudFlare节点 (8)
+      - 广东省 联通 (6)
+      - 美国 CloudFlare节点 (9)
+      - 广东省广州市 移动 (5)
+      - 美国 CloudFlare节点 (10)
+      - 俄罗斯 V2CROSS.COM (2)
+      - 广东省广州市 移动 (6)
+      - 广东省 联通 (7)
+      - 广东省 联通 (8)
+      - 吉林省 移动(全省通用) (1)
+      - 广东省广州市 移动 (7)
+      - 广东省广州市 移动 (8)
+      - 广东省湛江市 移动 (5)
+      - 美国 CloudFlare节点 (11)
+      - 广东省 联通 (9)
+      - 广东省 联通 (10)
+      - 广东省 移动
+      - 广东省 移动 (1)
+      - 亚太地区 V2CROSS.COM
+      - 广东省广州市 移动 (9)
+      - 香港 Clayer Limited数据中心
+      - 美国 CloudFlare节点 (12)
+      - 美国 CloudFlare节点 (13)
+      - 美国 V2CROSS.COM_1
+      - 俄罗斯 莫斯科JustHost (1)
+      - 美国 CloudFlare节点 (14)
+      - 广东省广州市 移动 (10)
+      - 美国 CloudFlare节点 (15)
+      - 广东省湛江市 移动 (6)
+      - 广东省湛江市 移动 (7)
+      - 香港 V2CROSS.COM
+      - 美国 CloudFlare节点 (16)
+      - 广东省广州市 移动 (11)
+      - 印度 V2CROSS.COM
+      - 印度 V2CROSS.COM (1)
+      - 美国 CloudFlare节点 (17)
+      - 印度 V2CROSS.COM (2)
+      - 美国 Fastly全球Anycast节点
+      - 美国 CloudFlare节点_2
+      - 美国 CloudFlare节点 (1)_2
+      - 美国 V2CROSS.COM_2
+      - 美国 V2CROSS.COM (1)
+      - 广东省广州市 电信
+      - 美国 V2CROSS.COM (2)
+      - 美国 V2CROSS.COM (3)
+      - 广东省广州市 电信 (1)
+      - 美国 V2CROSS.COM (4)
+      - 美国 CloudFlare节点 (2)_2
+      - 美国 V2CROSS.COM (5)
+      - 爱尔兰 V2CROSS.COM
+      - 广东省广州市 电信 (2)
+      - 美国 CloudFlare节点 (3)_2
+      - 广东省广州市 电信 (3)
+      - 广东省广州市 电信 (4)
+      - 美国 V2CROSS.COM (6)
+      - 美国 V2CROSS.COM (7)
+      - 美国 V2CROSS.COM (8)
+      - 美国 V2CROSS.COM (9)
+      - 美国 V2CROSS.COM (10)
+      - 美国 V2CROSS.COM (11)
+      - 美国 V2CROSS.COM (12)
+      - 广东省广州市 电信 (5)
+      - 美国 V2CROSS.COM (13)
+      - 美国 Amazon数据中心
+      - 广东省深圳市 移动
+      - 广东省广州市 电信 (6)
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -852,451 +412,158 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇨🇦 加拿大 www.85la.com 283
-      - 🇺🇸 www.85la.com 美国_4
-      - 🇺🇸 www.85la.com 美国_19
-      - 🇺🇸 www.85la.com 美国_14
-      - 🇺🇸 www.85la.com 美国_25
-      - 🇺🇸 www.85la.com 美国_39
-      - 🇺🇸 www.85la.com 美国_33
-      - 🇺🇸 www.85la.com 美国_44
-      - 🇧🇪 www.85la.com 比利时_1
-      - 🇺🇸 www.85la.com 美国_46
-      - 🇺🇸 www.85la.com 美国_50
-      - 🇺🇸 www.85la.com 美国_51
-      - 🇺🇸 www.85la.com 美国_53
-      - 🇺🇸 www.85la.com 美国_296
-      - 🇮🇱 www.85la.com 以色列
-      - 🇺🇸 www.85la.com 美国_104
-      - 🇺🇸 www.85la.com 美国_67
-      - 🇺🇸 www.85la.com 美国_71
-      - 🇨🇿 www.85la.com 捷克_1
-      - 🇨🇿 www.85la.com 捷克_2
-      - 🇺🇸 www.85la.com 美国_78
-      - 🇺🇸 www.85la.com 美国_106
-      - 🇺🇸 www.85la.com 美国_91
-      - 🇺🇸 www.85la.com 美国_92
-      - 🇺🇸 www.85la.com 美国_120
-      - 🇺🇸 www.85la.com 美国_139
-      - 🇺🇸 www.85la.com 美国_134
-      - 🇺🇸 www.85la.com 美国_109
-      - 🇺🇸 www.85la.com 美国_116
-      - 🇺🇸 www.85la.com 美国_124
-      - 🇺🇸 www.85la.com 美国_126
-      - 🇺🇸 www.85la.com 美国_140
-      - 🇺🇸 www.85la.com 美国_136
-      - 🇺🇸 www.85la.com 美国_131
-      - 🇺🇸 www.85la.com 美国_137
-      - 🇺🇸 www.85la.com 美国_138
-      - 🇺🇸 www.85la.com 美国_170
-      - 🇺🇸 www.85la.com 美国_150
-      - 🇺🇸 www.85la.com 美国_161
-      - 🇺🇸 www.85la.com 美国_162
-      - 🇺🇸 www.85la.com 美国_156
-      - 🇺🇸 www.85la.com 美国_164
-      - 🇺🇸 www.85la.com 美国_165
-      - 🇺🇸 www.85la.com 美国_202
-      - 🇳🇱 www.85la.com 荷兰_3
-      - 🇺🇸 www.85la.com 美国_169
-      - 🇺🇸 www.85la.com 美国_171
-      - 🇺🇸 www.85la.com 美国_197
-      - 🇺🇸 www.85la.com 美国_173
-      - 🇺🇸 www.85la.com 美国_174
-      - 🇺🇸 www.85la.com 美国_184
-      - 🇺🇸 www.85la.com 美国_216
-      - 🇧🇷 www.85la.com 巴西_1
-      - 🇺🇸 www.85la.com 美国_182
-      - 🇺🇸 www.85la.com 美国_179
-      - 🇺🇸 www.85la.com 美国_238
-      - 🇧🇷 www.85la.com 巴西_6
-      - 🇺🇸 www.85la.com 美国_183
-      - 🇺🇸 www.85la.com 美国_186
-      - 🇺🇸 www.85la.com 美国_503
-      - 🇺🇸 www.85la.com 美国_189
-      - 🇨🇿 www.85la.com 捷克_3
-      - 🇺🇸 www.85la.com 美国_226
-      - 🇺🇸 www.85la.com 美国_192
-      - 🇺🇸 www.85la.com 美国_193
-      - 🇺🇸 www.85la.com 美国_194
-      - 🇺🇸 www.85la.com 美国_211
-      - 🇺🇸 www.85la.com 美国_196
-      - 🇺🇸 www.85la.com 美国_198
-      - 🇺🇸 www.85la.com 美国_205
-      - 🇺🇸 www.85la.com 美国_200
-      - 🇺🇸 www.85la.com 美国_201
-      - 🇧🇷 www.85la.com 巴西_4
-      - 🇺🇸 www.85la.com 美国_219
-      - 🇺🇸 www.85la.com 美国_204
-      - 🇸🇪 www.85la.com 瑞典_2
-      - 🇺🇸 www.85la.com 美国_206
-      - 🇺🇸 www.85la.com 美国_207
-      - 🇺🇸 www.85la.com 美国_208
-      - 🇺🇸 www.85la.com 美国_209
-      - 🇺🇸 www.85la.com 美国_210
-      - 🇺🇸 www.85la.com 美国_212
-      - 🇦🇺 www.85la.com 澳大利亚_2
-      - 🇺🇸 www.85la.com 美国_508
-      - 🇺🇸 www.85la.com 美国_214
-      - 🇺🇸 www.85la.com 美国_215
-      - 🇺🇸 www.85la.com 美国_217
-      - 🇺🇸 www.85la.com 美国_218
-      - 🇺🇸 www.85la.com 美国_220
-      - 🇺🇸 www.85la.com 美国_247
-      - 🇺🇸 www.85la.com 美国_244
-      - 🇬🇧 www.85la.com 英国_2
-      - 🇺🇸 www.85la.com 美国_229
-      - 🇯🇵 www.85la.com 日本_12
-      - 🇺🇸 www.85la.com 美国_235
-      - 🇺🇸 www.85la.com 美国_239
-      - 🇺🇸 www.85la.com 美国_245
-      - 🇬🇧 www.85la.com 英国_9
-      - 🇺🇸 www.85la.com 美国_252
-      - 🇺🇸 www.85la.com 美国_254
-      - 🇧🇪 www.85la.com 比利时_4
-      - 🇺🇸 www.85la.com 美国_255
-      - 🇩🇪 www.85la.com 德国_2
-      - 🇬🇧 www.85la.com 英国_6
-      - 🇺🇸 www.85la.com 美国_261
-      - 🇫🇷 www.85la.com 法国_1
-      - 🇺🇸 www.85la.com 美国_266
-      - 🇺🇸 www.85la.com 美国_271
-      - 🇬🇧 www.85la.com 英国_7
-      - 🇩🇪 www.85la.com 德国_3
-      - 🇧🇪 www.85la.com 比利时_5
-      - 🇺🇸 www.85la.com 美国_274
-      - 🇧🇪 www.85la.com 比利时_6
-      - 🇺🇸 www.85la.com 美国_307
-      - 🇺🇸 www.85la.com 美国_281
-      - 🇺🇸 www.85la.com 美国_329
-      - 🇧🇪 www.85la.com 比利时_7
-      - 🇺🇸 www.85la.com 美国_285
-      - 🇺🇸 www.85la.com 美国_286
-      - 🇺🇸 www.85la.com 美国_289
-      - 🇧🇪 www.85la.com 比利时_8
-      - 🇺🇸 www.85la.com 美国_322
-      - 🇺🇸 www.85la.com 美国_292
-      - 🇺🇸 www.85la.com 美国_337
-      - 🇺🇸 www.85la.com 美国_316
-      - 🇺🇸 www.85la.com 美国_309
-      - 🇺🇸 www.85la.com 美国_300
-      - 🇺🇸 www.85la.com 美国_333
-      - 🇺🇸 www.85la.com 美国_411
-      - 🇧🇪 www.85la.com 比利时_9
-      - 🇺🇸 www.85la.com 美国_308
-      - 🇺🇸 www.85la.com 美国_310
-      - 🇺🇦 www.85la.com 乌克兰_5
-      - 🇺🇸 www.85la.com 美国_311
-      - 🇵🇹 www.85la.com 葡萄牙
-      - 🇬🇧 www.85la.com 英国_13
-      - 🇺🇸 www.85la.com 美国_312
-      - 🇺🇸 www.85la.com 美国_380
-      - 🇺🇸 www.85la.com 美国_314
-      - 🇺🇸 www.85la.com 美国_315
-      - 🇺🇸 www.85la.com 美国_318
-      - 🏳️ www.85la.com 未知_1
-      - 🇧🇷 www.85la.com 巴西_8
-      - 🇺🇸 www.85la.com 美国_326
-      - 🇧🇷 www.85la.com 巴西_7
-      - 🇺🇸 www.85la.com 美国_334
-      - 🇺🇸 www.85la.com 美国_336
-      - 🇨🇳 www.85la.com 中国_4
-      - 🇺🇸 www.85la.com 美国_342
-      - 🇺🇸 www.85la.com 美国_341
-      - 🇧🇷 www.85la.com 巴西_9
-      - 🇺🇸 www.85la.com 美国_344
-      - 🇺🇸 www.85la.com 美国_490
-      - 🇺🇸 www.85la.com 美国_348
-      - 🇫🇷 www.85la.com 法国_2
-      - 🇮🇳 www.85la.com 印度_1
-      - 🇮🇳 www.85la.com 印度_2
-      - 🇧🇷 www.85la.com 巴西_10
-      - 🏳️ www.85la.com 未知_2
-      - 🇺🇸 www.85la.com 美国_352
-      - 🇺🇸 www.85la.com 美国_353
-      - 🇺🇸 www.85la.com 美国_355
-      - 🏳️ www.85la.com 未知_3
-      - 🇬🇧 www.85la.com 英国_16
-      - 🇧🇷 www.85la.com 巴西_11
-      - 🇺🇸 www.85la.com 美国_410
-      - 🇮🇳 www.85la.com 印度_3
-      - 🇧🇷 www.85la.com 巴西_12
-      - 🇺🇸 www.85la.com 美国_359
-      - 🏳️ www.85la.com 未知_4
-      - 🇯🇵 www.85la.com 日本_4
-      - 🇫🇷 www.85la.com 法国_3
-      - 🏳️ www.85la.com 未知_5
-      - 🇧🇷 www.85la.com 巴西_13
-      - 🇺🇸 www.85la.com 美国_365
-      - 🇺🇸 www.85la.com 美国_367
-      - 🇳🇱 www.85la.com 荷兰_8
-      - 🇺🇸 www.85la.com 美国_368
-      - 🇺🇸 www.85la.com 美国_370
-      - 🇺🇸 www.85la.com 美国_373
-      - 🇬🇧 www.85la.com 英国_17
-      - 🇺🇸 www.85la.com 美国_374
-      - 🇺🇸 www.85la.com 美国_399
-      - 🇺🇸 www.85la.com 美国_382
-      - 🇺🇸 www.85la.com 美国_390
-      - 🇺🇸 www.85la.com 美国_393
-      - 🇺🇸 www.85la.com 美国_459
-      - 🇺🇸 www.85la.com 美国_403
-      - 🇬🇧 www.85la.com 英国_18
-      - 🇺🇸 www.85la.com 美国_457
-      - 🇺🇸 www.85la.com 美国_428
-      - 🇬🇧 www.85la.com 英国_54
-      - 🇺🇸 www.85la.com 美国_408
-      - 🇺🇸 www.85la.com 美国_471
-      - 🇩🇪 www.85la.com 德国_10
-      - 🇮🇳 www.85la.com 印度_4
-      - 🇩🇪 www.85la.com 德国_11
-      - 🇺🇸 www.85la.com 美国_426
-      - 🇺🇸 www.85la.com 美国_427
-      - 🇫🇷 www.85la.com 法国_6
-      - 🇩🇪 www.85la.com 德国_12
-      - 🇳🇴 www.85la.com 挪威_1
-      - 🇳🇴 www.85la.com 挪威_2
-      - 🇺🇸 www.85la.com 美国_434
-      - 🇩🇪 www.85la.com 德国_13
-      - 🇳🇱 www.85la.com 荷兰_12
-      - 🇩🇪 www.85la.com 德国_14
-      - 🇺🇸 www.85la.com 美国_446
-      - 🇺🇸 www.85la.com 美国_450
-      - 🇺🇸 www.85la.com 美国_451
-      - 🇫🇷 www.85la.com 法国_7
-      - 🇺🇸 www.85la.com 美国_453
-      - 🇦🇺 www.85la.com 澳大利亚_4
-      - 🇺🇸 www.85la.com 美国_460
-      - 🇩🇪 www.85la.com 德国_15
-      - 🇩🇪 www.85la.com 德国_16
-      - 🇦🇺 www.85la.com 澳大利亚_5
-      - 🇺🇸 www.85la.com 美国_461
-      - 🇬🇧 www.85la.com 英国_30
-      - 🇳🇴 www.85la.com 挪威_3
-      - 🇺🇸 www.85la.com 美国_462
-      - 🇩🇪 www.85la.com 德国_17
-      - 🇩🇪 www.85la.com 德国_19
-      - 🇳🇱 www.85la.com 荷兰_14
-      - 🇺🇸 www.85la.com 美国_464
-      - 🇨🇭 www.85la.com 瑞士_8
-      - 🇨🇿 www.85la.com 捷克_4
-      - 🇺🇸 www.85la.com 美国_467
-      - 🇷🇺 www.85la.com 俄罗斯_4
-      - 🇮🇳 www.85la.com 印度_5
-      - 🇬🇧 www.85la.com 英国_33
-      - 🇺🇸 www.85la.com 美国_509
-      - 🇺🇦 www.85la.com 乌克兰_7
-      - 🇸🇬 www.85la.com 新加坡_4
-      - 🇩🇪 www.85la.com 德国_20
-      - 🇩🇪 www.85la.com 德国_21
-      - 🇺🇦 www.85la.com 乌克兰_9
-      - 🇸🇬 www.85la.com 新加坡_6
-      - 🇺🇦 www.85la.com 乌克兰_10
-      - 🇬🇧 www.85la.com 英国_49
-      - 🇨🇳 www.85la.com 中国_11
-      - 🇰🇷 www.85la.com 韩国_4
-      - 🇳🇱 www.85la.com 荷兰_18
-      - 🇺🇸 www.85la.com 美国_507
-      - 🇺🇸 www.85la.com 美国_510
-      - 🇺🇸 www.85la.com 美国_511
-      - 🇺🇸 www.85la.com 美国_513
-      - 🇫🇷 www.85la.com 法国_9
-      - 🇫🇷 www.85la.com 法国_10
-      - 🇺🇸 www.85la.com 美国_514
-      - 🇺🇸 www.85la.com 美国_515
-      - 🇺🇸 www.85la.com 美国_516
-      - 🇪🇸 www.85la.com 西班牙_4
-  - name: 🇯🇵 日本节点
+      - 美国 CloudFlare节点_1
+      - 美国 CloudFlare节点 (1)_1
+      - 美国 CloudFlare节点 (2)_1
+      - 香港 Amazon数据中心
+      - 克罗地亚 V2CROSS.COM
+      - 广东省广州市 移动 (1)
+      - 广东省湛江市 移动
+      - 广东省 联通
+      - 广东省广州市 移动 (2)
+      - 广东省广州市 移动 (3)
+      - 广东省 联通 (1)
+      - 俄罗斯 莫斯科JustHost
+      - 俄罗斯 V2CROSS.COM
+      - 广东省湛江市 移动 (2)
+      - 广东省 联通 (2)
+      - 俄罗斯 Rubtsovsk Branch of Altai State University
+      - 广东省湛江市 移动 (3)
+      - 广东省 联通 (3)
+      - 美国 CloudFlare节点 (3)_1
+      - 美国 CloudFlare节点 (4)
+      - 广东省湛江市 移动 (4)
+      - 广东省广州市 移动 (4)
+      - 克罗地亚 V2CROSS.COM (1)
+      - 俄罗斯 V2CROSS.COM (1)
+      - 广东省 联通 (4)
+      - 挪威 V2CROSS.COM
+      - 美国 CloudFlare节点 (5)
+      - 美国 CloudFlare节点 (6)
+      - 美国 CloudFlare节点 (7)
+      - 香港 腾讯云
+      - 广东省 联通 (5)
+      - 美国 CloudFlare节点 (8)
+      - 广东省 联通 (6)
+      - 美国 CloudFlare节点 (9)
+      - 广东省广州市 移动 (5)
+      - 美国 CloudFlare节点 (10)
+      - 俄罗斯 V2CROSS.COM (2)
+      - 广东省广州市 移动 (6)
+      - 广东省 联通 (7)
+      - 广东省 联通 (8)
+      - 吉林省 移动(全省通用) (1)
+      - 广东省广州市 移动 (7)
+      - 广东省广州市 移动 (8)
+      - 广东省湛江市 移动 (5)
+      - 美国 CloudFlare节点 (11)
+      - 广东省 联通 (9)
+      - 广东省 联通 (10)
+      - 广东省 移动
+      - 广东省 移动 (1)
+      - 亚太地区 V2CROSS.COM
+      - 广东省广州市 移动 (9)
+      - 香港 Clayer Limited数据中心
+      - 美国 CloudFlare节点 (12)
+      - 美国 CloudFlare节点 (13)
+      - 美国 V2CROSS.COM_1
+      - 俄罗斯 莫斯科JustHost (1)
+      - 美国 CloudFlare节点 (14)
+      - 广东省广州市 移动 (10)
+      - 美国 CloudFlare节点 (15)
+      - 广东省湛江市 移动 (6)
+      - 广东省湛江市 移动 (7)
+      - 香港 V2CROSS.COM
+      - 美国 CloudFlare节点 (16)
+      - 广东省广州市 移动 (11)
+      - 印度 V2CROSS.COM
+      - 印度 V2CROSS.COM (1)
+      - 美国 CloudFlare节点 (17)
+      - 印度 V2CROSS.COM (2)
+      - 美国 Fastly全球Anycast节点
+      - 美国 CloudFlare节点_2
+      - 美国 CloudFlare节点 (1)_2
+      - 美国 V2CROSS.COM_2
+      - 美国 V2CROSS.COM (1)
+      - 广东省广州市 电信
+      - 美国 V2CROSS.COM (2)
+      - 美国 V2CROSS.COM (3)
+      - 广东省广州市 电信 (1)
+      - 美国 V2CROSS.COM (4)
+      - 美国 CloudFlare节点 (2)_2
+      - 美国 V2CROSS.COM (5)
+      - 爱尔兰 V2CROSS.COM
+      - 广东省广州市 电信 (2)
+      - 美国 CloudFlare节点 (3)_2
+      - 广东省广州市 电信 (3)
+      - 广东省广州市 电信 (4)
+      - 美国 V2CROSS.COM (6)
+      - 美国 V2CROSS.COM (7)
+      - 美国 V2CROSS.COM (8)
+      - 美国 V2CROSS.COM (9)
+      - 美国 V2CROSS.COM (10)
+      - 美国 V2CROSS.COM (11)
+      - 美国 V2CROSS.COM (12)
+      - 广东省广州市 电信 (5)
+      - 美国 V2CROSS.COM (13)
+      - 美国 Amazon数据中心
+      - 广东省深圳市 移动
+      - 广东省广州市 电信 (6)
+  - name: 🇭🇰 香港节点
     type: url-test
-    url: https://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    lazy: true
-    timeout: 7000
-    max-failed-times: 7
     proxies:
-      - 🇯🇵 www.85la.com 日本_12
-      - 🇯🇵 www.85la.com 日本_4
-  - name: 🇸🇬 狮城节点
-    type: url-test
-    url: https://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    lazy: true
-    timeout: 7000
-    max-failed-times: 7
-    proxies:
-      - 🇸🇬 www.85la.com 新加坡_4
-      - 🇸🇬 www.85la.com 新加坡_6
+      - 香港 Amazon数据中心
+      - 香港 腾讯云
+      - 香港 Clayer Limited数据中心
+      - 香港 V2CROSS.COM
   - name: 🇺🇲 美国节点
     type: url-test
-    url: https://www.gstatic.com/generate_204
+    url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    lazy: true
-    timeout: 7000
-    max-failed-times: 7
     proxies:
-      - 🇺🇸 www.85la.com 美国_4
-      - 🇺🇸 www.85la.com 美国_19
-      - 🇺🇸 www.85la.com 美国_14
-      - 🇺🇸 www.85la.com 美国_25
-      - 🇺🇸 www.85la.com 美国_39
-      - 🇺🇸 www.85la.com 美国_33
-      - 🇺🇸 www.85la.com 美国_44
-      - 🇺🇸 www.85la.com 美国_46
-      - 🇺🇸 www.85la.com 美国_50
-      - 🇺🇸 www.85la.com 美国_51
-      - 🇺🇸 www.85la.com 美国_53
-      - 🇺🇸 www.85la.com 美国_296
-      - 🇺🇸 www.85la.com 美国_104
-      - 🇺🇸 www.85la.com 美国_67
-      - 🇺🇸 www.85la.com 美国_71
-      - 🇺🇸 www.85la.com 美国_78
-      - 🇺🇸 www.85la.com 美国_106
-      - 🇺🇸 www.85la.com 美国_91
-      - 🇺🇸 www.85la.com 美国_92
-      - 🇺🇸 www.85la.com 美国_120
-      - 🇺🇸 www.85la.com 美国_139
-      - 🇺🇸 www.85la.com 美国_134
-      - 🇺🇸 www.85la.com 美国_109
-      - 🇺🇸 www.85la.com 美国_116
-      - 🇺🇸 www.85la.com 美国_124
-      - 🇺🇸 www.85la.com 美国_126
-      - 🇺🇸 www.85la.com 美国_140
-      - 🇺🇸 www.85la.com 美国_136
-      - 🇺🇸 www.85la.com 美国_131
-      - 🇺🇸 www.85la.com 美国_137
-      - 🇺🇸 www.85la.com 美国_138
-      - 🇺🇸 www.85la.com 美国_170
-      - 🇺🇸 www.85la.com 美国_150
-      - 🇺🇸 www.85la.com 美国_161
-      - 🇺🇸 www.85la.com 美国_162
-      - 🇺🇸 www.85la.com 美国_156
-      - 🇺🇸 www.85la.com 美国_164
-      - 🇺🇸 www.85la.com 美国_165
-      - 🇺🇸 www.85la.com 美国_202
-      - 🇺🇸 www.85la.com 美国_169
-      - 🇺🇸 www.85la.com 美国_171
-      - 🇺🇸 www.85la.com 美国_197
-      - 🇺🇸 www.85la.com 美国_173
-      - 🇺🇸 www.85la.com 美国_174
-      - 🇺🇸 www.85la.com 美国_184
-      - 🇺🇸 www.85la.com 美国_216
-      - 🇺🇸 www.85la.com 美国_182
-      - 🇺🇸 www.85la.com 美国_179
-      - 🇺🇸 www.85la.com 美国_238
-      - 🇺🇸 www.85la.com 美国_183
-      - 🇺🇸 www.85la.com 美国_186
-      - 🇺🇸 www.85la.com 美国_503
-      - 🇺🇸 www.85la.com 美国_189
-      - 🇺🇸 www.85la.com 美国_226
-      - 🇺🇸 www.85la.com 美国_192
-      - 🇺🇸 www.85la.com 美国_193
-      - 🇺🇸 www.85la.com 美国_194
-      - 🇺🇸 www.85la.com 美国_211
-      - 🇺🇸 www.85la.com 美国_196
-      - 🇺🇸 www.85la.com 美国_198
-      - 🇺🇸 www.85la.com 美国_205
-      - 🇺🇸 www.85la.com 美国_200
-      - 🇺🇸 www.85la.com 美国_201
-      - 🇺🇸 www.85la.com 美国_219
-      - 🇺🇸 www.85la.com 美国_204
-      - 🇺🇸 www.85la.com 美国_206
-      - 🇺🇸 www.85la.com 美国_207
-      - 🇺🇸 www.85la.com 美国_208
-      - 🇺🇸 www.85la.com 美国_209
-      - 🇺🇸 www.85la.com 美国_210
-      - 🇺🇸 www.85la.com 美国_212
-      - 🇺🇸 www.85la.com 美国_508
-      - 🇺🇸 www.85la.com 美国_214
-      - 🇺🇸 www.85la.com 美国_215
-      - 🇺🇸 www.85la.com 美国_217
-      - 🇺🇸 www.85la.com 美国_218
-      - 🇺🇸 www.85la.com 美国_220
-      - 🇺🇸 www.85la.com 美国_247
-      - 🇺🇸 www.85la.com 美国_244
-      - 🇺🇸 www.85la.com 美国_229
-      - 🇺🇸 www.85la.com 美国_235
-      - 🇺🇸 www.85la.com 美国_239
-      - 🇺🇸 www.85la.com 美国_245
-      - 🇺🇸 www.85la.com 美国_252
-      - 🇺🇸 www.85la.com 美国_254
-      - 🇺🇸 www.85la.com 美国_255
-      - 🇺🇸 www.85la.com 美国_261
-      - 🇺🇸 www.85la.com 美国_266
-      - 🇺🇸 www.85la.com 美国_271
-      - 🇺🇸 www.85la.com 美国_274
-      - 🇺🇸 www.85la.com 美国_307
-      - 🇺🇸 www.85la.com 美国_281
-      - 🇺🇸 www.85la.com 美国_329
-      - 🇺🇸 www.85la.com 美国_285
-      - 🇺🇸 www.85la.com 美国_286
-      - 🇺🇸 www.85la.com 美国_289
-      - 🇺🇸 www.85la.com 美国_322
-      - 🇺🇸 www.85la.com 美国_292
-      - 🇺🇸 www.85la.com 美国_337
-      - 🇺🇸 www.85la.com 美国_316
-      - 🇺🇸 www.85la.com 美国_309
-      - 🇺🇸 www.85la.com 美国_300
-      - 🇺🇸 www.85la.com 美国_333
-      - 🇺🇸 www.85la.com 美国_411
-      - 🇺🇸 www.85la.com 美国_308
-      - 🇺🇸 www.85la.com 美国_310
-      - 🇺🇸 www.85la.com 美国_311
-      - 🇺🇸 www.85la.com 美国_312
-      - 🇺🇸 www.85la.com 美国_380
-      - 🇺🇸 www.85la.com 美国_314
-      - 🇺🇸 www.85la.com 美国_315
-      - 🇺🇸 www.85la.com 美国_318
-      - 🇺🇸 www.85la.com 美国_326
-      - 🇺🇸 www.85la.com 美国_334
-      - 🇺🇸 www.85la.com 美国_336
-      - 🇺🇸 www.85la.com 美国_342
-      - 🇺🇸 www.85la.com 美国_341
-      - 🇺🇸 www.85la.com 美国_344
-      - 🇺🇸 www.85la.com 美国_490
-      - 🇺🇸 www.85la.com 美国_348
-      - 🇺🇸 www.85la.com 美国_352
-      - 🇺🇸 www.85la.com 美国_353
-      - 🇺🇸 www.85la.com 美国_355
-      - 🇺🇸 www.85la.com 美国_410
-      - 🇺🇸 www.85la.com 美国_359
-      - 🇺🇸 www.85la.com 美国_365
-      - 🇺🇸 www.85la.com 美国_367
-      - 🇺🇸 www.85la.com 美国_368
-      - 🇺🇸 www.85la.com 美国_370
-      - 🇺🇸 www.85la.com 美国_373
-      - 🇺🇸 www.85la.com 美国_374
-      - 🇺🇸 www.85la.com 美国_399
-      - 🇺🇸 www.85la.com 美国_382
-      - 🇺🇸 www.85la.com 美国_390
-      - 🇺🇸 www.85la.com 美国_393
-      - 🇺🇸 www.85la.com 美国_459
-      - 🇺🇸 www.85la.com 美国_403
-      - 🇺🇸 www.85la.com 美国_457
-      - 🇺🇸 www.85la.com 美国_428
-      - 🇺🇸 www.85la.com 美国_408
-      - 🇺🇸 www.85la.com 美国_471
-      - 🇺🇸 www.85la.com 美国_426
-      - 🇺🇸 www.85la.com 美国_427
-      - 🇺🇸 www.85la.com 美国_434
-      - 🇺🇸 www.85la.com 美国_446
-      - 🇺🇸 www.85la.com 美国_450
-      - 🇺🇸 www.85la.com 美国_451
-      - 🇺🇸 www.85la.com 美国_453
-      - 🇺🇸 www.85la.com 美国_460
-      - 🇺🇸 www.85la.com 美国_461
-      - 🇺🇸 www.85la.com 美国_462
-      - 🇺🇸 www.85la.com 美国_464
-      - 🇺🇸 www.85la.com 美国_467
-      - 🇺🇸 www.85la.com 美国_509
-      - 🇺🇸 www.85la.com 美国_507
-      - 🇺🇸 www.85la.com 美国_510
-      - 🇺🇸 www.85la.com 美国_511
-      - 🇺🇸 www.85la.com 美国_513
-      - 🇺🇸 www.85la.com 美国_514
-      - 🇺🇸 www.85la.com 美国_515
-      - 🇺🇸 www.85la.com 美国_516
+      - 美国 CloudFlare节点_1
+      - 美国 CloudFlare节点 (1)_1
+      - 美国 CloudFlare节点 (2)_1
+      - 美国 CloudFlare节点 (3)_1
+      - 美国 CloudFlare节点 (4)
+      - 美国 CloudFlare节点 (5)
+      - 美国 CloudFlare节点 (6)
+      - 美国 CloudFlare节点 (7)
+      - 美国 CloudFlare节点 (8)
+      - 美国 CloudFlare节点 (9)
+      - 美国 CloudFlare节点 (10)
+      - 美国 CloudFlare节点 (11)
+      - 美国 CloudFlare节点 (12)
+      - 美国 CloudFlare节点 (13)
+      - 美国 V2CROSS.COM_1
+      - 美国 CloudFlare节点 (14)
+      - 美国 CloudFlare节点 (15)
+      - 美国 CloudFlare节点 (16)
+      - 美国 CloudFlare节点 (17)
+      - 美国 Fastly全球Anycast节点
+      - 美国 CloudFlare节点_2
+      - 美国 CloudFlare节点 (1)_2
+      - 美国 V2CROSS.COM_2
+      - 美国 V2CROSS.COM (1)
+      - 美国 V2CROSS.COM (2)
+      - 美国 V2CROSS.COM (3)
+      - 美国 V2CROSS.COM (4)
+      - 美国 CloudFlare节点 (2)_2
+      - 美国 V2CROSS.COM (5)
+      - 美国 CloudFlare节点 (3)_2
+      - 美国 V2CROSS.COM (6)
+      - 美国 V2CROSS.COM (7)
+      - 美国 V2CROSS.COM (8)
+      - 美国 V2CROSS.COM (9)
+      - 美国 V2CROSS.COM (10)
+      - 美国 V2CROSS.COM (11)
+      - 美国 V2CROSS.COM (12)
+      - 美国 V2CROSS.COM (13)
+      - 美国 Amazon数据中心
 
 rules:
 # 本地/局域网地址
