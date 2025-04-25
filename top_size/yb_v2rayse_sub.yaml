@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-04-24 14:48:09
+# 创建时间：2025-04-24 01:32:27
 # 使用模版：ACL4SSR_Online_Mini_MultiCountry.ini
 # 节点数量：254
 # 节点类型：vmess, trojan
@@ -312,7 +312,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - ♻️ 自动选择
+      - 🔯 故障转移
       - 🇭🇰 香港节点
       - 🇸🇬 狮城节点
       - 🇺🇲 美国节点
@@ -575,17 +575,11 @@ proxy-groups:
       - 广东省广州市 电信_15
       - 美国 CloudFlare节点_44
       - 美国 CloudFlare节点_46
-  - name: ♻️ 自动选择
-    type: url-test
+  - name: 🔯 故障转移
+    type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
-    tolerance: 50
     timeout: 5000
-    max-failed-times: 3
-    expected-status:
-      - 200
-      - 204                     
-      - 302
     proxies:
       - 欧盟 V2CROSS.COM_2
       - 美国 CloudFlare节点_4
@@ -846,7 +840,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🚀 节点选择
-      - ♻️ 自动选择
+      - 🔯 故障转移
   - name: 🛑 全球拦截
     type: select
     proxies:
@@ -857,7 +851,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ♻️ 自动选择
+      - 🔯 故障转移
       - 欧盟 V2CROSS.COM_2
       - 美国 CloudFlare节点_4
       - 美国 CloudFlare节点_21
@@ -1113,16 +1107,10 @@ proxy-groups:
       - 美国 CloudFlare节点_44
       - 美国 CloudFlare节点_46
   - name: 🇭🇰 香港节点
-    type: url-test
+    type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
-    tolerance: 50
     timeout: 5000
-    max-failed-times: 3
-    expected-status:
-      - 200
-      - 204                     
-      - 302
     proxies:
       - 香港 V2CROSS.COM
       - 香港 电讯盈科有限公司_2
@@ -1133,30 +1121,18 @@ proxy-groups:
       - 香港 LeaseWeb HKG10数据中心
       - 香港+LeaseWeb+HKG10数据中心_2
   - name: 🇸🇬 狮城节点
-    type: url-test
+    type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
-    tolerance: 50
     timeout: 5000
-    max-failed-times: 3
-    expected-status:
-      - 200
-      - 204                     
-      - 302
     proxies:
       - 新加坡+V2CROSS.COM_1
       - 新加坡 V2CROSS.COM
   - name: 🇺🇲 美国节点
-    type: url-test
+    type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
-    tolerance: 50
     timeout: 5000
-    max-failed-times: 3
-    expected-status:
-      - 200
-      - 204                     
-      - 302
     proxies:
       - 美国 CloudFlare节点_4
       - 美国 CloudFlare节点_21
