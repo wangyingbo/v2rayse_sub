@@ -7,56 +7,83 @@
 # 节点类型：vmess, trojan
 ####################################
 mixed-port: 7890
-allow-lan: false
-log-level: Silent
-external-controller: 127.0.0.1:9090
+allow-lan: true
+log-level: info
+external-controller: 0.0.0.0:9090
 dns:
-  enable: true
-  cache-algorithm: arc
-  prefer-h3: false
-  use-hosts: false
-  use-system-hosts: false
-  respect-rules: true
-  listen: 127.0.0.1:1053
-  ipv6: false
+  enabled: true
+  listen: 0.0.0.0:1053
+  ipv6: true
   default-nameserver:
-    - https://cloudflare-dns.com/dns-query
+    - 223.5.5.5
+    - 114.114.114.114
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - '*.lan'
-  nameserver-policy:
-    '+.arpa':
-      - https://cloudflare-dns.com/dns-query 
-    'rule-set:cn':
-      - https://doh.alidns.com/dns-query
-      - https://1.12.222.222/dns-query
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - swscan.apple.com
+    - mesu.apple.com
+    - '*.msftconnecttest.com'
+    - '*.msftncsi.com'
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - +.music.163.com
+    - '*.126.net'
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - '*.kuwo.cn'
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - +.y.qq.com
+    - +.music.tc.qq.com
+    - aqqmusic.tc.qq.com
+    - +.stream.qqmusic.qq.com
+    - '*.xiami.com'
+    - +.music.migu.cn
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - +.xboxlive.com
+    - localhost.ptlogin2.qq.com
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - '*.mcdn.bilivideo.cn'
   nameserver:
-    - https://dns.google/dns-query
-  fallback:
-    - https://cloudflare-dns.com/dns-query
-  proxy-server-nameserver:
-    - https://mozilla.cloudflare-dns.com/dns-query
-    - https://dns.adguard.com/dns-query
-  direct-nameserver:
-    - https://doh.alidns.com/dns-query
-  direct-nameserver-follow-policy: true
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-      - gfw
-    domain:
-      - '+.google.com'
-      - '+.facebook.com'
-      - '+.youtube.com'
-      - '+.gstatic.com'
-      - '+.githubusercontent.com'
-      - '+.telegram.org'
-      - '+.openai.com'
-      - '+.chat.openai.com'
-      - '+.api.openai.com'
+    geoip: false
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
 
 proxies:
   - {"name":"美国 CloudFlare节点_4_1","type":"vmess","server":"104.21.86.44","port":80,"cipher":"auto","uuid":"072f4db4-d89d-420d-9d9e-045ed8d5c9cc","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":""}}
@@ -869,11 +896,8 @@ proxy-groups:
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 180
+    interval: 300
     tolerance: 50
-    timeout: 5000
-    max-failed-times: 5
-    expected-status: 204
     proxies:
       - 美国 CloudFlare节点_4_1
       - 英国 V2CROSS.COM_1_1
@@ -1689,11 +1713,8 @@ proxy-groups:
   - name: 🇭🇰 香港节点
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 180
+    interval: 300
     tolerance: 50
-    timeout: 5000
-    max-failed-times: 5
-    expected-status: 204
     proxies:
       - 香港 Cloudie Limited
       - 香港 阿里云
@@ -1707,22 +1728,16 @@ proxy-groups:
   - name: 🇸🇬 狮城节点
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 180
+    interval: 300
     tolerance: 50
-    timeout: 5000
-    max-failed-times: 5
-    expected-status: 204
     proxies:
       - 新加坡 V2CROSS.COM_1
       - 新加坡 V2CROSS.COM
   - name: 🇺🇲 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 180
+    interval: 300
     tolerance: 50
-    timeout: 5000
-    max-failed-times: 5
-    expected-status: 204
     proxies:
       - 美国 CloudFlare节点_4_1
       - 美国 CloudFlare节点_4_2
