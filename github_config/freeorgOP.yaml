@@ -140,9 +140,10 @@ proxy-groups:
 # 规则
 rules:
 
-  - DOMAIN-SUFFIX,adobe.io,REJECT
-  - DOMAIN-SUFFIX,adobestats.io,REJECT
-  - DOMAIN,lcs-cops.adobe.io,DIRECT
+  - DOMAIN-SUFFIX,Adobe,REJECT
+  # - DOMAIN-SUFFIX,adobe.io,REJECT
+  # - DOMAIN-SUFFIX,adobestats.io,REJECT
+  # - DOMAIN,lcs-cops.adobe.io,DIRECT
 
 # 解锁AI
   - RULE-SET,ai,🔀 AI 服务
@@ -447,4 +448,13 @@ rule-providers:
     format: yaml
     path: ./rules/Steam.yaml
     url: "https://cdn.jsdelivr.net/gh/zuluion/Clash-Template-Config@master/Filter/Steam.yaml"
+    interval: 86400
+    
+# Adobe
+  Adobe: 
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./rules/Adobe.yaml
+    url: "https://quantil.jsdelivr.net/gh/ignaciocastro/a-dove-is-dumb@latest/127.txt"
     interval: 86400
