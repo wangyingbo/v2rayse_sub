@@ -1,0 +1,614 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+hosts:
+  services.googleapis.cn: 142.250.196.131
+  www.google.cn: 142.250.196.131
+external-controller: 0.0.0.0:9090
+clash-for-android:
+  append-system-dns: false
+profile:
+  tracing: true
+dns:
+  enable: true
+  listen: 127.0.0.1:8853
+  default-nameserver:
+    - 223.5.5.5
+    - 8.8.4.4
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - +.ipv6.microsoft.com
+    - +.battlenet.com.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - heartbeat.belkin.com
+    - "*.linksys.com"
+    - "*.linksyssmartwifi.com"
+    - "*.router.asus.com"
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - "*.square-enix.com"
+    - "*.finalfantasyxiv.com"
+    - "*.ffxiv.com"
+    - "*.ff14.sdo.com"
+    - ff.dorado.sdo.com
+    - "*.mcdn.bilivideo.cn"
+    - +.media.dssott.com
+    - +.pvp.net
+  nameserver:
+    - 114.114.114.114
+    - tls://223.5.5.5:853
+    - tls://1.12.12.12
+  fallback:
+    - https://1.0.0.1/dns-query
+    - https://public.dns.iij.jp/dns-query
+    - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+    domain:
+      - +.facebook.com
+      - +.twitter.com
+      - +.google.com
+      - +.googleapis.com
+      - +.google.cn
+      - +.googleapis.cn
+      - +.xn--ngstr-lra8j.com
+      - +.googlevideo.com
+      - +.gvt1.com
+      - +.gmail.com
+      - +.youtube.com
+      - +.youtu.be
+      - +.gvt0.com
+      - +.gvt2.com
+      - +.gvt3.com
+      - +.gstatic.com
+      - +.265.com
+      - +.2mdn.net
+      - +.app-measurement.com
+      - +.c.admob.com
+      - +.clickserve.dartsearch.net
+      - +.crl.pki.goog
+      - +.doubleclick.net
+      - +.firebase-settings.crashlytics.com
+      - +.google-analytics.com
+      - +.googleadservices.com
+      - +.googleanalytics.com
+      - +.googleoptimize.com
+      - +.googlesyndication.com
+      - +.googletagmanager.com
+      - +.googletagservices.com
+
+d: &d  #机场订阅参数
+  type: http
+  interval: 21600
+  health-check:
+   enable: true
+   url: https://i.ytimg.com/generate_204
+   interval: 300
+
+r: &r #分流规则订阅参数
+  type: http
+  behavior: classical
+  interval: 86400
+
+all: &all #所有节点的合集
+  type: select
+  use:
+    - dy1
+    - dy2
+
+    #还有订阅的话继续往下加 dy4 dy5 ……如果没有那么多就把多余的删掉
+
+#分割线，下面是放你的机场订阅链接的
+proxy-providers:
+  dy1:
+    <<: *d
+    path: ./Proxies/dy1.yaml #生成名为'dy1'的配置文件
+    # 将 下面一行的url 替换为你的Clash机场订阅链接
+    url: https://ghproxy.com/https://gist.githubusercontent.com/mayojoy/88b2863888eadb08b16ea54316c07717/raw/clash
+  HK:
+    type: file
+    path: ./Proxies/dy1.yaml
+    filter: HK|香港|港|🇰️|Hongkong|(?i)Hong
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+ #日本节点
+  JP:
+    type: file
+    path: ./Proxies/dy1.yaml
+    filter: 日|日本|东京|大阪|泉日|埼玉|沪日|深日|JP
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+ #美国节点
+  US:
+    type: file
+    path: ./Proxies/dy1.yaml
+    filter: 美|美国|US|us|圣荷西|凤凰城|洛杉矶|(?i)States|American
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+ #台湾节点
+  TW:
+    type: file
+    path: ./Proxies/dy1.yaml
+    filter: 台|湾|TW|(?i)Taiwan
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  #新加坡节点
+  SG:
+    type: file
+    path: ./Proxies/dy1.yaml
+    interval: 3600
+    filter: 狮城|新|新加坡|SG
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+
+  KR:
+    type: file
+    path: ./Proxies/dy1.yaml
+    interval: 3600
+    filter: 韩|韓|首尔|(?i)KR|Korea
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  IPLC:
+    type: file
+    path: ./Proxies/dy1.yaml
+    interval: 3600
+    filter: 手游|游戏|专线|(?i)IPLC|IEPL|game
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+proxies:
+
+
+#还有订阅的话继续往下加 dy4 dy5 ……如果没有那么多就把多余的删掉
+
+#分割线，下面是“代理”页面出现的分组，“name”是一级分组，“proxies”是二级分组，选节点用的
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - DIRECT
+      - 🇺🇲 美国节点
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 新加坡节点
+      - 🇰🇷 韩国节点
+      - IPLC专线
+    use:
+      - US
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+
+  - name: ☎️ 电报消息
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 新加坡节点
+      - 🇰🇷 韩国节点
+      - IPLC专线
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - DIRECT
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 86400
+    use:
+       - dy1
+  - name: 📺 BiliBili
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🎬Netflix
+    type: select
+    proxies:
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 新加坡节点
+      - 🇰🇷 韩国节点
+      - IPLC专线
+  - name: 🎼 Emby
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - DIRECT
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇨🇳 台湾节点
+      - 🇸🇬 新加坡节点
+      - 🇰🇷 韩国节点
+      - IPLC专线
+  - name: 🛡️ 隐私防护
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+  - name: 🇭🇰 香港节点
+    type: select
+    use:
+      - HK
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🇯🇵 日本节点
+    type: select
+    use:
+      - JP
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🇨🇳 台湾节点
+    type: select
+    use:
+      - TW
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🇺🇲 美国节点
+    type: select
+    use:
+      - US
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🇸🇬 新加坡节点
+    type: select
+    use:
+      - SG
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 🇰🇷 韩国节点
+    type: select
+    use:
+      - KR
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: IPLC专线
+    type: select
+    use:
+      - IPLC  
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    proxies:
+      - REJECT
+#分割线，下面是分流规则
+rule-providers:
+
+
+  BiliBili:
+    <<: *r
+    url: "https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml"
+    path: ./Rules/bilibili.yaml
+
+
+
+  Netflix:
+    <<: *r
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/Netflix/Netflix.yaml
+    path: ./Rules/Netflix.yaml
+
+  Emby:
+    <<: *r
+    url: "https://raw.fastgit.org/justdoiting/emby-rules/main/Emby.yaml"
+    path: ./Rules/Emby.yaml
+
+  BanEasyPrivacy:
+    <<: *r
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Privacy/Privacy_Classical.yaml"
+    path: ./Rules/BanEasyPrivacy.yaml
+
+  Download:
+    <<: *r
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/Download/Download.yaml
+    path: ./Rules/Download.yaml
+  reject:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    path: ./ruleset/private.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+    path: ./ruleset/applications.yaml
+    interval: 86400
+  TikTok:
+    type: http
+    behavior: classical
+    path: ./ruleset/TikTok.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/TikTok/TikTok.yaml
+    interval: 86400
+  Twitter:
+    type: http
+    behavior: classical
+    path: ./ruleset/Twitter.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Twitter/Twitter.yaml
+    interval: 86400
+  Google:
+    type: http
+    behavior: classical
+    path: ./ruleset/Google.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Google/Google.yaml
+    interval: 86400
+  Spotify:
+    type: http
+    behavior: classical
+    path: ./ruleset/Spotify.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Spotify/Spotify.yaml
+    interval: 86400
+  Facebook:
+    type: http
+    behavior: classical
+    path: ./ruleset/Facebook.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Facebook/Facebook.yaml
+    interval: 86400
+  Github:
+    type: http
+    behavior: classical
+    path: ./ruleset/Github.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+    interval: 86400
+  ChinaIP:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/Extra/ChinaIP.yaml
+    url: https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Extra/ChinaIP.yaml
+    interval: 86400
+  PayPal:
+    type: http
+    behavior: classical
+    path: ./ruleset/PayPal.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml
+    interval: 86400
+  OneDrive:
+    type: http
+    behavior: classical
+    path: ./ruleset/OneDrive.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/OneDrive/OneDrive.yaml
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    path: ./ruleset/Microsoft.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Microsoft/Microsoft.yaml
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    path: ./ruleset/YouTube.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/YouTube/YouTube.yaml
+    interval: 86400
+
+  GoogleFCM:
+    type: http
+    behavior: classical
+    path: ./ruleset/GoogleFCM.yaml
+    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/GoogleFCM/GoogleFCM.yaml
+    interval: 86400
+
+rules:
+  - GEOIP,,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,direct,DIRECT
+  - DOMAIN-KEYWORD,18comic,🎬Netflix
+  - DOMAIN-SUFFIX,fast.com,🎬Netflix
+  - DOMAIN-SUFFIX,ooklaserver.net,🎬Netflix
+  - DOMAIN-SUFFIX,speed.cloudflare.com,🎬Netflix
+  - DOMAIN-SUFFIX,speed.dler.io,🎬Netflix
+  - DOMAIN-KEYWORD,speedtest,🎬Netflix
+  - RULE-SET,Github,🎬Netflix
+  - RULE-SET,Netflix,🎬Netflix
+  - RULE-SET,telegramcidr,☎️ 电报消息
+  - RULE-SET,applications,DIRECT
+  - RULE-SET,PayPal,🎬Netflix
+  - RULE-SET,Google,🚀 节点选择
+  - RULE-SET,TikTok,🚀 节点选择
+  - RULE-SET,Spotify,🚀 节点选择
+  - RULE-SET,TikTok,🚀 节点选择
+  - RULE-SET,Facebook,🚀 节点选择
+  - RULE-SET,YouTube,🚀 节点选择
+  - RULE-SET,GoogleFCM,🚀 节点选择
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,🛡️ 隐私防护
+  - RULE-SET,icloud,🍎 苹果服务
+  - RULE-SET,apple,🍎 苹果服务
+  - RULE-SET,google,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - RULE-SET,proxy,🚀 节点选择
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,OneDrive,Ⓜ️ 微软服务
+  - DOMAIN-KEYWORD,18comic,☎️ 电报消息
+  - RULE-SET,BiliBili,📺 BiliBili
+  - RULE-SET,Netflix,🎬Netflix
+  - RULE-SET,Emby,🎼 Emby
+  - RULE-SET,BanEasyPrivacy,🛡️ 隐私防护
+  - MATCH,🐟 漏网之鱼
