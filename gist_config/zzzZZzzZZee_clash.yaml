@@ -5,31 +5,31 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇳🇱 荷兰-FREE优化节点-CDN | 2x, server: tci3.tiamoci.us.kg, port: 8080, type: vmess, uuid: d75633f6-4c2d-4d7d-81ed-eb42746b22da, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: tci3.tiamoci.us.kg}}, udp: true}
   - {name: 🇬🇧 英国-FREE优化节点-CDN | 2x, server: tci2.tiamoci.us.kg, port: 8080, type: vmess, uuid: d75633f6-4c2d-4d7d-81ed-eb42746b22da, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: tci2.tiamoci.us.kg}}, udp: true}
+  - {name: 🇳🇱 荷兰-FREE优化节点-CDN | 2x, server: tci3.tiamoci.us.kg, port: 8080, type: vmess, uuid: d75633f6-4c2d-4d7d-81ed-eb42746b22da, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /, headers: {Host: tci3.tiamoci.us.kg}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
       - 🇬🇧 英国-FREE优化节点-CDN | 2x
+      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
       - 🇬🇧 英国-FREE优化节点-CDN | 2x
+      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
       - 🇬🇧 英国-FREE优化节点-CDN | 2x
+      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -48,8 +48,8 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
       - 🇬🇧 英国-FREE优化节点-CDN | 2x
+      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -60,23 +60,23 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
       - 🇬🇧 英国-FREE优化节点-CDN | 2x
+      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
       - 🇬🇧 英国-FREE优化节点-CDN | 2x
+      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
       - 🇬🇧 英国-FREE优化节点-CDN | 2x
+      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -92,8 +92,8 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
       - 🇬🇧 英国-FREE优化节点-CDN | 2x
+      - 🇳🇱 荷兰-FREE优化节点-CDN | 2x
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
