@@ -14,3 +14,6 @@
 
 - hiddify next节点订阅，hiddify next免费节点分享
 - [hiddifynextnode.github.io](https://github.com/hiddifynextnode/hiddifynextnode.github.io)
+
+- 85la
+- [https://www.85la.com/](https://www.85la.com/)
