@@ -71,33 +71,46 @@
   "outbounds" : [ {
     "type" : "selector",
     "tag" : "select",
-    "outbounds" : [ "url-test", "🇳🇱_NL_荷兰", "🇺🇸_US_美国", "🇨🇳_CN_中国->🇺🇸_US_美国", "🇨🇳_CN_中国->🇺🇸_US_美国_1" ],
+    "outbounds" : [ "url-test", "🇺🇸_US_美国", "🇺🇸_US_美国_1", "🇨🇳_CN_中国->🇺🇸_US_美国", "🇺🇸_US_美国_2", "🇺🇸_US_美国_3", "🇨🇳_CN_中国->🇺🇸_US_美国_1", "🇺🇸_US_美国->🇨🇳_CN_中国" ],
     "default" : "url-test"
   }, {
     "type" : "urltest",
     "tag" : "url-test",
-    "outbounds" : [ "🇳🇱_NL_荷兰", "🇺🇸_US_美国", "🇨🇳_CN_中国->🇺🇸_US_美国", "🇨🇳_CN_中国->🇺🇸_US_美国_1" ],
+    "outbounds" : [ "🇺🇸_US_美国", "🇺🇸_US_美国_1", "🇨🇳_CN_中国->🇺🇸_US_美国", "🇺🇸_US_美国_2", "🇺🇸_US_美国_3", "🇨🇳_CN_中国->🇺🇸_US_美国_1", "🇺🇸_US_美国->🇨🇳_CN_中国" ],
     "url" : "https://www.gstatic.com/generate_204",
     "interval" : "3m",
     "tolerance" : 50
   }, {
-    "type" : "trojan",
-    "tag" : "🇳🇱_NL_荷兰",
-    "server" : "45.91.171.116",
-    "server_port" : 443,
-    "password" : "2ee85121-31de-4581-a492-eb00f606e392",
+    "type" : "vless",
+    "tag" : "🇺🇸_US_美国",
+    "server" : "63.141.128.16",
+    "server_port" : 80,
+    "uuid" : "9d0f4677-d396-4291-a371-abd3d2e7e462",
     "tls" : {
       "enabled" : true
+    },
+    "transport" : {
+      "type" : "ws",
+      "path" : "/Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON",
+      "headers" : {
+        "host" : "e.jOin.zEdMoDeOn.oNl."
+      }
     }
   }, {
-    "type" : "shadowsocks",
-    "tag" : "🇺🇸_US_美国",
-    "server" : "77.83.245.190",
-    "server_port" : 443,
-    "method" : "chacha20-ietf-poly1305",
-    "password" : "haQpIdcLwwtb",
-    "multiplex" : {
+    "type" : "vless",
+    "tag" : "🇺🇸_US_美国_1",
+    "server" : "63.141.128.2",
+    "server_port" : 8080,
+    "uuid" : "5de6ad92-3282-4457-b4c4-a94dbce499b5",
+    "tls" : {
       "enabled" : true
+    },
+    "transport" : {
+      "type" : "ws",
+      "path" : "/Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON",
+      "headers" : {
+        "host" : "b.jOin.zEdMoDeOn.oNl."
+      }
     }
   }, {
     "type" : "vmess",
@@ -115,14 +128,67 @@
       }
     }
   }, {
-    "type" : "shadowsocks",
-    "tag" : "🇨🇳_CN_中国->🇺🇸_US_美国_1",
-    "server" : "japan001.tmdns-sing.top",
-    "server_port" : 13890,
-    "method" : "aes-128-gcm",
-    "password" : "6b1e5475-7661-4921-aa26-d11758b2f3f1",
-    "multiplex" : {
+    "type" : "vless",
+    "tag" : "🇺🇸_US_美国_2",
+    "server" : "mAth.bOok.zEdMoDeOn.sToRe",
+    "server_port" : 80,
+    "uuid" : "5fd9c3f7-bd70-4dab-8915-4c57bfe2b309",
+    "tls" : {
       "enabled" : true
+    },
+    "transport" : {
+      "type" : "ws",
+      "path" : "/Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON",
+      "headers" : {
+        "host" : "d.jOin.zEdMoDeOn.oNl."
+      }
+    }
+  }, {
+    "type" : "vless",
+    "tag" : "🇺🇸_US_美国_3",
+    "server" : "63.141.128.15",
+    "server_port" : 80,
+    "uuid" : "5fd9c3f7-bd70-4dab-8915-4c57bfe2b309",
+    "tls" : {
+      "enabled" : true
+    },
+    "transport" : {
+      "type" : "ws",
+      "path" : "/Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON",
+      "headers" : {
+        "host" : "d.jOin.zEdMoDeOn.oNl."
+      }
+    }
+  }, {
+    "type" : "vmess",
+    "tag" : "🇨🇳_CN_中国->🇺🇸_US_美国_1",
+    "server" : "v24.heduian.link",
+    "server_port" : 30824,
+    "uuid" : "cbb3f877-d1fb-344c-87a9-d153bffd5484",
+    "security" : "auto",
+    "alter_id" : 2,
+    "transport" : {
+      "type" : "ws",
+      "path" : "/oooo",
+      "headers" : {
+        "host" : "v24.heduian.link"
+      }
+    }
+  }, {
+    "type" : "vless",
+    "tag" : "🇺🇸_US_美国->🇨🇳_CN_中国",
+    "server" : "63.141.128.13",
+    "server_port" : 8080,
+    "uuid" : "094af2f8-b421-4d0c-a96c-00625147a30c",
+    "tls" : {
+      "enabled" : true
+    },
+    "transport" : {
+      "type" : "ws",
+      "path" : "/Join-ZEDMODEON-ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON",
+      "headers" : {
+        "host" : "c.jOin.zEdMoDeOn.oNl."
+      }
     }
   }, {
     "type" : "direct",
