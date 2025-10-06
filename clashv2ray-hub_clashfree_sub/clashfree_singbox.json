@@ -1,406 +1,5034 @@
 {
-  "log" : {
-    "disabled" : false,
-    "level" : "info",
-    "timestamp" : true
+  "log": {
+    "level": "info",
+    "timestamp": true
   },
-  "dns" : {
-    "servers" : [ {
-      "tag" : "proxy_dns",
-      "address" : "tls://8.8.8.8/dns-query",
-      "detour" : "select"
-    }, {
-      "tag" : "local_dns",
-      "address" : "h3://223.5.5.5/dns-query",
-      "detour" : "direct"
-    }, {
-      "tag" : "reject",
-      "address" : "rcode://refused"
-    }, {
-      "tag" : "fake_ip",
-      "address" : "fakeip"
-    } ],
-    "rules" : [ {
-      "outbound" : "any",
-      "server" : "local_dns",
-      "disable_cache" : true
-    }, {
-      "clash_mode" : "Global",
-      "server" : "proxy_dns"
-    }, {
-      "clash_mode" : "Direct",
-      "server" : "local_dns"
-    }, {
-      "rule_set" : "geosite-cn",
-      "server" : "local_dns"
-    }, {
-      "rule_set" : "geosite-geolocation-!cn",
-      "server" : "proxy_dns"
-    }, {
-      "rule_set" : "geosite-geolocation-!cn",
-      "server" : "fake_ip",
-      "query_type" : [ "A", "AAAA" ]
-    } ],
-    "independent_cache" : true,
-    "fakeip" : {
-      "enabled" : true,
-      "inet4_range" : "198.18.0.0/15",
-      "inet6_range" : "fc00::/18"
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "secret": "",
+      "external_ui_download_url": "https://gh-proxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+      "external_ui_download_detour": "direct",
+      "default_mode": "rule"
     },
-    "final" : "proxy_dns"
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true,
+      "store_rdrc": true
+    }
   },
-  "ntp" : {
-    "enabled" : true,
-    "detour" : "direct",
-    "server" : "time.apple.com",
-    "server_port" : 123,
-    "interval" : "30m"
-  },
-  "inbounds" : [ {
-    "type" : "tun",
-    "sniff" : true,
-    "sniff_override_destination" : true,
-    "domain_strategy" : "prefer_ipv4",
-    "inet4_address" : "172.16.0.1/30",
-    "inet6_address" : "2001:0470:f9da:fdfa::1/64",
-    "mtu" : 9000,
-    "auto_route" : true,
-    "strict_route" : true,
-    "endpoint_independent_nat" : true
-  } ],
-  "outbounds" : [ {
-    "type" : "selector",
-    "tag" : "select",
-    "outbounds" : [ "url-test", "🇬🇧_GB_英国->🇸🇪_SE_瑞典", "🇺🇸_US_美国", "🇸🇰_SK_斯洛伐克->🇷🇺_RU_俄罗斯", "🇳🇱_NL_荷兰->🇺🇸_US_美国", "🇮🇸_IS_冰岛", "🇬🇧_GB_英国_1", "🇬🇧_GB_英国_2", "🇺🇸_US_美国_1", "🇮🇹_IT_意大利->🇬🇧_GB_英国", "🇩🇪_DE_德国", "🇨🇳_CN_中国", "🇺🇸_US_美国_2", "🇨🇳_CN_中国_1", "🇺🇸_US_美国_3", "🇺🇸_US_美国_4", "🇺🇸_US_美国_5", "🇸🇪_SE_瑞典", "🇺🇸_US_美国_6", "🇺🇸_US_美国_7", "🇺🇸_US_美国->🇷🇺_RU_俄罗斯", "🇺🇸_US_美国_8", "🇨🇳_CN_中国_2", "🇹🇷_TR_土耳其", "🇮🇸_IS_冰岛_1", "🇺🇸_US_美国_9" ],
-    "default" : "url-test"
-  }, {
-    "type" : "urltest",
-    "tag" : "url-test",
-    "outbounds" : [ "🇬🇧_GB_英国->🇸🇪_SE_瑞典", "🇺🇸_US_美国", "🇸🇰_SK_斯洛伐克->🇷🇺_RU_俄罗斯", "🇳🇱_NL_荷兰->🇺🇸_US_美国", "🇮🇸_IS_冰岛", "🇬🇧_GB_英国_1", "🇬🇧_GB_英国_2", "🇺🇸_US_美国_1", "🇮🇹_IT_意大利->🇬🇧_GB_英国", "🇩🇪_DE_德国", "🇨🇳_CN_中国", "🇺🇸_US_美国_2", "🇨🇳_CN_中国_1", "🇺🇸_US_美国_3", "🇺🇸_US_美国_4", "🇺🇸_US_美国_5", "🇸🇪_SE_瑞典", "🇺🇸_US_美国_6", "🇺🇸_US_美国_7", "🇺🇸_US_美国->🇷🇺_RU_俄罗斯", "🇺🇸_US_美国_8", "🇨🇳_CN_中国_2", "🇹🇷_TR_土耳其", "🇮🇸_IS_冰岛_1", "🇺🇸_US_美国_9" ],
-    "url" : "https://www.gstatic.com/generate_204",
-    "interval" : "3m",
-    "tolerance" : 50
-  }, {
-    "type" : "shadowsocks",
-    "tag" : "🇬🇧_GB_英国->🇸🇪_SE_瑞典",
-    "server" : "51.15.23.63",
-    "server_port" : 989,
-    "method" : "aes-256-cfb",
-    "password" : "f8f7aCzcPKbsF8p3",
-    "multiplex" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "trojan",
-    "tag" : "🇺🇸_US_美国",
-    "server" : "kasheet.appagent.net",
-    "server_port" : 18333,
-    "password" : "B3AO9XlcTxaIATp08S29pS6luwZ8C4qDFzaCFYEDDSA5YDeKZAy3e2ZXRe73zIpxwByN7",
-    "tls" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "shadowsocks",
-    "tag" : "🇸🇰_SK_斯洛伐克->🇷🇺_RU_俄罗斯",
-    "server" : "156.146.40.194",
-    "server_port" : 989,
-    "method" : "aes-256-cfb",
-    "password" : "f8f7aCzcPKbsF8p3",
-    "multiplex" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "vmess",
-    "tag" : "🇳🇱_NL_荷兰->🇺🇸_US_美国",
-    "server" : "45.144.174.60",
-    "server_port" : 25161,
-    "uuid" : "9661e432-c1c7-472e-89fe-2233e3f1fdf5",
-    "security" : "auto",
-    "alter_id" : 0,
-    "transport" : {
-      "type" : "ws",
-      "path" : "/"
-    }
-  }, {
-    "type" : "shadowsocks",
-    "tag" : "🇮🇸_IS_冰岛",
-    "server" : "37.235.49.168",
-    "server_port" : 989,
-    "method" : "aes-256-cfb",
-    "password" : "f8f7aCzcPKbsF8p3",
-    "multiplex" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "shadowsocks",
-    "tag" : "🇬🇧_GB_英国_1",
-    "server" : "62.100.205.48",
-    "server_port" : 989,
-    "method" : "aes-256-cfb",
-    "password" : "f8f7aCzcPKbsF8p3",
-    "multiplex" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "shadowsocks",
-    "tag" : "🇬🇧_GB_英国_2",
-    "server" : "51.15.17.169",
-    "server_port" : 989,
-    "method" : "aes-256-cfb",
-    "password" : "f8f7aCzcPKbsF8p3",
-    "multiplex" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "trojan",
-    "tag" : "🇺🇸_US_美国_1",
-    "server" : "15.204.248.103",
-    "server_port" : 443,
-    "password" : "2ee85121-31de-4581-a492-eb00f606e392",
-    "tls" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "shadowsocks",
-    "tag" : "🇮🇹_IT_意大利->🇬🇧_GB_英国",
-    "server" : "185.213.23.226",
-    "server_port" : 989,
-    "method" : "aes-256-cfb",
-    "password" : "f8f7aCzcPKbsF8p3",
-    "multiplex" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "shadowsocks",
-    "tag" : "🇩🇪_DE_德国",
-    "server" : "46.183.184.60",
-    "server_port" : 989,
-    "method" : "aes-256-cfb",
-    "password" : "f8f7aCzcPKbsF8p3",
-    "multiplex" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "vless",
-    "tag" : "🇨🇳_CN_中国",
-    "server" : "89.44.242.222",
-    "server_port" : 29500,
-    "uuid" : "888a20e2-fc3f-4f52-973c-36a6386225b8",
-    "tls" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "trojan",
-    "tag" : "🇺🇸_US_美国_2",
-    "server" : "sirens.isquirrel.net",
-    "server_port" : 28334,
-    "password" : "RzFSy3laClaxnYCcO3jBEpYgDyZx2CO78IC3X46ATFD73RSSZZTx8yCOKYDOqeD8pSeRa",
-    "tls" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "vless",
-    "tag" : "🇨🇳_CN_中国_1",
-    "server" : "89.44.242.222",
-    "server_port" : 46822,
-    "uuid" : "44aded6c-a012-452b-8e13-04d5f15a659f",
-    "tls" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "trojan",
-    "tag" : "🇺🇸_US_美国_3",
-    "server" : "pricey.appagent.net",
-    "server_port" : 28334,
-    "password" : "F9OKESxKjSDExSeaOw7XyINxDzaOZqeKxCeIczYYED8ewZ2Yl9AppAySO3XwFNy3lCaXDDCFnlACSB0",
-    "tls" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "trojan",
-    "tag" : "🇺🇸_US_美国_4",
-    "server" : "blength.appagent.net",
-    "server_port" : 18332,
-    "password" : "0C3YaEDx46ODTFTcaF8lXlZ3zeqSlF33wZagexzRjIyODa8RDwp8XSCO93ygCSYcSYABA",
-    "tls" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "shadowsocks",
-    "tag" : "🇺🇸_US_美国_5",
-    "server" : "38.165.233.93",
-    "server_port" : 989,
-    "method" : "aes-256-cfb",
-    "password" : "f8f7aCzcPKbsF8p3",
-    "multiplex" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "shadowsocks",
-    "tag" : "🇸🇪_SE_瑞典",
-    "server" : "192.71.166.100",
-    "server_port" : 989,
-    "method" : "aes-256-cfb",
-    "password" : "f8f7aCzcPKbsF8p3",
-    "multiplex" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "trojan",
-    "tag" : "🇺🇸_US_美国_6",
-    "server" : "bolster.appagent.net",
-    "server_port" : 28332,
-    "password" : "OaFFcTDe9pSlez6x3SY8AARXwClzCRRDwSN8F3OqZAEYC0SE6F8gp3wCTCSTDYllcNceagCDD2C59S3",
-    "tls" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "trojan",
-    "tag" : "🇺🇸_US_美国_7",
-    "server" : "connect.appagent.net",
-    "server_port" : 28333,
-    "password" : "eYaw9xlNDu4695IF3CyY2leZOTnY8ZSOD3Xa3DClz0xqZy7Z3eaBFaTKOSwCSAOyEap4D",
-    "tls" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "vless",
-    "tag" : "🇺🇸_US_美国->🇷🇺_RU_俄罗斯",
-    "server" : "s2.db-link.in",
-    "server_port" : 80,
-    "uuid" : "1e823993-86ac-3ead-89b5-227e73825fdb",
-    "tls" : {
-      "enabled" : true
+  "dns": {
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
     },
-    "transport" : {
-      "type" : "ws",
-      "path" : "/db1024cc2f0692b0793016817768ee671c8605",
-      "headers" : {
-        "host" : "dabaius1.webn.cc"
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.8.8"
+      },
+      {
+        "tag": "local",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "fakeip",
+        "address": "fakeip"
       }
-    }
-  }, {
-    "type" : "shadowsocks",
-    "tag" : "🇺🇸_US_美国_8",
-    "server" : "104.192.226.106",
-    "server_port" : 989,
-    "method" : "aes-256-cfb",
-    "password" : "f8f7aCzcPKbsF8p3",
-    "multiplex" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "vless",
-    "tag" : "🇨🇳_CN_中国_2",
-    "server" : "89.44.242.222",
-    "server_port" : 29495,
-    "uuid" : "4a0e3cf3-4a10-4a38-bba4-b17b592a0d2b",
-    "tls" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "vless",
-    "tag" : "🇹🇷_TR_土耳其",
-    "server" : "193.111.76.159",
-    "server_port" : 8443,
-    "uuid" : "04604987-58c3-4f32-844c-f080b2a1c1ee",
-    "tls" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "shadowsocks",
-    "tag" : "🇮🇸_IS_冰岛_1",
-    "server" : "37.235.49.152",
-    "server_port" : 989,
-    "method" : "aes-256-cfb",
-    "password" : "f8f7aCzcPKbsF8p3",
-    "multiplex" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "trojan",
-    "tag" : "🇺🇸_US_美国_9",
-    "server" : "metallic.isquirrel.net",
-    "server_port" : 443,
-    "password" : "Npgx9nO3OBaZF5yxARYl93lFX08TlR3waDla733az8SqXe3YS3zjESECSZpAw428a6SID",
-    "tls" : {
-      "enabled" : true
-    }
-  }, {
-    "type" : "direct",
-    "tag" : "direct"
-  }, {
-    "type" : "block",
-    "tag" : "reject"
-  }, {
-    "type" : "dns",
-    "tag" : "dns_out"
-  } ],
-  "route" : {
-    "rules" : [ {
-      "clash_mode" : "Global",
-      "outbound" : "select"
-    }, {
-      "clash_mode" : "Direct",
-      "outbound" : "direct"
-    }, {
-      "protocol" : "dns",
-      "outbound" : "dns_out"
-    }, {
-      "rule_set" : "geosite-category-ads-all",
-      "outbound" : "reject"
-    }, {
-      "rule_set" : "geoip-cn",
-      "outbound" : "direct"
-    }, {
-      "rule_set" : "geosite-cn",
-      "outbound" : "direct"
-    }, {
-      "outbound" : "direct",
-      "ip_is_private" : true
-    }, {
-      "rule_set" : "geosite-geolocation-!cn",
-      "outbound" : "select"
-    } ],
-    "rule_set" : [ {
-      "type" : "remote",
-      "tag" : "geoip-cn",
-      "format" : "binary",
-      "url" : "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-      "download_detour" : "select",
-      "update_interval" : "1d"
-    }, {
-      "type" : "remote",
-      "tag" : "geosite-cn",
-      "format" : "binary",
-      "url" : "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-      "download_detour" : "select",
-      "update_interval" : "1d"
-    }, {
-      "type" : "remote",
-      "tag" : "geosite-geolocation-!cn",
-      "format" : "binary",
-      "url" : "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
-      "download_detour" : "select",
-      "update_interval" : "1d"
-    }, {
-      "type" : "remote",
-      "tag" : "geosite-category-ads-all",
-      "format" : "binary",
-      "url" : "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
-      "download_detour" : "select",
-      "update_interval" : "1d"
-    } ],
-    "auto_detect_interface" : true,
-    "final" : "select"
+    ],
+    "rules": [
+      {
+        "domain": [
+          "cdn.jsdelivr.net"
+        ],
+        "server": "google"
+      },
+      {
+        "outbound": "any",
+        "server": "local"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "local"
+      },
+      {
+        "clash_mode": "global",
+        "server": "google"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "rule_set": "geosite-cn",
+        "server": "fakeip"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "server": "local"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "rule_set": "geosite-geolocation-!cn",
+            "invert": true
+          },
+          {
+            "rule_set": "geoip-cn"
+          }
+        ],
+        "server": "google",
+        "client_subnet": "114.114.114.114/24"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "fakeip"
+      }
+    ],
+    "independent_cache": true,
+    "strategy": "prefer_ipv4"
   },
-  "experimental" : {
-    "cache_file" : {
-      "enabled" : true,
-      "path" : "cache.db"
+  "inbounds": [
+    {
+      "tag": "tun-in",
+      "type": "tun",
+      "address": [
+        "172.19.0.0/30",
+        "fdfe:dcba:9876::0/126"
+      ],
+      "stack": "system",
+      "auto_route": true,
+      "strict_route": true,
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 7890
+        }
+      }
     },
-    "clash_api" : {
-      "external_controller" : "127.0.0.1:9090"
+    {
+      "tag": "mixed-in",
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 7890
     }
+  ],
+  "outbounds": [
+    {
+      "tag": "Proxy",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "direct",
+        "美国(yfuye.com免费节点)_1_1",
+        "美国(yfuye.com免费节点)_2_2",
+        "美国(yfuye.com免费节点)_3_3",
+        "美国(yfuye.com免费节点)_4_4",
+        "美国(yfuye.com免费节点)_5_5",
+        "英国(yfuye.com免费节点)_1_6",
+        "德国(yfuye.com免费节点)_1_7",
+        "美国(yfuye.com免费节点)_6_8",
+        "美国(yfuye.com免费节点)_7_9",
+        "美国(yfuye.com免费节点)_8_10",
+        "美国(yfuye.com免费节点)_9_11",
+        "美国(yfuye.com免费节点)_10_12",
+        "美国(yfuye.com免费节点)_11_13",
+        "美国(yfuye.com免费节点)_12_14",
+        "美国(yfuye.com免费节点)_13_15",
+        "美国(yfuye.com免费节点)_14_16",
+        "美国(yfuye.com免费节点)_15_17",
+        "法国(yfuye.com免费节点)_1_18",
+        "美国(yfuye.com免费节点)_16_19",
+        "美国(yfuye.com免费节点)_17_20",
+        "美国(yfuye.com免费节点)_18_21",
+        "美国(yfuye.com免费节点)_19_22",
+        "美国(yfuye.com免费节点)_20_23",
+        "美国(yfuye.com免费节点)_21_24",
+        "美国(yfuye.com免费节点)_22_25",
+        "美国(yfuye.com免费节点)_23_26",
+        "美国(yfuye.com免费节点)_24_27",
+        "美国(yfuye.com免费节点)_25_28",
+        "美国(yfuye.com免费节点)_26_29",
+        "美国(yfuye.com免费节点)_27_30",
+        "美国(yfuye.com免费节点)_28_31",
+        "美国(yfuye.com免费节点)_29_32",
+        "美国(yfuye.com免费节点)_30_33",
+        "美国(yfuye.com免费节点)_31_34",
+        "美国(yfuye.com免费节点)_32_35",
+        "美国(yfuye.com免费节点)_33_36",
+        "美国(yfuye.com免费节点)_34_37",
+        "美国(yfuye.com免费节点)_35_38",
+        "美国(yfuye.com免费节点)_36_39",
+        "美国(yfuye.com免费节点)_37_40",
+        "美国(yfuye.com免费节点)_38_41",
+        "美国(yfuye.com免费节点)_39_42",
+        "美国(yfuye.com免费节点)_40_43",
+        "美国(yfuye.com免费节点)_41_44",
+        "美国(yfuye.com免费节点)_42_45",
+        "美国(yfuye.com免费节点)_43_46",
+        "美国(yfuye.com免费节点)_44_47",
+        "美国(yfuye.com免费节点)_45_48",
+        "美国(yfuye.com免费节点)_46_49",
+        "美国(yfuye.com免费节点)_47_50",
+        "美国(yfuye.com免费节点)_48_51",
+        "美国(yfuye.com免费节点)_49_52",
+        "香港(yfuye.com免费节点)_1_53",
+        "美国(yfuye.com免费节点)_50_54",
+        "美国(yfuye.com免费节点)_51_55",
+        "美国(yfuye.com免费节点)_52_56",
+        "香港(yfuye.com免费节点)_2_57",
+        "美国(yfuye.com免费节点)_53_58",
+        "美国(yfuye.com免费节点)_54_59",
+        "英国(yfuye.com免费节点)_2_60",
+        "德国(yfuye.com免费节点)_2_61",
+        "美国(yfuye.com免费节点)_55_62",
+        "新加坡(yfuye.com免费节点)_63",
+        "西班牙(yfuye.com免费节点)_2_64",
+        "美国(yfuye.com免费节点)_56_65",
+        "荷兰(yfuye.com免费节点)_1_66",
+        "美国(yfuye.com免费节点)_57_67",
+        "美国(yfuye.com免费节点)_58_68",
+        "美国(yfuye.com免费节点)_59_69",
+        "美国(yfuye.com免费节点)_60_70",
+        "美国(yfuye.com免费节点)_61_71",
+        "香港(yfuye.com免费节点)_3_72",
+        "美国(yfuye.com免费节点)_62_73",
+        "澳洲(yfuye.com免费节点)_1_74",
+        "美国(yfuye.com免费节点)_63_75",
+        "美国(yfuye.com免费节点)_64_76",
+        "美国(yfuye.com免费节点)_65_77",
+        "美国(yfuye.com免费节点)_66_78",
+        "美国(yfuye.com免费节点)_67_79",
+        "西班牙(yfuye.com免费节点)_3_80",
+        "荷兰(yfuye.com免费节点)_2_81",
+        "法国(yfuye.com免费节点)_2_82",
+        "美国(yfuye.com免费节点)_68_83",
+        "德国(yfuye.com免费节点)_3_84",
+        "美国(yfuye.com免费节点)_69_85",
+        "美国(yfuye.com免费节点)_70_86",
+        "日本(yfuye.com免费节点)_1_87",
+        "日本(yfuye.com免费节点)_2_88",
+        "美国(yfuye.com免费节点)_71_89",
+        "美国(yfuye.com免费节点)_72_90",
+        "美国(yfuye.com免费节点)_73_91",
+        "美国(yfuye.com免费节点)_74_92",
+        "美国(yfuye.com免费节点)_75_93",
+        "美国(yfuye.com免费节点)_76_94",
+        "美国(yfuye.com免费节点)_77_95",
+        "加拿大(yfuye.com免费节点)_1_96",
+        "加拿大(yfuye.com免费节点)_2_97",
+        "美国(yfuye.com免费节点)_78_98",
+        "荷兰(yfuye.com免费节点)_3_99",
+        "荷兰(yfuye.com免费节点)_4_100",
+        "美国(yfuye.com免费节点)_79_101",
+        "美国(yfuye.com免费节点)_80_102",
+        "美国(yfuye.com免费节点)_81_103",
+        "美国(yfuye.com免费节点)_82_104",
+        "美国(yfuye.com免费节点)_83_105",
+        "香港(yfuye.com免费节点)_4_106",
+        "美国(yfuye.com免费节点)_84_107",
+        "美国(yfuye.com免费节点)_85_108",
+        "香港(yfuye.com免费节点)_5_109",
+        "美国(yfuye.com免费节点)_86_110",
+        "美国(yfuye.com免费节点)_87_111",
+        "美国(yfuye.com免费节点)_88_112",
+        "德国(yfuye.com免费节点)_4_113",
+        "美国(yfuye.com免费节点)_89_114",
+        "美国(yfuye.com免费节点)_90_115",
+        "美国(yfuye.com免费节点)_91_116",
+        "英国(yfuye.com免费节点)_3_117",
+        "荷兰(yfuye.com免费节点)_5_118",
+        "美国(yfuye.com免费节点)_92_119",
+        "美国(yfuye.com免费节点)_93_120",
+        "美国(yfuye.com免费节点)_94_121",
+        "荷兰(yfuye.com免费节点)_6_122",
+        "美国(yfuye.com免费节点)_95_123",
+        "香港(yfuye.com免费节点)_6_124",
+        "美国(yfuye.com免费节点)_96_125",
+        "美国(yfuye.com免费节点)_97_126",
+        "美国(yfuye.com免费节点)_98_127",
+        "美国(yfuye.com免费节点)_99_128",
+        "美国(yfuye.com免费节点)_100_129",
+        "美国(yfuye.com免费节点)_101_130",
+        "香港(yfuye.com免费节点)_7_131",
+        "美国(yfuye.com免费节点)_102_132",
+        "美国(yfuye.com免费节点)_103_133",
+        "美国(yfuye.com免费节点)_104_134",
+        "美国(yfuye.com免费节点)_105_135",
+        "加拿大(yfuye.com免费节点)_3_136",
+        "美国(yfuye.com免费节点)_106_137",
+        "美国(yfuye.com免费节点)_107_138",
+        "美国(yfuye.com免费节点)_108_139",
+        "美国(yfuye.com免费节点)_109_140",
+        "美国(yfuye.com免费节点)_110_141",
+        "美国(yfuye.com免费节点)_111_142",
+        "澳洲(yfuye.com免费节点)_2_143",
+        "香港(yfuye.com免费节点)_8_144",
+        "荷兰(yfuye.com免费节点)_7_145",
+        "美国(yfuye.com免费节点)_112_146",
+        "美国(yfuye.com免费节点)_113_147",
+        "美国(yfuye.com免费节点)_114_148",
+        "香港(yfuye.com免费节点)_9_149",
+        "美国(yfuye.com免费节点)_115_150",
+        "美国(yfuye.com免费节点)_116_151",
+        "美国(yfuye.com免费节点)_117_152",
+        "美国(yfuye.com免费节点)_118_153",
+        "日本(yfuye.com免费节点)_3_154",
+        "英国(yfuye.com免费节点)_4_155",
+        "香港(yfuye.com免费节点)_10_156",
+        "美国(yfuye.com免费节点)_119_157",
+        "美国(yfuye.com免费节点)_120_158",
+        "英国(yfuye.com免费节点)_5_159",
+        "美国(yfuye.com免费节点)_121_160",
+        "美国(yfuye.com免费节点)_122_161",
+        "美国(yfuye.com免费节点)_123_162",
+        "英国(yfuye.com免费节点)_6_163",
+        "美国(yfuye.com免费节点)_124_164",
+        "英国(yfuye.com免费节点)_7_165",
+        "美国(yfuye.com免费节点)_125_166",
+        "德国(yfuye.com免费节点)_5_167",
+        "美国(yfuye.com免费节点)_126_168",
+        "美国(yfuye.com免费节点)_127_169",
+        "美国(yfuye.com免费节点)_128_170",
+        "法国(yfuye.com免费节点)_3_171",
+        "美国(yfuye.com免费节点)_129_172",
+        "美国(yfuye.com免费节点)_130_173",
+        "香港(yfuye.com免费节点)_11_174",
+        "美国(yfuye.com免费节点)_131_175",
+        "美国(yfuye.com免费节点)_132_176",
+        "美国(yfuye.com免费节点)_133_177",
+        "美国(yfuye.com免费节点)_134_178",
+        "英国(yfuye.com免费节点)_8_179",
+        "美国(yfuye.com免费节点)_135_180",
+        "英国(yfuye.com免费节点)_9_181",
+        "美国(yfuye.com免费节点)_136_182",
+        "澳洲(yfuye.com免费节点)_3_183",
+        "英国(yfuye.com免费节点)_10_184",
+        "美国(yfuye.com免费节点)_137_185",
+        "美国(yfuye.com免费节点)_138_186",
+        "美国(yfuye.com免费节点)_139_187",
+        "美国(yfuye.com免费节点)_140_188",
+        "美国(yfuye.com免费节点)_141_189",
+        "德国(yfuye.com免费节点)_6_190",
+        "美国(yfuye.com免费节点)_142_191",
+        "美国(yfuye.com免费节点)_143_192",
+        "美国(yfuye.com免费节点)_144_193",
+        "美国(yfuye.com免费节点)_145_194",
+        "美国(yfuye.com免费节点)_146_195",
+        "美国(yfuye.com免费节点)_147_196",
+        "美国(yfuye.com免费节点)_148_197",
+        "美国(yfuye.com免费节点)_149_198",
+        "美国(yfuye.com免费节点)_150_199",
+        "美国(yfuye.com免费节点)_151_200",
+        "美国(yfuye.com免费节点)_152_201",
+        "美国(yfuye.com免费节点)_153_202",
+        "美国(yfuye.com免费节点)_154_203",
+        "美国(yfuye.com免费节点)_155_204",
+        "德国(yfuye.com免费节点)_7_205",
+        "美国(yfuye.com免费节点)_156_206",
+        "美国(yfuye.com免费节点)_157_207",
+        "美国(yfuye.com免费节点)_158_208",
+        "美国(yfuye.com免费节点)_159_209",
+        "英国(yfuye.com免费节点)_11_210",
+        "美国(yfuye.com免费节点)_160_211",
+        "美国(yfuye.com免费节点)_161_212",
+        "美国(yfuye.com免费节点)_162_213",
+        "美国(yfuye.com免费节点)_163_214",
+        "英国(yfuye.com免费节点)_12_215",
+        "美国(yfuye.com免费节点)_164_216",
+        "美国(yfuye.com免费节点)_165_217"
+      ]
+    },
+    {
+      "tag": "OpenAI",
+      "type": "selector",
+      "outbounds": [
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ],
+      "default": "America"
+    },
+    {
+      "tag": "Google",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag": "Telegram",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag": "Twitter",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag": "Facebook",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag": "BiliBili",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "HongKong",
+        "TaiWan"
+      ]
+    },
+    {
+      "tag": "Bahamut",
+      "type": "selector",
+      "outbounds": [
+        "TaiWan",
+        "Proxy"
+      ]
+    },
+    {
+      "tag": "Spotify",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ],
+      "default": "America"
+    },
+    {
+      "tag": "TikTok",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America"
+      ],
+      "default": "Japan"
+    },
+    {
+      "tag": "Netflix",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag": "Disney+",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag": "Apple",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag": "Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag": "Games",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag": "Streaming",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others"
+      ]
+    },
+    {
+      "tag": "Global",
+      "type": "selector",
+      "outbounds": [
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Japan",
+        "America",
+        "Others",
+        "direct"
+      ]
+    },
+    {
+      "tag": "China",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "Proxy"
+      ]
+    },
+    {
+      "tag": "HongKong",
+      "type": "selector",
+      "outbounds": [
+        "香港(yfuye.com免费节点)_1_53",
+        "香港(yfuye.com免费节点)_2_57",
+        "香港(yfuye.com免费节点)_3_72",
+        "香港(yfuye.com免费节点)_4_106",
+        "香港(yfuye.com免费节点)_5_109",
+        "香港(yfuye.com免费节点)_6_124",
+        "香港(yfuye.com免费节点)_7_131",
+        "香港(yfuye.com免费节点)_8_144",
+        "香港(yfuye.com免费节点)_9_149",
+        "香港(yfuye.com免费节点)_10_156",
+        "香港(yfuye.com免费节点)_11_174"
+      ]
+    },
+    {
+      "tag": "TaiWan",
+      "type": "selector",
+      "outbounds": [
+        "Proxy"
+      ]
+    },
+    {
+      "tag": "Singapore",
+      "type": "selector",
+      "outbounds": [
+        "新加坡(yfuye.com免费节点)_63"
+      ]
+    },
+    {
+      "tag": "Japan",
+      "type": "selector",
+      "outbounds": [
+        "日本(yfuye.com免费节点)_1_87",
+        "日本(yfuye.com免费节点)_2_88",
+        "日本(yfuye.com免费节点)_3_154"
+      ]
+    },
+    {
+      "tag": "America",
+      "type": "selector",
+      "outbounds": [
+        "美国(yfuye.com免费节点)_1_1",
+        "美国(yfuye.com免费节点)_2_2",
+        "美国(yfuye.com免费节点)_3_3",
+        "美国(yfuye.com免费节点)_4_4",
+        "美国(yfuye.com免费节点)_5_5",
+        "美国(yfuye.com免费节点)_6_8",
+        "美国(yfuye.com免费节点)_7_9",
+        "美国(yfuye.com免费节点)_8_10",
+        "美国(yfuye.com免费节点)_9_11",
+        "美国(yfuye.com免费节点)_10_12",
+        "美国(yfuye.com免费节点)_11_13",
+        "美国(yfuye.com免费节点)_12_14",
+        "美国(yfuye.com免费节点)_13_15",
+        "美国(yfuye.com免费节点)_14_16",
+        "美国(yfuye.com免费节点)_15_17",
+        "美国(yfuye.com免费节点)_16_19",
+        "美国(yfuye.com免费节点)_17_20",
+        "美国(yfuye.com免费节点)_18_21",
+        "美国(yfuye.com免费节点)_19_22",
+        "美国(yfuye.com免费节点)_20_23",
+        "美国(yfuye.com免费节点)_21_24",
+        "美国(yfuye.com免费节点)_22_25",
+        "美国(yfuye.com免费节点)_23_26",
+        "美国(yfuye.com免费节点)_24_27",
+        "美国(yfuye.com免费节点)_25_28",
+        "美国(yfuye.com免费节点)_26_29",
+        "美国(yfuye.com免费节点)_27_30",
+        "美国(yfuye.com免费节点)_28_31",
+        "美国(yfuye.com免费节点)_29_32",
+        "美国(yfuye.com免费节点)_30_33",
+        "美国(yfuye.com免费节点)_31_34",
+        "美国(yfuye.com免费节点)_32_35",
+        "美国(yfuye.com免费节点)_33_36",
+        "美国(yfuye.com免费节点)_34_37",
+        "美国(yfuye.com免费节点)_35_38",
+        "美国(yfuye.com免费节点)_36_39",
+        "美国(yfuye.com免费节点)_37_40",
+        "美国(yfuye.com免费节点)_38_41",
+        "美国(yfuye.com免费节点)_39_42",
+        "美国(yfuye.com免费节点)_40_43",
+        "美国(yfuye.com免费节点)_41_44",
+        "美国(yfuye.com免费节点)_42_45",
+        "美国(yfuye.com免费节点)_43_46",
+        "美国(yfuye.com免费节点)_44_47",
+        "美国(yfuye.com免费节点)_45_48",
+        "美国(yfuye.com免费节点)_46_49",
+        "美国(yfuye.com免费节点)_47_50",
+        "美国(yfuye.com免费节点)_48_51",
+        "美国(yfuye.com免费节点)_49_52",
+        "美国(yfuye.com免费节点)_50_54",
+        "美国(yfuye.com免费节点)_51_55",
+        "美国(yfuye.com免费节点)_52_56",
+        "美国(yfuye.com免费节点)_53_58",
+        "美国(yfuye.com免费节点)_54_59",
+        "美国(yfuye.com免费节点)_55_62",
+        "美国(yfuye.com免费节点)_56_65",
+        "美国(yfuye.com免费节点)_57_67",
+        "美国(yfuye.com免费节点)_58_68",
+        "美国(yfuye.com免费节点)_59_69",
+        "美国(yfuye.com免费节点)_60_70",
+        "美国(yfuye.com免费节点)_61_71",
+        "美国(yfuye.com免费节点)_62_73",
+        "美国(yfuye.com免费节点)_63_75",
+        "美国(yfuye.com免费节点)_64_76",
+        "美国(yfuye.com免费节点)_65_77",
+        "美国(yfuye.com免费节点)_66_78",
+        "美国(yfuye.com免费节点)_67_79",
+        "美国(yfuye.com免费节点)_68_83",
+        "美国(yfuye.com免费节点)_69_85",
+        "美国(yfuye.com免费节点)_70_86",
+        "美国(yfuye.com免费节点)_71_89",
+        "美国(yfuye.com免费节点)_72_90",
+        "美国(yfuye.com免费节点)_73_91",
+        "美国(yfuye.com免费节点)_74_92",
+        "美国(yfuye.com免费节点)_75_93",
+        "美国(yfuye.com免费节点)_76_94",
+        "美国(yfuye.com免费节点)_77_95",
+        "美国(yfuye.com免费节点)_78_98",
+        "美国(yfuye.com免费节点)_79_101",
+        "美国(yfuye.com免费节点)_80_102",
+        "美国(yfuye.com免费节点)_81_103",
+        "美国(yfuye.com免费节点)_82_104",
+        "美国(yfuye.com免费节点)_83_105",
+        "美国(yfuye.com免费节点)_84_107",
+        "美国(yfuye.com免费节点)_85_108",
+        "美国(yfuye.com免费节点)_86_110",
+        "美国(yfuye.com免费节点)_87_111",
+        "美国(yfuye.com免费节点)_88_112",
+        "美国(yfuye.com免费节点)_89_114",
+        "美国(yfuye.com免费节点)_90_115",
+        "美国(yfuye.com免费节点)_91_116",
+        "美国(yfuye.com免费节点)_92_119",
+        "美国(yfuye.com免费节点)_93_120",
+        "美国(yfuye.com免费节点)_94_121",
+        "美国(yfuye.com免费节点)_95_123",
+        "美国(yfuye.com免费节点)_96_125",
+        "美国(yfuye.com免费节点)_97_126",
+        "美国(yfuye.com免费节点)_98_127",
+        "美国(yfuye.com免费节点)_99_128",
+        "美国(yfuye.com免费节点)_100_129",
+        "美国(yfuye.com免费节点)_101_130",
+        "美国(yfuye.com免费节点)_102_132",
+        "美国(yfuye.com免费节点)_103_133",
+        "美国(yfuye.com免费节点)_104_134",
+        "美国(yfuye.com免费节点)_105_135",
+        "美国(yfuye.com免费节点)_106_137",
+        "美国(yfuye.com免费节点)_107_138",
+        "美国(yfuye.com免费节点)_108_139",
+        "美国(yfuye.com免费节点)_109_140",
+        "美国(yfuye.com免费节点)_110_141",
+        "美国(yfuye.com免费节点)_111_142",
+        "美国(yfuye.com免费节点)_112_146",
+        "美国(yfuye.com免费节点)_113_147",
+        "美国(yfuye.com免费节点)_114_148",
+        "美国(yfuye.com免费节点)_115_150",
+        "美国(yfuye.com免费节点)_116_151",
+        "美国(yfuye.com免费节点)_117_152",
+        "美国(yfuye.com免费节点)_118_153",
+        "美国(yfuye.com免费节点)_119_157",
+        "美国(yfuye.com免费节点)_120_158",
+        "美国(yfuye.com免费节点)_121_160",
+        "美国(yfuye.com免费节点)_122_161",
+        "美国(yfuye.com免费节点)_123_162",
+        "美国(yfuye.com免费节点)_124_164",
+        "美国(yfuye.com免费节点)_125_166",
+        "美国(yfuye.com免费节点)_126_168",
+        "美国(yfuye.com免费节点)_127_169",
+        "美国(yfuye.com免费节点)_128_170",
+        "美国(yfuye.com免费节点)_129_172",
+        "美国(yfuye.com免费节点)_130_173",
+        "美国(yfuye.com免费节点)_131_175",
+        "美国(yfuye.com免费节点)_132_176",
+        "美国(yfuye.com免费节点)_133_177",
+        "美国(yfuye.com免费节点)_134_178",
+        "美国(yfuye.com免费节点)_135_180",
+        "美国(yfuye.com免费节点)_136_182",
+        "美国(yfuye.com免费节点)_137_185",
+        "美国(yfuye.com免费节点)_138_186",
+        "美国(yfuye.com免费节点)_139_187",
+        "美国(yfuye.com免费节点)_140_188",
+        "美国(yfuye.com免费节点)_141_189",
+        "美国(yfuye.com免费节点)_142_191",
+        "美国(yfuye.com免费节点)_143_192",
+        "美国(yfuye.com免费节点)_144_193",
+        "美国(yfuye.com免费节点)_145_194",
+        "美国(yfuye.com免费节点)_146_195",
+        "美国(yfuye.com免费节点)_147_196",
+        "美国(yfuye.com免费节点)_148_197",
+        "美国(yfuye.com免费节点)_149_198",
+        "美国(yfuye.com免费节点)_150_199",
+        "美国(yfuye.com免费节点)_151_200",
+        "美国(yfuye.com免费节点)_152_201",
+        "美国(yfuye.com免费节点)_153_202",
+        "美国(yfuye.com免费节点)_154_203",
+        "美国(yfuye.com免费节点)_155_204",
+        "美国(yfuye.com免费节点)_156_206",
+        "美国(yfuye.com免费节点)_157_207",
+        "美国(yfuye.com免费节点)_158_208",
+        "美国(yfuye.com免费节点)_159_209",
+        "美国(yfuye.com免费节点)_160_211",
+        "美国(yfuye.com免费节点)_161_212",
+        "美国(yfuye.com免费节点)_162_213",
+        "美国(yfuye.com免费节点)_163_214",
+        "美国(yfuye.com免费节点)_164_216",
+        "美国(yfuye.com免费节点)_165_217"
+      ]
+    },
+    {
+      "tag": "Others",
+      "type": "selector",
+      "outbounds": [
+        "英国(yfuye.com免费节点)_1_6",
+        "德国(yfuye.com免费节点)_1_7",
+        "法国(yfuye.com免费节点)_1_18",
+        "英国(yfuye.com免费节点)_2_60",
+        "德国(yfuye.com免费节点)_2_61",
+        "西班牙(yfuye.com免费节点)_2_64",
+        "荷兰(yfuye.com免费节点)_1_66",
+        "澳洲(yfuye.com免费节点)_1_74",
+        "西班牙(yfuye.com免费节点)_3_80",
+        "荷兰(yfuye.com免费节点)_2_81",
+        "法国(yfuye.com免费节点)_2_82",
+        "德国(yfuye.com免费节点)_3_84",
+        "加拿大(yfuye.com免费节点)_1_96",
+        "加拿大(yfuye.com免费节点)_2_97",
+        "荷兰(yfuye.com免费节点)_3_99",
+        "荷兰(yfuye.com免费节点)_4_100",
+        "德国(yfuye.com免费节点)_4_113",
+        "英国(yfuye.com免费节点)_3_117",
+        "荷兰(yfuye.com免费节点)_5_118",
+        "荷兰(yfuye.com免费节点)_6_122",
+        "加拿大(yfuye.com免费节点)_3_136",
+        "澳洲(yfuye.com免费节点)_2_143",
+        "荷兰(yfuye.com免费节点)_7_145",
+        "英国(yfuye.com免费节点)_4_155",
+        "英国(yfuye.com免费节点)_5_159",
+        "英国(yfuye.com免费节点)_6_163",
+        "英国(yfuye.com免费节点)_7_165",
+        "德国(yfuye.com免费节点)_5_167",
+        "法国(yfuye.com免费节点)_3_171",
+        "英国(yfuye.com免费节点)_8_179",
+        "英国(yfuye.com免费节点)_9_181",
+        "澳洲(yfuye.com免费节点)_3_183",
+        "英国(yfuye.com免费节点)_10_184",
+        "德国(yfuye.com免费节点)_6_190",
+        "德国(yfuye.com免费节点)_7_205",
+        "英国(yfuye.com免费节点)_11_210",
+        "英国(yfuye.com免费节点)_12_215"
+      ]
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "美国(yfuye.com免费节点)_1_1",
+        "美国(yfuye.com免费节点)_2_2",
+        "美国(yfuye.com免费节点)_3_3",
+        "美国(yfuye.com免费节点)_4_4",
+        "美国(yfuye.com免费节点)_5_5",
+        "英国(yfuye.com免费节点)_1_6",
+        "德国(yfuye.com免费节点)_1_7",
+        "美国(yfuye.com免费节点)_6_8",
+        "美国(yfuye.com免费节点)_7_9",
+        "美国(yfuye.com免费节点)_8_10",
+        "美国(yfuye.com免费节点)_9_11",
+        "美国(yfuye.com免费节点)_10_12",
+        "美国(yfuye.com免费节点)_11_13",
+        "美国(yfuye.com免费节点)_12_14",
+        "美国(yfuye.com免费节点)_13_15",
+        "美国(yfuye.com免费节点)_14_16",
+        "美国(yfuye.com免费节点)_15_17",
+        "法国(yfuye.com免费节点)_1_18",
+        "美国(yfuye.com免费节点)_16_19",
+        "美国(yfuye.com免费节点)_17_20",
+        "美国(yfuye.com免费节点)_18_21",
+        "美国(yfuye.com免费节点)_19_22",
+        "美国(yfuye.com免费节点)_20_23",
+        "美国(yfuye.com免费节点)_21_24",
+        "美国(yfuye.com免费节点)_22_25",
+        "美国(yfuye.com免费节点)_23_26",
+        "美国(yfuye.com免费节点)_24_27",
+        "美国(yfuye.com免费节点)_25_28",
+        "美国(yfuye.com免费节点)_26_29",
+        "美国(yfuye.com免费节点)_27_30",
+        "美国(yfuye.com免费节点)_28_31",
+        "美国(yfuye.com免费节点)_29_32",
+        "美国(yfuye.com免费节点)_30_33",
+        "美国(yfuye.com免费节点)_31_34",
+        "美国(yfuye.com免费节点)_32_35",
+        "美国(yfuye.com免费节点)_33_36",
+        "美国(yfuye.com免费节点)_34_37",
+        "美国(yfuye.com免费节点)_35_38",
+        "美国(yfuye.com免费节点)_36_39",
+        "美国(yfuye.com免费节点)_37_40",
+        "美国(yfuye.com免费节点)_38_41",
+        "美国(yfuye.com免费节点)_39_42",
+        "美国(yfuye.com免费节点)_40_43",
+        "美国(yfuye.com免费节点)_41_44",
+        "美国(yfuye.com免费节点)_42_45",
+        "美国(yfuye.com免费节点)_43_46",
+        "美国(yfuye.com免费节点)_44_47",
+        "美国(yfuye.com免费节点)_45_48",
+        "美国(yfuye.com免费节点)_46_49",
+        "美国(yfuye.com免费节点)_47_50",
+        "美国(yfuye.com免费节点)_48_51",
+        "美国(yfuye.com免费节点)_49_52",
+        "香港(yfuye.com免费节点)_1_53",
+        "美国(yfuye.com免费节点)_50_54",
+        "美国(yfuye.com免费节点)_51_55",
+        "美国(yfuye.com免费节点)_52_56",
+        "香港(yfuye.com免费节点)_2_57",
+        "美国(yfuye.com免费节点)_53_58",
+        "美国(yfuye.com免费节点)_54_59",
+        "英国(yfuye.com免费节点)_2_60",
+        "德国(yfuye.com免费节点)_2_61",
+        "美国(yfuye.com免费节点)_55_62",
+        "新加坡(yfuye.com免费节点)_63",
+        "西班牙(yfuye.com免费节点)_2_64",
+        "美国(yfuye.com免费节点)_56_65",
+        "荷兰(yfuye.com免费节点)_1_66",
+        "美国(yfuye.com免费节点)_57_67",
+        "美国(yfuye.com免费节点)_58_68",
+        "美国(yfuye.com免费节点)_59_69",
+        "美国(yfuye.com免费节点)_60_70",
+        "美国(yfuye.com免费节点)_61_71",
+        "香港(yfuye.com免费节点)_3_72",
+        "美国(yfuye.com免费节点)_62_73",
+        "澳洲(yfuye.com免费节点)_1_74",
+        "美国(yfuye.com免费节点)_63_75",
+        "美国(yfuye.com免费节点)_64_76",
+        "美国(yfuye.com免费节点)_65_77",
+        "美国(yfuye.com免费节点)_66_78",
+        "美国(yfuye.com免费节点)_67_79",
+        "西班牙(yfuye.com免费节点)_3_80",
+        "荷兰(yfuye.com免费节点)_2_81",
+        "法国(yfuye.com免费节点)_2_82",
+        "美国(yfuye.com免费节点)_68_83",
+        "德国(yfuye.com免费节点)_3_84",
+        "美国(yfuye.com免费节点)_69_85",
+        "美国(yfuye.com免费节点)_70_86",
+        "日本(yfuye.com免费节点)_1_87",
+        "日本(yfuye.com免费节点)_2_88",
+        "美国(yfuye.com免费节点)_71_89",
+        "美国(yfuye.com免费节点)_72_90",
+        "美国(yfuye.com免费节点)_73_91",
+        "美国(yfuye.com免费节点)_74_92",
+        "美国(yfuye.com免费节点)_75_93",
+        "美国(yfuye.com免费节点)_76_94",
+        "美国(yfuye.com免费节点)_77_95",
+        "加拿大(yfuye.com免费节点)_1_96",
+        "加拿大(yfuye.com免费节点)_2_97",
+        "美国(yfuye.com免费节点)_78_98",
+        "荷兰(yfuye.com免费节点)_3_99",
+        "荷兰(yfuye.com免费节点)_4_100",
+        "美国(yfuye.com免费节点)_79_101",
+        "美国(yfuye.com免费节点)_80_102",
+        "美国(yfuye.com免费节点)_81_103",
+        "美国(yfuye.com免费节点)_82_104",
+        "美国(yfuye.com免费节点)_83_105",
+        "香港(yfuye.com免费节点)_4_106",
+        "美国(yfuye.com免费节点)_84_107",
+        "美国(yfuye.com免费节点)_85_108",
+        "香港(yfuye.com免费节点)_5_109",
+        "美国(yfuye.com免费节点)_86_110",
+        "美国(yfuye.com免费节点)_87_111",
+        "美国(yfuye.com免费节点)_88_112",
+        "德国(yfuye.com免费节点)_4_113",
+        "美国(yfuye.com免费节点)_89_114",
+        "美国(yfuye.com免费节点)_90_115",
+        "美国(yfuye.com免费节点)_91_116",
+        "英国(yfuye.com免费节点)_3_117",
+        "荷兰(yfuye.com免费节点)_5_118",
+        "美国(yfuye.com免费节点)_92_119",
+        "美国(yfuye.com免费节点)_93_120",
+        "美国(yfuye.com免费节点)_94_121",
+        "荷兰(yfuye.com免费节点)_6_122",
+        "美国(yfuye.com免费节点)_95_123",
+        "香港(yfuye.com免费节点)_6_124",
+        "美国(yfuye.com免费节点)_96_125",
+        "美国(yfuye.com免费节点)_97_126",
+        "美国(yfuye.com免费节点)_98_127",
+        "美国(yfuye.com免费节点)_99_128",
+        "美国(yfuye.com免费节点)_100_129",
+        "美国(yfuye.com免费节点)_101_130",
+        "香港(yfuye.com免费节点)_7_131",
+        "美国(yfuye.com免费节点)_102_132",
+        "美国(yfuye.com免费节点)_103_133",
+        "美国(yfuye.com免费节点)_104_134",
+        "美国(yfuye.com免费节点)_105_135",
+        "加拿大(yfuye.com免费节点)_3_136",
+        "美国(yfuye.com免费节点)_106_137",
+        "美国(yfuye.com免费节点)_107_138",
+        "美国(yfuye.com免费节点)_108_139",
+        "美国(yfuye.com免费节点)_109_140",
+        "美国(yfuye.com免费节点)_110_141",
+        "美国(yfuye.com免费节点)_111_142",
+        "澳洲(yfuye.com免费节点)_2_143",
+        "香港(yfuye.com免费节点)_8_144",
+        "荷兰(yfuye.com免费节点)_7_145",
+        "美国(yfuye.com免费节点)_112_146",
+        "美国(yfuye.com免费节点)_113_147",
+        "美国(yfuye.com免费节点)_114_148",
+        "香港(yfuye.com免费节点)_9_149",
+        "美国(yfuye.com免费节点)_115_150",
+        "美国(yfuye.com免费节点)_116_151",
+        "美国(yfuye.com免费节点)_117_152",
+        "美国(yfuye.com免费节点)_118_153",
+        "日本(yfuye.com免费节点)_3_154",
+        "英国(yfuye.com免费节点)_4_155",
+        "香港(yfuye.com免费节点)_10_156",
+        "美国(yfuye.com免费节点)_119_157",
+        "美国(yfuye.com免费节点)_120_158",
+        "英国(yfuye.com免费节点)_5_159",
+        "美国(yfuye.com免费节点)_121_160",
+        "美国(yfuye.com免费节点)_122_161",
+        "美国(yfuye.com免费节点)_123_162",
+        "英国(yfuye.com免费节点)_6_163",
+        "美国(yfuye.com免费节点)_124_164",
+        "英国(yfuye.com免费节点)_7_165",
+        "美国(yfuye.com免费节点)_125_166",
+        "德国(yfuye.com免费节点)_5_167",
+        "美国(yfuye.com免费节点)_126_168",
+        "美国(yfuye.com免费节点)_127_169",
+        "美国(yfuye.com免费节点)_128_170",
+        "法国(yfuye.com免费节点)_3_171",
+        "美国(yfuye.com免费节点)_129_172",
+        "美国(yfuye.com免费节点)_130_173",
+        "香港(yfuye.com免费节点)_11_174",
+        "美国(yfuye.com免费节点)_131_175",
+        "美国(yfuye.com免费节点)_132_176",
+        "美国(yfuye.com免费节点)_133_177",
+        "美国(yfuye.com免费节点)_134_178",
+        "英国(yfuye.com免费节点)_8_179",
+        "美国(yfuye.com免费节点)_135_180",
+        "英国(yfuye.com免费节点)_9_181",
+        "美国(yfuye.com免费节点)_136_182",
+        "澳洲(yfuye.com免费节点)_3_183",
+        "英国(yfuye.com免费节点)_10_184",
+        "美国(yfuye.com免费节点)_137_185",
+        "美国(yfuye.com免费节点)_138_186",
+        "美国(yfuye.com免费节点)_139_187",
+        "美国(yfuye.com免费节点)_140_188",
+        "美国(yfuye.com免费节点)_141_189",
+        "德国(yfuye.com免费节点)_6_190",
+        "美国(yfuye.com免费节点)_142_191",
+        "美国(yfuye.com免费节点)_143_192",
+        "美国(yfuye.com免费节点)_144_193",
+        "美国(yfuye.com免费节点)_145_194",
+        "美国(yfuye.com免费节点)_146_195",
+        "美国(yfuye.com免费节点)_147_196",
+        "美国(yfuye.com免费节点)_148_197",
+        "美国(yfuye.com免费节点)_149_198",
+        "美国(yfuye.com免费节点)_150_199",
+        "美国(yfuye.com免费节点)_151_200",
+        "美国(yfuye.com免费节点)_152_201",
+        "美国(yfuye.com免费节点)_153_202",
+        "美国(yfuye.com免费节点)_154_203",
+        "美国(yfuye.com免费节点)_155_204",
+        "德国(yfuye.com免费节点)_7_205",
+        "美国(yfuye.com免费节点)_156_206",
+        "美国(yfuye.com免费节点)_157_207",
+        "美国(yfuye.com免费节点)_158_208",
+        "美国(yfuye.com免费节点)_159_209",
+        "英国(yfuye.com免费节点)_11_210",
+        "美国(yfuye.com免费节点)_160_211",
+        "美国(yfuye.com免费节点)_161_212",
+        "美国(yfuye.com免费节点)_162_213",
+        "美国(yfuye.com免费节点)_163_214",
+        "英国(yfuye.com免费节点)_12_215",
+        "美国(yfuye.com免费节点)_164_216",
+        "美国(yfuye.com免费节点)_165_217"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m",
+      "tolerance": 50
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_1_1",
+      "server": "213.182.199.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_2_2",
+      "server": "193.227.99.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_3_3",
+      "server": "170.114.46.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_4_4",
+      "server": "pupas-shirting-unsung.freesocks.work",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "p78naCf2EfOlRSLTX0wFVx"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_5_5",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "9ce20661-bf1a-4668-9556-5523b6733520"
+    },
+    {
+      "type": "vless",
+      "tag": "英国(yfuye.com免费节点)_1_6",
+      "server": "185.156.19.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "德国(yfuye.com免费节点)_1_7",
+      "server": "185.135.9.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_6_8",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "dfdb9f5e-a42f-479e-bb67-a747e2be8b8f"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_7_9",
+      "server": "switcher-nick-croquet.freesocks.work",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "9tqhMdIrTkgQ46PvhyAtMH"
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_8_10",
+      "server": "166.62.105.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_9_11",
+      "server": "166.62.106.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_10_12",
+      "server": "198.12.144.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_11_13",
+      "server": "190.93.245.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_12_14",
+      "server": "192.0.54.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_13_15",
+      "server": "198.71.233.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_14_16",
+      "server": "198.71.191.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_15_17",
+      "server": "192.169.223.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "法国(yfuye.com免费节点)_1_18",
+      "server": "2001:bc8:32d7:302::10",
+      "server_port": 44579,
+      "uuid": "8e34e170-13ae-4892-9d20-05962acc9f84",
+      "security": "auto",
+      "alter_id": 0,
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "美国(yfuye.com免费节点)_16_19",
+      "server": "2001:bc8:32d7:302::10",
+      "server_port": 44579,
+      "uuid": "8e34e170-13ae-4892-9d20-05962acc9f84",
+      "security": "auto",
+      "alter_id": 0,
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_17_20",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "f2c35feb-ce73-477d-9ade-8c41d6d32c66"
+    },
+    {
+      "type": "vmess",
+      "tag": "美国(yfuye.com免费节点)_18_21",
+      "server": "a-v1.888988866.xyz",
+      "server_port": 443,
+      "uuid": "104556c9-797c-42e9-9bb7-7a6e9974b857",
+      "security": "auto",
+      "alter_id": 0,
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "host": "a-v1.888988866.xyz"
+        },
+        "path": "/104556c9-797c-42e9-9bb7-7a6e9974b857"
+      },
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_19_22",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "77ad5b7a-bb16-4e1c-81e0-e34f70ec76aa"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_20_23",
+      "server": "entrance02.qqa678.cc",
+      "server_port": 47081,
+      "method": "aes-256-gcm",
+      "password": "8e94ed0e-3717-4c46-aa13-6757a89b392e"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_21_24",
+      "server": "entrance04.qqa678.cc",
+      "server_port": 47081,
+      "method": "aes-256-gcm",
+      "password": "e9b0fa0b-72fb-4993-a251-9f518512fec8"
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_22_25",
+      "server": "104.21.9.71",
+      "server_port": 443,
+      "uuid": "c226ac5d-65e9-4379-95c3-fb542bc242d8",
+      "transport": {
+        "type": "ws",
+        "path": "/ojdw89bpg4ykd4o",
+        "headers": {
+          "Host": "ddDDdDDdDDF.777198.XyZ"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "ddDDdDDdDDF.777198.XyZ"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_23_26",
+      "server": "104.21.90.226",
+      "server_port": 443,
+      "uuid": "e4cbe8b8-37db-4aaa-8469-b84f34c51ebc",
+      "transport": {
+        "type": "ws",
+        "path": "/6owljrc26b0nhyr5hyxd",
+        "headers": {
+          "Host": "444RRrt5.7777155.xYZ"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "444RRrt5.7777155.xYZ"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_24_27",
+      "server": "fearless-change.oneeat.co",
+      "server_port": 80,
+      "uuid": "b055036a-2d81-4d46-ab18-4e1898b58cec",
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      },
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_25_28",
+      "server": "190.93.247.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_26_29",
+      "server": "direct-jde6zos4zet26b15zzd1.appcity-download.ir",
+      "server_port": 17337,
+      "uuid": "21441ba7-8364-496c-d43b-39fc7f9cb8d7"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_27_30",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "f739e4dd-0ddd-410c-b270-d585085765e9"
+    },
+    {
+      "type": "vmess",
+      "tag": "美国(yfuye.com免费节点)_28_31",
+      "server": "y-v1.888988866.xyz",
+      "server_port": 443,
+      "uuid": "a397bd18-5a5f-4a5a-bf03-ed5bc1a990eb",
+      "security": "auto",
+      "alter_id": 0,
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "host": "y-v1.888988866.xyz"
+        },
+        "path": "/a397bd18-5a5f-4a5a-bf03-ed5bc1a990eb"
+      },
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_29_32",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "f81b816b-0d95-4ab9-bb20-f97170ec38ce"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_30_33",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "aba90c7f-5fd7-4437-b0a8-d0717acc70a7"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_31_34",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "22b7a5ae-621d-4697-9312-fa86f893fa67"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_32_35",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "6089e90e-1e32-416f-ab40-cada11af6571"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_33_36",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "fcc00957-eba4-41e8-bd8a-31c293440d1a"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_34_37",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "afae257f-6e15-4337-b0e6-97b6ad4c4502"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_35_38",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38321,
+      "method": "aes-128-gcm",
+      "password": "0fb24eb6-2f5b-4022-8f2a-732d1ed0c76a"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_36_39",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "c739b8f9-a3ed-4f4b-a0b3-94a34095f8e3"
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_37_40",
+      "server": "198.71.190.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_38_41",
+      "server": "104.238.68.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_39_42",
+      "server": "50.62.90.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_40_43",
+      "server": "192.0.54.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_41_44",
+      "server": "166.62.106.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_42_45",
+      "server": "45.40.154.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_43_46",
+      "server": "192.0.63.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_44_47",
+      "server": "130.250.137.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_45_48",
+      "server": "45.40.145.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_46_49",
+      "server": "198.71.191.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_47_50",
+      "server": "166.62.108.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_48_51",
+      "server": "72.167.25.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_49_52",
+      "server": "141.193.213.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "香港(yfuye.com免费节点)_1_53",
+      "server": "154.194.0.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_50_54",
+      "server": "45.40.147.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_51_55",
+      "server": "139.64.235.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_52_56",
+      "server": "88.216.66.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "香港(yfuye.com免费节点)_2_57",
+      "server": "154.197.80.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_53_58",
+      "server": "190.93.244.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_54_59",
+      "server": "213.182.199.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "英国(yfuye.com免费节点)_2_60",
+      "server": "25.26.27.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "德国(yfuye.com免费节点)_2_61",
+      "server": "5.182.34.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_55_62",
+      "server": "66.45.118.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "新加坡(yfuye.com免费节点)_63",
+      "server": "114.129.43.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "西班牙(yfuye.com免费节点)_2_64",
+      "server": "185.251.80.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_56_65",
+      "server": "213.241.198.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "荷兰(yfuye.com免费节点)_1_66",
+      "server": "45.131.210.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_57_67",
+      "server": "45.85.118.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_58_68",
+      "server": "167.68.11.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_59_69",
+      "server": "185.148.107.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_60_70",
+      "server": "45.153.7.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_61_71",
+      "server": "102.177.176.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "香港(yfuye.com免费节点)_3_72",
+      "server": "45.192.223.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_62_73",
+      "server": "45.159.219.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "澳洲(yfuye.com免费节点)_1_74",
+      "server": "185.207.196.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_63_75",
+      "server": "185.176.24.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_64_76",
+      "server": "162.120.94.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_65_77",
+      "server": "91.124.127.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_66_78",
+      "server": "185.159.247.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_67_79",
+      "server": "entrance03.qqa678.cc",
+      "server_port": 37086,
+      "method": "aes-256-gcm",
+      "password": "4752fc27-8959-4082-9cf4-ccc84096f31e"
+    },
+    {
+      "type": "vless",
+      "tag": "西班牙(yfuye.com免费节点)_3_80",
+      "server": "185.251.81.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "荷兰(yfuye.com免费节点)_2_81",
+      "server": "185.170.166.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "法国(yfuye.com免费节点)_2_82",
+      "server": "94.140.0.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_68_83",
+      "server": "195.85.23.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "德国(yfuye.com免费节点)_3_84",
+      "server": "185.158.133.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_69_85",
+      "server": "102.132.188.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_70_86",
+      "server": "45.135.235.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "日本(yfuye.com免费节点)_1_87",
+      "server": "103.245.228.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "日本(yfuye.com免费节点)_2_88",
+      "server": "103.245.229.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_71_89",
+      "server": "89.116.180.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_72_90",
+      "server": "193.124.224.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_73_91",
+      "server": "91.206.71.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_74_92",
+      "server": "46.254.92.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_75_93",
+      "server": "162.251.82.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_76_94",
+      "server": "45.85.119.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_77_95",
+      "server": "5.182.85.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "加拿大(yfuye.com免费节点)_1_96",
+      "server": "74.49.215.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "加拿大(yfuye.com免费节点)_2_97",
+      "server": "74.49.214.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_78_98",
+      "server": "162.159.43.92",
+      "server_port": 443,
+      "uuid": "0c0537c3-f0fb-40e6-bd59-f5038e1855ed",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "juzi.634676.xyz"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "juzi.634676.xyz"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "荷兰(yfuye.com免费节点)_3_99",
+      "server": "188.164.248.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "荷兰(yfuye.com免费节点)_4_100",
+      "server": "185.193.30.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_79_101",
+      "server": "194.53.53.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_80_102",
+      "server": "62.72.166.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_81_103",
+      "server": "154.81.141.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_82_104",
+      "server": "188.42.145.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_83_105",
+      "server": "89.116.250.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "香港(yfuye.com免费节点)_4_106",
+      "server": "154.194.12.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_84_107",
+      "server": "216.205.52.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_85_108",
+      "server": "92.53.191.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "香港(yfuye.com免费节点)_5_109",
+      "server": "154.197.121.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_86_110",
+      "server": "45.159.216.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_87_111",
+      "server": "176.124.223.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_88_112",
+      "server": "154.83.2.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "德国(yfuye.com免费节点)_4_113",
+      "server": "185.135.9.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_89_114",
+      "server": "92.53.188.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_90_115",
+      "server": "77.105.163.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_91_116",
+      "server": "45.159.218.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "英国(yfuye.com免费节点)_3_117",
+      "server": "25.25.25.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "荷兰(yfuye.com免费节点)_5_118",
+      "server": "45.131.7.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_92_119",
+      "server": "8.34.146.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_93_120",
+      "server": "185.162.228.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_94_121",
+      "server": "92.60.74.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "荷兰(yfuye.com免费节点)_6_122",
+      "server": "37.153.171.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_95_123",
+      "server": "77.74.228.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "香港(yfuye.com免费节点)_6_124",
+      "server": "154.197.64.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_96_125",
+      "server": "77.232.140.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_97_126",
+      "server": "104.129.164.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_98_127",
+      "server": "193.233.132.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_99_128",
+      "server": "5.10.244.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_100_129",
+      "server": "199.181.197.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_101_130",
+      "server": "92.243.74.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "香港(yfuye.com免费节点)_7_131",
+      "server": "45.202.113.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_102_132",
+      "server": "198.177.57.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_103_133",
+      "server": "184.174.80.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_104_134",
+      "server": "159.246.55.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_105_135",
+      "server": "108.165.152.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "加拿大(yfuye.com免费节点)_3_136",
+      "server": "205.233.181.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_106_137",
+      "server": "88.216.69.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_107_138",
+      "server": "159.242.242.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_108_139",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38318,
+      "method": "aes-128-gcm",
+      "password": "ba7bb62d-e5e2-42f6-ab7e-57baf5e95a4b"
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_109_140",
+      "server": "45.146.201.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_110_141",
+      "server": "154.219.5.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_111_142",
+      "server": "188.164.158.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "澳洲(yfuye.com免费节点)_2_143",
+      "server": "103.133.1.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "香港(yfuye.com免费节点)_8_144",
+      "server": "154.211.8.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "荷兰(yfuye.com免费节点)_7_145",
+      "server": "45.131.5.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_112_146",
+      "server": "103.160.204.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_113_147",
+      "server": "104.239.72.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_114_148",
+      "server": "108.165.216.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "香港(yfuye.com免费节点)_9_149",
+      "server": "45.192.224.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_115_150",
+      "server": "193.9.49.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_116_151",
+      "server": "185.162.229.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_117_152",
+      "server": "188.42.88.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_118_153",
+      "server": "195.245.221.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "日本(yfuye.com免费节点)_3_154",
+      "server": "103.116.7.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "英国(yfuye.com免费节点)_4_155",
+      "server": "25.129.196.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "香港(yfuye.com免费节点)_10_156",
+      "server": "154.218.15.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_119_157",
+      "server": "156.243.83.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_120_158",
+      "server": "155.46.167.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "英国(yfuye.com免费节点)_5_159",
+      "server": "141.11.202.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_121_160",
+      "server": "45.149.12.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_122_161",
+      "server": "45.8.211.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_123_162",
+      "server": "167.68.42.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "英国(yfuye.com免费节点)_6_163",
+      "server": "25.129.197.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_124_164",
+      "server": "193.233.21.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "英国(yfuye.com免费节点)_7_165",
+      "server": "185.156.19.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_125_166",
+      "server": "89.116.46.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "德国(yfuye.com免费节点)_5_167",
+      "server": "31.185.108.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_126_168",
+      "server": "188.164.159.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_127_169",
+      "server": "45.205.0.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_128_170",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "2cff80d4-2288-412f-a685-3c0f8babe621"
+    },
+    {
+      "type": "vless",
+      "tag": "法国(yfuye.com免费节点)_3_171",
+      "server": "185.7.240.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_129_172",
+      "server": "159.112.235.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_130_173",
+      "server": "31.43.179.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "香港(yfuye.com免费节点)_11_174",
+      "server": "154.197.88.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_131_175",
+      "server": "195.13.44.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_132_176",
+      "server": "170.114.45.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_133_177",
+      "server": "88.216.67.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_134_178",
+      "server": "185.162.230.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "英国(yfuye.com免费节点)_8_179",
+      "server": "45.12.31.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_135_180",
+      "server": "185.162.231.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "英国(yfuye.com免费节点)_9_181",
+      "server": "188.244.122.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_136_182",
+      "server": "45.128.76.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "澳洲(yfuye.com免费节点)_3_183",
+      "server": "185.207.199.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "英国(yfuye.com免费节点)_10_184",
+      "server": "80.93.202.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_137_185",
+      "server": "45.130.125.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_138_186",
+      "server": "166.62.113.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_139_187",
+      "server": "199.34.230.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_140_188",
+      "server": "192.169.221.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_141_189",
+      "server": "198.71.189.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "德国(yfuye.com免费节点)_6_190",
+      "server": "185.16.110.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_142_191",
+      "server": "166.62.109.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_143_192",
+      "server": "212.183.88.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_144_193",
+      "server": "72.167.230.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_145_194",
+      "server": "216.24.57.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_146_195",
+      "server": "141.193.27.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_147_196",
+      "server": "66.81.247.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_148_197",
+      "server": "194.76.18.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_149_198",
+      "server": "50.62.194.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_150_199",
+      "server": "45.40.152.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_151_200",
+      "server": "166.62.115.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_152_201",
+      "server": "166.62.110.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_153_202",
+      "server": "192.200.160.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_154_203",
+      "server": "166.62.114.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_155_204",
+      "server": "50.62.198.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "德国(yfuye.com免费节点)_7_205",
+      "server": "185.16.110.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_156_206",
+      "server": "entrance03.qqa678.cc",
+      "server_port": 47081,
+      "method": "aes-256-gcm",
+      "password": "8e94ed0e-3717-4c46-aa13-6757a89b392e"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_157_207",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38305,
+      "method": "aes-128-gcm",
+      "password": "a6ccbd9b-ccba-443f-b10b-d7595d178d73"
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_158_208",
+      "server": "45.40.146.52",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets&freecodes@节点狂魔/?ed=2560",
+        "headers": {
+          "Host": "saas.git.cloudns.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.git.cloudns.org"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_159_209",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38318,
+      "method": "aes-128-gcm",
+      "password": "ddc49688-dfcd-4d03-a6b0-ec52aceba63a"
+    },
+    {
+      "type": "vless",
+      "tag": "英国(yfuye.com免费节点)_11_210",
+      "server": "194.36.55.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_160_211",
+      "server": "27.50.49.104",
+      "server_port": 443,
+      "uuid": "019984df-e8d5-10ee-435f-9143d7beb674",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets?ip=proxyip.oracle.cmliussss.net",
+        "headers": {
+          "Host": "getsub.saas.classelivre.eu.org"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "getsub.saas.classelivre.eu.org"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_161_212",
+      "server": "dfes.bcymanuscript.top",
+      "server_port": 38315,
+      "method": "aes-128-gcm",
+      "password": "377931e4-48df-43f0-ad0b-f5010ecc079f"
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_162_213",
+      "server": "167.68.11.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_163_214",
+      "server": "185.176.24.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "英国(yfuye.com免费节点)_12_215",
+      "server": "185.162.229.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "美国(yfuye.com免费节点)_164_216",
+      "server": "185.149.135.50",
+      "server_port": 2096,
+      "uuid": "12345678-1234-1234-1234-123456789123",
+      "transport": {
+        "type": "ws",
+        "path": "/snippets",
+        "headers": {
+          "Host": "saas.sosocn.abrdns.com"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "saas.sosocn.abrdns.com"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "美国(yfuye.com免费节点)_165_217",
+      "server": "pupas-shirting-unsung.freesocks.work",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "p78naCf2EfOlRSLTX0wFVx"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "final": "Proxy",
+    "rules": [
+      {
+        "inbound": [
+          "tun-in",
+          "mixed-in"
+        ],
+        "action": "sniff"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 53
+          },
+          {
+            "protocol": "dns"
+          }
+        ],
+        "action": "hijack-dns"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "clash_mode": "rule",
+        "action": "reject"
+      },
+      {
+        "rule_set": "geosite-category-ads-all",
+        "clash_mode": "global",
+        "outbound": "Proxy"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "Proxy"
+      },
+      {
+        "domain": [
+          "clash.razord.top",
+          "yacd.metacubex.one",
+          "yacd.haishan.me",
+          "d.metacubex.one"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-openai",
+        "outbound": "OpenAI"
+      },
+      {
+        "rule_set": [
+          "geosite-youtube",
+          "geoip-google",
+          "geosite-google",
+          "geosite-github"
+        ],
+        "outbound": "Google"
+      },
+      {
+        "rule_set": [
+          "geoip-telegram",
+          "geosite-telegram"
+        ],
+        "outbound": "Telegram"
+      },
+      {
+        "rule_set": [
+          "geoip-twitter",
+          "geosite-twitter"
+        ],
+        "outbound": "Twitter"
+      },
+      {
+        "rule_set": [
+          "geoip-facebook",
+          "geosite-facebook"
+        ],
+        "outbound": "Facebook"
+      },
+      {
+        "rule_set": "geosite-bilibili",
+        "outbound": "BiliBili"
+      },
+      {
+        "rule_set": "geosite-bahamut",
+        "outbound": "Bahamut"
+      },
+      {
+        "rule_set": "geosite-spotify",
+        "outbound": "Spotify"
+      },
+      {
+        "rule_set": "geosite-tiktok",
+        "outbound": "TikTok"
+      },
+      {
+        "rule_set": [
+          "geoip-netflix",
+          "geosite-netflix"
+        ],
+        "outbound": "Netflix"
+      },
+      {
+        "rule_set": "geosite-disney",
+        "outbound": "Disney+"
+      },
+      {
+        "rule_set": [
+          "geoip-apple",
+          "geosite-apple",
+          "geosite-amazon"
+        ],
+        "outbound": "Apple"
+      },
+      {
+        "rule_set": "geosite-microsoft",
+        "outbound": "Microsoft"
+      },
+      {
+        "rule_set": [
+          "geosite-category-games",
+          "geosite-dmm"
+        ],
+        "outbound": "Games"
+      },
+      {
+        "rule_set": [
+          "geosite-hbo",
+          "geosite-primevideo"
+        ],
+        "outbound": "Streaming"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "outbound": "Global"
+      },
+      {
+        "rule_set": [
+          "geoip-cn",
+          "geosite-cn"
+        ],
+        "outbound": "China"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-openai",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/Toperlock/sing-box-geosite@main/rule/OpenAI.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-youtube",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/youtube.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geoip-google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/google.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/google.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-github",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/github.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geoip-telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/telegram.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/telegram.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geoip-twitter",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/twitter.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-twitter",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/twitter.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geoip-facebook",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/facebook.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-facebook",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/facebook.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-bilibili",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bilibili.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-bahamut",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/bahamut.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-spotify",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/spotify.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-tiktok",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/tiktok.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geoip-netflix",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/netflix.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-netflix",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/netflix.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-disney",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/disney.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geoip-apple",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geoip/apple.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-apple",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/apple.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-amazon",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/amazon.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-microsoft",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/microsoft.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-category-games",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-games.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-dmm",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/dmm.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-hbo",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/hbo.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-primevideo",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/primevideo.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs",
+        "download_detour": "direct"
+      }
+    ]
   }
 }
