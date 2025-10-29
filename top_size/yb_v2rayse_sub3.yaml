@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2025-10-28 21:55:27
+# 创建时间：29-10-2025 19:22:51
 # 使用模版：V2RaySE 默认模版
-# 节点数量：10
+# 节点数量：8
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -85,109 +85,95 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"666_1","type":"trojan","server":"f10011.flyflylflyflyssssnode.sbs","port":34664,"udp":true,"password":"e7313acb-7af6-4fee-8483-eeaded7cf3a2","sni":"jp04.ckcloud.info","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"666_2","type":"trojan","server":"f10021.flyflylflyflyssssnode.sbs","port":34664,"udp":true,"password":"e7313acb-7af6-4fee-8483-eeaded7cf3a2","sni":"jp04.ckcloud.info","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"666_3","type":"trojan","server":"f10011.flyflylflyflyssssnode.sbs","port":39520,"udp":true,"password":"e7313acb-7af6-4fee-8483-eeaded7cf3a2","sni":"jp03.ckcloud.info","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"666_4","type":"trojan","server":"f10011.flyflylflyflyssssnode.sbs","port":19949,"udp":true,"password":"e7313acb-7af6-4fee-8483-eeaded7cf3a2","sni":"tw01.ckcloud.info","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"666_5","type":"trojan","server":"f10021.flyflylflyflyssssnode.sbs","port":19949,"udp":true,"password":"e7313acb-7af6-4fee-8483-eeaded7cf3a2","sni":"tw01.ckcloud.info","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"666_6","type":"trojan","server":"f10011.flyflylflyflyssssnode.sbs","port":49148,"udp":true,"password":"e7313acb-7af6-4fee-8483-eeaded7cf3a2","sni":"tw02.ckcloud.info","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"666_7","type":"trojan","server":"f10021.flyflylflyflyssssnode.sbs","port":49148,"udp":true,"password":"e7313acb-7af6-4fee-8483-eeaded7cf3a2","sni":"tw02.ckcloud.info","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"666_8","type":"trojan","server":"f10001.flyflylflyflyssssnode.sbs","port":42751,"udp":true,"password":"e7313acb-7af6-4fee-8483-eeaded7cf3a2","sni":"sk01.ckcloud.info","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"666_9","type":"trojan","server":"f10002.flyflylflyflyssssnode.sbs","port":42751,"udp":true,"password":"e7313acb-7af6-4fee-8483-eeaded7cf3a2","sni":"sk01.ckcloud.info","skip-cert-verify":true,"network":"tcp"}
-  - {"name":"666_10","type":"trojan","server":"f10021.flyflylflyflyssssnode.sbs","port":42751,"udp":true,"password":"e7313acb-7af6-4fee-8483-eeaded7cf3a2","sni":"sk01.ckcloud.info","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"defaultName_1","type":"http","server":"aus.secureconnect.me","port":489,"username":"hasanghaderi01@gmail.com","password":"786786HASAN","tls":true,"skip-cert-verify":true}
+  - {"name":"defaultName_2","type":"http","server":"aus.secureconnect.me","port":489,"username":"hasanghaderi01@gmail.com","password":"786786HASAN","tls":true,"skip-cert-verify":true}
+  - {"name":"defaultName_3","type":"http","server":"aus.secureconnect.me","port":465,"username":"hasanghaderi01@gmail.com","password":"786786HASAN","tls":true,"skip-cert-verify":true}
+  - {"name":"defaultName_4","type":"http","server":"aus.secureconnect.me","port":993,"username":"hasanghaderi01@gmail.com","password":"786786HASAN","tls":true,"skip-cert-verify":true}
+  - {"name":"defaultName_5","type":"http","server":"aus.secureconnect.me","port":282,"username":"hasanghaderi01@gmail.com","password":"786786HASAN","tls":true,"skip-cert-verify":true}
+  - {"name":"defaultName_6","type":"http","server":"aus.secureconnect.me","port":778,"username":"hasanghaderi01@gmail.com","password":"786786HASAN","tls":true,"skip-cert-verify":true}
+  - {"name":"defaultName_7","type":"http","server":"aus.secureconnect.me","port":592,"username":"hasanghaderi01@gmail.com","password":"786786HASAN","tls":true,"skip-cert-verify":true}
+  - {"name":"defaultName_8","type":"http","server":"aus.secureconnect.me","port":7070,"username":"hasanghaderi01@gmail.com","password":"786786HASAN","tls":true,"skip-cert-verify":true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - '666_1'
-      - '666_2'
-      - '666_3'
-      - '666_4'
-      - '666_5'
-      - '666_6'
-      - '666_7'
-      - '666_8'
-      - '666_9'
-      - '666_10'
+      - defaultName_1
+      - defaultName_2
+      - defaultName_3
+      - defaultName_4
+      - defaultName_5
+      - defaultName_6
+      - defaultName_7
+      - defaultName_8
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - '666_1'
-      - '666_2'
-      - '666_3'
-      - '666_4'
-      - '666_5'
-      - '666_6'
-      - '666_7'
-      - '666_8'
-      - '666_9'
-      - '666_10'
+      - defaultName_1
+      - defaultName_2
+      - defaultName_3
+      - defaultName_4
+      - defaultName_5
+      - defaultName_6
+      - defaultName_7
+      - defaultName_8
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - '666_1'
-      - '666_2'
-      - '666_3'
-      - '666_4'
-      - '666_5'
-      - '666_6'
-      - '666_7'
-      - '666_8'
-      - '666_9'
-      - '666_10'
+      - defaultName_1
+      - defaultName_2
+      - defaultName_3
+      - defaultName_4
+      - defaultName_5
+      - defaultName_6
+      - defaultName_7
+      - defaultName_8
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - '666_1'
-      - '666_2'
-      - '666_3'
-      - '666_4'
-      - '666_5'
-      - '666_6'
-      - '666_7'
-      - '666_8'
-      - '666_9'
-      - '666_10'
+      - defaultName_1
+      - defaultName_2
+      - defaultName_3
+      - defaultName_4
+      - defaultName_5
+      - defaultName_6
+      - defaultName_7
+      - defaultName_8
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - '666_1'
-      - '666_2'
-      - '666_3'
-      - '666_4'
-      - '666_5'
-      - '666_6'
-      - '666_7'
-      - '666_8'
-      - '666_9'
-      - '666_10'
+      - defaultName_1
+      - defaultName_2
+      - defaultName_3
+      - defaultName_4
+      - defaultName_5
+      - defaultName_6
+      - defaultName_7
+      - defaultName_8
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - '666_1'
-      - '666_2'
-      - '666_3'
-      - '666_4'
-      - '666_5'
-      - '666_6'
-      - '666_7'
-      - '666_8'
-      - '666_9'
-      - '666_10'
+      - defaultName_1
+      - defaultName_2
+      - defaultName_3
+      - defaultName_4
+      - defaultName_5
+      - defaultName_6
+      - defaultName_7
+      - defaultName_8
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -210,16 +196,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - '666_1'
-      - '666_2'
-      - '666_3'
-      - '666_4'
-      - '666_5'
-      - '666_6'
-      - '666_7'
-      - '666_8'
-      - '666_9'
-      - '666_10'
+      - defaultName_1
+      - defaultName_2
+      - defaultName_3
+      - defaultName_4
+      - defaultName_5
+      - defaultName_6
+      - defaultName_7
+      - defaultName_8
 
 rules:
 # 本地/局域网地址
