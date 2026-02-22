@@ -68,6 +68,10 @@
 
 - [2dust/v2rayN: Windows平台，活跃中](https://github.com/2dust/v2rayN)
 
+- [666OS/ClashMac: Mac平台，活跃中](https://github.com/666OS/ClashMac)
+
+- [mihomo-party-org/clash-party，全平台](https://github.com/mihomo-party-org/clash-party)
+
 **安卓客户端**
 
 - [FLClash: 活跃中](https://github.com/chen08209/FlClash/blob/main/README_zh_CN.md)
