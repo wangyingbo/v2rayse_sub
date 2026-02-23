@@ -1,676 +1,89 @@
-mixed-port: 7890
-allow-lan: true
-mode: rule
-log-level: info
-ipv6: false
-external-controller: 0.0.0.0:9090
-dns:
-  enable: true
-  listen: 0.0.0.0:53
-  ipv6: false
-  default-nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
-  nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
-    - 119.29.29.29
-    - 180.76.76.76
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-    - "*.lan"
-    - "*.localdomain"
-    - "*.example"
-    - "*.invalid"
-    - "*.localhost"
-    - "*.test"
-    - "*.local"
-    - "*.home.arpa"
-    - router.asus.com
-    - localhost.sec.qq.com
-    - localhost.ptlogin2.qq.com
-    - +.msftconnecttest.com
-tun:
-  enable: true
-  stack: system
-  auto-route: true
-  auto-detect-interface: true
-  dns-hijack:
-    - 114.114.114.114
-    - 180.76.76.76
-    - 119.29.29.29
-    - 223.5.5.5
-    - 8.8.8.8
-    - 8.8.4.4
-    - 1.1.1.1
-    - 1.0.0.1
-proxies:
-  - name: 🇻🇪_VE_委内瑞拉
-    type: vless
-    server: 158.160.221.132
-    port: 51102
-    uuid: d4d031ec-0ba6-486a-aa0c-dce2b7cb8933
-    servername: yandex.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
-      short-id: 887c0d72e771a934
-  - name: 🇺🇸_US_美国
-    type: vless
-    server: 172.67.160.192
-    port: 443
-    uuid: 2bcfbfba-b446-4ad5-93ad-72af9e008f61
-    network: ws
-    servername: nuclear.us.kg
-    tls: true
-    ws-opts:
-      path: /free/103.101.153.32:443
-      headers:
-        Host: nuclear.us.kg
-  - name: 🇺🇸_US_美国_1
-    type: vless
-    server: 144.31.111.182
-    port: 8443
-    uuid: 9f4ffa56-6813-430c-8cac-159cc469086a
-    servername: cloudlane.xyz
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: nGpFJVvSeovPXUN32QWht5nxg16Mwus--TLdY0JBHjY
-      short-id: 5a53bd202e47bab8
-  - name: 🇨🇳_CN_中国
-    type: vmess
-    server: a97f4a24-t9w4g0-tn57fp-5ifr.hkt.gotochinatown.net
-    port: 80
-    uuid: ecfab6c8-df5b-11ed-98a7-f23c913c8d2b
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: broadcastlv.chat.bilibili.com
-  - name: 🇺🇸_US_美国_2
-    type: vless
-    server: 141.101.123.40
-    port: 443
-    uuid: 8388434b-bbc8-4e00-b497-69a7f56f6e24
-    network: ws
-    servername: rAyAn-cOnFiG-it-1.pAriSa.dPdNs.oRg
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /ws
-      headers:
-        Host: rAyAn-cOnFiG-it-1.pAriSa.dPdNs.oRg
-  - name: 🇨🇳_CN_中国_1
-    type: vmess
-    server: c31c955e-t63340-tao3bn-ggww.hkt.gotochinatown.net
-    port: 80
-    uuid: bcc58e88-e147-11ec-b286-f23c91cfbbc9
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    servername: broadcastlv.chat.bilibili.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: c31c955e-t63340-tao3bn-ggww.hkt.gotochinatown.net
-  - name: 🇨🇳_CN_中国_2
-    type: vmess
-    server: 5545a4de-t8lts0-tasors-1tdqt.hkt.gotochinatown.net
-    port: 80
-    uuid: 167db97c-ee01-11ef-b737-f23c91cfbbc9
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    servername: 5545a4de-t8lts0-tasors-1tdqt.hkt.gotochinatown.net
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: 5545a4de-t8lts0-tasors-1tdqt.hkt.gotochinatown.net
-  - name: 🇺🇸_US_美国_3
-    type: vless
-    server: 173.245.59.121
-    port: 443
-    uuid: 979b6822-d65a-400d-89f8-30391903ac20
-    network: ws
-    servername: rAyAn-cOnFiG-uk-1.pAriSa.dPdNs.oRg
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /ws
-      headers:
-        Host: rAyAn-cOnFiG-uk-1.pAriSa.dPdNs.oRg
-  - name: 🇧🇷_BR_巴西->🇺🇸_US_美国
-    type: vless
-    server: cdn.halazzon.ir
-    port: 443
-    uuid: a75cf6f3-10fb-461b-a5a5-a934f6039cce
-    network: ws
-    servername: afrcloud4.c01.kr
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud4.c01.kr
-  - name: 🇨🇳_CN_中国_3
-    type: vmess
-    server: 92c73b3e-t9w4g0-thd0h1-1rz5s.hkt.gotochinatown.net
-    port: 80
-    uuid: 40e084d6-0316-11f0-90e2-f23c913c8d2b
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: broadcastlv.chat.bilibili.com
-  - name: 🇷🇺_RU_俄罗斯
-    type: vless
-    server: russia7.yourbot.me
-    port: 443
-    uuid: 15d5ef21-f4cd-4812-bb30-f998051c5dc1
-    servername: ftp.debian.org
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: 6EHTqOektSiQ8OMDU-5I1RWpFWw22N_N1aJCJdymXCA
-      short-id: 199939d7
-  - name: 🇷🇺_RU_俄罗斯->🇵🇱_PL_波兰
-    type: vless
-    server: 83.166.238.183
-    port: 8443
-    uuid: d4d031ec-0ba6-486a-aa0c-dce2b7cb8933
-    servername: m.vk.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc
-      short-id: 887c0d72e771a934
-  - name: 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
-    type: vless
-    server: 89.169.162.214
-    port: 8443
-    uuid: 2ad6bd90-51fd-41d2-985b-b7aab5cd77c8
-    servername: yandex.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04
-      short-id: 205748bc0f24a747
-  - name: 未知
-    type: ss
-    server: 103.186.155.127
-    port: 38388
-    cipher: aes-256-cfb
-    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  - name: 🇺🇸_US_美国_4
-    type: ss
-    server: admin.c2.havij.co
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: kaQH3hGdcP80XEDI
-  - name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
-    type: vless
-    server: cloud2.turkserver.ir
-    port: 2096
-    uuid: 77cb6e9e-f83f-40e5-b4da-90e25d75123e
-    network: ws
-    servername: javani-nol.ip-venzo.com.
-    tls: true
-    ws-opts:
-      path: /
-      headers:
-        Host: javani-nol.ip-venzo.com.
-  - name: 🇧🇷_BR_巴西->🇩🇪_DE_德国
-    type: vless
-    server: my.montago-shop.ir
-    port: 443
-    uuid: 929c6e27-4c24-4775-bc51-0e6117dabd4b
-    network: ws
-    servername: mx.mahoshid.ir
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: mx.mahoshid.ir
-  - name: 🇷🇺_RU_俄罗斯_1
-    type: vless
-    server: 0ru84.tcpdoor.net
-    port: 443
-    uuid: 40ecece1-edd9-4543-99c7-529ee594135d
-    servername: 0ru84.tcpdoor.net
-    tls: true
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: RHUQAGJ_MYNKsZt2XO_DATEm1cQh0Rdpz83DTCGSKl0
-      short-id: 740d6f2e
-  - name: 🇨🇳_CN_中国_4
-    type: vmess
-    server: 51f142c0-t9w4g0-tart0c-g3b3.hkt.gotochinatown.net
-    port: 80
-    uuid: 9ad05870-d8c5-11ef-9f1c-f23c913c8d2b
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: broadcastlv.chat.bilibili.com
-  - name: 🇺🇸_US_美国->🇫🇷_FR_法国
-    type: vless
-    server: 104.24.69.114
-    port: 443
-    uuid: 85462399-8624-4e5c-bbb0-f95d84ca8256
-    network: ws
-    servername: rAyAn-cOnFiG-fr-1.pAriSa.dPdNs.oRg
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /ws
-      headers:
-        Host: rAyAn-cOnFiG-fr-1.pAriSa.dPdNs.oRg
-  - name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: vless
-    server: nx.cloud1.hosting-ip.zulagaming.icu
-    port: 2052
-    uuid: 1f00970a-14c1-40d0-9c06-43f513975be1
-    network: ws
-    tls: false
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: rizai.blogasak.fun.zulagaming.icu.blog.zulagaming.icu
-  - name: 🇺🇸_US_美国->🇫🇮_FI_芬兰
-    type: vless
-    server: FASTLY.COM
-    port: 80
-    uuid: c805b05e-339d-40e0-8787-432d97a27345
-    network: ws
-    tls: false
-    ws-opts:
-      path: /
-      headers:
-        Host: mihan-germar2.global.ssl.fastly.net
-  - name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-    type: vless
-    server: rus-0001-xr.packet-drop-society.net
-    port: 443
-    uuid: ba77276e-9939-4c6c-a73e-90e02b6faf13
-    servername: hls-svod.itunes.apple.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: llaiqC-oIhL_bjc236FPq26LSn7IVhIa4cIC6OVytws
-      short-id: 8453e5fd9af927
-  - name: 🇬🇧_GB_英国
-    type: vless
-    server: 5.188.142.230
-    port: 8081
-    uuid: 148fcfad-46d5-40c1-8045-52c4f626fc8a
-    servername: eh.vk.com
-    tls: true
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: EJKcPSl0dv7mtU26gg6tUmKPw_aDvO2AHraRgNn6B14
-      short-id: 425ba80cd1a821a8
-  - name: 🇨🇳_CN_中国_5
-    type: vmess
-    server: c3d192c0-t9w4g0-tb5nzx-1mqag.hkt.gotochinatown.net
-    port: 80
-    uuid: b585dac6-dc69-11ef-9f1c-f23c913c8d2b
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: broadcastlv.chat.bilibili.com
-  - name: 🇩🇪_DE_德国
-    type: vless
-    server: secdn17.suio.me
-    port: 443
-    uuid: a7a9f670-44c0-45a9-8047-69db0203c142
-    servername: secdn17.suio.me
-    tls: true
-  - name: 🇺🇸_US_美国_5
-    type: vless
-    server: 190.93.245.102
-    port: 443
-    uuid: f521fa2c-835e-43e7-b4dc-a1fd6f2ed1dd
-    network: ws
-    servername: rAyAn-cOnFiG-tr-1.pAriSa.dPdNs.oRg
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /ws
-      headers:
-        Host: rAyAn-cOnFiG-tr-1.pAriSa.dPdNs.oRg
-  - name: 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_1
-    type: vless
-    server: 217.16.25.173
-    port: 443
-    uuid: 0bdf406a-84a5-46a0-baf8-c1d85ad30d6b
-    servername: eh.vk.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: mhS5tgy6bzzFw_sOpdAGuKVS5MF1e0FjzimA92KnPUE
-  - name: 🇨🇳_CN_中国_6
-    type: vmess
-    server: 967d835d-t9w4g0-tysu9z-1nq4g.hkt.gotochinatown.net
-    port: 80
-    uuid: 80aa5178-f936-11ed-8ce6-f23c91369f2d
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: broadcastlv.chat.bilibili.com
-  - name: 🇨🇳_CN_中国_7
-    type: vmess
-    server: dd1b8960-t70f40-t7fz1r-8rja.hkt.gotochinatown.net
-    port: 80
-    uuid: d18bcaf4-1323-11ec-a0fc-f23c913c8d2b
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    servername: broadcastlv.chat.bilibili.com
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: dd1b8960-t70f40-t7fz1r-8rja.hkt.gotochinatown.net
-proxy-groups:
-  - name: 🚀 节点选择
-    type: select
-    proxies:
-      - ♻️ 自动选择
-      - DIRECT
-      - 🇻🇪_VE_委内瑞拉
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
-      - 🇺🇸_US_美国_3
-      - 🇧🇷_BR_巴西->🇺🇸_US_美国
-      - 🇨🇳_CN_中国_3
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯->🇵🇱_PL_波兰
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
-      - 未知
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
-      - 🇧🇷_BR_巴西->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇨🇳_CN_中国_4
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇮_FI_芬兰
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_5
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国_5
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国_6
-      - 🇨🇳_CN_中国_7
-  - name: ♻️ 自动选择
-    type: url-test
-    proxies:
-      - 🇻🇪_VE_委内瑞拉
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
-      - 🇺🇸_US_美国_3
-      - 🇧🇷_BR_巴西->🇺🇸_US_美国
-      - 🇨🇳_CN_中国_3
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯->🇵🇱_PL_波兰
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
-      - 未知
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
-      - 🇧🇷_BR_巴西->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇨🇳_CN_中国_4
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇮_FI_芬兰
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_5
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国_5
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国_6
-      - 🇨🇳_CN_中国_7
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-  - name: 🌍 国外媒体
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - ♻️ 自动选择
-      - 🎯 全球直连
-      - 🇻🇪_VE_委内瑞拉
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
-      - 🇺🇸_US_美国_3
-      - 🇧🇷_BR_巴西->🇺🇸_US_美国
-      - 🇨🇳_CN_中国_3
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯->🇵🇱_PL_波兰
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
-      - 未知
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
-      - 🇧🇷_BR_巴西->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇨🇳_CN_中国_4
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇮_FI_芬兰
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_5
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国_5
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国_6
-      - 🇨🇳_CN_中国_7
-  - name: 📲 电报信息
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - 🇻🇪_VE_委内瑞拉
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
-      - 🇺🇸_US_美国_3
-      - 🇧🇷_BR_巴西->🇺🇸_US_美国
-      - 🇨🇳_CN_中国_3
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯->🇵🇱_PL_波兰
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
-      - 未知
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
-      - 🇧🇷_BR_巴西->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇨🇳_CN_中国_4
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇮_FI_芬兰
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_5
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国_5
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国_6
-      - 🇨🇳_CN_中国_7
-  - name: Ⓜ️ 微软服务
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - 🚀 节点选择
-      - 🇻🇪_VE_委内瑞拉
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
-      - 🇺🇸_US_美国_3
-      - 🇧🇷_BR_巴西->🇺🇸_US_美国
-      - 🇨🇳_CN_中国_3
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯->🇵🇱_PL_波兰
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
-      - 未知
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
-      - 🇧🇷_BR_巴西->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇨🇳_CN_中国_4
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇮_FI_芬兰
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_5
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国_5
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国_6
-      - 🇨🇳_CN_中国_7
-  - name: 🍎 苹果服务
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - 🇻🇪_VE_委内瑞拉
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
-      - 🇺🇸_US_美国_3
-      - 🇧🇷_BR_巴西->🇺🇸_US_美国
-      - 🇨🇳_CN_中国_3
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯->🇵🇱_PL_波兰
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
-      - 未知
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
-      - 🇧🇷_BR_巴西->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇨🇳_CN_中国_4
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇮_FI_芬兰
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_5
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国_5
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国_6
-      - 🇨🇳_CN_中国_7
-  - name: 🎯 全球直连
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 节点选择
-      - ♻️ 自动选择
-  - name: 🛑 全球拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🍃 应用净化
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🚀 节点选择
-      - 🎯 全球直连
-      - ♻️ 自动选择
-      - 🇻🇪_VE_委内瑞拉
-      - 🇺🇸_US_美国
-      - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国
-      - 🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国_1
-      - 🇨🇳_CN_中国_2
-      - 🇺🇸_US_美国_3
-      - 🇧🇷_BR_巴西->🇺🇸_US_美国
-      - 🇨🇳_CN_中国_3
-      - 🇷🇺_RU_俄罗斯
-      - 🇷🇺_RU_俄罗斯->🇵🇱_PL_波兰
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
-      - 未知
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
-      - 🇧🇷_BR_巴西->🇩🇪_DE_德国
-      - 🇷🇺_RU_俄罗斯_1
-      - 🇨🇳_CN_中国_4
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国->🇫🇮_FI_芬兰
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_5
-      - 🇩🇪_DE_德国
-      - 🇺🇸_US_美国_5
-      - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国_6
-      - 🇨🇳_CN_中国_7
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'">
+    <title>Page not found &middot; GitHub Pages</title>
+    <style type="text/css" media="screen">
+      body {
+        background-color: #f1f1f1;
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+
+      .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
+
+      a { color: #4183c4; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      h1 { width: 800px; position:relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px 0 50px 0; text-shadow: 0 1px 0 #fff; }
+      p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; }
+
+      ul { list-style: none; margin: 25px 0; padding: 0; }
+      li { display: table-cell; font-weight: bold; width: 1%; }
+
+      .logo { display: inline-block; margin-top: 35px; }
+      .logo-img-2x { display: none; }
+      @media
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (   min--moz-device-pixel-ratio: 2),
+      only screen and (     -o-min-device-pixel-ratio: 2/1),
+      only screen and (        min-device-pixel-ratio: 2),
+      only screen and (                min-resolution: 192dpi),
+      only screen and (                min-resolution: 2dppx) {
+        .logo-img-1x { display: none; }
+        .logo-img-2x { display: inline-block; }
+      }
+
+      #suggestions {
+        margin-top: 35px;
+        color: #ccc;
+      }
+      #suggestions a {
+        color: #666666;
+        font-weight: 200;
+        font-size: 14px;
+        margin: 0 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <h1>404</h1>
+      <p><strong>File not found</strong></p>
+
+      <p>
+        The site configured at this address does not
+        contain the requested file.
+      </p>
+
+      <p>
+        If this is your site, make sure that the filename case matches the URL
+        as well as any file permissions.<br>
+        For root URLs (like <code>http://example.com/</code>) you must provide an
+        <code>index.html</code> file.
+      </p>
+
+      <p>
+        <a href="https://help.github.com/pages/">Read the full documentation</a>
+        for more information about using <strong>GitHub Pages</strong>.
+      </p>
+
+      <div id="suggestions">
+        <a href="https://githubstatus.com">GitHub Status</a> &mdash;
+        <a href="https://twitter.com/githubstatus">@githubstatus</a>
+      </div>
+
+      <a href="/" class="logo logo-img-1x">
+        <img width="32" height="32" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFMTZCRDY3REIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFMTZCRDY3RUIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdCQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjdDQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+SM9MCAAAA+5JREFUeNrEV11Ik1EY3s4+ddOp29Q5b0opCgKFsoKoi5Kg6CIhuwi6zLJLoYLopq4qsKKgi4i6CYIoU/q5iDAKs6syoS76IRWtyJ+p7cdt7sf1PGOD+e0c3dygAx/67ZzzPM95/877GYdHRg3ZjMXFxepQKNS6sLCwJxqNNuFpiMfjVs4ZjUa/pmmjeD6VlJS8NpvNT4QQ7mxwjSsJiEQim/1+/9lgMHgIr5ohuxG1WCw9Vqv1clFR0dCqBODElV6v90ogEDjGdYbVjXhpaendioqK07CIR7ZAqE49PT09BPL2PMgTByQGsYiZlQD4uMXtdr+JxWINhgINYhGT2MsKgMrm2dnZXgRXhaHAg5jEJodUAHxux4LudHJE9RdEdA+i3Juz7bGHe4mhE9FNrgwBCLirMFV9Okh5eflFh8PR5nK5nDabrR2BNJlKO0T35+Li4n4+/J+/JQCxhmu5h3uJoXNHPbmWZAHMshWB8l5/ipqammaAf0zPDDx1ONV3vurdidqwAQL+pEc8sLcAe1CCvQ3YHxIW8Pl85xSWNC1hADDIv0rIE/o4J0k3kww4xSlwIhcq3EFFOm7KN/hUGOQkt0CFa5WpNJlMvxBEz/IVQAxg/ZRZl9wiHA63yDYieM7DnLP5CiAGsC7I5sgtYKJGWe2A8seFqgFJrJjEPY1Cn3pJ8/9W1e5VWsFDTEmFrBcoDhZJEQkXuhICMyKpjhahqN21hRYATKfUOlDmkygrR4o4C0VOLGJKrOITKB4jijzdXygBKixyC5TDQdnk/Pz8qRw6oOWGlsTKGOQW6OH6FBWsyePxdOXLTgxiyebILZCjz+GLgMIKnXNzc49YMlcRdHXcSwxFVgTInQhC9G33UhNoJLuqq6t345p9y3eUy8OTk5PjAHuI9uo4b07FBaOhsu0A4Unc+T1TU1Nj3KsSSE5yJ65jqF2DDd8QqWYmAZrIM2VlZTdnZmb6AbpdV9V6ec9znf5Q7HjYumdRE0JOp3MjitO4SFa+cZz8Umqe3TCbSLvdfkR/kWDdNQl5InuTcysOcpFT35ZrbBxx4p3JAHlZVVW1D/634VRt+FvLBgK/v5LV9WS+10xMTEwtRw7XvqOL+e2Q8V3AYIOIAXQ26/heWVnZCVfcyKHg2CBgTpmPmjYM8l24GyaUHyaIh7XwfR9ErE8qHoDfn2LTNAVC0HX6MFcBIP8Bi+6F6cdW/DICkANRfx99fEYFQ7Nph5i/uQiA214gno7K+guhaiKg9gC62+M8eR7XsBsYJ4ilam60Fb7r7uAj8wFyuwM1oIOWgfmDy6RXEEQzJMPe23DXrVS7rtyD3Df8z/FPgAEAzWU5Ku59ZAUAAAAASUVORK5CYII=">
+      </a>
+
+      <a href="/" class="logo logo-img-2x">
+        <img width="32" height="32" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQUM1QkUxRUI0MUMxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQUM1QkUxRkI0MUMxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdGQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjgwQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hfPRaQAAB6lJREFUeNrsW2mM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">
+      </a>
+    </div>
+  </body>
+</html>
