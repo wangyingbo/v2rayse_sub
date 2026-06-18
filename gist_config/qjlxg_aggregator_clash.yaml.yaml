@@ -1,1061 +1,1566 @@
+# owner=qjlxg
+# Total: 127 | Updated: 2026-06-18 06:29:56
 port: 7890
 socks-port: 7891
-allow-lan: true
+allow-lan: false
 mode: rule
 log-level: info
+sniffer:
+  enable: false
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  - 114.114.114.114
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  respect-rules: true
+  proxy-server-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  - 114.114.114.114
+  nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  - 114.114.114.114
+  nameserver-policy:
+    geosite:category-ads-all: rcode://success
+  fallback:
+  - https://1.1.1.1/dns-query
+  - https://8.8.8.8/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    geosite:
+    - gfw
+    ipcidr:
+    - 240.0.0.0/4
+    domain:
+    - +.google.com
+    - +.facebook.com
+    - +.youtube.com
 proxies:
-- name: 🇯🇵日本_e8782
-  server: jplic.osaip.net
-  port: 25055
+- name: 🇷🇺俄罗斯联邦_7815f_ESET_NOD32_Symantec_Endpoint_McAfee Security_eb
+  server: 4jgnuhop2a3.ru.mediavitrina.com
+  port: 30443
   udp: true
-  type: trojan
-  password: aeabae7e-a055-4505-85a6-b4cd4982b76a
-  sni: ''
-- name: 🇯🇵日本_875ef
-  server: jplic.osaip.net
-  port: 25055
+  type: hysteria2
+  password: 257e4c03-3e65-48da-b7a4-b08ddd996758
+  sni: content.ru.mediavitrina.com
+  alpn:
+  - h3
+- name: 🇱🇹立陶宛_7df2c_ESET_NOD32_Symantec_Endpoint_McAfee Security_16
+  server: fh2984jgnuhop23.lt.mediavitrina.com
+  port: 40443
   udp: true
-  type: trojan
-  password: aeabae7e-a055-4505-85a6-b4cd4982b76a
-  sni: ''
-- name: 🇯🇵日本_19f03
-  server: jplic.osaip.net
-  port: 25055
+  type: hysteria2
+  password: 257e4c03-3e65-48da-b7a4-b08ddd996758
+  sni: player.lt.mediavitrina.com
+  alpn:
+  - h3
+- name: 🇩🇪德国_da9fc_ESET_NOD32_Symantec_Endpoint_McAfee Security_49
+  server: mg34-mdd-27asdh.de.deepl-cdn.com
+  port: 30443
   udp: true
-  type: trojan
-  password: aeabae7e-a055-4505-85a6-b4cd4982b76a
-  sni: ''
-- name: 🇯🇵日本_e77cd
-  server: jplic.osaip.net
-  port: 25055
+  type: hysteria2
+  password: 257e4c03-3e65-48da-b7a4-b08ddd996758
+  sni: de.deepl-cdn.com
+  alpn:
+  - h3
+- name: 🇸🇪瑞典_871f8_ESET_NOD32_Symantec_Endpoint_McAfee Security_f3
+  server: mmk2-oz2.se.deepl-cdn.com
+  port: 40443
   udp: true
-  type: trojan
-  password: aeabae7e-a055-4505-85a6-b4cd4982b76a
-  sni: ''
-- name: 🇺🇸美国_56ae5
-  server: usrna.osaip.net
-  port: 25055
+  type: hysteria2
+  password: 257e4c03-3e65-48da-b7a4-b08ddd996758
+  sni: se.deepl-cdn.com
+  alpn:
+  - h3
+- name: 🇭🇰香港_891a8_ESET_NOD32_Symantec_Endpoint_McAfee Security_8d
+  server: akhk1.naicn.top
+  port: 8443
   udp: true
-  type: trojan
-  password: aeabae7e-a055-4505-85a6-b4cd4982b76a
+  type: hysteria2
+  password: 67506c41-8ee6-436c-858a-773b006cd4d9
+  sni: akhk1.naicn.top
+  alpn:
+  - h3
+- name: 🇺🇸美国_73a41_ESET_NOD32_Symantec_Endpoint_McAfee Security_ce
+  server: tc1.naicn.top
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 67506c41-8ee6-436c-858a-773b006cd4d9
+  sni: tc1.naicn.top
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_fc90a_ESET_NOD32_Symantec_Endpoint_McAfee Security_1f
+  server: 129.212.225.178
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: 129.212.225.178
+  alpn:
+  - h3
+- name: 🇺🇸美国_6fe2c_ESET_NOD32_Symantec_Endpoint_McAfee Security_07
+  server: 137.184.37.158
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: 137.184.37.158
+  alpn:
+  - h3
+- name: 🇯🇵日本_c3a5c_ESET_NOD32_Symantec_Endpoint_McAfee Security_31
+  server: 139.162.89.4
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: 139.162.89.4
+  alpn:
+  - h3
+- name: 🇯🇵日本_b76c9_ESET_NOD32_Symantec_Endpoint_McAfee Security_13
+  server: 1jp001.459292.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: 1jp001.459292.xyz
+  alpn:
+  - h3
+- name: 🇯🇵日本_b6ef7_ESET_NOD32_Symantec_Endpoint_McAfee Security_02
+  server: 1jp003.459292.xyz
+  port: 8081
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: 1jp003.459292.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_19154_ESET_NOD32_Symantec_Endpoint_McAfee Security_e5
+  server: 1sg001.459292.xyz
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: 1sg001.459292.xyz
+  alpn:
+  - h3
+- name: 🇺🇸美国_20cc1_ESET_NOD32_Symantec_Endpoint_McAfee Security_c3
+  server: hkmax003.459292.xyz
+  port: 20000
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: hkmax003.459292.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_22106_ESET_NOD32_Symantec_Endpoint_McAfee Security_4b
+  server: hkmax02.459292.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: hkmax02.459292.xyz
+  alpn:
+  - h3
+- name: 🇺🇸美国_30a64_ESET_NOD32_Symantec_Endpoint_McAfee Security_dd
+  server: hyfnus02.459921.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: hyfnus02.459921.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_be9b2_ESET_NOD32_Symantec_Endpoint_McAfee Security_e1
+  server: sg03.459292.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: sg03.459292.xyz
+  alpn:
+  - h3
+- name: 🇺🇸美国_cbfc2_ESET_NOD32_Symantec_Endpoint_McAfee Security_5a
+  server: sg04.459292.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: sg04.459292.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_ed1a3_ESET_NOD32_Symantec_Endpoint_McAfee Security_de
+  server: sg05.459921.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: sg05.459921.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_98791_ESET_NOD32_Symantec_Endpoint_McAfee Security_1b
+  server: sg06.459921.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: sg06.459921.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_fd8dc_ESET_NOD32_Symantec_Endpoint_McAfee Security_79
+  server: sg07.459921.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: sg07.459921.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_a879b_ESET_NOD32_Symantec_Endpoint_McAfee Security_bd
+  server: sg10.459921.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: sg10.459921.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_b36fd_ESET_NOD32_Symantec_Endpoint_McAfee Security_4d
+  server: sg11.459921.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: sg11.459921.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_fb14c_ESET_NOD32_Symantec_Endpoint_McAfee Security_85
+  server: sg12.459921.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: sg12.459921.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_bbf3c_ESET_NOD32_Symantec_Endpoint_McAfee Security_4e
+  server: sg15.459921.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: sg15.459921.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_524e3_ESET_NOD32_Symantec_Endpoint_McAfee Security_4f
+  server: sg16.459921.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: sg16.459921.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_9ada7_ESET_NOD32_Symantec_Endpoint_McAfee Security_29
+  server: sg19.459921.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: sg19.459921.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_87aa6_ESET_NOD32_Symantec_Endpoint_McAfee Security_e5
+  server: sg25.459921.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: sg25.459921.xyz
+  alpn:
+  - h3
+- name: 🇹🇼台湾_332f7_ESET_NOD32_Symantec_Endpoint_McAfee Security_a8
+  server: tw40.459921.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: tw40.459921.xyz
+  alpn:
+  - h3
+- name: 🇺🇸美国_e6bea_ESET_NOD32_Symantec_Endpoint_McAfee Security_b5
+  server: us02.459292.xyz
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: us02.459292.xyz
+  alpn:
+  - h3
+- name: 🇺🇸美国_74b8e_ESET_NOD32_Symantec_Endpoint_McAfee Security_d4
+  server: us03.459292.xyz
+  port: 20000
+  udp: true
+  type: hysteria2
+  password: 67944fbd-dfe3-4bbd-b210-25488237a283
+  sni: us03.459292.xyz
+  alpn:
+  - h3
+- name: 🇷🇺俄罗斯联邦_fafac_ESET_NOD32_Symantec_Endpoint_McAfee Security_fb
+  server: 103.88.241.133
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: 71b0bd15-a03a-481e-a52d-74042c8db157
+  sni: slopllex.app
+  alpn:
+  - h3
+- name: 🇯🇵日本_3e472_ESET_NOD32_Symantec_Endpoint_McAfee Security_45
+  server: 45.95.212.165
+  port: 30001
+  udp: true
+  type: hysteria2
+  password: 75dbe68b-a565-4325-b235-662319970355
+  sni: jp-tyo-hy2.142857235.xyz
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_f5944_ESET_NOD32_Symantec_Endpoint_McAfee Security_16
+  server: sg1.dexlos.com
+  port: 20091
+  udp: true
+  type: hysteria2
+  password: 76395644-0B8A-47B4-83E5-5EBDE51E7096
+  sni: sg1.dexlos.com
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_4b173_ESET_NOD32_Symantec_Endpoint_McAfee Security_f0
+  server: sg2.dexlos.com
+  port: 20304
+  udp: true
+  type: hysteria2
+  password: 76395644-0B8A-47B4-83E5-5EBDE51E7096
+  sni: sg2.dexlos.com
+  alpn:
+  - h3
+- name: 🇺🇸美国_44d2d_ESET_NOD32_Symantec_Endpoint_McAfee Security_f2
+  server: us1.dexlos.com
+  port: 20126
+  udp: true
+  type: hysteria2
+  password: 76395644-0B8A-47B4-83E5-5EBDE51E7096
+  sni: us1.dexlos.com
+  alpn:
+  - h3
+- name: 🇺🇸美国_dd41f_ESET_NOD32_Symantec_Endpoint_McAfee Security_c7
+  server: us2.dexlos.com
+  port: 20268
+  udp: true
+  type: hysteria2
+  password: 76395644-0B8A-47B4-83E5-5EBDE51E7096
+  sni: us2.dexlos.com
+  alpn:
+  - h3
+- name: 🇺🇸美国_60269_ESET_NOD32_Symantec_Endpoint_McAfee Security_de
+  server: wuhantravel.duckdns.org
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: MySecurePassword123
+  sni: wuhantravel.duckdns.org
+  alpn:
+  - h3
+- name: 🇰🇷韩国_0bb88_ESET_NOD32_Symantec_Endpoint_McAfee Security_4c
+  server: 140.245.74.46
+  port: 55021
+  udp: true
+  type: hysteria2
+  password: d5m-5bGOsVbFgRlxsEyO3pCF
+  sni: 140.245.74.46.sslip.io
+  alpn:
+  - h3
+- name: 🇨🇳中国_84f6a_ESET_NOD32_Symantec_Endpoint_McAfee Security_0b
+  server: 8.148.4.25
+  port: 55021
+  udp: true
+  type: hysteria2
+  password: d5m-5bGOsVbFgRlxsEyO3pCF
+  sni: 140.245.74.46.sslip.io
+  alpn:
+  - h3
+- name: 🇸🇬新加坡_ac0a3_ESET_NOD32_Symantec_Endpoint_McAfee Security_16
+  server: vpn-sg-003.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  sni: vpn-sg-003.fastervpn.world
+  alpn:
+  - h3
+- name: 🇯🇵日本_580ff_ESET_NOD32_Symantec_Endpoint_McAfee Security_8a
+  server: haigc.shop
+  port: 443
+  udp: true
+  type: hysteria2
+  password: xtoRpl9CCisiSwbIawiZ
+  sni: haigc.shop
+  alpn:
+  - h3
+- name: 🇺🇸美国_1ca3d_ESET_NOD32_Symantec_Endpoint_McAfee Security_54
+  server: 144.225.187.179
+  port: 35687
+  udp: true
+  type: hysteria2
+  password: 058cf698-7442-4b17-a4ac-102385c794a0
   sni: ''
-- name: 🇭🇰香港_abb1f
-  server: hkzoa.osaip.net
+  alpn:
+  - h3
+- name: 🇹🇼台湾_5e4a3_ESET_NOD32_Symantec_Endpoint_McAfee Security_86
+  server: namrcg001598ahf.cybervena.com
+  port: 50099
+  udp: true
+  type: ss
+  cipher: auto
+  password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YWI4NWFmZi0wOGZiLTRmMTMtYmY1Yy0xYTA4MGEwYzkwZjk=
+- name: 🇭🇰香港_19bf3_ESET_NOD32_Symantec_Endpoint_McAfee Security_2a
+  server: 154.219.122.196
+  port: 5656
+  udp: true
+  type: ss
+  cipher: auto
+  password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ODVjYmY0My1hNGQ5LTRmYjktYmU0MS00M2FlYzcyMmNkYjk=
+- name: 🇯🇵日本_c7849_ESET_NOD32_Symantec_Endpoint_McAfee Security_ab
+  server: 64.83.33.88
+  port: 8888
+  udp: true
+  type: ss
+  cipher: auto
+  password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ODVjYmY0My1hNGQ5LTRmYjktYmU0MS00M2FlYzcyMmNkYjk=
+- name: 🇭🇰香港_fc5a6_ESET_NOD32_Symantec_Endpoint_McAfee Security_20
+  server: 45.149.92.71
   port: 443
   udp: true
   type: trojan
-  password: aeabae7e-a055-4505-85a6-b4cd4982b76a
+  password: 1ba48a0e-af2e-45fb-9e15-2b2d4134657c
+  sni: usla.mjt000.com
+- name: 🇺🇸美国_1f4b2_ESET_NOD32_Symantec_Endpoint_McAfee Security_25
+  server: nextstepcareer.online
+  port: 443
+  udp: true
+  type: trojan
+  password: 4732adfa16c6450bbef87264e41332db
   sni: ''
-- name: 🇺🇸美国_075c4
-  server: 144.31.207.111
+- name: 🇯🇵日本_148bb_ESET_NOD32_Symantec_Endpoint_McAfee Security_5e
+  server: 162.43.74.189
+  port: 443
+  udp: true
+  type: trojan
+  password: 543b443b-395e-494e-bdfe-77a9128f3e7b
+  sni: ybb.softbank.jp
+- name: 🇯🇵日本_29827_ESET_NOD32_Symantec_Endpoint_McAfee Security_99
+  server: 162.43.74.190
+  port: 443
+  udp: true
+  type: trojan
+  password: 543b443b-395e-494e-bdfe-77a9128f3e7b
+  sni: ybb.softbank.jp
+- name: 🇯🇵日本_f10b4_ESET_NOD32_Symantec_Endpoint_McAfee Security_b0
+  server: 162.43.75.235
+  port: 443
+  udp: true
+  type: trojan
+  password: 543b443b-395e-494e-bdfe-77a9128f3e7b
+  sni: ybb.softbank.jp
+- name: 🇭🇰香港_38395_ESET_NOD32_Symantec_Endpoint_McAfee Security_d8
+  server: 103.235.46.40
+  port: 443
+  udp: true
+  type: trojan
+  password: 72d8e820-7926-4ce3-a87c-b6969f425c79
+  sni: www.baidu.com
+- name: 🇺🇸美国_41bc6_ESET_NOD32_Symantec_Endpoint_McAfee Security_cc
+  server: 23.149.28.8.sslip.io
+  port: 8443
+  udp: true
+  type: trojan
+  password: 78c6cf8f30399bad3f63f15a9600a8ef
+  sni: ''
+- name: 🇫🇷法国_ef81f_ESET_NOD32_Symantec_Endpoint_McAfee Security_2e
+  server: 141.11.203.191
+  port: 8443
+  udp: true
+  type: trojan
+  password: Aimer
+  sni: epgb.aimercc.dpdns.org
+- name: 🇦🇲亚美尼亚_6b2fd_ESET_NOD32_Symantec_Endpoint_McAfee Security_4c
+  server: 188.164.159.43
+  port: 2083
+  udp: true
+  type: trojan
+  password: Aimer
+  sni: epgb.aimercc.dpdns.org
+- name: 🇸🇬新加坡_1de87_ESET_NOD32_Symantec_Endpoint_McAfee Security_12
+  server: 27.50.49.136
+  port: 443
+  udp: true
+  type: trojan
+  password: Aimer
+  sni: epgb.aimercc.dpdns.org
+- name: 🇧🇪比利时_0e11b_ESET_NOD32_Symantec_Endpoint_McAfee Security_eb
+  server: hl-freedom-1.undef.network
+  port: 443
+  udp: true
+  type: trojan
+  password: JaFKnqNcvnBT63t3rquidGsln
+  sni: HL-FREEDOM-1.UNDEF.NETWORK
+- name: 🇧🇪比利时_e0fd5_ESET_NOD32_Symantec_Endpoint_McAfee Security_79
+  server: hl-freedom-2.undef.network
+  port: 443
+  udp: true
+  type: trojan
+  password: Tn2Bf0iRwJkJQgDk6gX6x81RB
+  sni: hl-freedom-2.undef.network
+- name: 🇰🇷韩国_0e6ae_ESET_NOD32_Symantec_Endpoint_McAfee Security_bd
+  server: picked-hippo.rooster465.autos
+  port: 443
+  udp: true
+  type: trojan
+  password: WF42809561
+  sni: ''
+- name: 🇺🇸美国_15221_ESET_NOD32_Symantec_Endpoint_McAfee Security_bb
+  server: 159.112.235.48
+  port: 2083
+  udp: true
+  type: trojan
+  password: bpb-trojan
+  sni: 403b3611-99bC-43B7-88d7-26ed5d0825A9-3.PAGes.dEv
+- name: 🇷🇺俄罗斯联邦_84982_ESET_NOD32_Symantec_Endpoint_McAfee Security_c3
+  server: 194.53.53.11
+  port: 2096
+  udp: true
+  type: trojan
+  password: d6b8011a-c725-435a-9fec-bf6d3530392c
+  sni: vle.amclubssss.dpdns.org
+- name: 🇺🇸美国_0a995_ESET_NOD32_Symantec_Endpoint_McAfee Security_af
+  server: 172.82.67.154
+  port: 443
+  udp: true
+  type: trojan
+  password: dd39bb7d-2bea-41b5-be20-fa228a45f639
+  sni: llllllllo.890404.indevs.in
+- name: 🏳️未知_6d6c7_ESET_NOD32_Symantec_Endpoint_McAfee Security_84
+  server: 172.67.220.32
+  port: 443
+  udp: true
+  type: trojan
+  password: ffcf7ec1-3e09-4821-b3d9-b426a107b73b
+  sni: eEEfGty6.999836.XYz
+- name: 🇺🇸美国_ccb16_ESET_NOD32_Symantec_Endpoint_McAfee Security_d2
+  server: 144.225.187.179
+  port: 28176
+  udp: true
+- name: 🇨🇳中国_137f4_ESET_NOD32_Symantec_Endpoint_McAfee Security_99
+  server: 8.148.4.25
+  port: 443
+  udp: true
+- name: 🇹🇼台湾_3a585_ESET_NOD32_Symantec_Endpoint_McAfee Security_3b
+  server: tw2.dexlos.com
+  port: 8080
+  udp: true
+- name: 🇺🇸美国_f6535_ESET_NOD32_Symantec_Endpoint_McAfee Security_08
+  server: 192.3.120.11
+  port: 60354
+  udp: true
+- name: 🇫🇷法国_4356d_ESET_NOD32_Symantec_Endpoint_McAfee Security_3b
+  server: 89.208.113.157
   port: 443
   udp: true
   type: vless
-  uuid: 2001daf3-5c56-4bef-8ea6-8dd0493c5a4c
+  uuid: 1f4c983e-382c-d2fa-b2dc-7981f02b34de
   tls: true
   flow: xtls-rprx-vision
-  servername: www.deepl.com
+  servername: parisjetaime.com
   reality-opts:
-    public-key: ZHEMPjSWslk6_qD2JNQzd5enUPz8nY9mYRRuM6NkZmU
-    short-id: 1a
-- name: 🇬🇧英国_cd7d9
-  server: 2.27.63.99
+    public-key: 2dgS9vJTywAfGZmlkuzDIIXLUR-E1A-0na8_W--ruUc
+    short-id: 5be8210215
+- name: 🇬🇧英国_18228_ESET_NOD32_Symantec_Endpoint_McAfee Security_aa
+  server: m221kk29-d4zzaq.gb.userapi.dev
+  port: 40443
+  udp: true
+  type: vless
+  uuid: 257e4c03-3e65-48da-b7a4-b08ddd996758
+  tls: true
+  flow: xtls-rprx-vision
+  servername: sun9-45.userapi.com
+  reality-opts:
+    public-key: DG904eM7xGecwV_nhjX73c-7g_fGEv8BgjbeAmTE8Bs
+    short-id: 505c94b8c65afb0a
+- name: 🇳🇱荷兰_6be45_ESET_NOD32_Symantec_Endpoint_McAfee Security_92
+  server: mbt7z5b-wzr5mx.nl.velvetvpn.xyz
+  port: 40443
+  udp: true
+  type: vless
+  uuid: 257e4c03-3e65-48da-b7a4-b08ddd996758
+  tls: true
+  flow: xtls-rprx-vision
+  servername: deepl.com
+  reality-opts:
+    public-key: wKPAR2t-xoUMbBqRHV7SLvGuR9dwrcH6bTSknyBO0T8
+    short-id: a1b2c3d4e5f6789a
+- name: 🇷🇺俄罗斯联邦_955c9_ESET_NOD32_Symantec_Endpoint_McAfee Security_4b
+  server: o65mmoj5-5qwa90.95.v-tun.com
+  port: 40443
+  udp: true
+  type: vless
+  uuid: 257e4c03-3e65-48da-b7a4-b08ddd996758
+  tls: true
+  flow: xtls-rprx-vision
+  servername: api-maps.yandex.ru
+  reality-opts:
+    public-key: DG904eM7xGecwV_nhjX73c-7g_fGEv8BgjbeAmTE8Bs
+    short-id: 505c94b8c65afb0a
+- name: 🇩🇪德国_a4100_ESET_NOD32_Symantec_Endpoint_McAfee Security_48
+  server: px1t-tab-57fzza.de.deepl-cdn.com
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 257e4c03-3e65-48da-b7a4-b08ddd996758
+  tls: true
+  flow: xtls-rprx-vision
+  servername: deepl.com
+  reality-opts:
+    public-key: DG904eM7xGecwV_nhjX73c-7g_fGEv8BgjbeAmTE8Bs
+    short-id: 505c94b8c65afb0a
+- name: 🇸🇪瑞典_5019e_ESET_NOD32_Symantec_Endpoint_McAfee Security_5a
+  server: z5xa-b1a-azar11.se.deepl-cdn.com
+  port: 40443
+  udp: true
+  type: vless
+  uuid: 257e4c03-3e65-48da-b7a4-b08ddd996758
+  tls: true
+  flow: xtls-rprx-vision
+  servername: deepl.com
+  reality-opts:
+    public-key: DG904eM7xGecwV_nhjX73c-7g_fGEv8BgjbeAmTE8Bs
+    short-id: 505c94b8c65afb0a
+- name: 🇷🇺俄罗斯联邦_253cc_ESET_NOD32_Symantec_Endpoint_McAfee Security_f6
+  server: 81.94.159.115
   port: 443
   udp: true
   type: vless
-  uuid: 76713d07-5a6b-49c2-abd8-bc450a2fa7fc
+  uuid: 2cc286c8-1ee8-4905-a8d0-2286ea0f879a
   tls: true
   flow: xtls-rprx-vision
-  servername: download.spectrum.vu
+  servername: yandex.ru
   reality-opts:
-    public-key: sXC7sPCzHG_uYfvk3GSUdYQKfHAwirOVWMhO50Y9Pn8
-    short-id: ad8c7a6ace2f
-- name: 🇭🇰香港_5b486
-  server: 103.123.162.50
-  port: 10011
+    public-key: NhHXYBmjIoSy6Kvj2k06550KGJY3GUFSzcssjFakh3U
+    short-id: 9496be7a7a97ca69
+- name: 🇷🇺俄罗斯联邦_a0286_ESET_NOD32_Symantec_Endpoint_McAfee Security_dd
+  server: 81.94.159.33
+  port: 443
   udp: true
   type: vless
-  uuid: dd68f08d-366f-478d-bed0-5e12b5451487
+  uuid: 2cc286c8-1ee8-4905-a8d0-2286ea0f879a
+  tls: true
+  flow: xtls-rprx-vision
+  servername: yandex.ru
+  reality-opts:
+    public-key: 5L6iTGyjR5bzxyYEWEX21CGt1O8_oxWrXlVrh2MCEWM
+    short-id: 9f3080452d46c819
+- name: 🇷🇺俄罗斯联邦_7f6c7_ESET_NOD32_Symantec_Endpoint_McAfee Security_22
+  server: 81.94.159.62
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2cc286c8-1ee8-4905-a8d0-2286ea0f879a
+  tls: true
+  flow: xtls-rprx-vision
+  servername: ads.x5.ru
+  reality-opts:
+    public-key: pLLmFfvnn2I1Mvo8WLLrHIKhjtSfXS1NqCveJb4v9w0
+    short-id: 9c65c0bbee7c65ee
+- name: 🇵🇱波兰_1088f_ESET_NOD32_Symantec_Endpoint_McAfee Security_8c
+  server: 81.90.17.30
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 30dab345-4de9-4b70-ad9f-8ebd5c66686f
   tls: true
   flow: xtls-rprx-vision
   servername: www.microsoft.com
   reality-opts:
-    public-key: 82bbZIdU-0s8fydncIhp9_sNDYQQH9ZY_7RVI5apXnk
-    short-id: 447f3a05ace2b748
-- name: 🇭🇰香港_8a063
-  server: 103.123.162.50
-  port: 10011
+    public-key: GRxGFwibgoUjG9OL5Dl1OLyK56yw8WaG5BdFP8ifVgQ
+    short-id: 26f7082dd0e36ca1
+- name: 🇩🇪德国_d7c43_ESET_NOD32_Symantec_Endpoint_McAfee Security_d9
+  server: pl.node.ghostsyvpn.org
+  port: 443
   udp: true
   type: vless
-  uuid: 17011a43-97e2-44b0-b0da-a2ea151ad75c
+  uuid: 38321edd-637b-4d3b-b524-edd826414a31
+  tls: true
+  flow: xtls-rprx-vision
+  servername: pl.node.ghostsyvpn.org
+  reality-opts:
+    public-key: 03MJy26A8kc5c8aMMdkY3s_CX3qiw0eTmjrc3UCBLm0
+    short-id: ''
+- name: 🇬🇧英国_70f58_ESET_NOD32_Symantec_Endpoint_McAfee Security_9c
+  server: 152.233.28.200
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_d93f7_ESET_NOD32_Symantec_Endpoint_McAfee Security_99
+  server: 185.229.191.107
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_a929c_ESET_NOD32_Symantec_Endpoint_McAfee Security_92
+  server: 185.229.191.110
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_ed42c_ESET_NOD32_Symantec_Endpoint_McAfee Security_00
+  server: 185.229.191.111
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_a797b_ESET_NOD32_Symantec_Endpoint_McAfee Security_15
+  server: 185.229.191.145
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_0454e_ESET_NOD32_Symantec_Endpoint_McAfee Security_96
+  server: 185.229.191.157
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_34a74_ESET_NOD32_Symantec_Endpoint_McAfee Security_2e
+  server: 185.229.191.169
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_b1c95_ESET_NOD32_Symantec_Endpoint_McAfee Security_4e
+  server: 185.229.191.180
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_c8184_ESET_NOD32_Symantec_Endpoint_McAfee Security_4f
+  server: 185.229.191.184
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_53cd6_ESET_NOD32_Symantec_Endpoint_McAfee Security_54
+  server: 185.229.191.185
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_ce917_ESET_NOD32_Symantec_Endpoint_McAfee Security_00
+  server: 185.229.191.186
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_aac12_ESET_NOD32_Symantec_Endpoint_McAfee Security_76
+  server: 185.229.191.187
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_a6bed_ESET_NOD32_Symantec_Endpoint_McAfee Security_a8
+  server: 185.229.191.42
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_f561c_ESET_NOD32_Symantec_Endpoint_McAfee Security_63
+  server: 185.229.191.46
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_add71_ESET_NOD32_Symantec_Endpoint_McAfee Security_53
+  server: 185.229.191.49
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_98a6c_ESET_NOD32_Symantec_Endpoint_McAfee Security_38
+  server: 185.229.191.69
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_bee8a_ESET_NOD32_Symantec_Endpoint_McAfee Security_0f
+  server: 185.229.191.93
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_2195a_ESET_NOD32_Symantec_Endpoint_McAfee Security_28
+  server: 185.229.191.95
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇳🇱荷兰_7692e_ESET_NOD32_Symantec_Endpoint_McAfee Security_0d
+  server: 185.229.191.96
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 394f6981-a782-4779-9a85-e6cf22935d93
+  tls: true
+  flow: ''
+  servername: ams1.fromblancwithlove.com
+- name: 🇸🇬新加坡_df1f8_ESET_NOD32_Symantec_Endpoint_McAfee Security_6f
+  server: 1sg001.344211.cc
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 67944fbd-dfe3-4bbd-b210-25488237a283
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.python.org
+  reality-opts:
+    public-key: 2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE
+    short-id: 04d59340
+- name: 🇸🇬新加坡_e9a83_ESET_NOD32_Symantec_Endpoint_McAfee Security_25
+  server: hkmax03.344211.cc
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 67944fbd-dfe3-4bbd-b210-25488237a283
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.python.org
+  reality-opts:
+    public-key: 2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE
+    short-id: 04d59340
+- name: 🇸🇬新加坡_f704d_ESET_NOD32_Symantec_Endpoint_McAfee Security_b2
+  server: hkt05.344211.cc
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 67944fbd-dfe3-4bbd-b210-25488237a283
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.python.org
+  reality-opts:
+    public-key: 2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE
+    short-id: 04d59340
+- name: 🇸🇬新加坡_63958_ESET_NOD32_Symantec_Endpoint_McAfee Security_84
+  server: sg07.344211.cc
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 67944fbd-dfe3-4bbd-b210-25488237a283
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.python.org
+  reality-opts:
+    public-key: 2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE
+    short-id: 04d59340
+- name: 🇸🇬新加坡_fd42f_ESET_NOD32_Symantec_Endpoint_McAfee Security_34
+  server: sg11.344211.cc
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 67944fbd-dfe3-4bbd-b210-25488237a283
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.python.org
+  reality-opts:
+    public-key: 2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE
+    short-id: 04d59340
+- name: 🇸🇬新加坡_ff91b_ESET_NOD32_Symantec_Endpoint_McAfee Security_48
+  server: sg13.344211.cc
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 67944fbd-dfe3-4bbd-b210-25488237a283
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.python.org
+  reality-opts:
+    public-key: 2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE
+    short-id: 04d59340
+- name: 🇹🇼台湾_09e80_ESET_NOD32_Symantec_Endpoint_McAfee Security_81
+  server: tw06.459292.xyz
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 67944fbd-dfe3-4bbd-b210-25488237a283
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.python.org
+  reality-opts:
+    public-key: 2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE
+    short-id: 04d59340
+- name: 🇹🇼台湾_95d08_ESET_NOD32_Symantec_Endpoint_McAfee Security_2f
+  server: tw3.344211.cc
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 67944fbd-dfe3-4bbd-b210-25488237a283
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.python.org
+  reality-opts:
+    public-key: 2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE
+    short-id: 04d59340
+- name: 🇹🇼台湾_42916_ESET_NOD32_Symantec_Endpoint_McAfee Security_59
+  server: tw4.459921.xyz
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 67944fbd-dfe3-4bbd-b210-25488237a283
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.python.org
+  reality-opts:
+    public-key: 2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE
+    short-id: 04d59340
+- name: 🇹🇼台湾_ee427_ESET_NOD32_Symantec_Endpoint_McAfee Security_a7
+  server: tw5.459921.xyz
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 67944fbd-dfe3-4bbd-b210-25488237a283
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.python.org
+  reality-opts:
+    public-key: 2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE
+    short-id: 04d59340
+- name: 🇺🇸美国_a1f89_ESET_NOD32_Symantec_Endpoint_McAfee Security_cd
+  server: us002.459292.xyz
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 67944fbd-dfe3-4bbd-b210-25488237a283
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.python.org
+  reality-opts:
+    public-key: 2a0ONLRiBeHJdr9qCruq5tPVf8_3c4fmZsg7YQorFSE
+    short-id: 04d59340
+- name: 🇭🇰香港_00282_ESET_NOD32_Symantec_Endpoint_McAfee Security_96
+  server: hk1-r.link-t7.com
+  port: 10126
+  udp: true
+  type: vless
+  uuid: 76395644-0B8A-47B4-83E5-5EBDE51E7096
+  tls: true
+  flow: ''
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: 686c0ef0
+- name: 🇭🇰香港_6d987_ESET_NOD32_Symantec_Endpoint_McAfee Security_0c
+  server: hk4-r.link-t7.com
+  port: 10129
+  udp: true
+  type: vless
+  uuid: 76395644-0B8A-47B4-83E5-5EBDE51E7096
+  tls: true
+  flow: ''
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: 686c0ef0
+- name: 🇯🇵日本_cc2a8_ESET_NOD32_Symantec_Endpoint_McAfee Security_8f
+  server: jp1-r.link-t7.com
+  port: 10031
+  udp: true
+  type: vless
+  uuid: 76395644-0B8A-47B4-83E5-5EBDE51E7096
+  tls: true
+  flow: ''
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: 686c0ef0
+- name: 🇯🇵日本_c50f5_ESET_NOD32_Symantec_Endpoint_McAfee Security_80
+  server: jp3-r.link-t7.com
+  port: 10033
+  udp: true
+  type: vless
+  uuid: 76395644-0B8A-47B4-83E5-5EBDE51E7096
+  tls: true
+  flow: ''
+  servername: s0.awsstatic.com
+  reality-opts:
+    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
+    short-id: 686c0ef0
+- name: 🇺🇸美国_efcc0_ESET_NOD32_Symantec_Endpoint_McAfee Security_7c
+  server: 129.146.243.146
+  port: 24443
+  udp: true
+  type: vless
+  uuid: 8f40e392-a1db-4dc3-a8ba-6fe2dfed92fd
   tls: true
   flow: xtls-rprx-vision
   servername: www.microsoft.com
   reality-opts:
-    public-key: 82bbZIdU-0s8fydncIhp9_sNDYQQH9ZY_7RVI5apXnk
-    short-id: 447f3a05ace2b748
-- name: 🇳🇱荷兰_2871d
-  server: 45.130.22.70
-  port: 32914
-  udp: true
-  type: trojan
-  password: 1BARPLkaLl
-  sni: ''
-- name: 🇯🇵日本_22c62
-  server: jplic.osaip.net
-  port: 25055
-  udp: true
-  type: trojan
-  password: aeabae7e-a055-4505-85a6-b4cd4982b76a
-  sni: ''
-- name: 🇯🇵日本_6e04a
-  server: jplic.osaip.net
-  port: 25055
-  udp: true
-  type: trojan
-  password: f7d06c85-4a73-4687-bf1d-0c140406c248
-  sni: ''
-- name: 🇯🇵日本_958d7
-  server: jplic.osaip.net
-  port: 25055
-  udp: true
-  type: trojan
-  password: f7d06c85-4a73-4687-bf1d-0c140406c248
-  sni: ''
-- name: 🇯🇵日本_5e5ea
-  server: jplic.osaip.net
-  port: 25055
-  udp: true
-  type: trojan
-  password: f7d06c85-4a73-4687-bf1d-0c140406c248
-  sni: ''
-- name: 🇯🇵日本_15ff0
-  server: jplic.osaip.net
-  port: 25055
-  udp: true
-  type: trojan
-  password: f7d06c85-4a73-4687-bf1d-0c140406c248
-  sni: ''
-- name: 🇺🇸美国_08a64
-  server: usrna.osaip.net
-  port: 25055
-  udp: true
-  type: trojan
-  password: f7d06c85-4a73-4687-bf1d-0c140406c248
-  sni: ''
-- name: 🇭🇰香港_04eb8
-  server: hkzoa.osaip.net
-  port: 443
-  udp: true
-  type: trojan
-  password: f7d06c85-4a73-4687-bf1d-0c140406c248
-  sni: ''
-- name: 🇸🇬新加坡_8acf1
-  type: vmess
-  server: tls.suyun8.xyz
-  port: 10086
-  uuid: 671152d1-df3b-35fc-a412-661dd438eb2a
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  servername: ''
-  udp: true
-- name: 🇸🇬新加坡_30f61
-  type: vmess
-  server: tls.suyun8.xyz
-  port: 10086
-  uuid: 671152d1-df3b-35fc-a412-661dd438eb2a
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  servername: ''
-  udp: true
-- name: 🇸🇬新加坡_cc193
-  type: vmess
-  server: tls.suyun8.xyz
-  port: 10086
-  uuid: 671152d1-df3b-35fc-a412-661dd438eb2a
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  servername: ''
-  udp: true
-- name: 🇸🇬新加坡_157f5
-  type: vmess
-  server: tls.suyun8.xyz
-  port: 10086
-  uuid: 671152d1-df3b-35fc-a412-661dd438eb2a
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: tcp
-  servername: ''
-  udp: true
-- name: 🇺🇸美国_fca0d
-  type: vmess
-  server: 104.168.1.102
-  port: 8443
-  uuid: 88fd81be-4576-4339-bd67-fa5dafe2e215
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  servername: cdn.sproutnetworks.co
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_660df
-  type: vmess
-  server: 104.168.1.102
-  port: 8222
-  uuid: 88fd81be-4576-4339-bd67-fa5dafe2e215
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_875f7
-  type: vmess
-  server: 13.58.50.121
-  port: 80
-  uuid: 88fd81be-4576-4339-bd67-fa5dafe2e215
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_5a506
-  type: vmess
-  server: 104.168.1.102
-  port: 8443
-  uuid: 3509f601-92d8-4a6b-9fe5-12f5022a3154
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  servername: cdn.sproutnetworks.co
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_95438
-  type: vmess
-  server: 104.168.1.102
-  port: 8222
-  uuid: 3509f601-92d8-4a6b-9fe5-12f5022a3154
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_a5926
-  type: vmess
-  server: 13.58.50.121
-  port: 80
-  uuid: 3509f601-92d8-4a6b-9fe5-12f5022a3154
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_4e644
-  type: vmess
-  server: 104.168.1.102
-  port: 8443
-  uuid: 8981e3d8-d51b-420c-8a40-6a44509ce8f1
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  servername: cdn.sproutnetworks.co
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_899c7
-  type: vmess
-  server: 104.168.1.102
-  port: 8222
-  uuid: 8981e3d8-d51b-420c-8a40-6a44509ce8f1
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_0187d
-  type: vmess
-  server: 13.58.50.121
-  port: 80
-  uuid: 8981e3d8-d51b-420c-8a40-6a44509ce8f1
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_822ed
-  type: vmess
-  server: 104.168.1.102
-  port: 8443
-  uuid: 4b64bbe9-347d-4cbe-83e6-0c925a9583d8
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  servername: cdn.sproutnetworks.co
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_764fe
-  type: vmess
-  server: 104.168.1.102
-  port: 8222
-  uuid: 4b64bbe9-347d-4cbe-83e6-0c925a9583d8
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_1e878
-  type: vmess
-  server: 13.58.50.121
-  port: 80
-  uuid: 4b64bbe9-347d-4cbe-83e6-0c925a9583d8
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_58ed6
-  type: vmess
-  server: 104.168.1.102
-  port: 8443
-  uuid: 254d4bbf-e3b8-4855-ae5c-b36854de47f6
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  servername: cdn.sproutnetworks.co
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_8b8f9
-  type: vmess
-  server: 104.168.1.102
-  port: 8222
-  uuid: 254d4bbf-e3b8-4855-ae5c-b36854de47f6
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_e11f7
-  type: vmess
-  server: 13.58.50.121
-  port: 80
-  uuid: 254d4bbf-e3b8-4855-ae5c-b36854de47f6
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_476c0
-  type: vmess
-  server: 104.168.1.102
-  port: 8443
-  uuid: 45a6b33c-dd18-4844-b7b3-ab3efd4dfc3f
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  servername: cdn.sproutnetworks.co
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_efda8
-  type: vmess
-  server: 104.168.1.102
-  port: 8222
-  uuid: 45a6b33c-dd18-4844-b7b3-ab3efd4dfc3f
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_edf34
-  type: vmess
-  server: 13.58.50.121
-  port: 80
-  uuid: 45a6b33c-dd18-4844-b7b3-ab3efd4dfc3f
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_dc8c3
-  type: vmess
-  server: 104.168.1.102
-  port: 8443
-  uuid: 1c9d6cfe-df9c-40bc-bcb9-8ba7dc31aae3
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  servername: cdn.sproutnetworks.co
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_cc8eb
-  type: vmess
-  server: 104.168.1.102
-  port: 8222
-  uuid: 1c9d6cfe-df9c-40bc-bcb9-8ba7dc31aae3
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_36968
-  type: vmess
-  server: 13.58.50.121
-  port: 80
-  uuid: 1c9d6cfe-df9c-40bc-bcb9-8ba7dc31aae3
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_87262
-  type: vmess
-  server: 104.168.1.102
-  port: 8443
-  uuid: 0d9bd1bc-6d14-44f2-8bfa-dd6210d1b14f
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  servername: cdn.sproutnetworks.co
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_63e8e
-  type: vmess
-  server: 104.168.1.102
-  port: 8222
-  uuid: 0d9bd1bc-6d14-44f2-8bfa-dd6210d1b14f
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_36c05
-  type: vmess
-  server: 13.58.50.121
-  port: 80
-  uuid: 0d9bd1bc-6d14-44f2-8bfa-dd6210d1b14f
-  alterId: 0
-  cipher: auto
-  tls: false
-  network: ws
-  servername: ''
-  udp: true
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
-- name: 🇺🇸美国_9aa64
-  server: ikuai.404.mn
-  port: 14555
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: ikuai.404.mn
-- name: 🇺🇸美国_ded5a
-  server: ikuai.404.mn
-  port: 10777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇺🇸美国_1f5eb
-  server: ikuai.404.mn
-  port: 12777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: ikuai.404.mn
-- name: 🏳️未知_8299a
-  server: ikuai.uk.to
-  port: 711
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_18b33
-  server: ikuai.uk.to
-  port: 11777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: ikuai.uk.to
-- name: 🇭🇰香港_4cba2
-  server: apple.1337.cx
-  port: 13555
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇭🇰香港_7da5b
-  server: apple.1337.cx
-  port: 13777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_91555
-  type: vmess
-  server: www.visa.com
-  port: 443
-  uuid: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  servername: download.windows11.dpdns.org
-  udp: true
-  ws-opts:
-    path: /data
-    headers:
-      Host: download.windows11.dpdns.org
-- name: 🇺🇸美国_45fcf
-  server: ikuai.bot.nu
-  port: 14555
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇺🇸美国_ca4bf
-  server: ikuai.bot.nu
-  port: 21777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇺🇸美国_e2978
-  server: ikuai.bot.nu
-  port: 11777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇺🇸美国_f092a
-  server: ikuai.bot.nu
-  port: 50852
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: ikuai.bot.nu
-- name: 🇭🇰香港_cdf49
-  server: strawberry.joe.dj
-  port: 10777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇭🇰香港_47643
-  server: strawberry.joe.dj
-  port: 711
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇭🇰香港_bca4e
-  server: strawberry.joe.dj
-  port: 11777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_6d19f
-  server: shct1.v6.navy
-  port: 711
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_3b01c
-  server: ikuai.k.vu
-  port: 10777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_ba5b0
-  server: ikuai.k.vu
-  port: 711
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_fc97d
-  server: ikuai.k.vu
-  port: 11777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_ed62a
-  server: ikuai.uk.to
-  port: 50852
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: ikuai.uk.to
-- name: 🏳️未知_e9124
-  server: ikuai.k.vu
-  port: 771
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇺🇸美国_70632
-  server: ikuai.404.mn
-  port: 14555
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: ikuai.404.mn
-- name: 🇺🇸美国_67c2b
-  server: ikuai.404.mn
-  port: 10777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇺🇸美国_55c8f
-  server: ikuai.404.mn
-  port: 12777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: ikuai.404.mn
-- name: 🏳️未知_ffedc
-  server: ikuai.uk.to
-  port: 711
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_8b8b4
-  server: ikuai.uk.to
-  port: 11777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: ikuai.uk.to
-- name: 🇭🇰香港_80436
-  server: apple.1337.cx
-  port: 13555
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇭🇰香港_c36de
-  server: apple.1337.cx
-  port: 13777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇺🇸美国_a647d
-  server: ikuai.bot.nu
-  port: 14555
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇺🇸美国_f88e4
-  server: ikuai.bot.nu
-  port: 21777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇺🇸美国_7dfd7
-  server: ikuai.bot.nu
-  port: 11777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇺🇸美国_42518
-  server: ikuai.bot.nu
-  port: 50852
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: ikuai.bot.nu
-- name: 🇭🇰香港_b95c1
-  server: strawberry.joe.dj
-  port: 10777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇭🇰香港_92fbf
-  server: strawberry.joe.dj
-  port: 711
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🇭🇰香港_def52
-  server: strawberry.joe.dj
-  port: 11777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_36e2e
-  server: shct1.v6.navy
-  port: 711
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_72bc0
-  server: ikuai.k.vu
-  port: 10777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_9dd3b
-  server: ikuai.k.vu
-  port: 711
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_b7183
-  server: ikuai.k.vu
-  port: 11777
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_dddc1
-  server: ikuai.uk.to
-  port: 50852
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: ikuai.uk.to
-- name: 🏳️未知_12866
-  server: ikuai.k.vu
-  port: 771
-  udp: true
-  type: trojan
-  password: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  sni: windows11.dpdns.org
-- name: 🏳️未知_aa28b
-  server: apple.ikuai.cloud
-  port: 10086
+    public-key: FE9AMiz1SeIopraVRDBI4XRLSq-vpfsAlHuymKZvb0w
+    short-id: e4387e9ce66ee98b
+- name: 🇺🇸美国_fcdd8_ESET_NOD32_Symantec_Endpoint_McAfee Security_9c
+  server: 192.3.120.11
+  port: 50150
   udp: true
   type: vless
-  uuid: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
-  tls: false
-  flow: ''
-  servername: ''
-- name: 🏳️未知_374e3
-  server: apple.ikuai.cloud
-  port: 10086
+  uuid: 9e367d4d-60d9-4c42-a1f7-f1c112a469dc
+  tls: true
+  flow: xtls-rprx-vision
+  servername: apple.com
+  reality-opts:
+    public-key: XqWJAWVtbVhdJyk30GxPypOmILc1ddYv8Ez_mpw0VTk
+    short-id: 6d0420e3
+- name: 🇰🇿哈萨克斯坦_32357_ESET_NOD32_Symantec_Endpoint_McAfee Security_16
+  server: 45.43.159.153
+  port: 7443
   udp: true
   type: vless
-  uuid: 67f4b8ff-15cf-3ec9-b09d-c31a4728c652
+  uuid: caad76bd-208b-4c5f-9c90-838c25d0bb3a
+  tls: true
+  flow: xtls-rprx-vision
+  servername: rbc.ru
+  reality-opts:
+    public-key: zOPjTJV8xgGMmD0Mg0jWsRYSOsa_2pp7SSs88EFK6nw
+    short-id: ''
+- name: 🇫🇷法国_8afbf_ESET_NOD32_Symantec_Endpoint_McAfee Security_d2
+  server: 94.183.187.243
+  port: 8443
+  udp: true
+  type: vless
+  uuid: caad76bd-208b-4c5f-9c90-838c25d0bb3a
+  tls: true
+  flow: xtls-rprx-vision
+  servername: fr.realitynetwork.eu
+  reality-opts:
+    public-key: zOPjTJV8xgGMmD0Mg0jWsRYSOsa_2pp7SSs88EFK6nw
+    short-id: ''
+- name: 🇪🇪爱沙尼亚_5921e_ESET_NOD32_Symantec_Endpoint_McAfee Security_0d
+  server: es.subv.ru
+  port: 443
+  udp: true
+  type: vless
+  uuid: cfbfd307-1de9-49e1-8b8a-e1f831771c0e
+  tls: true
+  flow: xtls-rprx-vision
+  servername: es.subv.ru
+  reality-opts:
+    public-key: ca5sfJNcjkh3oNt51hRexXbGWgITAqCprGSU-YKCJBA
+    short-id: 614f75d625309dee
+- name: 🇧🇾白俄罗斯_1497a_ESET_NOD32_Symantec_Endpoint_McAfee Security_ab
+  server: hb-by3.cdns.su
+  port: 443
+  udp: true
+  type: vless
+  uuid: cfbfd307-1de9-49e1-8b8a-e1f831771c0e
+  tls: true
+  flow: xtls-rprx-vision
+  servername: hb-by3.cdns.su
+  reality-opts:
+    public-key: 0L6FE1vTechnKhN9LxFgmcDzqGVIfEQz8ZBGfvzKGzg
+    short-id: 0273d62b9b0b742a
+- name: 🇭🇰香港_23c58_ESET_NOD32_Symantec_Endpoint_McAfee Security_a2
+  server: 85.113.71.97
+  port: 8080
+  udp: true
+  type: vless
+  uuid: d0808336-ed7b-457b-9770-ffe4fe08654b
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.amazon.com
+  reality-opts:
+    public-key: gIZroPoitLL_o4L_u4krqQl_y5PcwlZDH3VogB789Fg
+    short-id: ''
+- name: 🇸🇬新加坡_696f6_ESET_NOD32_Symantec_Endpoint_McAfee Security_33
+  server: 138.2.94.44
+  port: 8899
+  udp: true
+  type: vless
+  uuid: d95e62f8-b961-4362-bb07-e1e421b02274
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.lovelive-anime.jp
+  reality-opts:
+    public-key: -kGaCYGM_MImDMVkOsFp4yvv4dLy3FXe9gqAtf4eYF8
+    short-id: 905ae32a
+- name: 🇰🇷韩国_c8c5f_ESET_NOD32_Symantec_Endpoint_McAfee Security_aa
+  server: 152.67.211.233
+  port: 8899
+  udp: true
+  type: vless
+  uuid: d95e62f8-b961-4362-bb07-e1e421b02274
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.lovelive-anime.jp
+  reality-opts:
+    public-key: B7eELUOn0QM6fKSrr5v_AE4JPHQIxvb9-xX3WLqnLAk
+    short-id: 11d27eb4
+- name: 🇸🇬新加坡_b0016_ESET_NOD32_Symantec_Endpoint_McAfee Security_4f
+  server: 168.138.166.89
+  port: 8899
+  udp: true
+  type: vless
+  uuid: d95e62f8-b961-4362-bb07-e1e421b02274
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.lovelive-anime.jp
+  reality-opts:
+    public-key: 4ciiQdZe4F8wyoRKpNzW5xwmQzGyIJnlPHrK70iU6DQ
+    short-id: f0cce996
+- name: 🇺🇸美国_17c87_ESET_NOD32_Symantec_Endpoint_McAfee Security_08
+  server: 149.28.87.17
+  port: 443
+  udp: true
+  type: vless
+  uuid: f265505f-a2cf-4b50-8ea1-d250313d0f52
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: bx8Vj6dVO5DKul_uEMHeg7ZtEkT7Twud2IDdwClRAgQ
+    short-id: a1b2c3d4
+- name: 🇭🇰香港_2c4c3_ESET_NOD32_Symantec_Endpoint_McAfee Security_b7
+  server: hk-1.stormdragon.cn
+  port: 30000
+  udp: true
+  type: vless
+  uuid: ff2611ba-7c71-4aa2-af58-6194bc8b15aa
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.amazon.com
+  reality-opts:
+    public-key: 5KGHDHpMiq0DD9THS78a2jvIlT5H-N1sOTJ-cK3RuS4
+    short-id: 456f
+- name: 🇨🇳中国_e1cce_ESET_NOD32_Symantec_Endpoint_McAfee Security_b7
+  type: vmess
+  server: 120.48.133.162
+  port: 10086
+  uuid: 2b990b4d-3eca-4735-bf03-b921b91e5532
+  alterId: 0
+  cipher: auto
   tls: false
-  flow: ''
+  network: ws
   servername: ''
+  udp: true
+  ws-opts:
+    path: ''
+    headers:
+      Host: ''
+- name: 🇺🇸美国_efc48_ESET_NOD32_Symantec_Endpoint_McAfee Security_ab
+  type: vmess
+  server: 142.171.48.179
+  port: 28167
+  uuid: 2b990b4d-3eca-4735-bf03-b921b91e5532
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  servername: ''
+  udp: true
+  ws-opts:
+    path: /
+    headers:
+      Host: gw.alicdn.com
+- name: 🇺🇸美国_73379_ESET_NOD32_Symantec_Endpoint_McAfee Security_b2
+  type: vmess
+  server: 186.241.75.40.sslip.io
+  port: 443
+  uuid: a28cdd41-6795-4c5b-86f7-15a05a5d60f7
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  servername: 186.241.75.40.sslip.io
+  udp: true
+  ws-opts:
+    path: /f76f8e3dcb66b6d94b59f3ad
+    headers:
+      Host: 186.241.75.40.sslip.io
+- name: 🇨🇳中国_fab0b_ESET_NOD32_Symantec_Endpoint_McAfee Security_ab
+  type: vmess
+  server: 39.108.113.127
+  port: 10086
+  uuid: 2b990b4d-3eca-4735-bf03-b921b91e5532
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  servername: ''
+  udp: true
+  ws-opts:
+    path: ''
+    headers:
+      Host: ''
+rule-providers:
+  adblock:
+    type: http
+    behavior: classical
+    url: https://ghproxy.net/https://raw.githubusercontent.com/REIJI007/AdBlock_Rule_For_Clash/main/adblock_reject.yaml
+    path: ./ruleset/adblock_reject.yaml
+    interval: 120
+    timeout: 30
+  adblock_backup:
+    type: http
+    behavior: classical
+    url: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt
+    path: ./ruleset/adblock_backup.yaml
+    interval: 86400
+  reject:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: ./ruleset/reject.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    path: ./ruleset/google.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  direct:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
+    path: ./ruleset/direct.yaml
+    interval: 86400
+  private:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    path: ./ruleset/private.yaml
+    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+  applications:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+    path: ./ruleset/applications.yaml
+    interval: 86400
 proxy-groups:
-- name: 🚀 节点选择
+- name: 节点选择
   type: select
   proxies:
-  - ⚡ 自动选择
+  - 我的VPS
+  - 我的VPS-中转
   - DIRECT
-  - 🇯🇵日本_e8782
-  - 🇯🇵日本_875ef
-  - 🇯🇵日本_19f03
-  - 🇯🇵日本_e77cd
-  - 🇺🇸美国_56ae5
-  - 🇭🇰香港_abb1f
-  - 🇺🇸美国_075c4
-  - 🇬🇧英国_cd7d9
-  - 🇭🇰香港_5b486
-  - 🇭🇰香港_8a063
-  - 🇳🇱荷兰_2871d
-  - 🇯🇵日本_22c62
-  - 🇯🇵日本_6e04a
-  - 🇯🇵日本_958d7
-  - 🇯🇵日本_5e5ea
-  - 🇯🇵日本_15ff0
-  - 🇺🇸美国_08a64
-  - 🇭🇰香港_04eb8
-  - 🇸🇬新加坡_8acf1
-  - 🇸🇬新加坡_30f61
-  - 🇸🇬新加坡_cc193
-  - 🇸🇬新加坡_157f5
-  - 🇺🇸美国_fca0d
-  - 🇺🇸美国_660df
-  - 🇺🇸美国_875f7
-  - 🇺🇸美国_5a506
-  - 🇺🇸美国_95438
-  - 🇺🇸美国_a5926
-  - 🇺🇸美国_4e644
-  - 🇺🇸美国_899c7
-  - 🇺🇸美国_0187d
-  - 🇺🇸美国_822ed
-  - 🇺🇸美国_764fe
-  - 🇺🇸美国_1e878
-  - 🇺🇸美国_58ed6
-  - 🇺🇸美国_8b8f9
-  - 🇺🇸美国_e11f7
-  - 🇺🇸美国_476c0
-  - 🇺🇸美国_efda8
-  - 🇺🇸美国_edf34
-  - 🇺🇸美国_dc8c3
-  - 🇺🇸美国_cc8eb
-  - 🇺🇸美国_36968
-  - 🇺🇸美国_87262
-  - 🇺🇸美国_63e8e
-  - 🇺🇸美国_36c05
-  - 🇺🇸美国_9aa64
-  - 🇺🇸美国_ded5a
-  - 🇺🇸美国_1f5eb
-  - 🏳️未知_8299a
-  - 🏳️未知_18b33
-  - 🇭🇰香港_4cba2
-  - 🇭🇰香港_7da5b
-  - 🏳️未知_91555
-  - 🇺🇸美国_45fcf
-  - 🇺🇸美国_ca4bf
-  - 🇺🇸美国_e2978
-  - 🇺🇸美国_f092a
-  - 🇭🇰香港_cdf49
-  - 🇭🇰香港_47643
-  - 🇭🇰香港_bca4e
-  - 🏳️未知_6d19f
-  - 🏳️未知_3b01c
-  - 🏳️未知_ba5b0
-  - 🏳️未知_fc97d
-  - 🏳️未知_ed62a
-  - 🏳️未知_e9124
-  - 🇺🇸美国_70632
-  - 🇺🇸美国_67c2b
-  - 🇺🇸美国_55c8f
-  - 🏳️未知_ffedc
-  - 🏳️未知_8b8b4
-  - 🇭🇰香港_80436
-  - 🇭🇰香港_c36de
-  - 🇺🇸美国_a647d
-  - 🇺🇸美国_f88e4
-  - 🇺🇸美国_7dfd7
-  - 🇺🇸美国_42518
-  - 🇭🇰香港_b95c1
-  - 🇭🇰香港_92fbf
-  - 🇭🇰香港_def52
-  - 🏳️未知_36e2e
-  - 🏳️未知_72bc0
-  - 🏳️未知_9dd3b
-  - 🏳️未知_b7183
-  - 🏳️未知_dddc1
-  - 🏳️未知_12866
-  - 🏳️未知_aa28b
-  - 🏳️未知_374e3
-- name: ⚡ 自动选择
-  type: url-test
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-  tolerance: 50
-  proxies:
-  - 🇯🇵日本_e8782
-  - 🇯🇵日本_875ef
-  - 🇯🇵日本_19f03
-  - 🇯🇵日本_e77cd
-  - 🇺🇸美国_56ae5
-  - 🇭🇰香港_abb1f
-  - 🇺🇸美国_075c4
-  - 🇬🇧英国_cd7d9
-  - 🇭🇰香港_5b486
-  - 🇭🇰香港_8a063
-  - 🇳🇱荷兰_2871d
-  - 🇯🇵日本_22c62
-  - 🇯🇵日本_6e04a
-  - 🇯🇵日本_958d7
-  - 🇯🇵日本_5e5ea
-  - 🇯🇵日本_15ff0
-  - 🇺🇸美国_08a64
-  - 🇭🇰香港_04eb8
-  - 🇸🇬新加坡_8acf1
-  - 🇸🇬新加坡_30f61
-  - 🇸🇬新加坡_cc193
-  - 🇸🇬新加坡_157f5
-  - 🇺🇸美国_fca0d
-  - 🇺🇸美国_660df
-  - 🇺🇸美国_875f7
-  - 🇺🇸美国_5a506
-  - 🇺🇸美国_95438
-  - 🇺🇸美国_a5926
-  - 🇺🇸美国_4e644
-  - 🇺🇸美国_899c7
-  - 🇺🇸美国_0187d
-  - 🇺🇸美国_822ed
-  - 🇺🇸美国_764fe
-  - 🇺🇸美国_1e878
-  - 🇺🇸美国_58ed6
-  - 🇺🇸美国_8b8f9
-  - 🇺🇸美国_e11f7
-  - 🇺🇸美国_476c0
-  - 🇺🇸美国_efda8
-  - 🇺🇸美国_edf34
-  - 🇺🇸美国_dc8c3
-  - 🇺🇸美国_cc8eb
-  - 🇺🇸美国_36968
-  - 🇺🇸美国_87262
-  - 🇺🇸美国_63e8e
-  - 🇺🇸美国_36c05
-  - 🇺🇸美国_9aa64
-  - 🇺🇸美国_ded5a
-  - 🇺🇸美国_1f5eb
-  - 🏳️未知_8299a
-  - 🏳️未知_18b33
-  - 🇭🇰香港_4cba2
-  - 🇭🇰香港_7da5b
-  - 🏳️未知_91555
-  - 🇺🇸美国_45fcf
-  - 🇺🇸美国_ca4bf
-  - 🇺🇸美国_e2978
-  - 🇺🇸美国_f092a
-  - 🇭🇰香港_cdf49
-  - 🇭🇰香港_47643
-  - 🇭🇰香港_bca4e
-  - 🏳️未知_6d19f
-  - 🏳️未知_3b01c
-  - 🏳️未知_ba5b0
-  - 🏳️未知_fc97d
-  - 🏳️未知_ed62a
-  - 🏳️未知_e9124
-  - 🇺🇸美国_70632
-  - 🇺🇸美国_67c2b
-  - 🇺🇸美国_55c8f
-  - 🏳️未知_ffedc
-  - 🏳️未知_8b8b4
-  - 🇭🇰香港_80436
-  - 🇭🇰香港_c36de
-  - 🇺🇸美国_a647d
-  - 🇺🇸美国_f88e4
-  - 🇺🇸美国_7dfd7
-  - 🇺🇸美国_42518
-  - 🇭🇰香港_b95c1
-  - 🇭🇰香港_92fbf
-  - 🇭🇰香港_def52
-  - 🏳️未知_36e2e
-  - 🏳️未知_72bc0
-  - 🏳️未知_9dd3b
-  - 🏳️未知_b7183
-  - 🏳️未知_dddc1
-  - 🏳️未知_12866
-  - 🏳️未知_aa28b
-  - 🏳️未知_374e3
+  - 🇷🇺俄罗斯联邦_7815f_ESET_NOD32_Symantec_Endpoint_McAfee Security_eb
+  - 🇱🇹立陶宛_7df2c_ESET_NOD32_Symantec_Endpoint_McAfee Security_16
+  - 🇩🇪德国_da9fc_ESET_NOD32_Symantec_Endpoint_McAfee Security_49
+  - 🇸🇪瑞典_871f8_ESET_NOD32_Symantec_Endpoint_McAfee Security_f3
+  - 🇭🇰香港_891a8_ESET_NOD32_Symantec_Endpoint_McAfee Security_8d
+  - 🇺🇸美国_73a41_ESET_NOD32_Symantec_Endpoint_McAfee Security_ce
+  - 🇸🇬新加坡_fc90a_ESET_NOD32_Symantec_Endpoint_McAfee Security_1f
+  - 🇺🇸美国_6fe2c_ESET_NOD32_Symantec_Endpoint_McAfee Security_07
+  - 🇯🇵日本_c3a5c_ESET_NOD32_Symantec_Endpoint_McAfee Security_31
+  - 🇯🇵日本_b76c9_ESET_NOD32_Symantec_Endpoint_McAfee Security_13
+  - 🇯🇵日本_b6ef7_ESET_NOD32_Symantec_Endpoint_McAfee Security_02
+  - 🇸🇬新加坡_19154_ESET_NOD32_Symantec_Endpoint_McAfee Security_e5
+  - 🇺🇸美国_20cc1_ESET_NOD32_Symantec_Endpoint_McAfee Security_c3
+  - 🇸🇬新加坡_22106_ESET_NOD32_Symantec_Endpoint_McAfee Security_4b
+  - 🇺🇸美国_30a64_ESET_NOD32_Symantec_Endpoint_McAfee Security_dd
+  - 🇸🇬新加坡_be9b2_ESET_NOD32_Symantec_Endpoint_McAfee Security_e1
+  - 🇺🇸美国_cbfc2_ESET_NOD32_Symantec_Endpoint_McAfee Security_5a
+  - 🇸🇬新加坡_ed1a3_ESET_NOD32_Symantec_Endpoint_McAfee Security_de
+  - 🇸🇬新加坡_98791_ESET_NOD32_Symantec_Endpoint_McAfee Security_1b
+  - 🇸🇬新加坡_fd8dc_ESET_NOD32_Symantec_Endpoint_McAfee Security_79
+  - 🇸🇬新加坡_a879b_ESET_NOD32_Symantec_Endpoint_McAfee Security_bd
+  - 🇸🇬新加坡_b36fd_ESET_NOD32_Symantec_Endpoint_McAfee Security_4d
+  - 🇸🇬新加坡_fb14c_ESET_NOD32_Symantec_Endpoint_McAfee Security_85
+  - 🇸🇬新加坡_bbf3c_ESET_NOD32_Symantec_Endpoint_McAfee Security_4e
+  - 🇸🇬新加坡_524e3_ESET_NOD32_Symantec_Endpoint_McAfee Security_4f
+  - 🇸🇬新加坡_9ada7_ESET_NOD32_Symantec_Endpoint_McAfee Security_29
+  - 🇸🇬新加坡_87aa6_ESET_NOD32_Symantec_Endpoint_McAfee Security_e5
+  - 🇹🇼台湾_332f7_ESET_NOD32_Symantec_Endpoint_McAfee Security_a8
+  - 🇺🇸美国_e6bea_ESET_NOD32_Symantec_Endpoint_McAfee Security_b5
+  - 🇺🇸美国_74b8e_ESET_NOD32_Symantec_Endpoint_McAfee Security_d4
+  - 🇷🇺俄罗斯联邦_fafac_ESET_NOD32_Symantec_Endpoint_McAfee Security_fb
+  - 🇯🇵日本_3e472_ESET_NOD32_Symantec_Endpoint_McAfee Security_45
+  - 🇸🇬新加坡_f5944_ESET_NOD32_Symantec_Endpoint_McAfee Security_16
+  - 🇸🇬新加坡_4b173_ESET_NOD32_Symantec_Endpoint_McAfee Security_f0
+  - 🇺🇸美国_44d2d_ESET_NOD32_Symantec_Endpoint_McAfee Security_f2
+  - 🇺🇸美国_dd41f_ESET_NOD32_Symantec_Endpoint_McAfee Security_c7
+  - 🇺🇸美国_60269_ESET_NOD32_Symantec_Endpoint_McAfee Security_de
+  - 🇰🇷韩国_0bb88_ESET_NOD32_Symantec_Endpoint_McAfee Security_4c
+  - 🇨🇳中国_84f6a_ESET_NOD32_Symantec_Endpoint_McAfee Security_0b
+  - 🇸🇬新加坡_ac0a3_ESET_NOD32_Symantec_Endpoint_McAfee Security_16
+  - 🇯🇵日本_580ff_ESET_NOD32_Symantec_Endpoint_McAfee Security_8a
+  - 🇺🇸美国_1ca3d_ESET_NOD32_Symantec_Endpoint_McAfee Security_54
+  - 🇹🇼台湾_5e4a3_ESET_NOD32_Symantec_Endpoint_McAfee Security_86
+  - 🇭🇰香港_19bf3_ESET_NOD32_Symantec_Endpoint_McAfee Security_2a
+  - 🇯🇵日本_c7849_ESET_NOD32_Symantec_Endpoint_McAfee Security_ab
+  - 🇭🇰香港_fc5a6_ESET_NOD32_Symantec_Endpoint_McAfee Security_20
+  - 🇺🇸美国_1f4b2_ESET_NOD32_Symantec_Endpoint_McAfee Security_25
+  - 🇯🇵日本_148bb_ESET_NOD32_Symantec_Endpoint_McAfee Security_5e
+  - 🇯🇵日本_29827_ESET_NOD32_Symantec_Endpoint_McAfee Security_99
+  - 🇯🇵日本_f10b4_ESET_NOD32_Symantec_Endpoint_McAfee Security_b0
+  - 🇭🇰香港_38395_ESET_NOD32_Symantec_Endpoint_McAfee Security_d8
+  - 🇺🇸美国_41bc6_ESET_NOD32_Symantec_Endpoint_McAfee Security_cc
+  - 🇫🇷法国_ef81f_ESET_NOD32_Symantec_Endpoint_McAfee Security_2e
+  - 🇦🇲亚美尼亚_6b2fd_ESET_NOD32_Symantec_Endpoint_McAfee Security_4c
+  - 🇸🇬新加坡_1de87_ESET_NOD32_Symantec_Endpoint_McAfee Security_12
+  - 🇧🇪比利时_0e11b_ESET_NOD32_Symantec_Endpoint_McAfee Security_eb
+  - 🇧🇪比利时_e0fd5_ESET_NOD32_Symantec_Endpoint_McAfee Security_79
+  - 🇰🇷韩国_0e6ae_ESET_NOD32_Symantec_Endpoint_McAfee Security_bd
+  - 🇺🇸美国_15221_ESET_NOD32_Symantec_Endpoint_McAfee Security_bb
+  - 🇷🇺俄罗斯联邦_84982_ESET_NOD32_Symantec_Endpoint_McAfee Security_c3
+  - 🇺🇸美国_0a995_ESET_NOD32_Symantec_Endpoint_McAfee Security_af
+  - 🏳️未知_6d6c7_ESET_NOD32_Symantec_Endpoint_McAfee Security_84
+  - 🇺🇸美国_ccb16_ESET_NOD32_Symantec_Endpoint_McAfee Security_d2
+  - 🇨🇳中国_137f4_ESET_NOD32_Symantec_Endpoint_McAfee Security_99
+  - 🇹🇼台湾_3a585_ESET_NOD32_Symantec_Endpoint_McAfee Security_3b
+  - 🇺🇸美国_f6535_ESET_NOD32_Symantec_Endpoint_McAfee Security_08
+  - 🇫🇷法国_4356d_ESET_NOD32_Symantec_Endpoint_McAfee Security_3b
+  - 🇬🇧英国_18228_ESET_NOD32_Symantec_Endpoint_McAfee Security_aa
+  - 🇳🇱荷兰_6be45_ESET_NOD32_Symantec_Endpoint_McAfee Security_92
+  - 🇷🇺俄罗斯联邦_955c9_ESET_NOD32_Symantec_Endpoint_McAfee Security_4b
+  - 🇩🇪德国_a4100_ESET_NOD32_Symantec_Endpoint_McAfee Security_48
+  - 🇸🇪瑞典_5019e_ESET_NOD32_Symantec_Endpoint_McAfee Security_5a
+  - 🇷🇺俄罗斯联邦_253cc_ESET_NOD32_Symantec_Endpoint_McAfee Security_f6
+  - 🇷🇺俄罗斯联邦_a0286_ESET_NOD32_Symantec_Endpoint_McAfee Security_dd
+  - 🇷🇺俄罗斯联邦_7f6c7_ESET_NOD32_Symantec_Endpoint_McAfee Security_22
+  - 🇵🇱波兰_1088f_ESET_NOD32_Symantec_Endpoint_McAfee Security_8c
+  - 🇩🇪德国_d7c43_ESET_NOD32_Symantec_Endpoint_McAfee Security_d9
+  - 🇬🇧英国_70f58_ESET_NOD32_Symantec_Endpoint_McAfee Security_9c
+  - 🇳🇱荷兰_d93f7_ESET_NOD32_Symantec_Endpoint_McAfee Security_99
+  - 🇳🇱荷兰_a929c_ESET_NOD32_Symantec_Endpoint_McAfee Security_92
+  - 🇳🇱荷兰_ed42c_ESET_NOD32_Symantec_Endpoint_McAfee Security_00
+  - 🇳🇱荷兰_a797b_ESET_NOD32_Symantec_Endpoint_McAfee Security_15
+  - 🇳🇱荷兰_0454e_ESET_NOD32_Symantec_Endpoint_McAfee Security_96
+  - 🇳🇱荷兰_34a74_ESET_NOD32_Symantec_Endpoint_McAfee Security_2e
+  - 🇳🇱荷兰_b1c95_ESET_NOD32_Symantec_Endpoint_McAfee Security_4e
+  - 🇳🇱荷兰_c8184_ESET_NOD32_Symantec_Endpoint_McAfee Security_4f
+  - 🇳🇱荷兰_53cd6_ESET_NOD32_Symantec_Endpoint_McAfee Security_54
+  - 🇳🇱荷兰_ce917_ESET_NOD32_Symantec_Endpoint_McAfee Security_00
+  - 🇳🇱荷兰_aac12_ESET_NOD32_Symantec_Endpoint_McAfee Security_76
+  - 🇳🇱荷兰_a6bed_ESET_NOD32_Symantec_Endpoint_McAfee Security_a8
+  - 🇳🇱荷兰_f561c_ESET_NOD32_Symantec_Endpoint_McAfee Security_63
+  - 🇳🇱荷兰_add71_ESET_NOD32_Symantec_Endpoint_McAfee Security_53
+  - 🇳🇱荷兰_98a6c_ESET_NOD32_Symantec_Endpoint_McAfee Security_38
+  - 🇳🇱荷兰_bee8a_ESET_NOD32_Symantec_Endpoint_McAfee Security_0f
+  - 🇳🇱荷兰_2195a_ESET_NOD32_Symantec_Endpoint_McAfee Security_28
+  - 🇳🇱荷兰_7692e_ESET_NOD32_Symantec_Endpoint_McAfee Security_0d
+  - 🇸🇬新加坡_df1f8_ESET_NOD32_Symantec_Endpoint_McAfee Security_6f
+  - 🇸🇬新加坡_e9a83_ESET_NOD32_Symantec_Endpoint_McAfee Security_25
+  - 🇸🇬新加坡_f704d_ESET_NOD32_Symantec_Endpoint_McAfee Security_b2
+  - 🇸🇬新加坡_63958_ESET_NOD32_Symantec_Endpoint_McAfee Security_84
+  - 🇸🇬新加坡_fd42f_ESET_NOD32_Symantec_Endpoint_McAfee Security_34
+  - 🇸🇬新加坡_ff91b_ESET_NOD32_Symantec_Endpoint_McAfee Security_48
+  - 🇹🇼台湾_09e80_ESET_NOD32_Symantec_Endpoint_McAfee Security_81
+  - 🇹🇼台湾_95d08_ESET_NOD32_Symantec_Endpoint_McAfee Security_2f
+  - 🇹🇼台湾_42916_ESET_NOD32_Symantec_Endpoint_McAfee Security_59
+  - 🇹🇼台湾_ee427_ESET_NOD32_Symantec_Endpoint_McAfee Security_a7
+  - 🇺🇸美国_a1f89_ESET_NOD32_Symantec_Endpoint_McAfee Security_cd
+  - 🇭🇰香港_00282_ESET_NOD32_Symantec_Endpoint_McAfee Security_96
+  - 🇭🇰香港_6d987_ESET_NOD32_Symantec_Endpoint_McAfee Security_0c
+  - 🇯🇵日本_cc2a8_ESET_NOD32_Symantec_Endpoint_McAfee Security_8f
+  - 🇯🇵日本_c50f5_ESET_NOD32_Symantec_Endpoint_McAfee Security_80
+  - 🇺🇸美国_efcc0_ESET_NOD32_Symantec_Endpoint_McAfee Security_7c
+  - 🇺🇸美国_fcdd8_ESET_NOD32_Symantec_Endpoint_McAfee Security_9c
+  - 🇰🇿哈萨克斯坦_32357_ESET_NOD32_Symantec_Endpoint_McAfee Security_16
+  - 🇫🇷法国_8afbf_ESET_NOD32_Symantec_Endpoint_McAfee Security_d2
+  - 🇪🇪爱沙尼亚_5921e_ESET_NOD32_Symantec_Endpoint_McAfee Security_0d
+  - 🇧🇾白俄罗斯_1497a_ESET_NOD32_Symantec_Endpoint_McAfee Security_ab
+  - 🇭🇰香港_23c58_ESET_NOD32_Symantec_Endpoint_McAfee Security_a2
+  - 🇸🇬新加坡_696f6_ESET_NOD32_Symantec_Endpoint_McAfee Security_33
+  - 🇰🇷韩国_c8c5f_ESET_NOD32_Symantec_Endpoint_McAfee Security_aa
+  - 🇸🇬新加坡_b0016_ESET_NOD32_Symantec_Endpoint_McAfee Security_4f
+  - 🇺🇸美国_17c87_ESET_NOD32_Symantec_Endpoint_McAfee Security_08
+  - 🇭🇰香港_2c4c3_ESET_NOD32_Symantec_Endpoint_McAfee Security_b7
+  - 🇨🇳中国_e1cce_ESET_NOD32_Symantec_Endpoint_McAfee Security_b7
+  - 🇺🇸美国_efc48_ESET_NOD32_Symantec_Endpoint_McAfee Security_ab
+  - 🇺🇸美国_73379_ESET_NOD32_Symantec_Endpoint_McAfee Security_b2
+  - 🇨🇳中国_fab0b_ESET_NOD32_Symantec_Endpoint_McAfee Security_ab
 rules:
-- MATCH,🚀 节点选择
+- RULE-SET,private,DIRECT
+- RULE-SET,lancidr,DIRECT
+- IP-CIDR,1.1.1.1/32,节点选择,no-resolve
+- IP-CIDR,8.8.8.8/32,节点选择,no-resolve
+- GEOSITE,category-ads-all,REJECT
+- RULE-SET,adblock,REJECT
+- RULE-SET,adblock_backup,REJECT
+- DOMAIN-SUFFIX,githubusercontent.com,节点选择
+- DOMAIN,assets1.xboxlive.cn,DIRECT
+- DOMAIN,assets2.xboxlive.cn,DIRECT
+- DOMAIN,cdn-ali.content.steamchina.com,DIRECT
+- DOMAIN,cdn-qc.content.steamchina.com,DIRECT
+- DOMAIN,cdn-ws.content.steamchina.com,DIRECT
+- DOMAIN,dl.delivery.mp.microsoft.com,DIRECT
+- DOMAIN,dl.steam.clngaa.com,DIRECT
+- DOMAIN,epicgames-download1-1251447533.file.myqcloud.com,DIRECT
+- DOMAIN,st.dl.bscstorage.net,DIRECT
+- DOMAIN,st.dl.eccdnx.com,DIRECT
+- DOMAIN,steampipe.steamcontent.tnkjmec.com,DIRECT
+- DOMAIN,tlu.dl.delivery.mp.microsoft.com,DIRECT
+- DOMAIN,trts.baishancdnx.cn,DIRECT
+- DOMAIN,uplaypc-s-ubisoft.cdn.ubionline.com.cn,DIRECT
+- DOMAIN,xz.pphimalayanrt.com,DIRECT
+- DOMAIN-SUFFIX,pdl.wow.battlenet.com.cn,DIRECT
+- DOMAIN,assets1.xboxlive.com,DIRECT
+- DOMAIN,assets2.xboxlive.com,DIRECT
+- DOMAIN,blizzard.gcdn.cloudn.co.kr,DIRECT
+- DOMAIN,blzddist1-a.akamaihd.net,DIRECT
+- DOMAIN,blzddistkr1-a.akamaihd.net,DIRECT
+- DOMAIN,client.hikarifield.co.jp,DIRECT
+- DOMAIN,content.cdp.bethesda.net,DIRECT
+- DOMAIN,download.cdp.bethesda.net,DIRECT
+- DOMAIN,download.dm.origin.com,DIRECT
+- DOMAIN,download.epicgames.com,DIRECT
+- DOMAIN,download.hikarifield.co.jp,DIRECT
+- DOMAIN,download2.epicgames.com,DIRECT
+- DOMAIN,download3.epicgames.com,DIRECT
+- DOMAIN,download4.epicgames.com,DIRECT
+- DOMAIN,edge.steam-dns.top.comcast.net,DIRECT
+- DOMAIN,epicgames-download1.akamaized.net,DIRECT
+- DOMAIN,eu.cdn.blizzard.com,DIRECT
+- DOMAIN,fastly-download.epicgames.com,DIRECT
+- DOMAIN,gamedownloads-rockstargames-com.akamaized.net,DIRECT
+- DOMAIN,gog-cdn-lumen.secure2.footprint.net,DIRECT
+- DOMAIN,kr.cdn.blizzard.com,DIRECT
+- DOMAIN,level3.blizzard.com,DIRECT
+- DOMAIN,origin-a.akamaihd.net,DIRECT
+- DOMAIN,packagespc.xboxlive.com,DIRECT
+- DOMAIN,ssl-lvlt.cdn.ea.com,DIRECT
+- DOMAIN,steam.eca.qtlglb.com,DIRECT
+- DOMAIN,steam.naeu.qtlglb.com,DIRECT
+- DOMAIN,steam.ru.qtlglb.com,DIRECT
+- DOMAIN,steampipe-kr.akamaized.net,DIRECT
+- DOMAIN,steampipe-partner.akamaized.net,DIRECT
+- DOMAIN,steampipe.akamaized.net,DIRECT
+- DOMAIN,steamusercontent-a.akamaihd.net,DIRECT
+- DOMAIN,us.cdn.blizzard.com,DIRECT
+- DOMAIN,xvcf1.xboxlive.com,DIRECT
+- DOMAIN,xvcf2.xboxlive.com,DIRECT
+- DOMAIN-SUFFIX,cdn.ubi.com,DIRECT
+- DOMAIN-SUFFIX,dyn.riotcdn.net,DIRECT
+- DOMAIN-SUFFIX,steamcontent.com,DIRECT
+- RULE-SET,proxy,节点选择
+- RULE-SET,direct,DIRECT
+- RULE-SET,cncidr,DIRECT
+- RULE-SET,telegramcidr,节点选择
+- RULE-SET,icloud,节点选择
+- RULE-SET,apple,节点选择
+- RULE-SET,google,节点选择
+- DOMAIN-SUFFIX,bing.com,节点选择
+- GEOIP,LAN,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,节点选择
